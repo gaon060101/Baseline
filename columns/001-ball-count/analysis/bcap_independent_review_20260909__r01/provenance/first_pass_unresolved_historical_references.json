@@ -1,0 +1,107 @@
+{
+  "status": "FAIL",
+  "started_at_utc": "2026-09-09T09:18:14.240040+00:00",
+  "finished_at_utc": "2026-09-09T09:18:19.381841+00:00",
+  "hash_comparisons": 1652,
+  "checks": 337,
+  "failures": [
+    {
+      "owner": "bcap_execution_evidence_20260909.json/runs/8/code/0",
+      "path": "models/bcap/run.py",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\run.py",
+      "role": "current",
+      "expected": "da6d7bf3f2b8f10386be886d7eef4d1255dfc934fd04d7fcd3edb478f0054710",
+      "actual": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/0",
+      "path": "README.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\README.md",
+      "role": "current",
+      "expected": "9113785be8b90a1de7d60189ce9ea6d2d5c2ba2a7695d9c229d302406d024a64",
+      "actual": "b87fa46e5de2a12add6aa8bd82a3d6d43815e90d9e1b516bd84781bbc99201f7",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/21",
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+      "role": "current",
+      "expected": "ec156b95f8267f33e9a6385c97388eda3691db23123cf9881fe6d22e057b771d",
+      "actual": "99bcdab0d93b8373e52d91cd1e944cba85272d3a73de4f0cfb757d894f0f746b",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/59",
+      "path": "columns/001-ball-count/column.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\column.md",
+      "role": "current",
+      "expected": "145872fc4a89f8c362e74b0cbc9e7916c9c1c1cc8341e0a23f2bb08baed10c41",
+      "actual": "54d62305ae602ac0844f3e580526ee3b76915a2db8b2b2555f159bfac4585668",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/60",
+      "path": "columns/001-ball-count/sources.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\sources.md",
+      "role": "current",
+      "expected": "ae8df4f2c89133f6cded2ba901fac2549a79bdc1d4a36273a2408cc15d616e72",
+      "actual": "bf3d5f539080ae9afa7ab54a0af98a9dd6b8a2e8697e2261b88fd5646a6d5893",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/62",
+      "path": "models/bcap/pitch/v0.1.0/model_card.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\pitch\\v0.1.0\\model_card.md",
+      "role": "current",
+      "expected": "de2e29361b0e3569f601e546434436939d0baf8e8287e49e2989d5cb5d673e3e",
+      "actual": "ebd1f8d131f026972737bd2c3c5822fbb20eaa555067c30ee70b97ccf0167ec2",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/63",
+      "path": "models/bcap/pitch/v0.1.0/validation.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\pitch\\v0.1.0\\validation.md",
+      "role": "current",
+      "expected": "74fcef5bd44ac50058cf794a9d7a1b764d3b99703e7634e1afa6936b038a3fb2",
+      "actual": "e32baa917d8d4492dda4949167bbc87cf002697ce58064d769d37bfe8a5bc1b0",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/64",
+      "path": "models/bcap/swing/v0.1.0/model_card.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\swing\\v0.1.0\\model_card.md",
+      "role": "current",
+      "expected": "e75a18fb4177aa939310414b81fbb355b61fb865a59b41204f1b23ea8fa199b6",
+      "actual": "61aee76f91b4a7765f4971c9d89c505fb2d1b6cad72345359c6374019e380992",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/65",
+      "path": "models/bcap/swing/v0.1.0/validation.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\swing\\v0.1.0\\validation.md",
+      "role": "current",
+      "expected": "3922d90ee78e9f894c7c3d61fcf071d977594f0064c6aad9ca9adf10a035c29d",
+      "actual": "1e020e166887a385576871f08951830fbd45f381d20b37d490b5b47252c995ea",
+      "status": "FAIL"
+    },
+    {
+      "owner": "bcap_document_update_20260909.json/inputs_read/66",
+      "path": "models/registry.md",
+      "actual_path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\registry.md",
+      "role": "current",
+      "expected": "2dcdc7abd16e8a76406bdf31657c57a298b3e63aee1aba04a43a1fb47c2d9826",
+      "actual": "1196c692b150620252fa455eb52bbd1e31fe63a149f478451a09948e3b4c518d",
+      "status": "FAIL"
+    }
+  ],
+  "legacy_baseline_verified": 300,
+  "legacy_no_verifiable_prior_baseline": 23,
+  "limitations": [
+    "Local recorded UTC/hashes do not prove universal nonexposure or public preregistration.",
+    "Reconstructed producer commands are not independent shell history.",
+    "Historical legacy references were resolved from stored evidence, not current paths blindly.",
+    "Source-file byte equality supports the recorded final core; it cannot reconstruct every prior in-memory execution."
+  ]
+}

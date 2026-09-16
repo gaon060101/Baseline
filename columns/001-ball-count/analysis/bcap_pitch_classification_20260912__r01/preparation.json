@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "at_utc": "2026-09-11T17:42:20.601122+00:00",
+  "source": {
+    "path": "columns/001-ball-count/data/processed/bcap_dev_v2_20260912__r01.pkl",
+    "sha256": "7ac1602e3ed5932ef1a7e3c26d9acb1cd9abc9a36e69234ff433cc3df7a05698",
+    "bytes": 417328886
+  },
+  "old_membership": {
+    "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fold_membership.csv",
+    "sha256": "096042d9568ac67444d6a0909acebc3ca6b056fcdb47db2fbb9d19a59053feab",
+    "bytes": 41193399
+  },
+  "output": {
+    "path": "columns/001-ball-count/data/processed/bcap_pitch_ff_dev_20260912__r01.pkl",
+    "sha256": "8b7975572273fa99304a0ae93b18a0c944e12066db93ef62e79be3f0ca99e67d",
+    "bytes": 218007330
+  },
+  "rows": 1415566,
+  "games": 4859,
+  "checks": [
+    {
+      "check": "only2024_2025",
+      "status": "PASS"
+    },
+    {
+      "check": "unique_keys",
+      "status": "PASS"
+    },
+    {
+      "check": "closed_codes_for_eligible",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy_action_map",
+      "status": "PASS"
+    },
+    {
+      "check": "FF_action_map",
+      "status": "PASS"
+    },
+    {
+      "check": "PA_Y_constant",
+      "status": "PASS"
+    },
+    {
+      "check": "seasonal_W",
+      "status": "PASS"
+    },
+    {
+      "check": "pre_count_consistent",
+      "status": "PASS"
+    },
+    {
+      "check": "same_eligible_row_ids",
+      "status": "PASS"
+    },
+    {
+      "check": "same_pitch_keys_and_old_labels",
+      "status": "PASS"
+    },
+    {
+      "check": "one_fold_per_game",
+      "status": "PASS"
+    }
+  ],
+  "retained_count_exceptions": 2,
+  "excluded_rows": 8861,
+  "preserved": "All old inputs unchanged; new slim training input keeps keys/action/outcome/pre-pitch features and analysis metadata."
+}

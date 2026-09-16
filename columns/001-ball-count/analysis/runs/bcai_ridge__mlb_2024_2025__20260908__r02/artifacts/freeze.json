@@ -1,0 +1,27 @@
+{
+  "frozen_at": "2026-09-08T08:10:49.437963+00:00",
+  "model_id": "BCAI-RIDGE-v0.2.0",
+  "development_run": "bcai_ridge__mlb_2024_2025__20260908__r02",
+  "selected_alpha": 300.0,
+  "external_evaluations_started": false,
+  "external_snapshot_cutoff": "2026-09-07",
+  "external_2023_role": "external_reproduction",
+  "external_2026_role": "external_forward_time",
+  "files": [
+    {
+      "path": "models/bcai/ridge/v0.2.0/development_plan.md",
+      "sha256": "1014e5f72709220dd56ab9422c7b1b386bf9fbe1d7f83a3d711970a146684627",
+      "bytes": 4518
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/ridge_v02.py",
+      "sha256": "e8350ed9f721901f3e16e1455b4fde3e89eb9e2e6595484d77c9bbe01a534aed",
+      "bytes": 18378
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/frozen_model.json",
+      "sha256": "cd457a73ac9433241f4acbbf7720f15bdaa2cd7944bfe2d0ba354e8582ce9be8",
+      "bytes": 185264
+    }
+  ]
+}

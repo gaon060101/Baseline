@@ -1,0 +1,161 @@
+{
+  "actions": {
+    "FB": [
+      "FF",
+      "SI",
+      "FC"
+    ],
+    "NFB": [
+      "SL",
+      "CH",
+      "ST",
+      "CU",
+      "FS",
+      "KC",
+      "SV",
+      "FA",
+      "EP",
+      "KN",
+      "FO",
+      "CS",
+      "SC"
+    ],
+    "Swing": [
+      "swinging_strike",
+      "swinging_strike_blocked",
+      "foul",
+      "foul_tip",
+      "hit_into_play",
+      "foul_bunt",
+      "missed_bunt",
+      "bunt_foul_tip"
+    ],
+    "Take": [
+      "ball",
+      "blocked_ball",
+      "called_strike",
+      "hit_by_pitch"
+    ]
+  },
+  "pa_exclusions": [
+    "missing_final",
+    "intentional_walk",
+    "catcher_interference",
+    "truncated",
+    "unknown_event",
+    "no_observed_0_0"
+  ],
+  "ridge_objective": "sum(y-ybar-(X-Xbar)beta)^2 + alpha sum(beta^2); intercept unpenalized, all category slopes penalized; T learner uses action-specific training means",
+  "solver": {
+    "method": "Jacobi-PCG centered sparse Gram",
+    "rtol": 1e-09,
+    "atol": 1e-11,
+    "maxiter": 3000,
+    "relative_gradient_limit": 1e-07
+  },
+  "unknown_categories": "Training-only observed string dictionaries; each unknown centered categorical block contributes zero; unseen IDs never provide repertoire support by imputation",
+  "numerical_epsilon": 1e-06,
+  "trim": 0.05,
+  "min_entity_arm_training": 30,
+  "min_rows": 500,
+  "min_ess": 200,
+  "min_arm_games": 100,
+  "min_coverage": 0.5,
+  "max_game_share": 0.05,
+  "practical_delta_W": 0.01,
+  "model_id": "BCAP-SWING-v0.2.0",
+  "version": "0.2.0",
+  "status_at_definition": "DRAFT",
+  "variant": "swing",
+  "generation": "V2",
+  "development_years": [
+    2024,
+    2025
+  ],
+  "features": [
+    "pitcher",
+    "batter",
+    "game_year",
+    "venue",
+    "matchup",
+    "count",
+    "base_state",
+    "outs_when_up",
+    "inning_bin",
+    "score_bin",
+    "pitch_number_bin",
+    "prev_pitch_group",
+    "prev_description",
+    "prev_release_speed_bin",
+    "pitch_group",
+    "release_speed_bin",
+    "pfx_x_bin",
+    "pfx_z_bin",
+    "plate_x_bin",
+    "relative_z_bin",
+    "swing_cell"
+  ],
+  "weights": {
+    "2024": {
+      "BB": 0.689,
+      "HBP": 0.72,
+      "1B": 0.882,
+      "2B": 1.254,
+      "3B": 1.59,
+      "HR": 2.05
+    },
+    "2025": {
+      "BB": 0.691,
+      "HBP": 0.722,
+      "1B": 0.882,
+      "2B": 1.252,
+      "3B": 1.584,
+      "HR": 2.037
+    }
+  },
+  "action0": "Take",
+  "action1": "Swing_including_bunts",
+  "support_entity": "batter",
+  "outer_folds": 3,
+  "seed": 20260909,
+  "comparison_family": 147,
+  "alphas": [
+    100,
+    1000
+  ],
+  "fixed_alpha": {
+    "p": 100,
+    "m0": 1000,
+    "m1": 1000
+  },
+  "better": "higher",
+  "estimand": "Associational adjusted final-PA W contrast on the same selected supported observed decision rows. Not identified intervention, sequential PA policy, or individual execution ability.",
+  "outcome": "Season-weighted final PA W, no BCAI or transition reward added",
+  "s_b_definition": "Finite plate_x/z/sz_top/bot and sz_top>sz_bot; S iff abs(plate_x)<=17/24 feet AND sz_bot<=plate_z<=sz_top, including boundary equality; B otherwise. Ball center at 2024/25 plate plane; no ball-radius expansion; not umpire call or intended target.",
+  "s_b_eligibility": "Existing eligible_pitch AND valid geometry, retaining current known FB/NFB covariate; no current speed/movement/coordinates/Swing/outcome predictors.",
+  "lag_mapping": "Known FF/SI/FC -> FB; closed permitted remainder -> NFB; START/MISSING_PREVIOUS retained; other unknown/PO codes -> UNCLASSIFIED. Stored fine codes are audit/mapping inputs only.",
+  "region": "Existing INNER/BOUNDARY/OUT unchanged; BOUNDARY includes both S and B. INNER is geometric inner zone, not inside-to-batter horizontal side.",
+  "calibration": "Original 5-way training-game partition, fold0 held out for Platt. Propensity refit folds1-4; outcome T-learners all training rows by arm. Train dictionaries only.",
+  "tuning": "PITCH/SWING use existing development final alpha p100/m0=m1=1000 without reselection. New S/B uses only100/1000 per component, original training-game fold1 validation vsfolds2-4 fitting; ties larger alpha.",
+  "split": "Original sorted unique games, RNG20260909, shuffled round-robin outer3. Per-outer nuisance seed=20260909+2000+k; calibration/tuning training-only5way. One seed, no repeated fitting beyond necessary crossfit/tuning.",
+  "policy": "No policy is learned or evaluated in V2; reported direction is an evaluation-group descriptive point estimate, not d(Z). No final full-development refit needed for these OOF diagnostic tables.",
+  "uncertainty": "Reused fixed-score game cluster sandwich t(G-1), individual nominal95% plus Bonferroni147 across all displayed primary delta groups; actual coverage and full-learning uncertainty unverified.",
+  "family_scope": "PITCH13 + S/B13 + SWING121 =147; each overall1/count12, SWING also count-zone36/count-zone-FB-NFB72. Frequencies are descriptive. No simultaneous coverage claim for any other metric.",
+  "evidence_labels": "Gate failure: 비교 자료 부족. Gate pass and Bonferroni delta interval covers0: 차이 불명확; otherwise 관찰상 방향 뚜렷. Point direction displayed separately where supported; no causal recommendation.",
+  "support": "Common mask .05<=p<=.95 and entity each-arm>=30 in nuisance training; SWING also existing finite measurements/zone/known group. Group gate N500, ESS200/arm,100games/arm,coverage.5,maxgameweightshare.05.",
+  "limits": [
+    "Completed PA and final-event eligibility are post-outcome selection",
+    "Player shrinkage does not remove hidden intent/quality/confounding",
+    "SWING includes bunts and adjudicated Take/HBP; hindsight physical proxies",
+    "NFB contains FA/Other, not all physically verified non-fastballs",
+    "Known six legacy count exceptions not investigated/repaired; development includes two; retained unchanged"
+  ],
+  "not_run": [
+    "2023/2026 data access/application/external evaluation",
+    "bootstrap or repeated seed fits",
+    "independent verifier or full audit",
+    "new raw acquisition/KBO",
+    "JOINT/Nash/sequential policy",
+    "Drive/publication"
+  ]
+}

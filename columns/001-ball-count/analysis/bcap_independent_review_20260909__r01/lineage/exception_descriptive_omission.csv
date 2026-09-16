@@ -1,0 +1,8 @@
+﻿run_id,game_year,supported_rows,exception_rows_supported,stored_phi_delta_mean,stored_phi_delta_mean_after_omitting_exception_rows,scope
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,696076,1,0.001470009857060006,0.0014707358061779576,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,699326,1,-0.001491110202923684,-0.0014902505234747818,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"
+bcap_swing__mlb_2024_2025__20260909__r01,2024,676342,1,-0.02390316590033377,-0.023903819217728783,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"
+bcap_swing__mlb_2024_2025__20260909__r01,2025,678174,1,-0.025291354689980564,-0.025290470905615734,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"
+bcap_pitch__mlb_2023__20260909__r01,2023,697633,2,0.0012929741400447435,0.0012917198270660968,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"
+bcap_swing__mlb_2023__20260909__r01,2023,682953,3,-0.02759621123765348,-0.02759613853439616,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,615820,1,0.0011647455781790804,0.00116605260239247,"same fitted scores, changed descriptive target only; not corrected-model sensitivity"

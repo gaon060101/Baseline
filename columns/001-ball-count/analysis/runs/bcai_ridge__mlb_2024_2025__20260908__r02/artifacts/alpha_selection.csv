@@ -1,0 +1,7 @@
+﻿stage,selected_alpha,one_SE_alpha,min_at_boundary,minimum_mean_MSE
+outer0_inner,300.0,30000.0,False,2.699582900386831
+outer1_inner,300.0,30000.0,False,2.709633602614271
+outer2_inner,300.0,30000.0,False,2.70066132014651
+outer3_inner,300.0,30000.0,False,2.7046313889605216
+outer4_inner,300.0,30000.0,False,2.7003667091617927
+final_cv,300.0,30000.0,False,2.70133493400713

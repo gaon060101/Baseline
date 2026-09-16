@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "prepared_hash",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "year_keys",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "count_action_Y",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no_forbidden_features",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "one_fold_per_game",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_no_external_tuning",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_training_games",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0/cal_inside_training",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_region_max_two",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_finite_predictions",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_converged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_no_external_tuning",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_training_games",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1/cal_inside_training",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_region_max_two",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_finite_predictions",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_converged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_no_external_tuning",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_training_games",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2/cal_inside_training",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_region_max_two",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_finite_predictions",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_converged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all_rows_once",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Q_delta",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "same_denominator",
+      "status": "PASS",
+      "detail": null
+    }
+  ]
+}

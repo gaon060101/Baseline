@@ -1,0 +1,6 @@
+{
+  "first_current_task_model_row_access_utc": "2026-09-14T03:07:58.732555+00:00",
+  "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+  "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+  "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+}

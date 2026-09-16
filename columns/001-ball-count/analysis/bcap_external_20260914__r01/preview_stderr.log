@@ -1,0 +1,4 @@
+127.0.0.1 - - [14/Sep/2026 12:26:00] "GET /columns/001-ball-count/analysis/bcap_external_20260914__r01/final_report.html HTTP/1.1" 200 -
+127.0.0.1 - - [14/Sep/2026 12:26:50] "GET /columns/001-ball-count/analysis/bcap_external_20260914__r01/final_report.html HTTP/1.1" 200 -
+127.0.0.1 - - [14/Sep/2026 12:26:50] code 404, message File not found
+127.0.0.1 - - [14/Sep/2026 12:26:50] "GET /favicon.ico HTTP/1.1" 404 -

@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-09-08T17:39:42.798957+00:00",
+  "reason": "11 missing completed Sept 7 games supplemented; prior attempt evaluation_passes=0; first evaluation on repaired snapshot",
+  "predecessor_failed_run": "bcai_ridge__mlb_2026_ytd_20260907__20260908__r01",
+  "acquisition_adapter": {
+    "path": "models/bcai/ridge/v0.2.0/complete_2026_snapshot.py",
+    "sha256": "619f9164ea5159a2b21ad377cfd6f01dc059b35676082da230a99a0c8d6abbf7",
+    "bytes": 3394
+  },
+  "acquisition_audit": {
+    "path": "columns/001-ball-count/data/raw/mlb/2026/supplement_20260909_ridge_v02/acquisition_audit.json",
+    "sha256": "56664c3ed4a39aeb123b90df3dd60c6e195334c4b79e124d93761b611416e826",
+    "bytes": 19712
+  },
+  "model_or_inference_changed": false,
+  "external_tuning": false
+}

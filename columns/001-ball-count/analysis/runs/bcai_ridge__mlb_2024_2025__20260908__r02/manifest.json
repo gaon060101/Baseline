@@ -1,0 +1,1312 @@
+{
+  "run_id": "bcai_ridge__mlb_2024_2025__20260908__r02",
+  "model_id": "BCAI-RIDGE-v0.2.0",
+  "version": "0.2.0",
+  "model_status": "EXPERIMENTAL",
+  "status": "COMPLETE",
+  "role": "development",
+  "run_date": "2026-09-08",
+  "started_at": "2026-09-08T08:07:57.020109+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "executable": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  "external_data_used_for_tuning": false,
+  "code": [
+    {
+      "path": "models/bcai/ridge/v0.2.0/ridge_v02.py",
+      "sha256": "e8350ed9f721901f3e16e1455b4fde3e89eb9e2e6595484d77c9bbe01a534aed",
+      "bytes": 18378
+    }
+  ],
+  "completed_at": "2026-09-08T08:10:49.453926+00:00",
+  "model_definition": "models/bcai/ridge/v0.2.0/specification.yaml",
+  "period": "2024_2025",
+  "data_period": {
+    "rows": 1424427,
+    "all_PA": 366231,
+    "exclusions": {
+      "included": 364124,
+      "intentional_walk": 1065,
+      "truncated": 635,
+      "missing_final": 221,
+      "catcher_interference": 186
+    },
+    "multiple_events_PA": 0,
+    "eligible_PA": 364124,
+    "games": 4859,
+    "first_date": "2024-03-20",
+    "last_date": "2025-09-28"
+  },
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/advantage_input_cache.pkl",
+      "sha256": "70c1def783b88f8fe9bc4772df1f8d8f46ad1cdeb8bb0defe4deef4829c51eeb",
+      "bytes": 229779110
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/schedule_2024.json",
+      "sha256": "9733d248b6a6d1635eb91802f504d70ebedc49b5aa87e7ae962cafb40b18879b",
+      "bytes": 3238226
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/schedule_2025.json",
+      "sha256": "a8e90faf13a67f04762e019c465e38c66def1d7c4fbc8621c47cb0785fac2948",
+      "bytes": 3228414
+    }
+  ],
+  "raw_input_audit": {
+    "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_audit.json",
+    "sha256": "2f52f1bf9aaccb1d50e628412127e370b2c9c6c9071d656fb019a4821d8c9400",
+    "bytes": 20841
+  },
+  "exclusions": {
+    "ordered": [
+      "missing_final",
+      "intentional_walk: intent_walk",
+      "catcher_interference: catcher_interf",
+      "truncated: truncated_pa",
+      "unknown_event",
+      "no_observed_0_0"
+    ],
+    "note": "마지막 기록 events 결측을 이전 events로 채우지 않음. 희생번트 포함. 기록 자체 없는 PA 복원 안 함."
+  },
+  "features": [
+    "batter",
+    "pitcher",
+    "game_year",
+    "venue",
+    "matchup",
+    "score_bin",
+    "base_state",
+    "outs_when_up",
+    "inning_bin"
+  ],
+  "alpha_candidates": [
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0,
+    30000.0
+  ],
+  "alpha_selection": "nested 5x3; final 5fold minimum MSE; one-SE comparison",
+  "selected_alpha": 300.0,
+  "fold_seed": 20260908,
+  "solver": "centered Gram Jacobi-PCG",
+  "tolerance": 1e-07,
+  "max_iterations": 5000,
+  "convergence": {
+    "all_fits": 207,
+    "all_converged": true,
+    "max_last_change": 1.128737629999679e-11,
+    "iteration_range": [
+      26,
+      173
+    ],
+    "alternate_initialization_prediction_maxdiff": 7.749986519120894e-15
+  },
+  "metrics": {
+    "N": 364124,
+    "games": 4859,
+    "MSE": 2.70094832659136,
+    "constant_MSE": 2.7125554224161217,
+    "improvement_pct": 0.42790262380788535,
+    "raw_MSE": 0.2607317312467864,
+    "raw_constant_MSE": 0.26185221027389427
+  },
+  "artifacts": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/all_fit_diagnostics.csv",
+      "sha256": "efe2966c494ffbd10eab6f2ddd991081e8491c488934f29f7fe1de3a33b5d25e",
+      "bytes": 42350
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/alpha_fold_scores.csv",
+      "sha256": "de939909020f32ae30af13f50ca8a25bb4882488300d0bb23a97873ae2a7fcd1",
+      "bytes": 25507
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/alpha_selection.csv",
+      "sha256": "37ead9f050cd6f10ec6fc6eb035ffb85c82fbc3fbdcd3729a4f14ff41825418b",
+      "bytes": 379
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/count_indices.csv",
+      "sha256": "d8d5b82c38d8f4d16fbaa0736b8b19b071d3df9cfe7a69f8b63f4ab911b29ad9",
+      "bytes": 2862
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_PA.pkl",
+      "sha256": "e9a0c969c4ad80c7389d94237452af6704959b150c1dde4e854d921989b92dcc",
+      "bytes": 81183442
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_predictions.csv",
+      "sha256": "80e8e2f2e69b0c5a4849e0397b7bd0ef6504d6e33f005923c1cddfb2d5794410",
+      "bytes": 22238102
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_reach.npz",
+      "sha256": "449def8c13a4f0ad63ffe23a9a53e18930eada00aa222d23e8dcafd2b430f872",
+      "bytes": 995902
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_scores.csv",
+      "sha256": "a2548933afeb7568563d5976c56016b72a43cda503116c9871235fb204c6ffa6",
+      "bytes": 321
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_alternate_initialization.csv",
+      "sha256": "646543f77a09bc88a4d78fc8bbd46a7b5224bfa60be76e66e71e4b5027ad87ff",
+      "bytes": 8907
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a1.csv",
+      "sha256": "d6c6faec6ffa5d29fbe84c828fb92ee47896ddc35f2d8e289e7752e2e4fa6fa0",
+      "bytes": 19279
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a10.csv",
+      "sha256": "b914e39d9df5ffd8df8fb3a039a9f84182705a1e1fe3b96a27c7680712edd8c1",
+      "bytes": 15302
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a100.csv",
+      "sha256": "a82397089b430c611e361240d2f947427f410d441abf2ff38aa2aae1eb29eec5",
+      "bytes": 10098
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a1000.csv",
+      "sha256": "c78a6e2a0380843419d5bfad14c795fa0778525d5c88f846ccaf0cb6daf9854b",
+      "bytes": 5826
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a10000.csv",
+      "sha256": "9178e450d081dba12bc541b92e063f558b366f4cc5a183753447b016588a6e3f",
+      "bytes": 3840
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a3.csv",
+      "sha256": "dacfd97b9a1580692b5f329049c62945efdb347243520e083a044c77f69e6039",
+      "bytes": 17344
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a30.csv",
+      "sha256": "7e856703b8ca40a2720e190d88eeb3fef87cebd481ade145b7f90e6062efa602",
+      "bytes": 12195
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a300.csv",
+      "sha256": "594209b95a9c2267aa9a04a18cfc50a8c6f77123a55bdd0943b731605de97fa6",
+      "bytes": 7876
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a3000.csv",
+      "sha256": "becba992aedc6e79f6e93cb9ec7c72762c63ecb6689c1cbd0b81842812b26218",
+      "bytes": 4680
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f0_a30000.csv",
+      "sha256": "e18c5105c34642b63c12b36b22b0927469095f9428af5f2fdd0a894ecdde584d",
+      "bytes": 3229
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a1.csv",
+      "sha256": "7f7cd4a32119f92ee1500df9777cfb3464d164083efb02375a5bb58588ec9bc1",
+      "bytes": 19434
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a10.csv",
+      "sha256": "d04242c2716bc755ef0a15b421c586cb88f22754cf7505004e9741f70a5a785f",
+      "bytes": 15176
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a100.csv",
+      "sha256": "324131068c405bfbaea3e16807d7b26575b62b8c6990d792b9aa516931c51752",
+      "bytes": 10021
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a1000.csv",
+      "sha256": "03c3b44604c363713f29c415035d1c3a805ecc800ab80d5d164eb30bc6aa681c",
+      "bytes": 6028
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a10000.csv",
+      "sha256": "1ccd2529bed5b131dc6088815cab4de590fb636455d5fa3a5a12029e1ca2b2a5",
+      "bytes": 3830
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a3.csv",
+      "sha256": "0351d5de2f918f2a6dd928761195223e35261cbbe1689f4f327300d4dd702364",
+      "bytes": 17264
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a30.csv",
+      "sha256": "c560c63639d1a13d1c0b62596f8b59a83fcb8dd8343fcca04b9039965290075c",
+      "bytes": 11803
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a300.csv",
+      "sha256": "3b7da6186c4f7814adc91f31e947108179a70c97b696cbde81a1ed18163331c9",
+      "bytes": 7740
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a3000.csv",
+      "sha256": "f467e1846b76f4b03401dea215878973507fbc40f06e0fd562b789f5bef82896",
+      "bytes": 4761
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f1_a30000.csv",
+      "sha256": "29a4980caa5ebe061e8ff31cb3f50b9686c54d0150458736b076e51d5df4b0cd",
+      "bytes": 3143
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a1.csv",
+      "sha256": "1b8142a1141fc9eda45c6779b24a00123578a1b4b8f9974eb82c193789f353ad",
+      "bytes": 19384
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a10.csv",
+      "sha256": "5da41597c1e2d5696a0fa2e08eb9451c9ee2c886c39ed3910d0c6b77dbcc51e6",
+      "bytes": 14607
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a100.csv",
+      "sha256": "5658d79a5f7a5dafb2a888ea6d6867312e5cb7e13431a47fbad46620f6740b15",
+      "bytes": 10105
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a1000.csv",
+      "sha256": "99b1027b38c2cc07044cbbae8c76123ad92d74922f377251367ebaf861997129",
+      "bytes": 5877
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a10000.csv",
+      "sha256": "ddb321662db61ad46484f6962e51b13d6c84665092f1ccd0cf7630cc20c5cb7f",
+      "bytes": 3792
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a3.csv",
+      "sha256": "82eab91ee2f88e01d60c9c0cb483be8961cc09e6dc7f4bf320d09878f23e686a",
+      "bytes": 17042
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a30.csv",
+      "sha256": "b389a0ff934447a6bfec8e572e1b391e7ed20620e808fa0978ae682ffd9d77a2",
+      "bytes": 11751
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a300.csv",
+      "sha256": "29a225c05b3aed91fc0b5fc5656c759816fc05e20e8774c03f89a698fa0772b5",
+      "bytes": 7933
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a3000.csv",
+      "sha256": "93bb0f0e472609a7479f342849922b0bca4b2c3a89f6166d983e8533c9ce5100",
+      "bytes": 4622
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f2_a30000.csv",
+      "sha256": "f7b9a10788e0ecfb55fe5d6aa6b0cabba8a8763134db43b9bbe6c8a628157f68",
+      "bytes": 3138
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a1.csv",
+      "sha256": "a81264666160956424f497ff5e643b1f2b82aa6841e476b1a9abb1a77cdea353",
+      "bytes": 19342
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a10.csv",
+      "sha256": "a3edb201ade3545764902afdda98b019d148f507c953f53e61b7016dfccbcc52",
+      "bytes": 15125
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a100.csv",
+      "sha256": "6f3f2ce64ce7d50ae0c8b6e793aa3caff5efe729033dda18156e2455f9d47e5a",
+      "bytes": 10017
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a1000.csv",
+      "sha256": "4e950a0d25a63a43aef65d23ac4509b7f5a5a71c6962711a415907b99aa56857",
+      "bytes": 5941
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a10000.csv",
+      "sha256": "dfdc0c2c6003090126aefdce1676d68a18d35d920e293bab71f239b9c47ef12f",
+      "bytes": 3828
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a3.csv",
+      "sha256": "3f43010547bd0c78da15e930fa59afe06954aeda00b3ac833d0a1cbea2081444",
+      "bytes": 17174
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a30.csv",
+      "sha256": "83946d38d6a4fb7d5b368d3e42c0c2fcc1cae31341c119e31b1a129df8e41f27",
+      "bytes": 11840
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a300.csv",
+      "sha256": "acc88438e7ea0bf1aac3d8e4e9452ea69e65433fec9488e0851a84ebe033699b",
+      "bytes": 7807
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a3000.csv",
+      "sha256": "b8cba4f8bb30610285827f42ad8fb4fa86352830ec1f19995e0947567dbe4771",
+      "bytes": 4697
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f3_a30000.csv",
+      "sha256": "095f63946e894a9b9161fbce1a1a7d8c8d7bfba492bad78e33f41c2b986d6e90",
+      "bytes": 3153
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a1.csv",
+      "sha256": "89a6e1976d3d787232c01335df59b29232c3e7e8bc432994fe93a8a2e9e54fdf",
+      "bytes": 19377
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a10.csv",
+      "sha256": "af4749a2f895565b27b1492265d364dd7d268e927d30df0987a14bfe1b227fed",
+      "bytes": 15223
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a100.csv",
+      "sha256": "5e8180eb3c3a5eae45952ad1e3c527c12e527bfddb5681517047b979b6817b5a",
+      "bytes": 10032
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a1000.csv",
+      "sha256": "8c5d1207e95cf9ebf7dc3eeb6a09eb71bc76dfcf8b7e3e990be2ed33c618bb61",
+      "bytes": 5972
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a10000.csv",
+      "sha256": "931d0ecbd2041bf81345af16c0aa9c70b1e9830e3921930ae94173045905022d",
+      "bytes": 3823
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a3.csv",
+      "sha256": "9509661eadb5f23b96da04d837b1dfd27fe5ef90f3d7a18b7fdc6bb7f7484557",
+      "bytes": 17271
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a30.csv",
+      "sha256": "638c1a07f427dce16ee485cbc7ad2f20c1e5f6e4ed2a8945c5966ef009dd1d30",
+      "bytes": 11628
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a300.csv",
+      "sha256": "f11161e6b532914cdfba3ed6b5d8e2480cb4f584a5f37b12140ffdb970bb8354",
+      "bytes": 7859
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a3000.csv",
+      "sha256": "2077a3c4c171dccd832d7e61df496d7f6976a07ba2fe525162c6a04cb1f9b65e",
+      "bytes": 4546
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_cv_f4_a30000.csv",
+      "sha256": "009f59d5e3d5a77fee9755fe8531118e84b563cf892361f1fb8c6d914f95f0a3",
+      "bytes": 3246
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/final_fit.csv",
+      "sha256": "72eaa37ad31f10dcce4b5d24d7c66b3e8235e38a5aa6c5b52e0a3f619f315025",
+      "bytes": 8215
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a1.csv",
+      "sha256": "87befdfff5c4599836198991ec8fe9b36d04aa163c2fca45335965c3acb24d97",
+      "bytes": 19421
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a10.csv",
+      "sha256": "8d653a1dcb212b53718f1e45935ff3764a316097c1bfd4e4dd85a00979c993d1",
+      "bytes": 14474
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a100.csv",
+      "sha256": "fdbbb4aabed8adc422ea436c0372faaa7cb0504f14e2cbdc6c2dd917c93a282c",
+      "bytes": 9302
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a1000.csv",
+      "sha256": "7d1f6e2e11f71ad50732b6746668ecae67e84f7aeef9f27a7bf67d0eca392078",
+      "bytes": 5431
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a10000.csv",
+      "sha256": "282fd92d0cfa7ae105573f1575be6fc291dd6d5af5c8061200ff6a4cf7f639d4",
+      "bytes": 3624
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a3.csv",
+      "sha256": "aea54a965b8a53488b492e1ae8fe81b1158a9cfd02fc6dd38de0c9b9f540f0a4",
+      "bytes": 17488
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a30.csv",
+      "sha256": "4a8367312b00af0d34b0dea2cb70cba975f3f2974f495f2355d9587ba6a65ce3",
+      "bytes": 11448
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a300.csv",
+      "sha256": "227d9aea15ee1b846a569bdbe5265c2c9dea000a91c02ef40858ee9853966597",
+      "bytes": 7176
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a3000.csv",
+      "sha256": "970f1354e5a431d90e10154958f06f1742c11240fd01903b3788d8d350d075c5",
+      "bytes": 4315
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f0_a30000.csv",
+      "sha256": "95893ba7db6193263d24f938054dfb52c911e0e6ab7654a2df1e296bac719816",
+      "bytes": 3039
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a1.csv",
+      "sha256": "a0776af5ec9bd4172aeb9d5b8d81aee1311f11545af396acc04a4baba3c9d29c",
+      "bytes": 19456
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a10.csv",
+      "sha256": "5f45a4a9eac5d2fb40f75e14271cfd3f18d2a70a79fd821a5d05bf2b984c669e",
+      "bytes": 14491
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a100.csv",
+      "sha256": "3039d2626ba50a27bba2e9e909c18f6d2cc90548ff37b40a71e1b271e697e405",
+      "bytes": 9330
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a1000.csv",
+      "sha256": "4649f5adbaf2cc13b2b60ee19588be2768947f0de24135c5bf6610a58fa5b20a",
+      "bytes": 5568
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a10000.csv",
+      "sha256": "94c023a5f3e630293694087794a71852dff63f7f3afb1d9c936a679e365061fc",
+      "bytes": 3607
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a3.csv",
+      "sha256": "8a64fabaa54d823d8c471bbce406dd359e72fe52cd76c5df89ec01729b27f40a",
+      "bytes": 17158
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a30.csv",
+      "sha256": "500f95d47cd73595d838090fe1850c58003b3567d50a5f500242e2cc68305dcb",
+      "bytes": 11509
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a300.csv",
+      "sha256": "057bcd815d5975630d8ea1cf02a221981cc8c1af6e784cae9be62c3e22045a86",
+      "bytes": 7392
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a3000.csv",
+      "sha256": "5b471f87b8498786630f8be756b7b981c03ea940276bbecf70e731cc40c93373",
+      "bytes": 4334
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f1_a30000.csv",
+      "sha256": "16b9797cf7b1f0b6bb0a546f75ec6cdc428104ab7415780da8804a8ff03bc9ab",
+      "bytes": 2924
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a1.csv",
+      "sha256": "3f76b7a757a16bd81faf822079b202303f8dcc6c1d05588837ac2042d79362cf",
+      "bytes": 19414
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a10.csv",
+      "sha256": "c3ce966a8509b9ee1e04bc0abcb52e545cb88bbc7c99958f854b3f4490ca37b9",
+      "bytes": 14817
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a100.csv",
+      "sha256": "db9c4b2a6eb1c29eb6c23b9cc5938a63619f8b15c9eeb2a37b1916896703afbf",
+      "bytes": 9330
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a1000.csv",
+      "sha256": "b02d3112b265ab23a81337ac452bd24e29ac068d03688571cab094c09be7286f",
+      "bytes": 5388
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a10000.csv",
+      "sha256": "aab7310bdd007b00d257a699936ac77e9c7535a7f16554a35dbcf085ba6428c4",
+      "bytes": 3568
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a3.csv",
+      "sha256": "189ca33ccd701f60d8979fbe80d8be78916effccc276283c23abd7bdbcc0c05b",
+      "bytes": 17170
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a30.csv",
+      "sha256": "2fcad6f109240dd4a18dcbb14ca692233164f31f750b33966028a29757acaa78",
+      "bytes": 11450
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a300.csv",
+      "sha256": "10093af7a2d7a4d4f80d4314fc8f207a7965dc798861b6a55c117ee6129cfaa8",
+      "bytes": 7352
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a3000.csv",
+      "sha256": "63d48b35855f6aec6791b880110204c607f35d7faf616875b16ee65554c3fa4e",
+      "bytes": 4312
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_inner_f2_a30000.csv",
+      "sha256": "0039820efa4d67062b806fba7e733addf349175fecc95254fbd64d69f5314ca3",
+      "bytes": 2998
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer0_refit.csv",
+      "sha256": "470c323d51460ff4e7f6c8046cf84600df3a92182b501e6a65eee2557fa14f0c",
+      "bytes": 7954
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a1.csv",
+      "sha256": "1aacda08788271bb363fd2527540145494712393605f35bf44321b5480c983e1",
+      "bytes": 19520
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a10.csv",
+      "sha256": "cbb3ed0ab20abe671c788d56eda941f88885b7614cebf5b4fc4cc373182e2e8b",
+      "bytes": 14491
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a100.csv",
+      "sha256": "6fbc6f19fdbf8f858811a429a00d14b6425f75fed7490016a4cba904c3456fb4",
+      "bytes": 9294
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a1000.csv",
+      "sha256": "bca56afdd030d671c1f832e0221ba58fa4f086cac10192fbde452fcfa91b6392",
+      "bytes": 5299
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a10000.csv",
+      "sha256": "a18ffc267161c31fec5b389d4c7e7bdfe95b68df6f29b58078768235b91dc925",
+      "bytes": 3580
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a3.csv",
+      "sha256": "d3253ece57cc498aebc52e5dcceb152a88c69cae4e3944dedf4ad7bd5215152a",
+      "bytes": 17373
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a30.csv",
+      "sha256": "6b126bbc2faf8068b8644f4ba812c7857d171acfe9a1a25eb6774da8e335a960",
+      "bytes": 11517
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a300.csv",
+      "sha256": "b2535d54726a8ff6f67bbbe0577ff3f073bbba30c1b5c89aabf41ed8c0a22257",
+      "bytes": 7141
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a3000.csv",
+      "sha256": "be6e16c261fdb0c4bdb3e495f860bfae4fb0dfc30ccbe22cdee521a1318babb2",
+      "bytes": 4299
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f0_a30000.csv",
+      "sha256": "3e8c5838da2be56f688dd5b6a7bc30f542853400bc3a4d42bb1810129c5f95b7",
+      "bytes": 3058
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a1.csv",
+      "sha256": "14ca27bc357ec837f54f59dc3cab78d57dafae80aac18631bb34f121a4260da6",
+      "bytes": 19588
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a10.csv",
+      "sha256": "7434fc33d86b1441917dcaa1ba24fb0c1ca31ac166ff9a353199a2b12954c64f",
+      "bytes": 14858
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a100.csv",
+      "sha256": "dcc3e3d8f994757068690bdb6eea306765c7881d3f360918e561b892e3c9a0af",
+      "bytes": 9529
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a1000.csv",
+      "sha256": "3c2cf1eb8e7e7047559586a09c7ef7f8d31f20666f654f15c7a7aab038adcb8c",
+      "bytes": 5420
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a10000.csv",
+      "sha256": "794b234da917e46394353c64176a623b9d30eb47467df449ca0528611fa6fe35",
+      "bytes": 3578
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a3.csv",
+      "sha256": "0d27d43968dfac6c23c92d6d0b698d697213b48b1cb07c5fc83aa1fdccc7ed94",
+      "bytes": 17394
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a30.csv",
+      "sha256": "380754596ec7731221f646bde240a1b5d4f97ddf7962926f933107d39f35dacd",
+      "bytes": 11528
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a300.csv",
+      "sha256": "4b4d6ec8a1878f347c466bd3ad5a5596b6d5f81379bb7fa34c9cfcde5e2fa427",
+      "bytes": 7362
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a3000.csv",
+      "sha256": "d58f26c176d43d1b616a2a990f004fb4482d64472e945ca17cbd075845ac8e2c",
+      "bytes": 4271
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f1_a30000.csv",
+      "sha256": "c88dc882b2cb3d4121dc1e52607c8999dc120d48b8bd9eca9c6f55b3fcd74290",
+      "bytes": 3028
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a1.csv",
+      "sha256": "1b0bd17ea71e853091dbaf3058acf1476e708b92beee3b22a14830fb15e94ed5",
+      "bytes": 19376
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a10.csv",
+      "sha256": "94ddbd34735fa8edee234f957e94d70642304432e60d846ec8c6079c9afb51ee",
+      "bytes": 14495
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a100.csv",
+      "sha256": "d008377f5cadbfa2c5b35f22a3f157f0dc51aa709cd9d23fb36fc1bcc90c3e89",
+      "bytes": 9154
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a1000.csv",
+      "sha256": "195810c488b9edfc27c60f48b13caa7396ac5efd0beed9fbf6370fb3e2269a5b",
+      "bytes": 5298
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a10000.csv",
+      "sha256": "62194ed26444ad68e8f45897c68dc50c173f22c3276244c26d61b77687a3d092",
+      "bytes": 3624
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a3.csv",
+      "sha256": "44b5de8e0b2d2b3b4d32b09afe32138cac84a1dac1f374ef5daa8c74e042cf4d",
+      "bytes": 17315
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a30.csv",
+      "sha256": "bf135be6b683b4e7a29f3453b92470ffbc2457f2f53b47e9d88b987ad235740e",
+      "bytes": 11292
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a300.csv",
+      "sha256": "16bbc01b0d858dd4513beb48f32ec3a36683a5a15344ce099a9b18d219adad80",
+      "bytes": 7234
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a3000.csv",
+      "sha256": "18f10803662db9115fc35431013c275371291c8bb7d1dbcad8b0fc486e415978",
+      "bytes": 4292
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_inner_f2_a30000.csv",
+      "sha256": "28f60a483ff8c06a0c2c7d54fc374a02530292ab17d3a070de4f103cae855783",
+      "bytes": 2997
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer1_refit.csv",
+      "sha256": "9c70d14119997c60b4c05446adb0e5d6c85d4ea290231dc2420d901f76a511de",
+      "bytes": 7878
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a1.csv",
+      "sha256": "f838a1e3735885bfe1dbfaf4d8efc15dd5b437ff4a01c5f50aebae19bfc26add",
+      "bytes": 19452
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a10.csv",
+      "sha256": "b28c503d9771571ad2180deef922b6c2e1ec34d4daded3e73757cf5b5c984f2d",
+      "bytes": 14342
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a100.csv",
+      "sha256": "3231b211666c1ed204761088d9588b79f00335e0bd8b9d08c90e1f942dfe3a4a",
+      "bytes": 9402
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a1000.csv",
+      "sha256": "fed9b6774869a9370cfbacad9a1b3b9221ac10d887d0903488d18762edd3bcc6",
+      "bytes": 5307
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a10000.csv",
+      "sha256": "7bd5058bea270a48e166e77d7b2d0a63fdd863532c13e04357aa238434bf4ede",
+      "bytes": 3622
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a3.csv",
+      "sha256": "58234d3c0df3a731468ea23ab14fff112906d953f9998d579eb7e958fea0b49c",
+      "bytes": 17305
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a30.csv",
+      "sha256": "1ab50778732dd0f54b754aa2442b2d490a45b0ad7305f745d36652828cfca703",
+      "bytes": 11323
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a300.csv",
+      "sha256": "9dac505194e2ad231c4aca37e4d0d41816bb2b5eacf19fc39896fba0acb8566c",
+      "bytes": 7280
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a3000.csv",
+      "sha256": "f484de2a05134adb88a612971e91f949e2b290fe4cd4684cbc30a8c9f4f64c03",
+      "bytes": 4308
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f0_a30000.csv",
+      "sha256": "8b53a3352f5b67b7ea6998f1916ab434ace0ee1ba7496b8736bc3937998ee11b",
+      "bytes": 2988
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a1.csv",
+      "sha256": "dfb4a653c96275d1a9f71d5a4d99a9720f6df2266835a4dda295409194250e6a",
+      "bytes": 19578
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a10.csv",
+      "sha256": "4f7eaf0445f32d673686fd3470f2b415cca423c96b32a5d55847d5e9f6e1ca46",
+      "bytes": 14710
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a100.csv",
+      "sha256": "aa6bb899c940a8a481b3ea0cbe1cf6d3ef4e2aee413e6c5c2efe6a0066662a5b",
+      "bytes": 9312
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a1000.csv",
+      "sha256": "6ae39a4bc89d14716cbfa7a1b3018a0dc55c8d603239edcd47d426d8456a4457",
+      "bytes": 5314
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a10000.csv",
+      "sha256": "b2004d7d5deddf365de801b67e10b18361b25f5ab5b8e1873313cdab58bdfde9",
+      "bytes": 3595
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a3.csv",
+      "sha256": "0bb7c5fe3f1ba5a4b3109d55d63e9eefb68b8fde78544cf5f18e49c034e0869e",
+      "bytes": 17379
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a30.csv",
+      "sha256": "259f990593c9eb0f97963fa58e27bfe70fb83d9a24bbf9bd4df4ac5b49377b6b",
+      "bytes": 11496
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a300.csv",
+      "sha256": "c0ab568f4c5172dfa13f8dd20ece68f652aeb4bb4e8ec33922cc84f7c7166ac9",
+      "bytes": 7234
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a3000.csv",
+      "sha256": "87c648b55dabaa406da697f6cd71687ac79c3b26ffc7bceaaec80b76e8518255",
+      "bytes": 4321
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f1_a30000.csv",
+      "sha256": "3aaf4281889ef32f7e9a5556b4a725757e19b45dc66de48902a9399f64c009a5",
+      "bytes": 3021
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a1.csv",
+      "sha256": "c245043cb833f7c533f2592e057d31f1516c5cadc1008dc1d16c57860193b971",
+      "bytes": 19261
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a10.csv",
+      "sha256": "adf83282237ee0e925fb8c6a46ca3428f0ed318fa761ceb701a6ce199ede39c5",
+      "bytes": 14457
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a100.csv",
+      "sha256": "111455881bb3d6d72c307db77ba7e5926d24a4bea70050aa951e4d2db7603e32",
+      "bytes": 9310
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a1000.csv",
+      "sha256": "47dfc2ac4d763495977e5fd2cd87e347dd9b40d87483dcdb7a3988c809406435",
+      "bytes": 5425
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a10000.csv",
+      "sha256": "a8dc821efb4c17aee5240d382b663797b0fe01e6f0c2bf530b2c9b5c3fee0ba2",
+      "bytes": 3588
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a3.csv",
+      "sha256": "dc20e98acf7dcc150b8e4f3afce59a563683bb6820fc6122c6920f1907bbcadf",
+      "bytes": 17047
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a30.csv",
+      "sha256": "b440c92213c3028c0dbe9230bc31b9b3bd1dfe8e1594092d7e454d7f22cf0bc8",
+      "bytes": 11679
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a300.csv",
+      "sha256": "8754a83d66abccda83b3a3f4d063a67d4a52b326a74b8422243cf9087573cc2b",
+      "bytes": 7100
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a3000.csv",
+      "sha256": "1415e929386f25329085fd27690a60775e668f2a08ce167b38515978cb3db79c",
+      "bytes": 4296
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_inner_f2_a30000.csv",
+      "sha256": "c2dfc45e08bb21eace2d925f9c40a67514c0e0a8a9084061f6d02c1c805409e1",
+      "bytes": 3023
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer2_refit.csv",
+      "sha256": "19b233bd19ac6f4be5307d6e40c820cd77966cfcf8b9a2c4d5a5ba7295b6c944",
+      "bytes": 7987
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a1.csv",
+      "sha256": "5ddd2d6efc689b0225597135519369e5e566448fea896f9a59db5a6405374773",
+      "bytes": 19616
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a10.csv",
+      "sha256": "78181046b9016601d9730ec50e0ec218986bc8cda793ce9dcc1a93470c8773ca",
+      "bytes": 14496
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a100.csv",
+      "sha256": "2e2629326fb0754a844a65ded345f0cdc637a9e5ed8e329d81ad2d7b762ed324",
+      "bytes": 9311
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a1000.csv",
+      "sha256": "3313ea806bce3e5af1814e4a393c4ea1712ca8e60ca10d8f94ddeff93d10be6d",
+      "bytes": 5311
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a10000.csv",
+      "sha256": "7d06a2685b05671e233f3a3e182a3ea6f7fc15dc8983e1f30df158a0f3573f4a",
+      "bytes": 3614
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a3.csv",
+      "sha256": "061bc8090f7ced440d914bfe1c08aadccebfb9e44f52db14ee7136836a01ffe0",
+      "bytes": 17254
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a30.csv",
+      "sha256": "2d9be3096089a34bee0ba61e66914704903d8b75ef531c3ec007248ad2d181f3",
+      "bytes": 11351
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a300.csv",
+      "sha256": "a23b2182b7ba412b01cea4763ad3606506f9b2f22754f151e88aea4c47b235ce",
+      "bytes": 7234
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a3000.csv",
+      "sha256": "f7ea060c56fa96ea36892f3b70277df4681ebb8dfd521426e08733820522c7be",
+      "bytes": 4281
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f0_a30000.csv",
+      "sha256": "2464751deaf7e364b995a89738603786e9c9b41847b1bb24ab3f6a2901d60e2c",
+      "bytes": 3009
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a1.csv",
+      "sha256": "b98d980ee204c172350e851b7953d9fd5020b9a8fbc1cfc0d745a6ec6528ef94",
+      "bytes": 19497
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a10.csv",
+      "sha256": "ac3fabf5412173d3ca95aa6008f78277dc45d8924adb35b63950b7fd0fe2498c",
+      "bytes": 14357
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a100.csv",
+      "sha256": "2c0e36d69eb28ce32bbee5b50b636ab106f5117ed942103ebe2799a22718879a",
+      "bytes": 9435
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a1000.csv",
+      "sha256": "982dd9f50ee04bfaebaf2d2c6c052ccd40e6028121cb5181ee240ec03860d989",
+      "bytes": 5451
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a10000.csv",
+      "sha256": "0c4beeec4d381d7430dc8e2c14274a60c7a03a5ec88b1fefae2fa720d91a4c53",
+      "bytes": 3599
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a3.csv",
+      "sha256": "e972d340e73048738e9b829c87336e63f0b9618581ef243e08e1b2c74c405868",
+      "bytes": 17349
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a30.csv",
+      "sha256": "957866ac67a8319098e4bd9fa3391822ae6101170d48210f7b393ad453d77df6",
+      "bytes": 11528
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a300.csv",
+      "sha256": "984556c40d3497b0629cd784ef2f22c3ee66b44691346e69a9ebc10a75ca3701",
+      "bytes": 7238
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a3000.csv",
+      "sha256": "6cbd67f65d4a910bb916b64836ac8186f2cfe1838a5854714db877a765eb136a",
+      "bytes": 4280
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f1_a30000.csv",
+      "sha256": "9c12dc97b8c0887d7df2dde2854e65d62ffaa99c54bfdc3b0c4a885822c8bf45",
+      "bytes": 2972
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a1.csv",
+      "sha256": "af5f2e83a5374ab115f830c37fd3093d24b19d73c46e80665a99e8631bf87e3e",
+      "bytes": 19281
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a10.csv",
+      "sha256": "d2b6b231d39f8063bad6062bf33f5c9129eb33ef1814a8fe6c5d5804b8024a65",
+      "bytes": 14439
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a100.csv",
+      "sha256": "5f2b89e7171e4c39e83e2a95d9124b410847d4fad35f81af4a7a0c8b7b59439b",
+      "bytes": 9190
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a1000.csv",
+      "sha256": "8831b2efb0399b8f3151f638eab58c66d4ba3f26b4b005a4c8d1b1847a537f51",
+      "bytes": 5325
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a10000.csv",
+      "sha256": "0d3a7cc64efca36f6679b08ec0fa741dfca3045d9398f8c771056c905dedd330",
+      "bytes": 3622
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a3.csv",
+      "sha256": "c5ec3a97abdb8301835d1fab48b66649294f7e351b04cfd34075444427346745",
+      "bytes": 17244
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a30.csv",
+      "sha256": "80624fc8b1b911739f5bf99040bd20cba7fe9dfab88bc5b496aa644c86558d3e",
+      "bytes": 11420
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a300.csv",
+      "sha256": "29c706d12a44f03fff32702ba33f6e9fe0833d1a463bf06832b41a1a1334d003",
+      "bytes": 7244
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a3000.csv",
+      "sha256": "dc7eb9406b5bb72db41e40cd074a39f49de4f6ab3df117b463d850496afe12ac",
+      "bytes": 4284
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_inner_f2_a30000.csv",
+      "sha256": "e0402c7a82857c5fb5bc108f971d36121193edd45a7708357772cb5101a924ee",
+      "bytes": 2986
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer3_refit.csv",
+      "sha256": "f0af1c9bb9368c25092e89e9769425c137d9b84a9681a6485e80982972b2f14e",
+      "bytes": 7991
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a1.csv",
+      "sha256": "cda7d6962effc564a7253cd47198f62a0c61953edb09a53906b64913d11fcb2b",
+      "bytes": 19462
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a10.csv",
+      "sha256": "129bb5bba5ac31520c234718da0e58b04325b1489a18d2e7543f80c3495b71ab",
+      "bytes": 14314
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a100.csv",
+      "sha256": "a1b4a78e788e348086005a73ba408b1b345da7773584c5792e8b6ae7603f83bb",
+      "bytes": 9318
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a1000.csv",
+      "sha256": "aef39e7c4a7dca82539ee16e6c7b0f55925ed8af1727b62c822e52275379b6b9",
+      "bytes": 5571
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a10000.csv",
+      "sha256": "2006630bb32b8d078e82e124ddcbb819d534a9c6306e5c2b176cef92941d7073",
+      "bytes": 3576
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a3.csv",
+      "sha256": "6e0127e1f75598f8a3de25d86e8f3a5f77cd6abfb2563f0a1d79260b9f11acf8",
+      "bytes": 17558
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a30.csv",
+      "sha256": "2d22c93d902f49418a645dbec53d3cd70afac2818ed3587248747f1dfd1dd8ff",
+      "bytes": 11448
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a300.csv",
+      "sha256": "9e33bb6f8abb688c4602b8d105d9702adb344d7736dc13025d556ae4931dd8d3",
+      "bytes": 7191
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a3000.csv",
+      "sha256": "647d338bc51153280ea56d261a4515108249c415314b288850b8f772ec19672c",
+      "bytes": 4314
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f0_a30000.csv",
+      "sha256": "b9af1206d4b440c2e4a04b69a75f0ca303308d315dc25830ee66d19dadafdfee",
+      "bytes": 2908
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a1.csv",
+      "sha256": "e735350e82bf6cc6eb48335193eef7a74aaedabef2742b69d705e039318a7bcc",
+      "bytes": 19329
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a10.csv",
+      "sha256": "17920f9ac6ca15028d0b37e9473da94e39ef51afd4f470f0c83d379fe58718a1",
+      "bytes": 14514
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a100.csv",
+      "sha256": "8e76caac6e9afcac639b767e6cf1c72758d596ddb97bab92731e2035c0c50fdd",
+      "bytes": 9305
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a1000.csv",
+      "sha256": "1a009490a34a12d160e6a8736ace0e94033cc66230218b6df16379ec5d18de41",
+      "bytes": 5425
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a10000.csv",
+      "sha256": "ca5babcd9d1177e3fc88a426b901685c4f7a91e9b9a4ce8e65e80ca46936200c",
+      "bytes": 3640
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a3.csv",
+      "sha256": "29284778e0570943f76fba8f8692579c3ee37494dccfda684374c6e8602f7041",
+      "bytes": 17326
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a30.csv",
+      "sha256": "81494b11379693f3d74e291634089e76ba889c0b1be87d20c921d44c6ce5f607",
+      "bytes": 11432
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a300.csv",
+      "sha256": "9ca2cb3aa779283fbba0c8c3b2d0bfa443af7e1b5340568de1646eb0bf30b94a",
+      "bytes": 7301
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a3000.csv",
+      "sha256": "f9ba5ae4681cd5b030aa81622ef579c5ee01814e8fefcf01d68d68a15bd21f2e",
+      "bytes": 4324
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f1_a30000.csv",
+      "sha256": "ad57d945253b32f6851f0340e51bde6dc71bbb04a60c99d20f759a72de2a278a",
+      "bytes": 3027
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a1.csv",
+      "sha256": "e45a137c54de1877104fcc1ef44de00b36f880a8adb6147419afe9582e453a5f",
+      "bytes": 19523
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a10.csv",
+      "sha256": "def5daf9eb43250ffe36abf5c5b62dba2d096e20e7787e7edbfd1a1463e8fd3a",
+      "bytes": 14515
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a100.csv",
+      "sha256": "1bc965d2c63f7dbe1e2da2bb53dfac653f2724e7f11f931cd23e1201e92079aa",
+      "bytes": 9185
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a1000.csv",
+      "sha256": "7d60a8b8f4cf3c1485d7128239d0d1e16cd719064306634b12f788bcc53d5dde",
+      "bytes": 5443
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a10000.csv",
+      "sha256": "8acde7cad00284a8d415267a758832b0544e23231130268f06b2e36b1e1d2bb6",
+      "bytes": 3517
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a3.csv",
+      "sha256": "eb16f2bb58565faf93a28edbbba1e56403b0cb4dc65984b2e861729a53d9191c",
+      "bytes": 17241
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a30.csv",
+      "sha256": "99235d2db93c5730d3367e79e979c1c7226bfc6fdc8d4c0bcb5f1fddf46b3477",
+      "bytes": 11507
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a300.csv",
+      "sha256": "06ab0b98333c463ba208ddaf79e34ff0fe85e0a5af75111b27746eb1912e0a07",
+      "bytes": 7058
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a3000.csv",
+      "sha256": "5866bab08a034e9d4a7afd522259598d612fe3f9dea765258acf5a45d0f10bf6",
+      "bytes": 4304
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_inner_f2_a30000.csv",
+      "sha256": "6a59aca8619701b1cfe79037784ec7f4cd365bcecbc61cc3e7e7b188889719e2",
+      "bytes": 2982
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/diagnostics/outer4_refit.csv",
+      "sha256": "44da0fdb910581ee4d1e5320645aad69efb59efff39f1111b79905531f0bc283",
+      "bytes": 7854
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/final_cv_alpha_summary.csv",
+      "sha256": "c58507a71a8077bd15cbb509d37863d39d2a1a63d12bafa77157fae952279957",
+      "bytes": 885
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/final_cv_folds.csv",
+      "sha256": "7fae221e97d8cc620a89fba0165c944d9c27c21fda446b80c11db1c64052bb0f",
+      "bytes": 48607
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/fit_diagnostics.jsonl",
+      "sha256": "d815dba75d129cfcd9eef9d76c0f1e9f3c9d35d4e955cc47aaa758dab90f1e28",
+      "bytes": 118725
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/freeze.json",
+      "sha256": "54bfa75b0b4d9ebfa7d565b1fb18589f41001f61d48576c53030605af9a19f47",
+      "bytes": 1000
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/frozen_model.json",
+      "sha256": "cd457a73ac9433241f4acbbf7720f15bdaa2cd7944bfe2d0ba354e8582ce9be8",
+      "bytes": 185264
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/in_sample_indices.csv",
+      "sha256": "cc8d1dff3f6796ffbb676c507ba06b313d384777aa441b6665495668db831fd3",
+      "bytes": 2863
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/legacy_alpha_scores.csv",
+      "sha256": "5183edef64f4529c73559bdb083a13e45f955de2fdd9b16a93751863a9340580",
+      "bytes": 268
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/legacy_comparison.csv",
+      "sha256": "03964535c681afa56fd0404e86d3eac38313c35e576572bb4af7b25c42b5bb19",
+      "bytes": 1659
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer0_inner_alpha_summary.csv",
+      "sha256": "d8822e61f1a0ae87c0a636eb8e89992a771a259a3a008d71ff930918f593cdda",
+      "bytes": 896
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer0_inner_folds.csv",
+      "sha256": "466288339d19824a815ec815e7041b225d932f18858452e8988a6e414409e67e",
+      "bytes": 38887
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer1_inner_alpha_summary.csv",
+      "sha256": "53cd2c8f117a5f479f76612e79598f0e57d003b5f1ed3db2450c2ad1a0cba67d",
+      "bytes": 884
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer1_inner_folds.csv",
+      "sha256": "8cf6f3043981263afcc969e5b099563e0ddb89e00625e22b3494c62ca1a9f4db",
+      "bytes": 38887
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer2_inner_alpha_summary.csv",
+      "sha256": "8d513d51b7bd9bc6732b43e3f75a9f9ada2ad80c6af5252d88c42f46533d8391",
+      "bytes": 883
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer2_inner_folds.csv",
+      "sha256": "524d5d4b3a0a4e6438bf65c04d89b760f1cc9481aee2eae38609c0fa8794209c",
+      "bytes": 38887
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer3_inner_alpha_summary.csv",
+      "sha256": "6afe2ee128bec57e5a68f509d105db19cdcd1919f7b51abb53f3f63eeacc4c56",
+      "bytes": 904
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer3_inner_folds.csv",
+      "sha256": "bdd01d4cbcff52d3cf112cd0636b473cd6d6239ea711d73d10f528cce7140102",
+      "bytes": 38887
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer4_inner_alpha_summary.csv",
+      "sha256": "4d9588b6b60e3aab62065930c62ab8f7c49f4029942d1ff1fe78ab21bd9f30b7",
+      "bytes": 884
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer4_inner_folds.csv",
+      "sha256": "58c3802e9fb13c5ee81a9057e6f5a3bfe1d87687b37bb833ed7a7916a4d42292",
+      "bytes": 38897
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer_folds.csv",
+      "sha256": "ad9e0c2c0dbd98a072c92b9a9f3194679d82a721d60cc92ea5559b1f634ff641",
+      "bytes": 48607
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer_scores.csv",
+      "sha256": "ac464a996559bf0fb32f857b5c6ba5d2849440360bef2d594dae95ca46a62db1",
+      "bytes": 657
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/sample_audit.csv",
+      "sha256": "c1369871b9a34c5536c9de81495a599814989d2a042c554b39f12a6963669a78",
+      "bytes": 255
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/sample_audit.json",
+      "sha256": "d97058c59d6017070f4d3ccf0d2f41471ef7ea94a55f7cb36b5f1a77aacc5af8",
+      "bytes": 341
+    }
+  ]
+}

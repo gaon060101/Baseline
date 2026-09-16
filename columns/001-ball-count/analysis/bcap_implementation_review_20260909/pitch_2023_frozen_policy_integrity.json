@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-09T06:18:04.338417+00:00",
+  "seal_sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+  "sealed_files_checked": 24,
+  "policy_sha256": "6969653164fb8a55d3bfbbf5a0c9125da208b32fd72b3883976def36c0627399",
+  "checks": [
+    {
+      "file": "scores.pkl",
+      "rows": 716113,
+      "all_policy_probabilities_match_frozen_development": true,
+      "conservative_no_change": true,
+      "sha256": "f5185af7e4f3176311bc2cc772bcf37117954bbc745cd7117b1bbf649096fcc0"
+    },
+    {
+      "file": "fixed_development_predictions.pkl",
+      "rows": 716113,
+      "all_policy_probabilities_match_frozen_development": true,
+      "conservative_no_change": true,
+      "sha256": "bfcca445fa28fd00ddfef5e8b988b558b0c2394becbe6e08f0e25d5888750741"
+    }
+  ],
+  "scope": "Deterministic equality/hash inspection; no new estimation or policy selection"
+}

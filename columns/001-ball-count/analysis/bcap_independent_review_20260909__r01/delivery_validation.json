@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-09T09:29:44.700514+00:00",
+  "input_hashes_checked": 924,
+  "output_hashes_checked": 187,
+  "review_baseline_hashes_checked": 617,
+  "errors": [],
+  "findings": 12,
+  "finding_types": {
+    "알려진 한계": 6,
+    "증거 부족": 5,
+    "확인된 오류": 1
+  },
+  "scope": "Final current file hashes, required outputs/schema/local links and start-baseline preservation. This is delivery integrity, not blanket statistical or model approval.",
+  "evidence_manifest_sha256": "5fec9bece56719be820230aa99a3e9a5509936d708870d054fc8f2ea462f88cf",
+  "code_sha256": "ae6dc1ef9ff33f40d0c169783a13a37fac62d0c27a3c0c40b3ba3e6fe9d6681d"
+}

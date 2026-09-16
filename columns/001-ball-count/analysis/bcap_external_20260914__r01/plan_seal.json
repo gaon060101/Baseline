@@ -1,0 +1,151 @@
+{
+  "sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+  "scope": "Local auditable before-new-V2-external-results seal, not externally witnessed preregistration",
+  "files": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/engine.py",
+      "sha256": "83dacd3592b4401f62d29ba184f1696f9c55e5a4db14094c73282ceded8d35d3",
+      "bytes": 10069
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/freeze_plan.py",
+      "sha256": "20e98d3fef259e8a751ab235d4715fbdaf92d7cb52590ea1d9725e1f5a77efad",
+      "bytes": 9253
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/measurement_review.json",
+      "sha256": "852fc27894599afec76e85f345a296a6683f949ee7fd30c108449c0c0b3637f6",
+      "bytes": 6235
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/measurement_review.md",
+      "sha256": "6a8cb0a1cd0826bed1dd69f1c196c9ac6f1734444ad5ed8ad65f466e99c3fc81",
+      "bytes": 4768
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+      "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+      "bytes": 40247
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.md",
+      "sha256": "8d92e776576b335033be599d601d25f9da2f2a82ce455615b463c321964875f0",
+      "bytes": 5797
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prepare_external.py",
+      "sha256": "d8c883e5327a82128b5d186207899368c7f927466eebb93f91a90bc8033b2340",
+      "bytes": 12791
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/run_external.py",
+      "sha256": "f13e0faba9cc3ae5f5f3fd1bbe6b9fc59a7ec87a2af37c7dc678a870fc56ffe4",
+      "bytes": 14029
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/verify_primary.py",
+      "sha256": "3bb137cb98570705b70e8f2bb454dc6675083801a9673c43fe0d2ef845971300",
+      "bytes": 11233
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/all_strict_count_exceptions.csv",
+      "sha256": "b70573ba339358e078064663834c9d8f405fd674d90acb6ef63ec47ca855e91a",
+      "bytes": 1814
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/batter_five_regions.csv",
+      "sha256": "640a94f2362557979b209d27de7d5d725cc1a6912b9344236df31cd52343d0b2",
+      "bytes": 36966
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+      "sha256": "56923874f63bca0914f9bec3c67433dd4af915c2984a015e4f1d1b52cc71244a",
+      "bytes": 7229
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "a120b6ed8ab377d2244f08d305323e0e0466847f0dfa31c447578f247aa3a2b6",
+      "bytes": 1002
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/primary_values.csv",
+      "sha256": "c0b27e1a775137b657896fa547de0955e1162f538deb37a2efce43d8bc31a0ac",
+      "bytes": 43396
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "1eeaf20a55db791f1ca3aa7818166af02966d41d170e18b71f0454ce83ccf5fd",
+      "bytes": 996
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+      "sha256": "778493cc496ff755d33adde1fe2e59d6135fdc52c593c868ef0d21be817aa5e8",
+      "bytes": 7201
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "ff66c221537cdebe478fd04e804c1f1c8ebd56f554958357ce7dda707c02a9b6",
+      "bytes": 2391
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+      "sha256": "2ba6e3152a3063cf36e77b8f9c73cb669c740d7c438a2976ccd6d98d4b22abf2",
+      "bytes": 7600
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "4ebcece83efdd94f79ec240d9184cf5ac8aaa32e7bee0f941b87266d666211f5",
+      "bytes": 1003
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_pitch__mlb_2023__20260909__r01.pkl",
+      "sha256": "f9bd3b64802ab98c68e5042b808a2602c486ea5227e6862b61c29070cde709ef",
+      "bytes": 199643609
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_2026_v010_bcap_pitch__mlb_2026_ytd_20260907__20260909__r01.pkl",
+      "sha256": "6640fea427cdda6fd059df5bd38794f878cd6d935d55f01b0533ba0576f044f3",
+      "bytes": 177028363
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_dev_v2_20260912__r01.pkl",
+      "sha256": "7ac1602e3ed5932ef1a7e3c26d9acb1cd9abc9a36e69234ff433cc3df7a05698",
+      "bytes": 417328886
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+      "bytes": 4980
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/specification.yaml",
+      "sha256": "a1bdf90156585d4e1208aae20e7f97d543a9989c8d93f47de94279f9d2d94f7f",
+      "bytes": 3690
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/engine.py",
+      "sha256": "83dacd3592b4401f62d29ba184f1696f9c55e5a4db14094c73282ceded8d35d3",
+      "bytes": 10069
+    },
+    {
+      "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+      "sha256": "273c6d0fb5d3e80881dbff08821cf419f158cc627c358b5c6d6174542c989a29",
+      "bytes": 6655
+    },
+    {
+      "path": "models/bcap/pitch_ff/v0.1.0/specification.yaml",
+      "sha256": "1cca347cd366d63d8cc70770eded42ac5961a2764ccd7f6f394be3fbba104111",
+      "bytes": 5971
+    },
+    {
+      "path": "models/bcap/pitch_sb/v0.1.0/specification.yaml",
+      "sha256": "00e7178f597de003bd0ab3018ce06376fef105102ce3d71a0e806d562df2ae6b",
+      "bytes": 6628
+    },
+    {
+      "path": "models/bcap/swing/v0.2.0/specification.yaml",
+      "sha256": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58",
+      "bytes": 6819
+    }
+  ]
+}

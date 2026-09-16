@@ -1,0 +1,1306 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-09T08:49:13.234617+00:00",
+  "both_completed_8": true,
+  "full_learning_interval_validated": false,
+  "recommendation_gate_upgrade": false,
+  "scope": "Independent resampling/split-hash/training-N/arithmetic/aggregation audit of full nested evaluation learner refits; not CI for frozen final full-development policy",
+  "limits": [
+    "Eight repetitions support descriptive SD/range/sign frequency only, not95% inference",
+    "Bootstrap row-level scores/nuisance predictions were not stored; per-replicate raw AIPW cannot be independently recomputed without refitting",
+    "Saved runtime PA/game crossfold zero checks corroborated by independently reconstructed original-game membership and every split hash",
+    "Original-game clustering does not remove cross-game dependence of players or series"
+  ],
+  "source_data": {
+    "path": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+    "sha256": "1aff16f91b58b4ed53b062a07c31381f4fe99b37ae983ece9b3d227f8c1c2fa4",
+    "bytes": 394585378
+  },
+  "runs": [
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "model_id": "BCAP-PITCH-v0.1.0",
+      "run_status": "COMPLETE",
+      "status": "PASS",
+      "planned_replicates": 8,
+      "checked_replicates": 8,
+      "stability_summary_checked": true,
+      "stability_summary_comparison": {
+        "rows": 104,
+        "max_abs_errors": {
+          "mean": 2.220446049250313e-16,
+          "SD": 5.684341886080802e-14,
+          "minimum": 0,
+          "maximum": 0,
+          "positive_fraction": 0
+        },
+        "input": {
+          "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/stability_summary.csv",
+          "sha256": "322a6fa4728d7c9640a09cb58f0ac0052e1a591e26744dee2577480278901cf3",
+          "bytes": 18123
+        }
+      },
+      "source_manifest_snapshot": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/manifest.json",
+        "sha256": "66d23d3a69617366bbe7334a7cdef7f87d8388bb897c750b1a1b9f1f38a92416",
+        "bytes": 27793
+      },
+      "source_progress_snapshot": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/progress.json",
+        "sha256": "a94674993a75b8cdfec03e1449596761188406c467712048ef4b514dfe845da3",
+        "bytes": 95
+      },
+      "cumulative_values_input": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_values.csv",
+        "sha256": "9eb256a018d6a02e61c77ec00479093e58c62d21867a66582e3157006d7bfc4c",
+        "bytes": 44872
+      },
+      "cumulative_values_match_replicates": true,
+      "replicate_checks": [
+        {
+          "replicate": 1,
+          "status": "PASS",
+          "sample_seed": 20261909,
+          "evaluation_seed": 20360909,
+          "drawn_games": 4859,
+          "unique_original_games": 3094,
+          "source_weighted_rows": 1414655,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 1.1102230246251565e-16,
+            "delta": 1.7911019889460533e-16,
+            "learned_gain": 1.3834419720915037e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 2.4069288229178198e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 1.713039432527097e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 0.0,
+            "all_count_aggregation_MSE_all": 0.0
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/replicate_audit.json",
+              "sha256": "0b341d33238c717d480aa14ff4af2a9f4d46a828e0eb5d636b572612c483c839",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "383fd49ee506e3548ff58271d736d40c067b739f12bf4ed5914750c731c42d0a",
+              "bytes": 68123
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/fold_audit.csv",
+              "sha256": "ed641d5081427cf3bdbb9ef49e875ace225729ddbff95d9ad75960a454852aff",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/fit_diagnostics.csv",
+              "sha256": "bc3d4e4b932145d63df5bb2f2bb5d77ace6d7f58d6b6027bb0b809124a386f1e",
+              "bytes": 8074
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/tuning.csv",
+              "sha256": "b923f029c34fb9b1a5908e2c6949e3272827c2dd774aaa77588497548c095e1e",
+              "bytes": 2776
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/action_policy_values.csv",
+              "sha256": "1011d9d82d3f46ad5bcc96bf62583231fc8651e9a01a63aa6116d41b74157d63",
+              "bytes": 5866
+            }
+          ]
+        },
+        {
+          "replicate": 2,
+          "status": "PASS",
+          "sample_seed": 20261910,
+          "evaluation_seed": 20370909,
+          "drawn_games": 4859,
+          "unique_original_games": 3050,
+          "source_weighted_rows": 1413632,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 1.1102230246251565e-16,
+            "delta": 1.6132928326584306e-16,
+            "learned_gain": 1.43982048506075e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 9.280770596475918e-17,
+            "supported_count_aggregation_observed_value": 0.0,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 8.088148206741863e-17,
+            "supported_count_aggregation_conservative_value": 0.0,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/replicate_audit.json",
+              "sha256": "4a6494accd659ccff2bf6cee97195aa56ac6a1548c75b0340988be6919a9b093",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "d76cb85ed042a35bdecf6176c911757452e76e43d876490b97f0f2ccaa53ed1b",
+              "bytes": 67155
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/fold_audit.csv",
+              "sha256": "a32d54257d131ed4f6e7ae46293a0c41046c166d22b4e5990bbf733756b8b6a7",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/fit_diagnostics.csv",
+              "sha256": "cea7fd3b550a265e3329861e3a6c109916587e367cebbd050e128eec51a6d38c",
+              "bytes": 8081
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/tuning.csv",
+              "sha256": "a75c79b945a3326b81777ffc5fd17228d5a2e941bcf3e6ad67b1dd3251120a30",
+              "bytes": 2784
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/action_policy_values.csv",
+              "sha256": "93b543a56da349340b8d326124fee443ede74ba5702584a9323b1a6124f7883d",
+              "bytes": 5938
+            }
+          ]
+        },
+        {
+          "replicate": 3,
+          "status": "PASS",
+          "sample_seed": 20261911,
+          "evaluation_seed": 20380909,
+          "drawn_games": 4859,
+          "unique_original_games": 3085,
+          "source_weighted_rows": 1413289,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 1.1102230246251565e-16,
+            "delta": 1.1427490897997217e-16,
+            "learned_gain": 1.0842021724855044e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 0.0,
+            "supported_count_aggregation_delta": 5.0523821237824507e-17,
+            "supported_count_aggregation_observed_value": 0.0,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 4.5211230592645535e-17,
+            "supported_count_aggregation_conservative_value": 0.0,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 5.551115123125783e-17,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 0.0,
+            "all_count_aggregation_MSE_all": 8.326672684688674e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/replicate_audit.json",
+              "sha256": "25f4c13bb203ac075fc8fc2884d57257e1afa5d74bbd0a7bbcbce0ecd726b053",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "3925781b27e20b423c8288ee033eb7e2cd37668c041327477e9bd39fe0135202",
+              "bytes": 67925
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/fold_audit.csv",
+              "sha256": "a91d93311d71ea9ac915d43eadee57ccb5c74cf088cd06993f7862d6bc6f25aa",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/fit_diagnostics.csv",
+              "sha256": "cf5efc54d3f529242cb71b390ca6e950257d627a5e2e5581cb1dded9a70a3eda",
+              "bytes": 8072
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/tuning.csv",
+              "sha256": "7e45c627a8cec74f82c9e01836aca157a3ec7e14d053520e6619b282b045f568",
+              "bytes": 2782
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/action_policy_values.csv",
+              "sha256": "570a8a44860cea5336132a689dd2dd86d23f7a945597e0676fef65d53fa319bd",
+              "bytes": 5912
+            }
+          ]
+        },
+        {
+          "replicate": 4,
+          "status": "PASS",
+          "sample_seed": 20261912,
+          "evaluation_seed": 20390909,
+          "drawn_games": 4859,
+          "unique_original_games": 3046,
+          "source_weighted_rows": 1418239,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 1.1102230246251565e-16,
+            "delta": 1.7184604433895245e-16,
+            "learned_gain": 1.3444106938820255e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 2.3290017917704242e-17,
+            "supported_count_aggregation_observed_value": 1.1102230246251565e-16,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 4.662069341687669e-17,
+            "supported_count_aggregation_conservative_value": 1.1102230246251565e-16,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/replicate_audit.json",
+              "sha256": "298a53fda53a6496b1816848d54849687733496e3c549812a133ef5393538b5f",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "eea10068349c2535c82fe6b48108774423869ed8837900d85a2094661133cacd",
+              "bytes": 67067
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/fold_audit.csv",
+              "sha256": "39065cdf6847434265d7d630f1ebea883339b1f494846a3aa583a3d0667795ee",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/fit_diagnostics.csv",
+              "sha256": "61ca09b77d72df085373abb6467723b4e604b28791e8dcd3127a850574e450c5",
+              "bytes": 8091
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/tuning.csv",
+              "sha256": "c0f5c3b78b507a788c5072880ebb3dd116da213ec5a3344a2d1739fda1ec082a",
+              "bytes": 2788
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/action_policy_values.csv",
+              "sha256": "2020cd5f03b8bcb1fa4543c2a3dc85dfa70ac676dd6476f3209af4e1ca573b09",
+              "bytes": 5947
+            }
+          ]
+        },
+        {
+          "replicate": 5,
+          "status": "PASS",
+          "sample_seed": 20261913,
+          "evaluation_seed": 20400909,
+          "drawn_games": 4859,
+          "unique_original_games": 3067,
+          "source_weighted_rows": 1412742,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 1.5265566588595902e-16,
+            "learned_gain": 1.212138028838794e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 0.0,
+            "supported_count_aggregation_delta": 6.816921159502609e-18,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 4.85722573273506e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 5.551115123125783e-17,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/replicate_audit.json",
+              "sha256": "8b57f78b695e81184e6f14889a69375c671d591cc10f27826d4c578f3ef6257d",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "4ea6e5fffece84d9d6d96edb0178316a6aa95760a973f10052f073f769339db7",
+              "bytes": 67529
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/fold_audit.csv",
+              "sha256": "879716da6f27dad1a24e06f30d6a4888629f47325b0aaa08ad3ff38e68acfb61",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/fit_diagnostics.csv",
+              "sha256": "d47340e6c45cd42367502f9d366b4cdefb07480eee74ef4be3e6ef1870b7bb87",
+              "bytes": 8077
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/tuning.csv",
+              "sha256": "65133ae443fef714595f9583990ad0b74ead952e42925d56e322f6706e76c375",
+              "bytes": 2782
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/action_policy_values.csv",
+              "sha256": "a86a7e6ad7fc94da14101e655e048a9691a4baec3593d84094da5647c8493b8d",
+              "bytes": 5872
+            }
+          ]
+        },
+        {
+          "replicate": 6,
+          "status": "PASS",
+          "sample_seed": 20261914,
+          "evaluation_seed": 20410909,
+          "drawn_games": 4859,
+          "unique_original_games": 3057,
+          "source_weighted_rows": 1418901,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 1.1102230246251565e-16,
+            "delta": 1.6219664500383146e-16,
+            "learned_gain": 2.0122792321330962e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 9.248244531301353e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 7.798124125601991e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 0.0,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/replicate_audit.json",
+              "sha256": "6e08a12e33054d5a001339eeecf62e5842b9e02c0aedff17d446ea2fdcce8e68",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "2b4883347453fa8f86890616a508b83993f3e250fe5363cc619f2fa185e002b4",
+              "bytes": 67309
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/fold_audit.csv",
+              "sha256": "92e28484f2259ef7f1fa04ff2b7aaf11186c2b8faa824d378934f15e81672948",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/fit_diagnostics.csv",
+              "sha256": "eb60fa1bff1f25b9089cf9b6b38a7775bb82bc41fc8825d295a5a343c0690f80",
+              "bytes": 8079
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/tuning.csv",
+              "sha256": "e4bd70c8266f868f979ceb3c9facec9901c267f6880e163bcb910f952bd1fc84",
+              "bytes": 2779
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/action_policy_values.csv",
+              "sha256": "be6c6fe60f762381b3085ab64118c0df321b82e42961d7c6fb59dab3c51e3029",
+              "bytes": 5921
+            }
+          ]
+        },
+        {
+          "replicate": 7,
+          "status": "PASS",
+          "sample_seed": 20261915,
+          "evaluation_seed": 20420909,
+          "drawn_games": 4859,
+          "unique_original_games": 3113,
+          "source_weighted_rows": 1415782,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 1.8561541192951836e-16,
+            "learned_gain": 1.4704491964334654e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 7.115076756936123e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 6.505213034913027e-19,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 5.551115123125783e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/replicate_audit.json",
+              "sha256": "d3d5aed6986c98432b70770ba95715152d07045401b2df766668cdc8cf2e0059",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "a4191ab55ccb580c9434d9a1bfca2a875d0307a4f9103db35bad658e8e512eb5",
+              "bytes": 68541
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/fold_audit.csv",
+              "sha256": "7f3e2681021abe816732ad0da7298cf8b43dea14002cfbd99d8964ea04a3e0e4",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/fit_diagnostics.csv",
+              "sha256": "bf313d6b18f03289f2cdcacd856c33754414c9e875d6214e89a00b478ecbe5a7",
+              "bytes": 8086
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/tuning.csv",
+              "sha256": "989185d17ff61f9ba596b57bc6c74ff97eb934c497ee715b2a2cd0fc9e985a9d",
+              "bytes": 2781
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/action_policy_values.csv",
+              "sha256": "97549de3f2651faeb8a599e90b35c8b03dd2331ce2113cf478023429640f0305",
+              "bytes": 5883
+            }
+          ]
+        },
+        {
+          "replicate": 8,
+          "status": "PASS",
+          "sample_seed": 20261916,
+          "evaluation_seed": 20430909,
+          "drawn_games": 4859,
+          "unique_original_games": 3066,
+          "source_weighted_rows": 1414726,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 1.4007892068512717e-16,
+            "learned_gain": 1.3406159862783262e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 2.1033522146218786e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 5.5294310796760726e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 5.551115123125783e-17,
+            "all_count_aggregation_MSE_all": 0.0
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/replicate_audit.json",
+              "sha256": "3aed824686532eace39f5f15732c1f5187ad4d12348ced9b0b69043d5fe49a21",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "bd8f3ef3a7942024564076a3f4c7d9eb9353b9ef04e968d8607c590fc680119e",
+              "bytes": 67507
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/fold_audit.csv",
+              "sha256": "21280ef270fdd88804e502c11928722ac79a4c159bf5f988ab4fd9e916914428",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/fit_diagnostics.csv",
+              "sha256": "6ad691ffa1b6516f7c713fecc222d42e2bd38367b7955be96e9e3f13d1f563f7",
+              "bytes": 8074
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/tuning.csv",
+              "sha256": "23e0c1474f83efdae7f3043d361f993b1ed253f226b34a6ad22b64e5f5ee8cf1",
+              "bytes": 2779
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/action_policy_values.csv",
+              "sha256": "3d7b4d3548fb3b30cfe55257b0d3dc6826d2a88b35dbeeb962cedcf1ddcb5dfd",
+              "bytes": 5899
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "model_id": "BCAP-SWING-v0.1.0",
+      "run_status": "COMPLETE",
+      "status": "PASS",
+      "planned_replicates": 8,
+      "checked_replicates": 8,
+      "stability_summary_checked": true,
+      "stability_summary_comparison": {
+        "rows": 104,
+        "max_abs_errors": {
+          "mean": 1.1102230246251565e-16,
+          "SD": 2.842170943040401e-14,
+          "minimum": 0,
+          "maximum": 0,
+          "positive_fraction": 0
+        },
+        "input": {
+          "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/stability_summary.csv",
+          "sha256": "8aea84f7ae924c214ec955066141debf44ce3cc8a1eb673b20bfd78acf83889e",
+          "bytes": 18317
+        }
+      },
+      "source_manifest_snapshot": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/manifest.json",
+        "sha256": "afddabafc78ec2c1bda903ea3ff287f30b31b19d0a72a1d01912843dbe7d648e",
+        "bytes": 27974
+      },
+      "source_progress_snapshot": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/progress.json",
+        "sha256": "cbded1b9492730e7011363cfe64fb80f969a2cb494bd5c9023586c97bd413973",
+        "bytes": 95
+      },
+      "cumulative_values_input": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_values.csv",
+        "sha256": "e0d7adf61348218ad81cb4b19b1e9030453131d55cc6ae9caea919328aab30e1",
+        "bytes": 45584
+      },
+      "cumulative_values_match_replicates": true,
+      "replicate_checks": [
+        {
+          "replicate": 1,
+          "status": "PASS",
+          "sample_seed": 20261909,
+          "evaluation_seed": 20360909,
+          "drawn_games": 4859,
+          "unique_original_games": 3094,
+          "source_weighted_rows": 1415138,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 9.71445146547012e-17,
+            "delta": 1.457167719820518e-16,
+            "learned_gain": 1.7694179454963432e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 6.938893903907228e-18,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 6.938893903907228e-18,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 5.551115123125783e-17,
+            "all_count_aggregation_all_action1_rate": 5.551115123125783e-17,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/replicate_audit.json",
+              "sha256": "ebecf5fe9013e79efb773a5a10da02a27e63714bec43c61eda24168b6c3a7c33",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "383fd49ee506e3548ff58271d736d40c067b739f12bf4ed5914750c731c42d0a",
+              "bytes": 68123
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/fold_audit.csv",
+              "sha256": "ed641d5081427cf3bdbb9ef49e875ace225729ddbff95d9ad75960a454852aff",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/fit_diagnostics.csv",
+              "sha256": "1c947f9ef5ed6fae563829764ba44c77091b946d79ff8478081c1b9c30ca5f06",
+              "bytes": 8091
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/tuning.csv",
+              "sha256": "129d02262498c3936dc962aa6d8e58476ade02579fcdce1f8bc27030080cb484",
+              "bytes": 2785
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/action_policy_values.csv",
+              "sha256": "de87366882ec4eb739234edcc3ab3a6b015c5c43f0d4c5f69c13d3ac529f11af",
+              "bytes": 5999
+            }
+          ]
+        },
+        {
+          "replicate": 2,
+          "status": "PASS",
+          "sample_seed": 20261910,
+          "evaluation_seed": 20370909,
+          "drawn_games": 4859,
+          "unique_original_games": 3050,
+          "source_weighted_rows": 1413969,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 6.938893903907228e-17,
+            "delta": 1.3010426069826053e-16,
+            "learned_gain": 2.1510571102112408e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 4.163336342344337e-17,
+            "supported_count_aggregation_observed_value": 0.0,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 3.469446951953614e-17,
+            "supported_count_aggregation_conservative_value": 0.0,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 5.551115123125783e-17,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 5.551115123125783e-17,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/replicate_audit.json",
+              "sha256": "ced0f7db2d9a90b7b95fea4ccee33823dfcd667dd6fc14473d73c7da5bf4a9d5",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "d76cb85ed042a35bdecf6176c911757452e76e43d876490b97f0f2ccaa53ed1b",
+              "bytes": 67155
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/fold_audit.csv",
+              "sha256": "a32d54257d131ed4f6e7ae46293a0c41046c166d22b4e5990bbf733756b8b6a7",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/fit_diagnostics.csv",
+              "sha256": "3322be4da88486fc5c07a59e6d947f40717abddba6a2cd979f0a6b49b11f62be",
+              "bytes": 8092
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/tuning.csv",
+              "sha256": "e35224e1d5533a15fd16318b104f1e1c7cdffff853944bde533ab0b61916fdc2",
+              "bytes": 2786
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/action_policy_values.csv",
+              "sha256": "0c6e2b668f9dcdf3ef3fc0bf3e39f23aa94596e1d045e11542553f28c46e77fb",
+              "bytes": 5997
+            }
+          ]
+        },
+        {
+          "replicate": 3,
+          "status": "PASS",
+          "sample_seed": 20261911,
+          "evaluation_seed": 20380909,
+          "drawn_games": 4859,
+          "unique_original_games": 3085,
+          "source_weighted_rows": 1414057,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 2.220446049250313e-16,
+            "learned_gain": 1.97758476261356e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 2.7755575615628914e-17,
+            "supported_count_aggregation_observed_value": 0.0,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 4.163336342344337e-17,
+            "supported_count_aggregation_conservative_value": 0.0,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 5.551115123125783e-17,
+            "all_count_aggregation_all_action1_rate": 5.551115123125783e-17,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 2.7755575615628914e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/replicate_audit.json",
+              "sha256": "31d299f8ecddead177fd6b56d3bc63b9f2d0e4d53cebbc152408a7d55cafacc7",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "3925781b27e20b423c8288ee033eb7e2cd37668c041327477e9bd39fe0135202",
+              "bytes": 67925
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/fold_audit.csv",
+              "sha256": "a91d93311d71ea9ac915d43eadee57ccb5c74cf088cd06993f7862d6bc6f25aa",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/fit_diagnostics.csv",
+              "sha256": "bd3d8b50606c0cf93fce8f1d46c4658b9dc3f1c2f8fd4a457c60d887e5427e50",
+              "bytes": 8079
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/tuning.csv",
+              "sha256": "68c8c3d9725bf2d255c35d30bd8c81fa0520d9ed9215c94038d09fdea695a4ef",
+              "bytes": 2777
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/action_policy_values.csv",
+              "sha256": "4e78c6c43ee0b72cc0d81f92187960555551e81499f09d1142bf8cd152fbc63b",
+              "bytes": 5991
+            }
+          ]
+        },
+        {
+          "replicate": 4,
+          "status": "PASS",
+          "sample_seed": 20261912,
+          "evaluation_seed": 20390909,
+          "drawn_games": 4859,
+          "unique_original_games": 3046,
+          "source_weighted_rows": 1418586,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 1.9081958235744878e-16,
+            "learned_gain": 1.700029006457271e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 3.469446951953614e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 2.0816681711721685e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 5.551115123125783e-17,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 5.551115123125783e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/replicate_audit.json",
+              "sha256": "7e64ed4ec5127f2acd80d60cb9c2792dd23cef31c27b0068d3285bf5f2c28782",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "eea10068349c2535c82fe6b48108774423869ed8837900d85a2094661133cacd",
+              "bytes": 67067
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/fold_audit.csv",
+              "sha256": "39065cdf6847434265d7d630f1ebea883339b1f494846a3aa583a3d0667795ee",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/fit_diagnostics.csv",
+              "sha256": "3ca1a8db26e6160ed52a3c78bd1cdedca7a98f60e1746228e9a71553957ccf71",
+              "bytes": 8077
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/tuning.csv",
+              "sha256": "9a534052587e24be096655b28ad33c922d97487f524d8d0fc230fce8f9d90ba8",
+              "bytes": 2782
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/action_policy_values.csv",
+              "sha256": "bdeeaabce8c779ee23f6604799a30685f62fe3659598e65f57243eb39c7b70d5",
+              "bytes": 5989
+            }
+          ]
+        },
+        {
+          "replicate": 5,
+          "status": "PASS",
+          "sample_seed": 20261913,
+          "evaluation_seed": 20400909,
+          "drawn_games": 4859,
+          "unique_original_games": 3067,
+          "source_weighted_rows": 1413215,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 6.938893903907228e-17,
+            "delta": 1.1796119636642288e-16,
+            "learned_gain": 1.491862189340054e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 5.898059818321144e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 2.0816681711721685e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 5.551115123125783e-17,
+            "all_count_aggregation_Brier_all": 0.0,
+            "all_count_aggregation_MSE_all": 0.0
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/replicate_audit.json",
+              "sha256": "53f0bd92bb6f47a8196a410c2893733d41c4861197e0f90b2e35a2693639111a",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "4ea6e5fffece84d9d6d96edb0178316a6aa95760a973f10052f073f769339db7",
+              "bytes": 67529
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/fold_audit.csv",
+              "sha256": "879716da6f27dad1a24e06f30d6a4888629f47325b0aaa08ad3ff38e68acfb61",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/fit_diagnostics.csv",
+              "sha256": "b7ad89f7796380cb1e7700e831cd2687480224857ecda64af4d37da1eec18542",
+              "bytes": 8085
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/tuning.csv",
+              "sha256": "3843abf17f82375624c9636bd70333f3874d881a58918bb89eb352c10cd5c881",
+              "bytes": 2772
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/action_policy_values.csv",
+              "sha256": "e8bdb8ee165bec21a55852d2e4945f4e27a9412862027bd5f24aa6ac693a1a37",
+              "bytes": 5991
+            }
+          ]
+        },
+        {
+          "replicate": 6,
+          "status": "PASS",
+          "sample_seed": 20261914,
+          "evaluation_seed": 20410909,
+          "drawn_games": 4859,
+          "unique_original_games": 3057,
+          "source_weighted_rows": 1419344,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 6.938893903907228e-17,
+            "delta": 1.249000902703301e-16,
+            "learned_gain": 2.0816681711721685e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 0.0,
+            "supported_count_aggregation_delta": 6.938893903907228e-18,
+            "supported_count_aggregation_observed_value": 0.0,
+            "supported_count_aggregation_learned_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_gain": 1.3877787807814457e-17,
+            "supported_count_aggregation_conservative_value": 0.0,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 5.551115123125783e-17,
+            "all_count_aggregation_Brier_all": 2.7755575615628914e-17,
+            "all_count_aggregation_MSE_all": 0.0
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/replicate_audit.json",
+              "sha256": "416345b42e81ea20f828b4638a71be2f9a00bc4cf4ff4984f321fdaf6e0ed718",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "2b4883347453fa8f86890616a508b83993f3e250fe5363cc619f2fa185e002b4",
+              "bytes": 67309
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/fold_audit.csv",
+              "sha256": "92e28484f2259ef7f1fa04ff2b7aaf11186c2b8faa824d378934f15e81672948",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/fit_diagnostics.csv",
+              "sha256": "c8ecf42f505be6f156ded34db46857ea2632da742a7c51460675b72320921de5",
+              "bytes": 8085
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/tuning.csv",
+              "sha256": "313a58d80c6015f6a51b07954702d28e9d043a4cff4f690e7294f1104dc58578",
+              "bytes": 2779
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/action_policy_values.csv",
+              "sha256": "56cca73304e1ce7fe4898958dfdef59076b960bb0d22972f591b6fb64185700e",
+              "bytes": 6003
+            }
+          ]
+        },
+        {
+          "replicate": 7,
+          "status": "PASS",
+          "sample_seed": 20261915,
+          "evaluation_seed": 20420909,
+          "drawn_games": 4859,
+          "unique_original_games": 3113,
+          "source_weighted_rows": 1416266,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 2.0816681711721685e-16,
+            "learned_gain": 1.734723475976807e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 5.551115123125783e-17,
+            "supported_count_aggregation_Q1": 1.1102230246251565e-16,
+            "supported_count_aggregation_delta": 5.898059818321144e-17,
+            "supported_count_aggregation_observed_value": 5.551115123125783e-17,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 5.204170427930421e-17,
+            "supported_count_aggregation_conservative_value": 5.551115123125783e-17,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 5.551115123125783e-17,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 5.551115123125783e-17,
+            "all_count_aggregation_MSE_all": 5.551115123125783e-17
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/replicate_audit.json",
+              "sha256": "48519a65a9a695977a2d915a36b05532176ffecc0fec59e85e80ad81e1da3679",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "a4191ab55ccb580c9434d9a1bfca2a875d0307a4f9103db35bad658e8e512eb5",
+              "bytes": 68541
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/fold_audit.csv",
+              "sha256": "7f3e2681021abe816732ad0da7298cf8b43dea14002cfbd99d8964ea04a3e0e4",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/fit_diagnostics.csv",
+              "sha256": "5a7fcde06babdc1a345756bc7047ef4f15ae2e811b3a3e0a997a6352cdf4f532",
+              "bytes": 8089
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/tuning.csv",
+              "sha256": "8d0c98b7dfc4554ffce4caa442789a58b3cb30efbc7fc96758b09995e8e597cc",
+              "bytes": 2779
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/action_policy_values.csv",
+              "sha256": "ae45bc61dac3dc4ab6a96da53726f9baf11ba74d6dc5a02ed40efac47c03dd3b",
+              "bytes": 5993
+            }
+          ]
+        },
+        {
+          "replicate": 8,
+          "status": "PASS",
+          "sample_seed": 20261916,
+          "evaluation_seed": 20430909,
+          "drawn_games": 4859,
+          "unique_original_games": 3066,
+          "source_weighted_rows": 1415262,
+          "season_draws": {
+            "2024": 2429,
+            "2025": 2430
+          },
+          "original_game_membership_unique": true,
+          "all_outer_inner_tuning_calibration_set_hashes_recreated": true,
+          "split_records_checked": 27,
+          "training_fit_counts_recreated": 90,
+          "all_fits_converged": true,
+          "saved_tuning_choices_rechecked": 27,
+          "runtime_original_game_PA_crossfold_flags_zero": true,
+          "arithmetic_max_abs_errors": {
+            "coverage": 1.1102230246251565e-16,
+            "all_action1_rate": 5.551115123125783e-17,
+            "delta": 2.1510571102112408e-16,
+            "learned_gain": 2.0816681711721685e-16,
+            "conservative_gain": 0,
+            "conservative_retention_value": 0,
+            "conservative_zero_gain": 0,
+            "supported_count_aggregation_Q0": 0.0,
+            "supported_count_aggregation_Q1": 5.551115123125783e-17,
+            "supported_count_aggregation_delta": 3.8163916471489756e-17,
+            "supported_count_aggregation_observed_value": 0.0,
+            "supported_count_aggregation_learned_value": 0.0,
+            "supported_count_aggregation_learned_gain": 3.8163916471489756e-17,
+            "supported_count_aggregation_conservative_value": 0.0,
+            "supported_count_aggregation_conservative_gain": 0.0,
+            "supported_count_aggregation_learned_action1_share": 0.0,
+            "all_count_aggregation_all_action1_rate": 0.0,
+            "all_count_aggregation_Brier_all": 0.0,
+            "all_count_aggregation_MSE_all": 0.0
+          },
+          "raw_bootstrap_row_score_recomputation": "NOT_AVAILABLE: per-replicate score rows and fitted nuisances were not saved",
+          "inputs": [
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/replicate_audit.json",
+              "sha256": "cfbe410d5fd43d6e8df04c1ec38d5b55e03629d2ea9e1e4421647ef8eab68388",
+              "bytes": 603
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/sampled_game_multiplicity_and_outer_fold.csv",
+              "sha256": "bd8f3ef3a7942024564076a3f4c7d9eb9353b9ef04e968d8607c590fc680119e",
+              "bytes": 67507
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/fold_audit.csv",
+              "sha256": "21280ef270fdd88804e502c11928722ac79a4c159bf5f988ab4fd9e916914428",
+              "bytes": 4756
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/fit_diagnostics.csv",
+              "sha256": "a16d21ccd2540bcc2e818b7e0e0f14a28ff9ac34ade5a5900f639c3d85523090",
+              "bytes": 8085
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/tuning.csv",
+              "sha256": "bc3e43d282f66e688a33e77ca1f25240d45f79abdf0ea4d7c75df58436e680d8",
+              "bytes": 2775
+            },
+            {
+              "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/action_policy_values.csv",
+              "sha256": "620c6a0ce8a50981c9e8e893516921de91e479c2ed2cccbd2e6adf922b577dfb",
+              "bytes": 5987
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "code": {
+    "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/verify_bootstrap.py",
+    "sha256": "ce64e4f2244f9dc36207040bd0108e0101978c74f061663240983114ab3bd763",
+    "bytes": 22294
+  },
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/verify_bootstrap.py",
+    "--require-complete",
+    "--output",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/bootstrap_final_validation.json"
+  ],
+  "independent_stability_output": {
+    "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/bootstrap_final_validation_independent_stability.csv",
+    "sha256": "39f9329c4144e16ac58e54db31d3cb8770956a9affdb909742ddf7cb55323bd1",
+    "bytes": 43359
+  }
+}

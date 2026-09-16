@@ -1,0 +1,45 @@
+{
+  "run_id": "bcai_ridge__mlb_2026_ytd_20260907__20260908__r01",
+  "model_id": "BCAI-RIDGE-v0.2.0",
+  "version": "0.2.0",
+  "model_status": "EXPERIMENTAL",
+  "role": "external_forward_time",
+  "status": "FAILED",
+  "run_date": "2026-09-08",
+  "started_at": "2026-09-08T08:12:09.349331+00:00",
+  "cutoff": "2026-09-07",
+  "development_run": "bcai_ridge__mlb_2024_2025__20260908__r02",
+  "model_freeze": {
+    "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/freeze.json",
+    "sha256": "54bfa75b0b4d9ebfa7d565b1fb18589f41001f61d48576c53030605af9a19f47",
+    "bytes": 1000
+  },
+  "frozen_model": {
+    "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/frozen_model.json",
+    "sha256": "cd457a73ac9433241f4acbbf7720f15bdaa2cd7944bfe2d0ba354e8582ce9be8",
+    "bytes": 185264
+  },
+  "code": [
+    {
+      "path": "models/bcai/ridge/v0.2.0/external_validation.py",
+      "sha256": "82bacca8a77e34d1725fbae75b893ba6624ecd290317ff1a81bc66455268df5e",
+      "bytes": 9803
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/ridge_v02.py",
+      "sha256": "e8350ed9f721901f3e16e1455b4fde3e89eb9e2e6595484d77c9bbe01a534aed",
+      "bytes": 18378
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "executable": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  "external_data_used_for_tuning": false,
+  "evaluation_passes": 0,
+  "error": "Data validation failed missing=11 duplicates=0",
+  "failed_at": "2026-09-08T08:17:45.408472+00:00"
+}

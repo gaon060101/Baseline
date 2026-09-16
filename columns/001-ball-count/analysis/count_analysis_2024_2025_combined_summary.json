@@ -1,0 +1,134 @@
+{
+  "rows": 1424427,
+  "eligible_actual_pitches": 1419135,
+  "automatic_events": 4831,
+  "missing_pitch_name": 5292,
+  "plate_appearances": 366231,
+  "missing_final_event_pas": 221,
+  "counts": {
+    "0-0": 364789,
+    "0-1": 185061,
+    "0-2": 96616,
+    "1-0": 136998,
+    "1-1": 142844,
+    "1-2": 139733,
+    "2-0": 45771,
+    "2-1": 73051,
+    "2-2": 118711,
+    "3-0": 13978,
+    "3-1": 29880,
+    "3-2": 71703
+  },
+  "top_used_pitch": {
+    "0-0": {
+      "pitch": "4-Seam Fastball",
+      "pct": 32.86
+    },
+    "0-1": {
+      "pitch": "4-Seam Fastball",
+      "pct": 28.35
+    },
+    "0-2": {
+      "pitch": "4-Seam Fastball",
+      "pct": 32.01
+    },
+    "1-0": {
+      "pitch": "4-Seam Fastball",
+      "pct": 30.73
+    },
+    "1-1": {
+      "pitch": "4-Seam Fastball",
+      "pct": 27.79
+    },
+    "1-2": {
+      "pitch": "4-Seam Fastball",
+      "pct": 30.5
+    },
+    "2-0": {
+      "pitch": "4-Seam Fastball",
+      "pct": 37.09
+    },
+    "2-1": {
+      "pitch": "4-Seam Fastball",
+      "pct": 31.01
+    },
+    "2-2": {
+      "pitch": "4-Seam Fastball",
+      "pct": 30.75
+    },
+    "3-0": {
+      "pitch": "4-Seam Fastball",
+      "pct": 64.99
+    },
+    "3-1": {
+      "pitch": "4-Seam Fastball",
+      "pct": 43.22
+    },
+    "3-2": {
+      "pitch": "4-Seam Fastball",
+      "pct": 36.97
+    }
+  },
+  "best_observed_pitch_min500": {
+    "0-0": {
+      "pitch": "Slurve",
+      "rv_per_100": 0.357,
+      "n": 1893
+    },
+    "0-1": {
+      "pitch": "4-Seam Fastball",
+      "rv_per_100": 0.188,
+      "n": 52468
+    },
+    "0-2": {
+      "pitch": "Split-Finger",
+      "rv_per_100": 1.021,
+      "n": 4750
+    },
+    "1-0": {
+      "pitch": "Sinker",
+      "rv_per_100": 0.262,
+      "n": 25947
+    },
+    "1-1": {
+      "pitch": "4-Seam Fastball",
+      "rv_per_100": 0.39,
+      "n": 39700
+    },
+    "1-2": {
+      "pitch": "Split-Finger",
+      "rv_per_100": 0.737,
+      "n": 6954
+    },
+    "2-0": {
+      "pitch": "Split-Finger",
+      "rv_per_100": 1.184,
+      "n": 719
+    },
+    "2-1": {
+      "pitch": "Sinker",
+      "rv_per_100": 0.308,
+      "n": 13036
+    },
+    "2-2": {
+      "pitch": "Knuckle Curve",
+      "rv_per_100": 0.435,
+      "n": 2643
+    },
+    "3-0": {
+      "pitch": "Sinker",
+      "rv_per_100": 0.352,
+      "n": 3318
+    },
+    "3-1": {
+      "pitch": "Sinker",
+      "rv_per_100": 0.84,
+      "n": 7076
+    },
+    "3-2": {
+      "pitch": "Sweeper",
+      "rv_per_100": 1.461,
+      "n": 4315
+    }
+  }
+}

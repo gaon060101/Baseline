@@ -1,0 +1,19 @@
+{
+  "recorded_date": "2026-09-09",
+  "scope": "Append-only documentation of the preserved failed prefit source; original manifest and outputs unchanged",
+  "run_id": "bcap_pitch__mlb_2024_2025__20260909__r01",
+  "original_manifest_sha256": "781948234deb9cfab2101b1194edf5debfedc1f86cc343a62ec9062b188ca98f",
+  "preserved_source": {
+    "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r01/artifacts/run_failed_source.py",
+    "sha256": "da6d7bf3f2b8f10386be886d7eef4d1255dfc934fd04d7fcd3edb478f0054710",
+    "bytes": 25654,
+    "matches_original_manifest_code_hash": true
+  },
+  "historical_path_resolution": "The failed manifest's models/bcap/run.py code hash resolves to this archived source. The current run.py is the corrected pre-external development engine.",
+  "changes_before_successful_r02": [
+    "Resolve the supplied input path to an absolute path before deriving a project-relative metadata path.",
+    "Snapshot run.py, data.py and specification.yaml into every subsequent run's artifacts directory."
+  ],
+  "change_verification": "A direct unified source diff contains only these metadata/path and preservation changes, with no numerical model or policy changes.",
+  "exposure": "The failure occurred before input metadata completion and any model fitting; both changes preceded BCAP external result access and the final external seal."
+}

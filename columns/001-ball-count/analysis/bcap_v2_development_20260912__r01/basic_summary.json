@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "scope": "2024/2025 production basic checks only, not independent review",
+  "models": {
+    "pitch_sb": {
+      "run_id": "bcap_pitch_sb__mlb_2024_2025__20260912__r01",
+      "status": "PASS",
+      "checks": 32,
+      "metrics": {
+        "n": 1415566,
+        "support": 1399993,
+        "games": 4859,
+        "coverage": 0.9889987467910363,
+        "Y_mean": 0.3015767389157411,
+        "MSE": 0.23526494305289775,
+        "Brier": 0.23403791082626807,
+        "logloss": 0.6600525939286145,
+        "all_fit_converged": true,
+        "fit_logs": 30,
+        "families_planned": 219,
+        "displayed_delta_groups": 13,
+        "policy_learning": false
+      }
+    },
+    "pitch": {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260912__r01",
+      "status": "PASS",
+      "checks": 29,
+      "metrics": {
+        "n": 1415566,
+        "support": 1395443,
+        "games": 4859,
+        "coverage": 0.9857844847926553,
+        "Y_mean": 0.3015767389157411,
+        "MSE": 0.23596844921630097,
+        "Brier": 0.22552820888139838,
+        "logloss": 0.6405613448841421,
+        "all_fit_converged": true,
+        "fit_logs": 12,
+        "families_planned": 219,
+        "displayed_delta_groups": 13,
+        "policy_learning": false
+      }
+    },
+    "swing": {
+      "run_id": "bcap_swing__mlb_2024_2025__20260912__r01",
+      "status": "PASS",
+      "checks": 30,
+      "metrics": {
+        "n": 1416043,
+        "support": 1355719,
+        "games": 4859,
+        "coverage": 0.9573995987409987,
+        "Y_mean": 0.3015685081597098,
+        "MSE": 0.2315697371586192,
+        "Brier": 0.16932667697807846,
+        "logloss": 0.5086042476185896,
+        "all_fit_converged": true,
+        "fit_logs": 12,
+        "families_planned": 219,
+        "displayed_delta_groups": 193,
+        "policy_learning": false
+      }
+    }
+  },
+  "preparation": "PASS",
+  "family_planned": 219,
+  "displayed_delta_groups": 219,
+  "region_membership": {
+    "unique_rows": 1416043,
+    "overlap_rows": 212399,
+    "unassigned": 461,
+    "membership_total": 1627981
+  },
+  "not_run": [
+    "external evaluation",
+    "bootstrap",
+    "independent verifier",
+    "wide audit"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "bcai_ridge__mlb_2024_2025__20260908__r01",
+  "model_id": "BCAI-RIDGE-v0.2.0",
+  "version": "0.2.0",
+  "model_status": "EXPERIMENTAL",
+  "status": "FAILED",
+  "role": "development",
+  "run_date": "2026-09-08",
+  "started_at": "2026-09-08T08:07:19.220575+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "executable": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  "external_data_used_for_tuning": false,
+  "error": "predict() missing 1 required positional argument: 'beta'",
+  "failed_at": "2026-09-08T08:07:24.466692+00:00"
+}

@@ -1,0 +1,206 @@
+{
+  "updated_at_utc": "2026-09-14T03:24:23.276053+00:00",
+  "scope": "Documentation scope/status updates only; specs/old runs/reports immutable",
+  "files": [
+    {
+      "before": {
+        "path": "README.md",
+        "sha256": "3262a24fa1b7a2b3415dcd7674c66ef48e0732f5446950a8358d7c067b605acd"
+      },
+      "after": {
+        "path": "README.md",
+        "sha256": "cd355af70bb5ac4dcf56f645e59c6feb71ff2607e7f209d763e7075c25d2075f"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/README.md",
+        "sha256": "3262a24fa1b7a2b3415dcd7674c66ef48e0732f5446950a8358d7c067b605acd"
+      }
+    },
+    {
+      "before": {
+        "path": "models/registry.md",
+        "sha256": "a8d5110e24aa1df3f31fda1efb86d7e89ea739e2900d530f144401bb8e1b0cb2"
+      },
+      "after": {
+        "path": "models/registry.md",
+        "sha256": "6d2cc6a40c19983dd545a7e5a3892d83707e2c2c8a41af389b1d53d5c848920b"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/registry.md",
+        "sha256": "a8d5110e24aa1df3f31fda1efb86d7e89ea739e2900d530f144401bb8e1b0cb2"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/README.md",
+        "sha256": "4bf46fc6fab8c83b75ac406368457ffb04b639886e70a7d256e358e8022ae683"
+      },
+      "after": {
+        "path": "models/bcap/README.md",
+        "sha256": "16343c4599081e9d5199345ea6c94fac401ec8f0e30c499547d83278cfcf7b00"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/README.md",
+        "sha256": "4bf46fc6fab8c83b75ac406368457ffb04b639886e70a7d256e358e8022ae683"
+      }
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/column.md",
+        "sha256": "f2ca6855606eabd48bc876bc4763209847c0dc8d7ce9f0fe6111c4ea62021c49"
+      },
+      "after": {
+        "path": "columns/001-ball-count/column.md",
+        "sha256": "d0cbe9667810c31ed131074648693efe0075bde576c626667be1157bca84d7c9"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/columns/001-ball-count/column.md",
+        "sha256": "f2ca6855606eabd48bc876bc4763209847c0dc8d7ce9f0fe6111c4ea62021c49"
+      }
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/sources.md",
+        "sha256": "140496ef8cf9e4b978f1fb2cc4e442f5df41a63d8a2c6ea91a7544ac9d1dba3f"
+      },
+      "after": {
+        "path": "columns/001-ball-count/sources.md",
+        "sha256": "46014ff7f7d3550bd53dd7dd80469ca7d2e4475abe4607eb9bb278530cf8e3cb"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/columns/001-ball-count/sources.md",
+        "sha256": "140496ef8cf9e4b978f1fb2cc4e442f5df41a63d8a2c6ea91a7544ac9d1dba3f"
+      }
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "5c368ee22862e2f0d746756e328b78bf9f1c4598ad4aa444edb88ca95e372f6a"
+      },
+      "after": {
+        "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "68a35196f8723eac3405df479ddd0fb201942937b65f1a18dcd3cc497c235f5f"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "5c368ee22862e2f0d746756e328b78bf9f1c4598ad4aa444edb88ca95e372f6a"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_sb/v0.1.0/model_card.md",
+        "sha256": "4d46e1c1dfdd60c068ccdaa447cf0a75b37309578afd461666e01d7f20c43873"
+      },
+      "after": {
+        "path": "models/bcap/pitch_sb/v0.1.0/model_card.md",
+        "sha256": "1b861dad0a179876bf9d79bfd127f61c57546d804747656878ed1192c7addb45"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/pitch_sb/v0.1.0/model_card.md",
+        "sha256": "4d46e1c1dfdd60c068ccdaa447cf0a75b37309578afd461666e01d7f20c43873"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_sb/v0.1.0/validation.md",
+        "sha256": "7e8a3102387d12390906ac7621bd308f92aafd1ce50bd59f2e12a10b421333a0"
+      },
+      "after": {
+        "path": "models/bcap/pitch_sb/v0.1.0/validation.md",
+        "sha256": "b17d851a611cdcb10731c8f6e88aff6e04f66a15690cac98be8fb68272cb7cee"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/pitch_sb/v0.1.0/validation.md",
+        "sha256": "7e8a3102387d12390906ac7621bd308f92aafd1ce50bd59f2e12a10b421333a0"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/swing/v0.2.0/model_card.md",
+        "sha256": "c80a2031683bc1b3a2a731686cc85df9509e5bcb41cac92edddbfcdb74c2390c"
+      },
+      "after": {
+        "path": "models/bcap/swing/v0.2.0/model_card.md",
+        "sha256": "a63b71ca3820e3188867e5883414d02bbba9919e6702ac884be90e1fc46a069b"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/swing/v0.2.0/model_card.md",
+        "sha256": "c80a2031683bc1b3a2a731686cc85df9509e5bcb41cac92edddbfcdb74c2390c"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/swing/v0.2.0/validation.md",
+        "sha256": "66ec5408dbe3e0944e965695a0047d1ba52315ca24045b1cf8e701b32d4bd870"
+      },
+      "after": {
+        "path": "models/bcap/swing/v0.2.0/validation.md",
+        "sha256": "6c46aadeead4978f30c6ae2f891063f2463a5c619b182b790a00591626f9b817"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/swing/v0.2.0/validation.md",
+        "sha256": "66ec5408dbe3e0944e965695a0047d1ba52315ca24045b1cf8e701b32d4bd870"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch/v0.2.0/model_card.md",
+        "sha256": "0f4275929847f82d13536c08f879e532451e98b60274ea983cb40b0d7fd6886b"
+      },
+      "after": {
+        "path": "models/bcap/pitch/v0.2.0/model_card.md",
+        "sha256": "632d5e6086686d83c5fd79705f1a37ee9c152c4c9161d8dbeec1afe58cec51f6"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/pitch/v0.2.0/model_card.md",
+        "sha256": "0f4275929847f82d13536c08f879e532451e98b60274ea983cb40b0d7fd6886b"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch/v0.2.0/validation.md",
+        "sha256": "eabdc9cb3e456619791a93f621a127f710217ee626fd24e9e9484bfa87f9c311"
+      },
+      "after": {
+        "path": "models/bcap/pitch/v0.2.0/validation.md",
+        "sha256": "9061fad5caf00a471de0703cb13c9c769d642a0aaaaa6a69a0bea593ae68533e"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/pitch/v0.2.0/validation.md",
+        "sha256": "eabdc9cb3e456619791a93f621a127f710217ee626fd24e9e9484bfa87f9c311"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_ff/v0.1.0/model_card.md",
+        "sha256": "9e598ab4a5cf6582d3e20398c158d26a5ca7e4bbe502b405baa8b9021525bb1e"
+      },
+      "after": {
+        "path": "models/bcap/pitch_ff/v0.1.0/model_card.md",
+        "sha256": "3ce887a1084d571e399422ce8795fffc038af1a6be63e34e6d2ada8b2b555e21"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/pitch_ff/v0.1.0/model_card.md",
+        "sha256": "9e598ab4a5cf6582d3e20398c158d26a5ca7e4bbe502b405baa8b9021525bb1e"
+      }
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_ff/v0.1.0/validation.md",
+        "sha256": "7469ba388436a55822bb04e85d7523f370bc6f9ef1d374251560578ed33f0fd2"
+      },
+      "after": {
+        "path": "models/bcap/pitch_ff/v0.1.0/validation.md",
+        "sha256": "c066b0546990b577e31a706a24cc1a786014180336c81614f23801ebeb5d0fd3"
+      },
+      "backup": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prior_documents/models/bcap/pitch_ff/v0.1.0/validation.md",
+        "sha256": "7469ba388436a55822bb04e85d7523f370bc6f9ef1d374251560578ed33f0fd2"
+      }
+    }
+  ],
+  "code": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/update_documents.py",
+    "sha256": "cd79353fdda0b87f336f1d673c18325664757bfc12cd738be72fda74ff7b2600"
+  }
+}

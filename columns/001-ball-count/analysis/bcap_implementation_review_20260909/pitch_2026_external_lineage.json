@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-09T06:24:12.475060+00:00",
+  "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+  "development_run_id": "bcap_pitch__mlb_2024_2025__20260909__r02",
+  "seal_sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+  "sealed_files_checked": 24,
+  "fixed_policy_sha256": "6969653164fb8a55d3bfbbf5a0c9125da208b32fd72b3883976def36c0627399",
+  "prepared_input": {
+    "path": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+    "sha256": "1aff16f91b58b4ed53b062a07c31381f4fe99b37ae983ece9b3d227f8c1c2fa4",
+    "bytes": 394585378
+  },
+  "development_eligible_rows": 1415566,
+  "development_pitchers": 1113,
+  "development_batters": 788,
+  "checks": [
+    {
+      "file": "scores.pkl",
+      "rows": 635095,
+      "sha256": "3188a3ca0ef085fd9dfedf4b68211b7929a599503f74fcf971c7d33383898ee0",
+      "all_policy_probabilities_match": true,
+      "conservative_retains_all_rows": true,
+      "known_pitcher_flags_match": true,
+      "known_batter_flags_match": true,
+      "pitcher_unseen_rows": 62640,
+      "batter_unseen_rows": 57664
+    },
+    {
+      "file": "fixed_development_predictions.pkl",
+      "rows": 635095,
+      "sha256": "0f1cc0997437a2a00cd9da5427a5eb19abdefd645a0cc538c79434635f6bf925",
+      "all_policy_probabilities_match": true,
+      "conservative_retains_all_rows": true,
+      "known_pitcher_flags_match": true,
+      "known_batter_flags_match": true,
+      "pitcher_unseen_rows": 62640,
+      "batter_unseen_rows": 57664
+    }
+  ],
+  "code": {
+    "path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_implementation_review_20260909\\verify_external_lineage.py",
+    "sha256": "b0b8fa753068560d3554c3bd79c36172e7225fb8a3cfb1f9063a65a2088e4e7d"
+  },
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/verify_external_lineage.py",
+    "--run",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "--development-run",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02",
+    "--seal",
+    "models/bcap/external_seal_20260909_r01.json",
+    "--output",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_lineage.json"
+  ],
+  "scope": "Post-seal equality/hash/roster audit only; no estimator, policy, threshold or model change"
+}

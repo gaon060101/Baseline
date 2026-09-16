@@ -1,0 +1,1321 @@
+{
+  "status": "COMPLETE",
+  "generated_at_utc": "2026-09-09T08:46:20.530486+00:00",
+  "role": "postprocessing_only_no_fitting_or_row_access",
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "models/bcap/build_report.py",
+    "--pitch-dev",
+    "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "--swing-dev",
+    "bcap_swing__mlb_2024_2025__20260909__r01",
+    "--pitch-2023",
+    "bcap_pitch__mlb_2023__20260909__r01",
+    "--swing-2023",
+    "bcap_swing__mlb_2023__20260909__r01",
+    "--pitch-2026",
+    "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "--swing-2026",
+    "bcap_swing__mlb_2026_ytd_20260907__20260909__r01",
+    "--pitch-bootstrap",
+    "bcap_pitch__mlb_2024_2025__20260909__r03",
+    "--swing-bootstrap",
+    "bcap_swing__mlb_2024_2025__20260909__r02",
+    "--output-dir",
+    "columns/001-ball-count/analysis/bcap_report_20260909_r01",
+    "--report",
+    "columns/001-ball-count/analysis/bcap_v010_report_20260909.md"
+  ],
+  "generator": {
+    "path": "models/bcap/build_report.py",
+    "sha256": "f560ed66243d45b6b813fda2ed21d320a813c6d51171244ee9813e68153724ab",
+    "bytes": 44584
+  },
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv",
+      "sha256": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810",
+      "bytes": 5153
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/count_indices.csv",
+      "sha256": "d8d5b82c38d8f4d16fbaa0736b8b19b071d3df9cfe7a69f8b63f4ab911b29ad9",
+      "bytes": 2862
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/action_values.csv",
+      "sha256": "714893e2b6b6a32e4453229d61fbb2da7aba9de3f7504423ad42fbe3e8f37a0e",
+      "bytes": 6209
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/calibration.csv",
+      "sha256": "d7c6ff49595284eec4dfbb538cd10e4c4b87488a106a9af7a5d4884d8c789b94",
+      "bytes": 820
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "d8f01c772904f09910daea7b519e846856412c4fbe283fce8b56f0dec16e961d",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "62ce0e8fd6448616e681b4b4a1bc0be5fead5f2433985808b52923f33d65a74b",
+      "bytes": 1050
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/calibration.csv",
+      "sha256": "345f5dc1e378927388532ab6d6b9596ce238416f1bbd177fb210398f211b93df",
+      "bytes": 824
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/known_unseen.csv",
+      "sha256": "b6c1e40f35b85c890dabea764e59c4a4a5526eb04d8954fafded1419952a8fdc",
+      "bytes": 510
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/metrics.json",
+      "sha256": "1ec314e6d19859903ffcce93414df428a9fc03e2a26822d2464ec96242e9f73c",
+      "bytes": 296
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/known_unseen.csv",
+      "sha256": "5963718521dc7ba8d5eba49284bd9ad35bfaae44d264d281d15b11dc3037b976",
+      "bytes": 641
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/metrics.json",
+      "sha256": "e762eec07cfcb29aa2382431ee2a5388b6e9be28667ddd9c4e26adea5ace7ab1",
+      "bytes": 297
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "fcddce8be4889129787452c8964d40a64310ece0e3e7e8c65ca46d1490852ef0",
+      "bytes": 15025
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/propensity_overlap.csv",
+      "sha256": "19cfe9312e402d8218d7728bfe493c44ffc22265283674b21bafa129930ebb7a",
+      "bytes": 12206
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/sensitivity.csv",
+      "sha256": "1c492f1a6cef5ef7f5b9a903c8333b7fc9de3b5485645e08c2ba5af8c0f6e527",
+      "bytes": 12271
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/support_exclusions.csv",
+      "sha256": "eeec9cfac4c319b4d2dc40bd833c5eaee3b0bcf3bd79f33d4079d5012212273c",
+      "bytes": 2866
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/manifest.json",
+      "sha256": "721305d1a195c13d69cd14bd881357dbe1f3dbf2612677bfe14cf7fed5dca2d4",
+      "bytes": 32001
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/action_values.csv",
+      "sha256": "76e96df8dc7c15c41be51957b0c1628780c61cceebf3e2f171c46130e9388fdd",
+      "bytes": 6221
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/calibration.csv",
+      "sha256": "0b23ccb930cd285976bd6f227586cf3dbf5bc5182ac6180f06601a3f056328b4",
+      "bytes": 826
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_policy.json",
+      "sha256": "6969653164fb8a55d3bfbbf5a0c9125da208b32fd72b3883976def36c0627399",
+      "bytes": 3438
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/fit_diagnostics.csv",
+      "sha256": "52514cba2b7d8365a173660ed1a46f2d60a5e7b53773cf5ec49194fe8f5e312f",
+      "bytes": 10738
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/known_unseen.csv",
+      "sha256": "7441e3ddeb15ca54ddd50dbe1ac89891a4ea7024842613848da3ce17d3c9f336",
+      "bytes": 432
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/metrics.json",
+      "sha256": "292f9b818d15f3afdae87144567cbec1a9edf6cb95af28f622d2a30c60283b14",
+      "bytes": 299
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/policy_values.csv",
+      "sha256": "e324a3c81fc20dc01fb378643b40fbedff889f76fcd433fcc3601ad80e755bd1",
+      "bytes": 15121
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/propensity_overlap.csv",
+      "sha256": "f0250f62c50e33466d4b79d5413e95112d6757d085e9836fe9562a1d319aaf10",
+      "bytes": 12263
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/sensitivity.csv",
+      "sha256": "2bf87f880258b89c6a4a8c28074355508921159048cb243a26b3aa30af1c37ae",
+      "bytes": 12370
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/support_exclusions.csv",
+      "sha256": "e0ebf12f6e5092eae9126839f4082341055639c7f397fb15321b7eafacb8d8ab",
+      "bytes": 3008
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json",
+      "sha256": "4c176be78b27c9c91b4b5658b15019b053647e31d7744b3ab2008a99e922a6c6",
+      "bytes": 17925
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/stability_summary.csv",
+      "sha256": "322a6fa4728d7c9640a09cb58f0ac0052e1a591e26744dee2577480278901cf3",
+      "bytes": 18123
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/manifest.json",
+      "sha256": "66d23d3a69617366bbe7334a7cdef7f87d8388bb897c750b1a1b9f1f38a92416",
+      "bytes": 27793
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/action_values.csv",
+      "sha256": "805055a47aef0023fa04b1d6607aeed1c6f075764658b17744c6717189551f56",
+      "bytes": 6202
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/calibration.csv",
+      "sha256": "d748b588d3ab59d0c5b65b1859e3bd20dbcd527c7b20d74e2d21beeb1d8a30d2",
+      "bytes": 824
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "6863dc4a0c2b0132df365a980cf986b550221f946f9b4e2ac92432b355105357",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "a3bee6c803a8f76b9cd1f91ebe32e811100e1fbd3fe769aa0ecbe105de6e250a",
+      "bytes": 1045
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fixed_prediction_diagnostics/calibration.csv",
+      "sha256": "a841ffe6a47d0d6b75281f179973ba723d7e5fd4bab8b60a54d1ce474c4302d6",
+      "bytes": 820
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fixed_prediction_diagnostics/known_unseen.csv",
+      "sha256": "4caf34d5f09931811ce1fa25ff6bc8eb71534dbe2b6c9fc58515097da912dc12",
+      "bytes": 510
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fixed_prediction_diagnostics/metrics.json",
+      "sha256": "49428bcd4cc36b462bbf301f711aaef2fa35f5d7ab1d33e9386406daf526e306",
+      "bytes": 297
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/known_unseen.csv",
+      "sha256": "eae5ff96007b60ef54889faf450285139410ced6ae1d87537d4039edba7e6768",
+      "bytes": 648
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/metrics.json",
+      "sha256": "d7907eed80cd589d414c9d2f258ab896059a8860aa4dc91e3543e3c59444c06b",
+      "bytes": 296
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "ba8b493d8bb4ba0abc1fd9a567c42ca65b240d65d165ea997031e800f638b82e",
+      "bytes": 15024
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/propensity_overlap.csv",
+      "sha256": "7af75deff55f13840f169da52b9b39682137b8c289796043e0d686eaf990dd06",
+      "bytes": 12172
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/sensitivity.csv",
+      "sha256": "8c7057cbd9cfbea95726012ad0cbd4fb46846992411f3534abad97a75950c6b2",
+      "bytes": 12250
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/support_exclusions.csv",
+      "sha256": "6f0ba0d6a323791e632ffa0372bbeb2c5bf9c124f037db4f1fffd453d887c38c",
+      "bytes": 2897
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+      "sha256": "bf57f56b5b3475a0d8362fddb379e0f520610c3fbe2a89a8cbe21fd654ac52b6",
+      "bytes": 31677
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/action_values.csv",
+      "sha256": "5468c5fc50be7a7cb9dbec3caa518003736f240a8682c5e28665e87eb8ba6696",
+      "bytes": 41009
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/calibration.csv",
+      "sha256": "f0e27f46dd3f47655d2fc747e406f676a545e57b2ad4ea1d0541856981caa01c",
+      "bytes": 824
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "36148fc471c79a3611d096d3597bd34f7f3e40f626095c26f96a781c0b11e15d",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "0ad08bad4ae71cbd220b2a3de3f6a1aec851ccdb09d7e46c5592b8fa6043a6b0",
+      "bytes": 1043
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/calibration.csv",
+      "sha256": "d99a4057fa51f76eece3457453d65bbc67fcc1b1451a6b87fc1c3ef515e43b08",
+      "bytes": 823
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/known_unseen.csv",
+      "sha256": "d73780896c6bf8408982d79bc654d05c0152663bc0ff665bfb4998e7173259a3",
+      "bytes": 509
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/metrics.json",
+      "sha256": "c5866d30121354eddb4560ce623a3a08b53a625254462dda54af0cf768860b2a",
+      "bytes": 311
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/known_unseen.csv",
+      "sha256": "74247d00fba96d32a14967b575514775acd74816d2cae5d50df84e3f430b4697",
+      "bytes": 648
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/metrics.json",
+      "sha256": "d5c80020b4563b0df7e88ef318f69078bf0b28d98bb068faa8d2779ba2041c6e",
+      "bytes": 312
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "06f82c71f5d8b0cd5909af02bd9bf28028ad2a93ae868177ce7196254e2cc05b",
+      "bytes": 100383
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/propensity_overlap.csv",
+      "sha256": "89d0ce0f5a3e54e7017a16f862265c6e7748f43c41975c82c5ee0bca851bbc28",
+      "bytes": 89467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/sensitivity.csv",
+      "sha256": "9ee7d99c7b579d2fa867fe9f8d213edfaaf71e003e0e736f37528e57c0795e26",
+      "bytes": 83636
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/support_exclusions.csv",
+      "sha256": "be029f16f5d88f299cfdbb8c15c6e49f4ef7342a612f1e77fa88e27bd2171fbe",
+      "bytes": 4819
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/manifest.json",
+      "sha256": "8d7f35a92e4b73ea4776f343e3764711a6ae2c74841291c8e5bcb9e6b56b4706",
+      "bytes": 32217
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/action_values.csv",
+      "sha256": "6315659f3878d83e34e1cb613381a336f5bd5e570ff9f294c3e10deeb3567f9b",
+      "bytes": 42024
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/calibration.csv",
+      "sha256": "cc099f805d15b69fac22702e8896df52005c7646d235aace6719808cb088ec15",
+      "bytes": 830
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_policy.json",
+      "sha256": "4934627095c5f8c8b0b14e5684e2d2237d6494e7fb4df705061f4602615ed8c5",
+      "bytes": 20720
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "16af2914c6b15b3b5b9a72276268ab463e6b8bb35ac1bbd17a0c6787421798ff",
+      "bytes": 10759
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/known_unseen.csv",
+      "sha256": "3dc3484998de9b4718f03ed448061710dd3d94e95231af298f4cb2cdee8c5b1d",
+      "bytes": 429
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/metrics.json",
+      "sha256": "cfd857d921d540875e01ea18218c9f625695d36ef15b964c13ed837e5772d466",
+      "bytes": 311
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "d519f61330712483cce61cee544c4f5f8c684a71ddde41680a18e39efab0ce59",
+      "bytes": 100638
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/propensity_overlap.csv",
+      "sha256": "3fe230e62b889dd0b648d5ea9fa33eb84c829f8c9e4a37908c80e58322969c19",
+      "bytes": 94962
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/sensitivity.csv",
+      "sha256": "9a66e048625d68b768ed77855d67ba2bc21d311c891c3af908e3a29345196bb0",
+      "bytes": 84661
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/support_exclusions.csv",
+      "sha256": "a5c06a41bb87b35b949cd3a1e6c05cf06d412dd9100ac14e404a9e27491645b3",
+      "bytes": 4942
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/manifest.json",
+      "sha256": "0e7094ca0cff30375125bba37816be90f7595e9482543f69d3d52781eebe4154",
+      "bytes": 18121
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/stability_summary.csv",
+      "sha256": "8aea84f7ae924c214ec955066141debf44ce3cc8a1eb673b20bfd78acf83889e",
+      "bytes": 18317
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/manifest.json",
+      "sha256": "afddabafc78ec2c1bda903ea3ff287f30b31b19d0a72a1d01912843dbe7d648e",
+      "bytes": 27974
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+      "sha256": "f097c7c33edf861bda9ed239104441559d72ee412bb3897fc295bebe1a820a43",
+      "bytes": 12588
+    },
+    {
+      "path": "models/bcap/external_seal_20260909_r01.json",
+      "sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+      "bytes": 24585
+    }
+  ],
+  "source_runs": [
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r02",
+      "model_id": "BCAP-PITCH-v0.1.0",
+      "variant": "pitch",
+      "period": "2024_2025",
+      "execution_status": "COMPLETE"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r01",
+      "model_id": "BCAP-SWING-v0.1.0",
+      "variant": "swing",
+      "period": "2024_2025",
+      "execution_status": "COMPLETE"
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+      "model_id": "BCAP-PITCH-v0.1.0",
+      "variant": "pitch",
+      "period": "2023",
+      "execution_status": "COMPLETE"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2023__20260909__r01",
+      "model_id": "BCAP-SWING-v0.1.0",
+      "variant": "swing",
+      "period": "2023",
+      "execution_status": "COMPLETE"
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "model_id": "BCAP-PITCH-v0.1.0",
+      "variant": "pitch",
+      "period": "2026",
+      "execution_status": "COMPLETE"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2026_ytd_20260907__20260909__r01",
+      "model_id": "BCAP-SWING-v0.1.0",
+      "variant": "swing",
+      "period": "2026",
+      "execution_status": "WITHHELD"
+    }
+  ],
+  "bootstrap_diagnostics": [
+    {
+      "variant": "pitch",
+      "status": "COMPLETE",
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "planned_replicates": 8,
+      "completed_replicates": 8,
+      "full_learning_interval_available": false,
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/manifest.json"
+    },
+    {
+      "variant": "swing",
+      "status": "COMPLETE",
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "planned_replicates": 8,
+      "completed_replicates": 8,
+      "full_learning_interval_available": false,
+      "source": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/manifest.json"
+    }
+  ],
+  "tables": [
+    {
+      "number": 1,
+      "title": "카운트별 BCAI 상태 가치",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/01_bcai_state_values.csv",
+      "rows": 12,
+      "columns": [
+        "count",
+        "OBS_I",
+        "OBS_CI95_low",
+        "OBS_CI95_high",
+        "OBS_simultaneous95_low",
+        "OBS_simultaneous95_high",
+        "OBS_confirmed_grade",
+        "OBS_N_PA",
+        "Ridge_N_PA",
+        "Ridge_v02_J",
+        "Ridge_J_minus_I",
+        "OBS_source",
+        "Ridge_source",
+        "unit",
+        "interval_scope"
+      ],
+      "note": "OBS 구간은 OBS에만 적용"
+    },
+    {
+      "number": 2,
+      "title": "카운트별 FB/NFB 실제 선택 비율",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/02_pitch_observed_rates.csv",
+      "rows": 12,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "action0_rate_all",
+        "action1_rate_all",
+        "action0_rate_support",
+        "action1_rate",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 3,
+      "title": "카운트별 FB/NFB 보정 기대 공격가치",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/03_pitch_standardized_values.csv",
+      "rows": 12,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "Q0",
+        "Q1",
+        "gcomp0",
+        "gcomp1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 4,
+      "title": "투수 행동가치 차이와 구간",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/04_pitch_differences.csv",
+      "rows": 12,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "delta",
+        "se",
+        "CI95_low",
+        "CI95_high",
+        "simultaneous95_low",
+        "simultaneous95_high",
+        "ESS0",
+        "ESS1",
+        "arm_games0",
+        "arm_games1",
+        "max_game_share0",
+        "max_game_share1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "고정 점수 조건부 구간; 권고 없음"
+    },
+    {
+      "number": 5,
+      "title": "투수 판정 등급·추천 보류",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/05_pitch_grades.csv",
+      "rows": 12,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "grade",
+        "reason",
+        "suggested_action",
+        "evaluation_contrast_direction",
+        "saved_development_policy_p1",
+        "saved_development_policy_role",
+        "ESS0",
+        "ESS1",
+        "arm_games0",
+        "arm_games1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "평가됨·지지 부족·미실행 구분"
+    },
+    {
+      "number": 6,
+      "title": "카운트·존·구종군별 번트 포함 Swing/Take 비율",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/06_swing_observed_rates.csv",
+      "rows": 92,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "action0_rate_all",
+        "action1_rate_all",
+        "action0_rate_support",
+        "action1_rate",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 7,
+      "title": "번트 포함 Swing/Take 보정 기대 공격가치",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/07_swing_standardized_values.csv",
+      "rows": 104,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "Q0",
+        "Q1",
+        "gcomp0",
+        "gcomp1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 8,
+      "title": "타자 행동가치 차이와 구간",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/08_swing_differences.csv",
+      "rows": 104,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "delta",
+        "se",
+        "CI95_low",
+        "CI95_high",
+        "simultaneous95_low",
+        "simultaneous95_high",
+        "ESS0",
+        "ESS1",
+        "arm_games0",
+        "arm_games1",
+        "max_game_share0",
+        "max_game_share1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "고정 점수 조건부 구간; 권고 없음"
+    },
+    {
+      "number": 9,
+      "title": "타자 판정 등급·추천 보류",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/09_swing_grades.csv",
+      "rows": 104,
+      "columns": [
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "grade",
+        "reason",
+        "suggested_action",
+        "evaluation_contrast_direction",
+        "saved_development_policy_p1",
+        "saved_development_policy_role",
+        "ESS0",
+        "ESS1",
+        "arm_games0",
+        "arm_games1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label"
+      ],
+      "note": "평가됨·지지 부족·미실행 구분"
+    },
+    {
+      "number": 10,
+      "title": "동일 평가집단의 실제·고정·학습·보수 정책 가치",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/10_policy_values.csv",
+      "rows": 1255,
+      "columns": [
+        "level",
+        "state",
+        "policy",
+        "n",
+        "value",
+        "CI95_low",
+        "CI95_high",
+        "gain",
+        "gain_low",
+        "gain_high",
+        "unit",
+        "conditional",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "column_units",
+        "action0_label",
+        "action1_label",
+        "count",
+        "zone",
+        "pitch_group",
+        "record_type",
+        "evaluation_status",
+        "reason",
+        "grade",
+        "numeric_estimate_available"
+      ],
+      "note": "고정 점수 조건부 구간; 권고 없음"
+    },
+    {
+      "number": 11,
+      "title": "표본·propensity·calibration·가중치·공통 지지 진단",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/11_propensity_overlap_diagnostics.csv",
+      "rows": 1198,
+      "columns": [
+        "level",
+        "state",
+        "action",
+        "n_arm",
+        "ESS_support",
+        "ESS_untrimmed",
+        "weight_max",
+        "weight_gt10_rate",
+        "weight_gt20_rate",
+        "max_game_share",
+        "p_q0",
+        "positive_weight_q0",
+        "p_q0.01",
+        "positive_weight_q0.01",
+        "p_q0.05",
+        "positive_weight_q0.05",
+        "p_q0.1",
+        "positive_weight_q0.1",
+        "p_q0.5",
+        "positive_weight_q0.5",
+        "p_q0.9",
+        "positive_weight_q0.9",
+        "p_q0.95",
+        "positive_weight_q0.95",
+        "p_q0.99",
+        "positive_weight_q0.99",
+        "p_q1",
+        "positive_weight_q1",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "column_units",
+        "action0_label",
+        "action1_label",
+        "record_type",
+        "source",
+        "bin",
+        "n",
+        "mean_p",
+        "observed_rate",
+        "Brier",
+        "count",
+        "A",
+        "support_status",
+        "players_pitcher",
+        "players_batter",
+        "meanY",
+        "fit_id",
+        "features",
+        "alpha",
+        "iterations",
+        "solver_info",
+        "relative_gradient",
+        "converged",
+        "loss",
+        "intercept",
+        "slope",
+        "games",
+        "Y_mean",
+        "outcome_MSE",
+        "log_loss",
+        "coverage",
+        "eligible_measurement_fraction",
+        "raw_p_outside01",
+        "evaluation_status",
+        "reason",
+        "grade",
+        "numeric_estimate_available"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 12,
+      "title": "개발 선수 사전 기준 known/unseen 결과",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/12_known_unseen.csv",
+      "rows": 31,
+      "columns": [
+        "group",
+        "n",
+        "games",
+        "coverage",
+        "MSE",
+        "Brier",
+        "Q0",
+        "Q1",
+        "policy_value",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "column_units",
+        "action0_label",
+        "action1_label",
+        "note",
+        "record_type",
+        "evaluation_status",
+        "reason",
+        "grade",
+        "numeric_estimate_available"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 13,
+      "title": "2023 외부 재현",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/13_external_2023.csv",
+      "rows": 110,
+      "columns": [
+        "level",
+        "state",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "action1_rate_all",
+        "action1_rate",
+        "ESS0",
+        "arm_games0",
+        "max_game_share0",
+        "ESS1",
+        "arm_games1",
+        "max_game_share1",
+        "Q0",
+        "Q1",
+        "gcomp0",
+        "gcomp1",
+        "delta",
+        "se",
+        "CI95_low",
+        "CI95_high",
+        "simultaneous95_low",
+        "simultaneous95_high",
+        "grade",
+        "reason",
+        "suggested_action",
+        "evaluation_contrast_direction",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "column_units",
+        "action0_label",
+        "action1_label",
+        "count",
+        "zone",
+        "pitch_group",
+        "saved_development_policy_p1",
+        "saved_development_policy_role",
+        "record_type",
+        "evaluation_status",
+        "numeric_estimate_available",
+        "observed_value",
+        "observed_gain",
+        "observed_gain_low",
+        "observed_gain_high",
+        "learned_value",
+        "learned_gain",
+        "learned_gain_low",
+        "learned_gain_high",
+        "conservative_value",
+        "conservative_gain",
+        "conservative_gain_low",
+        "conservative_gain_high",
+        "always_0_value",
+        "always_0_gain",
+        "always_0_gain_low",
+        "always_0_gain_high",
+        "always_1_value",
+        "always_1_gain",
+        "always_1_gain_low",
+        "always_1_gain_high",
+        "stochastic_half_value",
+        "stochastic_half_gain",
+        "stochastic_half_gain_low",
+        "stochastic_half_gain_high",
+        "fixed_development_prediction_n",
+        "fixed_development_prediction_games",
+        "fixed_development_prediction_Y_mean",
+        "fixed_development_prediction_outcome_MSE",
+        "fixed_development_prediction_Brier",
+        "fixed_development_prediction_log_loss",
+        "fixed_development_prediction_coverage",
+        "fixed_development_prediction_eligible_measurement_fraction",
+        "fixed_development_prediction_raw_p_outside01",
+        "external_CF_nuisance_n",
+        "external_CF_nuisance_games",
+        "external_CF_nuisance_Y_mean",
+        "external_CF_nuisance_outcome_MSE",
+        "external_CF_nuisance_Brier",
+        "external_CF_nuisance_log_loss",
+        "external_CF_nuisance_coverage",
+        "external_CF_nuisance_eligible_measurement_fraction",
+        "external_CF_nuisance_raw_p_outside01",
+        "access_log_source",
+        "first_external_row_access_utc"
+      ],
+      "note": "원 실행의 단위·분모·역할 보존"
+    },
+    {
+      "number": 14,
+      "title": "2026-09-07까지 외부 평가·SWING 측정 보류",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/14_external_2026.csv",
+      "rows": 14,
+      "columns": [
+        "level",
+        "state",
+        "n_all",
+        "n",
+        "coverage",
+        "games",
+        "PA",
+        "pitchers",
+        "batters",
+        "action1_rate_all",
+        "action1_rate",
+        "ESS0",
+        "arm_games0",
+        "max_game_share0",
+        "ESS1",
+        "arm_games1",
+        "max_game_share1",
+        "Q0",
+        "Q1",
+        "gcomp0",
+        "gcomp1",
+        "delta",
+        "se",
+        "CI95_low",
+        "CI95_high",
+        "simultaneous95_low",
+        "simultaneous95_high",
+        "grade",
+        "reason",
+        "suggested_action",
+        "evaluation_contrast_direction",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "column_units",
+        "action0_label",
+        "action1_label",
+        "count",
+        "zone",
+        "pitch_group",
+        "saved_development_policy_p1",
+        "saved_development_policy_role",
+        "record_type",
+        "evaluation_status",
+        "numeric_estimate_available",
+        "observed_value",
+        "observed_gain",
+        "observed_gain_low",
+        "observed_gain_high",
+        "learned_value",
+        "learned_gain",
+        "learned_gain_low",
+        "learned_gain_high",
+        "conservative_value",
+        "conservative_gain",
+        "conservative_gain_low",
+        "conservative_gain_high",
+        "always_0_value",
+        "always_0_gain",
+        "always_0_gain_low",
+        "always_0_gain_high",
+        "always_1_value",
+        "always_1_gain",
+        "always_1_gain_low",
+        "always_1_gain_high",
+        "stochastic_half_value",
+        "stochastic_half_gain",
+        "stochastic_half_gain_low",
+        "stochastic_half_gain_high",
+        "fixed_development_prediction_n",
+        "fixed_development_prediction_games",
+        "fixed_development_prediction_Y_mean",
+        "fixed_development_prediction_outcome_MSE",
+        "fixed_development_prediction_Brier",
+        "fixed_development_prediction_log_loss",
+        "fixed_development_prediction_coverage",
+        "fixed_development_prediction_eligible_measurement_fraction",
+        "fixed_development_prediction_raw_p_outside01",
+        "external_CF_nuisance_n",
+        "external_CF_nuisance_games",
+        "external_CF_nuisance_Y_mean",
+        "external_CF_nuisance_outcome_MSE",
+        "external_CF_nuisance_Brier",
+        "external_CF_nuisance_log_loss",
+        "external_CF_nuisance_coverage",
+        "external_CF_nuisance_eligible_measurement_fraction",
+        "external_CF_nuisance_raw_p_outside01",
+        "access_log_source",
+        "first_external_row_access_utc"
+      ],
+      "note": "평가됨·지지 부족·미실행 구분"
+    },
+    {
+      "number": 15,
+      "title": "trimming/clipping·반복 도달·군집·전체 재학습 민감도",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/15_sensitivity.csv",
+      "rows": 1881,
+      "columns": [
+        "level",
+        "state",
+        "setting",
+        "n",
+        "coverage",
+        "Q0",
+        "Q1",
+        "delta",
+        "different_target",
+        "low",
+        "high",
+        "clusters",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "column_units",
+        "action0_label",
+        "action1_label",
+        "count",
+        "zone",
+        "pitch_group",
+        "record_type",
+        "evaluation_status",
+        "reason",
+        "grade",
+        "numeric_estimate_available",
+        "metric",
+        "replicates",
+        "mean",
+        "SD",
+        "minimum",
+        "maximum",
+        "positive_fraction",
+        "interpretation"
+      ],
+      "note": "전처리 재학습 진단은 95% 구간 아님"
+    },
+    {
+      "number": 16,
+      "title": "판정 불가 상태와 필요한 증거",
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/16_unavailable_states.csv",
+      "rows": 245,
+      "columns": [
+        "record_type",
+        "evaluation_status",
+        "level",
+        "state",
+        "count",
+        "zone",
+        "pitch_group",
+        "n_all",
+        "n",
+        "coverage",
+        "grade",
+        "reason",
+        "needed_evidence",
+        "suggested_action",
+        "run_id",
+        "model_id",
+        "variant",
+        "period",
+        "execution_status",
+        "evaluation_method",
+        "unit",
+        "action0_label",
+        "action1_label",
+        "numeric_estimate_available",
+        "column_units"
+      ],
+      "note": "평가됨·지지 부족·미실행 구분"
+    }
+  ],
+  "validation": {
+    "exactly_16_tables": true,
+    "count_sections": 12,
+    "completed_inputs_required": true,
+    "summary_keys_and_denominators_checked": true,
+    "gain_sign_and_Q1_minus_Q0_checked": true,
+    "no_recommendations": true,
+    "external_seal_reference_hashes_checked": true,
+    "row_level_independent_verification": "separate verifier required"
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/01_bcai_state_values.csv",
+      "sha256": "b2d5c0a67e884f43162ad58db3faee83343ea01263fd9206786d1ba0afd364ac",
+      "bytes": 6190
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/02_pitch_observed_rates.csv",
+      "sha256": "0237e12d0c6509a8373a84d4da80e8d83229cf0b10f8df359895865fa3966857",
+      "bytes": 4454
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/03_pitch_standardized_values.csv",
+      "sha256": "c82acba93e8b54c7e4973cbc8a0cbc35603125af5e313091c0fbd97459044b5f",
+      "bytes": 4399
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/04_pitch_differences.csv",
+      "sha256": "84c41d4c2775ecb613850bf703e31c11ad2d2ca7118307375250f9c16bf25ebd",
+      "bytes": 5994
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/05_pitch_grades.csv",
+      "sha256": "d2f93e3eb3bdafefc96a3e1c98ce98db99a0671397faa8943544bad6623d3eba",
+      "bytes": 5586
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/06_swing_observed_rates.csv",
+      "sha256": "3e0b85b42b6bd6bd19bbe7b916e00f3d24bba88d3a9953539b6758888ce6f024",
+      "bytes": 35921
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/07_swing_standardized_values.csv",
+      "sha256": "43149b852d06cefac92d8fab9836e05a6c15578f4557c225f4a40f0f35bceb74",
+      "bytes": 40170
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/08_swing_differences.csv",
+      "sha256": "9c43fa92194146e557045bc5ae761ac4aab30bf1ff3e6d517a087107283226eb",
+      "bytes": 51089
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/09_swing_grades.csv",
+      "sha256": "20cdf9d4f599a8043ea26d54168acb59d65817dcf541293dd3f86b7409d7e86e",
+      "bytes": 50330
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/10_policy_values.csv",
+      "sha256": "4a9c7c823a7a8ff6b1b472819b9617aa5734b6482a8437c2f01214c85edf558a",
+      "bytes": 651082
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/11_propensity_overlap_diagnostics.csv",
+      "sha256": "bc8d78e2175eefd48d51cf963ce70ac8c7a16c7814dc79a4656112997228a155",
+      "bytes": 896305
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/12_known_unseen.csv",
+      "sha256": "8c88647245136dcb512e6bba85120cba954cb5bb220acb2462c27dc01cabb55c",
+      "bytes": 15935
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/13_external_2023.csv",
+      "sha256": "7b3280fd358af5370b18210c6a6b8ad33457f6712f9df604412e13299d50d0ca",
+      "bytes": 154159
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/14_external_2026.csv",
+      "sha256": "017f7e02f97c6e790f371b94fe2ee255cd0eff0b3b8795b4d4f923f129d98609",
+      "bytes": 21314
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/15_sensitivity.csv",
+      "sha256": "b3674da03f7e642b325f852581a9769b60e25f728438b9a5e9ef9f2782ede03f",
+      "bytes": 976390
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/16_unavailable_states.csv",
+      "sha256": "55fc817b22f8500bc3c816d05bdd29103e1d7374aa5e5d999146101eaf5180f7",
+      "bytes": 128254
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v010_report_20260909.md",
+      "sha256": "5c5675a771ecab809ae39310dcc3cbc157e5c83501207c30488858dd5dc3943f",
+      "bytes": 49629
+    }
+  ]
+}

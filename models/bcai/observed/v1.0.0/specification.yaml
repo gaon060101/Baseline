@@ -1,0 +1,204 @@
+{
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "status": "VALIDATED",
+  "format": "YAML 1.2 JSON-compatible; documentation snapshot, not runtime configuration",
+  "input_fields": {
+    "pitch": [
+      "game_pk",
+      "at_bat_number",
+      "pitch_number",
+      "game_year",
+      "balls",
+      "strikes",
+      "events"
+    ],
+    "context": [
+      "batter",
+      "pitcher",
+      "stand",
+      "p_throws",
+      "on_1b",
+      "on_2b",
+      "on_3b",
+      "outs_when_up",
+      "inning",
+      "bat_score_diff"
+    ],
+    "schedule": [
+      "gamePk",
+      "venue.id"
+    ],
+    "explanatory_only": [
+      "pitch_name",
+      "description",
+      "type"
+    ]
+  },
+  "result_classification": {
+    "1B": [
+      "single"
+    ],
+    "2B": [
+      "double"
+    ],
+    "3B": [
+      "triple"
+    ],
+    "HR": [
+      "home_run"
+    ],
+    "BB": [
+      "walk"
+    ],
+    "HBP": [
+      "hit_by_pitch"
+    ],
+    "K": [
+      "strikeout",
+      "strikeout_double_play"
+    ],
+    "OUT": [
+      "field_out",
+      "force_out",
+      "grounded_into_double_play",
+      "double_play",
+      "fielders_choice_out",
+      "sac_fly",
+      "sac_bunt",
+      "sac_fly_double_play",
+      "sac_bunt_double_play",
+      "triple_play"
+    ],
+    "OTHER": [
+      "field_error",
+      "fielders_choice"
+    ]
+  },
+  "weights": {
+    "rule": "리그·시즌별 외부 선형가중치. K/OUT/OTHER=0. 실행별 실제 값은 manifest.json의 parameters에 보존.",
+    "reference_run": "bcai_obs__mlb_2024_2025__20260907__r01"
+  },
+  "baseline": {
+    "count": "0-0",
+    "index": 100,
+    "rule": "시즌별 유효 PA 평균 W; 관측 시작이 0-0인 PA만 포함"
+  },
+  "grade_boundaries": {
+    "nominal": [
+      "I >= 115: 타자 매우 유리",
+      "105 <= I < 115: 타자 유리",
+      "95 < I < 105: 중립",
+      "85 < I <= 95: 투수 유리",
+      "I <= 85: 투수 매우 유리"
+    ],
+    "sensitivity": [
+      [
+        2.5,
+        10
+      ],
+      [
+        7.5,
+        20
+      ]
+    ],
+    "final_ordered_rules": [
+      "L >= 115: 타자 매우 유리",
+      "L >= 105: H < 115이면 타자 유리, 아니면 타자 유리·강도 경계",
+      "H <= 85: 투수 매우 유리",
+      "H <= 95: L > 85이면 투수 유리, 아니면 투수 유리·강도 경계",
+      "L > 95 and H < 105: 중립",
+      "H < 100: 투수 유리/중립 경계",
+      "L > 100: 타자 유리/중립 경계",
+      "그 외: 방향 미확정"
+    ],
+    "interval": "관찰 지수 simultaneous95만 사용; ridge에 전용하지 않음"
+  },
+  "exclusions": {
+    "ordered": [
+      "missing_final",
+      "intentional_walk: intent_walk",
+      "catcher_interference: catcher_interf",
+      "truncated: truncated_pa",
+      "unknown_event",
+      "no_observed_0_0"
+    ],
+    "note": "마지막 기록 events 결측을 이전 events로 채우지 않음. 희생번트 포함. 기록 자체 없는 PA 복원 안 함."
+  },
+  "duplicates": {
+    "pitch_key": [
+      "game_pk",
+      "at_bat_number",
+      "pitch_number"
+    ],
+    "pitch_action": "중복 존재 시 assertion 중단",
+    "pa_key": [
+      "game_pk",
+      "at_bat_number"
+    ],
+    "final_event": "키와 pitch_number 정렬 후 마지막 기록",
+    "count_unit": "PA × 투구 전 count 한 번; 다른 count 간 중복 허용",
+    "pitch_explanators": "모든 확인 실제 투구; 반복 파울 뒤 매 투구 포함"
+  },
+  "season_mix": {
+    "rule": "q_y=N_y0 / sum_y N_y0; 모든 count·bootstrap에 고정. 각 시즌 V_yc/V_y0를 구한 뒤 혼합",
+    "comparison": "KBO 비교는 기존 보고서 13절의 동일한 MLB q 적용 계획. 미실시."
+  },
+  "formula": "I(c)=100*sum_y q_y*(V_yc/V_y0)",
+  "uncertainty": {
+    "unit": "시즌 내 경기 복원추출, 모든 count 공유",
+    "replicates": 2000,
+    "seed": 20260907,
+    "rng": "numpy.default_rng",
+    "batch_size": 100,
+    "individual_quantiles": [
+      0.025,
+      0.975
+    ],
+    "simultaneous": "11개 비기준 count; t*=q95(max_c abs((I_boot-I)/SE_boot)); SE ddof=1; I±t*SE",
+    "baseline_interval": [
+      100,
+      100
+    ],
+    "fixed": [
+      "season_mix",
+      "external weights"
+    ],
+    "recomputed": "매 재표본의 시즌별 0-0 평균",
+    "paired_intervals": "개별 쌍 비교; 66쌍 동시 추론 아님"
+  },
+  "hyperparameters": {
+    "grade_effect_sizes": [
+      5,
+      15
+    ],
+    "ridge": null
+  },
+  "output_fields": [
+    "count",
+    "index",
+    "CI95_low",
+    "CI95_high",
+    "simultaneous95_low",
+    "simultaneous95_high",
+    "grade",
+    "grade_certainty",
+    "confirmed_grade",
+    "runs_above_base_per100PA",
+    "run_environment_index",
+    "grade_narrow",
+    "grade_wide",
+    "N_PA",
+    "H%",
+    "XBH%",
+    "BB%",
+    "HBP%",
+    "K%",
+    "OUT%",
+    "OTHER%"
+  ],
+  "auxiliary_formula": {
+    "runs_above_base_per100PA": "100*sum_y q_y*(V_yc-V_y0)/scale_y",
+    "run_environment_index": "100+100*sum_y q_y*(V_yc-V_y0)/(scale_y*R_PA_y)"
+  }
+}

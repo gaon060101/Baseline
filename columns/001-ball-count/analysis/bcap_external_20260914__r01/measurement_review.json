@@ -1,0 +1,158 @@
+{
+  "review_id": "bcap_external_20260914__r01_measurement",
+  "created_at_utc": "2026-09-14T02:52:28.633354+00:00",
+  "official_sources_queried_at_utc": "2026-09-14T02:49:22Z",
+  "new_v2_external_action_results_accessed": false,
+  "external_pitch_rows_accessed": false,
+  "new_play_data_collected": false,
+  "code_or_models_modified": false,
+  "scope": "Official field definitions and existing local measurement/model documentation only; no full measurement or raw-data audit.",
+  "sources": [
+    {
+      "title": "Statcast Search CSV Documentation",
+      "url": "https://baseballsavant.mlb.com/csv-docs",
+      "publisher": "MLB / Baseball Savant",
+      "publication_date": null,
+      "fields": [
+        "plate_x",
+        "plate_z",
+        "sz_top",
+        "sz_bot"
+      ],
+      "finding": "Plate coordinates change front to middle starting 2026; zone bounds change operator-set to ABS-defined starting 2026."
+    },
+    {
+      "title": "MLB announces ABS challenge system coming to the Major Leagues beginning in the 2026 season",
+      "url": "https://img.mlbstatic.com/opprops-images/image/upload/opprops/jgdgj1bak2bgiskwpdnm.pdf",
+      "publisher": "MLB",
+      "publication_date": "2025-09-23",
+      "page": 1,
+      "finding": "ABS rectangle at middle of plate, 17-inch width, height bounds 53.5% and 27%; any ball contact with zone differs from BCAP center-only geometry."
+    }
+  ],
+  "decisions": [
+    {
+      "year": 2023,
+      "model_id": "BCAP-PITCH-SB-v0.1.0",
+      "status": "MEASUREMENT_SCOPE_ELIGIBLE",
+      "reason": "2023 is within the same official field-definition period as development; individual measurement accuracy unverified."
+    },
+    {
+      "year": 2023,
+      "model_id": "BCAP-SWING-v0.2.0",
+      "status": "MEASUREMENT_SCOPE_ELIGIBLE",
+      "reason": "2023 is within the same official field-definition period as development; individual measurement accuracy unverified."
+    },
+    {
+      "year": 2023,
+      "model_id": "BCAP-PITCH-v0.2.0",
+      "status": "MEASUREMENT_SCOPE_ELIGIBLE",
+      "reason": "Action and configured predictors do not use current/previous plate coordinates or zone-derived features."
+    },
+    {
+      "year": 2023,
+      "model_id": "BCAP-PITCH-FF-v0.1.0",
+      "status": "MEASUREMENT_SCOPE_ELIGIBLE",
+      "reason": "Action and configured predictors do not use current/previous plate coordinates or zone-derived features."
+    },
+    {
+      "year": 2026,
+      "model_id": "BCAP-PITCH-SB-v0.1.0",
+      "status": "MEASUREMENT_HOLD",
+      "reason": "No verified equivalence or existing validated transformation for plate-plane and zone-definition changes."
+    },
+    {
+      "year": 2026,
+      "model_id": "BCAP-SWING-v0.2.0",
+      "status": "MEASUREMENT_HOLD",
+      "reason": "No verified equivalence or existing validated transformation for plate-plane and zone-definition changes."
+    },
+    {
+      "year": 2026,
+      "model_id": "BCAP-PITCH-v0.2.0",
+      "status": "MEASUREMENT_SCOPE_ELIGIBLE",
+      "reason": "Action and configured predictors do not use current/previous plate coordinates or zone-derived features."
+    },
+    {
+      "year": 2026,
+      "model_id": "BCAP-PITCH-FF-v0.1.0",
+      "status": "MEASUREMENT_SCOPE_ELIGIBLE",
+      "reason": "Action and configured predictors do not use current/previous plate coordinates or zone-derived features."
+    }
+  ],
+  "verified_bridge_or_transformation_found_in_reviewed_records": false,
+  "not_claimed": [
+    "individual measurement accuracy",
+    "all suppliers lack bridge data",
+    "causal identification",
+    "external performance success",
+    "2026 pattern failure",
+    "2026 insufficient sample"
+  ],
+  "inputs": [
+    {
+      "path": "models/bcap/measurement_review.md",
+      "sha256": "0bb65a9afd12b7160d2047b8c9250530d99c50c33565fad28172f03148100074",
+      "bytes": 15241
+    },
+    {
+      "path": "models/bcap/design_decisions.md",
+      "sha256": "557c75f5ea000319cd8df26595f9e16546d7f6659d3905e5062f5fb692152783",
+      "bytes": 13135
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/official_measurement_sources.md",
+      "sha256": "2fe39944855ac634cb57fc9ef63ba6db8235f7d32302e2e7d4114db15f452bc9",
+      "bytes": 1023
+    },
+    {
+      "path": "models/bcap/pitch_sb/v0.1.0/specification.yaml",
+      "sha256": "00e7178f597de003bd0ab3018ce06376fef105102ce3d71a0e806d562df2ae6b",
+      "bytes": 6628
+    },
+    {
+      "path": "models/bcap/swing/v0.2.0/specification.yaml",
+      "sha256": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58",
+      "bytes": 6819
+    },
+    {
+      "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+      "sha256": "273c6d0fb5d3e80881dbff08821cf419f158cc627c358b5c6d6174542c989a29",
+      "bytes": 6655
+    },
+    {
+      "path": "models/bcap/pitch_ff/v0.1.0/specification.yaml",
+      "sha256": "1cca347cd366d63d8cc70770eded42ac5961a2764ccd7f6f394be3fbba104111",
+      "bytes": 5971
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/prepare.py",
+      "sha256": "76521d1fb51e462e792a567aea63a854c56ba7066e029b835e08ffd10fed40c6",
+      "bytes": 6357
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/engine.py",
+      "sha256": "83dacd3592b4401f62d29ba184f1696f9c55e5a4db14094c73282ceded8d35d3",
+      "bytes": 10069
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "sha256": "5c368ee22862e2f0d746756e328b78bf9f1c4598ad4aa444edb88ca95e372f6a",
+      "bytes": 30103
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "sha256": "140496ef8cf9e4b978f1fb2cc4e442f5df41a63d8a2c6ea91a7544ac9d1dba3f",
+      "bytes": 22050
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "sha256": "f2ca6855606eabd48bc876bc4763209847c0dc8d7ce9f0fe6111c4ea62021c49",
+      "bytes": 20440
+    }
+  ],
+  "review_document": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/measurement_review.md",
+    "sha256": "6a8cb0a1cd0826bed1dd69f1c196c9ac6f1734444ad5ed8ad65f466e99c3fc81"
+  }
+}

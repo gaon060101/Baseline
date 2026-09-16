@@ -1,0 +1,6 @@
+{
+  "access_at_utc": "2026-09-14T03:11:14.580349+00:00",
+  "actor": "root",
+  "file": "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2023__20260914__r01\\artifacts\\values.csv",
+  "event": "first root read of newly computed V2 external SB aggregate; after plan seal"
+}

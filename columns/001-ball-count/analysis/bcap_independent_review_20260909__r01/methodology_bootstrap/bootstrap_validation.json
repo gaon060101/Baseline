@@ -1,0 +1,295 @@
+{
+  "status": "PASS",
+  "scope": "Stored aggregate reaggregation and independent resampling/split/fit-N reconstruction; no original bootstrap row AIPW or prediction recreation",
+  "started_at_utc": "2026-09-09T09:10:23.219608+00:00",
+  "finished_at_utc": "2026-09-09T09:10:32.848291+00:00",
+  "checks": 160365,
+  "failures": 0,
+  "max_absolute_error": 5.684341886080802e-14,
+  "primary_family_intervals": 1463,
+  "family_bound": 1536,
+  "replicate_records": [
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 1,
+      "sample_seed": 20261909,
+      "evaluation_seed": 20360909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3094,
+      "rows": 1414655,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 2,
+      "sample_seed": 20261910,
+      "evaluation_seed": 20370909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3050,
+      "rows": 1413632,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 3,
+      "sample_seed": 20261911,
+      "evaluation_seed": 20380909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3085,
+      "rows": 1413289,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 4,
+      "sample_seed": 20261912,
+      "evaluation_seed": 20390909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3046,
+      "rows": 1418239,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 5,
+      "sample_seed": 20261913,
+      "evaluation_seed": 20400909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3067,
+      "rows": 1412742,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 6,
+      "sample_seed": 20261914,
+      "evaluation_seed": 20410909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3057,
+      "rows": 1418901,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 7,
+      "sample_seed": 20261915,
+      "evaluation_seed": 20420909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3113,
+      "rows": 1415782,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "replicate": 8,
+      "sample_seed": 20261916,
+      "evaluation_seed": 20430909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3066,
+      "rows": 1414726,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 1,
+      "sample_seed": 20261909,
+      "evaluation_seed": 20360909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3094,
+      "rows": 1415138,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 2,
+      "sample_seed": 20261910,
+      "evaluation_seed": 20370909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3050,
+      "rows": 1413969,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 3,
+      "sample_seed": 20261911,
+      "evaluation_seed": 20380909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3085,
+      "rows": 1414057,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 4,
+      "sample_seed": 20261912,
+      "evaluation_seed": 20390909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3046,
+      "rows": 1418586,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 5,
+      "sample_seed": 20261913,
+      "evaluation_seed": 20400909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3067,
+      "rows": 1413215,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 6,
+      "sample_seed": 20261914,
+      "evaluation_seed": 20410909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3057,
+      "rows": 1419344,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 7,
+      "sample_seed": 20261915,
+      "evaluation_seed": 20420909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3113,
+      "rows": 1416266,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "replicate": 8,
+      "sample_seed": 20261916,
+      "evaluation_seed": 20430909,
+      "season_draws": {
+        "2024": 2429,
+        "2025": 2430
+      },
+      "unique_games": 3066,
+      "rows": 1415262,
+      "split_hash_records": 27,
+      "fit_training_N": 90,
+      "tuning_choices": 27,
+      "persisted_files": 6,
+      "row_scores_or_fits_present": false
+    }
+  ],
+  "raw_bootstrap_AIPW_recalculation": {
+    "status": "NOT_VERIFIABLE",
+    "reason": "No replicate row Y/A/nuisance predictions/scores or fitted nuisance/policy objects retained; only aggregate and split/fit logs"
+  },
+  "full_learning_CI": {
+    "status": "NOT_RUN",
+    "reason": "8 repetitions are stability diagnostics; neither enough repetitions nor valid tie/dependence inference established"
+  },
+  "model_refitting": "NOT_RUN",
+  "failed_checks": []
+}

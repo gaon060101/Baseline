@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-09-09T05:37:49.379085+00:00",
+  "status": "PASS",
+  "evidence_sha256": "a27fcc7fe706cd0f8fe754290284492d70e6a784cb34132e668c25368fae39c7",
+  "checked_files": 30,
+  "local_document_links": 19,
+  "summary": {
+    "runs": [
+      {
+        "run_id": "bcai_obs__mlb_2024_2025__20260907__r01",
+        "model_id": "BCAI-OBS-v1.0.0",
+        "status": "legacy_no_execution_status",
+        "model_status": "VALIDATED"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2023__20260908__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260907__r01",
+        "model_id": "BCAI-RIDGE-v0.1.0",
+        "status": "legacy_no_execution_status",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260908__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "FAILED",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260908__r02",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260908__r03",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2026_ytd_20260907__20260908__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "FAILED",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2026_ytd_20260907__20260909__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      }
+    ],
+    "bcap_run_count": 0,
+    "bcap_model_directory_exists": false,
+    "existing_ridge_fit_rows": 207,
+    "existing_ridge_all_converged": true,
+    "existing_obs_count_rows": 12,
+    "existing_obs_baseline_PA": 364124,
+    "bcap_statistical_checks": "NOT_RUN"
+  }
+}

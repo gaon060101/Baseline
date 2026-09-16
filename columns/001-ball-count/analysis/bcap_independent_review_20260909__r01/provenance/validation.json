@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-09-09T09:19:58.991030+00:00",
+  "finished_at_utc": "2026-09-09T09:20:03.873050+00:00",
+  "hash_comparisons": 1661,
+  "checks": 340,
+  "failures": [],
+  "legacy_baseline_verified": 302,
+  "legacy_no_verifiable_prior_baseline": 21,
+  "historical_reference_resolution": "First pass compared historical entries to current paths and was retained in first_pass_unresolved_historical_references.json. Resolved only from explicit source archive and before-update backups, verified against recorded hashes. No numeric engine or old evidence was changed.",
+  "limitations": [
+    "Local recorded UTC/hashes do not prove universal nonexposure or public preregistration.",
+    "Reconstructed producer commands are not independent shell history.",
+    "Historical legacy references were resolved from stored evidence, not current paths blindly.",
+    "Source-file byte equality supports the recorded final core; it cannot reconstruct every prior in-memory execution."
+  ]
+}

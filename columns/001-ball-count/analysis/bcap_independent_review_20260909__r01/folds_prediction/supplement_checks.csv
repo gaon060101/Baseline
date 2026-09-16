@@ -1,0 +1,49 @@
+﻿run_id,check,status,n,nonfinite,unknown_rows,non_intercept_predictions,prediction_range,meaning,expected,actual,absolute_error
+bcap_pitch__mlb_2023__20260909__r01,finite_saved/p,PASS,716113.0,0.0,,,,,,,
+bcap_pitch__mlb_2023__20260909__r01,finite_saved/mu0,PASS,716113.0,0.0,,,,,,,
+bcap_pitch__mlb_2023__20260909__r01,finite_saved/mu1,PASS,716113.0,0.0,,,,,,,
+bcap_pitch__mlb_2023__20260909__r01,finite_saved/raw_propensity,PASS,716113.0,0.0,,,,,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/p_score/pitcher,PASS,716113.0,,68125.0,68125.0,1.26638216748443,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/p_score/batter,PASS,716113.0,,47467.0,47467.0,1.569808007246099,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/p_score/game_year,PASS,716113.0,,716113.0,716113.0,1.7041660583134497,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,actual_fit_unknown_single_block_fixture/p_score,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.7433939361228522,0.7433939361228522,0.0
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/mu0/pitcher,PASS,716113.0,,63864.0,63864.0,0.45627649977254514,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/mu0/batter,PASS,716113.0,,47255.0,47255.0,0.4512922920795075,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/mu0/game_year,PASS,716113.0,,716113.0,716112.0,0.5063547873310856,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,actual_fit_unknown_single_block_fixture/mu0,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.2838587419158457,0.2838587419158457,0.0
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/mu1/pitcher,PASS,716113.0,,64716.0,64716.0,0.5431772822571027,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/mu1/batter,PASS,716113.0,,47255.0,47255.0,0.4936366333676878,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,unknown_block/mu1/game_year,PASS,716113.0,,716113.0,716113.0,0.6082964698732639,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2023__20260909__r01,actual_fit_unknown_single_block_fixture/mu1,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.2896888892841791,0.2896888892841791,0.0
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,finite_saved/p,PASS,635095.0,0.0,,,,,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,finite_saved/mu0,PASS,635095.0,0.0,,,,,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,finite_saved/mu1,PASS,635095.0,0.0,,,,,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,finite_saved/raw_propensity,PASS,635095.0,0.0,,,,,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/p_score/pitcher,PASS,635095.0,,63934.0,63934.0,1.2965011524029912,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/p_score/batter,PASS,635095.0,,57664.0,57664.0,1.5423835877740049,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/p_score/game_year,PASS,635095.0,,635095.0,635095.0,1.6594245057342718,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,actual_fit_unknown_single_block_fixture/p_score,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.69302307517892,0.69302307517892,2.7755575615628914e-17
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/mu0/pitcher,PASS,635095.0,,62640.0,62640.0,0.47210461774129164,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/mu0/batter,PASS,635095.0,,57664.0,57664.0,0.4494473783304963,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/mu0/game_year,PASS,635095.0,,635095.0,635095.0,0.5047496993442775,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,actual_fit_unknown_single_block_fixture/mu0,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.33098526334516865,0.33098526334516865,2.0816681711721685e-17
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/mu1/pitcher,PASS,635095.0,,63524.0,63524.0,0.5446234914228514,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/mu1/batter,PASS,635095.0,,57664.0,57664.0,0.47712358748397965,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,unknown_block/mu1/game_year,PASS,635095.0,,635095.0,635095.0,0.6079116437546711,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,actual_fit_unknown_single_block_fixture/mu1,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.34593781160408915,0.34593781160408915,6.938893903907228e-18
+bcap_swing__mlb_2023__20260909__r01,finite_saved/p,PASS,716385.0,0.0,,,,,,,
+bcap_swing__mlb_2023__20260909__r01,finite_saved/mu0,PASS,716385.0,0.0,,,,,,,
+bcap_swing__mlb_2023__20260909__r01,finite_saved/mu1,PASS,716385.0,0.0,,,,,,,
+bcap_swing__mlb_2023__20260909__r01,finite_saved/raw_propensity,PASS,716385.0,0.0,,,,,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/p_score/pitcher,PASS,716385.0,,68151.0,68151.0,1.838045192778531,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/p_score/batter,PASS,716385.0,,47518.0,47518.0,1.6087870265165913,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/p_score/game_year,PASS,716385.0,,716385.0,716385.0,1.9010786621106983,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,actual_fit_unknown_single_block_fixture/p_score,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.45695268005385004,0.45695268005385004,0.0
+bcap_swing__mlb_2023__20260909__r01,unknown_block/mu0/pitcher,PASS,716385.0,,63879.0,63879.0,0.7953319378066809,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/mu0/batter,PASS,716385.0,,47306.0,47306.0,0.7861111146586142,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/mu0/game_year,PASS,716385.0,,716385.0,716385.0,0.8417917940380484,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,actual_fit_unknown_single_block_fixture/mu0,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.254644265102511,0.254644265102511,0.0
+bcap_swing__mlb_2023__20260909__r01,unknown_block/mu1/pitcher,PASS,716385.0,,63879.0,63879.0,0.6300163502569845,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/mu1/batter,PASS,716385.0,,47306.0,47306.0,0.5648482063465377,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,unknown_block/mu1/game_year,PASS,716385.0,,716385.0,716385.0,0.6729718719438874,Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive.,,,
+bcap_swing__mlb_2023__20260909__r01,actual_fit_unknown_single_block_fixture/mu1,PASS,,,,,,Synthetic input perturbation only; not statistical validation or external performance comparison.,0.30990635824835006,0.30990635824835006,0.0

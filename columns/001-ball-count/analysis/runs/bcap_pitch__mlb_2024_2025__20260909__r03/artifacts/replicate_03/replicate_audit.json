@@ -1,0 +1,19 @@
+{
+  "replicate": 3,
+  "started_at_utc": "2026-09-09T06:15:42.526214+00:00",
+  "finished_at_utc": "2026-09-09T06:23:27.207831+00:00",
+  "sample_seed": 20261911,
+  "evaluation_seed": 20380909,
+  "drawn_games_with_multiplicity": 4859,
+  "unique_original_games": 3085,
+  "sample_rows": 1413289,
+  "score_rows": 1413289,
+  "all_fits_converged": true,
+  "fit_count": 90,
+  "tuning_candidates_evaluated": 54,
+  "split_records_checked": 27,
+  "original_game_crossfold": 0,
+  "original_PA_crossfold": 0,
+  "all_train_evaluation_game_intersections_zero": true,
+  "no_confidence_interval": true
+}

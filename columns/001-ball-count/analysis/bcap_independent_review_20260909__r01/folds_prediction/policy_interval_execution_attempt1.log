@@ -1,0 +1,20 @@
+2026-09-09T09:20:40.450609+00:00 bcap_pitch__mlb_2024_2025__20260909__r02 outer0 complete
+2026-09-09T09:20:40.923037+00:00 bcap_pitch__mlb_2024_2025__20260909__r02 outer1 complete
+2026-09-09T09:20:41.362731+00:00 bcap_pitch__mlb_2024_2025__20260909__r02 outer2 complete
+Traceback (most recent call last):
+  File "C:\Users\��â��\Desktop\Baseline\columns\001-ball-count\analysis\bcap_independent_review_20260909__r01\folds_prediction\policy_intervals_review.py", line 71, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\��â��\Desktop\Baseline\columns\001-ball-count\analysis\bcap_independent_review_20260909__r01\folds_prediction\policy_intervals_review.py", line 26, in main
+    d=frame(a/(name+'_policy_training_scores.pkl'));d=d.loc[d.support]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\��â��\Desktop\Baseline\columns\001-ball-count\analysis\bcap_independent_review_20260909__r01\folds_prediction\policy_intervals_review.py", line 18, in frame
+    def frame(p):INPUTS[str(p)]=meta(p);return pd.read_pickle(p)
+                                ^^^^^^^
+  File "C:\Users\��â��\Desktop\Baseline\columns\001-ball-count\analysis\bcap_independent_review_20260909__r01\folds_prediction\policy_intervals_review.py", line 14, in meta
+    with p.open('rb') as f:
+         ^^^^^^^^^^^^
+  File "C:\Users\��â��\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\��â��\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_pitch__mlb_2024_2025__20260909__r02\\artifacts\\final_policy_policy_training_scores.pkl'

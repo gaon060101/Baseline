@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "alpha": 7.3,
+  "training_rows": 60,
+  "coefficient_max_abs_error": 5.09459488484687e-12,
+  "training_prediction_max_abs_error": 5.328071317478589e-12,
+  "known_unseen_prediction_max_abs_error": 2.477962279812118e-12,
+  "all_unseen_prediction_equals_training_intercept": true,
+  "ancestor_leakage_fixture_rejected": true,
+  "fit_diagnostics": [
+    {
+      "fit_id": "independent_dense_fixture",
+      "n": 60,
+      "features": 14,
+      "alpha": 7.3,
+      "iterations": 7,
+      "solver_info": 0,
+      "relative_gradient": 3.139016554633478e-11,
+      "converged": true
+    }
+  ],
+  "engine_sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+  "checked_at_utc": "2026-09-09T05:54:39.962917+00:00",
+  "verifier_sha256": "8ac2f3992720d907f3c9dd9638799898f24f6b642a29c99f0f3a20d25ca02a23",
+  "command": [
+    "models/bcap/verify_bcap.py",
+    "--numerical-fixture",
+    "--output",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/independent_numerical_fixture.json"
+  ]
+}

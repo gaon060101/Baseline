@@ -1,0 +1,2186 @@
+[
+  {
+    "key": "swing_cell",
+    "states": {
+      "0-0|BOUNDARY|FB": {
+        "state": "0-0|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.010073296409952989,
+        "n": 38986,
+        "games": 3239,
+        "conditional_low": -0.014239353092945934,
+        "conditional_high": 0.03438594591285191,
+        "candidate_only": true
+      },
+      "0-0|BOUNDARY|NFB": {
+        "state": "0-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.004150255620684291,
+        "n": 22922,
+        "games": 3232,
+        "conditional_low": -0.03484787749781769,
+        "conditional_high": 0.02654736625644911,
+        "candidate_only": true
+      },
+      "0-0|INNER|FB": {
+        "state": "0-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.05703350671037359,
+        "n": 49482,
+        "games": 3239,
+        "conditional_low": 0.037587833180291554,
+        "conditional_high": 0.07647918024045564,
+        "candidate_only": true
+      },
+      "0-0|INNER|NFB": {
+        "state": "0-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.06929168453787736,
+        "n": 26884,
+        "games": 3238,
+        "conditional_low": 0.04171591428933813,
+        "conditional_high": 0.09686745478641659,
+        "candidate_only": true
+      },
+      "0-0|OUT|FB": {
+        "state": "0-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.08613201806338702,
+        "n": 49076,
+        "games": 3239,
+        "conditional_low": -0.1118187208277778,
+        "conditional_high": -0.06044531529899625,
+        "candidate_only": true
+      },
+      "0-0|OUT|NFB": {
+        "state": "0-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.07177876159186954,
+        "n": 38455,
+        "games": 3239,
+        "conditional_low": -0.10215838741985084,
+        "conditional_high": -0.041399135763888234,
+        "candidate_only": true
+      },
+      "0-1|BOUNDARY|FB": {
+        "state": "0-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.006153147218505576,
+        "n": 15954,
+        "games": 3213,
+        "conditional_low": -0.03937598733919108,
+        "conditional_high": 0.02706969290217993,
+        "candidate_only": true
+      },
+      "0-1|BOUNDARY|NFB": {
+        "state": "0-1|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.005631832976509328,
+        "n": 12774,
+        "games": 3159,
+        "conditional_low": -0.035682185182306835,
+        "conditional_high": 0.04694585113532549,
+        "candidate_only": true
+      },
+      "0-1|INNER|FB": {
+        "state": "0-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.0889919797605869,
+        "n": 17902,
+        "games": 3224,
+        "conditional_low": 0.04856097172908597,
+        "conditional_high": 0.12942298779208783,
+        "candidate_only": true
+      },
+      "0-1|INNER|NFB": {
+        "state": "0-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.08712835721769856,
+        "n": 12603,
+        "games": 3164,
+        "conditional_low": 0.035121281365614286,
+        "conditional_high": 0.13913543306978282,
+        "candidate_only": true
+      },
+      "0-1|OUT|FB": {
+        "state": "0-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.07162147133219202,
+        "n": 26179,
+        "games": 3239,
+        "conditional_low": -0.10014541569550722,
+        "conditional_high": -0.043097526968876816,
+        "candidate_only": true
+      },
+      "0-1|OUT|NFB": {
+        "state": "0-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.09079270071334102,
+        "n": 32533,
+        "games": 3238,
+        "conditional_low": -0.11726336398622872,
+        "conditional_high": -0.06432203744045331,
+        "candidate_only": true
+      },
+      "0-2|BOUNDARY|FB": {
+        "state": "0-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.09821945140810898,
+        "n": 6181,
+        "games": 2683,
+        "conditional_low": 0.04974941741484855,
+        "conditional_high": 0.1466894854013694,
+        "candidate_only": true
+      },
+      "0-2|BOUNDARY|NFB": {
+        "state": "0-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.11188359013028347,
+        "n": 5751,
+        "games": 2623,
+        "conditional_low": 0.05483136600201442,
+        "conditional_high": 0.16893581425855253,
+        "candidate_only": true
+      },
+      "0-2|INNER|FB": {
+        "state": "0-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.23331602954662128,
+        "n": 5543,
+        "games": 2583,
+        "conditional_low": 0.1947900560062534,
+        "conditional_high": 0.27184200308698914,
+        "candidate_only": true
+      },
+      "0-2|INNER|NFB": {
+        "state": "0-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.20692445448739494,
+        "n": 4322,
+        "games": 2292,
+        "conditional_low": 0.16197743060572492,
+        "conditional_high": 0.251871478369065,
+        "candidate_only": true
+      },
+      "0-2|OUT|FB": {
+        "state": "0-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.0676081945871871,
+        "n": 14659,
+        "games": 3193,
+        "conditional_low": -0.09741328533843563,
+        "conditional_high": -0.037803103835938566,
+        "candidate_only": true
+      },
+      "0-2|OUT|NFB": {
+        "state": "0-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.12989141833240936,
+        "n": 24084,
+        "games": 3237,
+        "conditional_low": -0.14959778370280152,
+        "conditional_high": -0.1101850529620172,
+        "candidate_only": true
+      },
+      "1-0|BOUNDARY|FB": {
+        "state": "1-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.008690082995869524,
+        "n": 14737,
+        "games": 3200,
+        "conditional_low": -0.04373577652805857,
+        "conditional_high": 0.02635561053631952,
+        "candidate_only": true
+      },
+      "1-0|BOUNDARY|NFB": {
+        "state": "1-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.009552527023942303,
+        "n": 9096,
+        "games": 3006,
+        "conditional_low": -0.053984706003022444,
+        "conditional_high": 0.034879651955137835,
+        "candidate_only": true
+      },
+      "1-0|INNER|FB": {
+        "state": "1-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.0557537043500471,
+        "n": 19149,
+        "games": 3227,
+        "conditional_low": 0.018122538011340936,
+        "conditional_high": 0.09338487068875326,
+        "candidate_only": true
+      },
+      "1-0|INNER|NFB": {
+        "state": "1-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.058880907032985486,
+        "n": 10439,
+        "games": 3083,
+        "conditional_low": 0.014344751100907834,
+        "conditional_high": 0.10341706296506314,
+        "candidate_only": true
+      },
+      "1-0|OUT|FB": {
+        "state": "1-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.1141123917034965,
+        "n": 18456,
+        "games": 3219,
+        "conditional_low": -0.15412167231542206,
+        "conditional_high": -0.07410311109157094,
+        "candidate_only": true
+      },
+      "1-0|OUT|NFB": {
+        "state": "1-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.13421706720474022,
+        "n": 15588,
+        "games": 3198,
+        "conditional_low": -0.1806472423448117,
+        "conditional_high": -0.08778689206466875,
+        "candidate_only": true
+      },
+      "1-1|BOUNDARY|FB": {
+        "state": "1-1|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.010617852675135962,
+        "n": 12720,
+        "games": 3176,
+        "conditional_low": -0.02923585460824377,
+        "conditional_high": 0.0504715599585157,
+        "candidate_only": true
+      },
+      "1-1|BOUNDARY|NFB": {
+        "state": "1-1|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.0052875494001286055,
+        "n": 10916,
+        "games": 3128,
+        "conditional_low": -0.03969038429055471,
+        "conditional_high": 0.05026548309081192,
+        "candidate_only": true
+      },
+      "1-1|INNER|FB": {
+        "state": "1-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.06230056939835099,
+        "n": 15353,
+        "games": 3195,
+        "conditional_low": 0.011254764716694309,
+        "conditional_high": 0.11334637408000767,
+        "candidate_only": true
+      },
+      "1-1|INNER|NFB": {
+        "state": "1-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.10127008978630107,
+        "n": 11495,
+        "games": 3120,
+        "conditional_low": 0.04469213003976666,
+        "conditional_high": 0.1578480495328355,
+        "candidate_only": true
+      },
+      "1-1|OUT|FB": {
+        "state": "1-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.11618720821082142,
+        "n": 18717,
+        "games": 3226,
+        "conditional_low": -0.14897732442549574,
+        "conditional_high": -0.08339709199614709,
+        "candidate_only": true
+      },
+      "1-1|OUT|NFB": {
+        "state": "1-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.12886033273701727,
+        "n": 23036,
+        "games": 3237,
+        "conditional_low": -0.15803240571306837,
+        "conditional_high": -0.0996882597609662,
+        "candidate_only": true
+      },
+      "1-2|BOUNDARY|FB": {
+        "state": "1-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.12882131114766124,
+        "n": 9828,
+        "games": 3045,
+        "conditional_low": 0.08660380345676155,
+        "conditional_high": 0.17103881883856092,
+        "candidate_only": true
+      },
+      "1-2|BOUNDARY|NFB": {
+        "state": "1-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.11807067321860588,
+        "n": 9509,
+        "games": 3048,
+        "conditional_low": 0.07096167250548784,
+        "conditional_high": 0.16517967393172395,
+        "candidate_only": true
+      },
+      "1-2|INNER|FB": {
+        "state": "1-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.2306791167114741,
+        "n": 9698,
+        "games": 3042,
+        "conditional_low": 0.20013221776629486,
+        "conditional_high": 0.2612260156566533,
+        "candidate_only": true
+      },
+      "1-2|INNER|NFB": {
+        "state": "1-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.21490707512465085,
+        "n": 7248,
+        "games": 2808,
+        "conditional_low": 0.17988587296999436,
+        "conditional_high": 0.24992827727930733,
+        "candidate_only": true
+      },
+      "1-2|OUT|FB": {
+        "state": "1-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.09455364869382217,
+        "n": 20059,
+        "games": 3219,
+        "conditional_low": -0.12151190778831819,
+        "conditional_high": -0.06759538959932615,
+        "candidate_only": true
+      },
+      "1-2|OUT|NFB": {
+        "state": "1-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.15674413138845902,
+        "n": 32327,
+        "games": 3239,
+        "conditional_low": -0.17406474914686465,
+        "conditional_high": -0.1394235136300534,
+        "candidate_only": true
+      },
+      "2-0|BOUNDARY|FB": {
+        "state": "2-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.007833910483500248,
+        "n": 5877,
+        "games": 2689,
+        "conditional_low": -0.06711665893481653,
+        "conditional_high": 0.051448837967816026,
+        "candidate_only": true
+      },
+      "2-0|BOUNDARY|NFB": {
+        "state": "2-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.01605895848350877,
+        "n": 2279,
+        "games": 1572,
+        "conditional_low": -0.10632259061907778,
+        "conditional_high": 0.07420467365206024,
+        "candidate_only": true
+      },
+      "2-0|INNER|FB": {
+        "state": "2-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.06062935813366942,
+        "n": 7963,
+        "games": 2933,
+        "conditional_low": 0.003156384969718054,
+        "conditional_high": 0.11810233129762078,
+        "candidate_only": true
+      },
+      "2-0|INNER|NFB": {
+        "state": "2-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.04005584495461249,
+        "n": 2706,
+        "games": 1773,
+        "conditional_low": -0.04899248461830327,
+        "conditional_high": 0.12910417452752826,
+        "candidate_only": true
+      },
+      "2-0|OUT|FB": {
+        "state": "2-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.17791408372285072,
+        "n": 6779,
+        "games": 2803,
+        "conditional_low": -0.24349459810562,
+        "conditional_high": -0.11233356934008146,
+        "candidate_only": true
+      },
+      "2-0|OUT|NFB": {
+        "state": "2-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.16893498537183357,
+        "n": 3527,
+        "games": 2073,
+        "conditional_low": -0.26479736689098815,
+        "conditional_high": -0.07307260385267898,
+        "candidate_only": true
+      },
+      "2-1|BOUNDARY|FB": {
+        "state": "2-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.026587854960073137,
+        "n": 7811,
+        "games": 2934,
+        "conditional_low": -0.07745156765151083,
+        "conditional_high": 0.024275857731364554,
+        "candidate_only": true
+      },
+      "2-1|BOUNDARY|NFB": {
+        "state": "2-1|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.030374745241375737,
+        "n": 5033,
+        "games": 2506,
+        "conditional_low": -0.10102647008588611,
+        "conditional_high": 0.040276979603134644,
+        "candidate_only": true
+      },
+      "2-1|INNER|FB": {
+        "state": "2-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.07802609527406008,
+        "n": 10388,
+        "games": 3091,
+        "conditional_low": 0.0186648255087338,
+        "conditional_high": 0.13738736503938637,
+        "candidate_only": true
+      },
+      "2-1|INNER|NFB": {
+        "state": "2-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.08382181515178933,
+        "n": 5831,
+        "games": 2704,
+        "conditional_low": 0.005488582717704457,
+        "conditional_high": 0.16215504758587418,
+        "candidate_only": true
+      },
+      "2-1|OUT|FB": {
+        "state": "2-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.17779701711281182,
+        "n": 9645,
+        "games": 3041,
+        "conditional_low": -0.22499223396605394,
+        "conditional_high": -0.1306018002595697,
+        "candidate_only": true
+      },
+      "2-1|OUT|NFB": {
+        "state": "2-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.19669887889245352,
+        "n": 8684,
+        "games": 2993,
+        "conditional_low": -0.24319585189458326,
+        "conditional_high": -0.15020190589032378,
+        "candidate_only": true
+      },
+      "2-2|BOUNDARY|FB": {
+        "state": "2-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.12401306311419448,
+        "n": 9881,
+        "games": 3044,
+        "conditional_low": 0.08001073577295544,
+        "conditional_high": 0.1680153904554335,
+        "candidate_only": true
+      },
+      "2-2|BOUNDARY|NFB": {
+        "state": "2-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.11692281596315227,
+        "n": 8517,
+        "games": 2977,
+        "conditional_low": 0.06332949112577796,
+        "conditional_high": 0.17051614080052657,
+        "candidate_only": true
+      },
+      "2-2|INNER|FB": {
+        "state": "2-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.23611128268785767,
+        "n": 11088,
+        "games": 3086,
+        "conditional_low": 0.20499483293441756,
+        "conditional_high": 0.26722773244129777,
+        "candidate_only": true
+      },
+      "2-2|INNER|NFB": {
+        "state": "2-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.213813513194901,
+        "n": 7432,
+        "games": 2845,
+        "conditional_low": 0.17381580446884717,
+        "conditional_high": 0.25381122192095484,
+        "candidate_only": true
+      },
+      "2-2|OUT|FB": {
+        "state": "2-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.1891258695351783,
+        "n": 15763,
+        "games": 3203,
+        "conditional_low": -0.21883083546724863,
+        "conditional_high": -0.15942090360310796,
+        "candidate_only": true
+      },
+      "2-2|OUT|NFB": {
+        "state": "2-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.23711780889783404,
+        "n": 22300,
+        "games": 3232,
+        "conditional_low": -0.25971532654879254,
+        "conditional_high": -0.21452029124687555,
+        "candidate_only": true
+      },
+      "3-0|BOUNDARY|FB": {
+        "state": "3-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.08960811584034913,
+        "n": 2238,
+        "games": 1595,
+        "conditional_low": -0.24130917361265897,
+        "conditional_high": 0.06209294193196073,
+        "candidate_only": true
+      },
+      "3-0|BOUNDARY|NFB": {
+        "state": "3-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.04923071661437774,
+        "n": 138,
+        "games": 129,
+        "conditional_low": -0.5583335512374287,
+        "conditional_high": 0.4598721180086732,
+        "candidate_only": true
+      },
+      "3-0|INNER|FB": {
+        "state": "3-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.07968825035036642,
+        "n": 3436,
+        "games": 2066,
+        "conditional_low": -0.06318848201868513,
+        "conditional_high": 0.22256498271941796,
+        "candidate_only": true
+      },
+      "3-0|INNER|NFB": {
+        "state": "3-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.009191178097974493,
+        "n": 177,
+        "games": 171,
+        "conditional_low": -0.4964828763472348,
+        "conditional_high": 0.5148652325431838,
+        "candidate_only": true
+      },
+      "3-0|OUT|FB": {
+        "state": "3-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.27347990974046255,
+        "n": 1984,
+        "games": 1436,
+        "conditional_low": -0.3780348555593229,
+        "conditional_high": -0.16892496392160217,
+        "candidate_only": true
+      },
+      "3-0|OUT|NFB": {
+        "state": "3-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.2940348347160017,
+        "n": 194,
+        "games": 181,
+        "conditional_low": -0.6541499478731517,
+        "conditional_high": 0.06608027844114828,
+        "candidate_only": true
+      },
+      "3-1|BOUNDARY|FB": {
+        "state": "3-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.11774040273211886,
+        "n": 4218,
+        "games": 2366,
+        "conditional_low": -0.17968921469524984,
+        "conditional_high": -0.05579159076898788,
+        "candidate_only": true
+      },
+      "3-1|BOUNDARY|NFB": {
+        "state": "3-1|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.03648051441180172,
+        "n": 1171,
+        "games": 950,
+        "conditional_low": -0.15166200368904392,
+        "conditional_high": 0.07870097486544049,
+        "candidate_only": true
+      },
+      "3-1|INNER|FB": {
+        "state": "3-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.057918117082050594,
+        "n": 6035,
+        "games": 2713,
+        "conditional_low": -0.018109231857469085,
+        "conditional_high": 0.13394546602157026,
+        "candidate_only": true
+      },
+      "3-1|INNER|NFB": {
+        "state": "3-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.09597959852372959,
+        "n": 1460,
+        "games": 1160,
+        "conditional_low": -0.025643809191026587,
+        "conditional_high": 0.21760300623848577,
+        "candidate_only": true
+      },
+      "3-1|OUT|FB": {
+        "state": "3-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.30579193236117386,
+        "n": 4764,
+        "games": 2424,
+        "conditional_low": -0.3667479012249183,
+        "conditional_high": -0.24483596349742942,
+        "candidate_only": true
+      },
+      "3-1|OUT|NFB": {
+        "state": "3-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.3056613493357873,
+        "n": 1727,
+        "games": 1294,
+        "conditional_low": -0.397909031350675,
+        "conditional_high": -0.21341366732089964,
+        "candidate_only": true
+      },
+      "3-2|BOUNDARY|FB": {
+        "state": "3-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.1338428710985816,
+        "n": 8172,
+        "games": 2884,
+        "conditional_low": 0.08501675810122966,
+        "conditional_high": 0.18266898409593352,
+        "candidate_only": true
+      },
+      "3-2|BOUNDARY|NFB": {
+        "state": "3-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.13528978399392066,
+        "n": 4492,
+        "games": 2329,
+        "conditional_low": 0.06057148583421501,
+        "conditional_high": 0.21000808215362632,
+        "candidate_only": true
+      },
+      "3-2|INNER|FB": {
+        "state": "3-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.2732504736529536,
+        "n": 10500,
+        "games": 3025,
+        "conditional_low": 0.23197044742463147,
+        "conditional_high": 0.3145304998812757,
+        "candidate_only": true
+      },
+      "3-2|INNER|NFB": {
+        "state": "3-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.25708322410454937,
+        "n": 4717,
+        "games": 2377,
+        "conditional_low": 0.189158661796764,
+        "conditional_high": 0.32500778641233474,
+        "candidate_only": true
+      },
+      "3-2|OUT|FB": {
+        "state": "3-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.41914644016664837,
+        "n": 9792,
+        "games": 3028,
+        "conditional_low": -0.45039535524216395,
+        "conditional_high": -0.3878975250911328,
+        "candidate_only": true
+      },
+      "3-2|OUT|NFB": {
+        "state": "3-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.49655794509557155,
+        "n": 7899,
+        "games": 2888,
+        "conditional_low": -0.5239434826434057,
+        "conditional_high": -0.4691724075477373,
+        "candidate_only": true
+      }
+    },
+    "fallback_p1": 0.5,
+    "conservative_change": false,
+    "reason": "Identification and full-learning uncertainty gates not satisfied; retain observed mechanism everywhere"
+  },
+  {
+    "key": "swing_cell",
+    "states": {
+      "0-0|BOUNDARY|FB": {
+        "state": "0-0|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.008849666281429542,
+        "n": 38963,
+        "games": 3239,
+        "conditional_low": -0.014945813321058432,
+        "conditional_high": 0.032645145883917516,
+        "candidate_only": true
+      },
+      "0-0|BOUNDARY|NFB": {
+        "state": "0-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.0082279704868791,
+        "n": 23020,
+        "games": 3234,
+        "conditional_low": -0.03881298504137074,
+        "conditional_high": 0.02235704406761254,
+        "candidate_only": true
+      },
+      "0-0|INNER|FB": {
+        "state": "0-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.06479940548393391,
+        "n": 49482,
+        "games": 3239,
+        "conditional_low": 0.04503981574965087,
+        "conditional_high": 0.08455899521821694,
+        "candidate_only": true
+      },
+      "0-0|INNER|NFB": {
+        "state": "0-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.07451799442096817,
+        "n": 27098,
+        "games": 3236,
+        "conditional_low": 0.04664377831062348,
+        "conditional_high": 0.10239221053131285,
+        "candidate_only": true
+      },
+      "0-0|OUT|FB": {
+        "state": "0-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.08896575215513525,
+        "n": 48081,
+        "games": 3239,
+        "conditional_low": -0.11510537775519326,
+        "conditional_high": -0.06282612655507723,
+        "candidate_only": true
+      },
+      "0-0|OUT|NFB": {
+        "state": "0-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.07722070993665281,
+        "n": 38785,
+        "games": 3239,
+        "conditional_low": -0.10627970971263846,
+        "conditional_high": -0.04816171016066716,
+        "candidate_only": true
+      },
+      "0-1|BOUNDARY|FB": {
+        "state": "0-1|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.0009195134600541647,
+        "n": 15880,
+        "games": 3204,
+        "conditional_low": -0.03236239267741358,
+        "conditional_high": 0.03420141959752191,
+        "candidate_only": true
+      },
+      "0-1|BOUNDARY|NFB": {
+        "state": "0-1|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.015108938886656471,
+        "n": 13180,
+        "games": 3180,
+        "conditional_low": -0.026855232357719194,
+        "conditional_high": 0.05707311013103214,
+        "candidate_only": true
+      },
+      "0-1|INNER|FB": {
+        "state": "0-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.07436706857008539,
+        "n": 17559,
+        "games": 3222,
+        "conditional_low": 0.03364037670077214,
+        "conditional_high": 0.11509376043939865,
+        "candidate_only": true
+      },
+      "0-1|INNER|NFB": {
+        "state": "0-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.0833792619336414,
+        "n": 12674,
+        "games": 3166,
+        "conditional_low": 0.030156850573249183,
+        "conditional_high": 0.1366016732940336,
+        "candidate_only": true
+      },
+      "0-1|OUT|FB": {
+        "state": "0-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.0794249955163824,
+        "n": 26266,
+        "games": 3239,
+        "conditional_low": -0.10648375450415623,
+        "conditional_high": -0.052366236528608556,
+        "candidate_only": true
+      },
+      "0-1|OUT|NFB": {
+        "state": "0-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.0857361619964058,
+        "n": 32674,
+        "games": 3239,
+        "conditional_low": -0.1114815551605068,
+        "conditional_high": -0.059990768832304794,
+        "candidate_only": true
+      },
+      "0-2|BOUNDARY|FB": {
+        "state": "0-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.09475244187490536,
+        "n": 6290,
+        "games": 2685,
+        "conditional_low": 0.047240189465274016,
+        "conditional_high": 0.1422646942845367,
+        "candidate_only": true
+      },
+      "0-2|BOUNDARY|NFB": {
+        "state": "0-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.11861071079170714,
+        "n": 5668,
+        "games": 2606,
+        "conditional_low": 0.06343491077311011,
+        "conditional_high": 0.17378651081030416,
+        "candidate_only": true
+      },
+      "0-2|INNER|FB": {
+        "state": "0-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.22408890930307246,
+        "n": 5603,
+        "games": 2578,
+        "conditional_low": 0.18761882805717278,
+        "conditional_high": 0.26055899054897214,
+        "candidate_only": true
+      },
+      "0-2|INNER|NFB": {
+        "state": "0-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.20021643024887692,
+        "n": 4245,
+        "games": 2288,
+        "conditional_low": 0.15287412944481032,
+        "conditional_high": 0.24755873105294351,
+        "candidate_only": true
+      },
+      "0-2|OUT|FB": {
+        "state": "0-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.07631450681883312,
+        "n": 14593,
+        "games": 3184,
+        "conditional_low": -0.10532354199768407,
+        "conditional_high": -0.04730547163998216,
+        "candidate_only": true
+      },
+      "0-2|OUT|NFB": {
+        "state": "0-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.12774047904561833,
+        "n": 24356,
+        "games": 3236,
+        "conditional_low": -0.1469296363970418,
+        "conditional_high": -0.10855132169419487,
+        "candidate_only": true
+      },
+      "1-0|BOUNDARY|FB": {
+        "state": "1-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.003170855612384773,
+        "n": 14625,
+        "games": 3187,
+        "conditional_low": -0.03877274018807449,
+        "conditional_high": 0.03243102896330494,
+        "candidate_only": true
+      },
+      "1-0|BOUNDARY|NFB": {
+        "state": "1-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.02074007193944375,
+        "n": 9135,
+        "games": 2983,
+        "conditional_low": -0.06566706260864667,
+        "conditional_high": 0.02418691872975917,
+        "candidate_only": true
+      },
+      "1-0|INNER|FB": {
+        "state": "1-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.06808449862800979,
+        "n": 18773,
+        "games": 3226,
+        "conditional_low": 0.03071222260865028,
+        "conditional_high": 0.1054567746473693,
+        "candidate_only": true
+      },
+      "1-0|INNER|NFB": {
+        "state": "1-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.05930624277918177,
+        "n": 10295,
+        "games": 3091,
+        "conditional_low": 0.013869347856378375,
+        "conditional_high": 0.10474313770198516,
+        "candidate_only": true
+      },
+      "1-0|OUT|FB": {
+        "state": "1-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.10454247253183904,
+        "n": 18242,
+        "games": 3225,
+        "conditional_low": -0.14648840164144217,
+        "conditional_high": -0.06259654342223592,
+        "candidate_only": true
+      },
+      "1-0|OUT|NFB": {
+        "state": "1-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.12662458908962276,
+        "n": 15739,
+        "games": 3207,
+        "conditional_low": -0.17078780369705665,
+        "conditional_high": -0.08246137448218889,
+        "candidate_only": true
+      },
+      "1-1|BOUNDARY|FB": {
+        "state": "1-1|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.00838811658495805,
+        "n": 12738,
+        "games": 3181,
+        "conditional_low": -0.029456236443076357,
+        "conditional_high": 0.046232469612992454,
+        "candidate_only": true
+      },
+      "1-1|BOUNDARY|NFB": {
+        "state": "1-1|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.01237679315845018,
+        "n": 10950,
+        "games": 3124,
+        "conditional_low": -0.032106218324221454,
+        "conditional_high": 0.056859804641121815,
+        "candidate_only": true
+      },
+      "1-1|INNER|FB": {
+        "state": "1-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.05888968677081938,
+        "n": 15311,
+        "games": 3199,
+        "conditional_low": 0.008585926217035307,
+        "conditional_high": 0.10919344732460345,
+        "candidate_only": true
+      },
+      "1-1|INNER|NFB": {
+        "state": "1-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.112735071792459,
+        "n": 11407,
+        "games": 3128,
+        "conditional_low": 0.05754584294684558,
+        "conditional_high": 0.1679243006380724,
+        "candidate_only": true
+      },
+      "1-1|OUT|FB": {
+        "state": "1-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.1083625393170028,
+        "n": 18697,
+        "games": 3224,
+        "conditional_low": -0.1421662530297675,
+        "conditional_high": -0.07455882560423813,
+        "candidate_only": true
+      },
+      "1-1|OUT|NFB": {
+        "state": "1-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.12531228044271853,
+        "n": 22859,
+        "games": 3234,
+        "conditional_low": -0.1550097604491375,
+        "conditional_high": -0.09561480043629954,
+        "candidate_only": true
+      },
+      "1-2|BOUNDARY|FB": {
+        "state": "1-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.13789612442667923,
+        "n": 9842,
+        "games": 3063,
+        "conditional_low": 0.09972532040235571,
+        "conditional_high": 0.17606692845100275,
+        "candidate_only": true
+      },
+      "1-2|BOUNDARY|NFB": {
+        "state": "1-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.12000544233748131,
+        "n": 9453,
+        "games": 3030,
+        "conditional_low": 0.07205405390721269,
+        "conditional_high": 0.16795683076774992,
+        "candidate_only": true
+      },
+      "1-2|INNER|FB": {
+        "state": "1-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.23261689889832265,
+        "n": 9551,
+        "games": 3026,
+        "conditional_low": 0.2032188474511077,
+        "conditional_high": 0.2620149503455376,
+        "candidate_only": true
+      },
+      "1-2|INNER|NFB": {
+        "state": "1-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.2269508517115258,
+        "n": 7208,
+        "games": 2800,
+        "conditional_low": 0.1911103276385589,
+        "conditional_high": 0.2627913757844927,
+        "candidate_only": true
+      },
+      "1-2|OUT|FB": {
+        "state": "1-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.09662636329919468,
+        "n": 19944,
+        "games": 3218,
+        "conditional_low": -0.12318309589045535,
+        "conditional_high": -0.070069630707934,
+        "candidate_only": true
+      },
+      "1-2|OUT|NFB": {
+        "state": "1-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.1508575068231251,
+        "n": 32514,
+        "games": 3239,
+        "conditional_low": -0.16792848739908292,
+        "conditional_high": -0.13378652624716728,
+        "candidate_only": true
+      },
+      "2-0|BOUNDARY|FB": {
+        "state": "2-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.047252346886102504,
+        "n": 5895,
+        "games": 2690,
+        "conditional_low": -0.1046114318394139,
+        "conditional_high": 0.010106738067208902,
+        "candidate_only": true
+      },
+      "2-0|BOUNDARY|NFB": {
+        "state": "2-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.04182200804148778,
+        "n": 2383,
+        "games": 1648,
+        "conditional_low": -0.12754205618297682,
+        "conditional_high": 0.04389804010000126,
+        "candidate_only": true
+      },
+      "2-0|INNER|FB": {
+        "state": "2-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.041947133429952266,
+        "n": 7942,
+        "games": 2937,
+        "conditional_low": -0.016938870223568277,
+        "conditional_high": 0.1008331370834728,
+        "candidate_only": true
+      },
+      "2-0|INNER|NFB": {
+        "state": "2-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.054694790100243695,
+        "n": 2786,
+        "games": 1782,
+        "conditional_low": -0.030878539436493393,
+        "conditional_high": 0.14026811963698077,
+        "candidate_only": true
+      },
+      "2-0|OUT|FB": {
+        "state": "2-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.1814645215909778,
+        "n": 6766,
+        "games": 2805,
+        "conditional_low": -0.2511038457380696,
+        "conditional_high": -0.11182519744388603,
+        "candidate_only": true
+      },
+      "2-0|OUT|NFB": {
+        "state": "2-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.15516325227069241,
+        "n": 3415,
+        "games": 2021,
+        "conditional_low": -0.2637696618448194,
+        "conditional_high": -0.04655684269656543,
+        "candidate_only": true
+      },
+      "2-1|BOUNDARY|FB": {
+        "state": "2-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.03264171744834054,
+        "n": 7760,
+        "games": 2944,
+        "conditional_low": -0.08526413903797692,
+        "conditional_high": 0.019980704141295838,
+        "candidate_only": true
+      },
+      "2-1|BOUNDARY|NFB": {
+        "state": "2-1|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.02884827320879218,
+        "n": 5001,
+        "games": 2491,
+        "conditional_low": -0.0982685296124115,
+        "conditional_high": 0.04057198319482714,
+        "candidate_only": true
+      },
+      "2-1|INNER|FB": {
+        "state": "2-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.08312584900987616,
+        "n": 10283,
+        "games": 3085,
+        "conditional_low": 0.02172805293591578,
+        "conditional_high": 0.14452364508383653,
+        "candidate_only": true
+      },
+      "2-1|INNER|NFB": {
+        "state": "2-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.073562565273225,
+        "n": 5802,
+        "games": 2661,
+        "conditional_low": -0.0075281483720187475,
+        "conditional_high": 0.15465327891846875,
+        "candidate_only": true
+      },
+      "2-1|OUT|FB": {
+        "state": "2-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.19783290024538153,
+        "n": 9736,
+        "games": 3066,
+        "conditional_low": -0.2437140420957664,
+        "conditional_high": -0.15195175839499667,
+        "candidate_only": true
+      },
+      "2-1|OUT|NFB": {
+        "state": "2-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.18722609232884715,
+        "n": 8747,
+        "games": 2987,
+        "conditional_low": -0.23704931973858973,
+        "conditional_high": -0.13740286491910458,
+        "candidate_only": true
+      },
+      "2-2|BOUNDARY|FB": {
+        "state": "2-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.11178941320795892,
+        "n": 9848,
+        "games": 3031,
+        "conditional_low": 0.06779756164013315,
+        "conditional_high": 0.1557812647757847,
+        "candidate_only": true
+      },
+      "2-2|BOUNDARY|NFB": {
+        "state": "2-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.10453427630608587,
+        "n": 8540,
+        "games": 2978,
+        "conditional_low": 0.050916218742762843,
+        "conditional_high": 0.1581523338694089,
+        "candidate_only": true
+      },
+      "2-2|INNER|FB": {
+        "state": "2-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.22658694220453818,
+        "n": 11166,
+        "games": 3105,
+        "conditional_low": 0.1955572311107121,
+        "conditional_high": 0.25761665329836425,
+        "candidate_only": true
+      },
+      "2-2|INNER|NFB": {
+        "state": "2-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.21432634413746673,
+        "n": 7361,
+        "games": 2841,
+        "conditional_low": 0.17573003171473608,
+        "conditional_high": 0.2529226565601974,
+        "candidate_only": true
+      },
+      "2-2|OUT|FB": {
+        "state": "2-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.18013148122739497,
+        "n": 15994,
+        "games": 3204,
+        "conditional_low": -0.20976474735870254,
+        "conditional_high": -0.1504982150960874,
+        "candidate_only": true
+      },
+      "2-2|OUT|NFB": {
+        "state": "2-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.23159117692020814,
+        "n": 22365,
+        "games": 3232,
+        "conditional_low": -0.25373567871237185,
+        "conditional_high": -0.20944667512804446,
+        "candidate_only": true
+      },
+      "3-0|BOUNDARY|FB": {
+        "state": "3-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.0747503083260532,
+        "n": 2336,
+        "games": 1636,
+        "conditional_low": -0.22116208046643981,
+        "conditional_high": 0.07166146381433341,
+        "candidate_only": true
+      },
+      "3-0|BOUNDARY|NFB": {
+        "state": "3-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.11669828097440046,
+        "n": 129,
+        "games": 124,
+        "conditional_low": -0.5185071981310216,
+        "conditional_high": 0.28511063618222066,
+        "candidate_only": true
+      },
+      "3-0|INNER|FB": {
+        "state": "3-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.1181312998995855,
+        "n": 3366,
+        "games": 2021,
+        "conditional_low": -0.039573059651749856,
+        "conditional_high": 0.27583565945092087,
+        "candidate_only": true
+      },
+      "3-0|INNER|NFB": {
+        "state": "3-0|INNER|NFB",
+        "p1": 0,
+        "delta": -0.17178163582516623,
+        "n": 174,
+        "games": 168,
+        "conditional_low": -0.5315960927654468,
+        "conditional_high": 0.1880328211151144,
+        "candidate_only": true
+      },
+      "3-0|OUT|FB": {
+        "state": "3-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.2693640906164781,
+        "n": 1931,
+        "games": 1409,
+        "conditional_low": -0.360949710407844,
+        "conditional_high": -0.17777847082511217,
+        "candidate_only": true
+      },
+      "3-0|OUT|NFB": {
+        "state": "3-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.28765533107642566,
+        "n": 167,
+        "games": 159,
+        "conditional_low": -0.6338458916891343,
+        "conditional_high": 0.05853522953628293,
+        "candidate_only": true
+      },
+      "3-1|BOUNDARY|FB": {
+        "state": "3-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.09609636411800498,
+        "n": 4117,
+        "games": 2333,
+        "conditional_low": -0.15861362690226993,
+        "conditional_high": -0.03357910133374002,
+        "candidate_only": true
+      },
+      "3-1|BOUNDARY|NFB": {
+        "state": "3-1|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.024810430381823928,
+        "n": 1170,
+        "games": 951,
+        "conditional_low": -0.1439263467561493,
+        "conditional_high": 0.09430548599250142,
+        "candidate_only": true
+      },
+      "3-1|INNER|FB": {
+        "state": "3-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.08016192026377657,
+        "n": 6047,
+        "games": 2733,
+        "conditional_low": 0.0037891110547992185,
+        "conditional_high": 0.15653472947275393,
+        "candidate_only": true
+      },
+      "3-1|INNER|NFB": {
+        "state": "3-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.07086423530333003,
+        "n": 1482,
+        "games": 1155,
+        "conditional_low": -0.04993665249712481,
+        "conditional_high": 0.19166512310378486,
+        "candidate_only": true
+      },
+      "3-1|OUT|FB": {
+        "state": "3-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.3224095569348495,
+        "n": 4740,
+        "games": 2431,
+        "conditional_low": -0.38258789887126876,
+        "conditional_high": -0.2622312149984303,
+        "candidate_only": true
+      },
+      "3-1|OUT|NFB": {
+        "state": "3-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.30343980204169335,
+        "n": 1792,
+        "games": 1330,
+        "conditional_low": -0.40113786240252847,
+        "conditional_high": -0.20574174168085824,
+        "candidate_only": true
+      },
+      "3-2|BOUNDARY|FB": {
+        "state": "3-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.12665464789078382,
+        "n": 8212,
+        "games": 2900,
+        "conditional_low": 0.07886478379574971,
+        "conditional_high": 0.17444451198581792,
+        "candidate_only": true
+      },
+      "3-2|BOUNDARY|NFB": {
+        "state": "3-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.10620934554187947,
+        "n": 4395,
+        "games": 2278,
+        "conditional_low": 0.03202926906763502,
+        "conditional_high": 0.1803894220161239,
+        "candidate_only": true
+      },
+      "3-2|INNER|FB": {
+        "state": "3-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.2598729654635323,
+        "n": 10344,
+        "games": 3030,
+        "conditional_low": 0.2191881730720132,
+        "conditional_high": 0.30055775785505134,
+        "candidate_only": true
+      },
+      "3-2|INNER|NFB": {
+        "state": "3-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.2542139475802582,
+        "n": 4750,
+        "games": 2369,
+        "conditional_low": 0.18635978473425885,
+        "conditional_high": 0.3220681104262576,
+        "candidate_only": true
+      },
+      "3-2|OUT|FB": {
+        "state": "3-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.41953803691119373,
+        "n": 9844,
+        "games": 3031,
+        "conditional_low": -0.4510427810558772,
+        "conditional_high": -0.3880332927665103,
+        "candidate_only": true
+      },
+      "3-2|OUT|NFB": {
+        "state": "3-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.5053138186240802,
+        "n": 7834,
+        "games": 2893,
+        "conditional_low": -0.5322478769827029,
+        "conditional_high": -0.4783797602654575,
+        "candidate_only": true
+      }
+    },
+    "fallback_p1": 0.5,
+    "conservative_change": false,
+    "reason": "Identification and full-learning uncertainty gates not satisfied; retain observed mechanism everywhere"
+  },
+  {
+    "key": "swing_cell",
+    "states": {
+      "0-0|BOUNDARY|FB": {
+        "state": "0-0|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.009869980514574939,
+        "n": 38938,
+        "games": 3240,
+        "conditional_low": -0.014105386674132542,
+        "conditional_high": 0.033845347703282416,
+        "candidate_only": true
+      },
+      "0-0|BOUNDARY|NFB": {
+        "state": "0-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.010680294219248659,
+        "n": 23104,
+        "games": 3234,
+        "conditional_low": -0.041483435288764636,
+        "conditional_high": 0.02012284685026732,
+        "candidate_only": true
+      },
+      "0-0|INNER|FB": {
+        "state": "0-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.06047759333771038,
+        "n": 49444,
+        "games": 3240,
+        "conditional_low": 0.04077037220680579,
+        "conditional_high": 0.08018481446861497,
+        "candidate_only": true
+      },
+      "0-0|INNER|NFB": {
+        "state": "0-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.06941478725064973,
+        "n": 27054,
+        "games": 3238,
+        "conditional_low": 0.04198296739364414,
+        "conditional_high": 0.09684660710765532,
+        "candidate_only": true
+      },
+      "0-0|OUT|FB": {
+        "state": "0-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.08912248242748598,
+        "n": 48551,
+        "games": 3240,
+        "conditional_low": -0.11485373127904742,
+        "conditional_high": -0.06339123357592454,
+        "candidate_only": true
+      },
+      "0-0|OUT|NFB": {
+        "state": "0-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.07379705206079468,
+        "n": 38831,
+        "games": 3240,
+        "conditional_low": -0.10371382554743283,
+        "conditional_high": -0.04388027857415652,
+        "candidate_only": true
+      },
+      "0-1|BOUNDARY|FB": {
+        "state": "0-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.00785999603628517,
+        "n": 15843,
+        "games": 3215,
+        "conditional_low": -0.042113954801823165,
+        "conditional_high": 0.026393962729252825,
+        "candidate_only": true
+      },
+      "0-1|BOUNDARY|NFB": {
+        "state": "0-1|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.008100862017713633,
+        "n": 12988,
+        "games": 3160,
+        "conditional_low": -0.03336397666705734,
+        "conditional_high": 0.0495657007024846,
+        "candidate_only": true
+      },
+      "0-1|INNER|FB": {
+        "state": "0-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.07031367202229973,
+        "n": 17714,
+        "games": 3223,
+        "conditional_low": 0.02747053081419947,
+        "conditional_high": 0.11315681323039997,
+        "candidate_only": true
+      },
+      "0-1|INNER|NFB": {
+        "state": "0-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.073289615060038,
+        "n": 12732,
+        "games": 3169,
+        "conditional_low": 0.018999336662938508,
+        "conditional_high": 0.1275798934571375,
+        "candidate_only": true
+      },
+      "0-1|OUT|FB": {
+        "state": "0-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.07878442376775109,
+        "n": 26115,
+        "games": 3240,
+        "conditional_low": -0.10618124965065269,
+        "conditional_high": -0.05138759788484949,
+        "candidate_only": true
+      },
+      "0-1|OUT|NFB": {
+        "state": "0-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.08627971389031285,
+        "n": 32727,
+        "games": 3239,
+        "conditional_low": -0.11298591175856237,
+        "conditional_high": -0.05957351602206331,
+        "candidate_only": true
+      },
+      "0-2|BOUNDARY|FB": {
+        "state": "0-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.10543181196813285,
+        "n": 6251,
+        "games": 2685,
+        "conditional_low": 0.05803147498846501,
+        "conditional_high": 0.1528321489478007,
+        "candidate_only": true
+      },
+      "0-2|BOUNDARY|NFB": {
+        "state": "0-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.10255340259279927,
+        "n": 5662,
+        "games": 2614,
+        "conditional_low": 0.042808223046065706,
+        "conditional_high": 0.16229858213953283,
+        "candidate_only": true
+      },
+      "0-2|INNER|FB": {
+        "state": "0-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.23760259599675157,
+        "n": 5558,
+        "games": 2594,
+        "conditional_low": 0.20018529018593817,
+        "conditional_high": 0.27501990180756497,
+        "candidate_only": true
+      },
+      "0-2|INNER|NFB": {
+        "state": "0-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.19374763386488206,
+        "n": 4213,
+        "games": 2275,
+        "conditional_low": 0.14687782320302076,
+        "conditional_high": 0.24061744452674336,
+        "candidate_only": true
+      },
+      "0-2|OUT|FB": {
+        "state": "0-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.07300909391267128,
+        "n": 14630,
+        "games": 3187,
+        "conditional_low": -0.10321923758986339,
+        "conditional_high": -0.04279895023547918,
+        "candidate_only": true
+      },
+      "0-2|OUT|NFB": {
+        "state": "0-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.12292190547790816,
+        "n": 24243,
+        "games": 3239,
+        "conditional_low": -0.14187328455182963,
+        "conditional_high": -0.10397052640398668,
+        "candidate_only": true
+      },
+      "1-0|BOUNDARY|FB": {
+        "state": "1-0|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.005200215317545851,
+        "n": 14756,
+        "games": 3190,
+        "conditional_low": -0.029818957219920596,
+        "conditional_high": 0.0402193878550123,
+        "candidate_only": true
+      },
+      "1-0|BOUNDARY|NFB": {
+        "state": "1-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.03373690808820365,
+        "n": 9006,
+        "games": 3006,
+        "conditional_low": -0.07773287561371803,
+        "conditional_high": 0.010259059437310723,
+        "candidate_only": true
+      },
+      "1-0|INNER|FB": {
+        "state": "1-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.05480561757455717,
+        "n": 18934,
+        "games": 3225,
+        "conditional_low": 0.017780467404618742,
+        "conditional_high": 0.09183076774449558,
+        "candidate_only": true
+      },
+      "1-0|INNER|NFB": {
+        "state": "1-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.049956095233394504,
+        "n": 10399,
+        "games": 3080,
+        "conditional_low": 0.003932428105743395,
+        "conditional_high": 0.0959797623610456,
+        "candidate_only": true
+      },
+      "1-0|OUT|FB": {
+        "state": "1-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.11743083750023553,
+        "n": 18367,
+        "games": 3229,
+        "conditional_low": -0.15831579669511303,
+        "conditional_high": -0.07654587830535803,
+        "candidate_only": true
+      },
+      "1-0|OUT|NFB": {
+        "state": "1-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.13205933099169082,
+        "n": 15830,
+        "games": 3205,
+        "conditional_low": -0.17633493314804902,
+        "conditional_high": -0.08778372883533261,
+        "candidate_only": true
+      },
+      "1-1|BOUNDARY|FB": {
+        "state": "1-1|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.0031987756965202066,
+        "n": 12629,
+        "games": 3167,
+        "conditional_low": -0.036795465747748994,
+        "conditional_high": 0.0431930171407894,
+        "candidate_only": true
+      },
+      "1-1|BOUNDARY|NFB": {
+        "state": "1-1|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.0057734492196164595,
+        "n": 10966,
+        "games": 3143,
+        "conditional_low": -0.04079595228501227,
+        "conditional_high": 0.05234285072424518,
+        "candidate_only": true
+      },
+      "1-1|INNER|FB": {
+        "state": "1-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.07199833838337982,
+        "n": 15418,
+        "games": 3202,
+        "conditional_low": 0.02304655452156666,
+        "conditional_high": 0.12095012224519298,
+        "candidate_only": true
+      },
+      "1-1|INNER|NFB": {
+        "state": "1-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.09793505799657723,
+        "n": 11426,
+        "games": 3127,
+        "conditional_low": 0.04246746361296833,
+        "conditional_high": 0.15340265238018613,
+        "candidate_only": true
+      },
+      "1-1|OUT|FB": {
+        "state": "1-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.11026867568626823,
+        "n": 18696,
+        "games": 3232,
+        "conditional_low": -0.14434960427859772,
+        "conditional_high": -0.07618774709393876,
+        "candidate_only": true
+      },
+      "1-1|OUT|NFB": {
+        "state": "1-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.1239503899481266,
+        "n": 22909,
+        "games": 3234,
+        "conditional_low": -0.15455206911919322,
+        "conditional_high": -0.09334871077705997,
+        "candidate_only": true
+      },
+      "1-2|BOUNDARY|FB": {
+        "state": "1-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.12909591575570578,
+        "n": 9995,
+        "games": 3068,
+        "conditional_low": 0.08643261020849877,
+        "conditional_high": 0.1717592213029128,
+        "candidate_only": true
+      },
+      "1-2|BOUNDARY|NFB": {
+        "state": "1-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.1115489786037642,
+        "n": 9500,
+        "games": 3046,
+        "conditional_low": 0.0664774816337147,
+        "conditional_high": 0.1566204755738137,
+        "candidate_only": true
+      },
+      "1-2|INNER|FB": {
+        "state": "1-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.22932985816878942,
+        "n": 9527,
+        "games": 3028,
+        "conditional_low": 0.19927061931340517,
+        "conditional_high": 0.2593890970241737,
+        "candidate_only": true
+      },
+      "1-2|INNER|NFB": {
+        "state": "1-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.21068791152791436,
+        "n": 7103,
+        "games": 2815,
+        "conditional_low": 0.1752155639618856,
+        "conditional_high": 0.24616025909394312,
+        "candidate_only": true
+      },
+      "1-2|OUT|FB": {
+        "state": "1-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.1010060948470062,
+        "n": 19847,
+        "games": 3225,
+        "conditional_low": -0.12714620848328975,
+        "conditional_high": -0.07486598121072266,
+        "candidate_only": true
+      },
+      "1-2|OUT|NFB": {
+        "state": "1-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.15140365328544564,
+        "n": 32349,
+        "games": 3240,
+        "conditional_low": -0.16860182471667115,
+        "conditional_high": -0.13420548185422013,
+        "candidate_only": true
+      },
+      "2-0|BOUNDARY|FB": {
+        "state": "2-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.010086921489627459,
+        "n": 5843,
+        "games": 2678,
+        "conditional_low": -0.069631323838299,
+        "conditional_high": 0.049457480859044084,
+        "candidate_only": true
+      },
+      "2-0|BOUNDARY|NFB": {
+        "state": "2-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.034509174798673874,
+        "n": 2327,
+        "games": 1614,
+        "conditional_low": -0.12456359556567256,
+        "conditional_high": 0.05554524596832481,
+        "candidate_only": true
+      },
+      "2-0|INNER|FB": {
+        "state": "2-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.033116717285147125,
+        "n": 7981,
+        "games": 2935,
+        "conditional_low": -0.025392929075031344,
+        "conditional_high": 0.09162636364532559,
+        "candidate_only": true
+      },
+      "2-0|INNER|NFB": {
+        "state": "2-0|INNER|NFB",
+        "p1": 1,
+        "delta": 0.041029461444317426,
+        "n": 2766,
+        "games": 1778,
+        "conditional_low": -0.04543429959815922,
+        "conditional_high": 0.12749322248679407,
+        "candidate_only": true
+      },
+      "2-0|OUT|FB": {
+        "state": "2-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.19561893399477454,
+        "n": 6785,
+        "games": 2813,
+        "conditional_low": -0.26430947705918206,
+        "conditional_high": -0.12692839093036698,
+        "candidate_only": true
+      },
+      "2-0|OUT|NFB": {
+        "state": "2-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.14217074558186973,
+        "n": 3548,
+        "games": 2109,
+        "conditional_low": -0.24073820071039187,
+        "conditional_high": -0.04360329045334761,
+        "candidate_only": true
+      },
+      "2-1|BOUNDARY|FB": {
+        "state": "2-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.04410810965026701,
+        "n": 7715,
+        "games": 2911,
+        "conditional_low": -0.09760932111034437,
+        "conditional_high": 0.009393101809810345,
+        "candidate_only": true
+      },
+      "2-1|BOUNDARY|NFB": {
+        "state": "2-1|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.04557380799653374,
+        "n": 5096,
+        "games": 2524,
+        "conditional_low": -0.11311507246052219,
+        "conditional_high": 0.02196745646745471,
+        "candidate_only": true
+      },
+      "2-1|INNER|FB": {
+        "state": "2-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.09918003485808945,
+        "n": 10353,
+        "games": 3087,
+        "conditional_low": 0.040543428333685606,
+        "conditional_high": 0.1578166413824933,
+        "candidate_only": true
+      },
+      "2-1|INNER|NFB": {
+        "state": "2-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.06174402288597256,
+        "n": 5704,
+        "games": 2673,
+        "conditional_low": -0.015949903205517958,
+        "conditional_high": 0.1394379489774631,
+        "candidate_only": true
+      },
+      "2-1|OUT|FB": {
+        "state": "2-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.18148520900976028,
+        "n": 9804,
+        "games": 3034,
+        "conditional_low": -0.22921243844296119,
+        "conditional_high": -0.13375797957655938,
+        "candidate_only": true
+      },
+      "2-1|OUT|NFB": {
+        "state": "2-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.18947551901891332,
+        "n": 8768,
+        "games": 2984,
+        "conditional_low": -0.23980564926243803,
+        "conditional_high": -0.13914538877538862,
+        "candidate_only": true
+      },
+      "2-2|BOUNDARY|FB": {
+        "state": "2-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.10544248494737404,
+        "n": 9949,
+        "games": 3041,
+        "conditional_low": 0.061249143842635134,
+        "conditional_high": 0.14963582605211295,
+        "candidate_only": true
+      },
+      "2-2|BOUNDARY|NFB": {
+        "state": "2-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.10906906292262754,
+        "n": 8701,
+        "games": 2972,
+        "conditional_low": 0.056942987643003956,
+        "conditional_high": 0.16119513820225112,
+        "candidate_only": true
+      },
+      "2-2|INNER|FB": {
+        "state": "2-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.2317711052816008,
+        "n": 11198,
+        "games": 3099,
+        "conditional_low": 0.20200266800326094,
+        "conditional_high": 0.26153954255994066,
+        "candidate_only": true
+      },
+      "2-2|INNER|NFB": {
+        "state": "2-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.21810481493992137,
+        "n": 7440,
+        "games": 2845,
+        "conditional_low": 0.17914414070474532,
+        "conditional_high": 0.2570654891750974,
+        "candidate_only": true
+      },
+      "2-2|OUT|FB": {
+        "state": "2-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.1870505133681538,
+        "n": 15743,
+        "games": 3207,
+        "conditional_low": -0.21682100065208693,
+        "conditional_high": -0.15728002608422065,
+        "candidate_only": true
+      },
+      "2-2|OUT|NFB": {
+        "state": "2-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.23935508053120538,
+        "n": 22366,
+        "games": 3233,
+        "conditional_low": -0.26143373791561575,
+        "conditional_high": -0.21727642314679502,
+        "candidate_only": true
+      },
+      "3-0|BOUNDARY|FB": {
+        "state": "3-0|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.06972015921934757,
+        "n": 2319,
+        "games": 1617,
+        "conditional_low": -0.21148140369180837,
+        "conditional_high": 0.07204108525311323,
+        "candidate_only": true
+      },
+      "3-0|BOUNDARY|NFB": {
+        "state": "3-0|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.058434533455895506,
+        "n": 138,
+        "games": 130,
+        "conditional_low": -0.5913358429445242,
+        "conditional_high": 0.4744667760327332,
+        "candidate_only": true
+      },
+      "3-0|INNER|FB": {
+        "state": "3-0|INNER|FB",
+        "p1": 1,
+        "delta": 0.13507017697025142,
+        "n": 3346,
+        "games": 2049,
+        "conditional_low": -0.01463212297893074,
+        "conditional_high": 0.2847724769194336,
+        "candidate_only": true
+      },
+      "3-0|INNER|NFB": {
+        "state": "3-0|INNER|NFB",
+        "p1": 0,
+        "delta": -0.009116441501639492,
+        "n": 174,
+        "games": 166,
+        "conditional_low": -0.48351627795946345,
+        "conditional_high": 0.4652833949561845,
+        "candidate_only": true
+      },
+      "3-0|OUT|FB": {
+        "state": "3-0|OUT|FB",
+        "p1": 0,
+        "delta": -0.288964400634094,
+        "n": 2046,
+        "games": 1495,
+        "conditional_low": -0.376316433141798,
+        "conditional_high": -0.20161236812639,
+        "candidate_only": true
+      },
+      "3-0|OUT|NFB": {
+        "state": "3-0|OUT|NFB",
+        "p1": 0,
+        "delta": -0.2918720798138055,
+        "n": 183,
+        "games": 173,
+        "conditional_low": -0.6354997950039486,
+        "conditional_high": 0.05175563537633765,
+        "candidate_only": true
+      },
+      "3-1|BOUNDARY|FB": {
+        "state": "3-1|BOUNDARY|FB",
+        "p1": 0,
+        "delta": -0.09743519248048092,
+        "n": 4187,
+        "games": 2341,
+        "conditional_low": -0.1598201823905535,
+        "conditional_high": -0.03505020257040834,
+        "candidate_only": true
+      },
+      "3-1|BOUNDARY|NFB": {
+        "state": "3-1|BOUNDARY|NFB",
+        "p1": 0,
+        "delta": -0.05501277341168528,
+        "n": 1203,
+        "games": 989,
+        "conditional_low": -0.1717895534731365,
+        "conditional_high": 0.06176400664976595,
+        "candidate_only": true
+      },
+      "3-1|INNER|FB": {
+        "state": "3-1|INNER|FB",
+        "p1": 1,
+        "delta": 0.060160164833097676,
+        "n": 6060,
+        "games": 2713,
+        "conditional_low": -0.018140182335283583,
+        "conditional_high": 0.13846051200147894,
+        "candidate_only": true
+      },
+      "3-1|INNER|NFB": {
+        "state": "3-1|INNER|NFB",
+        "p1": 1,
+        "delta": 0.06620492690111275,
+        "n": 1484,
+        "games": 1156,
+        "conditional_low": -0.05131012762380356,
+        "conditional_high": 0.18371998142602908,
+        "candidate_only": true
+      },
+      "3-1|OUT|FB": {
+        "state": "3-1|OUT|FB",
+        "p1": 0,
+        "delta": -0.3128587817502754,
+        "n": 4829,
+        "games": 2461,
+        "conditional_low": -0.3733427045520917,
+        "conditional_high": -0.2523748589484592,
+        "candidate_only": true
+      },
+      "3-1|OUT|NFB": {
+        "state": "3-1|OUT|NFB",
+        "p1": 0,
+        "delta": -0.2842872672455738,
+        "n": 1792,
+        "games": 1324,
+        "conditional_low": -0.3784819857678754,
+        "conditional_high": -0.19009254872327222,
+        "candidate_only": true
+      },
+      "3-2|BOUNDARY|FB": {
+        "state": "3-2|BOUNDARY|FB",
+        "p1": 1,
+        "delta": 0.12143197191259297,
+        "n": 8087,
+        "games": 2886,
+        "conditional_low": 0.07228927882334842,
+        "conditional_high": 0.17057466500183754,
+        "candidate_only": true
+      },
+      "3-2|BOUNDARY|NFB": {
+        "state": "3-2|BOUNDARY|NFB",
+        "p1": 1,
+        "delta": 0.10638411786879691,
+        "n": 4428,
+        "games": 2307,
+        "conditional_low": 0.03544554949213807,
+        "conditional_high": 0.17732268624545575,
+        "candidate_only": true
+      },
+      "3-2|INNER|FB": {
+        "state": "3-2|INNER|FB",
+        "p1": 1,
+        "delta": 0.26267176808801124,
+        "n": 10577,
+        "games": 3030,
+        "conditional_low": 0.2223862031817037,
+        "conditional_high": 0.30295733299431876,
+        "candidate_only": true
+      },
+      "3-2|INNER|NFB": {
+        "state": "3-2|INNER|NFB",
+        "p1": 1,
+        "delta": 0.27160604862989135,
+        "n": 4798,
+        "games": 2384,
+        "conditional_low": 0.20443969575562762,
+        "conditional_high": 0.3387724015041551,
+        "candidate_only": true
+      },
+      "3-2|OUT|FB": {
+        "state": "3-2|OUT|FB",
+        "p1": 0,
+        "delta": -0.4356713094084361,
+        "n": 9747,
+        "games": 3033,
+        "conditional_low": -0.4664225624903775,
+        "conditional_high": -0.40492005632649475,
+        "candidate_only": true
+      },
+      "3-2|OUT|NFB": {
+        "state": "3-2|OUT|NFB",
+        "p1": 0,
+        "delta": -0.4888983967802447,
+        "n": 7865,
+        "games": 2876,
+        "conditional_low": -0.5165313264172646,
+        "conditional_high": -0.4612654671432248,
+        "candidate_only": true
+      }
+    },
+    "fallback_p1": 0.5,
+    "conservative_change": false,
+    "reason": "Identification and full-learning uncertainty gates not satisfied; retain observed mechanism everywhere"
+  }
+]

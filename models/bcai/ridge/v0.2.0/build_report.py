@@ -1,0 +1,159 @@
+"""Read completed results and create reviewable prose/tables; no training or external evaluation."""
+from pathlib import Path
+import json,sys
+import pandas as pd
+ROOT=Path(__file__).resolve().parents[4];A=ROOT/'columns/001-ball-count/analysis';M=Path(__file__).resolve().parent
+DEV='bcai_ridge__mlb_2024_2025__20260908__r02';E23='bcai_ridge__mlb_2023__20260908__r01';E26='bcai_ridge__mlb_2026_ytd_20260907__20260909__r01'
+def read(run,name):return pd.read_csv(A/'runs'/run/'artifacts'/name)
+def js(run):return json.loads((A/'runs'/run/'manifest.json').read_text(encoding='utf-8'))
+def table(d,precision=5):
+    def f(x):return f'{x:.{precision}f}' if isinstance(x,float) else str(x)
+    return '| '+' | '.join(d.columns)+' |\n| '+' | '.join(['---']*len(d.columns))+' |\n'+'\n'.join('| '+' | '.join(f(v) for v in row)+' |' for row in d.itertuples(index=False,name=None))
+dev=js(DEV);ex23=js(E23);ex26=js(E26)
+assert all(x['status']=='COMPLETE' for x in [dev,ex23,ex26]),'Do not report incomplete runs as complete'
+fits=read(DEV,'all_fit_diagnostics.csv');comp=read(DEV,'legacy_comparison.csv');sel=read(DEV,'alpha_selection.csv');grid=read(DEV,'final_cv_alpha_summary.csv');outer=read(DEV,'outer_scores.csv')
+perf=pd.DataFrame([dict(role=role,**x['metrics']) for role,x in [('개발 중첩 OOF',dev),('2023 외부 재현',ex23),('2026 외부 시간 순방향',ex26)]])
+extables=[]
+for run,label in [(E23,'2023'),(E26,'2026')]:
+    t=read(run,'reproduction.csv');t.insert(0,'season',label);extables.append(t)
+ext=pd.concat(extables,ignore_index=True)
+merged=comp[['count','index','adjusted_index_alpha100','J']].rename(columns={'index':'개발 OBS','adjusted_index_alpha100':'기존 Ridge α100','J':'새 Ridge OOF'})
+for run,label in [(E23,'2023'),(E26,'2026')]:
+    tt=read(run,'reproduction.csv')[['count','I','J']].rename(columns={'I':label+' OBS','J':label+' Ridge'});merged=merged.merge(tt,on='count')
+text=f'''# Ridge 두 번째 모델 설계·검증 보고서
+
+개발·2023 평가 2026-09-08, 2026 누락 보충·평가 및 보고 완료 2026-09-09 · Baseline 001-ball-count. 모델 **BCAI-RIDGE-v0.2.0**, 상태 **EXPERIMENTAL**. 실제 수치 수렴은 검증했으며 외부 두 스냅샷을 평가했지만, 높은 예측력·인과성 인증을 뜻하지 않는다. 주 모델은 BCAI-OBS-v1.0.0으로 유지한다.
+
+## 1. 변경 이유와 역할
+
+v0.1은 15개 적합 모두150회 한도에 도달했다. 기존 α별 수치는 아래와 같으며 원 결과를 수정하지 않았다.
+
+{table(read(DEV,'legacy_alpha_scores.csv'))}
+
+v0.2는 타자·투수·구장을 시즌과 분리한 공통 범주 효과로 바꿨다. 시즌, 좌우 조합, 타석 시작 점수 차, 주자 상태, 아웃, 이닝을 추가 블록으로 유지한다. 시즌별 선수 ID가 외부에서 전부 미관측이 되는 문제를 줄였다. 위치·추가 상호작용은 사용하지 않았다. 표본이 적은 효과는 같은 ridge 벌점에서 더 강하게 축소된다.
+
+미관측 선수·구장·시즌은 그 블록의 **훈련 PA 빈도로 중심화한 평균 효과0**을 사용하고 표시한다. 다른 관측 블록 효과는 유지한다. 신규 선수라고 전체 예측을 일괄 상수로 바꾸지 않는다.
+
+추정 대상인 카운트별 중심화 잔차 진단 J를 유지하고 변수·보정 절차를 변경했으므로 Minor0.2.0이다. OBS와 Ridge v0.1.0의 모델 정의·실행·원본·기존 정제본은 변경하지 않았다.
+
+## 2. 목적함수·변수·기준점
+
+훈련 fold의 시즌 평균 V_train,y를 사용해 zᵢ=Wᵢ/V_train,y로 정규화한다. **Σᵢ(zᵢ−a−Σⱼβⱼ[Xᵢⱼ])²+αΣβ²**를 최소화하며 절편은 벌점을 주지 않는다. 전체 수준 one-hot을 훈련 빈도로 중심화하면 절편을 분리한 같은 ridge 목적함수를 얻는다. 새 solver는 중심화 Gram에 Jacobi 전처리 공액경사를 적용한다.
+
+카운트는 예측 변수로 넣지 않는다. 모형이 설명하려는 값은 카운트 도달 전의 기본 공격가치다. PA 처음의 선수·상황을 사용하고 마지막 정상 결과를 연결한다. 최종 결과가 결측·truncated·고의볼넷·타격방해·미분류이거나0-0이 관측되지 않으면 제외한다. 반복 파울은 PA×카운트에서 한 번만 집계한다. 희생번트 포함, 실책·야수선택 OTHER는 별도이면서 가중치0이다.
+
+주 관찰 I(c)=100ΣqᵧV_eval,yc/V_eval,y0. 새 진단 J(c)=100+100Σqᵧ[mean((W−예측W)/V_eval,y|c,y)−mean((W−예측W)/V_eval,y|0-0,y)]. 개발 보고의 J에는 중첩 OOF 예측을 사용한다. 외부에는 개발 전체 최종 적합 예측을 사용한다.
+
+평가 시즌의 V_eval은 예측을 끝낸 뒤 상대 지수를 표현하는 데만 쓰며 계수·α 학습에 사용하지 않는다. 외부 미관측 시즌의 예측W 척도는 개발 전체 평균 **{ex23['baseline']['training_fixed']:.8f}**로 고정했다. 외부의 주 MSE와 상수 기준도 이 고정 척도를 사용한다. 평가 시즌 평균을 알고 만든 최적 상수와 비교한 미래 예측 결과가 아니다. 원 가중치 단위 MSE도 병기한다. 개발 fold에서는 각 훈련 시즌 평균을 사용하므로 기존 v0.1의 전체 자료 정규화 누출을 줄였다.
+
+시즌 가중치: 2024·2025는 기존 OBS와 동일, 2023은 해당 시즌 값을 사전에 고정, 2026은2025값 고정. [FanGraphs 시즌 상수](https://www.fangraphs.com/tools/guts?type=cn). 2026 위치 정의 변경 때문에 plate_x/plate_z는 제외했다. [Statcast 공식 설명](https://baseballsavant.mlb.com/csv-docs). 수치와 정확한 포함 규칙은 모델 specification.yaml 및 각 manifest를 따른다.
+
+## 3. α 탐색과 중첩 교차검증
+
+외부 fold5개는 평가용, 각 훈련 부분의 내부 fold3개는 선택용이다. 모두 경기 단위로 분리한다. 최종 α는 개발 전체의 별도5fold CV에서 선택한다. 같은 선수는 fold 간 공유될 수 있다. 경기 일반화 평가이며 신규 선수 완전 분리·시간 분할 평가가 아니다. fold 사전·기준 평균은 훈련 부분에서만 구한다.
+
+초기 로그 후보1~3000에10000·30000을 사전 확장 후보로 함께 검사했다. 각 내부 fold의 PA MSE를 평균하고 최소값을 택한다. 동률이면 큰 α를 택한다. outer 평가 결과는 α 선택에 쓰지 않는다.
+
+최종 개발5fold 탐색:
+
+{table(grid)}
+
+각 선택 단계:
+
+{table(sel)}
+
+최종 α는 **300**, 다섯 outer의 선택도 모두300이다. 최저 MSE는 범위 안쪽이라 추가 범위 확장이 필요하지 않았다. **1-SE 비교는30000**을 택한다. fold간 MSE 변동으로 SE가 넓어 강한 축소도 허용된다는 뜻이다.30000이 1-SE 비교의 탐색 상한이므로 그 값을 무한히 확장한 최종1-SE해라고 주장하지 않는다.1-SE는 실제 채택 규칙이 아니며,300의 유일성·정밀한 최적성을 입증하지 않는다. 겹치는 훈련집단의 fold SE는 선택 휴리스틱이지 독립 표본 신뢰구간이 아니다.
+
+outer fold 결과:
+
+{table(outer)}
+
+fold 평균 MSE와 전체 OOF PA 가중 MSE는 표본 수 가중 때문에 조금 다르다. 비교용1-SE를 실제 선택으로 바꾸거나 외부 결과에 맞춰α를 수정하지 않았다.
+
+## 4. 엄격한 수렴과 재현
+
+개발 r02의 **207개 적합 전부** 실제 최대 예측 변화<1e-7을 충족했다. 상대 목적함수 변화<1e-12와 상대 정규방정식 잔차<1e-10도 요구했다. 허용 최대5000회, 실제 최초 수렴 {int(fits.first_convergence_iteration.min())}~{int(fits.first_convergence_iteration.max())}회, 추가10회 포함 {int(fits.iterations.min())}~{int(fits.iterations.max())}회였다.
+
+마지막 최대 예측 변화의 전체 최댓값은 **{fits.max_last_change.max():.3g}**. 목적함수 비정상 증가(상대1e-9 초과)는 {int(fits.abnormal_increases.sum())}건. 공액경사 방향 반전은 일부 적합에서 있었지만 목적함수와 사후 안정성으로 발산 여부를 별도 판단했다. 모든 적합의 시작/종료 목적함수·반복수·마지막 변화·추가 반복 이동은 `all_fit_diagnostics.csv`, 매 반복 기록은 `diagnostics/`의 각 CSV에 있다.
+
+최종 적합은61회에서 조건을 충족하고10회 더 계산해71회에 종료했다. 다른 초기값은67+10회. 초기값 간 예측 차이는 약7.75e-15. 독립적인 SciPy 양의 정부호 직접해와 예측 최대 차이는 {fits.independent_cholesky_prediction_maxdiff.max():.3g}였다. 동일 목적함수의 해 일치를 검사한 것이며 기존 v0.1의 변수를 그대로 둔 통제된 성능 비교는 아니다.
+
+별도 수치 재현 r03은 고정된 최종 계수를 정확히 재현했고 실제 시즌 가중 J의 카운트별 반복 궤적을 기록했다. 수렴 후 최대 지수 변화는1.61151e-11포인트. 개발 전체 로그의 카운트 최대 변화 모니터는 pooled 훈련 카운트 평균이며, r03의 `count_indices_by_iteration.csv`는 보고용 시즌 가중 J를 직접 확인한다. 내부 fold별 모든12개 지수 궤적을 별도 장표로 저장한 것은 아니다.
+
+개발 r01은 예측 호출 인자 누락으로 실패했으며 FAILED manifest로 보존했다. 외부 자료를 보기 전에 수정하여 새 r02를 실행했다. 이후 모델·선택 절차는 변경하지 않았다. r03은 관측 도구를 붙인 동일 solver 검증이며 재튜닝이 아니다.
+
+## 5. 개발·외부 개별 PA 성능
+
+{table(perf)}
+
+개발 상수 대비 상대 개선은 약 **{dev['metrics']['improvement_pct']:.3f}%**다. W 척도의 오차 감소도 작은 편이며 완성도 높은 예측 모델이라고 부를 근거는 아니다. 기존α100 약0.28%와 새약0.43%의 차이는 변수·α·fold·정규화·solver가 함께 달라진 결과다. 이 차이를 어느 한 변경의 인과적 효과로 귀속하지 않는다.
+
+## 6. 2023 외부 재현 검증
+
+마지막 포함 경기일 **{ex23['data_period']['last']}**, 완료 **{ex23['sample']['games']:,}경기**, 원본 {ex23['sample']['rows']:,}행, 유효 **{ex23['sample']['eligible_PA']:,} PA**. 개발보다 과거 시즌이므로 미래 예측이 아닌 외부 재현 검증이다. 개발에 없는 은퇴 선수 등도 미관측으로 처리한다.
+
+상수 대비 MSE 개선 **{ex23['metrics']['improvement_pct']:.4f}%**, 최저 J **{ex23['reproduction']['minimum_J']}**, 최고 **{ex23['reproduction']['maximum_J']}**. 개발 J와 같은 방향은 {ex23['reproduction']['same_direction_count']}/12, 명목 구간 일치는 {ex23['reproduction']['same_nominal_band_count']}/12, 순위 Spearman {ex23['reproduction']['rank_spearman']:.4f}. 선수·경기 환경 차이와 미관측 구성은 설명 후보이며 그 원인을 식별하는 분석은 아니다.
+
+## 7. 2026 외부 시간 순방향 검증
+
+고정 스냅샷의 마지막 포함 경기일 **{ex26['data_period']['last']}**, 완료 **{ex26['sample']['games']:,}경기**, 원본 {ex26['sample']['rows']:,}행, 유효 **{ex26['sample']['eligible_PA']:,} PA**. 정규시즌 진행 중이며 해당 날짜 뒤 경기는 포함하지 않았다. 고정2025 가중치를 쓰고2026 결과로 선수 효과·α를 재학습하지 않았다.
+
+2026-09-08 첫 확보에서는 공식 완료 경기 중9월7일11경기의 Statcast가 없어 평가 전 중단했다(evaluation_passes=0, FAILED).2026-09-09 누락 경기만 별도 원본 파일로 보충하고 같은 종료일·일정·모델·평가 함수로 새 실행 ID에서 최초1회 평가했다. 기존 원본과 실패 manifest는 보존했다. 이는 모델 수정이나 외부 재튜닝이 아닌 입력 완전성 복구이며, 수집 전용 어댑터의 출처는 새 실행 manifest_extension.json에 기록했다.
+
+상수 대비 MSE 개선 **{ex26['metrics']['improvement_pct']:.4f}%**, 최저 J **{ex26['reproduction']['minimum_J']}**, 최고 **{ex26['reproduction']['maximum_J']}**. 개발 J와 같은 방향은 {ex26['reproduction']['same_direction_count']}/12, 명목 구간 일치는 {ex26['reproduction']['same_nominal_band_count']}/12, 순위 Spearman {ex26['reproduction']['rank_spearman']:.4f}.2026 최종 시즌 검증과 최종 가중치 민감도는 미실시이며 별도 실행을 사용해야 한다.
+
+## 8. OBS·기존 Ridge·새 Ridge 지수
+
+{table(merged,2)}
+
+개발 OBS는 기존 결과를 재집계 확인했고 원 결과는 유지했다. 외부 OBS 열은 OBS-v1.0.0의 **관찰 공식에 해당 스냅샷 가중치를 적용한 비교값**이며 별도의 OBS 확정 등급/부트스트랩 검증 실행을 수행했다는 뜻은 아니다. 특히2026은2025 고정 가중치 조건부 값이다.
+
+주 지수와 개발 새 J의 최대 이동은 {comp['shift'].abs().max():.3f}포인트. 수치적 반복 안정성이 높더라도 선수 선택 편향이 제거됐음을 뜻하지 않는다. 외부와 개발의 다른 순위·명목 구간은 아래 표에서 그대로 공개한다.
+
+{table(ext[['season','count','J','shift','J_rank','development_J_rank','same_J_direction','J_nominal_band','development_J_nominal_band','same_nominal_band']],2)}
+
+위 명목 구간은85/95/105/115 경계의 점추정 요약이다. OBS의 동시 CI 기반 확정 등급을 Ridge에 전용하지 않았다. 카운트별 반복 수치 안정성, 시즌 간 패턴 재현, 통계적 불확실성은 서로 다르다. 모형 전체 재적합 CI는 이번에 산출하지 않았다.
+
+## 9. 미관측 범주·선수별 성능
+
+'''
+for run,label in [(E23,'2023'),(E26,'2026')]:
+    sub=read(run,'unseen_performance.csv');text+=f'### {label}\n\n'+table(sub)+'\n\n'
+text+='''각 feature별 known/unseen 분할은 서로 중복된다. players_combined는 투타 모두 관측된 PA와 하나 이상 미관측인 PA를 나눈다. unseen은2026 신규 데뷔와 동의어가 아니라2024·2025 훈련에서 보지 못했다는 뜻이다.2023의 경우 이후 개발 기간에 나오지 않은 선수도 포함한다. 그룹마다 결과 분포가 달라 MSE 자체만으로 집단 간 모델 우열을 비교하지 않고 각 집단의 상수 대비 차이를 함께 읽는다.
+
+## 10. 선택 편향과 남은 한계
+
+- 도달 카운트는 이전 투구·타자 행동·선수 특성의 결과다. 잔차화가 모든 선택 편향을 제거하거나 카운트의 순수 인과효과를 식별하지 않는다.
+- 모형은 가산 범주 효과이며 컨디션, 심판, 포수, 구종·위치·경로, 역할별 차이 등을 충분히 설명하지 못한다. 낮은 MSE 개선과 안정적인 카운트 J가 동시에 가능하다.
+- 외부 평가에서 계산한 시즌 평균은 사후 지수의 기준으로만 사용하지만 실제 예측 서비스가 실시간으로 그 값을 알고 있다는 뜻은 아니다. 미관측 시즌의 예측 수준은 개발 평균으로 고정해 시즌 득점 환경 변화에 취약하다.
+- 개발 내부 CV에는 같은 선수 공유와 연속 경기 의존성이 있다.2023과2026 두 외부 시즌의 결과만으로 모든 미래 시즌·리그 일반화를 보증하지 않는다.
+- 1-SE 비교의 넓은 허용범위는α 선택의 미세한 우열을 과장하지 말아야 함을 보여준다. Ridge 재적합 CI와 표본 변동까지 포함한 계수/지수 안정성은 별도의 과제다.
+- 외부 결과를 보고 원인에 맞춰 변수를 바꾸는 작업은 이번 모델의 검증이 아니라 새 버전 개발이다. 기존 외부 표본을 다시 쓰면 더 이상 처음 보는 검증 표본이라고 부를 수 없다.
+
+## 11. 파일과 재현
+
+모델 정의는 `models/bcai/ridge/v0.2.0/`, 실행은 `columns/001-ball-count/analysis/runs/`에 분리했다. `external_protocol_seal.json`은 외부 확보 전에 구조·명세·개발/평가 코드 해시를 기록했다. 개발 r02의 `freeze.json`과 `frozen_model.json`은 최종α·계수를 고정한다. 실제 입력/출력 SHA256·기간·환경·실행 역할은 각 manifest가 기준이다.
+
+- 개발 실패: `bcai_ridge__mlb_2024_2025__20260908__r01`
+- 개발 완료: `bcai_ridge__mlb_2024_2025__20260908__r02`
+- 고정 수치 진단: `bcai_ridge__mlb_2024_2025__20260908__r03`
+- 외부 재현: `bcai_ridge__mlb_2023__20260908__r01`
+- 외부 확보 실패·평가0회: `bcai_ridge__mlb_2026_ytd_20260907__20260908__r01`
+- 외부 시간 순방향 완료: `bcai_ridge__mlb_2026_ytd_20260907__20260909__r01`
+
+Python3.12.14, numpy2.3.5, pandas3.0.1, SciPy1.17.1. 이 환경에서는 SciPy를 analysis/runtime_ridge_v02에 별도로 설치했다. pandas·numpy·SciPy의 공개 버전을 사용하며 `requirements.txt`를 참조한다. 아래 NEW_RUN_ID는 실제 날짜의 미사용 ID로 대체한다. 기존 완료 실행을 덮어쓰지 않으며 외부 반복 평가는 명시적인 새 검증 목적 없이 실행하지 않는다.
+
+```powershell
+$pythonExe = 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
+& $pythonExe models/bcai/ridge/v0.2.0/ridge_v02.py --develop NEW_DEVELOPMENT_RUN_ID
+& $pythonExe models/bcai/ridge/v0.2.0/external_validation.py --year 2023 --development-run NEW_DEVELOPMENT_RUN_ID --run-id NEW_EXTERNAL_RUN_ID
+& $pythonExe models/bcai/ridge/v0.2.0/external_validation.py --year 2026 --development-run NEW_DEVELOPMENT_RUN_ID --run-id NEW_FORWARD_RUN_ID
+& $pythonExe tools/check_ridge_v02.py
+```
+
+외부 실행기는 같은 고정 스냅샷 원본이 있으면 재다운로드하지 않는다. 데이터 기간을 바꾼 검증은 현재 cutoff 설정을 조용히 수정하는 대신 새 계획·실행을 만든다. 위 코드 재실행이 이번 두 외부 결과를 새 독립 검증으로 바꾸지는 않는다.
+
+기존 OBS/Ridge 정의·실행·원본·정제본 해시, 모델 봉인·실행 manifest·내부 링크·결과 수치를 별도 검사한다. 검증 결과는 모델 폴더 `structure_validation.json`에 저장한다. Google Drive/Docs와 KBO 자료는 변경하지 않았다.
+'''
+(A/'ridge_v02_validation_report.md').write_text(text,encoding='utf-8')
+print(perf.to_string(index=False));print(merged.to_string(index=False))

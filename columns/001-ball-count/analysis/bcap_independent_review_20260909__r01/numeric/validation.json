@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-09-09T09:15:29.457864+00:00",
+  "finished_at_utc": "2026-09-09T09:16:43.537257+00:00",
+  "execution_class": "restore_AIPW_OPE_from_saved_Y_A_nuisance",
+  "comparisons": 48845813,
+  "failed_checks": 0,
+  "max_absolute_error": 1.7462298274040222e-10,
+  "max_relative_error": 1.3248685182494087e-11,
+  "runs": [
+    {
+      "run": "bcap_pitch__mlb_2024_2025__20260909__r02",
+      "stage": "main",
+      "n": 1415566,
+      "support": 1395402,
+      "grades": {
+        "UNCERTAIN": 13
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 1395402,
+        "value": 0.2995489396089443,
+        "CI95_low": 0.29757052154805086,
+        "CI95_high": 0.30152735766983774,
+        "gain": 0.0009858962304768709,
+        "gain_low": -0.0006866028443572474,
+        "gain_high": 0.002658395305310989,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_swing__mlb_2024_2025__20260909__r01",
+      "stage": "main",
+      "n": 1416043,
+      "support": 1354516,
+      "grades": {
+        "UNCERTAIN": 81,
+        "NO_SUPPORT": 24
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 1354516,
+        "value": 0.32484942851353643,
+        "CI95_low": 0.3228825560331909,
+        "CI95_high": 0.326816300993882,
+        "gain": 0.02557220255238128,
+        "gain_low": 0.024173448308255945,
+        "gain_high": 0.02697095679650661,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_pitch__mlb_2023__20260909__r01",
+      "stage": "main",
+      "n": 716113,
+      "support": 697633,
+      "grades": {
+        "UNCERTAIN": 13
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 697633,
+        "value": 0.3042181484584028,
+        "CI95_low": 0.3013826138876646,
+        "CI95_high": 0.307053683029141,
+        "gain": 0.001412152860485522,
+        "gain_low": -0.0009053296936199569,
+        "gain_high": 0.003729635414591001,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_pitch__mlb_2023__20260909__r01",
+      "stage": "fixed_prediction_diagnostics",
+      "n": 716113,
+      "support": 635421,
+      "grades": {
+        "UNCERTAIN": 13
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 635421,
+        "value": 0.30103256618207774,
+        "CI95_low": 0.29807449550645565,
+        "CI95_high": 0.30399063685769984,
+        "gain": 0.0017592694670430817,
+        "gain_low": -0.000653510467850095,
+        "gain_high": 0.004172049401936258,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_swing__mlb_2023__20260909__r01",
+      "stage": "main",
+      "n": 716385,
+      "support": 682953,
+      "grades": {
+        "UNCERTAIN": 79,
+        "NO_SUPPORT": 18
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 682953,
+        "value": 0.331607753407053,
+        "CI95_low": 0.3287614369270991,
+        "CI95_high": 0.33445406988700693,
+        "gain": 0.0264107647416544,
+        "gain_low": 0.024380833197348357,
+        "gain_high": 0.028440696285960444,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_swing__mlb_2023__20260909__r01",
+      "stage": "fixed_prediction_diagnostics",
+      "n": 716385,
+      "support": 630906,
+      "grades": {
+        "UNCERTAIN": 79,
+        "NO_SUPPORT": 18
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 630906,
+        "value": 0.3338923722858394,
+        "CI95_low": 0.3309580378719727,
+        "CI95_high": 0.3368267066997061,
+        "gain": 0.026326413173071425,
+        "gain_low": 0.024224608109157587,
+        "gain_high": 0.028428218236985263,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "stage": "main",
+      "n": 635095,
+      "support": 615820,
+      "grades": {
+        "UNCERTAIN": 13
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 615820,
+        "value": 0.3001180988614152,
+        "CI95_low": 0.29715256526732,
+        "CI95_high": 0.30308363245551045,
+        "gain": 0.0019201249702238462,
+        "gain_low": -0.0004560835024326566,
+        "gain_high": 0.004296333442880349,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    },
+    {
+      "run": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "stage": "fixed_prediction_diagnostics",
+      "n": 635095,
+      "support": 561233,
+      "grades": {
+        "UNCERTAIN": 13
+      },
+      "overall_learned": {
+        "level": "overall",
+        "state": "ALL",
+        "policy": "learned",
+        "n": 561233,
+        "value": 0.30080070478529547,
+        "CI95_low": 0.2976638791382322,
+        "CI95_high": 0.3039375304323587,
+        "gain": 0.0017560497177362346,
+        "gain_low": -0.0007271149587423269,
+        "gain_high": 0.004239214394214796,
+        "unit": "W per selected current decision; not summed PA value",
+        "conditional": true
+      }
+    }
+  ],
+  "scope": "Saved predictions, independent factual-residual OPE, training-file policy application, game/individual-player clustered intervals, diagnostics. No producer statistical functions, fit recreation or refitting. Measurement/repertoire raw reconstruction checked separately.",
+  "undefined": "Empty-support values remain NaN; exact key and shape matching; NaNs compared only within matched groups. Conditional intervals are not full fitted-policy intervals."
+}

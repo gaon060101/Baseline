@@ -1,0 +1,11 @@
+{
+  "passed": [
+    "independent PA aggregation matches index to 1e-9",
+    "event percentages total 100",
+    "all actual pitch counts match existing processed files",
+    "baseline anchored at 100",
+    "CI containment",
+    "all input SHA256 unchanged since analysis manifest"
+  ],
+  "max_exclusion_sensitivity_shift": 2.502363066386124
+}

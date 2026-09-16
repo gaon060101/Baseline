@@ -1,0 +1,94 @@
+{
+  "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+  "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+  "recorded_access_events": [
+    {
+      "at_utc": "2026-09-14T03:07:14.812519+00:00",
+      "year": 2023,
+      "event": "first_reused_external_input_row_load_for_V2_preparation",
+      "purpose": "Post-seal labels and key/W checks; no action-value estimation or fitting",
+      "source": {
+        "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_pitch__mlb_2023__20260909__r01.pkl",
+        "sha256": "f9bd3b64802ab98c68e5042b808a2602c486ea5227e6862b61c29070cde709ef",
+        "bytes": 199643609
+      },
+      "plan": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+        "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+        "bytes": 40247
+      },
+      "seal": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan_seal.json",
+        "sha256": "c367b76c1feab3beff3b26923cc719d9585dcf5ffcca4f1e00ad05633e0abcc0",
+        "bytes": 6578
+      },
+      "prior_exposure": "Existing BCAI/Ridge and BCAP V1 input; not a never-seen dataset."
+    },
+    {
+      "first_current_task_model_row_access_utc": "2026-09-14T03:10:46.900093+00:00",
+      "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+      "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+      "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+    },
+    {
+      "first_current_task_model_row_access_utc": "2026-09-14T03:08:00.348849+00:00",
+      "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+      "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+      "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+    },
+    {
+      "first_current_task_model_row_access_utc": "2026-09-14T03:07:58.732555+00:00",
+      "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+      "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+      "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+    },
+    {
+      "first_current_task_model_row_access_utc": "2026-09-14T03:11:38.439783+00:00",
+      "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+      "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+      "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+    },
+    {
+      "at_utc": "2026-09-14T03:07:15.129885+00:00",
+      "year": 2026,
+      "event": "first_reused_external_input_row_load_for_V2_preparation",
+      "purpose": "Post-seal labels and key/W checks; no action-value estimation or fitting",
+      "source": {
+        "path": "columns/001-ball-count/data/processed/bcap_2026_v010_bcap_pitch__mlb_2026_ytd_20260907__20260909__r01.pkl",
+        "sha256": "6640fea427cdda6fd059df5bd38794f878cd6d935d55f01b0533ba0576f044f3",
+        "bytes": 177028363
+      },
+      "plan": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+        "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+        "bytes": 40247
+      },
+      "seal": {
+        "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan_seal.json",
+        "sha256": "c367b76c1feab3beff3b26923cc719d9585dcf5ffcca4f1e00ad05633e0abcc0",
+        "bytes": 6578
+      },
+      "prior_exposure": "Existing BCAI/Ridge and BCAP V1 input; not a never-seen dataset."
+    },
+    {
+      "first_current_task_model_row_access_utc": "2026-09-14T03:13:26.819473+00:00",
+      "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+      "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+      "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+    },
+    {
+      "first_current_task_model_row_access_utc": "2026-09-14T03:14:20.086738+00:00",
+      "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+      "prior_exposure": "2023/2026 already used in BCAI/Ridge and BCAP V1. Latest development/light-review/metadata and historical summaries read before plan. No new V2 external contrasts viewed. Not virgin test sets or independent external preregistration.",
+      "question": "external pattern replication via fixed algorithm, not frozen predictor test"
+    }
+  ],
+  "first_primary_root_read": {
+    "access_at_utc": "2026-09-14T03:11:14.580349+00:00",
+    "actor": "root",
+    "file": "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2023__20260914__r01\\artifacts\\values.csv",
+    "event": "first root read of newly computed V2 external SB aggregate; after plan seal"
+  },
+  "primary_independent_read_at_utc": "2026-09-14T03:10:46.831827+00:00",
+  "note": "Preparation and per-model row access recorded before use. Model manifests bound later aggregate computation by completion; no results-driven changes to sealed code/plan."
+}

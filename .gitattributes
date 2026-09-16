@@ -1,0 +1,2 @@
+# Preserve bytes used by historical input/code/output SHA256 manifests.
+* -text

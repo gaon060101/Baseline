@@ -1,0 +1,370 @@
+{
+  "status": "complete",
+  "retrieved_at": "2026-09-06T03:41:20.767128+00:00",
+  "rows": 712528,
+  "games": 2430,
+  "plate_appearances": 183362,
+  "duplicate_pitch_keys": 0,
+  "counts": {
+    "1-2": 69697,
+    "0-2": 47922,
+    "0-1": 92281,
+    "0-0": 183362,
+    "3-2": 35842,
+    "2-2": 59473,
+    "2-1": 36688,
+    "2-0": 23726,
+    "1-0": 69457,
+    "1-1": 71439,
+    "3-1": 14965,
+    "3-0": 7676
+  },
+  "missing_schedule_games": [],
+  "extra_games": [],
+  "bytes": 487812969,
+  "schedule_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-01-01&endDate=2025-12-31&gameTypes=R",
+  "files": [
+    {
+      "file": "statcast_2025-03-18_2025-03-30.csv",
+      "start": "2025-03-18",
+      "end": "2025-03-30",
+      "rows": 15487,
+      "bytes": 10555079,
+      "url": "https://baseballsavant.mlb.com/statcast_search",
+      "sha256": "ab4f8391c6ae8f6f1cb9079482f5b4303c9363d949a2a7a29df5a7b1dbd10798"
+    },
+    {
+      "file": "statcast_2025-03-31_2025-04-04.csv",
+      "start": "2025-03-31",
+      "end": "2025-04-04",
+      "rows": 18134,
+      "bytes": 12394809,
+      "url": "https://baseballsavant.mlb.com/statcast_search",
+      "sha256": "d321e3fcc62a6a3c88033ff1580a169f19589610d616b3a7b45be134bd6e98d6"
+    },
+    {
+      "file": "statcast_2025-04-05_2025-04-09.csv",
+      "start": "2025-04-05",
+      "end": "2025-04-09",
+      "rows": 20549,
+      "bytes": 14048086,
+      "url": "https://baseballsavant.mlb.com/statcast_search",
+      "sha256": "896292b51c1e709637c67b6a5af5cdad4dcc5f05c54dbd259a3e199c5b0c19e3"
+    },
+    {
+      "file": "statcast_2025-04-10_2025-04-14.csv",
+      "start": "2025-04-10",
+      "end": "2025-04-14",
+      "rows": 17337,
+      "bytes": 11850789,
+      "url": "https://baseballsavant.mlb.com/statcast_search",
+      "sha256": "9f1b13705607a69f840645b4f7668a804e0f820361314183a02428a74e696744"
+    },
+    {
+      "file": "statcast_2025-04-25_2025-04-29.csv",
+      "start": "2025-04-25",
+      "end": "2025-04-29",
+      "rows": 19837,
+      "bytes": 13582159,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-04-25&game_date_lt=2025-04-29&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "502f768f032e4cbc296f4c89cf3501da7bd8b94282f6a790df0046a0bef950fe"
+    },
+    {
+      "file": "statcast_2025-04-15_2025-04-19.csv",
+      "start": "2025-04-15",
+      "end": "2025-04-19",
+      "rows": 20280,
+      "bytes": 13880269,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-04-15&game_date_lt=2025-04-19&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "35142b64b7e98c001f440eb7ecfd1b08b68f7628d405808c485a0c26777386c8"
+    },
+    {
+      "file": "statcast_2025-04-20_2025-04-24.csv",
+      "start": "2025-04-20",
+      "end": "2025-04-24",
+      "rows": 18348,
+      "bytes": 12552896,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-04-20&game_date_lt=2025-04-24&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "2803939ac2ac28915049381bb9fbd8626269831c4d57b545db3fa443fbe369f7"
+    },
+    {
+      "file": "statcast_2025-04-30_2025-05-04.csv",
+      "start": "2025-04-30",
+      "end": "2025-05-04",
+      "rows": 20708,
+      "bytes": 14203639,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-04-30&game_date_lt=2025-05-04&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "d693d196d5309501caaf3fed1b36a2f10235d5c3512c35a2642442fbc98b2c16"
+    },
+    {
+      "file": "statcast_2025-05-05_2025-05-09.csv",
+      "start": "2025-05-05",
+      "end": "2025-05-09",
+      "rows": 18663,
+      "bytes": 12778792,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-05-05&game_date_lt=2025-05-09&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "e35b82f6a7f58540b8f6acae34b1c12a5a9a08626aec3f5d4dfedc7c4a2b0234"
+    },
+    {
+      "file": "statcast_2025-05-10_2025-05-14.csv",
+      "start": "2025-05-10",
+      "end": "2025-05-14",
+      "rows": 20720,
+      "bytes": 14185279,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-05-10&game_date_lt=2025-05-14&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "3eb934a4658c7dec46dbf76329302da16ef19b82cbdd63a33c9c3dd3b1ec51f5"
+    },
+    {
+      "file": "statcast_2025-05-15_2025-05-19.csv",
+      "start": "2025-05-15",
+      "end": "2025-05-19",
+      "rows": 18286,
+      "bytes": 12533317,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-05-15&game_date_lt=2025-05-19&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "7d0aeea823cbc7ab6085e64060be948671b7a9f9b7ef5eec907c9345e84ea871"
+    },
+    {
+      "file": "statcast_2025-05-25_2025-05-29.csv",
+      "start": "2025-05-25",
+      "end": "2025-05-29",
+      "rows": 17730,
+      "bytes": 12150586,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-05-25&game_date_lt=2025-05-29&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "9a47e039cb95bf55efed94b172ff4124c90018b273c3de9d5b5c9e9576eb7143"
+    },
+    {
+      "file": "statcast_2025-05-20_2025-05-24.csv",
+      "start": "2025-05-20",
+      "end": "2025-05-24",
+      "rows": 19905,
+      "bytes": 13630423,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-05-20&game_date_lt=2025-05-24&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "913f18906b1ee028a992448a0ef162e71fbb8703c3bdd01910096425a8eb3cd2"
+    },
+    {
+      "file": "statcast_2025-05-30_2025-06-03.csv",
+      "start": "2025-05-30",
+      "end": "2025-06-03",
+      "rows": 19518,
+      "bytes": 13368274,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-05-30&game_date_lt=2025-06-03&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "3e4153b1212aad07b0df2f92b7bd675ce36a126008234d31009fd2afdc7ce7cd"
+    },
+    {
+      "file": "statcast_2025-06-09_2025-06-13.csv",
+      "start": "2025-06-09",
+      "end": "2025-06-13",
+      "rows": 18259,
+      "bytes": 12534683,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-06-09&game_date_lt=2025-06-13&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "dbb60727a99b86a1a4044b581497c7dc8fba518058d1d243c4789a67dc5b6927"
+    },
+    {
+      "file": "statcast_2025-06-04_2025-06-08.csv",
+      "start": "2025-06-04",
+      "end": "2025-06-08",
+      "rows": 20712,
+      "bytes": 14207735,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-06-04&game_date_lt=2025-06-08&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "2286ac0a0ebd2fb86381f4e8c29f4196c08c475b246c94a2acfe400812cabd13"
+    },
+    {
+      "file": "statcast_2025-06-14_2025-06-18.csv",
+      "start": "2025-06-14",
+      "end": "2025-06-18",
+      "rows": 18405,
+      "bytes": 12607790,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-06-14&game_date_lt=2025-06-18&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "a5187d61648e39a8167839b49be99c8b178254fae1c7532a48829f4e97a7cc98"
+    },
+    {
+      "file": "statcast_2025-06-19_2025-06-23.csv",
+      "start": "2025-06-19",
+      "end": "2025-06-23",
+      "rows": 20728,
+      "bytes": 14211080,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-06-19&game_date_lt=2025-06-23&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "3d8e9dc5d81d68ab592b011ecc418841bf2978be3807d7cd776a95dffc1facc4"
+    },
+    {
+      "file": "statcast_2025-06-24_2025-06-28.csv",
+      "start": "2025-06-24",
+      "end": "2025-06-28",
+      "rows": 20163,
+      "bytes": 13812188,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-06-24&game_date_lt=2025-06-28&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "2dcec11ef917c1343a0495ea371324d7498a95884a7e5065d9fe6db8931855ce"
+    },
+    {
+      "file": "statcast_2025-07-04_2025-07-08.csv",
+      "start": "2025-07-04",
+      "end": "2025-07-08",
+      "rows": 20360,
+      "bytes": 13944084,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-07-04&game_date_lt=2025-07-08&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "25cbe1b5a1ba4062c583e92831c9dc9646d74fc784182a3652c0fffa5fc942cc"
+    },
+    {
+      "file": "statcast_2025-06-29_2025-07-03.csv",
+      "start": "2025-06-29",
+      "end": "2025-07-03",
+      "rows": 18520,
+      "bytes": 12620679,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-06-29&game_date_lt=2025-07-03&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "1b130d0770dc3be47ae9a68308d13db6cb6c2af2f4c8bdad5d5e39bfa5189822"
+    },
+    {
+      "file": "statcast_2025-07-09_2025-07-13.csv",
+      "start": "2025-07-09",
+      "end": "2025-07-13",
+      "rows": 20367,
+      "bytes": 13964240,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-07-09&game_date_lt=2025-07-13&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "b5a38a93c0c604eea5a63b70781efb48cc853c2ec4a56914a3567d442e53bbbc"
+    },
+    {
+      "file": "statcast_2025-07-14_2025-07-18.csv",
+      "start": "2025-07-14",
+      "end": "2025-07-18",
+      "rows": 4287,
+      "bytes": 2936495,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-07-14&game_date_lt=2025-07-18&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "fc7d65d76a24d080523ea4edc729d645120d12f07dd0e1fb16b8ee0893e9b792"
+    },
+    {
+      "file": "statcast_2025-07-24_2025-07-28.csv",
+      "start": "2025-07-24",
+      "end": "2025-07-28",
+      "rows": 19114,
+      "bytes": 13104972,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-07-24&game_date_lt=2025-07-28&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "063bc72fa7e5756bd5f2859c1c70cfd03d90445ec2c766acdfa833b5c5f027de"
+    },
+    {
+      "file": "statcast_2025-07-19_2025-07-23.csv",
+      "start": "2025-07-19",
+      "end": "2025-07-23",
+      "rows": 21496,
+      "bytes": 14755486,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-07-19&game_date_lt=2025-07-23&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "04113b4da155deba83536b0c56487413789e7dad26cd0530d6b83a574cd39f0d"
+    },
+    {
+      "file": "statcast_2025-07-29_2025-08-02.csv",
+      "start": "2025-07-29",
+      "end": "2025-08-02",
+      "rows": 18800,
+      "bytes": 12889640,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-07-29&game_date_lt=2025-08-02&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "ab1d191488fa0b61ced12e88adae603f458a4fa7e2ba8e5e2f4546639c6204ee"
+    },
+    {
+      "file": "statcast_2025-08-03_2025-08-07.csv",
+      "start": "2025-08-03",
+      "end": "2025-08-07",
+      "rows": 18147,
+      "bytes": 12438187,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-08-03&game_date_lt=2025-08-07&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "fc4cb3b486d2f9e82bffdbc651719dc8b6d447621bdd69bf97ad0a0987200d70"
+    },
+    {
+      "file": "statcast_2025-08-08_2025-08-12.csv",
+      "start": "2025-08-08",
+      "end": "2025-08-12",
+      "rows": 21173,
+      "bytes": 14496178,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-08-08&game_date_lt=2025-08-12&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "318dcb2f7c454c86286458891ec8356388d71799aa23b57f10c260c98cc53611"
+    },
+    {
+      "file": "statcast_2025-08-13_2025-08-17.csv",
+      "start": "2025-08-13",
+      "end": "2025-08-17",
+      "rows": 19896,
+      "bytes": 13565079,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-08-13&game_date_lt=2025-08-17&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "cc944946ba547f96a70bf46894f09c355314fb0c077e1bbd1c400dff5ba13619"
+    },
+    {
+      "file": "statcast_2025-08-18_2025-08-22.csv",
+      "start": "2025-08-18",
+      "end": "2025-08-22",
+      "rows": 19535,
+      "bytes": 13385292,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-08-18&game_date_lt=2025-08-22&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "27e253e7e33911ef53417ac7ad32fc9d3b3706cab5854d231ed5f764c74a96b2"
+    },
+    {
+      "file": "statcast_2025-08-28_2025-09-01.csv",
+      "start": "2025-08-28",
+      "end": "2025-09-01",
+      "rows": 19777,
+      "bytes": 13567319,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-08-28&game_date_lt=2025-09-01&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "e4e1bef2b285f6c3cdbbbbd52fe40f3b63a3058743888c268b16be3ea3df874a"
+    },
+    {
+      "file": "statcast_2025-08-23_2025-08-27.csv",
+      "start": "2025-08-23",
+      "end": "2025-08-27",
+      "rows": 20942,
+      "bytes": 14340419,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-08-23&game_date_lt=2025-08-27&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "992109aee1094eb8a86864c298921377f120f36b1d619de952ebc869e1864d0c"
+    },
+    {
+      "file": "statcast_2025-09-02_2025-09-06.csv",
+      "start": "2025-09-02",
+      "end": "2025-09-06",
+      "rows": 19284,
+      "bytes": 13208284,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-09-02&game_date_lt=2025-09-06&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "d4b9e096697d9b9520cb4f5d76d442e204af8d08b6a708db3e2e0919350ba7f1"
+    },
+    {
+      "file": "statcast_2025-09-07_2025-09-11.csv",
+      "start": "2025-09-07",
+      "end": "2025-09-11",
+      "rows": 19126,
+      "bytes": 13086067,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-09-07&game_date_lt=2025-09-11&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "dd92c8a6ce5c561800f8a686b97851574409ab162918200a30d80a1370742ba4"
+    },
+    {
+      "file": "statcast_2025-09-12_2025-09-16.csv",
+      "start": "2025-09-12",
+      "end": "2025-09-16",
+      "rows": 20841,
+      "bytes": 14267562,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-09-12&game_date_lt=2025-09-16&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "1859e4c6d20a50dc613ee8a3870ccd0e1797ec70fd9441018fb30d4bfc88f783"
+    },
+    {
+      "file": "statcast_2025-09-17_2025-09-21.csv",
+      "start": "2025-09-17",
+      "end": "2025-09-21",
+      "rows": 20820,
+      "bytes": 14216076,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-09-17&game_date_lt=2025-09-21&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "46a0097431ee9a647263d710ef7587a3465e58c20ffc839219458a63e5ed1bd0"
+    },
+    {
+      "file": "statcast_2025-09-27_2025-09-28.csv",
+      "start": "2025-09-27",
+      "end": "2025-09-28",
+      "rows": 8760,
+      "bytes": 5970413,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-09-27&game_date_lt=2025-09-28&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "6744c8b94c3804cfa5f0ac270eaeb2499b5980fdf61d887e86ab4fcc5bb62a7a"
+    },
+    {
+      "file": "statcast_2025-09-22_2025-09-26.csv",
+      "start": "2025-09-22",
+      "end": "2025-09-26",
+      "rows": 17514,
+      "bytes": 11968624,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2025%7C&player_type=pitcher&game_date_gt=2025-09-22&game_date_lt=2025-09-26&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc",
+      "sha256": "f31d8b2ac153ee5e19e30af64c3734426250a648c10ca1ae18499d040afc8827"
+    }
+  ]
+}

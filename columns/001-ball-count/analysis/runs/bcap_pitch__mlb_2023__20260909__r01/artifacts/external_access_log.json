@@ -1,0 +1,11 @@
+{
+  "first_current_task_BCAP_external_row_access_utc": "2026-09-09T06:14:39.518503+00:00",
+  "year": 2023,
+  "prior_exposure": "BCAI/Ridge used this snapshot previously",
+  "action": "load existing raw, construct Y and action, evaluate fixed policy; no external policy learning",
+  "seal": {
+    "path": "models/bcap/external_seal_20260909_r01.json",
+    "sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+    "bytes": 24585
+  }
+}

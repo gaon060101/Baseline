@@ -1,0 +1,17 @@
+﻿run_id,game_year,action,support,measurement_support,repertoire,propensity_in_bounds,exclusion_reason,rows
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,0.0,False,True,False,False,entity_arm_training,27
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,0.0,False,True,False,True,entity_arm_training,4332
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,0.0,False,True,True,False,propensity_tail,2
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,0.0,True,True,True,True,supported,308008
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,1.0,False,True,False,False,entity_arm_training,67
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,1.0,False,True,False,True,entity_arm_training,6479
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,1.0,False,True,True,False,propensity_tail,456
+bcap_pitch__mlb_2024_2025__20260909__r02,2024,1.0,True,True,True,True,supported,388068
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,0.0,False,True,False,False,entity_arm_training,43
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,0.0,False,True,False,True,entity_arm_training,4212
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,0.0,False,True,True,False,propensity_tail,3
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,0.0,True,True,True,True,supported,314714
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,1.0,False,True,False,False,entity_arm_training,31
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,1.0,False,True,False,True,entity_arm_training,4139
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,1.0,False,True,True,False,propensity_tail,373
+bcap_pitch__mlb_2024_2025__20260909__r02,2025,1.0,True,True,True,True,supported,384612

@@ -1,0 +1,20 @@
+{
+  "declared_at_local": "2026-09-09T18:05:00+09:00",
+  "declaration_time_precision": "Minute-level approximate wall time before new numerical comparisons; command/file timestamps provide exact execution times",
+  "purpose": "New source-based independent review; existing PASS results are evidence under review, not adopted conclusions",
+  "write_boundary": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/ only",
+  "allowed_execution_classes": ["reaggregate_existing_summaries", "restore_AIPW_OPE_from_saved_Y_A_nuisance", "regenerate_predictions_from_existing_fit"],
+  "not_started": ["model_refitting", "new_external_model_evaluation", "SWING_2026_model_evaluation", "new_raw_data_collection"],
+  "tolerances_before_new_comparisons": {
+    "keys_labels_counts_folds": "Exact equality, zero unexpected missing values or mismatches",
+    "row_AIPW_OPE_and_group_values": {"absolute": 1e-10, "relative": 1e-9},
+    "standard_errors_and_confidence_limits": {"absolute": 1e-9, "relative": 1e-8},
+    "ESS_and_weight_sums": {"absolute": 1e-6, "relative": 1e-9},
+    "existing_fit_prediction_recreation": {"absolute": 1e-8, "relative": 1e-8},
+    "bootstrap_saved_aggregate_recreation": {"absolute": 1e-9, "relative": 1e-8},
+    "NaN": "Both sides undefined with matching documented empty-support or unavailable reason; never treat NaN as zero",
+    "CSV_rounding": "Machine CSV numeric tolerance above; human-formatted report values compared at their printed precision"
+  },
+  "status_vocabulary": ["PASS", "FAIL", "NOT_VERIFIABLE", "NOT_RUN"],
+  "interpretation": "Arithmetic agreement is separate from source lineage, fitted prediction accuracy, statistical validity and actionable causal identification. No conclusion or recommendation is predetermined."
+}

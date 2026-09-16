@@ -1,0 +1,216 @@
+{
+  "created_at_utc": "2026-09-09T05:37:32.191343+00:00",
+  "scope": "Handoff integrity and existing artifact summaries; not BCAP model seal, training, causal validation, or full raw-data rehash.",
+  "prompt_original_location": "C:/Users/백창현/.codex/attachments/1d087f12-54e9-4f25-8892-d703090d8a54/pasted-text.txt",
+  "summary": {
+    "runs": [
+      {
+        "run_id": "bcai_obs__mlb_2024_2025__20260907__r01",
+        "model_id": "BCAI-OBS-v1.0.0",
+        "status": "legacy_no_execution_status",
+        "model_status": "VALIDATED"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2023__20260908__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260907__r01",
+        "model_id": "BCAI-RIDGE-v0.1.0",
+        "status": "legacy_no_execution_status",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260908__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "FAILED",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260908__r02",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2024_2025__20260908__r03",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2026_ytd_20260907__20260908__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "FAILED",
+        "model_status": "EXPERIMENTAL"
+      },
+      {
+        "run_id": "bcai_ridge__mlb_2026_ytd_20260907__20260909__r01",
+        "model_id": "BCAI-RIDGE-v0.2.0",
+        "status": "COMPLETE",
+        "model_status": "EXPERIMENTAL"
+      }
+    ],
+    "bcap_run_count": 0,
+    "bcap_model_directory_exists": false,
+    "existing_ridge_fit_rows": 207,
+    "existing_ridge_all_converged": true,
+    "existing_obs_count_rows": 12,
+    "existing_obs_baseline_PA": 364124,
+    "bcap_statistical_checks": "NOT_RUN"
+  },
+  "files": [
+    {
+      "path": "columns/001-ball-count/analysis/analyze_count_advantage.py",
+      "bytes": 13240,
+      "sha256": "0660ef928611c708de11c472fff7a3191b49e180406a1b5bfecd64d611c46d2f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_request_original.txt",
+      "bytes": 20363,
+      "sha256": "fb8acc64881548f043f3aeae964905ab4db963fc037e617945dd3d8e636a6371"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/count_advantage_2024_2025.md",
+      "bytes": 33703,
+      "sha256": "19d0ea75ed3b35a633d1a5af9c692003b68d08ecc88fc940f4399a1700fa6e14"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "bytes": 29621,
+      "sha256": "d89b251feacf2f2874010301e719de97e1c38d11c8207061bfd9f8a66aeeca16"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/ridge_v02_validation_report.md",
+      "bytes": 23886,
+      "sha256": "2160fbca9abfab987c95f9a849b601c7eba0d227fb5593db9511a5d3c3889a46"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv",
+      "bytes": 5153,
+      "sha256": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_validation.json",
+      "bytes": 351,
+      "sha256": "2dde413107deac0d75cf2df20f0de35b249301237dacbd88802b6ff9e0ed9df1"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/manifest.json",
+      "bytes": 6847,
+      "sha256": "0c5860a4798e09deef4cce6fde8a3783e77e7bc841abaa7d5117187cdb323d00"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2023__20260908__r01/manifest.json",
+      "bytes": 25838,
+      "sha256": "05ecccb58a14fe9c22495f72b9943d3a30dd7924b291b720dff57f4944fc8b4e"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260907__r01/manifest.json",
+      "bytes": 9283,
+      "sha256": "78147be4de6afab15ddcbcde9269edd71704d5fcc0056b1ad04a5f5a76c4aa8e"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r01/manifest.json",
+      "bytes": 698,
+      "sha256": "bffe6b69a407b3b4a29d96446cd9ae3daa45727db33aa06117f9298306eec758"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/all_fit_diagnostics.csv",
+      "bytes": 42350,
+      "sha256": "efe2966c494ffbd10eab6f2ddd991081e8491c488934f29f7fe1de3a33b5d25e"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/manifest.json",
+      "bytes": 65665,
+      "sha256": "052147f2e79c8aa3c927785ab02987e5587779b23c67ae1f566b87e3ab690126"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r03/manifest.json",
+      "bytes": 4197,
+      "sha256": "a0143e4e36c43033bbc6510703bab2fd86a24fa575722a4487b39c8535bf8735"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2026_ytd_20260907__20260908__r01/manifest.json",
+      "bytes": 1707,
+      "sha256": "feb41156b87909c878696bc4f7cfb69976326cd03f8609c0b4bcf13b506e62ae"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+      "bytes": 24378,
+      "sha256": "4173ff2b3ae56573ba4eccf21f2cad19500da18f17c339decb56e9be92ec729e"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/verify_bcap_handoff.py",
+      "bytes": 4627,
+      "sha256": "e125694a1c80074124bc663ffbf58549238b2a03bfbb35f93b0e4a3670f79c0a"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/verify_count_advantage.py",
+      "bytes": 3596,
+      "sha256": "4ab901bd43c2dce2e7f1af31e0fa2ec7d79915c19078d0e63a0091c80d55070e"
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "bytes": 16726,
+      "sha256": "ae8df4f2c89133f6cded2ba901fac2549a79bdc1d4a36273a2408cc15d616e72"
+    },
+    {
+      "path": "guides/analysis.md",
+      "bytes": 4911,
+      "sha256": "8c5df596c61ab8b16a6cdae809ee71d0aa73f0f4de9da53782331d0c46256c87"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "bytes": 4980,
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7"
+    },
+    {
+      "path": "models/bcai/README.md",
+      "bytes": 4450,
+      "sha256": "a5376498941057814a1da64eca17c6badef6d0690a7d1312926e3438cd13c31f"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/development_plan.md",
+      "bytes": 4518,
+      "sha256": "1014e5f72709220dd56ab9422c7b1b386bf9fbe1d7f83a3d711970a146684627"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/external_validation.py",
+      "bytes": 9803,
+      "sha256": "82bacca8a77e34d1725fbae75b893ba6624ecd290317ff1a81bc66455268df5e"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/model_card.md",
+      "bytes": 4070,
+      "sha256": "124690d2a334e1ff4b8c4f24f4638e496d1a8cb8fa6dc96f3bce06047c37dcab"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/ridge_v02.py",
+      "bytes": 18378,
+      "sha256": "e8350ed9f721901f3e16e1455b4fde3e89eb9e2e6595484d77c9bbe01a534aed"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/specification.yaml",
+      "bytes": 3690,
+      "sha256": "a1bdf90156585d4e1208aae20e7f97d543a9989c8d93f47de94279f9d2d94f7f"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/structure_validation.json",
+      "bytes": 503,
+      "sha256": "5f5a14e4757ca57690e4a1466721c474c206d7a33bc8ea8a02791668102a2e6e"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/validation.md",
+      "bytes": 4522,
+      "sha256": "58751a0dcbedecafb35c28f1c6d8fd5a1851b4b303a8183bf566bbe468868e86"
+    },
+    {
+      "path": "models/registry.md",
+      "bytes": 4543,
+      "sha256": "2dcdc7abd16e8a76406bdf31657c57a298b3e63aee1aba04a43a1fb47c2d9826"
+    }
+  ]
+}

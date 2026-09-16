@@ -1,0 +1,585 @@
+{
+  "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+  "model_id": "BCAP-PITCH-v0.1.0",
+  "version": "0.1.0",
+  "model_status": "EXPERIMENTAL",
+  "status": "COMPLETE",
+  "role": "full_pipeline_game_bootstrap_stability",
+  "started_at_utc": "2026-09-09T06:03:40.112980+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "executable": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "blas_threads": "2"
+  },
+  "configuration": {
+    "model_id": "BCAP-PITCH-v0.1.0",
+    "version": "0.1.0",
+    "status_at_definition": "DRAFT",
+    "variant": "pitch",
+    "format": "JSON-compatible YAML 1.2, consumed directly by run.py",
+    "estimand": "Selected observed decision-row distribution; replace current action once and let future natural mechanisms continue at changed states. Associational standardized/AIPW diagnostic without identified causal recommendation.",
+    "result": "Raw season-weighted final PA W from OBS, not normalized BCAI, no added transition reward",
+    "weights": {
+      "2023": {
+        "BB": 0.696,
+        "HBP": 0.726,
+        "1B": 0.883,
+        "2B": 1.244,
+        "3B": 1.569,
+        "HR": 2.004
+      },
+      "2024": {
+        "BB": 0.689,
+        "HBP": 0.72,
+        "1B": 0.882,
+        "2B": 1.254,
+        "3B": 1.59,
+        "HR": 2.05
+      },
+      "2025": {
+        "BB": 0.691,
+        "HBP": 0.722,
+        "1B": 0.882,
+        "2B": 1.252,
+        "3B": 1.584,
+        "HR": 2.037
+      },
+      "2026": "2025 fixed"
+    },
+    "pa_exclusions": [
+      "missing_final",
+      "intentional_walk",
+      "catcher_interference",
+      "truncated",
+      "unknown_event",
+      "no_observed_0_0"
+    ],
+    "selection": "Completed PA and final-event eligibility depend on future results, not pretreatment eligibility. Physical-record exclusions and measurement support also condition target. No general causal treatment effect claim.",
+    "actions": {
+      "FB": [
+        "FF",
+        "SI",
+        "FC"
+      ],
+      "NFB": [
+        "SL",
+        "CH",
+        "ST",
+        "CU",
+        "FS",
+        "KC",
+        "SV",
+        "FA",
+        "EP",
+        "KN",
+        "FO",
+        "CS",
+        "SC"
+      ],
+      "Swing": [
+        "swinging_strike",
+        "swinging_strike_blocked",
+        "foul",
+        "foul_tip",
+        "hit_into_play",
+        "foul_bunt",
+        "missed_bunt",
+        "bunt_foul_tip"
+      ],
+      "Take": [
+        "ball",
+        "blocked_ball",
+        "called_strike",
+        "hit_by_pitch"
+      ]
+    },
+    "action0": "NFB",
+    "action1": "FB",
+    "excluded_records": [
+      "automatic_ball",
+      "automatic_strike",
+      "PO",
+      "pitchout",
+      "swinging_pitchout",
+      "foul_pitchout",
+      "unclassified relevant action label"
+    ],
+    "features": [
+      "pitcher",
+      "batter",
+      "game_year",
+      "venue",
+      "matchup",
+      "count",
+      "base_state",
+      "outs_when_up",
+      "inning_bin",
+      "score_bin",
+      "pitch_number_bin",
+      "prev_pitch_type",
+      "prev_description",
+      "prev_release_speed_bin"
+    ],
+    "policy_key": "count",
+    "policy_X_Z": "X contains current actual pitcher/batter and nuisance context; Z is count (pitch) or count|zone|FB-NFB (swing). No fictitious all-zero average-player row.",
+    "feature_lineage": {
+      "base": "current prepitch count/context and same-PA strictly lagged pitch code/description/speed; current description only labels",
+      "speed_bins": "floor(mph/5), missing explicit category",
+      "movement_bins": "floor(feet/.5)",
+      "x_bins": "floor(feet/.35)",
+      "relative_z_bins": "floor(((plate_z-sz_bot)/(sz_top-sz_bot))/.2)",
+      "zone": "INNER abs(x)<=17/24-.15 and normalized z in [.1,.9]; OUT abs(x)>17/24+.15 or z<-.1 or z>1.1; remaining BOUNDARY; invalid/missing MISSING"
+    },
+    "post_measurement": "SWING current ball characteristics are hindsight proxies for perception. Nonpositive zone height and missing current ball measurements have no policy support. 2026 SWING withheld due no bridge.",
+    "forbidden_pitch": [
+      "current pitch_type",
+      "current release_speed",
+      "current or lag plate_x/z/zone",
+      "current description",
+      "current A_swing",
+      "current pitch outcome"
+    ],
+    "forbidden_both": [
+      "current description as predictor",
+      "events",
+      "final_event",
+      "result",
+      "Y",
+      "launch_speed",
+      "launch_angle",
+      "des",
+      "inplay_bunt_text_flag"
+    ],
+    "unknown_categories": "Training-only observed string dictionaries; each unknown centered categorical block contributes zero; unseen IDs never provide repertoire support by imputation",
+    "nuisance": "Action-specific ridge outcome T learner (both player IDs per arm). Binary ridge propensity score, Platt-calibrated on separate training games; clipping final e to numerical epsilon only.",
+    "ridge_objective": "sum(y-ybar-(X-Xbar)beta)^2 + alpha sum(beta^2); intercept unpenalized, all category slopes penalized; T learner uses action-specific training means",
+    "solver": {
+      "method": "Jacobi-PCG centered sparse Gram",
+      "rtol": 1e-09,
+      "atol": 1e-11,
+      "maxiter": 3000,
+      "relative_gradient_limit": 1e-07
+    },
+    "alphas": [
+      100,
+      1000
+    ],
+    "tuning": "5way train-game partition: fold0 calibration; fold1 tuning; folds2-4 initial fits. Select min clipped-score Brier for p and observed-arm MSE for mu separately; exact tie larger alpha. Final p fit folds1-4 then calibrate fold0. Final mu fit all training rows in arm. External alphas frozen, no tuning.",
+    "calibration": "sigmoid(intercept+slope*ridge_score); slope>=0; penalty1e-6*slope^2; heldout 20% training games; no outer evaluation or inner score games",
+    "outer_folds": 3,
+    "inner_folds": 2,
+    "external_folds": 3,
+    "seed": 20260909,
+    "split": "Sorted unique game IDs shuffled with NumPy default_rng seed then round-robin. outer seed; inner seed+1000+100*k; each inner nuisance seed+100+k; outer nuisance seed+2000+k; final inner seed+9000; final nuisance seed+9900; external seed+year and nuisance seed+year+100+k.",
+    "policy_class": "Per-Z inner AIPW mean argmin for pitch / argmax for swing; exact tie chooses action0; unseen or unsupported policy cell fallback Bernoulli(.5). Learned policy is a candidate diagnostic, not recommended. Final whole-development policy uses separate 2fold OOF scores.",
+    "policies": [
+      "observed mechanism meanY",
+      "always current action0",
+      "always current action1",
+      "learned candidate",
+      "conservative retain observed mechanism everywhere",
+      "stochastic current Bernoulli(.5)"
+    ],
+    "conservative": "Identification and full-learning uncertainty gates fail at design; H(Z)=0 everywhere. Contribution Y on retained rows, not propensity-plugged policy. Zero gain is definitional, not proof of effectiveness.",
+    "trim": 0.05,
+    "numerical_epsilon": 1e-06,
+    "support_entity": "pitcher",
+    "min_entity_arm_training": 30,
+    "support": "Both-arm >=30 in nuisance training entity AND .05<=e<=.95; SWING additionally valid zone, speed, movement, current group. Apply identical mask to both arms and all policies.",
+    "min_rows": 500,
+    "min_ess": 200,
+    "min_arm_games": 100,
+    "min_coverage": 0.5,
+    "max_game_share": 0.05,
+    "practical_delta_W": 0.01,
+    "threshold_rationale": "Pre-external conservative feasibility conventions, not empirical natural boundaries. delta .01 is raw W/current decision; never imported OBS ±5/15.",
+    "grade_priority": [
+      "If evaluated support/sample gates fail: NO_SUPPORT",
+      "If causal identification/realtime feasibility or full-learning uncertainty gate fails: UNCERTAIN",
+      "If CI includes0 or external eligible direction conflicts: UNCERTAIN",
+      "If all adjusted intervals exceed delta, fixed candidate gains>0 in both required external seasons, support sufficient and identification+full-learning uncertainty gates pass: RECOMMENDED",
+      "Otherwise supported direction with sign-adjusted interval excluding0: LEAN"
+    ],
+    "identification_gate": false,
+    "full_learning_interval_gate": false,
+    "unexecuted": "No grade. Store evaluation_status and explicit reason (e.g. WITHHELD_MEASUREMENT_NONCOMPARABILITY); distinguish from empirical NO_SUPPORT.",
+    "comparison_family": 1536,
+    "uncertainty": "Conditional fixed-OOF-score game-cluster ratio sandwich, t(G-1) individual95 and Bonferroni .05/1536 simultaneous envelope. Family upper bound covers 5 evaluable model-period runs, overall/count/swing cells and action/policy contrasts. Does not propagate nuisance/policy fitting or cross-game player dependence. Separate pitcher/batter clustering sensitivities. Full-refit game bootstrap stability planned8 per model, too few for95% inference; no promotion based on those.",
+    "sensitivity": [
+      "untrimmed measurement eligible, different target",
+      "trim .02,.05,.10 plus training repertoire, each target separate",
+      "clip .10 on same primary target",
+      "first PA-count decision only",
+      "fixed-score pitcher/batter clustering"
+    ],
+    "external": {
+      "development": [
+        2024,
+        2025
+      ],
+      "reproduction": 2023,
+      "forward_cutoff": "2026-09-07",
+      "prior_exposure": "Already used BCAI/Ridge; not wholly unseen datasets",
+      "policy": "Final development policy fixed",
+      "fixed_prediction": "Frozen development nuisance only, own prediction metrics/calibration/known-unseen",
+      "OPE": "3fold external-game nuisance with frozen dev alphas; train-only external dictionaries/calibration; final development policy unchanged",
+      "known_unseen": "Against final development pitcher/batter roster, not refit roster",
+      "2026_swing": "WITHHELD in entirety; neither raw location transport nor location-free substitute used"
+    },
+    "metrics": [
+      "eligible rows/PA/games/players",
+      "action ratios",
+      "mu MSE",
+      "p Brier/logloss/calibration",
+      "propensity quantiles",
+      "weights/ESS/game share",
+      "same-population AIPW Q/delta",
+      "fixed candidate OPE gain",
+      "known/unseen",
+      "trim/clip/revisit/cluster sensitivity"
+    ],
+    "joint": "Not designed: identification, sequential information and external SWING evidence insufficient"
+  },
+  "code": [
+    {
+      "path": "models/bcap/run.py",
+      "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "bytes": 25869
+    },
+    {
+      "path": "models/bcap/data.py",
+      "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+      "bytes": 18354
+    },
+    {
+      "path": "models/bcap/refit_stability.py",
+      "sha256": "f93f80b441cd9c1fa4d596ae0807e97c49aae279c040f568984da4777f380931",
+      "bytes": 13045
+    }
+  ],
+  "definition": {
+    "path": "models/bcap/pitch/v0.1.0/specification.yaml",
+    "sha256": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+    "bytes": 9650
+  },
+  "source_development_run": "bcap_pitch__mlb_2024_2025__20260909__r02",
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+      "sha256": "1aff16f91b58b4ed53b062a07c31381f4fe99b37ae983ece9b3d227f8c1c2fa4",
+      "bytes": 394585378
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json",
+      "sha256": "4c176be78b27c9c91b4b5658b15019b053647e31d7744b3ab2008a99e922a6c6",
+      "bytes": 17925
+    }
+  ],
+  "planned_replicates": 8,
+  "bootstrap_seed": 20261909,
+  "sampling": "Within each season, sample the original number of eligible games with replacement; keep original game_pk in every duplicate draw",
+  "evaluation": "All outer/inner nuisance preprocessing, tuning, calibration and policy selection refit in every replicate",
+  "final_policy_modified": false,
+  "interpretation": "Small-replicate algorithm stability only. No full-learning 95% CI, recommendation gate, or replacement of fixed-score conditional intervals",
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "models/bcap/refit_stability.py",
+    "--model",
+    "pitch",
+    "--data",
+    "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+    "--development-run",
+    "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "--run-id",
+    "bcap_pitch__mlb_2024_2025__20260909__r03",
+    "--replicates",
+    "8"
+  ],
+  "completed_replicates": 8,
+  "all_fits_converged": true,
+  "all_original_game_crossfold_zero": true,
+  "all_original_PA_crossfold_zero": true,
+  "no_full_learning_confidence_interval": true,
+  "limitation": "Eight default replicates characterize gross refit sensitivity only; many more replicates and valid tie-sensitive policy inference are needed for full-learning intervals. Season-stratified games do not resolve cross-game player/series dependence.",
+  "finished_at_utc": "2026-09-09T08:23:56.047917+00:00",
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/frozen_data.py",
+      "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+      "bytes": 18354
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/frozen_run.py",
+      "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "bytes": 25869
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/progress.json",
+      "sha256": "a94674993a75b8cdfec03e1449596761188406c467712048ef4b514dfe845da3",
+      "bytes": 95
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/action_policy_values.csv",
+      "sha256": "1011d9d82d3f46ad5bcc96bf62583231fc8651e9a01a63aa6116d41b74157d63",
+      "bytes": 5866
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/fit_diagnostics.csv",
+      "sha256": "bc3d4e4b932145d63df5bb2f2bb5d77ace6d7f58d6b6027bb0b809124a386f1e",
+      "bytes": 8074
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/fold_audit.csv",
+      "sha256": "ed641d5081427cf3bdbb9ef49e875ace225729ddbff95d9ad75960a454852aff",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/replicate_audit.json",
+      "sha256": "0b341d33238c717d480aa14ff4af2a9f4d46a828e0eb5d636b572612c483c839",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "383fd49ee506e3548ff58271d736d40c067b739f12bf4ed5914750c731c42d0a",
+      "bytes": 68123
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/tuning.csv",
+      "sha256": "b923f029c34fb9b1a5908e2c6949e3272827c2dd774aaa77588497548c095e1e",
+      "bytes": 2776
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/action_policy_values.csv",
+      "sha256": "93b543a56da349340b8d326124fee443ede74ba5702584a9323b1a6124f7883d",
+      "bytes": 5938
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/fit_diagnostics.csv",
+      "sha256": "cea7fd3b550a265e3329861e3a6c109916587e367cebbd050e128eec51a6d38c",
+      "bytes": 8081
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/fold_audit.csv",
+      "sha256": "a32d54257d131ed4f6e7ae46293a0c41046c166d22b4e5990bbf733756b8b6a7",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/replicate_audit.json",
+      "sha256": "4a6494accd659ccff2bf6cee97195aa56ac6a1548c75b0340988be6919a9b093",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "d76cb85ed042a35bdecf6176c911757452e76e43d876490b97f0f2ccaa53ed1b",
+      "bytes": 67155
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/tuning.csv",
+      "sha256": "a75c79b945a3326b81777ffc5fd17228d5a2e941bcf3e6ad67b1dd3251120a30",
+      "bytes": 2784
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/action_policy_values.csv",
+      "sha256": "570a8a44860cea5336132a689dd2dd86d23f7a945597e0676fef65d53fa319bd",
+      "bytes": 5912
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/fit_diagnostics.csv",
+      "sha256": "cf5efc54d3f529242cb71b390ca6e950257d627a5e2e5581cb1dded9a70a3eda",
+      "bytes": 8072
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/fold_audit.csv",
+      "sha256": "a91d93311d71ea9ac915d43eadee57ccb5c74cf088cd06993f7862d6bc6f25aa",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/replicate_audit.json",
+      "sha256": "25f4c13bb203ac075fc8fc2884d57257e1afa5d74bbd0a7bbcbce0ecd726b053",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "3925781b27e20b423c8288ee033eb7e2cd37668c041327477e9bd39fe0135202",
+      "bytes": 67925
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/tuning.csv",
+      "sha256": "7e45c627a8cec74f82c9e01836aca157a3ec7e14d053520e6619b282b045f568",
+      "bytes": 2782
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/action_policy_values.csv",
+      "sha256": "2020cd5f03b8bcb1fa4543c2a3dc85dfa70ac676dd6476f3209af4e1ca573b09",
+      "bytes": 5947
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/fit_diagnostics.csv",
+      "sha256": "61ca09b77d72df085373abb6467723b4e604b28791e8dcd3127a850574e450c5",
+      "bytes": 8091
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/fold_audit.csv",
+      "sha256": "39065cdf6847434265d7d630f1ebea883339b1f494846a3aa583a3d0667795ee",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/replicate_audit.json",
+      "sha256": "298a53fda53a6496b1816848d54849687733496e3c549812a133ef5393538b5f",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "eea10068349c2535c82fe6b48108774423869ed8837900d85a2094661133cacd",
+      "bytes": 67067
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/tuning.csv",
+      "sha256": "c0f5c3b78b507a788c5072880ebb3dd116da213ec5a3344a2d1739fda1ec082a",
+      "bytes": 2788
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/action_policy_values.csv",
+      "sha256": "a86a7e6ad7fc94da14101e655e048a9691a4baec3593d84094da5647c8493b8d",
+      "bytes": 5872
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/fit_diagnostics.csv",
+      "sha256": "d47340e6c45cd42367502f9d366b4cdefb07480eee74ef4be3e6ef1870b7bb87",
+      "bytes": 8077
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/fold_audit.csv",
+      "sha256": "879716da6f27dad1a24e06f30d6a4888629f47325b0aaa08ad3ff38e68acfb61",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/replicate_audit.json",
+      "sha256": "8b57f78b695e81184e6f14889a69375c671d591cc10f27826d4c578f3ef6257d",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "4ea6e5fffece84d9d6d96edb0178316a6aa95760a973f10052f073f769339db7",
+      "bytes": 67529
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/tuning.csv",
+      "sha256": "65133ae443fef714595f9583990ad0b74ead952e42925d56e322f6706e76c375",
+      "bytes": 2782
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/action_policy_values.csv",
+      "sha256": "be6c6fe60f762381b3085ab64118c0df321b82e42961d7c6fb59dab3c51e3029",
+      "bytes": 5921
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/fit_diagnostics.csv",
+      "sha256": "eb60fa1bff1f25b9089cf9b6b38a7775bb82bc41fc8825d295a5a343c0690f80",
+      "bytes": 8079
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/fold_audit.csv",
+      "sha256": "92e28484f2259ef7f1fa04ff2b7aaf11186c2b8faa824d378934f15e81672948",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/replicate_audit.json",
+      "sha256": "6e08a12e33054d5a001339eeecf62e5842b9e02c0aedff17d446ea2fdcce8e68",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "2b4883347453fa8f86890616a508b83993f3e250fe5363cc619f2fa185e002b4",
+      "bytes": 67309
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/tuning.csv",
+      "sha256": "e4bd70c8266f868f979ceb3c9facec9901c267f6880e163bcb910f952bd1fc84",
+      "bytes": 2779
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/action_policy_values.csv",
+      "sha256": "97549de3f2651faeb8a599e90b35c8b03dd2331ce2113cf478023429640f0305",
+      "bytes": 5883
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/fit_diagnostics.csv",
+      "sha256": "bf313d6b18f03289f2cdcacd856c33754414c9e875d6214e89a00b478ecbe5a7",
+      "bytes": 8086
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/fold_audit.csv",
+      "sha256": "7f3e2681021abe816732ad0da7298cf8b43dea14002cfbd99d8964ea04a3e0e4",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/replicate_audit.json",
+      "sha256": "d3d5aed6986c98432b70770ba95715152d07045401b2df766668cdc8cf2e0059",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "a4191ab55ccb580c9434d9a1bfca2a875d0307a4f9103db35bad658e8e512eb5",
+      "bytes": 68541
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/tuning.csv",
+      "sha256": "989185d17ff61f9ba596b57bc6c74ff97eb934c497ee715b2a2cd0fc9e985a9d",
+      "bytes": 2781
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/action_policy_values.csv",
+      "sha256": "3d7b4d3548fb3b30cfe55257b0d3dc6826d2a88b35dbeeb962cedcf1ddcb5dfd",
+      "bytes": 5899
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/fit_diagnostics.csv",
+      "sha256": "6ad691ffa1b6516f7c713fecc222d42e2bd38367b7955be96e9e3f13d1f563f7",
+      "bytes": 8074
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/fold_audit.csv",
+      "sha256": "21280ef270fdd88804e502c11928722ac79a4c159bf5f988ab4fd9e916914428",
+      "bytes": 4756
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/replicate_audit.json",
+      "sha256": "3aed824686532eace39f5f15732c1f5187ad4d12348ced9b0b69043d5fe49a21",
+      "bytes": 603
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/sampled_game_multiplicity_and_outer_fold.csv",
+      "sha256": "bd8f3ef3a7942024564076a3f4c7d9eb9353b9ef04e968d8607c590fc680119e",
+      "bytes": 67507
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/tuning.csv",
+      "sha256": "23e0c1474f83efdae7f3043d361f993b1ed253f226b34a6ad22b64e5f5ee8cf1",
+      "bytes": 2779
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_audits.csv",
+      "sha256": "18c99e551f9528b8bd46d8b23ec64d7b91fcce09c28d0934875aeb7f41d1b4ad",
+      "bytes": 1469
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_values.csv",
+      "sha256": "9eb256a018d6a02e61c77ec00479093e58c62d21867a66582e3157006d7bfc4c",
+      "bytes": 44872
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/specification.yaml",
+      "sha256": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+      "bytes": 9650
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/stability_summary.csv",
+      "sha256": "322a6fa4728d7c9640a09cb58f0ac0052e1a591e26744dee2577480278901cf3",
+      "bytes": 18123
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "sealed_at_utc": "2026-09-11T17:40:16.600840+00:00",
+  "phase": "Before new FF action outcome summaries or fitting",
+  "files": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/analysis_plan.json",
+      "sha256": "49d447908405758eb79d139e4728240984b882e29ba1a86cf92caa8943cdf344",
+      "bytes": 5771
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/analysis_plan.md",
+      "sha256": "02ad4a0e94fc178ce6ac1fb6d25a5b84742a8b0bc26d2e3230f4cd6a3e016c2f",
+      "bytes": 2202
+    },
+    {
+      "path": "models/bcap/pitch_ff/v0.1.0/specification.yaml",
+      "sha256": "1cca347cd366d63d8cc70770eded42ac5961a2764ccd7f6f394be3fbba104111",
+      "bytes": 5971
+    },
+    {
+      "path": "models/bcap/pitch_ff/v0.1.0/engine.py",
+      "sha256": "83dacd3592b4401f62d29ba184f1696f9c55e5a4db14094c73282ceded8d35d3",
+      "bytes": 10069
+    }
+  ],
+  "source_old_spec": {
+    "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+    "sha256": "273c6d0fb5d3e80881dbff08821cf419f158cc627c358b5c6d6174542c989a29",
+    "bytes": 6655
+  },
+  "notice": "Local timestamp/hash record only; no independent or external seal."
+}

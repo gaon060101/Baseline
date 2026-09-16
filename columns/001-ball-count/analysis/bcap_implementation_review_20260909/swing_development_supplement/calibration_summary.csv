@@ -1,0 +1,2 @@
+﻿stage,rows,ECE_10_fixed_bins,maximum_bin_gap,definition
+evaluation_nuisance,1416043,0.01792048569053355,0.03343363877150052,"Row-weighted absolute observed-minus-predicted rate in fixed [0,.1,...,1] bins"

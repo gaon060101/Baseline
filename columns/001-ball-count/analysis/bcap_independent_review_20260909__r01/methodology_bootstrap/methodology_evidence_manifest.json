@@ -1,0 +1,273 @@
+{
+  "indexed_at_utc": "2026-09-09T09:23:58.932533+00:00",
+  "role": "Methodology review and source-aggregate/bootstrap/report independent subreview evidence",
+  "inputs_current_hashes": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "f735ab8a00b4296ff6994e4e78b6278ba5ba2fba49db6ee75d80b513ada92a97",
+      "bytes": 4238
+    },
+    {
+      "path": "README.md",
+      "sha256": "b87fa46e5de2a12add6aa8bd82a3d6d43815e90d9e1b516bd84781bbc99201f7",
+      "bytes": 7358
+    },
+    {
+      "path": "guides/analysis.md",
+      "sha256": "8c5df596c61ab8b16a6cdae809ee71d0aa73f0f4de9da53782331d0c46256c87",
+      "bytes": 4911
+    },
+    {
+      "path": "models/registry.md",
+      "sha256": "1196c692b150620252fa455eb52bbd1e31fe63a149f478451a09948e3b4c518d",
+      "bytes": 5983
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "sha256": "54d62305ae602ac0844f3e580526ee3b76915a2db8b2b2555f159bfac4585668",
+      "bytes": 17672
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "sha256": "bf3d5f539080ae9afa7ab54a0af98a9dd6b8a2e8697e2261b88fd5646a6d5893",
+      "bytes": 19752
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_request_original.txt",
+      "sha256": "fb8acc64881548f043f3aeae964905ab4db963fc037e617945dd3d8e636a6371",
+      "bytes": 20363
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "sha256": "99bcdab0d93b8373e52d91cd1e944cba85272d3a73de4f0cfb757d894f0f746b",
+      "bytes": 19456
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v010_report_20260909.md",
+      "sha256": "5c5675a771ecab809ae39310dcc3cbc157e5c83501207c30488858dd5dc3943f",
+      "bytes": 49629
+    },
+    {
+      "path": "models/bcap/README.md",
+      "sha256": "2785c140f5eb9c1f17f0ee20cd8afb285409c15543251af9ec1ac526f539ea67",
+      "bytes": 8751
+    },
+    {
+      "path": "models/bcap/design_decisions.md",
+      "sha256": "557c75f5ea000319cd8df26595f9e16546d7f6659d3905e5062f5fb692152783",
+      "bytes": 13135
+    },
+    {
+      "path": "models/bcap/measurement_review.md",
+      "sha256": "0bb65a9afd12b7160d2047b8c9250530d99c50c33565fad28172f03148100074",
+      "bytes": 15241
+    },
+    {
+      "path": "models/bcap/run.py",
+      "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "bytes": 25869
+    },
+    {
+      "path": "models/bcap/data.py",
+      "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+      "bytes": 18354
+    },
+    {
+      "path": "models/bcap/refit_stability.py",
+      "sha256": "f93f80b441cd9c1fa4d596ae0807e97c49aae279c040f568984da4777f380931",
+      "bytes": 13045
+    },
+    {
+      "path": "models/bcap/build_report.py",
+      "sha256": "f560ed66243d45b6b813fda2ed21d320a813c6d51171244ee9813e68153724ab",
+      "bytes": 44584
+    },
+    {
+      "path": "models/bcap/supplement_diagnostics.py",
+      "sha256": "7bb74bca074edbd6e7d3ab572a6e0f5a2487e67be8ef138561f564c768075b8e",
+      "bytes": 11975
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/verify_bootstrap.py",
+      "sha256": "ce64e4f2244f9dc36207040bd0108e0101978c74f061663240983114ab3bd763",
+      "bytes": 22294
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/review.md",
+      "sha256": "3f280354875c9f7fdc221f0a447f0c682c0cb3851f8abca6433000509b9e8bc1",
+      "bytes": 20498
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/compare_existing_estimates.py",
+      "sha256": "141cdca2bd1b744e93c2ca0500796fd64c376ab3ffec1a92dba79c05977835aa",
+      "bytes": 9563
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/model_card.md",
+      "sha256": "ebd1f8d131f026972737bd2c3c5822fbb20eaa555067c30ee70b97ccf0167ec2",
+      "bytes": 4636
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/specification.yaml",
+      "sha256": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+      "bytes": 9650
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/validation.md",
+      "sha256": "e32baa917d8d4492dda4949167bbc87cf002697ce58064d769d37bfe8a5bc1b0",
+      "bytes": 5882
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/model_card.md",
+      "sha256": "61aee76f91b4a7765f4971c9d89c505fb2d1b6cad72345359c6374019e380992",
+      "bytes": 4429
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/specification.yaml",
+      "sha256": "c6096df97014420840f5bf5d5ef34a531e15a586ab64ef23a5ef73aae2cfe59d",
+      "bytes": 9817
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/validation.md",
+      "sha256": "1e020e166887a385576871f08951830fbd45f381d20b37d490b5b47252c995ea",
+      "bytes": 5282
+    }
+  ],
+  "historical_limit": "These document hashes index currently read sources; no past non-modification claim is inferred solely from current hashes. Bootstrap/report manifests separately compare explicit historical hashes.",
+  "document_read_scope": "Original/review requests and methodology/engine/refit read; report generator and supplement definitions inspected; data.py targeted action/selection/lag code references; column/source operational context reviewed. Main provenance/raw/nuisance inspections belong to other subreviews.",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\methodology_bootstrap\\bootstrap_audit.py"
+      ],
+      "execution_class": "reaggregate_existing_summaries; reconstruct game draws/split hashes/training N; no fitting",
+      "evidence": "bootstrap_evidence_manifest.json"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\methodology_bootstrap\\report_tables_audit.py"
+      ],
+      "execution_class": "reaggregate/crosscheck original tables and rebuild behavior d/proportions; no fitting",
+      "evidence": "report_tables_evidence_manifest.json"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\methodology_bootstrap\\finalize_methodology_evidence.py"
+      ],
+      "execution_class": "evidence_index_only"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "bytecode_disabled": true
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/behavior_independent_rates.csv",
+      "sha256": "af6663f87a259e4598ddbc2b1311ab1683817146b49c46317755e06fc5a248f6",
+      "bytes": 10182
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_audit.py",
+      "sha256": "810f17f4efa175dd755731a3801498fbb91d92e389774879ca0a6b99512aff89",
+      "bytes": 16209
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_comparisons.csv",
+      "sha256": "e897f696dff6108dd222b0f150bfd242704c84e72f4cbcebe282c8620e3fdae1",
+      "bytes": 16964996
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_evidence_manifest.json",
+      "sha256": "424e437e303e88e3d342cfffbf4cd9f438ae7a72ab56ad8730a1f7531d4c3779",
+      "bytes": 37126
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_independent_stability.csv",
+      "sha256": "9554e40d9abc1cbad4735b9cde351402b830edce3a3cb74d6b1f9919fdc3741a",
+      "bytes": 28166
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_saved_file_inventory.csv",
+      "sha256": "5f10086c4dca042cbf9e6625b41d5eb2ad63a63f34b387d735dfe84280addb73",
+      "bytes": 16624
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_validation.json",
+      "sha256": "87860d217661ce45a78746c7059b5d9be0ec979fb66a964f75ddb1e37ab04480",
+      "bytes": 8354
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/finalize_methodology_evidence.py",
+      "sha256": "b41778a84b9d26e7040e098ff4beeeb7fbd52053233901b75d04ee2928852ea7",
+      "bytes": 3528
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/interval_family_inventory.csv",
+      "sha256": "ee43f10683ce3854af8d4757ed2e56e129ec853efc31cbf027fb5cd448e06bed",
+      "bytes": 767
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/literature_sources.json",
+      "sha256": "164aae257f8642c4f970485079d86fae022a6222d908e564aa39af460a9ebd6a",
+      "bytes": 3204
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/methodology_findings.csv",
+      "sha256": "d2872dea0332d0a6678172d8b9d8a081098d6f13f30c0cb90592cb099ce8041c",
+      "bytes": 4045
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/methodology_review.md",
+      "sha256": "b9c040abcb1d7cec5947a7233985aee3e56786f7e13d1af5bf1e0ec869cb0c3b",
+      "bytes": 17037
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/report_tables_audit.py",
+      "sha256": "d25babaf4f224a093a6f4ca313286bcee93ecb6a8bf1f33e236b6d9b2335d611",
+      "bytes": 20372
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/report_tables_comparisons.csv",
+      "sha256": "36b5373db753626e37071716159365beb9424147aefb508f0b5801af1af52788",
+      "bytes": 9306886
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/report_tables_evidence_manifest.json",
+      "sha256": "eba9c45ba59a579fae5aa2871edf327c12ec63a32092fcaca64ffa8db8da188d",
+      "bytes": 28016
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/report_tables_review.md",
+      "sha256": "356eedf136c087a6efafec05c0d43d0deaa06a6b647aa7c10bb68cbdb4282d7b",
+      "bytes": 4400
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/report_tables_validation.json",
+      "sha256": "bd91fdd1cce89b2672ff332681b3580c8416f61e0b07c06c32052eaa010cee31",
+      "bytes": 861
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/requirements_decisions_review.csv",
+      "sha256": "2330994751521ee0e3d90804f68ce62932eaf60f63b0994aaca3eb2291013b55",
+      "bytes": 7836
+    }
+  ],
+  "web_evidence": "literature_sources.json records actual readable primary sections and failed fulltext attempts; no raw play collection",
+  "no_actions": [
+    "existing model/run/source/report modified",
+    "model refit",
+    "new external model evaluation",
+    "SWING2026 evaluation",
+    "KBO",
+    "Drive",
+    "external publication"
+  ]
+}

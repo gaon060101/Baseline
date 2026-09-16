@@ -1,0 +1,136 @@
+{
+  "recorded_at_utc": "2026-09-09T09:29:29.526412+00:00",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\inventory.py",
+        "before"
+      ],
+      "role": "review baseline",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\lineage\\independent_lineage.py"
+      ],
+      "role": "raw reconstruction",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\lineage\\supplement_lineage.py"
+      ],
+      "role": "source exceptions and saved-score reaggregation",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\lineage\\finalize_lineage_review.py"
+      ],
+      "role": "lineage evidence finalization",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\folds_prediction\\review_folds_prediction.py"
+      ],
+      "role": "saved-fit recreation and partition/policy reconstruction",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\folds_prediction\\supplement_saved_fit.py"
+      ],
+      "role": "saved-fit missing and unknown behavior",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\folds_prediction\\policy_intervals_review.py"
+      ],
+      "role": "saved Y/A/nuisance training interval reconstruction",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\methodology_bootstrap\\bootstrap_audit.py"
+      ],
+      "role": "existing aggregate/resampling reaggregation",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\numeric_audit.py"
+      ],
+      "role": "saved Y/A/nuisance AIPW/OPE reconstruction",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\provenance_audit.py"
+      ],
+      "role": "resolved hashes and timestamps",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\methodology_bootstrap\\report_tables_audit.py"
+      ],
+      "role": "existing tables and behavior reaggregation",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\inventory.py",
+        "after"
+      ],
+      "role": "review boundary preservation",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    },
+    {
+      "command": [
+        "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\bcap_independent_review_20260909__r01\\finalize_review.py"
+      ],
+      "role": "review evidence assembly",
+      "record_type": "Reconstructed from this review tool/script invocations and component logs; not independent shell history"
+    }
+  ],
+  "attempt_notes": [
+    "Initial SciPy sandbox import denied; numerical and policy interval audits succeeded after ordinary escalation. No old library/file changed.",
+    "Provenance first pass listed historical/current hash differences; explicit archived failed source and pre-update document backups resolved them. First pass retained; one review-only None backup TypeError was fixed before final run.",
+    "Policy interval review first attempt used incorrect final score filename; review-only source fix and attempt artifacts preserved in folds_prediction."
+  ],
+  "not_executed": [
+    "producer develop/external",
+    "model refitting",
+    "new external model evaluation",
+    "SWING2026 evaluation",
+    "new raw collection"
+  ]
+}

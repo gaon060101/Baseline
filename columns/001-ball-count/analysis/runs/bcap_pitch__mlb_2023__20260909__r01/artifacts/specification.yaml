@@ -1,0 +1,229 @@
+{
+  "model_id": "BCAP-PITCH-v0.1.0",
+  "version": "0.1.0",
+  "status_at_definition": "DRAFT",
+  "variant": "pitch",
+  "format": "JSON-compatible YAML 1.2, consumed directly by run.py",
+  "estimand": "Selected observed decision-row distribution; replace current action once and let future natural mechanisms continue at changed states. Associational standardized/AIPW diagnostic without identified causal recommendation.",
+  "result": "Raw season-weighted final PA W from OBS, not normalized BCAI, no added transition reward",
+  "weights": {
+    "2023": {
+      "BB": 0.696,
+      "HBP": 0.726,
+      "1B": 0.883,
+      "2B": 1.244,
+      "3B": 1.569,
+      "HR": 2.004
+    },
+    "2024": {
+      "BB": 0.689,
+      "HBP": 0.72,
+      "1B": 0.882,
+      "2B": 1.254,
+      "3B": 1.59,
+      "HR": 2.05
+    },
+    "2025": {
+      "BB": 0.691,
+      "HBP": 0.722,
+      "1B": 0.882,
+      "2B": 1.252,
+      "3B": 1.584,
+      "HR": 2.037
+    },
+    "2026": "2025 fixed"
+  },
+  "pa_exclusions": [
+    "missing_final",
+    "intentional_walk",
+    "catcher_interference",
+    "truncated",
+    "unknown_event",
+    "no_observed_0_0"
+  ],
+  "selection": "Completed PA and final-event eligibility depend on future results, not pretreatment eligibility. Physical-record exclusions and measurement support also condition target. No general causal treatment effect claim.",
+  "actions": {
+    "FB": [
+      "FF",
+      "SI",
+      "FC"
+    ],
+    "NFB": [
+      "SL",
+      "CH",
+      "ST",
+      "CU",
+      "FS",
+      "KC",
+      "SV",
+      "FA",
+      "EP",
+      "KN",
+      "FO",
+      "CS",
+      "SC"
+    ],
+    "Swing": [
+      "swinging_strike",
+      "swinging_strike_blocked",
+      "foul",
+      "foul_tip",
+      "hit_into_play",
+      "foul_bunt",
+      "missed_bunt",
+      "bunt_foul_tip"
+    ],
+    "Take": [
+      "ball",
+      "blocked_ball",
+      "called_strike",
+      "hit_by_pitch"
+    ]
+  },
+  "action0": "NFB",
+  "action1": "FB",
+  "excluded_records": [
+    "automatic_ball",
+    "automatic_strike",
+    "PO",
+    "pitchout",
+    "swinging_pitchout",
+    "foul_pitchout",
+    "unclassified relevant action label"
+  ],
+  "features": [
+    "pitcher",
+    "batter",
+    "game_year",
+    "venue",
+    "matchup",
+    "count",
+    "base_state",
+    "outs_when_up",
+    "inning_bin",
+    "score_bin",
+    "pitch_number_bin",
+    "prev_pitch_type",
+    "prev_description",
+    "prev_release_speed_bin"
+  ],
+  "policy_key": "count",
+  "policy_X_Z": "X contains current actual pitcher/batter and nuisance context; Z is count (pitch) or count|zone|FB-NFB (swing). No fictitious all-zero average-player row.",
+  "feature_lineage": {
+    "base": "current prepitch count/context and same-PA strictly lagged pitch code/description/speed; current description only labels",
+    "speed_bins": "floor(mph/5), missing explicit category",
+    "movement_bins": "floor(feet/.5)",
+    "x_bins": "floor(feet/.35)",
+    "relative_z_bins": "floor(((plate_z-sz_bot)/(sz_top-sz_bot))/.2)",
+    "zone": "INNER abs(x)<=17/24-.15 and normalized z in [.1,.9]; OUT abs(x)>17/24+.15 or z<-.1 or z>1.1; remaining BOUNDARY; invalid/missing MISSING"
+  },
+  "post_measurement": "SWING current ball characteristics are hindsight proxies for perception. Nonpositive zone height and missing current ball measurements have no policy support. 2026 SWING withheld due no bridge.",
+  "forbidden_pitch": [
+    "current pitch_type",
+    "current release_speed",
+    "current or lag plate_x/z/zone",
+    "current description",
+    "current A_swing",
+    "current pitch outcome"
+  ],
+  "forbidden_both": [
+    "current description as predictor",
+    "events",
+    "final_event",
+    "result",
+    "Y",
+    "launch_speed",
+    "launch_angle",
+    "des",
+    "inplay_bunt_text_flag"
+  ],
+  "unknown_categories": "Training-only observed string dictionaries; each unknown centered categorical block contributes zero; unseen IDs never provide repertoire support by imputation",
+  "nuisance": "Action-specific ridge outcome T learner (both player IDs per arm). Binary ridge propensity score, Platt-calibrated on separate training games; clipping final e to numerical epsilon only.",
+  "ridge_objective": "sum(y-ybar-(X-Xbar)beta)^2 + alpha sum(beta^2); intercept unpenalized, all category slopes penalized; T learner uses action-specific training means",
+  "solver": {
+    "method": "Jacobi-PCG centered sparse Gram",
+    "rtol": 1e-09,
+    "atol": 1e-11,
+    "maxiter": 3000,
+    "relative_gradient_limit": 1e-07
+  },
+  "alphas": [
+    100,
+    1000
+  ],
+  "tuning": "5way train-game partition: fold0 calibration; fold1 tuning; folds2-4 initial fits. Select min clipped-score Brier for p and observed-arm MSE for mu separately; exact tie larger alpha. Final p fit folds1-4 then calibrate fold0. Final mu fit all training rows in arm. External alphas frozen, no tuning.",
+  "calibration": "sigmoid(intercept+slope*ridge_score); slope>=0; penalty1e-6*slope^2; heldout 20% training games; no outer evaluation or inner score games",
+  "outer_folds": 3,
+  "inner_folds": 2,
+  "external_folds": 3,
+  "seed": 20260909,
+  "split": "Sorted unique game IDs shuffled with NumPy default_rng seed then round-robin. outer seed; inner seed+1000+100*k; each inner nuisance seed+100+k; outer nuisance seed+2000+k; final inner seed+9000; final nuisance seed+9900; external seed+year and nuisance seed+year+100+k.",
+  "policy_class": "Per-Z inner AIPW mean argmin for pitch / argmax for swing; exact tie chooses action0; unseen or unsupported policy cell fallback Bernoulli(.5). Learned policy is a candidate diagnostic, not recommended. Final whole-development policy uses separate 2fold OOF scores.",
+  "policies": [
+    "observed mechanism meanY",
+    "always current action0",
+    "always current action1",
+    "learned candidate",
+    "conservative retain observed mechanism everywhere",
+    "stochastic current Bernoulli(.5)"
+  ],
+  "conservative": "Identification and full-learning uncertainty gates fail at design; H(Z)=0 everywhere. Contribution Y on retained rows, not propensity-plugged policy. Zero gain is definitional, not proof of effectiveness.",
+  "trim": 0.05,
+  "numerical_epsilon": 1e-06,
+  "support_entity": "pitcher",
+  "min_entity_arm_training": 30,
+  "support": "Both-arm >=30 in nuisance training entity AND .05<=e<=.95; SWING additionally valid zone, speed, movement, current group. Apply identical mask to both arms and all policies.",
+  "min_rows": 500,
+  "min_ess": 200,
+  "min_arm_games": 100,
+  "min_coverage": 0.5,
+  "max_game_share": 0.05,
+  "practical_delta_W": 0.01,
+  "threshold_rationale": "Pre-external conservative feasibility conventions, not empirical natural boundaries. delta .01 is raw W/current decision; never imported OBS ±5/15.",
+  "grade_priority": [
+    "If evaluated support/sample gates fail: NO_SUPPORT",
+    "If causal identification/realtime feasibility or full-learning uncertainty gate fails: UNCERTAIN",
+    "If CI includes0 or external eligible direction conflicts: UNCERTAIN",
+    "If all adjusted intervals exceed delta, fixed candidate gains>0 in both required external seasons, support sufficient and identification+full-learning uncertainty gates pass: RECOMMENDED",
+    "Otherwise supported direction with sign-adjusted interval excluding0: LEAN"
+  ],
+  "identification_gate": false,
+  "full_learning_interval_gate": false,
+  "unexecuted": "No grade. Store evaluation_status and explicit reason (e.g. WITHHELD_MEASUREMENT_NONCOMPARABILITY); distinguish from empirical NO_SUPPORT.",
+  "comparison_family": 1536,
+  "uncertainty": "Conditional fixed-OOF-score game-cluster ratio sandwich, t(G-1) individual95 and Bonferroni .05/1536 simultaneous envelope. Family upper bound covers 5 evaluable model-period runs, overall/count/swing cells and action/policy contrasts. Does not propagate nuisance/policy fitting or cross-game player dependence. Separate pitcher/batter clustering sensitivities. Full-refit game bootstrap stability planned8 per model, too few for95% inference; no promotion based on those.",
+  "sensitivity": [
+    "untrimmed measurement eligible, different target",
+    "trim .02,.05,.10 plus training repertoire, each target separate",
+    "clip .10 on same primary target",
+    "first PA-count decision only",
+    "fixed-score pitcher/batter clustering"
+  ],
+  "external": {
+    "development": [
+      2024,
+      2025
+    ],
+    "reproduction": 2023,
+    "forward_cutoff": "2026-09-07",
+    "prior_exposure": "Already used BCAI/Ridge; not wholly unseen datasets",
+    "policy": "Final development policy fixed",
+    "fixed_prediction": "Frozen development nuisance only, own prediction metrics/calibration/known-unseen",
+    "OPE": "3fold external-game nuisance with frozen dev alphas; train-only external dictionaries/calibration; final development policy unchanged",
+    "known_unseen": "Against final development pitcher/batter roster, not refit roster",
+    "2026_swing": "WITHHELD in entirety; neither raw location transport nor location-free substitute used"
+  },
+  "metrics": [
+    "eligible rows/PA/games/players",
+    "action ratios",
+    "mu MSE",
+    "p Brier/logloss/calibration",
+    "propensity quantiles",
+    "weights/ESS/game share",
+    "same-population AIPW Q/delta",
+    "fixed candidate OPE gain",
+    "known/unseen",
+    "trim/clip/revisit/cluster sensitivity"
+  ],
+  "joint": "Not designed: identification, sequential information and external SWING evidence insufficient"
+}

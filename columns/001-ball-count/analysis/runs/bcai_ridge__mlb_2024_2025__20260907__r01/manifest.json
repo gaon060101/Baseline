@@ -1,0 +1,284 @@
+{
+  "run_id": "bcai_ridge__mlb_2024_2025__20260907__r01",
+  "model_id": "BCAI-RIDGE-v0.1.0",
+  "version": "0.1.0",
+  "model_status": "EXPERIMENTAL",
+  "league": "mlb",
+  "period": "2024_2025",
+  "run_date": "2026-09-07",
+  "registration_date": "2026-09-08",
+  "rerun_number": 1,
+  "provenance": "2026-09-07 기존 공동 실행을 두 모델에 사후 등록; 오늘 새 분석/독립 적합을 수행한 것 아님",
+  "paths_relative_to": "project_root",
+  "column": "columns/001-ball-count/column.md",
+  "model_definition": "models/bcai/ridge/v0.1.0/specification.yaml",
+  "code": [
+    "columns/001-ball-count/analysis/inspect_advantage.py",
+    "columns/001-ball-count/analysis/analyze_count_advantage.py",
+    "columns/001-ball-count/analysis/verify_count_advantage.py",
+    "columns/001-ball-count/analysis/write_advantage_report.py"
+  ],
+  "historical_code_sha256": [
+    {
+      "path": "columns/001-ball-count/analysis/analyze_count_advantage.py",
+      "bytes": 13204,
+      "sha256": "e91c776dcf5a4184c6754a114ecf6f770108964b23eb241916e84e920f833326"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/inspect_advantage.py",
+      "bytes": 850,
+      "sha256": "e0a9caaf1a01d1248c26377155c1c63b705aef3c1f9a63ad726a4555793dfd45"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/verify_count_advantage.py",
+      "bytes": 3579,
+      "sha256": "f9e7657ca7496806e4710cb9c41d2eef9428ced29e2eea85b92824959f89cb64"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/write_advantage_report.py",
+      "bytes": 26394,
+      "sha256": "d7e2924bf941990b05bedee7aa496512c1d07faf59b1fb85233d6e01ff951948"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5"
+  },
+  "input_audit": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_audit.json",
+  "input_path_base": "columns/001-ball-count",
+  "cache": "columns/001-ball-count/analysis/advantage_input_cache.pkl",
+  "parameters": {
+    "weights": {
+      "2024": {
+        "BB": 0.689,
+        "HBP": 0.72,
+        "1B": 0.882,
+        "2B": 1.254,
+        "3B": 1.59,
+        "HR": 2.05
+      },
+      "2025": {
+        "BB": 0.691,
+        "HBP": 0.722,
+        "1B": 0.882,
+        "2B": 1.252,
+        "3B": 1.584,
+        "HR": 2.037
+      }
+    },
+    "scale": {
+      "2024": 1.242,
+      "2025": 1.232
+    },
+    "league_R_PA": {
+      "2024": 0.117,
+      "2025": 0.118
+    },
+    "baseline_value": {
+      "2024": 0.3094316871975363,
+      "2025": 0.3119784566939501
+    },
+    "season_mix": {
+      "2024": 0.49939031758411967,
+      "2025": 0.5006096824158803
+    },
+    "bootstrap_replicates": 2000,
+    "seed": 20260907,
+    "simultaneous_critical": 2.7778553014574583
+  },
+  "sample": {
+    "raw_rows": 1424427,
+    "all_PA": 366231,
+    "eligible_PA": 364124,
+    "games": 4859,
+    "batter_count": 788,
+    "pitcher_count": 1113,
+    "exclusions": {
+      "included": 364124,
+      "intentional_walk": 1065,
+      "truncated": 635,
+      "missing_final": 221,
+      "catcher_interference": 186
+    },
+    "repeated_count_rows_removed": 98606
+  },
+  "shared_execution_with": "bcai_obs__mlb_2024_2025__20260907__r01",
+  "canonical_artifact_owner": "bcai_obs__mlb_2024_2025__20260907__r01",
+  "artifacts": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_audit.json",
+      "bytes": 20841,
+      "sha256": "2f52f1bf9aaccb1d50e628412127e370b2c9c6c9071d656fb019a4821d8c9400"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_bootstrap.npz",
+      "bytes": 333859,
+      "sha256": "c963113f6f47ed356223312b1d5222d9113334bfb5b19a5397d7b37d922c2cbb"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_context_strata.csv",
+      "bytes": 65030,
+      "sha256": "e933f81d23f925d9c7bbad11e14b0429d71429320ef6e2d35e14a830fc01d8ff"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_exclusions.csv",
+      "bytes": 224,
+      "sha256": "e4fb6a213dbf2ade16bcb3fa8dd0aa29ecd9d1afb91c21eb96fca089d5ba1687"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv",
+      "bytes": 5153,
+      "sha256": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_denominator_sensitivity.csv",
+      "bytes": 865,
+      "sha256": "9287748e934a06b880dc16b2a908ce80fa1c62b3bd2861889544f03ab552e390"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_event_audit.csv",
+      "bytes": 1534,
+      "sha256": "e6a175bce451a70b51866fc6d8b498470455f81d717fdea592bd3bb932fbbc07"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_exclusion_sensitivity.csv",
+      "bytes": 1337,
+      "sha256": "9c6ea747dd7448d5e5308b6fd390dceaab3347d7ec1f58dd4b40a61cefafae18"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_pa_outcomes.csv",
+      "bytes": 3228,
+      "sha256": "d6cf0d5fbec216bbcb68be328c2d057e0d61270c226962744e0bd1169bbdb248"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_pitch_explanators.csv",
+      "bytes": 2614,
+      "sha256": "97b2bf95f43693a6b7ae5861f03cd24ee2068082f0adfe1eaf74234281c7ea79"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_season_sensitivity.csv",
+      "bytes": 1286,
+      "sha256": "72259359b10d4e5ad2ded64ed20a0b1bfab0d820c26a251a02c1a413c2b3ff14"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_validation.json",
+      "bytes": 351,
+      "sha256": "2dde413107deac0d75cf2df20f0de35b249301237dacbd88802b6ff9e0ed9df1"
+    }
+  ],
+  "result_selection": {
+    "csv": "advantage_count_results.csv",
+    "columns": [
+      "count",
+      "adjusted_index_alpha20",
+      "adjusted_index_alpha100",
+      "adjusted_index_alpha500"
+    ],
+    "audit_pointer": "/model",
+    "bootstrap": null
+  },
+  "ridge_diagnostics": {
+    "20.0": {
+      "OOF_MSE": 2.7119595872972533,
+      "constant_MSE": 2.712496201602141,
+      "diagnostics": [
+        {
+          "fold": 0,
+          "iterations": 150,
+          "max_last_change": 0.00000420849420024183
+        },
+        {
+          "fold": 1,
+          "iterations": 150,
+          "max_last_change": 0.000004713478116036285
+        },
+        {
+          "fold": 2,
+          "iterations": 150,
+          "max_last_change": 0.000004044782479395437
+        },
+        {
+          "fold": 3,
+          "iterations": 150,
+          "max_last_change": 0.000010800681081502006
+        },
+        {
+          "fold": 4,
+          "iterations": 150,
+          "max_last_change": 0.000003946126026166397
+        }
+      ]
+    },
+    "100.0": {
+      "OOF_MSE": 2.7048340310431147,
+      "constant_MSE": 2.712496201602141,
+      "diagnostics": [
+        {
+          "fold": 0,
+          "iterations": 150,
+          "max_last_change": 0.000002280494526774035
+        },
+        {
+          "fold": 1,
+          "iterations": 150,
+          "max_last_change": 0.000002754104210911379
+        },
+        {
+          "fold": 2,
+          "iterations": 150,
+          "max_last_change": 0.0000025767671875120968
+        },
+        {
+          "fold": 3,
+          "iterations": 150,
+          "max_last_change": 0.000005316546438649539
+        },
+        {
+          "fold": 4,
+          "iterations": 150,
+          "max_last_change": 0.0000032606781986688205
+        }
+      ]
+    },
+    "500.0": {
+      "OOF_MSE": 2.702816939988148,
+      "constant_MSE": 2.712496201602141,
+      "diagnostics": [
+        {
+          "fold": 0,
+          "iterations": 150,
+          "max_last_change": 0.00000649249988438072
+        },
+        {
+          "fold": 1,
+          "iterations": 150,
+          "max_last_change": 0.000006139739759825069
+        },
+        {
+          "fold": 2,
+          "iterations": 150,
+          "max_last_change": 0.000006563548316518286
+        },
+        {
+          "fold": 3,
+          "iterations": 150,
+          "max_last_change": 0.000005380354051398584
+        },
+        {
+          "fold": 4,
+          "iterations": 150,
+          "max_last_change": 0.000005830743355250689
+        }
+      ]
+    }
+  },
+  "central_alpha": 100,
+  "refit_uncertainty": null,
+  "converged_to_tolerance": false,
+  "report": "columns/001-ball-count/analysis/count_advantage_2024_2025.md",
+  "predecessor_run": null,
+  "successor_run": null,
+  "execution_timestamp_precision": "date only; report source",
+  "limitations": "Historical code hashes were captured at migration; no archived executable snapshot or git revision recorded. Current code only receives path/protection edits."
+}

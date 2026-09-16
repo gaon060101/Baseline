@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-09-11T16:59:03.168739+00:00",
+  "request_scope": "2024/2025 minimal V2 development only",
+  "specifications": {
+    "pitch": {
+      "path": "models\\bcap\\pitch\\v0.2.0\\specification.yaml",
+      "sha256": "afad66dd7ecb1ca0a9d34f25c611d35014df26fa48e84b33a7521645fbda2778"
+    },
+    "swing": {
+      "path": "models\\bcap\\swing\\v0.2.0\\specification.yaml",
+      "sha256": "65ca8b8ed541095a196267f87ec42f3b368b57d1d17fa05678ecc408ea92e36b"
+    },
+    "pitch_sb": {
+      "path": "models\\bcap\\pitch_sb\\v0.1.0\\specification.yaml",
+      "sha256": "05690b6c379843c8b89b9d98746f264518fcc94aa3985ff81d491bbd9c16d0ac"
+    }
+  },
+  "engine_source": {
+    "path": "models/bcap/run.py",
+    "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9"
+  },
+  "engine_reuse": "Core only up through cluster_stat; no policy/external/bootstrap functions. Sparse centered Ridge/Platt/AIPW formulas reused.",
+  "version_decision": "PITCH/SWING minor0.2.0 for predictor changes; new pitch_sb variant starts0.1.0. V2 is generation name, not semantic major2.0.",
+  "computed_before_results": [
+    "action/features/eligibility",
+    "one3fold split and seed",
+    "fixed vs small SB alpha choices",
+    "support and effect threshold",
+    "147 multiplicity family",
+    "point vs uncertainty labels"
+  ],
+  "processed_source": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl"
+}

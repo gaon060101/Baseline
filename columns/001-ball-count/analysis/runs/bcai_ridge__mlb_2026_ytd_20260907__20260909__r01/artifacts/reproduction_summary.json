@@ -1,0 +1,8 @@
+{
+  "minimum_J": "0-2",
+  "maximum_J": "3-0",
+  "same_direction_count": 12,
+  "same_nominal_band_count": 11,
+  "rank_spearman": 0.9860139860139862,
+  "max_abs_shift": 1.456917247913566
+}

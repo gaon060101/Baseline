@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "only2024_2025",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unique_keys",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "binary_action_complete",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "finite_outcome",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "valid_count",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "allowed_predictors",
+      "status": "PASS",
+      "detail": {
+        "features": [
+          "pitcher",
+          "batter",
+          "game_year",
+          "venue",
+          "matchup",
+          "count",
+          "base_state",
+          "outs_when_up",
+          "inning_bin",
+          "score_bin",
+          "pitch_number_bin",
+          "prev_pitch_group",
+          "prev_description",
+          "prev_release_speed_bin",
+          "pitch_group",
+          "release_speed_bin",
+          "pfx_x_bin",
+          "pfx_z_bin",
+          "plate_x_bin",
+          "relative_z_bin",
+          "swing_cell"
+        ]
+      }
+    },
+    {
+      "check": "coarse_lag_only",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "known_stand_for_side_reports",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "overlapping_regions_max_two",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "center_equals_geometric_SB",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "one_fold_per_game",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold0_finite_predictions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold0_convergence",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold0_no_game_leak",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold1_finite_predictions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold1_convergence",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold1_no_game_leak",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold2_finite_predictions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold2_convergence",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold2_no_game_leak",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "OOF_rows_complete_unique",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "same_action_denominator",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Q_difference_sign",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "count_sum_matches_overall",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "finite_supported_group_values",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold0/cal_outer_ancestor_exclusion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold1/cal_outer_ancestor_exclusion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fold2/cal_outer_ancestor_exclusion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "support_reason_sum",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "region_overlap_sum_identity",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scope": "Production basic checks only; not independent validation",
+  "not_run": [
+    "2023/2026 data access/application/external evaluation",
+    "bootstrap or repeated seed fits",
+    "independent verifier or full audit",
+    "new raw acquisition/KBO",
+    "JOINT/Nash/sequential policy",
+    "Drive/publication"
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "model_id": "BCAI-RIDGE-v0.1.0",
+  "version": "0.1.0",
+  "status": "EXPERIMENTAL",
+  "format": "YAML 1.2 JSON-compatible; documentation snapshot, not runtime configuration",
+  "shared_definition": "../../observed/v1.0.0/specification.yaml",
+  "input_fields": {
+    "pitch": [
+      "game_pk",
+      "at_bat_number",
+      "pitch_number",
+      "game_year",
+      "balls",
+      "strikes",
+      "events"
+    ],
+    "context": [
+      "batter",
+      "pitcher",
+      "stand",
+      "p_throws",
+      "on_1b",
+      "on_2b",
+      "on_3b",
+      "outs_when_up",
+      "inning",
+      "bat_score_diff"
+    ],
+    "schedule": [
+      "gamePk",
+      "venue.id"
+    ],
+    "explanatory_only": [
+      "pitch_name",
+      "description",
+      "type"
+    ]
+  },
+  "result_classification": {
+    "inherit": "shared_definition.result_classification"
+  },
+  "weights": {
+    "rule": "리그·시즌별 외부 선형가중치. K/OUT/OTHER=0. 실행별 실제 값은 manifest.json의 parameters에 보존.",
+    "reference_run": "bcai_obs__mlb_2024_2025__20260907__r01"
+  },
+  "baseline": {
+    "count": "0-0",
+    "index": 100,
+    "rule": "시즌별 유효 PA 평균 W; 관측 시작이 0-0인 PA만 포함",
+    "adjusted": "시즌별 0-0 평균 잔차를 빼서 J(0-0)=100"
+  },
+  "grade_boundaries": {
+    "applied": false,
+    "note": "OBS 등급/신뢰구간은 보정 지수에 적용하지 않는다"
+  },
+  "exclusions": {
+    "inherit": "shared_definition.exclusions"
+  },
+  "duplicates": {
+    "pitch_key": [
+      "game_pk",
+      "at_bat_number",
+      "pitch_number"
+    ],
+    "pitch_action": "중복 존재 시 assertion 중단",
+    "pa_key": [
+      "game_pk",
+      "at_bat_number"
+    ],
+    "final_event": "키와 pitch_number 정렬 후 마지막 기록",
+    "count_unit": "PA × 투구 전 count 한 번; 다른 count 간 중복 허용",
+    "pitch_explanators": "모든 확인 실제 투구; 반복 파울 뒤 매 투구 포함"
+  },
+  "season_mix": {
+    "rule": "q_y=N_y0 / sum_y N_y0; 모든 count·bootstrap에 고정. 각 시즌 V_yc/V_y0를 구한 뒤 혼합",
+    "comparison": "KBO 비교는 기존 보고서 13절의 동일한 MLB q 적용 계획. 미실시."
+  },
+  "formula": "z_i=W_i/V_y0; residual_i=z_i-m_hat_minus_fold(X_i); J(c)=100+100*sum_y q_y*(mean(residual|y,c)-mean(residual|y,0-0))",
+  "uncertainty": {
+    "refit_intervals": null,
+    "note": "미산출; OBS의 CI를 재사용하면 안 됨"
+  },
+  "hyperparameters": {
+    "alpha": [
+      20,
+      100,
+      500
+    ],
+    "central_alpha": 100,
+    "alpha_selection": "최적화/중첩 CV 아님; 세 설정 공개",
+    "objective": "sum_train (z-intercept-sum_j beta_j[level])^2 + alpha*sum beta^2; intercept unpenalized",
+    "features": [
+      "batter_year",
+      "pitcher_year",
+      "matchup",
+      "venue_year",
+      "score_bin",
+      "base_state",
+      "outs_when_up",
+      "inning_bin",
+      "game_year"
+    ],
+    "measurement_time": "PA 첫 기록",
+    "score_bins": {
+      "edges": [
+        "-inf",
+        -4,
+        -1,
+        0,
+        3,
+        "inf"
+      ],
+      "right": true,
+      "labels": [
+        "trailing4+",
+        "trailing1-3",
+        "tie",
+        "leading1-3",
+        "leading4+"
+      ]
+    },
+    "base_state": "1B+2*2B+4*3B (occupied flags)",
+    "inning_cap": 10,
+    "missing": "좌우 ?; 최종 feature fillna(missing).astype(str); 원 구현 변환 순서 유지",
+    "encoding": "전체 유효 PA에서 factorize; 훈련 미관측 수준 효과 0",
+    "cross_fit": {
+      "folds": 5,
+      "unit": "game_pk",
+      "assignment": "p.game_pk.unique() 순서를 rng.shuffle 후 i%5",
+      "rng": "OBS bootstrap를 끝낸 SAME default_rng(20260907); 새 seed로 초기화하지 않음",
+      "normalization": "V_y0와 q는 전체 유효 표본 기준; fold별 재추정 아님",
+      "time_split": false
+    },
+    "solver": {
+      "method": "가산 범주 효과 순차 좌표 갱신",
+      "max_iterations": 150,
+      "stop": "max(abs(fitted-old)) < 1e-7",
+      "tolerance": 1e-7
+    }
+  },
+  "output_fields": [
+    "count",
+    "adjusted_index_alpha20",
+    "adjusted_index_alpha100",
+    "adjusted_index_alpha500",
+    "audit.model.<alpha>.OOF_MSE",
+    "audit.model.<alpha>.constant_MSE",
+    "audit.model.<alpha>.diagnostics"
+  ],
+  "prohibited": [
+    "causal effect",
+    "future prediction validation",
+    "complete common-population standardization"
+  ]
+}

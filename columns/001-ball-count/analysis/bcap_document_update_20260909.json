@@ -1,0 +1,496 @@
+{
+  "status": "COMPLETE",
+  "updated_at_utc": "2026-09-09T08:49:31.467588+00:00",
+  "generator": {
+    "path": "models/bcap/finish_documents.py",
+    "sha256": "989ee97e77f4a4e4831d6f3e85b35c34e0d437ef32c889b8d315f99ff5795417",
+    "bytes": 71279
+  },
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "models/bcap/finish_documents.py",
+    "--apply"
+  ],
+  "modified_MD": [
+    {
+      "path": "README.md",
+      "change": "BCAP 현재 상태·다음 검수와 실제 폴더/도구 구조를 갱신; BCAI·Drive 기존 내용 유지",
+      "before_sha256": "9113785be8b90a1de7d60189ce9ea6d2d5c2ba2a7695d9c229d302406d024a64",
+      "after_sha256": "b87fa46e5de2a12add6aa8bd82a3d6d43815e90d9e1b516bd84781bbc99201f7",
+      "before_bytes": 5708,
+      "after_bytes": 7358,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/README.md"
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "change": "BCAP 미착수 문단을 실제 EXPERIMENTAL 범위로 교체하고 실행별 완료/보류·해석 연결 추가",
+      "before_sha256": "145872fc4a89f8c362e74b0cbc9e7916c9c1c1cc8341e0a23f2bb08baed10c41",
+      "after_sha256": "54d62305ae602ac0844f3e580526ee3b76915a2db8b2b2555f159bfac4585668",
+      "before_bytes": 14851,
+      "after_bytes": 17672,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/columns/001-ball-count/column.md"
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "change": "기존 원본 재사용·새 정제본 감사·2026 정의와 가중치·공개 일차 출처·업로드 미실시 추가",
+      "before_sha256": "ae8df4f2c89133f6cded2ba901fac2549a79bdc1d4a36273a2408cc15d616e72",
+      "after_sha256": "bf3d5f539080ae9afa7ab54a0af98a9dd6b8a2e8697e2261b88fd5646a6d5893",
+      "before_bytes": 16726,
+      "after_bytes": 19752,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/columns/001-ball-count/sources.md"
+    },
+    {
+      "path": "models/registry.md",
+      "change": "기존 BCAI 등록 유지하며 BCAP 두 버전의 현재 상태·정의·실행 범위 등록",
+      "before_sha256": "2dcdc7abd16e8a76406bdf31657c57a298b3e63aee1aba04a43a1fb47c2d9826",
+      "after_sha256": "1196c692b150620252fa455eb52bbd1e31fe63a149f478451a09948e3b4c518d",
+      "before_bytes": 4543,
+      "after_bytes": 5983,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/models/registry.md"
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/model_card.md",
+      "change": "최초 DRAFT 역사와 실제 EXPERIMENTAL 상태·추정 대상·외부/권고 한계·실행 링크 기록",
+      "before_sha256": "de2e29361b0e3569f601e546434436939d0baf8e8287e49e2989d5cb5d673e3e",
+      "after_sha256": "ebd1f8d131f026972737bd2c3c5822fbb20eaa555067c30ee70b97ccf0167ec2",
+      "before_bytes": 222,
+      "after_bytes": 4636,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/models/bcap/pitch/v0.1.0/model_card.md"
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/validation.md",
+      "change": "실제 수렴·분할·독립 PASS·외부 평가와 8회 재학습 한계에 맞춰 검증 범위 갱신",
+      "before_sha256": "74fcef5bd44ac50058cf794a9d7a1b764d3b99703e7634e1afa6936b038a3fb2",
+      "after_sha256": "e32baa917d8d4492dda4949167bbc87cf002697ce58064d769d37bfe8a5bc1b0",
+      "before_bytes": 123,
+      "after_bytes": 5882,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/models/bcap/pitch/v0.1.0/validation.md"
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/model_card.md",
+      "change": "최초 DRAFT 역사와 실제 EXPERIMENTAL 상태·추정 대상·외부/권고 한계·실행 링크 기록",
+      "before_sha256": "e75a18fb4177aa939310414b81fbb355b61fb865a59b41204f1b23ea8fa199b6",
+      "after_sha256": "61aee76f91b4a7765f4971c9d89c505fb2d1b6cad72345359c6374019e380992",
+      "before_bytes": 222,
+      "after_bytes": 4429,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/models/bcap/swing/v0.1.0/model_card.md"
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/validation.md",
+      "change": "실제 수렴·분할·독립 PASS·외부 평가와 8회 재학습 한계에 맞춰 검증 범위 갱신",
+      "before_sha256": "3922d90ee78e9f894c7c3d61fcf071d977594f0064c6aad9ca9adf10a035c29d",
+      "after_sha256": "1e020e166887a385576871f08951830fbd45f381d20b37d490b5b47252c995ea",
+      "before_bytes": 123,
+      "after_bytes": 5282,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/models/bcap/swing/v0.1.0/validation.md"
+    },
+    {
+      "path": "models/bcap/README.md",
+      "change": "BCAP 모델 역할·실행 ID·코드 위치·재현과 보존 규칙을 새 안내로 생성",
+      "before_sha256": null,
+      "after_sha256": "2785c140f5eb9c1f17f0ee20cd8afb285409c15543251af9ec1ac526f539ea67",
+      "before_bytes": null,
+      "after_bytes": 8751,
+      "backup": null
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "change": "원 인계 별도 보존 후 실제 실행·수치·정책·외부 열람·검산·미완료 증거를 자급식 인계로 갱신",
+      "before_sha256": "ec156b95f8267f33e9a6385c97388eda3691db23123cf9881fe6d22e057b771d",
+      "after_sha256": "99bcdab0d93b8373e52d91cd1e944cba85272d3a73de4f0cfb757d894f0f746b",
+      "before_bytes": 30244,
+      "after_bytes": 19456,
+      "backup": "columns/001-ball-count/analysis/bcap_document_backups_20260909_r01/columns/001-ball-count/analysis/handoff_bcap_review.md"
+    }
+  ],
+  "execution_evidence": {
+    "path": "columns/001-ball-count/analysis/bcap_execution_evidence_20260909.json",
+    "sha256": "07cbe0641fd3de87e45717eb2af70be1bea01790a8f6cab27240cd8ccc5c574f",
+    "bytes": 922020
+  },
+  "immutable_originals_preserved": {
+    "columns/001-ball-count/analysis/handoff_bcap_review_evidence.json": "a27fcc7fe706cd0f8fe754290284492d70e6a784cb34132e668c25368fae39c7",
+    "columns/001-ball-count/analysis/handoff_bcap_review_validation.json": "9f77d3040f0b5a8dc16bce505cfd8e6fbccb569ae895fcea6fe3388a1a026a48",
+    "columns/001-ball-count/analysis/bcap_original_handoff_20260909/handoff_bcap_review.md": "d89b251feacf2f2874010301e719de97e1c38d11c8207061bfd9f8a66aeeca16",
+    "columns/001-ball-count/analysis/bcap_original_handoff_20260909/README.md": "9113785be8b90a1de7d60189ce9ea6d2d5c2ba2a7695d9c229d302406d024a64",
+    "columns/001-ball-count/analysis/bcap_original_handoff_20260909/column.md": "145872fc4a89f8c362e74b0cbc9e7916c9c1c1cc8341e0a23f2bb08baed10c41",
+    "columns/001-ball-count/analysis/bcap_original_handoff_20260909/sources.md": "ae8df4f2c89133f6cded2ba901fac2549a79bdc1d4a36273a2408cc15d616e72",
+    "columns/001-ball-count/analysis/bcap_original_handoff_20260909/registry.md": "2dcdc7abd16e8a76406bdf31657c57a298b3e63aee1aba04a43a1fb47c2d9826"
+  },
+  "sealed_files_preserved": {
+    "models/bcap/run.py": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+    "models/bcap/data.py": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+    "models/bcap/verify_bcap.py": "21659c120c22cb5d0c429f7ec919f420ca60633ad69e61d966284fb27a841407",
+    "models/bcap/design_decisions.md": "557c75f5ea000319cd8df26595f9e16546d7f6659d3905e5062f5fb692152783",
+    "models/bcap/measurement_review.md": "0bb65a9afd12b7160d2047b8c9250530d99c50c33565fad28172f03148100074",
+    "models/bcap/pitch/v0.1.0/specification.yaml": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_nuisance.pkl": "c15b259553617fd0b30259d88092607134dfb244f5305748f95df100b46751a8",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_policy.json": "6969653164fb8a55d3bfbbf5a0c9125da208b32fd72b3883976def36c0627399",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_hyperparameters.json": "c739a076b8828935c352caef1411b10b23e27e578d9f2684fc4764da1807e7dd",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json": "4c176be78b27c9c91b4b5658b15019b053647e31d7744b3ab2008a99e922a6c6",
+    "models/bcap/swing/v0.1.0/specification.yaml": "c6096df97014420840f5bf5d5ef34a531e15a586ab64ef23a5ef73aae2cfe59d",
+    "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_nuisance.pkl": "04ae4f8a67d7ffe9c6ee0936bb1943b6b180cd0ffc6d6bd27332adae1f17fa15",
+    "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_policy.json": "4934627095c5f8c8b0b14e5684e2d2237d6494e7fb4df705061f4602615ed8c5",
+    "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_hyperparameters.json": "c739a076b8828935c352caef1411b10b23e27e578d9f2684fc4764da1807e7dd",
+    "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/manifest.json": "0e7094ca0cff30375125bba37816be90f7595e9482543f69d3d52781eebe4154",
+    "models/bcap/refit_stability.py": "f93f80b441cd9c1fa4d596ae0807e97c49aae279c040f568984da4777f380931",
+    "models/bcap/supplement_diagnostics.py": "7bb74bca074edbd6e7d3ab572a6e0f5a2487e67be8ef138561f564c768075b8e",
+    "models/bcap/build_report.py": "f560ed66243d45b6b813fda2ed21d320a813c6d51171244ee9813e68153724ab",
+    "models/bcap/check_artifacts.py": "b709c6b633aa829b6aa754ae11d76530b4bf2cf135e22f12e99f67418ffc1907",
+    "models/bcap/finalize_seal.py": "715e9f71fc1ec0f761a13c63d31e74c5c2e734cdf8bc97fa3e3de38cbd5da453",
+    "models/bcai/observed/v1.0.0/specification.yaml": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+    "models/bcai/ridge/v0.2.0/specification.yaml": "a1bdf90156585d4e1208aae20e7f97d543a9989c8d93f47de94279f9d2d94f7f",
+    "columns/001-ball-count/analysis/bcap_request_original.txt": "fb8acc64881548f043f3aeae964905ab4db963fc037e617945dd3d8e636a6371",
+    "columns/001-ball-count/analysis/bcap_preparation_20260909_r01/preparation_audit.json": "4d792ce1e081b4f80b2d26f54c35f2c5358f5f66eb389cd29b09a0257b1a984d"
+  },
+  "inputs_read": [
+    {
+      "path": "README.md",
+      "sha256": "9113785be8b90a1de7d60189ce9ea6d2d5c2ba2a7695d9c229d302406d024a64",
+      "bytes": 5708
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_execution_commands_20260909.json",
+      "sha256": "f8021bd87e4334f18197d9b19263fa94437fe5e46d5c742892ce7cfae9a5dd7c",
+      "bytes": 15079
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/action_lineage_validation.json",
+      "sha256": "92b25bd31583bdff106d24ba50c9aed7e0e7b45c6e14ad947e6c2f1ab75bfdda",
+      "bytes": 20498
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/behavior_comparison_manifest.json",
+      "sha256": "568ad8ec21e6ace0b0e64f13b6fe1f4c58b2f9599aa6180320eccbe19933a178",
+      "bytes": 7173
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/bootstrap_final_validation.json",
+      "sha256": "f7ec50418106a86df0a17d5a7405bc3e5c0485a1600ef244786266912918c085",
+      "bytes": 68770
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/legacy_asset_preservation.json",
+      "sha256": "0ff86caf2fd2f73cd532f512fb4e3e9b3762f9d0c449f8151076e2b2c582bcd5",
+      "bytes": 256409
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2023_external_supplement/supplement_manifest.json",
+      "sha256": "a3e2ea423e721a1ab2e2f1bd5f8e3569b48364b2f96ccb667d92c849f78e171d",
+      "bytes": 3575
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2023_external_validation.json",
+      "sha256": "6e173a19295a6d261436531bde03aeffdbd3aebc25179ea746686fc7c42bd578",
+      "bytes": 23059
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/supplement_manifest.json",
+      "sha256": "e68c13bf92f037bd04fd60cbbc600f8623f1b9e072405e6462f2e91f8d8f2f1e",
+      "bytes": 3627
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_validation.json",
+      "sha256": "9e5457d14c640619533fb6eb2ffb2bdf6581acd2485d23ab8be9a2a0a4ecd74c",
+      "bytes": 23123
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_development_complete_validation.json",
+      "sha256": "c40c39905c39f6058e335711ad3a49f237f83f3e685d0d2d1f4e8f21e9effb28",
+      "bytes": 31639
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_development_supplement/supplement_manifest.json",
+      "sha256": "7e1a3566e10eb821046ef0d0e4d7952afc705c54745cc7d72c913b3cd2c9cb6c",
+      "bytes": 3298
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/postseal_descriptive_comparison/comparison_manifest.json",
+      "sha256": "01487973bdcc9f67cf1a5cc5ab06bb6702e851633e8a107727b8c43cffc14d64",
+      "bytes": 12816
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/score_timing_validation.json",
+      "sha256": "1fcb4d8ac3483cca259af3ea81a611b5face0234cec7ed475fcd1654adb1a4e0",
+      "bytes": 123932
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_2023_external_supplement/supplement_manifest.json",
+      "sha256": "3ba5ab648b249bd0f00bece258b589b87dfab44f6f2b559962daab00ff2522fe",
+      "bytes": 3575
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_2023_external_validation.json",
+      "sha256": "586de29ae870ac14493b7003be3dc966bcd7653a45801117f5fc6b1b5daa4b48",
+      "bytes": 23214
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_complete_validation.json",
+      "sha256": "9a507e1204a25d8158f2c5fe7f096317d4b67d2795099b4dc07b66c2b4663c22",
+      "bytes": 31860
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/supplement_manifest.json",
+      "sha256": "3cbed215dbbb34f5721580fc7b73e8bd200f0d30f4ebd35183ec62a0c10d37a5",
+      "bytes": 3298
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_original_handoff_20260909/handoff_bcap_review.md",
+      "sha256": "d89b251feacf2f2874010301e719de97e1c38d11c8207061bfd9f8a66aeeca16",
+      "bytes": 29621
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_preparation_20260909_r01/preparation_audit.json",
+      "sha256": "4d792ce1e081b4f80b2d26f54c35f2c5358f5f66eb389cd29b09a0257b1a984d",
+      "bytes": 22799
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_report_20260909_r01/report_manifest.json",
+      "sha256": "27792d565922c07538534804c685b20070536b131285fe9764ebd08d157d5ca4",
+      "bytes": 45255
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "sha256": "ec156b95f8267f33e9a6385c97388eda3691db23123cf9881fe6d22e057b771d",
+      "bytes": 30244
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review_evidence.json",
+      "sha256": "a27fcc7fe706cd0f8fe754290284492d70e6a784cb34132e668c25368fae39c7",
+      "bytes": 8370
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/action_values.csv",
+      "sha256": "714893e2b6b6a32e4453229d61fbb2da7aba9de3f7504423ad42fbe3e8f37a0e",
+      "bytes": 6209
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "d8f01c772904f09910daea7b519e846856412c4fbe283fce8b56f0dec16e961d",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "62ce0e8fd6448616e681b4b4a1bc0be5fead5f2433985808b52923f33d65a74b",
+      "bytes": 1050
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fold_records.json",
+      "sha256": "1409537997c36d48b54064da99ae6ad6ce20edd58a512fe6a425f2162472ab2e",
+      "bytes": 241983
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "fcddce8be4889129787452c8964d40a64310ece0e3e7e8c65ca46d1490852ef0",
+      "bytes": 15025
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/preparation_audit.json",
+      "sha256": "151b04646e7f0af8ce98d02de7bc6185440fb8cbe61062ee4dfc92e1456bd939",
+      "bytes": 13983
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/manifest.json",
+      "sha256": "721305d1a195c13d69cd14bd881357dbe1f3dbf2612677bfe14cf7fed5dca2d4",
+      "bytes": 32001
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r01/manifest.json",
+      "sha256": "781948234deb9cfab2101b1194edf5debfedc1f86cc343a62ec9062b188ca98f",
+      "bytes": 12180
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r01/provenance_extension_20260909.json",
+      "sha256": "3bb7ca402f5154eb3f4effc74d9a94f24917f5089bb386c67c7d47d9d25a6092",
+      "bytes": 1388
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/action_values.csv",
+      "sha256": "76e96df8dc7c15c41be51957b0c1628780c61cceebf3e2f171c46130e9388fdd",
+      "bytes": 6221
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/fit_diagnostics.csv",
+      "sha256": "52514cba2b7d8365a173660ed1a46f2d60a5e7b53773cf5ec49194fe8f5e312f",
+      "bytes": 10738
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/fold_records.json",
+      "sha256": "87fc3ed022ea04d1a73f76dad516929f34a593309f02ba1ee260d369f36336f0",
+      "bytes": 1448823
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/policy_values.csv",
+      "sha256": "e324a3c81fc20dc01fb378643b40fbedff889f76fcd433fcc3601ad80e755bd1",
+      "bytes": 15121
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json",
+      "sha256": "4c176be78b27c9c91b4b5658b15019b053647e31d7744b3ab2008a99e922a6c6",
+      "bytes": 17925
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/manifest.json",
+      "sha256": "66d23d3a69617366bbe7334a7cdef7f87d8388bb897c750b1a1b9f1f38a92416",
+      "bytes": 27793
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/action_values.csv",
+      "sha256": "805055a47aef0023fa04b1d6607aeed1c6f075764658b17744c6717189551f56",
+      "bytes": 6202
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "6863dc4a0c2b0132df365a980cf986b550221f946f9b4e2ac92432b355105357",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "a3bee6c803a8f76b9cd1f91ebe32e811100e1fbd3fe769aa0ecbe105de6e250a",
+      "bytes": 1045
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fold_records.json",
+      "sha256": "bc7f577ceaeac13add479212cdcc0c931ad805633833bbd523f51465180192dc",
+      "bytes": 215733
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "ba8b493d8bb4ba0abc1fd9a567c42ca65b240d65d165ea997031e800f638b82e",
+      "bytes": 15024
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/preparation/preparation_audit.json",
+      "sha256": "0aaf13062ac9e2e84827acbe55ffa650580113e7bf70fb61f934f8c307666549",
+      "bytes": 13220
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+      "sha256": "bf57f56b5b3475a0d8362fddb379e0f520610c3fbe2a89a8cbe21fd654ac52b6",
+      "bytes": 31677
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/action_values.csv",
+      "sha256": "5468c5fc50be7a7cb9dbec3caa518003736f240a8682c5e28665e87eb8ba6696",
+      "bytes": 41009
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "36148fc471c79a3611d096d3597bd34f7f3e40f626095c26f96a781c0b11e15d",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "0ad08bad4ae71cbd220b2a3de3f6a1aec851ccdb09d7e46c5592b8fa6043a6b0",
+      "bytes": 1043
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fold_records.json",
+      "sha256": "1409537997c36d48b54064da99ae6ad6ce20edd58a512fe6a425f2162472ab2e",
+      "bytes": 241983
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "06f82c71f5d8b0cd5909af02bd9bf28028ad2a93ae868177ce7196254e2cc05b",
+      "bytes": 100383
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/preparation/preparation_audit.json",
+      "sha256": "0f84479c879d1143a08b10f5150cca7f234f302a5338161e4c6715918a7a97e9",
+      "bytes": 13983
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/manifest.json",
+      "sha256": "8d7f35a92e4b73ea4776f343e3764711a6ae2c74841291c8e5bcb9e6b56b4706",
+      "bytes": 32217
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/action_values.csv",
+      "sha256": "6315659f3878d83e34e1cb613381a336f5bd5e570ff9f294c3e10deeb3567f9b",
+      "bytes": 42024
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "16af2914c6b15b3b5b9a72276268ab463e6b8bb35ac1bbd17a0c6787421798ff",
+      "bytes": 10759
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/fold_records.json",
+      "sha256": "87fc3ed022ea04d1a73f76dad516929f34a593309f02ba1ee260d369f36336f0",
+      "bytes": 1448823
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "d519f61330712483cce61cee544c4f5f8c684a71ddde41680a18e39efab0ce59",
+      "bytes": 100638
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/manifest.json",
+      "sha256": "0e7094ca0cff30375125bba37816be90f7595e9482543f69d3d52781eebe4154",
+      "bytes": 18121
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/manifest.json",
+      "sha256": "afddabafc78ec2c1bda903ea3ff287f30b31b19d0a72a1d01912843dbe7d648e",
+      "bytes": 27974
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+      "sha256": "f097c7c33edf861bda9ed239104441559d72ee412bb3897fc295bebe1a820a43",
+      "bytes": 12588
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "sha256": "145872fc4a89f8c362e74b0cbc9e7916c9c1c1cc8341e0a23f2bb08baed10c41",
+      "bytes": 14851
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "sha256": "ae8df4f2c89133f6cded2ba901fac2549a79bdc1d4a36273a2408cc15d616e72",
+      "bytes": 16726
+    },
+    {
+      "path": "models/bcap/external_seal_20260909_r01.json",
+      "sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+      "bytes": 24585
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/model_card.md",
+      "sha256": "de2e29361b0e3569f601e546434436939d0baf8e8287e49e2989d5cb5d673e3e",
+      "bytes": 222
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/validation.md",
+      "sha256": "74fcef5bd44ac50058cf794a9d7a1b764d3b99703e7634e1afa6936b038a3fb2",
+      "bytes": 123
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/model_card.md",
+      "sha256": "e75a18fb4177aa939310414b81fbb355b61fb865a59b41204f1b23ea8fa199b6",
+      "bytes": 222
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/validation.md",
+      "sha256": "3922d90ee78e9f894c7c3d61fcf071d977594f0064c6aad9ca9adf10a035c29d",
+      "bytes": 123
+    },
+    {
+      "path": "models/registry.md",
+      "sha256": "2dcdc7abd16e8a76406bdf31657c57a298b3e63aee1aba04a43a1fb47c2d9826",
+      "bytes": 4543
+    }
+  ],
+  "verification": {
+    "all_9_expected_run_statuses_checked": true,
+    "5_complete_action_evaluations_1_measurement_withheld": true,
+    "both_8_replicate_bootstraps_complete": true,
+    "both_8_replicate_bootstrap_independent_audits_PASS": true,
+    "legacy_prior_hash_scope_checked_missing_or_mismatch_zero": true,
+    "five_independent_validations_PASS": true,
+    "six_run_report_16_tables_hash_checked": true,
+    "proposed_local_links_checked": true,
+    "no_sealed_model_or_specification_changed": true,
+    "original_handoff_evidence_validation_untouched": true,
+    "raw_data_rehash": "Not part of this document generator; use check_artifacts.py"
+  }
+}

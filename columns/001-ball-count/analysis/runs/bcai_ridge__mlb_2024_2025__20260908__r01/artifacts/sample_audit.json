@@ -1,0 +1,16 @@
+{
+  "rows": 1424427,
+  "all_PA": 366231,
+  "exclusions": {
+    "included": 364124,
+    "intentional_walk": 1065,
+    "truncated": 635,
+    "missing_final": 221,
+    "catcher_interference": 186
+  },
+  "multiple_events_PA": 0,
+  "eligible_PA": 364124,
+  "games": 4859,
+  "first_date": "2024-03-20",
+  "last_date": "2025-09-28"
+}

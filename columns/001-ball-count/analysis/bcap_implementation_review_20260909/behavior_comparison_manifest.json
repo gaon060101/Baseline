@@ -1,0 +1,154 @@
+{
+  "status": "COMPLETE",
+  "created_at_utc": "2026-09-09T08:34:45.432755+00:00",
+  "role": "postseal_presentation_only",
+  "new_analysis": false,
+  "policy_changed": false,
+  "recommendations": false,
+  "stage": "evaluation_nuisance",
+  "same_support_population": true,
+  "development_policy_role": "outer training-procedure policies, not final whole-development policy",
+  "external_policy_role": "fixed final development policy on external-CF support",
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_development_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "492a9e045adbce899033f18768572838277d0657f87e3307641496788a72ebad",
+      "bytes": 25311
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_development_supplement/supplement_manifest.json",
+      "sha256": "7e1a3566e10eb821046ef0d0e4d7952afc705c54745cc7d72c913b3cd2c9cb6c",
+      "bytes": 3298
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "f2775b42a16d954f2dae2e587ebd8a82aab4fa42679e08ec0ce52bf5675be6a1",
+      "bytes": 114241
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/supplement_manifest.json",
+      "sha256": "3cbed215dbbb34f5721580fc7b73e8bd200f0d30f4ebd35183ec62a0c10d37a5",
+      "bytes": 3298
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2023_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "ba54f35c36fcf48d5b1cb0ed6091d290c8fd00043a322b7e2f169802ce0497f4",
+      "bytes": 52405
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2023_external_supplement/supplement_manifest.json",
+      "sha256": "a3e2ea423e721a1ab2e2f1bd5f8e3569b48364b2f96ccb667d92c849f78e171d",
+      "bytes": 3575
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_2023_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "e644db17700df133ebd388262cb6a7fccd93ef1564680a1c16ceb1cf4c4bf7b3",
+      "bytes": 225645
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_2023_external_supplement/supplement_manifest.json",
+      "sha256": "3ba5ab648b249bd0f00bece258b589b87dfab44f6f2b559962daab00ff2522fe",
+      "bytes": 3575
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "822c79ae0b4b013c82600062c9d6cd67184a50aa235f53e160070223a86ebb8c",
+      "bytes": 52389
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/supplement_manifest.json",
+      "sha256": "e68c13bf92f037bd04fd60cbbc600f8623f1b9e072405e6462f2e91f8d8f2f1e",
+      "bytes": 3627
+    }
+  ],
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/behavior_comparison.md",
+      "sha256": "aa2e8c5c2db46631ce5fbcf2ba5fdf5699b56a3ce3d3cf7255f6c806f558f7ae",
+      "bytes": 10019
+    }
+  ],
+  "tables": [
+    {
+      "period": "2024_2025",
+      "variant": "pitch",
+      "rows": 12,
+      "source_csv": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_development_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "source_run": "bcap_pitch__mlb_2024_2025__20260909__r02",
+      "stage": "evaluation_nuisance",
+      "level": "count",
+      "all_saved_difference_values_reconcile": true
+    },
+    {
+      "period": "2024_2025",
+      "variant": "swing",
+      "rows": 12,
+      "source_csv": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "source_run": "bcap_swing__mlb_2024_2025__20260909__r01",
+      "stage": "evaluation_nuisance",
+      "level": "count",
+      "all_saved_difference_values_reconcile": true
+    },
+    {
+      "period": "2023",
+      "variant": "pitch",
+      "rows": 12,
+      "source_csv": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2023_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "source_run": "bcap_pitch__mlb_2023__20260909__r01",
+      "stage": "evaluation_nuisance",
+      "level": "count",
+      "all_saved_difference_values_reconcile": true
+    },
+    {
+      "period": "2023",
+      "variant": "swing",
+      "rows": 12,
+      "source_csv": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_2023_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "source_run": "bcap_swing__mlb_2023__20260909__r01",
+      "stage": "evaluation_nuisance",
+      "level": "count",
+      "all_saved_difference_values_reconcile": true
+    },
+    {
+      "period": "2026",
+      "variant": "pitch",
+      "rows": 12,
+      "source_csv": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "source_run": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "stage": "evaluation_nuisance",
+      "level": "count",
+      "all_saved_difference_values_reconcile": true
+    }
+  ],
+  "total_count_rows": 60,
+  "columns_used": [
+    "stage",
+    "level",
+    "state",
+    "rows_all",
+    "rows",
+    "PA",
+    "games",
+    "actual_action1_rate",
+    "candidate_expected_action1_share",
+    "candidate_share_minus_actual",
+    "candidate_expected_disagreement",
+    "conservative_change_region_share",
+    "conservative_expected_action1_share",
+    "conservative_expected_disagreement"
+  ],
+  "rendering_rule": "Select stage=evaluation_nuisance and level=count; order 0-0 through3-2. Format stored rates times100 to2decimals; stored candidate_share_minus_actual times100 is percentage-point difference. Use rows as shared denominator; rows_all pre-support eligible denominator; PA/games shared-support counts.",
+  "validation": {
+    "source_csv_identity_verified_against_supplement_manifest": true,
+    "exactly12counts_per_table": true,
+    "stored_difference_reconciles_to_candidate_minus_actual": true,
+    "all_rate_values_0_to1": true,
+    "all_shared_denominators_positive": true,
+    "conservative_retention_verified": true
+  },
+  "no_new_effect_estimates": true,
+  "primary_16_tables_modified": false,
+  "sealed_code_modified": false,
+  "swing_2026_evaluation_rows": 0,
+  "uncertainty": "No new confidence interval, hypothesis test, policy optimization, effect estimate, or recommendation. Existing descriptive proportions are formatted only."
+}

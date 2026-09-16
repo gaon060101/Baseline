@@ -1,0 +1,30 @@
+event,utc,source
+bcap_pitch__mlb_2024_2025__20260909__r01 start,2026-09-09T05:53:57.084787+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2024_2025__20260909__r01\manifest.json
+bcap_pitch__mlb_2024_2025__20260909__r01 finish,2026-09-09T05:53:58.356406+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2024_2025__20260909__r01\manifest.json
+bcap_pitch__mlb_2024_2025__20260909__r02 start,2026-09-09T05:54:44.083355+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2024_2025__20260909__r02\manifest.json
+bcap_swing__mlb_2024_2025__20260909__r01 start,2026-09-09T05:57:06.014373+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2024_2025__20260909__r01\manifest.json
+bcap_pitch__mlb_2024_2025__20260909__r02 finish,2026-09-09T06:02:44.847051+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2024_2025__20260909__r02\manifest.json
+bcap_pitch__mlb_2024_2025__20260909__r03 start,2026-09-09T06:03:40.112980+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2024_2025__20260909__r03\manifest.json
+bcap_swing__mlb_2024_2025__20260909__r01 finish,2026-09-09T06:10:20.553139+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2024_2025__20260909__r01\manifest.json
+bcap_swing__mlb_2024_2025__20260909__r02 start,2026-09-09T06:11:41.019443+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2024_2025__20260909__r02\manifest.json
+core_local_seal,2026-09-09T06:13:36.032789+00:00,C:\Users\백창현\Desktop\Baseline\models\bcap\external_seal_core_20260909_r01.json
+final_local_seal,2026-09-09T06:13:44.654276+00:00,C:\Users\백창현\Desktop\Baseline\models\bcap\external_seal_20260909_r01.json
+bcap_pitch__mlb_2023__20260909__r01 start,2026-09-09T06:14:39.506270+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2023__20260909__r01\manifest.json
+bcap_pitch__mlb_2023__20260909__r01 first BCAP result access,2026-09-09T06:14:39.518503+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2023__20260909__r01\artifacts\external_access_log.json
+bcap_swing__mlb_2026_ytd_20260907__20260909__r01 start,2026-09-09T06:15:29.126893+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2026_ytd_20260907__20260909__r01\manifest.json
+bcap_swing__mlb_2026_ytd_20260907__20260909__r01 finish,2026-09-09T06:15:29.151986+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2026_ytd_20260907__20260909__r01\manifest.json
+bcap_pitch__mlb_2023__20260909__r01 finish,2026-09-09T06:16:29.016396+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2023__20260909__r01\manifest.json
+bcap_swing__mlb_2023__20260909__r01 start,2026-09-09T06:17:36.271879+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2023__20260909__r01\manifest.json
+bcap_swing__mlb_2023__20260909__r01 first BCAP result access,2026-09-09T06:17:36.283411+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2023__20260909__r01\artifacts\external_access_log.json
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01 start,2026-09-09T06:18:57.064685+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2026_ytd_20260907__20260909__r01\manifest.json
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01 first BCAP result access,2026-09-09T06:18:57.081644+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2026_ytd_20260907__20260909__r01\artifacts\external_access_log.json
+bcap_swing__mlb_2023__20260909__r01 finish,2026-09-09T06:20:48.704321+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2023__20260909__r01\manifest.json
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01 finish,2026-09-09T06:21:13.945174+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2026_ytd_20260907__20260909__r01\manifest.json
+postseal_descriptive,2026-09-09T06:27:25.211153+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\bcap_implementation_review_20260909\postseal_descriptive_comparison\comparison_manifest.json
+bcap_pitch__mlb_2024_2025__20260909__r03 finish,2026-09-09T08:23:56.047917+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_pitch__mlb_2024_2025__20260909__r03\manifest.json
+postseal_behavior,2026-09-09T08:34:45.432755+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\bcap_implementation_review_20260909\behavior_comparison_manifest.json
+bcap_swing__mlb_2024_2025__20260909__r02 finish,2026-09-09T08:45:24.101853+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\runs\bcap_swing__mlb_2024_2025__20260909__r02\manifest.json
+commands_reconstructed_after_execution,2026-09-09T08:46:27.675766+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\bcap_execution_commands_20260909.json
+execution_evidence_generated,2026-09-09T08:49:31.268706+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\bcap_execution_evidence_20260909.json
+current_document_update,2026-09-09T08:49:31.467588+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\bcap_document_update_20260909.json
+producer_final_audit,2026-09-09T08:50:00.232293+00:00,C:\Users\백창현\Desktop\Baseline\columns\001-ball-count\analysis\bcap_final_validation_20260909\validation.json

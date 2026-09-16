@@ -1,0 +1,24 @@
+--- failed r01 frozen source
+
++++ sealed successful engine
+
+@@ -19,7 +19,7 @@
+
+     with Path(p).open('rb') as f:
+         for b in iter(lambda:f.read(4*1024*1024),b''): h.update(b)
+     return h.hexdigest()
+-def meta(p): return dict(path=Path(p).relative_to(ROOT).as_posix(),sha256=sha(p),bytes=Path(p).stat().st_size)
++def meta(p): return dict(path=Path(p).resolve().relative_to(ROOT).as_posix(),sha256=sha(p),bytes=Path(p).stat().st_size)
+ def js(p,x): Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2,default=lambda v:v.item() if hasattr(v,'item') else str(v)),encoding='utf-8')
+ def read(p): return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+ def csv(p,x): pd.DataFrame(x).to_csv(p,index=False,encoding='utf-8-sig')
+@@ -241,6 +241,8 @@
+
+     run=ANAL/'runs'/runid
+     if run.exists():raise FileExistsError('Never overwrite run '+str(run))
+     run.mkdir(parents=True);art=run/'artifacts';art.mkdir()
++    for name in ['run.py','data.py']:(art/('frozen_'+name)).write_bytes((MODEL/name).read_bytes())
++    (art/'specification.yaml').write_bytes((MODEL/c['variant']/'v0.1.0/specification.yaml').read_bytes())
+     manifest=dict(run_id=runid,model_id=c['model_id'],version='0.1.0',model_status='DRAFT',status='RUNNING',role=period,started_at_utc=now(),environment=environment(),configuration=c,code=[meta(MODEL/'run.py'),meta(MODEL/'data.py')],definition=meta(MODEL/c['variant']/'v0.1.0/specification.yaml'))
+     js(run/'manifest.json',manifest);return run,art,manifest
+ def complete(run,art,m,status='COMPLETE'):

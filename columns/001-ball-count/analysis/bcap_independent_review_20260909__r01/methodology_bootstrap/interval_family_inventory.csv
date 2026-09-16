@@ -1,0 +1,9 @@
+﻿run_id,role,action_table_rows,nonempty_delta_intervals,nonempty_policy_gain_intervals,policy_value_individual95_intervals,primary_family_members
+bcap_pitch__mlb_2024_2025__20260909__r02,primary,13,13,78,78,91
+bcap_swing__mlb_2024_2025__20260909__r01,primary,105,85,510,510,595
+bcap_pitch__mlb_2023__20260909__r01,primary,13,13,78,78,91
+bcap_pitch__mlb_2023__20260909__r01,fixed_development_prediction_diagnostic,13,13,78,78,0
+bcap_swing__mlb_2023__20260909__r01,primary,97,85,510,510,595
+bcap_swing__mlb_2023__20260909__r01,fixed_development_prediction_diagnostic,97,85,510,510,0
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,primary,13,13,78,78,91
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,fixed_development_prediction_diagnostic,13,13,78,78,0

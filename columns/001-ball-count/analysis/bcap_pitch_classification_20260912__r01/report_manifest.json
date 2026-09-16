@@ -1,0 +1,73 @@
+{
+  "created_at_utc": "2026-09-11T17:52:54.044789+00:00",
+  "status": "COMPLETE",
+  "scope": "Korean development report from saved comparison tables",
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/primary_values.csv",
+      "sha256": "c0b27e1a775137b657896fa547de0955e1162f538deb37a2efce43d8bc31a0ac",
+      "bytes": 43396
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/year_fold_values.csv",
+      "sha256": "80361164b68a442e21ac5f81dbf33efee23ee22d8c5bc73505ae101ce0fcd423",
+      "bytes": 177357
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/pitch_composition.csv",
+      "sha256": "9e51ee0ae0fc09fa8e45d52a6119719acb587237ce80e669a965d797f3a96c64",
+      "bytes": 35722
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/support_exclusions.csv",
+      "sha256": "7fee40bd725b94420fd506a786418d4e7b81b0da742ad442361f7e48ae1198ba",
+      "bytes": 1947
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/summary.json",
+      "sha256": "6eb1f49ce7701f73203d4f4988f94a9ac9e131491edb149392d15d06648cc21e",
+      "bytes": 1604
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "54154785fb0c8bcb9fca732d5c318bbd848c36c51fe5af10425e93510f14496d",
+      "bytes": 13889
+    }
+  ],
+  "code": {
+    "path": "models/bcap/pitch_ff/v0.1.0/report.py",
+    "sha256": "e911df72f6f2eac4c561cba0bd5b9f16eb0236f933090143ddff6d22d4ddde9f",
+    "bytes": 24302
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/report.html",
+      "sha256": "b0a38e1a7bd6ee7ed9f04d7728c0b278efd1b6661c9799c442bb171dc382c6d5",
+      "bytes": 67455
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/report.md",
+      "sha256": "5192f75cdf4ddae5591e6d913efc9b7f82146131f18a50bf461b11c2b793ecba",
+      "bytes": 28988
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/reproduction.md",
+      "sha256": "2df06bb1f692abada27194ff6346d452f81e3064aea7f11ca99b33acae068190",
+      "bytes": 2900
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/headlines.json",
+      "sha256": "6f8555e28f1a3f3cda60718179a79cd8e274ba3241cf0d40fdc9d9b2449e3a53",
+      "bytes": 7921
+    }
+  ],
+  "formatting_revision": {
+    "at_utc": "2026-09-11T17:53:37.696466+00:00",
+    "change": "Unavailable legacy-only fields in FF headline JSON serialized as null; all estimates/HTML/Markdown unchanged.",
+    "headline_before": {
+      "path": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/headlines.json",
+      "sha256": "ea6f773a98ff9c790ebaf475f9a5a5ba61e47a3ca984761901a2b34c0151f1df",
+      "bytes": 7909
+    }
+  }
+}

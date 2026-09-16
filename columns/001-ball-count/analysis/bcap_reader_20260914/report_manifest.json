@@ -1,0 +1,16 @@
+{
+  "purpose": "Existing result presentation only; no model fitting or validation",
+  "inputs": {
+    "runs\\bcap_pitch_sb__mlb_2024_2025__20260912__r01\\artifacts\\count_values.csv": "778493cc496ff755d33adde1fe2e59d6135fdc52c593c868ef0d21be817aa5e8",
+    "runs\\bcap_swing__mlb_2024_2025__20260912__r01\\artifacts\\count_values.csv": "2ba6e3152a3063cf36e77b8f9c73cb669c740d7c438a2976ccd6d98d4b22abf2",
+    "bcap_v2_development_20260912__r01\\batter_five_regions.csv": "640a94f2362557979b209d27de7d5d725cc1a6912b9344236df31cd52343d0b2",
+    "runs\\bcap_pitch_compare__mlb_2024_2025__20260912__r01\\artifacts\\primary_values.csv": "c0b27e1a775137b657896fa547de0955e1162f538deb37a2efce43d8bc31a0ac"
+  },
+  "output_sha256": "9a6b090fb505be8e7df2bd8ac729f6863fe7525d1e7bdb366aa236c4d18aa426",
+  "row_checks": {
+    "sb": 12,
+    "swing_count": 12,
+    "five_regions": 60,
+    "classification": 48
+  }
+}

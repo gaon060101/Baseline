@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-09-11T17:02:23.257416+00:00",
+  "finished_at_utc": "2026-09-11T17:02:28.822168+00:00",
+  "scope": "Basic reused development-pickle checks; no raw source audit or independent verifier",
+  "years": [
+    2024,
+    2025
+  ],
+  "rows": 1424427,
+  "games": 4859,
+  "PA": 366231,
+  "eligible": {
+    "pitch": 1415566,
+    "pitch_sb": 1415566,
+    "swing": 1416043
+  },
+  "checks": [
+    {
+      "check": "development_years_only",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unique_complete_pitch_keys",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_count",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "count_labels",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "PA_Y_constant",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "terminal_event_link",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "result_classification",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "season_W_no_extra_reward",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "current_closed_pitch_mapping",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no_fine_lag_categories",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pitch_complete_binary_action",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "swing_complete_binary_action",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pitch_action_definition",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "swing_action_definition",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SB_complete_binary_action",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SB_boundary_legacy_separate",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "known_development_exception_rows",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "input": {
+    "path": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+    "sha256": "1aff16f91b58b4ed53b062a07c31381f4fe99b37ae983ece9b3d227f8c1c2fa4",
+    "bytes": 394585378
+  },
+  "output": {
+    "path": "columns/001-ball-count/data/processed/bcap_dev_v2_20260912__r01.pkl",
+    "sha256": "7ac1602e3ed5932ef1a7e3c26d9acb1cd9abc9a36e69234ff433cc3df7a05698",
+    "bytes": 417328886
+  },
+  "code": {
+    "path": "models/bcap/development_v2/v0.2.0/prepare.py",
+    "sha256": "76521d1fb51e462e792a567aea63a854c56ba7066e029b835e08ffd10fed40c6",
+    "bytes": 6357
+  },
+  "definitions": [
+    {
+      "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+      "sha256": "afad66dd7ecb1ca0a9d34f25c611d35014df26fa48e84b33a7521645fbda2778",
+      "bytes": 6098
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+      "bytes": 4980
+    }
+  ],
+  "known_exceptions": "Six known historically; two belong to2024/25 and retained. No external records opened, no cause investigation.",
+  "not_run": [
+    "external data",
+    "raw-file rehash audit",
+    "full independent review",
+    "refits or bootstrap"
+  ]
+}

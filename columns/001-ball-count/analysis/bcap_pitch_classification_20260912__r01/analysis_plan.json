@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-09-11T17:40:16.583690+00:00",
+  "model_id": "BCAP-PITCH-FF-v0.1.0",
+  "definition": {
+    "path": "models/bcap/pitch_ff/v0.1.0/specification.yaml",
+    "sha256": "1cca347cd366d63d8cc70770eded42ac5961a2764ccd7f6f394be3fbba104111",
+    "bytes": 5971
+  },
+  "engine": {
+    "path": "models/bcap/pitch_ff/v0.1.0/engine.py",
+    "sha256": "83dacd3592b4401f62d29ba184f1696f9c55e5a4db14094c73282ceded8d35d3",
+    "bytes": 10069
+  },
+  "existing_result_exposure": "Original V2 results have already been viewed, including3-0 and3-1 concerns; this is a development extension after exposure, not independent preregistration.",
+  "FF_outcome_exposure": "No FF/non-FF action-specific Y means, fitted contrasts or results inspected yet. Only source schema and pitch code/eligibility frequencies were inspected.",
+  "source": "columns/001-ball-count/data/processed/bcap_dev_v2_20260912__r01.pkl",
+  "old_run": "bcap_pitch__mlb_2024_2025__20260912__r01",
+  "new_run": "bcap_pitch_ff__mlb_2024_2025__20260912__r01",
+  "comparison_run": "bcap_pitch_compare__mlb_2024_2025__20260912__r01",
+  "closed_codes": {
+    "FF": [
+      "FF"
+    ],
+    "non-FF": [
+      "SI",
+      "FC",
+      "SL",
+      "CH",
+      "ST",
+      "CU",
+      "FS",
+      "KC",
+      "SV",
+      "FA",
+      "EP",
+      "KN",
+      "FO",
+      "CS",
+      "SC"
+    ]
+  },
+  "excluded_codes": [
+    "PO",
+    "UN",
+    "missing",
+    "any code outside closed list"
+  ],
+  "population": "Same existing eligible_pitch rows, completed selected PAs; PA exclusions and seasonal W exactly inherited. Retain known development count exceptions without changes.",
+  "estimand": "Current single-pitch family comparison in observed selected decision rows, final PA W. Same real evaluation rows per contrast; not intention, sequential policy, or identified causal intervention.",
+  "nuisance": "Exact original engine bytes, original pre-pitch14features, both player shrinkage, original game3fold assignments checked by row_id+pitch keys, seed20260909, fixedalpha100/1000/1000, training-game Platt, no tuning/full refit.",
+  "support": "Each scheme: train pitcher at least30 occurrences of each NEW action and .05<=OOF p<=.95. Common mask is intersection. No outcome Y/residual/sign threshold in mask; p is trained on action only. Common mask is model-dependent estimated support, not a preselected population.",
+  "denominators": "Coverage always support rows divided by all eligible rows in same count/year/fold. Common rows exactly identical for both schemes; each scheme retains its own action, p and ESS. Retention common/own also shown. Naive means use observed arms within those same supported rows, so arm composition differs; gcomp/AIPW standardize both arms to identical rows.",
+  "group_gates": {
+    "min_rows": 500,
+    "min_ess": 200,
+    "min_arm_games": 100,
+    "min_coverage": 0.5,
+    "max_game_share": 0.05
+  },
+  "practical_delta_W": 0.01,
+  "primary": "48count contrasts: 12counts x2schemes x2populations(own/common). No primary overall contrast, no statistical difference-of-contrasts because actions differ.",
+  "multiplicity": {
+    "legacy_family": 219,
+    "new_contrasts": 36,
+    "union_family": 255,
+    "primary_intervals": "Bonferroni255 for all48; retain nominal95 and old own219 for attribution, no promotion based on unadjusted intervals",
+    "auxiliary": "year2/fold3 x12 x2schemes x2populations, nominal95 descriptive only; no independent validation or new significance decisions"
+  },
+  "secondary": "Counts/action rates/propensity bins and quantiles/IPW ESS and game concentration; naive vs gcomp vs AIPW; all2years and3original folds; pitch composition including FF,SI,FC,existing NFB aggregate and actual code frequencies. These are saved-score aggregates, not new subtype models.",
+  "instability_rule": "Record any sign flip separately. Material instability if gcomp and AIPW have opposite signs and bothabs>=.01, or supported year/fold estimates include both <=-.01 and >=+.01. Naive-vs-adjusted flips indicate confounding sensitivity, not alone a gate failure.",
+  "decision_priority": [
+    "NO_SUPPORT if any primary sample/overlap gate fails; no favorable action assigned.",
+    "UNSTABLE if material instability rule holds; display point and intervals but withhold consistent-direction label.",
+    "SMALL_RANGE if full Bonferroni255 interval is within[-.01,.01]; conditional small-range evidence only, not universal equivalence.",
+    "CONSISTENT_DEVELOPMENT if corrected interval excludes0, abs(point)>=.01, both year and all3fold subgroups pass gates and share AIPW sign; gcomp no material opposing sign. Report separately whether interval lies beyond practical margin.",
+    "UNCERTAIN otherwise; distinguish tiny point/wide range, directional nominal-only, supported direction with practical-size uncertainty, and missing subgroup support."
+  ],
+  "basic_checks": "Keys, labels, W and count link inherited and checked; same original game split; no current/post-action predictors; calibration and dictionaries inside training; solver convergence; finite scores; independent rowwise AIPW arithmetic check in production; same action denominator; count totals; old saved results reproduced from scores without fitting.",
+  "not_run": [
+    "swing/SB modifications or fitting",
+    "old FB refit",
+    "external years2023/2026",
+    "new data/KBO",
+    "bootstrap/repeatedseeds",
+    "broad search",
+    "learned policy",
+    "independent full audit",
+    "Drive/publication"
+  ],
+  "stopping_rule": "Complete these two definitions, diagnostics and report; insufficient evidence is valid. No further definition/model search or automatic external verification."
+}

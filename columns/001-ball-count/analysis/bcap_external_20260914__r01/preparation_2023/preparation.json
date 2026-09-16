@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-09-14T03:07:14.812519+00:00",
+  "finished_at_utc": "2026-09-14T03:07:25.755287+00:00",
+  "year": 2023,
+  "rows": 720684,
+  "games": 2430,
+  "PA": 184478,
+  "weights": {
+    "BB": 0.696,
+    "HBP": 0.726,
+    "1B": 0.883,
+    "2B": 1.244,
+    "3B": 1.569,
+    "HR": 2.004
+  },
+  "weight_reference_year": 2023,
+  "eligible": {
+    "pitch": 716113,
+    "pitch_ff": 716113,
+    "pitch_sb": 716113,
+    "swing": 716385
+  },
+  "measurement_status": "2023 pre-2026 ball-center geometry; 2024/2025 concept retained",
+  "checks": [
+    {
+      "check": "specified_year_only",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "existing_input_rows_games_PA",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "complete_unique_pitch_keys",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unique_row_id",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pitch_order_unchanged_sorted",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "official_date_existing_bounds",
+      "status": "PASS",
+      "detail": {
+        "first": "2023-03-30",
+        "last": "2023-10-01"
+      }
+    },
+    {
+      "check": "valid_pre_pitch_counts",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "count_string_matches_pre_pitch_counts",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "PA_key_mapping",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "PA_Y_constant",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "eligible_PA_existing_count",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pitch_eligibility_existing_count",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pitch_eligibility_reason",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pitch_binary_complete_action",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "swing_eligibility_existing_count",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "swing_eligibility_reason",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "swing_binary_complete_action",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "terminal_event_link",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "OBS_result_classification",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "season_W_no_extra_reward",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "current_closed_FB_NFB_mapping",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "eligible_pitch_closed_codes",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "FB_action_labels",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Swing_action_labels",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "coarse_previous_pitch_categories",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "first_PA_lag_START_preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "FF_action_and_eligibility",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SB_binary_complete_action",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "known_exceptions_flagged_and_retained",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "input": {
+    "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_pitch__mlb_2023__20260909__r01.pkl",
+    "sha256": "f9bd3b64802ab98c68e5042b808a2602c486ea5227e6862b61c29070cde709ef",
+    "bytes": 199643609
+  },
+  "output": {
+    "path": "columns/001-ball-count/data/processed/bcap_external_v2_2023_20260914__r01.pkl",
+    "sha256": "2456c894a81292a544bf365e8b276db39a34a1385d979a4afc659bea3769962d",
+    "bytes": 216918238
+  },
+  "code": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/prepare_external.py",
+    "sha256": "d8c883e5327a82128b5d186207899368c7f927466eebb93f91a90bc8033b2340",
+    "bytes": 12791
+  },
+  "plan": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+    "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+    "bytes": 40247
+  },
+  "seal": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan_seal.json",
+    "sha256": "c367b76c1feab3beff3b26923cc719d9585dcf5ffcca4f1e00ad05633e0abcc0",
+    "bytes": 6578
+  },
+  "known_count_exceptions": "Existing unresolved exceptions flagged only; no correction or new audit",
+  "scope": "Minimal reuse checks. No raw re-audit, nuisance fits, action-value estimates or new data.",
+  "definitions": [
+    {
+      "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+      "sha256": "273c6d0fb5d3e80881dbff08821cf419f158cc627c358b5c6d6174542c989a29",
+      "bytes": 6655
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+      "bytes": 4980
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/specification.yaml",
+      "sha256": "a1bdf90156585d4e1208aae20e7f97d543a9989c8d93f47de94279f9d2d94f7f",
+      "bytes": 3690
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/all_strict_count_exceptions.csv",
+      "sha256": "b70573ba339358e078064663834c9d8f405fd674d90acb6ef63ec47ca855e91a",
+      "bytes": 1814
+    }
+  ]
+}

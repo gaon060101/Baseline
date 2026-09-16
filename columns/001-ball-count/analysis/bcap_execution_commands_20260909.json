@@ -1,0 +1,281 @@
+{
+  "recorded_at_utc": "2026-09-09T08:46:27.675766+00:00",
+  "cwd": "C:/Users/백창현/Desktop/Baseline",
+  "commands": [
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r02",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "develop",
+        "--model",
+        "pitch",
+        "--data",
+        "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+        "--run-id",
+        "bcap_pitch__mlb_2024_2025__20260909__r02"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py develop --model pitch --data columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl --run-id bcap_pitch__mlb_2024_2025__20260909__r02",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json",
+        "sha256": "4c176be78b27c9c91b4b5658b15019b053647e31d7744b3ab2008a99e922a6c6"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T05:54:44.083355+00:00",
+      "finished_at_utc": "2026-09-09T06:02:44.847051+00:00"
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r03",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/refit_stability.py",
+        "--model",
+        "pitch",
+        "--data",
+        "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+        "--development-run",
+        "bcap_pitch__mlb_2024_2025__20260909__r02",
+        "--run-id",
+        "bcap_pitch__mlb_2024_2025__20260909__r03",
+        "--replicates",
+        "8"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/refit_stability.py --model pitch --data columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl --development-run bcap_pitch__mlb_2024_2025__20260909__r02 --run-id bcap_pitch__mlb_2024_2025__20260909__r03 --replicates 8",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/manifest.json",
+        "sha256": "66d23d3a69617366bbe7334a7cdef7f87d8388bb897c750b1a1b9f1f38a92416"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T06:03:40.112980+00:00",
+      "finished_at_utc": "2026-09-09T08:23:56.047917+00:00"
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "external",
+        "--model",
+        "pitch",
+        "--year",
+        "2023",
+        "--run-id",
+        "bcap_pitch__mlb_2023__20260909__r01",
+        "--seal",
+        "models/bcap/external_seal_20260909_r01.json"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py external --model pitch --year 2023 --run-id bcap_pitch__mlb_2023__20260909__r01 --seal models/bcap/external_seal_20260909_r01.json",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/manifest.json",
+        "sha256": "721305d1a195c13d69cd14bd881357dbe1f3dbf2612677bfe14cf7fed5dca2d4"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T06:14:39.506270+00:00",
+      "finished_at_utc": "2026-09-09T06:16:29.016396+00:00"
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "external",
+        "--model",
+        "pitch",
+        "--year",
+        "2026",
+        "--run-id",
+        "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+        "--seal",
+        "models/bcap/external_seal_20260909_r01.json"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py external --model pitch --year 2026 --run-id bcap_pitch__mlb_2026_ytd_20260907__20260909__r01 --seal models/bcap/external_seal_20260909_r01.json",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+        "sha256": "bf57f56b5b3475a0d8362fddb379e0f520610c3fbe2a89a8cbe21fd654ac52b6"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T06:18:57.064685+00:00",
+      "finished_at_utc": "2026-09-09T06:21:13.945174+00:00"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r01",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "develop",
+        "--model",
+        "swing",
+        "--data",
+        "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+        "--run-id",
+        "bcap_swing__mlb_2024_2025__20260909__r01"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py develop --model swing --data columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl --run-id bcap_swing__mlb_2024_2025__20260909__r01",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/manifest.json",
+        "sha256": "0e7094ca0cff30375125bba37816be90f7595e9482543f69d3d52781eebe4154"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T05:57:06.014373+00:00",
+      "finished_at_utc": "2026-09-09T06:10:20.553139+00:00"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2024_2025__20260909__r02",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/refit_stability.py",
+        "--model",
+        "swing",
+        "--data",
+        "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+        "--development-run",
+        "bcap_swing__mlb_2024_2025__20260909__r01",
+        "--run-id",
+        "bcap_swing__mlb_2024_2025__20260909__r02",
+        "--replicates",
+        "8"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/refit_stability.py --model swing --data columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl --development-run bcap_swing__mlb_2024_2025__20260909__r01 --run-id bcap_swing__mlb_2024_2025__20260909__r02 --replicates 8",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/manifest.json",
+        "sha256": "afddabafc78ec2c1bda903ea3ff287f30b31b19d0a72a1d01912843dbe7d648e"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T06:11:41.019443+00:00",
+      "finished_at_utc": "2026-09-09T08:45:24.101853+00:00"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2023__20260909__r01",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "external",
+        "--model",
+        "swing",
+        "--year",
+        "2023",
+        "--run-id",
+        "bcap_swing__mlb_2023__20260909__r01",
+        "--seal",
+        "models/bcap/external_seal_20260909_r01.json"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py external --model swing --year 2023 --run-id bcap_swing__mlb_2023__20260909__r01 --seal models/bcap/external_seal_20260909_r01.json",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/manifest.json",
+        "sha256": "8d7f35a92e4b73ea4776f343e3764711a6ae2c74841291c8e5bcb9e6b56b4706"
+      },
+      "status": "COMPLETE",
+      "started_at_utc": "2026-09-09T06:17:36.271879+00:00",
+      "finished_at_utc": "2026-09-09T06:20:48.704321+00:00"
+    },
+    {
+      "run_id": "bcap_swing__mlb_2026_ytd_20260907__20260909__r01",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "external",
+        "--model",
+        "swing",
+        "--year",
+        "2026",
+        "--run-id",
+        "bcap_swing__mlb_2026_ytd_20260907__20260909__r01",
+        "--seal",
+        "models/bcap/external_seal_20260909_r01.json"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py external --model swing --year 2026 --run-id bcap_swing__mlb_2026_ytd_20260907__20260909__r01 --seal models/bcap/external_seal_20260909_r01.json",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+        "sha256": "f097c7c33edf861bda9ed239104441559d72ee412bb3897fc295bebe1a820a43"
+      },
+      "status": "WITHHELD",
+      "started_at_utc": "2026-09-09T06:15:29.126893+00:00",
+      "finished_at_utc": "2026-09-09T06:15:29.151986+00:00"
+    },
+    {
+      "run_id": "bcap_pitch__mlb_2024_2025__20260909__r01",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "develop",
+        "--model",
+        "pitch",
+        "--data",
+        "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+        "--run-id",
+        "bcap_pitch__mlb_2024_2025__20260909__r01"
+      ],
+      "shell_command": "& 'C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' models/bcap/run.py develop --model pitch --data columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl --run-id bcap_pitch__mlb_2024_2025__20260909__r01",
+      "source": "Recorded after execution from actual functions.exec tool invocations in this BCAP task; not shell history recovered independently",
+      "manifest": {
+        "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r01/manifest.json",
+        "sha256": "781948234deb9cfab2101b1194edf5debfedc1f86cc343a62ec9062b188ca98f"
+      },
+      "status": "FAILED",
+      "started_at_utc": "2026-09-09T05:53:57.084787+00:00",
+      "finished_at_utc": "2026-09-09T05:53:58.356406+00:00"
+    }
+  ],
+  "auxiliary_pipeline_reconstruction": [
+    {
+      "role": "development_preparation",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/data.py",
+        "--years",
+        "2024",
+        "2025",
+        "--output",
+        "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+        "--audit-dir",
+        "columns/001-ball-count/analysis/bcap_preparation_20260909_r01"
+      ],
+      "source": "columns/001-ball-count/analysis/bcap_preparation_20260909_r01/preparation_audit.json",
+      "kind": "reconstructed_from_saved_parameters_and_inspected_CLI_not_captured_shell_history",
+      "source_sha256": "4d792ce1e081b4f80b2d26f54c35f2c5358f5f66eb389cd29b09a0257b1a984d",
+      "warning": "Historical parameters only. Existing outputs must be preserved; reruns require new output names and, for fitted models, new run IDs and a new seal."
+    },
+    {
+      "role": "core_seal",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/run.py",
+        "seal",
+        "--pitch-run",
+        "bcap_pitch__mlb_2024_2025__20260909__r02",
+        "--swing-run",
+        "bcap_swing__mlb_2024_2025__20260909__r01",
+        "--output",
+        "models/bcap/external_seal_core_20260909_r01.json"
+      ],
+      "source": "models/bcap/external_seal_core_20260909_r01.json",
+      "kind": "reconstructed_from_saved_parameters_and_inspected_CLI_not_captured_shell_history",
+      "source_sha256": "b320a7fb42f71cc121ebb3f4b2d68c911b4ace6b9d6183a44bcd4a990e467ae5",
+      "warning": "Historical parameters only. Existing outputs must be preserved; reruns require new output names and, for fitted models, new run IDs and a new seal."
+    },
+    {
+      "role": "final_seal",
+      "argv": [
+        "C:/Users/백창현/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "models/bcap/finalize_seal.py",
+        "--core",
+        "models/bcap/external_seal_core_20260909_r01.json",
+        "--output",
+        "models/bcap/external_seal_20260909_r01.json"
+      ],
+      "source": "models/bcap/external_seal_20260909_r01.json",
+      "kind": "reconstructed_from_saved_parameters_and_inspected_CLI_not_captured_shell_history",
+      "source_sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+      "warning": "Historical parameters only. Existing outputs must be preserved; reruns require new output names and, for fitted models, new run IDs and a new seal."
+    }
+  ],
+  "reproduction": "Original IDs intentionally cannot be rerun/overwritten. Select unused current-date IDs and record newly selected development IDs in a new seal. Existing fixed-score verification can be rerun to a new audit path."
+}

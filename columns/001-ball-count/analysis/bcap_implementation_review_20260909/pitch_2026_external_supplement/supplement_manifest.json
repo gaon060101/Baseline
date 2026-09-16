@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-09-09T06:24:21.448067+00:00",
+  "model_id": "BCAP-PITCH-v0.1.0",
+  "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+  "development_run": "bcap_pitch__mlb_2024_2025__20260909__r02",
+  "sources": [
+    {
+      "stage": "evaluation_nuisance",
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/scores.pkl",
+      "sha256": "3188a3ca0ef085fd9dfedf4b68211b7929a599503f74fcf971c7d33383898ee0"
+    },
+    {
+      "stage": "fixed_development_prediction",
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fixed_development_predictions.pkl",
+      "sha256": "0f1cc0997437a2a00cd9da5427a5eb19abdefd645a0cc538c79434635f6bf925"
+    }
+  ],
+  "code": [
+    {
+      "path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\supplement_diagnostics.py",
+      "sha256": "7bb74bca074edbd6e7d3ab572a6e0f5a2487e67be8ef138561f564c768075b8e"
+    },
+    {
+      "path": "models/bcap/verify_bcap.py",
+      "sha256": "21659c120c22cb5d0c429f7ec919f420ca60633ad69e61d966284fb27a841407"
+    }
+  ],
+  "frozen_constant_source": "Development manifest metrics.Y_mean (full eligible development-row mean). Valid fixed external baseline; development comparison itself is a pooled descriptive reference, not an independent OOF baseline.",
+  "retrospective_constant": "Evaluation subgroup mean observed Y. Outcome-informed hindsight baseline, never used for external predictions.",
+  "known_definition": "Copied from saved scores: development nuisance-training roster for development; frozen complete-development roster for external.",
+  "IPW": "Unnormalized arithmetic mean indicator(A=a)*Y/p(a); Hajek is separately named weighted sum divided by weight sum. All share primary support mask.",
+  "intervals": "Individual normal95 fixed-score game-cluster intervals, no refit uncertainty or multiplicity certification. No recommendation gates upgraded.",
+  "fixed_development_stage": "Any fixed-nuisance AIPW values are descriptive transport diagnostics, not the external-refit OPE or additional independent validation.",
+  "command": [
+    "models/bcap/supplement_diagnostics.py",
+    "--run",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "--development-run",
+    "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02",
+    "--output",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement"
+  ],
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/calibration_bins.csv",
+      "sha256": "519e4055bf77e68a3d4198d8e2ca615a234e27df7fde90c525969c4150906b3d"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/calibration_summary.csv",
+      "sha256": "c8ebdcaf4a74f8e96b9cfed86e63823dd0fb342a58feeee061434c039d53618c"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/prediction_baselines_and_known_unseen.csv",
+      "sha256": "16f1c54d8c2e9e9109caed6585f1816995c2985cf585fb4f0d6cb2e511eb9638"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/pitch_2026_external_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "822c79ae0b4b013c82600062c9d6cd67184a50aa235f53e160070223a86ebb8c"
+    }
+  ]
+}

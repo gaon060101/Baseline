@@ -1,0 +1,717 @@
+{
+  "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+  "model_id": "BCAP-PITCH-v0.1.0",
+  "version": "0.1.0",
+  "model_status": "EXPERIMENTAL",
+  "status": "COMPLETE",
+  "role": "external_2023",
+  "started_at_utc": "2026-09-09T06:14:39.506270+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "executable": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "blas_threads": "2"
+  },
+  "configuration": {
+    "model_id": "BCAP-PITCH-v0.1.0",
+    "version": "0.1.0",
+    "status_at_definition": "DRAFT",
+    "variant": "pitch",
+    "format": "JSON-compatible YAML 1.2, consumed directly by run.py",
+    "estimand": "Selected observed decision-row distribution; replace current action once and let future natural mechanisms continue at changed states. Associational standardized/AIPW diagnostic without identified causal recommendation.",
+    "result": "Raw season-weighted final PA W from OBS, not normalized BCAI, no added transition reward",
+    "weights": {
+      "2023": {
+        "BB": 0.696,
+        "HBP": 0.726,
+        "1B": 0.883,
+        "2B": 1.244,
+        "3B": 1.569,
+        "HR": 2.004
+      },
+      "2024": {
+        "BB": 0.689,
+        "HBP": 0.72,
+        "1B": 0.882,
+        "2B": 1.254,
+        "3B": 1.59,
+        "HR": 2.05
+      },
+      "2025": {
+        "BB": 0.691,
+        "HBP": 0.722,
+        "1B": 0.882,
+        "2B": 1.252,
+        "3B": 1.584,
+        "HR": 2.037
+      },
+      "2026": "2025 fixed"
+    },
+    "pa_exclusions": [
+      "missing_final",
+      "intentional_walk",
+      "catcher_interference",
+      "truncated",
+      "unknown_event",
+      "no_observed_0_0"
+    ],
+    "selection": "Completed PA and final-event eligibility depend on future results, not pretreatment eligibility. Physical-record exclusions and measurement support also condition target. No general causal treatment effect claim.",
+    "actions": {
+      "FB": [
+        "FF",
+        "SI",
+        "FC"
+      ],
+      "NFB": [
+        "SL",
+        "CH",
+        "ST",
+        "CU",
+        "FS",
+        "KC",
+        "SV",
+        "FA",
+        "EP",
+        "KN",
+        "FO",
+        "CS",
+        "SC"
+      ],
+      "Swing": [
+        "swinging_strike",
+        "swinging_strike_blocked",
+        "foul",
+        "foul_tip",
+        "hit_into_play",
+        "foul_bunt",
+        "missed_bunt",
+        "bunt_foul_tip"
+      ],
+      "Take": [
+        "ball",
+        "blocked_ball",
+        "called_strike",
+        "hit_by_pitch"
+      ]
+    },
+    "action0": "NFB",
+    "action1": "FB",
+    "excluded_records": [
+      "automatic_ball",
+      "automatic_strike",
+      "PO",
+      "pitchout",
+      "swinging_pitchout",
+      "foul_pitchout",
+      "unclassified relevant action label"
+    ],
+    "features": [
+      "pitcher",
+      "batter",
+      "game_year",
+      "venue",
+      "matchup",
+      "count",
+      "base_state",
+      "outs_when_up",
+      "inning_bin",
+      "score_bin",
+      "pitch_number_bin",
+      "prev_pitch_type",
+      "prev_description",
+      "prev_release_speed_bin"
+    ],
+    "policy_key": "count",
+    "policy_X_Z": "X contains current actual pitcher/batter and nuisance context; Z is count (pitch) or count|zone|FB-NFB (swing). No fictitious all-zero average-player row.",
+    "feature_lineage": {
+      "base": "current prepitch count/context and same-PA strictly lagged pitch code/description/speed; current description only labels",
+      "speed_bins": "floor(mph/5), missing explicit category",
+      "movement_bins": "floor(feet/.5)",
+      "x_bins": "floor(feet/.35)",
+      "relative_z_bins": "floor(((plate_z-sz_bot)/(sz_top-sz_bot))/.2)",
+      "zone": "INNER abs(x)<=17/24-.15 and normalized z in [.1,.9]; OUT abs(x)>17/24+.15 or z<-.1 or z>1.1; remaining BOUNDARY; invalid/missing MISSING"
+    },
+    "post_measurement": "SWING current ball characteristics are hindsight proxies for perception. Nonpositive zone height and missing current ball measurements have no policy support. 2026 SWING withheld due no bridge.",
+    "forbidden_pitch": [
+      "current pitch_type",
+      "current release_speed",
+      "current or lag plate_x/z/zone",
+      "current description",
+      "current A_swing",
+      "current pitch outcome"
+    ],
+    "forbidden_both": [
+      "current description as predictor",
+      "events",
+      "final_event",
+      "result",
+      "Y",
+      "launch_speed",
+      "launch_angle",
+      "des",
+      "inplay_bunt_text_flag"
+    ],
+    "unknown_categories": "Training-only observed string dictionaries; each unknown centered categorical block contributes zero; unseen IDs never provide repertoire support by imputation",
+    "nuisance": "Action-specific ridge outcome T learner (both player IDs per arm). Binary ridge propensity score, Platt-calibrated on separate training games; clipping final e to numerical epsilon only.",
+    "ridge_objective": "sum(y-ybar-(X-Xbar)beta)^2 + alpha sum(beta^2); intercept unpenalized, all category slopes penalized; T learner uses action-specific training means",
+    "solver": {
+      "method": "Jacobi-PCG centered sparse Gram",
+      "rtol": 1e-09,
+      "atol": 1e-11,
+      "maxiter": 3000,
+      "relative_gradient_limit": 1e-07
+    },
+    "alphas": [
+      100,
+      1000
+    ],
+    "tuning": "5way train-game partition: fold0 calibration; fold1 tuning; folds2-4 initial fits. Select min clipped-score Brier for p and observed-arm MSE for mu separately; exact tie larger alpha. Final p fit folds1-4 then calibrate fold0. Final mu fit all training rows in arm. External alphas frozen, no tuning.",
+    "calibration": "sigmoid(intercept+slope*ridge_score); slope>=0; penalty1e-6*slope^2; heldout 20% training games; no outer evaluation or inner score games",
+    "outer_folds": 3,
+    "inner_folds": 2,
+    "external_folds": 3,
+    "seed": 20260909,
+    "split": "Sorted unique game IDs shuffled with NumPy default_rng seed then round-robin. outer seed; inner seed+1000+100*k; each inner nuisance seed+100+k; outer nuisance seed+2000+k; final inner seed+9000; final nuisance seed+9900; external seed+year and nuisance seed+year+100+k.",
+    "policy_class": "Per-Z inner AIPW mean argmin for pitch / argmax for swing; exact tie chooses action0; unseen or unsupported policy cell fallback Bernoulli(.5). Learned policy is a candidate diagnostic, not recommended. Final whole-development policy uses separate 2fold OOF scores.",
+    "policies": [
+      "observed mechanism meanY",
+      "always current action0",
+      "always current action1",
+      "learned candidate",
+      "conservative retain observed mechanism everywhere",
+      "stochastic current Bernoulli(.5)"
+    ],
+    "conservative": "Identification and full-learning uncertainty gates fail at design; H(Z)=0 everywhere. Contribution Y on retained rows, not propensity-plugged policy. Zero gain is definitional, not proof of effectiveness.",
+    "trim": 0.05,
+    "numerical_epsilon": 1e-06,
+    "support_entity": "pitcher",
+    "min_entity_arm_training": 30,
+    "support": "Both-arm >=30 in nuisance training entity AND .05<=e<=.95; SWING additionally valid zone, speed, movement, current group. Apply identical mask to both arms and all policies.",
+    "min_rows": 500,
+    "min_ess": 200,
+    "min_arm_games": 100,
+    "min_coverage": 0.5,
+    "max_game_share": 0.05,
+    "practical_delta_W": 0.01,
+    "threshold_rationale": "Pre-external conservative feasibility conventions, not empirical natural boundaries. delta .01 is raw W/current decision; never imported OBS ±5/15.",
+    "grade_priority": [
+      "If evaluated support/sample gates fail: NO_SUPPORT",
+      "If causal identification/realtime feasibility or full-learning uncertainty gate fails: UNCERTAIN",
+      "If CI includes0 or external eligible direction conflicts: UNCERTAIN",
+      "If all adjusted intervals exceed delta, fixed candidate gains>0 in both required external seasons, support sufficient and identification+full-learning uncertainty gates pass: RECOMMENDED",
+      "Otherwise supported direction with sign-adjusted interval excluding0: LEAN"
+    ],
+    "identification_gate": false,
+    "full_learning_interval_gate": false,
+    "unexecuted": "No grade. Store evaluation_status and explicit reason (e.g. WITHHELD_MEASUREMENT_NONCOMPARABILITY); distinguish from empirical NO_SUPPORT.",
+    "comparison_family": 1536,
+    "uncertainty": "Conditional fixed-OOF-score game-cluster ratio sandwich, t(G-1) individual95 and Bonferroni .05/1536 simultaneous envelope. Family upper bound covers 5 evaluable model-period runs, overall/count/swing cells and action/policy contrasts. Does not propagate nuisance/policy fitting or cross-game player dependence. Separate pitcher/batter clustering sensitivities. Full-refit game bootstrap stability planned8 per model, too few for95% inference; no promotion based on those.",
+    "sensitivity": [
+      "untrimmed measurement eligible, different target",
+      "trim .02,.05,.10 plus training repertoire, each target separate",
+      "clip .10 on same primary target",
+      "first PA-count decision only",
+      "fixed-score pitcher/batter clustering"
+    ],
+    "external": {
+      "development": [
+        2024,
+        2025
+      ],
+      "reproduction": 2023,
+      "forward_cutoff": "2026-09-07",
+      "prior_exposure": "Already used BCAI/Ridge; not wholly unseen datasets",
+      "policy": "Final development policy fixed",
+      "fixed_prediction": "Frozen development nuisance only, own prediction metrics/calibration/known-unseen",
+      "OPE": "3fold external-game nuisance with frozen dev alphas; train-only external dictionaries/calibration; final development policy unchanged",
+      "known_unseen": "Against final development pitcher/batter roster, not refit roster",
+      "2026_swing": "WITHHELD in entirety; neither raw location transport nor location-free substitute used"
+    },
+    "metrics": [
+      "eligible rows/PA/games/players",
+      "action ratios",
+      "mu MSE",
+      "p Brier/logloss/calibration",
+      "propensity quantiles",
+      "weights/ESS/game share",
+      "same-population AIPW Q/delta",
+      "fixed candidate OPE gain",
+      "known/unseen",
+      "trim/clip/revisit/cluster sensitivity"
+    ],
+    "joint": "Not designed: identification, sequential information and external SWING evidence insufficient"
+  },
+  "code": [
+    {
+      "path": "models/bcap/run.py",
+      "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "bytes": 25869
+    },
+    {
+      "path": "models/bcap/data.py",
+      "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+      "bytes": 18354
+    }
+  ],
+  "definition": {
+    "path": "models/bcap/pitch/v0.1.0/specification.yaml",
+    "sha256": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+    "bytes": 9650
+  },
+  "seal": {
+    "path": "models/bcap/external_seal_20260909_r01.json",
+    "sha256": "0fa8f05f2c2d75bc08d40433317890281c2007467520d365b5482c560d5e1105",
+    "bytes": 24585
+  },
+  "raw_inputs": [
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+      "sha256": "eb8b18a8a25c1bf017f6512b7770f0ecfcc0f69c04dac38707e874046788ef68",
+      "bytes": 3246455
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-03-30_2023-04-03.csv",
+      "sha256": "b3ef223a463499479b070b10998599a32edbd1ac26339b62c085876e1d115f04",
+      "bytes": 12297718,
+      "rows": 19352
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-04_2023-04-08.csv",
+      "sha256": "c9d3d3a1d0fd12595ec628c38553d8638edc9d40208b529c85a4d240b2941eee",
+      "bytes": 11599071,
+      "rows": 18230
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-09_2023-04-13.csv",
+      "sha256": "6d8ee2ab6bc0f4cb930a25009a8b0b855cef4bc83330539be7f47063353ab34a",
+      "bytes": 12587690,
+      "rows": 19784
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-14_2023-04-18.csv",
+      "sha256": "20bd3ee58a2d3af25110435a7af9742c1587509b72c136841083b5c461c4afc0",
+      "bytes": 13804170,
+      "rows": 21661
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-19_2023-04-23.csv",
+      "sha256": "b470a1fd3f5d0527cc1953f6cf113dcf7fcbbbd670b4c1f6ee3d6024ad42a099",
+      "bytes": 12499906,
+      "rows": 19671
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-24_2023-04-28.csv",
+      "sha256": "2f600ca9a8e764082989aab5215ae52168b6f4a7b6f6d3f29a3aa2aecdd3de77",
+      "bytes": 11801643,
+      "rows": 18586
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-29_2023-05-03.csv",
+      "sha256": "165b494a01307345b8dcb416eade9994e6eb2919c3475c10c9b63e7790aeba99",
+      "bytes": 12892949,
+      "rows": 20356
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-04_2023-05-08.csv",
+      "sha256": "0ef3b0fdd68eb76cfaa10d66fad8426ca0554c339a6b929317de0f817d6ea67d",
+      "bytes": 12476430,
+      "rows": 19577
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-09_2023-05-13.csv",
+      "sha256": "cc0a6dc89afba0f50225d9ec7aad9b6c8fee75b2b7225d98ed34983533c76fb4",
+      "bytes": 12144461,
+      "rows": 19071
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-14_2023-05-18.csv",
+      "sha256": "45de8834b0f338fdc74fb49c1bbf37eebabd2f0b165a6cbe1a85e12faa6e49fc",
+      "bytes": 11993055,
+      "rows": 18835
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-19_2023-05-23.csv",
+      "sha256": "013338046585a654659cf9ce360a97f055ed0d95d60d064b803fa6a3076d520a",
+      "bytes": 13444399,
+      "rows": 21121
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-24_2023-05-28.csv",
+      "sha256": "c4567429852d1252402cea0b5b3373cc3e11264c02dab0ddf64545416b17e23c",
+      "bytes": 13395345,
+      "rows": 21033
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-29_2023-06-02.csv",
+      "sha256": "e13b0199c40255c4b0c3245c0844fe08014dc5bea7feb31f5df7d348d9b69224",
+      "bytes": 11277665,
+      "rows": 17698
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-03_2023-06-07.csv",
+      "sha256": "29e164dd750d2c48edb75a3573b2d57578a0daa0bae715778d1b0bca4145bfaf",
+      "bytes": 12561530,
+      "rows": 19717
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-08_2023-06-12.csv",
+      "sha256": "16def9df372d9f1a74f20e8e645fefc5171ae9c4a45998e81c5f6c805bd0f95b",
+      "bytes": 12306814,
+      "rows": 19310
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-13_2023-06-17.csv",
+      "sha256": "d4218c64ed20a9a46c13666dcc73ed553cee249ca219fac12a92e8450379edfa",
+      "bytes": 13164344,
+      "rows": 20653
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-18_2023-06-22.csv",
+      "sha256": "ef76a452f20d337085e11c5b89087da1d293e8ca84ff648441b168dbd3c38c30",
+      "bytes": 11678175,
+      "rows": 18326
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-23_2023-06-27.csv",
+      "sha256": "1544cfb422f79c783c64ca3ac846daf74b8f08f3e788897ec66c48af21ab0d37",
+      "bytes": 12184353,
+      "rows": 19181
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-28_2023-07-02.csv",
+      "sha256": "d01ff2afc47099131ff6ffc9b7834ab90f96e409657834f51ac04bc9ff5df0ae",
+      "bytes": 13774272,
+      "rows": 21604
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-03_2023-07-07.csv",
+      "sha256": "cc12361ada90cf90eddcd5a5a6665129e143a58c6c23ee994d13f21f9199f7cd",
+      "bytes": 12635101,
+      "rows": 19812
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-08_2023-07-12.csv",
+      "sha256": "107579ef41a8e22379f3ed6e4f9fd8d4da92d874ba807049a1086f0cb9275267",
+      "bytes": 5150899,
+      "rows": 8088
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-13_2023-07-17.csv",
+      "sha256": "e9477b0b5343cfb53f9f65cdcc2071ffc6a1b7cc4185b0c89ddc89b2bbbf6d8c",
+      "bytes": 11530682,
+      "rows": 16885
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-18_2023-07-22.csv",
+      "sha256": "89e281b8afc5ead893bda77ad5b350f52790c766f5b248ac2251414fddfeccfd",
+      "bytes": 13991799,
+      "rows": 20457
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-23_2023-07-27.csv",
+      "sha256": "6fce23b3777d464433e73459329d885cee145d001e26e2c1dbcc6560143e12a3",
+      "bytes": 11868699,
+      "rows": 17486
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-28_2023-08-01.csv",
+      "sha256": "49b9b94a567429e3c4bc1eb975b47bb336286bb0b7fbcef9482943b9e476ff85",
+      "bytes": 13971997,
+      "rows": 20449
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-02_2023-08-06.csv",
+      "sha256": "32322bf216c42c818122c22a60bbfc581da22e138472498be927822599c0f8c0",
+      "bytes": 14049580,
+      "rows": 20563
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-07_2023-08-11.csv",
+      "sha256": "cae9c6d58803f6102d93f6b26f12aa8c15620f98d4b2e0665030fddb6231b34c",
+      "bytes": 12914717,
+      "rows": 18903
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-12_2023-08-16.csv",
+      "sha256": "ef0db9598c86efdb4470ec2ccaad14afbf3ac53979987c15f92e832febcf7270",
+      "bytes": 13931296,
+      "rows": 20346
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-17_2023-08-21.csv",
+      "sha256": "171ea6f09e6e01b538c4495ebe5ed64e083bc61e41de0cd93455b7b925883279",
+      "bytes": 12210071,
+      "rows": 17893
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-22_2023-08-26.csv",
+      "sha256": "fb9d1c08b303fd83dd4a6a47a7c9b2d9954a4efbdad0edfc52303cd6d9f2e6eb",
+      "bytes": 14095342,
+      "rows": 20611
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-27_2023-08-31.csv",
+      "sha256": "b029ddc8db08fc6113f81b3007016245a67909a63d40722dd3f709b049317caf",
+      "bytes": 12753246,
+      "rows": 18668
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-01_2023-09-05.csv",
+      "sha256": "7463985661e04f3ebde9d4fdf135ed57c69f76110d5cf5ff2e4de0c871a75a2b",
+      "bytes": 14811174,
+      "rows": 21638
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-06_2023-09-10.csv",
+      "sha256": "317a85ab58f282e45ea9a510406519ddf14c94cefd75409aade6a018e444bc12",
+      "bytes": 13547595,
+      "rows": 19849
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-11_2023-09-15.csv",
+      "sha256": "512b67c44e53ce432b08009023ee4de1d209b76f1cb4995772373930a126de68",
+      "bytes": 13874061,
+      "rows": 20324
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-16_2023-09-20.csv",
+      "sha256": "cb40aba4d557b9ca88d8b84e2672e00b37673702fb77bd3498e85dc31162db16",
+      "bytes": 14976398,
+      "rows": 21949
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-21_2023-09-25.csv",
+      "sha256": "2e55f5e1d4e7f115a79f102e6a42ac583595de27736b55e1cad071463b6bf2d5",
+      "bytes": 11682400,
+      "rows": 17128
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-26_2023-09-30.csv",
+      "sha256": "450380a788bf33c60d59674c78c9a57ccc726e049d864a5de6d516819bfde7cd",
+      "bytes": 14630746,
+      "rows": 21467
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-10-01_2023-10-01.csv",
+      "sha256": "a80b6965483f923842a51871a1982b178cac31ef384d2a6f4fd04354ba22e0d4",
+      "bytes": 3000040,
+      "rows": 4402
+    }
+  ],
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_pitch__mlb_2023__20260909__r01.pkl",
+      "sha256": "f9bd3b64802ab98c68e5042b808a2602c486ea5227e6862b61c29070cde709ef",
+      "bytes": 199643609
+    }
+  ],
+  "fixed_development_prediction_metrics": {
+    "n": 716113,
+    "games": 2430,
+    "Y_mean": 0.3076435394972581,
+    "outcome_MSE": 0.23687683508079263,
+    "Brier": 0.2299845017977185,
+    "log_loss": 0.6506148563088672,
+    "coverage": 0.8873194593590676,
+    "eligible_measurement_fraction": 1.0,
+    "raw_p_outside01": 0.004863757535472754
+  },
+  "metrics": {
+    "n": 716113,
+    "games": 2430,
+    "Y_mean": 0.3076435394972581,
+    "outcome_MSE": 0.23697279323635156,
+    "Brier": 0.2239698247713543,
+    "log_loss": 0.6371667075203675,
+    "coverage": 0.9741940168660532,
+    "eligible_measurement_fraction": 1.0,
+    "raw_p_outside01": 0.0042744650634746195
+  },
+  "policy_source": {
+    "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_policy.json",
+    "sha256": "6969653164fb8a55d3bfbbf5a0c9125da208b32fd72b3883976def36c0627399",
+    "bytes": 3438
+  },
+  "outcome_evaluations": 1,
+  "all_fits_converged": true,
+  "finished_at_utc": "2026-09-09T06:16:29.016396+00:00",
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/action_values.csv",
+      "sha256": "714893e2b6b6a32e4453229d61fbb2da7aba9de3f7504423ad42fbe3e8f37a0e",
+      "bytes": 6209
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/calibration.csv",
+      "sha256": "d7c6ff49595284eec4dfbb538cd10e4c4b87488a106a9af7a5d4884d8c789b94",
+      "bytes": 820
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/external_access_log.json",
+      "sha256": "d8f01c772904f09910daea7b519e846856412c4fbe283fce8b56f0dec16e961d",
+      "bytes": 467
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fit_diagnostics.csv",
+      "sha256": "62ce0e8fd6448616e681b4b4a1bc0be5fead5f2433985808b52923f33d65a74b",
+      "bytes": 1050
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_development_predictions.pkl",
+      "sha256": "bfcca445fa28fd00ddfef5e8b988b558b0c2394becbe6e08f0e25d5888750741",
+      "bytes": 118164621
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/action_values.csv",
+      "sha256": "1c3454619ee2bc4110cd9aa6f33c75e6f83c9b53edb0a39ac4a25273097a3e9b",
+      "bytes": 6198
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/calibration.csv",
+      "sha256": "345f5dc1e378927388532ab6d6b9596ce238416f1bbd177fb210398f211b93df",
+      "bytes": 824
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/known_unseen.csv",
+      "sha256": "b6c1e40f35b85c890dabea764e59c4a4a5526eb04d8954fafded1419952a8fdc",
+      "bytes": 510
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/metrics.json",
+      "sha256": "1ec314e6d19859903ffcce93414df428a9fc03e2a26822d2464ec96242e9f73c",
+      "bytes": 296
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/policy_values.csv",
+      "sha256": "54955cb3a27c735bb8e2f329422c13aeeb3917e28b95611c33bc25980a7b39a9",
+      "bytes": 15047
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/propensity_overlap.csv",
+      "sha256": "1aa305ed239d9eb3cdd98fabc3fc3270a3832fb1ff552a9e682cb4494a7899c8",
+      "bytes": 12252
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/sensitivity.csv",
+      "sha256": "ae9035757ef0c7d3c0de6ff09e813aa749d670b2466e3190fa7eba20a7159d9c",
+      "bytes": 12248
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_prediction_diagnostics/support_exclusions.csv",
+      "sha256": "19475ab5a18d4e5e12e1b1b5d24e9ac79a341b3a7b8acf5adcb9632bd40f7c10",
+      "bytes": 3018
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fold_records.json",
+      "sha256": "1409537997c36d48b54064da99ae6ad6ce20edd58a512fe6a425f2162472ab2e",
+      "bytes": 241983
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/frozen_data.py",
+      "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+      "bytes": 18354
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/frozen_run.py",
+      "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "bytes": 25869
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/known_unseen.csv",
+      "sha256": "5963718521dc7ba8d5eba49284bd9ad35bfaae44d264d281d15b11dc3037b976",
+      "bytes": 641
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/metrics.json",
+      "sha256": "e762eec07cfcb29aa2382431ee2a5388b6e9be28667ddd9c4e26adea5ace7ab1",
+      "bytes": 297
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/policy_values.csv",
+      "sha256": "fcddce8be4889129787452c8964d40a64310ece0e3e7e8c65ca46d1490852ef0",
+      "bytes": 15025
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/bunt_and_hbp_audit.csv",
+      "sha256": "be0d86074fd73d843414186c2a91f2657cc57079932be760f0dba07f6ad94508",
+      "bytes": 114
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/current_row_exclusions.csv",
+      "sha256": "a069fcc6147c18e769acc3d1bbf166cdafe8a058c8cc82d16b621c7471449217",
+      "bytes": 3131
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/description_action_audit.csv",
+      "sha256": "dda6c3e8b13623a9ff9867a9ac1af0551816eab0821f099fb443678b390a3eb6",
+      "bytes": 1014
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/missingness.csv",
+      "sha256": "f8d694010962336cae35a84aa3eacc495c7ae56dd7ea7d0f2d956be0fe763aca",
+      "bytes": 774
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/pa_exclusions.csv",
+      "sha256": "9bb1bd8908d25b096a00a698b6027a9ae5f2fa84b7830790d13a7f9c1d8a31f5",
+      "bytes": 874
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/pa_index.csv",
+      "sha256": "76ee462189d671a203600e00271a88f0421d0dd613cf6a6592407ca74363112b",
+      "bytes": 12088990
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/preparation_audit.json",
+      "sha256": "151b04646e7f0af8ce98d02de7bc6185440fb8cbe61062ee4dfc92e1456bd939",
+      "bytes": 13983
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/raw_descriptions.csv",
+      "sha256": "a19406a155f1157d7fb7bc0ed0c488642fce68676de38587f84a9a1e377c0b31",
+      "bytes": 390
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/raw_headers.json",
+      "sha256": "878558646b85aa9a89a9b46553dbf4c2ff7c680725827da140d6bf5bd54c1574",
+      "bytes": 112483
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/raw_pitch_codes.csv",
+      "sha256": "eb922cd84526114599f7fd6ded62a8798182c89d045cdd31bf3cb1cb5baad564",
+      "bytes": 458
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/sequence_anomalies.csv",
+      "sha256": "6231dc2eb34c1a6b0f94f02040346561b9ef75d543dc22ce158f263b199ac879",
+      "bytes": 101
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/propensity_overlap.csv",
+      "sha256": "19cfe9312e402d8218d7728bfe493c44ffc22265283674b21bafa129930ebb7a",
+      "bytes": 12206
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/scores.pkl",
+      "sha256": "f5185af7e4f3176311bc2cc772bcf37117954bbc745cd7117b1bbf649096fcc0",
+      "bytes": 123893749
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/sensitivity.csv",
+      "sha256": "1c492f1a6cef5ef7f5b9a903c8333b7fc9de3b5485645e08c2ba5af8c0f6e527",
+      "bytes": 12271
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/specification.yaml",
+      "sha256": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+      "bytes": 9650
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/support_exclusions.csv",
+      "sha256": "eeec9cfac4c319b4d2dc40bd833c5eaee3b0bcf3bd79f33d4079d5012212273c",
+      "bytes": 2866
+    }
+  ]
+}

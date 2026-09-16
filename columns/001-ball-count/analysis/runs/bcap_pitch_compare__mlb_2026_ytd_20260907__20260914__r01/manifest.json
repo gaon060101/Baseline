@@ -1,0 +1,56 @@
+{
+  "run_id": "bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01",
+  "model_id": "BCAP-PITCH-FF-v0.1.0",
+  "models": [
+    "BCAP-PITCH-v0.2.0",
+    "BCAP-PITCH-FF-v0.1.0"
+  ],
+  "model_status": "EXPERIMENTAL",
+  "status": "COMPLETE",
+  "year": 2026,
+  "completed_at_utc": "2026-09-14T03:19:21.892848+00:00",
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/scores.pkl",
+      "sha256": "aa137ab6381fabd973b6519e8e010c878d37e512f9726fb87ca06f4e0b78a0a2",
+      "bytes": 95270558
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/scores.pkl",
+      "sha256": "066f209da9178989617cf45f2ab5f22447a38b3601c8d927b384f9c95c52c582",
+      "bytes": 95270558
+    }
+  ],
+  "plan": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+    "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+    "bytes": 40247
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01/artifacts/basic_checks.json",
+      "sha256": "05de55f50e97a619d787a34c9d322a686ec2a5dadbb2bd299d6a516f2a6d78e1",
+      "bytes": 122
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01/artifacts/comparison_membership.pkl",
+      "sha256": "4ec51480cc17acdf38f28391aabd9531a53c09ff3dbd83f71176d3e18b1628d8",
+      "bytes": 27945808
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01/artifacts/fold_values.csv",
+      "sha256": "26c346ffa28607ea714e9af8b4112033411521c3f4cd3290884548e67158d45a",
+      "bytes": 107340
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01/artifacts/pitch_composition.csv",
+      "sha256": "463796281dfed73fcfb565a8f5afc3e18f959faa79e64c8f58fc1a29f59f6f10",
+      "bytes": 15446
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01/artifacts/values.csv",
+      "sha256": "ef0ddfff98fda9df272620c819d00359f16094f0920fbbbcd7458919df29723d",
+      "bytes": 33976
+    }
+  ]
+}

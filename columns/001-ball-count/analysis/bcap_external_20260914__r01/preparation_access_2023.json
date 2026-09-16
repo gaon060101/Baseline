@@ -1,0 +1,22 @@
+{
+  "at_utc": "2026-09-14T03:07:14.812519+00:00",
+  "year": 2023,
+  "event": "first_reused_external_input_row_load_for_V2_preparation",
+  "purpose": "Post-seal labels and key/W checks; no action-value estimation or fitting",
+  "source": {
+    "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_pitch__mlb_2023__20260909__r01.pkl",
+    "sha256": "f9bd3b64802ab98c68e5042b808a2602c486ea5227e6862b61c29070cde709ef",
+    "bytes": 199643609
+  },
+  "plan": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+    "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+    "bytes": 40247
+  },
+  "seal": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan_seal.json",
+    "sha256": "c367b76c1feab3beff3b26923cc719d9585dcf5ffcca4f1e00ad05633e0abcc0",
+    "bytes": 6578
+  },
+  "prior_exposure": "Existing BCAI/Ridge and BCAP V1 input; not a never-seen dataset."
+}

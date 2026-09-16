@@ -1,0 +1,26 @@
+id,원_요구,통계_구현_문제,채택_수정,근거,추정_대상_영향,구현_일치_여부,검수_판단
+M01,이상적 행동 패턴,한 구와 전체 PA 정책이 다른 목표,현재 한 구 개입과 미래 자연 메커니즘,design_decisions.md:9 및 run.py:128-161,관찰 도달 행당 최종 W이며 PA 전체 합산 불가,일치: 최종 Y 회귀와 현재 행동 AIPW; 미래열 복사 없음,단일 결정 진단 허용; 실제 개입 식별 미검증
+M02,최종 PA 가치 사용,완료 IBB 최종결과 제외가 사후 선택,선택된 완료 PA 행 표준화,양 specification.yaml:7 및 selection와 data.py:173-179,관찰 S=1 조건부 통계량; causal principal stratum은 아님,일치: 적격 필터 이후 적합,관찰진단 범위 가능; 반사실 목표와 명시적 수식 분리 권고
+M03,카운트별 공통 기준,반복 카운트/긴 PA가 행 가중을 늘림,모든 선택된 현재 행 및 첫 방문 민감도,run.py:219-223,의사결정 행 분포와 PA 균등 분포 다름,일치: 첫 PA-count 별도 sensitivity,가중 구조 공개 시 허용; PA 개선 합계 불가
+M04,카운트 가치에서 정책 도출,Q와 μ와 d가 서로 다른 객체,평균 AIPW와 조건부 회귀와 Z별 학습 정책 별도 저장,run.py:128-161 및174-188,카운트 Δ 승자를 개인 최적 행동으로 확대 불가,일치: μ/φ/정책 파일 역할 분리,허용; 후보 방향과 학습 행동 차이는 자동 오류 아님
+M05,상태별 정책,선수별 모든 상태 argmax는 외삽 위험,X nuisance와 Z 정책 count 또는 count-zone-group 분리,run.py:149-156; 양 명세 policy_X_Z,제한 정책 클래스의 후보만 평가,일치: policy_key 적용,적절한 제한이나 실시간 실행가능성 별개
+M06,평균 선수와 개인 역량 제거,선수 ID 삭제 또는 0 대체는 실제 표준화 아님,실제 평가행 ID 유지한 양 행동 예측 평균,run.py:41-78 및 score/diagnostics,같은 선수/상황 분포에 보정; 가상 평균선수 아님,코드 일치; 실제 예측 검수는 별도 담당,표준화 구현 적절; 미관측 의도/품질 교란 미해결
+M07,미관측 선수 평균 효과0,전체 예측이 평균으로 고정되는 오해,unknown 범주 블록만 중심 기여0,run.py:54-59,다른 알려진 블록과 intercept 유지,일치,허용; unknown repertoire support와 혼동 금지
+M08,FB/NFB 이진 구종,군 안 구종 품질 의도 버전 혼합,닫힌 명시 목록과 관찰 군 내 혼합 해석,data.py:27-32; design_decisions.md:12,compound action 진단; 실제 실행 버전 미지정,코드/명세 일치; raw 문자열은 별도 검사,현재 진단 허용; 행동 권고의 일관성 미검증
+M09,Swing/Take 비교,번트 실패만 제외하면 결과기반 선택,번트 포함 기록상 공격 시도 vs 판정상 Take,measurement_review.md:2절 및 data.py:29-32,full swing 효과 아님; 체크스윙/회피 혼합,닫힌 코드 매핑 일치; 실제 raw 근거 별도 검사,범위 제한 타당; 의도 기반 실제 행동 식별 불가
+M10,HBP 처리,HBP 제외는 Take 결과분포 선택,명시적 scored HBP를 Take로 포함,measurement_review.md:공식규칙5.05(b)(2); data.py:30-32,판정 행동 정의; 무동작 또는 의도적 Take와 다름,일치; 원자료 HBP 판정 연결 별도 검수,처리 논리 타당; 불명 라벨 일괄 Take 대체 금지 유지
+M11,PITCH 투구 전 입력,현재 공 특성은 행동 이후; lag 좌표도 측정변경,현재/직전 좌표와 현재결과 금지,양 명세 forbidden_pitch; run.py nuisance features,목표/이전 위치 교란은 남는 위치 없는 진단,명세 입력목록 일치,직접 좌표 혼용 축소; 2026 환경변화 제거 주장 불가
+M12,SWING 현재 공 정보,사후 측정은 실시간 지각이 아님,사후 공 특성 조건부 진단,run.py:31-39; Savant CSV 문서,실시간 행동 시점의 관측 가능 정보 정책 아님,일치: 사후 bins와 Z 사용,실시간 권고 불가; 측정한계는 통계량만 허용
+M13,경기 OOF DR,정책학습과 평가가 같으면 낙관,outer3 inner2 및 nuisance 내부 tuning/calibration,run.py:164-188,outer는 부분훈련 학습 절차 평가; 최종정책과 다름,코드 일치; bootstrap 432분할 해시 독립 일치,누수방지 설계 적절; 주 점수 적용은 별도 검사
+M14,전체 DR 추정,두 nuisance가 모두 오지정 가능,Ridge T learner 및 Ridge-score Platt 선택,run.py:95-125; Dudik2011 오류곱 논의,출력은 제한 근사모형 의존; 정확한 표준화값 보장 아님,선택/훈련N 로그 일치,통계적 정확성 미검증; 수렴으로 대체 불가
+M15,행동 겹침,선수 총30회가 상황별 positivity 아님,e .05-.95 repertoire30 measurement 공통 마스크,run.py:124 및133-139,trim target은 추정 지지 분포,명세 기준과 코드 일치,실용 기준으로 허용; 실제 상황 지지 충분성 미검증
+M16,표본과 등급,ESS와 N이 유효독립 표본 보증 못함,N500 ESS200 경기100 coverage.5 maxshare.05 delta.01,run.py:210-212; 명세 threshold_rationale,사전 운영 기준; 추천충분조건 아님,일치,임계값 근거는 관례; 충분성 별도 보류
+M17,정책 비교,관찰기전 유지와 확률.5 혼동,H=0 기여 Y 및 fallback Bernoulli.5 별도,run.py:157-161 및214-217,보수 gain0은 정의상; 모든 정책 동일 지원 행,일치; conservative_p1은 실제 행동률 해석 금지,동일분모 비교 허용; zero gain 효과 증명 아님
+M18,외부 고정모델 평가,개발 e가 외부 e와 다름,고정 nuisance 예측과 외부CF nuisance OPE 분리,run.py:299-308,정책 고정 평가와 모든계수 고정 예측은 다름,코드 일치; 정책 해시 주검수 연결,분리 타당; 서로 다른 support의 가치 직접 비교 불가
+M19,2026 SWING 외부,앞면→중간면 운영자존→ABS 정의변경,2026 전체 측정보류 및 대체모델 없음,Savant CSV 및 MLB ABS PDF; run.py:287-289,미실행이고 성과실패/NO_SUPPORT가 아님,일치; WITHHELD 평가0,보류 타당; 교량 검증 전 실행 불가
+M20,2026 PITCH 외부,좌표 외 규칙/판정/결과 메커니즘도 변함,좌표없는 입력 2025 W 고정,Savant/MLB 공식정의; 양 카드,현2026 분포의 관찰 진단만 가능,입력 명세 일치; 해석 보완 필요,규칙영향 해결로 확대 불가
+M21,전체학습 95구간,점수 고정은 모형/정책학습 변동 미포함,고정점수 경기 sandwich와 8회 refit 분리,run.py:141-147; refit_stability.py:142-193,명목 근사 구간; 실제95 포함률 미검증,공식과 저장역할 일치,숫자 재현 가능하나95 coverage 인증 보류
+M22,다중비교,전체 출력 모두가 한 가족은 아님,주 delta+6 gain family1536,run.py:209-217; 최종보고47줄; interval_family_inventory.csv,실제 주1463비교만 범위; valueCI는 individual95,독립209+1254=1463 확인,가족 산술 적절; 개별구간 타당성 보장 아님
+M23,경기bootstrap 전체절차,복제 원경기가 fold를 나누면 누수,원game 유지 시즌층화 8회 중첩평가 재학습,refit_stability.py:29-171; bootstrap_validation.json,8회는 중첩절차 안정성; final whole-dev 정책CI아님,16/16 multiplicity fold trainingN aggregates 독립 일치,저장집계 사용가능; 원행/객체없어 rawAIPW 미검증
+M24,RECOMMENDED/LEAN,관찰유의성과 행동권고 혼동,식별/full-learning false에서 최대UNCERTAIN,run.py:210-217; 양 명세 gate,지지충분이어도 권고없음,일치: 현재 gate가 false인 설정을 hard-code로 제한,현재버전 일치; gate 변경만으로 승격 불가
+M25,BCAP-JOINT,순차적 상대적응/균형 식별부족,설계와 실제모델 모두 보류,design_decisions.md:28; 명세 joint,결합정책/Nash값 없음,일치,근거부족 조건에 맞는 보류

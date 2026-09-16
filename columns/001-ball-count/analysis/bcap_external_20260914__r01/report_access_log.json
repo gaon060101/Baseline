@@ -1,0 +1,6 @@
+{
+  "at_utc": "2026-09-14T03:20:16.035471+00:00",
+  "event": "first_report_aggregate_read",
+  "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+  "scope": "Completed external aggregate tables; no fitting"
+}

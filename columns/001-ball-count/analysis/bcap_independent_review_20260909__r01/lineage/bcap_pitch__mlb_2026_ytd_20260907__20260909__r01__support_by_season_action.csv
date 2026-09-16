@@ -1,0 +1,9 @@
+﻿run_id,game_year,action,support,measurement_support,repertoire,propensity_in_bounds,exclusion_reason,rows
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,0.0,False,True,False,False,entity_arm_training,38
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,0.0,False,True,False,True,entity_arm_training,8296
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,0.0,False,True,True,False,propensity_tail,1
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,0.0,True,True,True,True,supported,276019
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,1.0,False,True,False,False,entity_arm_training,58
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,1.0,False,True,False,True,entity_arm_training,10394
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,1.0,False,True,True,False,propensity_tail,488
+bcap_pitch__mlb_2026_ytd_20260907__20260909__r01,2026,1.0,True,True,True,True,supported,339801

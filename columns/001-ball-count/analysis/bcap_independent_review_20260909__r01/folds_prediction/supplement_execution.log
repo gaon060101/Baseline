@@ -1,0 +1,437 @@
+[
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "finite_saved/p",
+    "status": "PASS",
+    "n": 716113,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "finite_saved/mu0",
+    "status": "PASS",
+    "n": 716113,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "finite_saved/mu1",
+    "status": "PASS",
+    "n": 716113,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "finite_saved/raw_propensity",
+    "status": "PASS",
+    "n": 716113,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/p_score/pitcher",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 68125,
+    "non_intercept_predictions": 68125,
+    "prediction_range": 1.26638216748443,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/p_score/batter",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 47467,
+    "non_intercept_predictions": 47467,
+    "prediction_range": 1.569808007246099,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/p_score/game_year",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 716113,
+    "non_intercept_predictions": 716113,
+    "prediction_range": 1.7041660583134497,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/p_score",
+    "status": "PASS",
+    "expected": 0.7433939361228522,
+    "actual": 0.7433939361228522,
+    "absolute_error": 0.0,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu0/pitcher",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 63864,
+    "non_intercept_predictions": 63864,
+    "prediction_range": 0.45627649977254514,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu0/batter",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 47255,
+    "non_intercept_predictions": 47255,
+    "prediction_range": 0.4512922920795075,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu0/game_year",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 716113,
+    "non_intercept_predictions": 716112,
+    "prediction_range": 0.5063547873310856,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/mu0",
+    "status": "PASS",
+    "expected": 0.2838587419158457,
+    "actual": 0.2838587419158457,
+    "absolute_error": 0.0,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu1/pitcher",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 64716,
+    "non_intercept_predictions": 64716,
+    "prediction_range": 0.5431772822571027,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu1/batter",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 47255,
+    "non_intercept_predictions": 47255,
+    "prediction_range": 0.4936366333676878,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu1/game_year",
+    "status": "PASS",
+    "n": 716113,
+    "unknown_rows": 716113,
+    "non_intercept_predictions": 716113,
+    "prediction_range": 0.6082964698732639,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2023__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/mu1",
+    "status": "PASS",
+    "expected": 0.2896888892841791,
+    "actual": 0.2896888892841791,
+    "absolute_error": 0.0,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "finite_saved/p",
+    "status": "PASS",
+    "n": 635095,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "finite_saved/mu0",
+    "status": "PASS",
+    "n": 635095,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "finite_saved/mu1",
+    "status": "PASS",
+    "n": 635095,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "finite_saved/raw_propensity",
+    "status": "PASS",
+    "n": 635095,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/p_score/pitcher",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 63934,
+    "non_intercept_predictions": 63934,
+    "prediction_range": 1.2965011524029912,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/p_score/batter",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 57664,
+    "non_intercept_predictions": 57664,
+    "prediction_range": 1.5423835877740049,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/p_score/game_year",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 635095,
+    "non_intercept_predictions": 635095,
+    "prediction_range": 1.6594245057342718,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/p_score",
+    "status": "PASS",
+    "expected": 0.69302307517892,
+    "actual": 0.69302307517892,
+    "absolute_error": 2.7755575615628914e-17,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/mu0/pitcher",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 62640,
+    "non_intercept_predictions": 62640,
+    "prediction_range": 0.47210461774129164,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/mu0/batter",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 57664,
+    "non_intercept_predictions": 57664,
+    "prediction_range": 0.4494473783304963,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/mu0/game_year",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 635095,
+    "non_intercept_predictions": 635095,
+    "prediction_range": 0.5047496993442775,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/mu0",
+    "status": "PASS",
+    "expected": 0.33098526334516865,
+    "actual": 0.33098526334516865,
+    "absolute_error": 2.0816681711721685e-17,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/mu1/pitcher",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 63524,
+    "non_intercept_predictions": 63524,
+    "prediction_range": 0.5446234914228514,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/mu1/batter",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 57664,
+    "non_intercept_predictions": 57664,
+    "prediction_range": 0.47712358748397965,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "unknown_block/mu1/game_year",
+    "status": "PASS",
+    "n": 635095,
+    "unknown_rows": 635095,
+    "non_intercept_predictions": 635095,
+    "prediction_range": 0.6079116437546711,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/mu1",
+    "status": "PASS",
+    "expected": 0.34593781160408915,
+    "actual": 0.34593781160408915,
+    "absolute_error": 6.938893903907228e-18,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "finite_saved/p",
+    "status": "PASS",
+    "n": 716385,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "finite_saved/mu0",
+    "status": "PASS",
+    "n": 716385,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "finite_saved/mu1",
+    "status": "PASS",
+    "n": 716385,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "finite_saved/raw_propensity",
+    "status": "PASS",
+    "n": 716385,
+    "nonfinite": 0
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/p_score/pitcher",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 68151,
+    "non_intercept_predictions": 68151,
+    "prediction_range": 1.838045192778531,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/p_score/batter",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 47518,
+    "non_intercept_predictions": 47518,
+    "prediction_range": 1.6087870265165913,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/p_score/game_year",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 716385,
+    "non_intercept_predictions": 716385,
+    "prediction_range": 1.9010786621106983,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/p_score",
+    "status": "PASS",
+    "expected": 0.45695268005385004,
+    "actual": 0.45695268005385004,
+    "absolute_error": 0.0,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu0/pitcher",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 63879,
+    "non_intercept_predictions": 63879,
+    "prediction_range": 0.7953319378066809,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu0/batter",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 47306,
+    "non_intercept_predictions": 47306,
+    "prediction_range": 0.7861111146586142,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu0/game_year",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 716385,
+    "non_intercept_predictions": 716385,
+    "prediction_range": 0.8417917940380484,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/mu0",
+    "status": "PASS",
+    "expected": 0.254644265102511,
+    "actual": 0.254644265102511,
+    "absolute_error": 0.0,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu1/pitcher",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 63879,
+    "non_intercept_predictions": 63879,
+    "prediction_range": 0.6300163502569845,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu1/batter",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 47306,
+    "non_intercept_predictions": 47306,
+    "prediction_range": 0.5648482063465377,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "unknown_block/mu1/game_year",
+    "status": "PASS",
+    "n": 716385,
+    "unknown_rows": 716385,
+    "non_intercept_predictions": 716385,
+    "prediction_range": 0.6729718719438874,
+    "meaning": "Unknown block adds zero; other known feature contributions remain. Prediction range is descriptive."
+  },
+  {
+    "run_id": "bcap_swing__mlb_2023__20260909__r01",
+    "check": "actual_fit_unknown_single_block_fixture/mu1",
+    "status": "PASS",
+    "expected": 0.30990635824835006,
+    "actual": 0.30990635824835006,
+    "absolute_error": 0.0,
+    "meaning": "Synthetic input perturbation only; not statistical validation or external performance comparison."
+  }
+]

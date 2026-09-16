@@ -1,0 +1,12 @@
+﻿run_id,game_year,action,support,measurement_support,repertoire,propensity_in_bounds,exclusion_reason,rows
+bcap_swing__mlb_2023__20260909__r01,2023,0.0,False,False,True,False,measurement,1
+bcap_swing__mlb_2023__20260909__r01,2023,0.0,False,False,True,True,measurement,138
+bcap_swing__mlb_2023__20260909__r01,2023,0.0,False,True,False,False,entity_arm_training,138
+bcap_swing__mlb_2023__20260909__r01,2023,0.0,False,True,False,True,entity_arm_training,2212
+bcap_swing__mlb_2023__20260909__r01,2023,0.0,False,True,True,False,propensity_tail,23169
+bcap_swing__mlb_2023__20260909__r01,2023,0.0,True,True,True,True,supported,349918
+bcap_swing__mlb_2023__20260909__r01,2023,1.0,False,False,True,True,measurement,134
+bcap_swing__mlb_2023__20260909__r01,2023,1.0,False,True,False,False,entity_arm_training,14
+bcap_swing__mlb_2023__20260909__r01,2023,1.0,False,True,False,True,entity_arm_training,2183
+bcap_swing__mlb_2023__20260909__r01,2023,1.0,False,True,True,False,propensity_tail,5443
+bcap_swing__mlb_2023__20260909__r01,2023,1.0,True,True,True,True,supported,333035

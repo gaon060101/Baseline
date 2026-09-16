@@ -1,0 +1,65 @@
+# Baseline 모델 레지스트리
+
+## BCAP V2 — 2026-09-12
+
+**2024·2025 개발 결과 산출, 후속 검증 미실시**. [통합 보고서](../columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report.html). 세부 구종 입력은 FB/NFB로 바꿨고 실제 S/B 비교를 추가했다. 최종 타자 5구역의 모서리는 보고 집합에서 중복 포함한다. 외부 검증·반복 재학습·별도 독립 검수는 미실시이며 기존 버전의 통과 기록을 전용하지 않는다. 명세의 DRAFT는 정의 시점 기록이며 카드·manifest가 현재 상태다.
+
+| 모델 | 현재 상태 | 정의·확인 | 실행 |
+| --- | --- | --- | --- |
+| BCAP-PITCH-v0.2.0 | EXPERIMENTAL | [카드](bcap/pitch/v0.2.0/model_card.md) · [명세](bcap/pitch/v0.2.0/specification.yaml) · [기본 확인](bcap/pitch/v0.2.0/validation.md) | [2024·2025 개발 완료](../columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/manifest.json) |
+| BCAP-PITCH-SB-v0.1.0 | EXPERIMENTAL | [카드](bcap/pitch_sb/v0.1.0/model_card.md) · [명세](bcap/pitch_sb/v0.1.0/specification.yaml) · [기본 확인](bcap/pitch_sb/v0.1.0/validation.md) | [2024·2025 개발 완료](../columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/manifest.json) |
+| BCAP-SWING-v0.2.0 | EXPERIMENTAL | [카드](bcap/swing/v0.2.0/model_card.md) · [명세](bcap/swing/v0.2.0/specification.yaml) · [기본 확인](bcap/swing/v0.2.0/validation.md) | [2024·2025 개발 완료](../columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/manifest.json) |
+
+아래는 기존 모델 등록 이력이다.
+
+모델 정의의 기준 위치는 models/, 칼럼별 실행의 기준 기록은 analysis/runs/<run_id>/manifest.json이다. 실행과 설계·검증의 의미를 분리한다. 운영 규칙은 [분석 지침](../guides/analysis.md), 구현과 재현은 [BCAI 안내](bcai/README.md)를 따른다.
+
+| 항목 | 관찰 모델 | Ridge 탐색 모델 |
+| --- | --- | --- |
+| 모델 ID | BCAI-OBS-v1.0.0 | BCAI-RIDGE-v0.1.0 |
+| 정식 명칭 | Ball Count Advantage Index Observed | Ball Count Advantage Index Ridge Adjusted |
+| 한글 명칭 | 볼카운트 관찰 유불리 지수 | 볼카운트 Ridge 보정 유불리 지수 |
+| 버전 | 1.0.0 | 0.1.0 |
+| 상태 | VALIDATED | EXPERIMENTAL |
+| 목적 | 칼럼의 주 유불리 측정 | 관찰 지수의 보정 민감도 점검 |
+| 추정 대상 | 도달 PA의 시즌별 상대 평균 가중 공격가치 I(c) | 시작 상황을 교차 적합 잔차화한 상대 진단 J(c) |
+| 기준점 | 시즌별 유효 PA의 0-0 평균; I(0-0)=100 | 시즌별 0-0 평균 잔차; J(0-0)=100 |
+| 주요 입력 | PA·투구 키, 투구 전 count, 최종 event, 시즌 가중치 | OBS 입력 + 시작 타자/투수/좌우/구장/점수/주자/아웃/이닝/시즌 |
+| 모델 카드 | [OBS](bcai/observed/v1.0.0/model_card.md) | [Ridge](bcai/ridge/v0.1.0/model_card.md) |
+| 코드 위치 | [공동 계산](../columns/001-ball-count/analysis/analyze_count_advantage.py) | 같은 코드의 oof_ridge·잔차 지수 부분 |
+| 검증 문서 | [OBS 검증](bcai/observed/v1.0.0/validation.md) | [Ridge 진단](bcai/ridge/v0.1.0/validation.md) |
+| 사용한 칼럼 | [001](../columns/001-ball-count/column.md) | [001](../columns/001-ball-count/column.md) |
+| 실행 결과 위치 | [bcai_obs__mlb_2024_2025__20260907__r01](../columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/README.md) | [bcai_ridge__mlb_2024_2025__20260907__r01](../columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260907__r01/README.md) |
+| 이전·후속 버전 | 최초 등록; 이전 없음·후속 없음 | 최초 등록; 후속 BCAI-RIDGE-v0.2.0 (아래) |
+
+Ridge는 OBS의 민감도 동반 모델이며 이전·후속 버전 관계가 아니다. VALIDATED는 해당 관찰 계산의 검증 범위이지 인과성·미래 예측·KBO 일반화 인증이 아니다. 현재 공동 CSV·audit는 OBS 실행 artifacts에 단일 보관하고, Ridge manifest의 열/JSON 선택자로 명확히 분리한다.
+
+## 후속 Ridge 모델 — 2026-09-09 기록
+
+| 항목 | 내용 |
+| --- | --- |
+| 모델 ID·버전 | BCAI-RIDGE-v0.2.0 · 0.2.0 |
+| 상태 | EXPERIMENTAL · 수치 수렴·두 외부 스냅샷 평가 완료, 예측 개선은 제한적 |
+| 이전 버전 | BCAI-RIDGE-v0.1.0 보존; OBS의 대체 아님 |
+| 추정 대상·기준 | 시작 선수·상황 잔차화 J(c), J(0-0)=100 유지 |
+| 주요 변경 | 선수/구장 공통 효과, 훈련 fold 기준 정규화, 경기 단위 중첩 CV, 엄격 수렴 PCG |
+| α | 개발 CV 최소 MSE 규칙으로300; 1-SE는 비교만 수행 |
+| 정의 | [모델 카드](bcai/ridge/v0.2.0/model_card.md), [명세](bcai/ridge/v0.2.0/specification.yaml) |
+| 검증·코드 | [검증](bcai/ridge/v0.2.0/validation.md), [개발](bcai/ridge/v0.2.0/ridge_v02.py), [외부](bcai/ridge/v0.2.0/external_validation.py) |
+| 개발 완료 | [2024·2025 r02](../columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/manifest.json) |
+| 수치 추가 확인 | [고정 모델 r03](../columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r03/manifest.json) |
+| 외부 재현 | [2023](../columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2023__20260908__r01/manifest.json) |
+| 외부 시간 순방향 | [2026-09-07까지](../columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2026_ytd_20260907__20260909__r01/manifest.json) |
+| 전체 비교 | [001 검증 보고서](../columns/001-ball-count/analysis/ridge_v02_validation_report.md) |
+
+개발207개 적합 전부 수렴, 최종α300. 상수 대비 MSE 개선: 개발0.428%,2023 0.179%,2026 0.205%. 두 외부 모두0-2 최저·3-0 최고. 기존 실패 실행(개발 호출 오류,2026 최초 확보 누락)은 FAILED로 보존했다.2026은 평가 전에 누락된11경기만 보충해 최초1회 평가했으며 모델·평가 코드는 변경하지 않았다. 수집 어댑터 기록은 완료 실행의 manifest_extension.json에 있다. 모델 상태를 높은 예측력이나 선택 편향 제거의 인증으로 해석하지 않는다.
+
+
+## BCAP 실제 구현·평가 반영 — 2026-09-09
+
+| 모델 | 현재 상태 | 추정 대상 | 개발·외부 범위 | 정의·검증 |
+| --- | --- | --- | --- | --- |
+| BCAP-PITCH-v0.1.0 | EXPERIMENTAL · 추천 없음 | 같은 실제 상태에서 현재 한 구 FB/NFB 최종 PA W 비교 | 2024·2025 개발; 2023·2026-09-07 진단; 8회 재학습 안정성 | [카드](bcap/pitch/v0.1.0/model_card.md) · [명세](bcap/pitch/v0.1.0/specification.yaml) · [검증](bcap/pitch/v0.1.0/validation.md) |
+| BCAP-SWING-v0.1.0 | EXPERIMENTAL · 추천 없음 | 사후 공 특성 조건부 번트 포함 Swing/판정상 Take의 현재 한 구 W 비교 | 2024·2025 개발; 2023 진단; 2026 전체 보류; 8회 재학습 안정성 | [카드](bcap/swing/v0.1.0/model_card.md) · [명세](bcap/swing/v0.1.0/specification.yaml) · [검증](bcap/swing/v0.1.0/validation.md) |
+
+BCAP-JOINT는 식별·순차 정보·SWING 외부 근거가 충분하지 않아 설계하지 않았다. 봉인 명세의 status_at_definition=DRAFT는 최초 등록 이력이며 현재 카드의 EXPERIMENTAL이 실행 후 상태다. 이 상태는 인과 추천·실시간 배포·전체 PA 개선의 검증을 뜻하지 않는다. [모델/실행 목록](bcap/README.md) · [실제 보고서](../columns/001-ball-count/analysis/bcap_v010_report_20260909.md) · [입출력·명령·열람 증거](../columns/001-ball-count/analysis/bcap_execution_evidence_20260909.json).

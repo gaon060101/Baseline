@@ -1,0 +1,4 @@
+﻿dataset,rows,PA,games,source_files,scoring_rows,eligible_pitch,eligible_swing_labels_only_2026,sequence_gaps,first_pitch_number_not_1_PA,multiple_events_PA,missing_final_with_earlier_PA,player_switch_rows,pitcher_switch_rows,batter_switch_rows,broad_count_anomalies,strict_description_count_anomalies,HBP_rows,HBP_current_event_mismatch,HBP_final_event_mismatch,explicit_bunt_rows,inplay_bunt_text_rows,FA_rows
+dev,1424427,366231,4859,77,33029,1415566,1416043,0,0,0,0,150,123,29,0,2,3948,0,0,2939,2386,1532
+2023,720684,184478,2430,38,17282,716113,716385,0,0,0,0,84,64,21,0,3,2112,0,0,1203,1081,1115
+2026,639042,164281,2165,35,14880,635095,635451,0,0,0,0,62,43,21,0,1,1884,0,0,1611,1417,717

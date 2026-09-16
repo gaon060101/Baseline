@@ -1,0 +1,111 @@
+{
+  "run_id": "bcai_ridge__mlb_2024_2025__20260908__r03",
+  "model_id": "BCAI-RIDGE-v0.2.0",
+  "version": "0.2.0",
+  "model_status": "EXPERIMENTAL",
+  "status": "COMPLETE",
+  "role": "frozen_development_numerical_validation",
+  "run_date": "2026-09-08",
+  "completed_at": "2026-09-08T08:14:23.893716+00:00",
+  "development_run": "bcai_ridge__mlb_2024_2025__20260908__r02",
+  "selected_alpha": 300.0,
+  "features": [
+    "batter",
+    "pitcher",
+    "game_year",
+    "venue",
+    "matchup",
+    "score_bin",
+    "base_state",
+    "outs_when_up",
+    "inning_bin"
+  ],
+  "solver": "unchanged frozen PCG, instrumented using Python trace",
+  "tolerance": 1e-07,
+  "max_iterations": 5000,
+  "external_data_used_for_tuning": false,
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_PA.pkl",
+      "sha256": "e9a0c969c4ad80c7389d94237452af6704959b150c1dde4e854d921989b92dcc",
+      "bytes": 81183442
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_reach.npz",
+      "sha256": "449def8c13a4f0ad63ffe23a9a53e18930eada00aa222d23e8dcafd2b430f872",
+      "bytes": 995902
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/frozen_model.json",
+      "sha256": "cd457a73ac9433241f4acbbf7720f15bdaa2cd7944bfe2d0ba354e8582ce9be8",
+      "bytes": 185264
+    }
+  ],
+  "code": [
+    {
+      "path": "models/bcai/ridge/v0.2.0/validate_frozen_numerics.py",
+      "sha256": "28d7c0bb442f16633d5ba693c2d713bc56a277f17640405d47797ed8d67a36af",
+      "bytes": 3798
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/ridge_v02.py",
+      "sha256": "e8350ed9f721901f3e16e1455b4fde3e89eb9e2e6595484d77c9bbe01a534aed",
+      "bytes": 18378
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "executable": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  "convergence": {
+    "frozen_coefficients_replay_maxdiff": 0.0,
+    "exact_season_weighted_J_post_convergence_max_drift": 1.6115109247039072e-11,
+    "unseen_block_zero_effect_test": true,
+    "full_trace_rows": 71,
+    "final_fit_convergence": {
+      "fit_id": "frozen_final_trace",
+      "alpha": 300.0,
+      "converged": true,
+      "iterations": 71,
+      "first_convergence_iteration": 61,
+      "max_last_change": 6.7961236997782266e-15,
+      "relative_objective_change": 0.0,
+      "gradient_relative": 2.6855068981674704e-14,
+      "objective_start": 987684.966912178,
+      "objective_end": 980489.5668062223,
+      "abnormal_increases": 0,
+      "direction_reversals": 0,
+      "max_count_index_step_last": 3.797489807388546e-15,
+      "extra_iterations": 10,
+      "post_convergence_max_prediction_drift": 7.137547497482188e-11,
+      "post_convergence_max_index_drift": 1.4918550528237922e-11
+    },
+    "external_data_read": false,
+    "model_modified": false
+  },
+  "artifacts": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r03/artifacts/count_indices_by_iteration.csv",
+      "sha256": "5e819cfd280ed9926ea56d2292ce165675d03810ea32168d666faec22a0abb14",
+      "bytes": 15951
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r03/artifacts/fit_diagnostics.jsonl",
+      "sha256": "7706acedbf4904b6e0d2a5ca15e2d35f22f2517adae7dc1408e4f3a6cbecc87c",
+      "bytes": 568
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r03/artifacts/validation.json",
+      "sha256": "d3d7920172979fb6f7f65de3ebe8ceab4a9511017170a6ae4952521e05f5a003",
+      "bytes": 939
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r03/artifacts/diagnostics/frozen_final_trace.csv",
+      "sha256": "72eaa37ad31f10dcce4b5d24d7c66b3e8235e38a5aa6c5b52e0a3f619f315025",
+      "bytes": 8215
+    }
+  ]
+}

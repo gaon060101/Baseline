@@ -1,0 +1,84 @@
+{
+  "rows_eligible": 1415566,
+  "FB_own": 1395443,
+  "FF_own": 1271802,
+  "common": 1268736,
+  "FB_only": 126707,
+  "FF_only": 3066,
+  "neither": 17057,
+  "family": 255,
+  "category_counts": [
+    {
+      "scheme": "FB",
+      "population": "common",
+      "category": "SMALL_RANGE",
+      "n": 1
+    },
+    {
+      "scheme": "FB",
+      "population": "common",
+      "category": "UNCERTAIN",
+      "n": 11
+    },
+    {
+      "scheme": "FB",
+      "population": "own",
+      "category": "SMALL_RANGE",
+      "n": 1
+    },
+    {
+      "scheme": "FB",
+      "population": "own",
+      "category": "UNCERTAIN",
+      "n": 11
+    },
+    {
+      "scheme": "FF",
+      "population": "common",
+      "category": "CONSISTENT_DEVELOPMENT",
+      "n": 1
+    },
+    {
+      "scheme": "FF",
+      "population": "common",
+      "category": "SMALL_RANGE",
+      "n": 1
+    },
+    {
+      "scheme": "FF",
+      "population": "common",
+      "category": "UNCERTAIN",
+      "n": 9
+    },
+    {
+      "scheme": "FF",
+      "population": "common",
+      "category": "UNSTABLE",
+      "n": 1
+    },
+    {
+      "scheme": "FF",
+      "population": "own",
+      "category": "CONSISTENT_DEVELOPMENT",
+      "n": 1
+    },
+    {
+      "scheme": "FF",
+      "population": "own",
+      "category": "SMALL_RANGE",
+      "n": 1
+    },
+    {
+      "scheme": "FF",
+      "population": "own",
+      "category": "UNCERTAIN",
+      "n": 9
+    },
+    {
+      "scheme": "FF",
+      "population": "own",
+      "category": "UNSTABLE",
+      "n": 1
+    }
+  ]
+}

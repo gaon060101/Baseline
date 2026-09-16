@@ -1,0 +1,126 @@
+{
+  "at_utc": "2026-09-11T17:56:49.616639+00:00",
+  "status": "2024·2025 개발 비교 완료, 외부 검증 미실시 — EXPERIMENTAL",
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "models/bcap/pitch_ff/v0.1.0/finish.py",
+    "--bundle",
+    "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01"
+  ],
+  "code": {
+    "path": "models/bcap/pitch_ff/v0.1.0/finish.py",
+    "sha256": "057e279dfe979094e19fadf01c1852fafbeb0a02a7ba2fcf8ffb79b26ebfa6f1",
+    "bytes": 18346
+  },
+  "changes": [
+    {
+      "before": {
+        "path": "models/bcap/pitch_ff/v0.1.0/model_card.md",
+        "sha256": "e2ef1834d0ec90057f45250a391572e072d9fb52eb1d849a0022ad8205775850",
+        "bytes": 162
+      },
+      "after": {
+        "path": "models/bcap/pitch_ff/v0.1.0/model_card.md",
+        "sha256": "9e598ab4a5cf6582d3e20398c158d26a5ca7e4bbe502b405baa8b9021525bb1e",
+        "bytes": 3404
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/models/bcap/pitch_ff/v0.1.0/model_card.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_ff/v0.1.0/validation.md",
+        "sha256": "de4e436056a53a6e5d9c2c191f6387f18580d1faf4a6d5b43d0ed572841d4ff5",
+        "bytes": 64
+      },
+      "after": {
+        "path": "models/bcap/pitch_ff/v0.1.0/validation.md",
+        "sha256": "7469ba388436a55822bb04e85d7523f370bc6f9ef1d374251560578ed33f0fd2",
+        "bytes": 3174
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/models/bcap/pitch_ff/v0.1.0/validation.md"
+    },
+    {
+      "before": {
+        "path": "README.md",
+        "sha256": "63bc3d0ca135459c989db870fce1f0fad90ea32065085fe6bb862b48174fde40",
+        "bytes": 8205
+      },
+      "after": {
+        "path": "README.md",
+        "sha256": "3262a24fa1b7a2b3415dcd7674c66ef48e0732f5446950a8358d7c067b605acd",
+        "bytes": 8849
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/README.md"
+    },
+    {
+      "before": {
+        "path": "models/registry.md",
+        "sha256": "7aa89e6219b53105e25b4c2d17505c29470f3022dfe4d12b56d38649abfd7dfb",
+        "bytes": 7678
+      },
+      "after": {
+        "path": "models/registry.md",
+        "sha256": "a8d5110e24aa1df3f31fda1efb86d7e89ea739e2900d530f144401bb8e1b0cb2",
+        "bytes": 8821
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/models/registry.md"
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/column.md",
+        "sha256": "1659310ea4d2cb28e81fed57d63138f15c385cec3f3265f3c2c2a8302930f964",
+        "bytes": 19107
+      },
+      "after": {
+        "path": "columns/001-ball-count/column.md",
+        "sha256": "f2ca6855606eabd48bc876bc4763209847c0dc8d7ce9f0fe6111c4ea62021c49",
+        "bytes": 20440
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/columns/001-ball-count/column.md"
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/sources.md",
+        "sha256": "b35af4af0c6dac3664a350fadc7f21893d87fd07131f91ea8ade9a28c5f22685",
+        "bytes": 21018
+      },
+      "after": {
+        "path": "columns/001-ball-count/sources.md",
+        "sha256": "140496ef8cf9e4b978f1fb2cc4e442f5df41a63d8a2c6ea91a7544ac9d1dba3f",
+        "bytes": 22050
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/columns/001-ball-count/sources.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/README.md",
+        "sha256": "197e48f303da5b196243c5c3fa69d3f3c399499e94c389163203e24cc5788a80",
+        "bytes": 9755
+      },
+      "after": {
+        "path": "models/bcap/README.md",
+        "sha256": "4bf46fc6fab8c83b75ac406368457ffb04b639886e70a7d256e358e8022ae683",
+        "bytes": 10526
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/models/bcap/README.md"
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "df93470b07d8d7f0cd2ac5dd3f37125c3a884500e50338cdb330bd605b6d92ea",
+        "bytes": 23496
+      },
+      "after": {
+        "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "e647fa5c526dfdee87f7af99d70f9f4d50f7e4e335f0d1a685d9401182525cd2",
+        "bytes": 28850
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/document_backups/columns/001-ball-count/analysis/handoff_bcap_review.md"
+    }
+  ],
+  "scope": "Only new FF card/validation and six shared entry documents; old model definitions/runs and SWING/SB not modified",
+  "final_wording_refinement": {
+    "at_utc": "2026-09-11T17:58:23.912521+00:00",
+    "scope": "Handoff spacing and readability only; numerical results unchanged."
+  }
+}

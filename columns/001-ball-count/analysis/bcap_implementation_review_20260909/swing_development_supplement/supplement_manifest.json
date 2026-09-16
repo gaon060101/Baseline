@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-09-09T06:11:59.971427+00:00",
+  "model_id": "BCAP-SWING-v0.1.0",
+  "run_id": "bcap_swing__mlb_2024_2025__20260909__r01",
+  "development_run": "bcap_swing__mlb_2024_2025__20260909__r01",
+  "sources": [
+    {
+      "stage": "evaluation_nuisance",
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/scores.pkl",
+      "sha256": "19cd430b569286dbc2f2961ea073c33cc07fc06a73465236b3098a3b557bdbc5"
+    }
+  ],
+  "code": [
+    {
+      "path": "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\supplement_diagnostics.py",
+      "sha256": "7bb74bca074edbd6e7d3ab572a6e0f5a2487e67be8ef138561f564c768075b8e"
+    },
+    {
+      "path": "models/bcap/verify_bcap.py",
+      "sha256": "21659c120c22cb5d0c429f7ec919f420ca60633ad69e61d966284fb27a841407"
+    }
+  ],
+  "frozen_constant_source": "Development manifest metrics.Y_mean (full eligible development-row mean). Valid fixed external baseline; development comparison itself is a pooled descriptive reference, not an independent OOF baseline.",
+  "retrospective_constant": "Evaluation subgroup mean observed Y. Outcome-informed hindsight baseline, never used for external predictions.",
+  "known_definition": "Copied from saved scores: development nuisance-training roster for development; frozen complete-development roster for external.",
+  "IPW": "Unnormalized arithmetic mean indicator(A=a)*Y/p(a); Hajek is separately named weighted sum divided by weight sum. All share primary support mask.",
+  "intervals": "Individual normal95 fixed-score game-cluster intervals, no refit uncertainty or multiplicity certification. No recommendation gates upgraded.",
+  "fixed_development_stage": "Any fixed-nuisance AIPW values are descriptive transport diagnostics, not the external-refit OPE or additional independent validation.",
+  "command": [
+    "models/bcap/supplement_diagnostics.py",
+    "--run",
+    "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01",
+    "--development-run",
+    "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01",
+    "--output",
+    "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement"
+  ],
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/calibration_bins.csv",
+      "sha256": "df0db35d0c701abcc842f1702435bb114a06ee6a027375ab816057b750250009"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/calibration_summary.csv",
+      "sha256": "963c2283d7eb1dabf82e6e60c604964cb49f8c30fc306514cf525a58ad0ee648"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/prediction_baselines_and_known_unseen.csv",
+      "sha256": "664c73250fadc650243a082f24ea4bb66030263ac65b4af80db6e0b6c66107cb"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_implementation_review_20260909/swing_development_supplement/same_target_estimators_policy_shares_and_subgroups.csv",
+      "sha256": "f2775b42a16d954f2dae2e587ebd8a82aab4fa42679e08ec0ce52bf5675be6a1"
+    }
+  ]
+}

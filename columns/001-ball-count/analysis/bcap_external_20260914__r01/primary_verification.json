@@ -1,0 +1,723 @@
+{
+  "started_at_utc": "2026-09-14T03:10:46.663649+00:00",
+  "scope": "Independent saved-score arithmetic, 2023 S/B 0-2 and 1-2 only",
+  "run_id": "bcap_pitch_sb__mlb_2023__20260914__r01",
+  "method": "AIPW reconstructed from A,Y,p,mu; pandas game-total cluster variance; scipy t quantiles",
+  "interval_scope": "Conditional on the fitted nuisance scores; no nuisance refitting, resampling, or between-game player dependence adjustment",
+  "family": 4,
+  "checks": [
+    {
+      "name": "sealed_verify_primary.py",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sealed_plan.json",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/year",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/action_orientation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/primary_family",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/keys",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/one_fold_per_game",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/finite_inputs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/binary_action_probability",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/phi0",
+      "status": "PASS",
+      "detail": {
+        "max_absolute_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "name": "0-2/phi1",
+      "status": "PASS",
+      "detail": {
+        "max_absolute_error": 1.7763568394002505e-15
+      }
+    },
+    {
+      "name": "0-2/row_support",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/n_all",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 48733.0,
+        "stored": 48733.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/n",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 47912.0,
+        "stored": 47912.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/coverage",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.9831530995424045,
+        "stored": 0.9831530995424044,
+        "absolute_difference": 1.1102230246251565e-16,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/games",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 2430.0,
+        "stored": 2430.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/Q0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.19650878347966227,
+        "stored": 0.1965087834796622,
+        "absolute_difference": 8.326672684688674e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/Q1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.23077480325493746,
+        "stored": 0.2307748032549374,
+        "absolute_difference": 5.551115123125783e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/delta",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.034266019775275186,
+        "stored": 0.0342660197752751,
+        "absolute_difference": 8.326672684688674e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/SE",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.004785816866147737,
+        "stored": 0.0047858168661477,
+        "absolute_difference": 3.729655473350135e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/nominal95_low",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.02488131474555023,
+        "stored": 0.0248813147455502,
+        "absolute_difference": 3.122502256758253e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/nominal95_high",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.04365072480500014,
+        "stored": 0.0436507248050001,
+        "absolute_difference": 3.469446951953614e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/adjusted95_low",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.02230354696757019,
+        "stored": 0.0223035469675701,
+        "absolute_difference": 9.020562075079397e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/adjusted95_high",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.04622849258298018,
+        "stored": 0.0462284925829801,
+        "absolute_difference": 8.326672684688674e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/rows0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 35634.0,
+        "stored": 35634.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/ESS0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 35509.385154629264,
+        "stored": 35509.38515462927,
+        "absolute_difference": 7.275957614183426e-12,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "name": "0-2/games0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 2430.0,
+        "stored": 2430.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/max_game_share0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.0009260363143476768,
+        "stored": 0.0009260363143476,
+        "absolute_difference": 7.676151381197371e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/max_weight0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 1.7134502102588918,
+        "stored": 1.7134502102588918,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/rows1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 12278.0,
+        "stored": 12278.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/ESS1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 11960.904648924487,
+        "stored": 11960.904648924485,
+        "absolute_difference": 1.8189894035458565e-12,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "name": "0-2/games1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 2394.0,
+        "stored": 2394.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/max_game_share1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.001416674148720429,
+        "stored": 0.0014166741487204,
+        "absolute_difference": 2.883977778811442e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/max_weight1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 6.221937287046358,
+        "stored": 6.221937287046358,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/Q1_minus_Q0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.034266019775275186,
+        "stored": 0.034266019775275186,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "0-2/sample_sum",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/support_gate",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "0-2/support_reasons",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/year",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/action_orientation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/primary_family",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/keys",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/one_fold_per_game",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/finite_inputs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/binary_action_probability",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/phi0",
+      "status": "PASS",
+      "detail": {
+        "max_absolute_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "name": "1-2/phi1",
+      "status": "PASS",
+      "detail": {
+        "max_absolute_error": 1.7763568394002505e-15
+      }
+    },
+    {
+      "name": "1-2/row_support",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/n_all",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 69569.0,
+        "stored": 69569.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/n",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 68412.0,
+        "stored": 68412.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/coverage",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.9833690293090314,
+        "stored": 0.9833690293090314,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/games",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 2430.0,
+        "stored": 2430.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/Q0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.21871917735078725,
+        "stored": 0.2187191773507872,
+        "absolute_difference": 5.551115123125783e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/Q1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.24283642790467067,
+        "stored": 0.2428364279046706,
+        "absolute_difference": 5.551115123125783e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/delta",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.02411725055388348,
+        "stored": 0.0241172505538834,
+        "absolute_difference": 7.979727989493313e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/SE",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.004045125371252002,
+        "stored": 0.004045125371252,
+        "absolute_difference": 2.6020852139652106e-18,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/nominal95_low",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.016184997925083287,
+        "stored": 0.0161849979250832,
+        "absolute_difference": 8.673617379884035e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/nominal95_high",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.032049503182683674,
+        "stored": 0.0320495031826836,
+        "absolute_difference": 7.632783294297951e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/adjusted95_low",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.014006186212988605,
+        "stored": 0.0140061862129886,
+        "absolute_difference": 5.204170427930421e-18,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/adjusted95_high",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.03422831489477836,
+        "stored": 0.0342283148947783,
+        "absolute_difference": 5.551115123125783e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/rows0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 47808.0,
+        "stored": 47808.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/ESS0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 47587.677468242524,
+        "stored": 47587.67746824252,
+        "absolute_difference": 7.275957614183426e-12,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "name": "1-2/games0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 2430.0,
+        "stored": 2430.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/max_game_share0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.0008322364110230727,
+        "stored": 0.000832236411023,
+        "absolute_difference": 7.26415455565288e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/max_weight0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 1.8197985350260972,
+        "stored": 1.8197985350260968,
+        "absolute_difference": 4.440892098500626e-16,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/rows1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 20604.0,
+        "stored": 20604.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/ESS1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 20123.57519554555,
+        "stored": 20123.57519554555,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "name": "1-2/games1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 2429.0,
+        "stored": 2429.0,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/max_game_share1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.0010215263396520027,
+        "stored": 0.001021526339652,
+        "absolute_difference": 2.8189256484623115e-18,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/max_weight1",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 5.480080110118829,
+        "stored": 5.480080110118829,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/Q1_minus_Q0",
+      "status": "PASS",
+      "detail": {
+        "recalculated": 0.024117250553883418,
+        "stored": 0.02411725055388348,
+        "absolute_difference": 6.245004513516506e-17,
+        "tolerance": 1e-12
+      }
+    },
+    {
+      "name": "1-2/sample_sum",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/support_gate",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "1-2/support_reasons",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "counts": {
+    "0-2": {
+      "n_all": 48733,
+      "n": 47912,
+      "coverage": 0.9831530995424045,
+      "games": 2430,
+      "Q0": 0.19650878347966227,
+      "Q1": 0.23077480325493746,
+      "delta": 0.034266019775275186,
+      "SE": 0.004785816866147737,
+      "nominal95_low": 0.02488131474555023,
+      "nominal95_high": 0.04365072480500014,
+      "adjusted95_low": 0.02230354696757019,
+      "adjusted95_high": 0.04622849258298018,
+      "rows0": 35634,
+      "ESS0": 35509.385154629264,
+      "games0": 2430,
+      "max_game_share0": 0.0009260363143476768,
+      "max_weight0": 1.7134502102588918,
+      "rows1": 12278,
+      "ESS1": 11960.904648924487,
+      "games1": 2394,
+      "max_game_share1": 0.001416674148720429,
+      "max_weight1": 6.221937287046358,
+      "support_gate": true,
+      "support_reasons": [],
+      "t_df": 2429,
+      "nominal_critical": 1.9609411083209742,
+      "adjusted_critical": 2.4995676061741965,
+      "contrast": "Q(S) minus Q(B); positive means B has lower allowed W"
+    },
+    "1-2": {
+      "n_all": 69569,
+      "n": 68412,
+      "coverage": 0.9833690293090314,
+      "games": 2430,
+      "Q0": 0.21871917735078725,
+      "Q1": 0.24283642790467067,
+      "delta": 0.02411725055388348,
+      "SE": 0.004045125371252002,
+      "nominal95_low": 0.016184997925083287,
+      "nominal95_high": 0.032049503182683674,
+      "adjusted95_low": 0.014006186212988605,
+      "adjusted95_high": 0.03422831489477836,
+      "rows0": 47808,
+      "ESS0": 47587.677468242524,
+      "games0": 2430,
+      "max_game_share0": 0.0008322364110230727,
+      "max_weight0": 1.8197985350260972,
+      "rows1": 20604,
+      "ESS1": 20123.57519554555,
+      "games1": 2429,
+      "max_game_share1": 0.0010215263396520027,
+      "max_weight1": 5.480080110118829,
+      "support_gate": true,
+      "support_reasons": [],
+      "t_df": 2429,
+      "nominal_critical": 1.9609411083209742,
+      "adjusted_critical": 2.4995676061741965,
+      "contrast": "Q(S) minus Q(B); positive means B has lower allowed W"
+    }
+  },
+  "code": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/verify_primary.py",
+    "sha256": "3bb137cb98570705b70e8f2bb454dc6675083801a9673c43fe0d2ef845971300",
+    "bytes": 11233
+  },
+  "not_checked": [
+    "raw-source labels",
+    "nuisance fitting correctness",
+    "measurement equivalence",
+    "full pipeline audit"
+  ],
+  "support_scope": "Row support reconstructed from stored propensity and stored training-arm/measurement flags; the flags themselves are not re-derived",
+  "plan_sealed_at_utc": "2026-09-14T03:07:02.326257+00:00",
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/scores.pkl",
+      "sha256": "5e77528eafb4e41767d5e99566abb33b0c9429d0ded121886c56ba1dc388e2f0",
+      "bytes": 107423534
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/values.csv",
+      "sha256": "63ff7f926df59f7067e6bad70a9843f3a487bd1c7712542617a77c8de9c8ba71",
+      "bytes": 8759
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/manifest.json",
+      "sha256": "f90d2013d0a983db65dacb1e871f73fd0b170a4bd086a2ef4c9c1b4bbe0c76ca",
+      "bytes": 13710
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+      "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+      "bytes": 40247
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan_seal.json",
+      "sha256": "c367b76c1feab3beff3b26923cc719d9585dcf5ffcca4f1e00ad05633e0abcc0",
+      "bytes": 6578
+    }
+  ],
+  "first_result_read_at_utc": "2026-09-14T03:10:46.831827+00:00",
+  "finished_at_utc": "2026-09-14T03:10:47.003991+00:00",
+  "status": "PASS"
+}

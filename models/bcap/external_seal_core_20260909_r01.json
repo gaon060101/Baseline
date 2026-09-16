@@ -1,0 +1,86 @@
+{
+  "sealed_at_utc": "2026-09-09T06:13:36.032789+00:00",
+  "scope": "BCAP definitions, engine, verification, final development nuisance/policy, external procedure before current-task external action outcomes",
+  "prior_exposure": "2023/2026 were already used for BCAI/Ridge. Hash cannot prove universal non-exposure.",
+  "files": [
+    {
+      "path": "models/bcap/run.py",
+      "sha256": "2ca51aab6398774ff619c10f19566ef7cf287520e6c356af3f4b32858e3562c9",
+      "bytes": 25869
+    },
+    {
+      "path": "models/bcap/data.py",
+      "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689",
+      "bytes": 18354
+    },
+    {
+      "path": "models/bcap/verify_bcap.py",
+      "sha256": "21659c120c22cb5d0c429f7ec919f420ca60633ad69e61d966284fb27a841407",
+      "bytes": 25904
+    },
+    {
+      "path": "models/bcap/design_decisions.md",
+      "sha256": "557c75f5ea000319cd8df26595f9e16546d7f6659d3905e5062f5fb692152783",
+      "bytes": 13135
+    },
+    {
+      "path": "models/bcap/measurement_review.md",
+      "sha256": "0bb65a9afd12b7160d2047b8c9250530d99c50c33565fad28172f03148100074",
+      "bytes": 15241
+    },
+    {
+      "path": "models/bcap/pitch/v0.1.0/specification.yaml",
+      "sha256": "e48d971264b3905aaf6c710e1546d8de0b90a915174118fe007ee979b784363c",
+      "bytes": 9650
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_nuisance.pkl",
+      "sha256": "c15b259553617fd0b30259d88092607134dfb244f5305748f95df100b46751a8",
+      "bytes": 195462
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_policy.json",
+      "sha256": "6969653164fb8a55d3bfbbf5a0c9125da208b32fd72b3883976def36c0627399",
+      "bytes": 3438
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_hyperparameters.json",
+      "sha256": "c739a076b8828935c352caef1411b10b23e27e578d9f2684fc4764da1807e7dd",
+      "bytes": 46
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json",
+      "sha256": "4c176be78b27c9c91b4b5658b15019b053647e31d7744b3ab2008a99e922a6c6",
+      "bytes": 17925
+    },
+    {
+      "path": "models/bcap/swing/v0.1.0/specification.yaml",
+      "sha256": "c6096df97014420840f5bf5d5ef34a531e15a586ab64ef23a5ef73aae2cfe59d",
+      "bytes": 9817
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_nuisance.pkl",
+      "sha256": "04ae4f8a67d7ffe9c6ee0936bb1943b6b180cd0ffc6d6bd27332adae1f17fa15",
+      "bytes": 213086
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_policy.json",
+      "sha256": "4934627095c5f8c8b0b14e5684e2d2237d6494e7fb4df705061f4602615ed8c5",
+      "bytes": 20720
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_hyperparameters.json",
+      "sha256": "c739a076b8828935c352caef1411b10b23e27e578d9f2684fc4764da1807e7dd",
+      "bytes": 46
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/manifest.json",
+      "sha256": "0e7094ca0cff30375125bba37816be90f7595e9482543f69d3d52781eebe4154",
+      "bytes": 18121
+    }
+  ],
+  "pitch_run": "bcap_pitch__mlb_2024_2025__20260909__r02",
+  "swing_run": "bcap_swing__mlb_2024_2025__20260909__r01",
+  "external_nuisance": "3fold games; frozen development alpha; external train-only dictionaries and calibration; development policy fixed",
+  "swing_2026": "WITHHELD_MEASUREMENT_NONCOMPARABILITY"
+}

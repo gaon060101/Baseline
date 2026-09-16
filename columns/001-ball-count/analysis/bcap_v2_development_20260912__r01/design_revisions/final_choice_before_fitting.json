@@ -1,0 +1,31 @@
+{
+  "at_utc": "2026-09-11T17:04:38.409252+00:00",
+  "source": "User changed initial region request, finally requested high/low/left/right/center; overlap should belong to both regions.",
+  "changes": [
+    {
+      "model": "pitch",
+      "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+      "before_sha256": "afad66dd7ecb1ca0a9d34f25c611d35014df26fa48e84b33a7521645fbda2778",
+      "before_snapshot": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/design_revisions/pitch_initial_specification.yaml",
+      "after_sha256": "273c6d0fb5d3e80881dbff08821cf419f158cc627c358b5c6d6174542c989a29"
+    },
+    {
+      "model": "swing",
+      "path": "models/bcap/swing/v0.2.0/specification.yaml",
+      "before_sha256": "65ca8b8ed541095a196267f87ec42f3b368b57d1d17fa05678ecc408ea92e36b",
+      "before_snapshot": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/design_revisions/swing_initial_specification.yaml",
+      "after_sha256": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58"
+    },
+    {
+      "model": "pitch_sb",
+      "path": "models/bcap/pitch_sb/v0.1.0/specification.yaml",
+      "before_sha256": "05690b6c379843c8b89b9d98746f264518fcc94aa3985ff81d491bbd9c16d0ac",
+      "before_snapshot": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/design_revisions/pitch_sb_initial_specification.yaml",
+      "after_sha256": "00e7178f597de003bd0ab3018ce06376fef105102ce3d71a0e806d562df2ae6b"
+    }
+  ],
+  "no_model_fit_started": true,
+  "preparation_impact": "None: shared pickle only adds previous coarse group and S/B; its earlier definition hash resolves to these initial specification snapshots.",
+  "counting": "Fit and pooled/count summaries count each physical row once; region subsets overlap explicitly.",
+  "metadata_reference": "Savant CSV documentation https://baseballsavant.mlb.com/csv-docs checked field conventions only; no new pitch data or external-year dataset accessed."
+}

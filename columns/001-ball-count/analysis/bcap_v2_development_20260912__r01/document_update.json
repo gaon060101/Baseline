@@ -1,0 +1,171 @@
+{
+  "at_utc": "2026-09-11T17:21:55.606631+00:00",
+  "scope": "V2 development documentation registration; not independent review",
+  "status": "2024·2025 개발 결과 산출, 후속 검증 미실시",
+  "command": "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -B C:/Users/백창현/Desktop/Baseline/models/bcap/development_v2/v0.2.0/register_results.py",
+  "code": {
+    "path": "models/bcap/development_v2/v0.2.0/register_results.py",
+    "sha256": "6b73816ae31004010ebf1222f0b73458285744d0443afbc3fc81ce46abe630bb",
+    "bytes": 19028
+  },
+  "changes": [
+    {
+      "before": {
+        "path": "models/bcap/pitch/v0.2.0/model_card.md",
+        "sha256": "338332836774d11f903b909be32786c9e4f88b39e8cbf5d435c94f395ea915e1",
+        "bytes": 156
+      },
+      "after": {
+        "path": "models/bcap/pitch/v0.2.0/model_card.md",
+        "sha256": "0f4275929847f82d13536c08f879e532451e98b60274ea983cb40b0d7fd6886b",
+        "bytes": 2689
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/pitch/v0.2.0/model_card.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch/v0.2.0/validation.md",
+        "sha256": "514ec06d2d87555bb7d111e7bbb55af265aee5cd6f4494aac869ca1edb8b5c86",
+        "bytes": 133
+      },
+      "after": {
+        "path": "models/bcap/pitch/v0.2.0/validation.md",
+        "sha256": "eabdc9cb3e456619791a93f621a127f710217ee626fd24e9e9484bfa87f9c311",
+        "bytes": 2508
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/pitch/v0.2.0/validation.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_sb/v0.1.0/model_card.md",
+        "sha256": "b817a55461adebece45a8c73129d439928754ae4b4886ae9f07bc451ada97fce",
+        "bytes": 159
+      },
+      "after": {
+        "path": "models/bcap/pitch_sb/v0.1.0/model_card.md",
+        "sha256": "4d46e1c1dfdd60c068ccdaa447cf0a75b37309578afd461666e01d7f20c43873",
+        "bytes": 2896
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/pitch_sb/v0.1.0/model_card.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/pitch_sb/v0.1.0/validation.md",
+        "sha256": "514ec06d2d87555bb7d111e7bbb55af265aee5cd6f4494aac869ca1edb8b5c86",
+        "bytes": 133
+      },
+      "after": {
+        "path": "models/bcap/pitch_sb/v0.1.0/validation.md",
+        "sha256": "7e8a3102387d12390906ac7621bd308f92aafd1ce50bd59f2e12a10b421333a0",
+        "bytes": 2520
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/pitch_sb/v0.1.0/validation.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/swing/v0.2.0/model_card.md",
+        "sha256": "deaac72d33c6f2d73753e44f0a3e6c3a1cb37d8165eb1298ec775bbf7dafdb93",
+        "bytes": 156
+      },
+      "after": {
+        "path": "models/bcap/swing/v0.2.0/model_card.md",
+        "sha256": "c80a2031683bc1b3a2a731686cc85df9509e5bcb41cac92edddbfcdb74c2390c",
+        "bytes": 3302
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/swing/v0.2.0/model_card.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/swing/v0.2.0/validation.md",
+        "sha256": "514ec06d2d87555bb7d111e7bbb55af265aee5cd6f4494aac869ca1edb8b5c86",
+        "bytes": 133
+      },
+      "after": {
+        "path": "models/bcap/swing/v0.2.0/validation.md",
+        "sha256": "66ec5408dbe3e0944e965695a0047d1ba52315ca24045b1cf8e701b32d4bd870",
+        "bytes": 2509
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/swing/v0.2.0/validation.md"
+    },
+    {
+      "before": {
+        "path": "README.md",
+        "sha256": "b87fa46e5de2a12add6aa8bd82a3d6d43815e90d9e1b516bd84781bbc99201f7",
+        "bytes": 7358
+      },
+      "after": {
+        "path": "README.md",
+        "sha256": "63bc3d0ca135459c989db870fce1f0fad90ea32065085fe6bb862b48174fde40",
+        "bytes": 8205
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/README.md"
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/column.md",
+        "sha256": "54d62305ae602ac0844f3e580526ee3b76915a2db8b2b2555f159bfac4585668",
+        "bytes": 17672
+      },
+      "after": {
+        "path": "columns/001-ball-count/column.md",
+        "sha256": "1659310ea4d2cb28e81fed57d63138f15c385cec3f3265f3c2c2a8302930f964",
+        "bytes": 19107
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/columns/001-ball-count/column.md"
+    },
+    {
+      "before": {
+        "path": "models/registry.md",
+        "sha256": "1196c692b150620252fa455eb52bbd1e31fe63a149f478451a09948e3b4c518d",
+        "bytes": 5983
+      },
+      "after": {
+        "path": "models/registry.md",
+        "sha256": "7aa89e6219b53105e25b4c2d17505c29470f3022dfe4d12b56d38649abfd7dfb",
+        "bytes": 7678
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/registry.md"
+    },
+    {
+      "before": {
+        "path": "models/bcap/README.md",
+        "sha256": "2785c140f5eb9c1f17f0ee20cd8afb285409c15543251af9ec1ac526f539ea67",
+        "bytes": 8751
+      },
+      "after": {
+        "path": "models/bcap/README.md",
+        "sha256": "197e48f303da5b196243c5c3fa69d3f3c399499e94c389163203e24cc5788a80",
+        "bytes": 9755
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/models/bcap/README.md"
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/sources.md",
+        "sha256": "bf3d5f539080ae9afa7ab54a0af98a9dd6b8a2e8697e2261b88fd5646a6d5893",
+        "bytes": 19752
+      },
+      "after": {
+        "path": "columns/001-ball-count/sources.md",
+        "sha256": "b35af4af0c6dac3664a350fadc7f21893d87fd07131f91ea8ade9a28c5f22685",
+        "bytes": 21018
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/columns/001-ball-count/sources.md"
+    },
+    {
+      "before": {
+        "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "99bcdab0d93b8373e52d91cd1e944cba85272d3a73de4f0cfb757d894f0f746b",
+        "bytes": 19456
+      },
+      "after": {
+        "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+        "sha256": "df93470b07d8d7f0cd2ac5dd3f37125c3a884500e50338cdb330bd605b6d92ea",
+        "bytes": 23496
+      },
+      "backup": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_backups/columns/001-ball-count/analysis/handoff_bcap_review.md"
+    }
+  ],
+  "old_evidence_and_models": "No old evidence JSON/specifications/runs/seals edited; no whole legacy audit run",
+  "outputs_scope": "Only new cards/validation and six shared Markdown entry documents updated"
+}

@@ -1,0 +1,16 @@
+{
+  "rows": 639042,
+  "all_PA": 164281,
+  "exclusions": {
+    "included": 163327,
+    "intentional_walk": 489,
+    "truncated": 292,
+    "missing_final": 96,
+    "catcher_interference": 77
+  },
+  "multiple_events_PA": 0,
+  "eligible_PA": 163327,
+  "games": 2165,
+  "first_date": "2026-03-25",
+  "last_date": "2026-09-07"
+}

@@ -1,0 +1,15 @@
+{
+  "n": 1415566,
+  "support": 1399993,
+  "games": 4859,
+  "coverage": 0.9889987467910363,
+  "Y_mean": 0.3015767389157411,
+  "MSE": 0.23526494305289775,
+  "Brier": 0.23403791082626807,
+  "logloss": 0.6600525939286145,
+  "all_fit_converged": true,
+  "fit_logs": 30,
+  "families_planned": 219,
+  "displayed_delta_groups": 13,
+  "policy_learning": false
+}

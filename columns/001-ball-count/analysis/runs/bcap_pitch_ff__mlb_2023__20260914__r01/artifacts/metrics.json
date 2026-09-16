@@ -1,0 +1,11 @@
+{
+  "n": 716113,
+  "support": 611307,
+  "games": 2430,
+  "all_fit_converged": true,
+  "fit_logs": 12,
+  "MSE": 0.23702169164756684,
+  "Brier": 0.1821479460747759,
+  "metric_scope": "external own OOF nuisance only",
+  "policy_learning": false
+}

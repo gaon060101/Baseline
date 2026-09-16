@@ -1,0 +1,200 @@
+{
+  "finalized_at_utc": "2026-09-09T09:29:29.526412+00:00",
+  "status": "REVIEW_COMPLETE_WITH_FINDINGS",
+  "overall_not_a_blanket_PASS": true,
+  "model_verdicts": [
+    {
+      "model": "BCAP-PITCH-v0.1.0",
+      "stored_status": "EXPERIMENTAL",
+      "overall": "명시 범위 내 사용 가능 — 선택된 관찰 의사결정 행의 탐색 진단 수치·계보·보존 최종 적합 재현성",
+      "numerical_implementation": "명시 범위 내 사용 가능; 주 저장 점수 산술과 보존 final 객체 재생성 범위",
+      "statistical_interpretation": "증거 부족으로 판정 보류 — 인과 행동가치·명목 구간의 실제 포함률·제한 nuisance의 목표 정확성",
+      "report_and_audit": "수정 후 재검수 — description별 카운트 감사 누락 및 검증 범위/구간 표현 보완",
+      "actionable_recommendation": "증거 부족으로 판정 보류; UNCERTAIN/NO_SUPPORT 및 추천 공란 유지",
+      "external_scope": "2023·2026-09-07 기존 결과 검수"
+    },
+    {
+      "model": "BCAP-SWING-v0.1.0",
+      "stored_status": "EXPERIMENTAL",
+      "overall": "명시 범위 내 사용 가능 — 선택된 관찰 의사결정 행의 탐색 진단 수치·계보·보존 최종 적합 재현성",
+      "numerical_implementation": "명시 범위 내 사용 가능; 주 저장 점수 산술과 보존 final 객체 재생성 범위",
+      "statistical_interpretation": "증거 부족으로 판정 보류 — 인과 행동가치·명목 구간의 실제 포함률·제한 nuisance의 목표 정확성",
+      "report_and_audit": "수정 후 재검수 — description별 카운트 감사 누락 및 검증 범위/구간 표현 보완",
+      "actionable_recommendation": "증거 부족으로 판정 보류; UNCERTAIN/NO_SUPPORT 및 추천 공란 유지",
+      "external_scope": "2023 기존 결과 검수;2026 전체 WITHHELD"
+    }
+  ],
+  "checks": [
+    {
+      "check": "raw_to_processed_to_main_scores",
+      "status": "PASS",
+      "scope": "150 CSV, 2784153 raw rows, 4899202 model-eligible score rows; exact Y/A/keys/features comparison",
+      "maximum_absolute_error": 0,
+      "denominator": "All saved source rows; not a sample"
+    },
+    {
+      "check": "description_specific_next_count_consistency",
+      "status": "FAIL",
+      "scope": "6 records missed by broad producer count transition audit; source truth unresolved",
+      "finding": "LINEAGE-01"
+    },
+    {
+      "check": "six_records_physical_truth",
+      "status": "NOT_VERIFIABLE",
+      "scope": "No evidence distinguishing void pitch, description error, or count error. No relabeling performed."
+    },
+    {
+      "check": "main5_and_fixed3_AIPW_OPE_diagnostics",
+      "status": "PASS",
+      "scope": "Saved predictions, independent factual-residual OPE, training-file policy application, game/individual-player clustered intervals, diagnostics. No producer statistical functions, fit recreation or refitting. Measurement/repertoire raw reconstruction checked separately.",
+      "comparisons": 48845813,
+      "maximum_absolute_error": 1.7462298274040222e-10,
+      "maximum_relative_error": 1.3248685182494087e-11,
+      "denominator": "4899202 main eligible rows plus 2067593 fixed developer diagnostic rows; comparisons include repeated fields/groups."
+    },
+    {
+      "check": "existing_final_fit_predictions",
+      "status": "PASS",
+      "scope": "3 external fixed-prediction files, 2067593 rows; actual final6 Ridge normal equations and final2 Platt objective/gradient",
+      "maximum_prediction_absolute_error": 2.220446049250313e-16,
+      "maximum_ridge_relative_normal_residual": 1.508213e-09
+    },
+    {
+      "check": "nonfinal_fit_accuracy",
+      "status": "NOT_VERIFIABLE",
+      "scope": "237 nonfinal/tuning Ridge and31 nonfinal calibrator objects absent. Saved loss-based selection and split provenance checked, actual fits/losses not regenerated."
+    },
+    {
+      "check": "nested_partition_policy",
+      "status": "PASS",
+      "scope": "97 main split records,336 policy states, exact evaluation policy application"
+    },
+    {
+      "check": "policy_training_intervals",
+      "status": "PASS",
+      "scope": "336 states,672 interval endpoints; resolves earlier child report nonexecution",
+      "maximum_absolute_error": 2.220446049250313e-16
+    },
+    {
+      "check": "bootstrap_saved_aggregates",
+      "status": "PASS",
+      "scope": "16 replicate multiplicities,432 partitions,1440 fit row counts,208 stability summary rows",
+      "comparisons": 160365,
+      "maximum_absolute_error": 5.684341886080802e-14
+    },
+    {
+      "check": "bootstrap_original_row_AIPW_fit",
+      "status": "NOT_VERIFIABLE",
+      "scope": "No saved row nuisance/score/policy/fit objects for16 replicates"
+    },
+    {
+      "check": "all_report_tables_prose_behavior_postseal",
+      "status": "PASS",
+      "scope": "16 CSVs,12 count prose sections,60 behavior count rows,108 paired states,8 descriptive summaries",
+      "comparisons": 98357,
+      "maximum_absolute_error": 2.9103830456733704e-11
+    },
+    {
+      "check": "Bonferroni_family_count",
+      "status": "PASS",
+      "scope": "1463 main finite delta/gain intervals <=1536; excludes fixed nuisance/individual policy values/training/known/sensitivity intervals"
+    },
+    {
+      "check": "actual_95_coverage_and_nuisance_truth",
+      "status": "NOT_VERIFIABLE",
+      "scope": "No evidence establishes coverage under overlapping fitting, nuisance misspecification, cross-game dependence and near-tie learning"
+    },
+    {
+      "check": "causal_realtime_recommendations",
+      "status": "NOT_VERIFIABLE",
+      "scope": "Selected completed PA, hidden state/action versions and SWING hindsight perception remain unidentified; no recommendation"
+    },
+    {
+      "check": "SWING2026_evaluation",
+      "status": "NOT_RUN",
+      "scope": "WITHHELD_MEASUREMENT_NONCOMPARABILITY; saved outcome_evaluations=0; no substitute model"
+    },
+    {
+      "check": "new_model_refitting",
+      "status": "NOT_RUN",
+      "scope": "No new development or external fits in this review"
+    },
+    {
+      "check": "new_external_model_evaluation",
+      "status": "NOT_RUN",
+      "scope": "Only saved results reviewed and existing-fit predictions recreated; no policy reoptimization on external outcomes"
+    },
+    {
+      "check": "sealed_core_and_historical_provenance",
+      "status": "PASS",
+      "scope": "1661 resolved hash references,340 logical checks,302 legacy baselines match,21 unverified historical coverage"
+    },
+    {
+      "check": "review_write_boundary",
+      "status": "PASS",
+      "scope": "617 baseline files rehashed; no outside-review metadata changes excluding app/git/bytecode internals"
+    }
+  ],
+  "component_evidence": {
+    "source_lineage": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/final_validation.json",
+      "sha256": "d9b25cc8374caaba99653816513292fd1d9314f7fe1413f8dabe2222875f7741"
+    },
+    "folds_saved_fit": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/folds_prediction/validation.json",
+      "sha256": "162a7739180b0ce6de718a28da36d794ae60a6a5d0cfeb939d25fa1a1a128d91"
+    },
+    "policy_training_intervals": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/folds_prediction/policy_interval_validation.json",
+      "sha256": "6e97f5d1fa6e2e0d543b4e95ad899efc4bfd3bc861a48186bf007ceb729a86b3"
+    },
+    "saved_score_arithmetic": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/numeric/validation.json",
+      "sha256": "6a999b2d243b6444fa635a81dc6318f447ec969b713ce2793dea47464e65f583"
+    },
+    "bootstrap_aggregates": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/bootstrap_validation.json",
+      "sha256": "87860d217661ce45a78746c7059b5d9be0ec979fb66a964f75ddb1e37ab04480"
+    },
+    "report_tables": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/methodology_bootstrap/report_tables_validation.json",
+      "sha256": "bd91fdd1cce89b2672ff332681b3580c8416f61e0b07c06c32052eaa010cee31"
+    },
+    "provenance": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/provenance/validation.json",
+      "sha256": "930cbf25737b96af47a12bc3e4292f7a4a10e94b6cccc2668a4ada5b66fea07e"
+    },
+    "review_preservation": {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/preservation_after.json",
+      "sha256": "b76362102a5b3721afff6e2f5d22137d7bd59053d4a1fbdacb8b1e4f4d8994fa"
+    }
+  },
+  "tolerances": {
+    "keys_labels_counts_folds": "Exact equality, zero unexpected missing values or mismatches",
+    "row_AIPW_OPE_and_group_values": {
+      "absolute": 1e-10,
+      "relative": 1e-09
+    },
+    "standard_errors_and_confidence_limits": {
+      "absolute": 1e-09,
+      "relative": 1e-08
+    },
+    "ESS_and_weight_sums": {
+      "absolute": 1e-06,
+      "relative": 1e-09
+    },
+    "existing_fit_prediction_recreation": {
+      "absolute": 1e-08,
+      "relative": 1e-08
+    },
+    "bootstrap_saved_aggregate_recreation": {
+      "absolute": 1e-09,
+      "relative": 1e-08
+    },
+    "NaN": "Both sides undefined with matching documented empty-support or unavailable reason; never treat NaN as zero",
+    "CSV_rounding": "Machine CSV numeric tolerance above; human-formatted report values compared at their printed precision"
+  },
+  "independence": "Fresh code does not import producer run/verify/bootstrap core functions. Statistical formulas follow declared specifications; final fit objects deserialized into inert containers. Existing review PASS not adopted.",
+  "existing_files_modified": false,
+  "new_fit_or_external_evaluation": false
+}

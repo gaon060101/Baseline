@@ -1,0 +1,4309 @@
+[
+  {
+    "dataset": "global",
+    "item": "action_maps_two_specs",
+    "status": "PASS",
+    "denominator": null
+  },
+  {
+    "dataset": "global",
+    "item": "weights_2023_match",
+    "status": "PASS",
+    "denominator": null
+  },
+  {
+    "dataset": "global",
+    "item": "weights_2024_match",
+    "status": "PASS",
+    "denominator": null
+  },
+  {
+    "dataset": "global",
+    "item": "weights_2025_match",
+    "status": "PASS",
+    "denominator": null
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-03-20_2024-03-24.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-03-25_2024-03-29.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-03-30_2024-04-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-04-04_2024-04-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-04-09_2024-04-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-04-14_2024-04-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-04-19_2024-04-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-04-24_2024-04-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-04-29_2024-05-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-05-04_2024-05-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-05-09_2024-05-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-05-14_2024-05-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-05-19_2024-05-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-05-24_2024-05-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-05-29_2024-06-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-06-03_2024-06-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-06-08_2024-06-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-06-13_2024-06-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-06-18_2024-06-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-06-23_2024-06-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-06-28_2024-07-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-07-03_2024-07-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-07-08_2024-07-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-07-13_2024-07-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-07-18_2024-07-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-07-23_2024-07-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-07-28_2024-08-01.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-08-02_2024-08-06.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-08-07_2024-08-11.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-08-12_2024-08-16.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-08-17_2024-08-21.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-08-22_2024-08-26.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-08-27_2024-08-31.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-09-01_2024-09-05.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-09-06_2024-09-10.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-09-11_2024-09-15.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-09-16_2024-09-20.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-09-21_2024-09-25.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2024-09-26_2024-09-30.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-03-18_2025-03-30.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-03-31_2025-04-04.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-04-05_2025-04-09.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-04-10_2025-04-14.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-04-15_2025-04-19.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-04-20_2025-04-24.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-04-25_2025-04-29.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-04-30_2025-05-04.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-05-05_2025-05-09.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-05-10_2025-05-14.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-05-15_2025-05-19.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-05-20_2025-05-24.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-05-25_2025-05-29.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-05-30_2025-06-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-06-04_2025-06-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-06-09_2025-06-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-06-14_2025-06-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-06-19_2025-06-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-06-24_2025-06-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-06-29_2025-07-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-07-04_2025-07-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-07-09_2025-07-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-07-14_2025-07-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-07-19_2025-07-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-07-24_2025-07-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-07-29_2025-08-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-08-03_2025-08-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-08-08_2025-08-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-08-13_2025-08-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-08-18_2025-08-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-08-23_2025-08-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-08-28_2025-09-01.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-09-02_2025-09-06.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-09-07_2025-09-11.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-09-12_2025-09-16.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-09-17_2025-09-21.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-09-22_2025-09-26.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_columns:statcast_2025-09-27_2025-09-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "dev",
+    "item": "schedule_complete",
+    "status": "PASS",
+    "denominator": 4859,
+    "missing_games": [],
+    "extra_games": []
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_required_keys_identifiers_counts_complete",
+    "status": "PASS",
+    "denominator": 1424427
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_unique_keys",
+    "status": "PASS",
+    "denominator": 1424427,
+    "duplicates": 0
+  },
+  {
+    "dataset": "dev",
+    "item": "raw_count_range",
+    "status": "PASS",
+    "denominator": 1424427
+  },
+  {
+    "dataset": "dev",
+    "item": "processed_row_count",
+    "status": "PASS",
+    "denominator": 1424427,
+    "saved_rows": 1424427
+  },
+  {
+    "dataset": "dev",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:game_type",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:balls",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:strikes",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:events",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:description",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitch_type",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitch_name",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:stand",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:p_throws",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:on_1b",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:on_2b",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:on_3b",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:outs_when_up",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:inning",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:bat_score_diff",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:release_speed",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pfx_x",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pfx_z",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:plate_x",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:plate_z",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:sz_top",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:sz_bot",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:bat_score_diff_vs_prepitch",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:bat_score_diff_vs_prepitch_homeaway",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "score_scoring_pitches_pre_not_post",
+    "status": "PASS",
+    "denominator": 33029,
+    "post_different_rows": 33029
+  },
+  {
+    "dataset": "dev",
+    "item": "column:row_id",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pa_id",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pa_exclusion",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:eligible_pa",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:prev_pitch_number",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:prev_release_speed",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:prev_pitch_type",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:prev_description",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:prev_release_speed_bin",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:venue",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:official_date",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:matchup",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:base_state",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:inning_bin",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitch_number_bin",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:score_bin",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:A_pitch",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:reason_pitch",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:eligible_pitch",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:A_swing",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:reason_swing",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:eligible_swing",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:bunt_explicit",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:inplay_bunt_text_flag",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:hbp_adjudicated_take",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:zone_z_normalized",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "dev",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:measurement_missing",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "column:pitch_sequence_gap_before",
+    "status": "PASS",
+    "denominator": 1424427,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "dev",
+    "item": "Y_constant_in_PA",
+    "status": "PASS",
+    "denominator": 366231
+  },
+  {
+    "dataset": "dev",
+    "item": "description_HBP_matches_current_event",
+    "status": "PASS",
+    "denominator": 3948,
+    "mismatches": 0
+  },
+  {
+    "dataset": "dev",
+    "item": "description_HBP_matches_final_PA_event",
+    "status": "PASS",
+    "denominator": 3948,
+    "mismatches": 0
+  },
+  {
+    "dataset": "dev",
+    "item": "strict_lags_first_row_clear",
+    "status": "PASS",
+    "denominator": 366231
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "eligible_rows_match_scores",
+    "status": "PASS",
+    "denominator": 1415566,
+    "saved_rows": 1415566
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:A",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2024_2025__20260909__r02",
+    "item": "column:measurement_support",
+    "status": "PASS",
+    "denominator": 1415566,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "eligible_rows_match_scores",
+    "status": "PASS",
+    "denominator": 1416043,
+    "saved_rows": 1416043
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:A",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2024_2025__20260909__r01",
+    "item": "column:measurement_support",
+    "status": "PASS",
+    "denominator": 1416043,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-03-30_2023-04-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-04-04_2023-04-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-04-09_2023-04-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-04-14_2023-04-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-04-19_2023-04-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-04-24_2023-04-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-04-29_2023-05-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-05-04_2023-05-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-05-09_2023-05-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-05-14_2023-05-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-05-19_2023-05-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-05-24_2023-05-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-05-29_2023-06-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-06-03_2023-06-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-06-08_2023-06-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-06-13_2023-06-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-06-18_2023-06-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-06-23_2023-06-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-06-28_2023-07-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-07-03_2023-07-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-07-08_2023-07-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-07-13_2023-07-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-07-18_2023-07-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-07-23_2023-07-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-07-28_2023-08-01.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-08-02_2023-08-06.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-08-07_2023-08-11.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-08-12_2023-08-16.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-08-17_2023-08-21.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-08-22_2023-08-26.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-08-27_2023-08-31.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-09-01_2023-09-05.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-09-06_2023-09-10.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-09-11_2023-09-15.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-09-16_2023-09-20.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-09-21_2023-09-25.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-09-26_2023-09-30.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_columns:statcast_2023-10-01_2023-10-01.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2023",
+    "item": "schedule_complete",
+    "status": "PASS",
+    "denominator": 2430,
+    "missing_games": [],
+    "extra_games": []
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_required_keys_identifiers_counts_complete",
+    "status": "PASS",
+    "denominator": 720684
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_unique_keys",
+    "status": "PASS",
+    "denominator": 720684,
+    "duplicates": 0
+  },
+  {
+    "dataset": "2023",
+    "item": "raw_count_range",
+    "status": "PASS",
+    "denominator": 720684
+  },
+  {
+    "dataset": "2023",
+    "item": "processed_row_count",
+    "status": "PASS",
+    "denominator": 720684,
+    "saved_rows": 720684
+  },
+  {
+    "dataset": "2023",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:game_type",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:balls",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:strikes",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:events",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:description",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitch_type",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitch_name",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:stand",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:p_throws",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:on_1b",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:on_2b",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:on_3b",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:outs_when_up",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:inning",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:bat_score_diff",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:release_speed",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pfx_x",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pfx_z",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:plate_x",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:plate_z",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:sz_top",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:sz_bot",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:bat_score_diff_vs_prepitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:bat_score_diff_vs_prepitch_homeaway",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "score_scoring_pitches_pre_not_post",
+    "status": "PASS",
+    "denominator": 17282,
+    "post_different_rows": 17282
+  },
+  {
+    "dataset": "2023",
+    "item": "column:row_id",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pa_id",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pa_exclusion",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:eligible_pa",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:prev_pitch_number",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:prev_release_speed",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:prev_pitch_type",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:prev_description",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:prev_release_speed_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:venue",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:official_date",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:matchup",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:base_state",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:inning_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitch_number_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:score_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:A_pitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:reason_pitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:eligible_pitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:A_swing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:reason_swing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:eligible_swing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:bunt_explicit",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:inplay_bunt_text_flag",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:hbp_adjudicated_take",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:zone_z_normalized",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2023",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:measurement_missing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "column:pitch_sequence_gap_before",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2023",
+    "item": "Y_constant_in_PA",
+    "status": "PASS",
+    "denominator": 184478
+  },
+  {
+    "dataset": "2023",
+    "item": "description_HBP_matches_current_event",
+    "status": "PASS",
+    "denominator": 2112,
+    "mismatches": 0
+  },
+  {
+    "dataset": "2023",
+    "item": "description_HBP_matches_final_PA_event",
+    "status": "PASS",
+    "denominator": 2112,
+    "mismatches": 0
+  },
+  {
+    "dataset": "2023",
+    "item": "strict_lags_first_row_clear",
+    "status": "PASS",
+    "denominator": 184478
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "eligible_rows_match_scores",
+    "status": "PASS",
+    "denominator": 716113,
+    "saved_rows": 716113
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:A",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2023__20260909__r01",
+    "item": "column:measurement_support",
+    "status": "PASS",
+    "denominator": 716113,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "eligible_rows_match_scores",
+    "status": "PASS",
+    "denominator": 716385,
+    "saved_rows": 716385
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:A",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:measurement_support",
+    "status": "PASS",
+    "denominator": 716385,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:row_id",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pa_id",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pa_exclusion",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:eligible_pa",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:prev_pitch_number",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:prev_release_speed",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:prev_pitch_type",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:prev_description",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:prev_release_speed_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:venue",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:official_date",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:matchup",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:base_state",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:inning_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pitch_number_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:score_bin",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:A_pitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:reason_pitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:eligible_pitch",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:A_swing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:reason_swing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:eligible_swing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:bunt_explicit",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:inplay_bunt_text_flag",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:hbp_adjudicated_take",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:zone_z_normalized",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:measurement_missing",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:pitch_sequence_gap_before",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_game_pk",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_at_bat_number",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_pitch_number",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_game_year",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_game_date",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_game_type",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_balls",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_strikes",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_pitcher",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_batter",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_events",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_description",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_pitch_type",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_pitch_name",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_stand",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_p_throws",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_on_1b",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_on_2b",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_on_3b",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_outs_when_up",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_inning",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_bat_score_diff",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_release_speed",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_pfx_x",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_pfx_z",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_plate_x",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_plate_z",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_sz_top",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_swing__mlb_2023__20260909__r01",
+    "item": "column:raw_sz_bot",
+    "status": "PASS",
+    "denominator": 720684,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-03-25_2026-03-29.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-03-30_2026-04-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-04-04_2026-04-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-04-09_2026-04-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-04-14_2026-04-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-04-19_2026-04-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-04-24_2026-04-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-04-29_2026-05-03.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-05-04_2026-05-08.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-05-09_2026-05-13.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-05-14_2026-05-18.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-05-19_2026-05-23.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-05-24_2026-05-28.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-05-29_2026-06-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-06-03_2026-06-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-06-08_2026-06-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-06-13_2026-06-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-06-18_2026-06-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-06-23_2026-06-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-06-28_2026-07-02.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-07-03_2026-07-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-07-08_2026-07-12.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-07-13_2026-07-17.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-07-18_2026-07-22.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-07-23_2026-07-27.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-07-28_2026-08-01.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-08-02_2026-08-06.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-08-07_2026-08-11.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-08-12_2026-08-16.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-08-17_2026-08-21.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-08-22_2026-08-26.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-08-27_2026-08-31.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-09-01_2026-09-05.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-09-06_2026-09-07.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_columns:statcast_2026-09-07_missing_games.csv",
+    "status": "PASS",
+    "denominator": null,
+    "missing_columns": []
+  },
+  {
+    "dataset": "2026",
+    "item": "schedule_complete",
+    "status": "PASS",
+    "denominator": 2165,
+    "missing_games": [],
+    "extra_games": []
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_required_keys_identifiers_counts_complete",
+    "status": "PASS",
+    "denominator": 639042
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_unique_keys",
+    "status": "PASS",
+    "denominator": 639042,
+    "duplicates": 0
+  },
+  {
+    "dataset": "2026",
+    "item": "raw_count_range",
+    "status": "PASS",
+    "denominator": 639042
+  },
+  {
+    "dataset": "2026",
+    "item": "processed_row_count",
+    "status": "PASS",
+    "denominator": 639042,
+    "saved_rows": 639042
+  },
+  {
+    "dataset": "2026",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:game_type",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:balls",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:strikes",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:events",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:description",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitch_type",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitch_name",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:stand",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:p_throws",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:on_1b",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:on_2b",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:on_3b",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:outs_when_up",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:inning",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:bat_score_diff",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:release_speed",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pfx_x",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pfx_z",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:plate_x",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:plate_z",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:sz_top",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:sz_bot",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:bat_score_diff_vs_prepitch",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:bat_score_diff_vs_prepitch_homeaway",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "score_scoring_pitches_pre_not_post",
+    "status": "PASS",
+    "denominator": 14880,
+    "post_different_rows": 14880
+  },
+  {
+    "dataset": "2026",
+    "item": "column:row_id",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pa_id",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pa_exclusion",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:eligible_pa",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:prev_pitch_number",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:prev_release_speed",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:prev_pitch_type",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:prev_description",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:prev_release_speed_bin",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:venue",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:official_date",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:matchup",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:base_state",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:inning_bin",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitch_number_bin",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:score_bin",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:A_pitch",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:reason_pitch",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:eligible_pitch",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:A_swing",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:reason_swing",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:eligible_swing",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:bunt_explicit",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:inplay_bunt_text_flag",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:hbp_adjudicated_take",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:zone_z_normalized",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "2026",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:measurement_missing",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "column:pitch_sequence_gap_before",
+    "status": "PASS",
+    "denominator": 639042,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "2026",
+    "item": "Y_constant_in_PA",
+    "status": "PASS",
+    "denominator": 164281
+  },
+  {
+    "dataset": "2026",
+    "item": "description_HBP_matches_current_event",
+    "status": "PASS",
+    "denominator": 1884,
+    "mismatches": 0
+  },
+  {
+    "dataset": "2026",
+    "item": "description_HBP_matches_final_PA_event",
+    "status": "PASS",
+    "denominator": 1884,
+    "mismatches": 0
+  },
+  {
+    "dataset": "2026",
+    "item": "strict_lags_first_row_clear",
+    "status": "PASS",
+    "denominator": 164281
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "eligible_rows_match_scores",
+    "status": "PASS",
+    "denominator": 635095,
+    "saved_rows": 635095
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:game_pk",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:at_bat_number",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:pitch_number",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:game_year",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:game_date",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:pitcher",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:batter",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:count",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:final_event",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:result",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:Y",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:zone",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:pitch_group",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:A",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0
+  },
+  {
+    "dataset": "bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+    "item": "column:measurement_support",
+    "status": "PASS",
+    "denominator": 635095,
+    "mismatch_rows": 0,
+    "max_absolute_error": null,
+    "max_relative_error": null
+  }
+]

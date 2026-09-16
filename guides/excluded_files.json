@@ -1,0 +1,2490 @@
+{
+  "as_of": "2026-09-16",
+  "paths_relative_to": "repository_root",
+  "policy": "guides/github_sharing.md",
+  "note": "로컬 파일을 삭제하지 않고 Git 업로드만 제외. 읽기 불가 runtime 하위는 폴더 단위 제외하여 파일별 목록은 불완전.",
+  "excluded_directory_scopes": [
+    {
+      "path": "columns/001-ball-count/analysis/runtime_ridge_v02/",
+      "reason": "설치 라이브러리. scipy 일부 읽기 거부; 전부 제외, 개별 열거 불가"
+    },
+    {
+      "path": ".codex/",
+      "reason": "로컬 설정"
+    },
+    {
+      "path": "**/data/raw/",
+      "reason": "원본 전체 제외"
+    },
+    {
+      "path": "**/__pycache__/",
+      "reason": "재생성 바이트코드"
+    }
+  ],
+  "files": [
+    {
+      "path": "columns/001-ball-count/analysis/advantage_input_cache.pkl",
+      "bytes": 229779110,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/preparation_2023/known_exceptions_retained.csv",
+      "bytes": 145,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/preparation_2026/known_exceptions_retained.csv",
+      "bytes": 102,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/2023__hbp_cases.csv",
+      "bytes": 470029,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/2023__scoring_pitch_rows.csv",
+      "bytes": 2998937,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/2023__sequence_and_switch_cases.csv",
+      "bytes": 21864,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/2026__hbp_cases.csv",
+      "bytes": 420850,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/2026__scoring_pitch_rows.csv",
+      "bytes": 2581507,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/2026__sequence_and_switch_cases.csv",
+      "bytes": 15840,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/all_strict_count_exceptions_full_PA.csv",
+      "bytes": 7080,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/all_strict_count_exceptions.csv",
+      "bytes": 1814,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/dev__hbp_cases.csv",
+      "bytes": 765320,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/dev__scoring_pitch_rows.csv",
+      "bytes": 4803189,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/dev__sequence_and_switch_cases.csv",
+      "bytes": 33282,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/exception_saved_score_rows.csv",
+      "bytes": 3608,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_independent_review_20260909__r01/lineage/strict_count_anomaly_full_PA.csv",
+      "bytes": 738,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_preparation_20260909_r01/pa_index.csv",
+      "bytes": 24099720,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_preparation_20260909_r01/sequence_anomalies.csv",
+      "bytes": 101,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/preparation/known_exceptions_retained.csv",
+      "bytes": 137,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/receive.cjs",
+      "bytes": 619,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/verification.json",
+      "bytes": 1170,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_before3/control-inventory.json",
+      "bytes": 1167,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_before3/document-outline.json",
+      "bytes": 262010,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_before3/document-result.json",
+      "bytes": 2335351,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_before3/document-text.md",
+      "bytes": 43717,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_before3/manifest.json",
+      "bytes": 2008,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_before3/receipt.json",
+      "bytes": 978,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_targets/control-inventory.json",
+      "bytes": 1106,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_targets/document-outline.json",
+      "bytes": 49875,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_targets/document-result.json",
+      "bytes": 967470,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_targets/document-text.md",
+      "bytes": 8713,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_targets/manifest.json",
+      "bytes": 2005,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/docs_sync_20260914/read_targets/receipt.json",
+      "bytes": 978,
+      "category": "LOCAL_ONLY",
+      "reason": "공유 불필요한 로컬 설정·문서 동기화 작업 자료",
+      "recovery": "MLB 대상 아님; 복원 불필요"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_bootstrap.npz",
+      "bytes": 333859,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2023__20260908__r01/artifacts/predictions.csv",
+      "bytes": 25874993,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r01/artifacts/development_PA.pkl",
+      "bytes": 81183442,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r01/artifacts/development_reach.npz",
+      "bytes": 995902,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r01/artifacts/outer_folds.csv",
+      "bytes": 48607,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r01/artifacts/outer0_inner_folds.csv",
+      "bytes": 38887,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_PA.pkl",
+      "bytes": 81183442,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_predictions.csv",
+      "bytes": 22238102,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/development_reach.npz",
+      "bytes": 995902,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/final_cv_folds.csv",
+      "bytes": 48607,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer_folds.csv",
+      "bytes": 48607,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer0_inner_folds.csv",
+      "bytes": 38887,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer1_inner_folds.csv",
+      "bytes": 38887,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer2_inner_folds.csv",
+      "bytes": 38887,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer3_inner_folds.csv",
+      "bytes": 38887,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/outer4_inner_folds.csv",
+      "bytes": 38897,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_ridge__mlb_2026_ytd_20260907__20260909__r01/artifacts/predictions.csv",
+      "bytes": 23009106,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2023__20260914__r01/artifacts/comparison_membership.pkl",
+      "bytes": 31510600,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/comparison_membership.pkl",
+      "bytes": 73611080,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_compare__mlb_2026_ytd_20260907__20260914__r01/artifacts/comparison_membership.pkl",
+      "bytes": 27945808,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2023__20260914__r01/artifacts/fold_membership.csv",
+      "bytes": 20571760,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2023__20260914__r01/artifacts/fold_records.json",
+      "bytes": 183174,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2023__20260914__r01/artifacts/scores.pkl",
+      "bytes": 107423534,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2023__20260914__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 3988606,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2023__20260914__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 3951112,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2023__20260914__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 4002404,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/fold_membership.csv",
+      "bytes": 41193399,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/fold_records.json",
+      "bytes": 365358,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/scores.pkl",
+      "bytes": 212343921,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 7761706,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 7763462,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 7721519,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/fold_membership.csv",
+      "bytes": 18231695,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/fold_records.json",
+      "bytes": 163299,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/scores.pkl",
+      "bytes": 95270558,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 3584635,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 3554159,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 3561836,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/fold_membership.csv",
+      "bytes": 20571760,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/fold_records.json",
+      "bytes": 183174,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/scores.pkl",
+      "bytes": 107423534,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 3991534,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 3954152,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 4005604,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fold_membership.csv",
+      "bytes": 41193399,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fold_records.json",
+      "bytes": 482421,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/scores.pkl",
+      "bytes": 218006288,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 7765612,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/tune/m0/100.pkl",
+      "bytes": 53908,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/tune/m0/1000.pkl",
+      "bytes": 53908,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/tune/m1/100.pkl",
+      "bytes": 53968,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/tune/m1/1000.pkl",
+      "bytes": 53968,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/tune/p/100.pkl",
+      "bytes": 54020,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/tune/p/1000.pkl",
+      "bytes": 54020,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 7767124,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/tune/m0/100.pkl",
+      "bytes": 53735,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/tune/m0/1000.pkl",
+      "bytes": 53735,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/tune/m1/100.pkl",
+      "bytes": 53600,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/tune/m1/1000.pkl",
+      "bytes": 53600,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/tune/p/100.pkl",
+      "bytes": 53763,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/tune/p/1000.pkl",
+      "bytes": 53763,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 7725289,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/tune/m0/100.pkl",
+      "bytes": 54016,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/tune/m0/1000.pkl",
+      "bytes": 54016,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/tune/m1/100.pkl",
+      "bytes": 54048,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/tune/m1/1000.pkl",
+      "bytes": 54048,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/tune/p/100.pkl",
+      "bytes": 54072,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/tune/p/1000.pkl",
+      "bytes": 54072,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fixed_development_predictions.pkl",
+      "bytes": 118164621,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/fold_records.json",
+      "bytes": 241983,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/scores.pkl",
+      "bytes": 123893749,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/pa_index.csv",
+      "bytes": 12088990,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260909__r01/artifacts/preparation/sequence_anomalies.csv",
+      "bytes": 101,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260914__r01/artifacts/fold_membership.csv",
+      "bytes": 20571760,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260914__r01/artifacts/fold_records.json",
+      "bytes": 183174,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260914__r01/artifacts/scores.pkl",
+      "bytes": 107423534,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260914__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 3989890,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260914__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 3952400,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2023__20260914__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 4003856,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_nuisance.pkl",
+      "bytes": 195462,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/final_policy_training_scores.pkl",
+      "bytes": 198187824,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/fold_records.json",
+      "bytes": 1448823,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/outer0_policy_training_scores.pkl",
+      "bytes": 132116784,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/outer1_policy_training_scores.pkl",
+      "bytes": 132035864,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/outer2_policy_training_scores.pkl",
+      "bytes": 132231584,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r02/artifacts/scores.pkl",
+      "bytes": 244901460,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_01/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 68123,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_02/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67155,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_03/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67925,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_04/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67067,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_05/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67529,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_06/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67309,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_07/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 68541,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260909__r03/artifacts/replicate_08/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67507,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fold_membership.csv",
+      "bytes": 41193399,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fold_records.json",
+      "bytes": 365358,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/scores.pkl",
+      "bytes": 218006288,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 7763164,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 7764974,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 7722921,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fixed_development_predictions.pkl",
+      "bytes": 104796339,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/fold_records.json",
+      "bytes": 215733,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/scores.pkl",
+      "bytes": 109877365,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/preparation/pa_index.csv",
+      "bytes": 10750062,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/artifacts/preparation/sequence_anomalies.csv",
+      "bytes": 101,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/fold_membership.csv",
+      "bytes": 18231695,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/fold_records.json",
+      "bytes": 163299,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/scores.pkl",
+      "bytes": 95270558,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 3585755,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 3555223,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 3563124,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fixed_development_predictions.pkl",
+      "bytes": 129115035,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/fold_records.json",
+      "bytes": 241983,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/scores.pkl",
+      "bytes": 134846342,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/preparation/pa_index.csv",
+      "bytes": 12088990,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260909__r01/artifacts/preparation/sequence_anomalies.csv",
+      "bytes": 101,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/fold_membership.csv",
+      "bytes": 20579616,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/fold_records.json",
+      "bytes": 183174,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/scores.pkl",
+      "bytes": 121952186,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 4015604,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 3968010,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 4019234,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_nuisance.pkl",
+      "bytes": 213086,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/final_policy_training_scores.pkl",
+      "bytes": 219861469,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/fold_records.json",
+      "bytes": 1448823,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/outer0_policy_training_scores.pkl",
+      "bytes": 146541245,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/outer1_policy_training_scores.pkl",
+      "bytes": 146499954,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/outer2_policy_training_scores.pkl",
+      "bytes": 146690421,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r01/artifacts/scores.pkl",
+      "bytes": 266590852,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_01/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 68123,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_02/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67155,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_03/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67925,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_04/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67067,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_05/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67529,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_06/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67309,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 68541,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/sampled_game_multiplicity_and_outer_fold.csv",
+      "bytes": 67507,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fold_membership.csv",
+      "bytes": 41207239,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fold_records.json",
+      "bytes": 365358,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/scores.pkl",
+      "bytes": 239686611,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fits/fold0/nuisance.pkl",
+      "bytes": 7784243,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fits/fold1/nuisance.pkl",
+      "bytes": 7780789,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fits/fold2/nuisance.pkl",
+      "bytes": 7738796,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runtime_ridge_v02/scipy-1.17.1-cp312-cp312-win_amd64.whl",
+      "bytes": 0,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_pitch__mlb_2023__20260909__r01.pkl",
+      "bytes": 199643609,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_2023_v010_bcap_swing__mlb_2023__20260909__r01.pkl",
+      "bytes": 199643609,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_2026_v010_bcap_pitch__mlb_2026_ytd_20260907__20260909__r01.pkl",
+      "bytes": 177028363,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+      "bytes": 394585378,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_dev_v2_20260912__r01.pkl",
+      "bytes": 417328886,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_external_v2_2023_20260914__r01.pkl",
+      "bytes": 216918238,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_external_v2_2026_20260914__r01.pkl",
+      "bytes": 188535746,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/bcap_pitch_ff_dev_20260912__r01.pkl",
+      "bytes": 218007330,
+      "category": "REGENERATE",
+      "reason": "행별 자료·캐시·학습/재표본 객체",
+      "recovery": "guides/data_setup.md: 해당 모델의 원본→정제→새 실행; 실패 실행의 동일 복원 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/statcast_2026-09-01_feasibility.csv",
+      "bytes": 3215415,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/acquisition_audit.json",
+      "bytes": 20731,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+      "bytes": 3246455,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-03-30_2023-04-03.csv",
+      "bytes": 12297718,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-04_2023-04-08.csv",
+      "bytes": 11599071,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-09_2023-04-13.csv",
+      "bytes": 12587690,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-14_2023-04-18.csv",
+      "bytes": 13804170,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-19_2023-04-23.csv",
+      "bytes": 12499906,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-24_2023-04-28.csv",
+      "bytes": 11801643,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-29_2023-05-03.csv",
+      "bytes": 12892949,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-04_2023-05-08.csv",
+      "bytes": 12476430,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-09_2023-05-13.csv",
+      "bytes": 12144461,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-14_2023-05-18.csv",
+      "bytes": 11993055,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-19_2023-05-23.csv",
+      "bytes": 13444399,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-24_2023-05-28.csv",
+      "bytes": 13395345,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-29_2023-06-02.csv",
+      "bytes": 11277665,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-03_2023-06-07.csv",
+      "bytes": 12561530,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-08_2023-06-12.csv",
+      "bytes": 12306814,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-13_2023-06-17.csv",
+      "bytes": 13164344,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-18_2023-06-22.csv",
+      "bytes": 11678175,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-23_2023-06-27.csv",
+      "bytes": 12184353,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-28_2023-07-02.csv",
+      "bytes": 13774272,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-03_2023-07-07.csv",
+      "bytes": 12635101,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-08_2023-07-12.csv",
+      "bytes": 5150899,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-13_2023-07-17.csv",
+      "bytes": 11530682,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-18_2023-07-22.csv",
+      "bytes": 13991799,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-23_2023-07-27.csv",
+      "bytes": 11868699,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-28_2023-08-01.csv",
+      "bytes": 13971997,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-02_2023-08-06.csv",
+      "bytes": 14049580,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-07_2023-08-11.csv",
+      "bytes": 12914717,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-12_2023-08-16.csv",
+      "bytes": 13931296,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-17_2023-08-21.csv",
+      "bytes": 12210071,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-22_2023-08-26.csv",
+      "bytes": 14095342,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-27_2023-08-31.csv",
+      "bytes": 12753246,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-01_2023-09-05.csv",
+      "bytes": 14811174,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-06_2023-09-10.csv",
+      "bytes": 13547595,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-11_2023-09-15.csv",
+      "bytes": 13874061,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-16_2023-09-20.csv",
+      "bytes": 14976398,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-21_2023-09-25.csv",
+      "bytes": 11682400,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-26_2023-09-30.csv",
+      "bytes": 14630746,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-10-01_2023-10-01.csv",
+      "bytes": 3000040,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/schedule_2024.json",
+      "bytes": 3238226,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-03-20_2024-03-24.csv",
+      "bytes": 379369,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-03-25_2024-03-29.csv",
+      "bytes": 4284499,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-03-30_2024-04-03.csv",
+      "bytes": 13441999,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-04-04_2024-04-08.csv",
+      "bytes": 12490752,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-04-09_2024-04-13.csv",
+      "bytes": 13090799,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-04-14_2024-04-18.csv",
+      "bytes": 12834464,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-04-19_2024-04-23.csv",
+      "bytes": 14181257,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-04-24_2024-04-28.csv",
+      "bytes": 13751175,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-04-29_2024-05-03.csv",
+      "bytes": 12328142,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-05-04_2024-05-08.csv",
+      "bytes": 13933946,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-05-09_2024-05-13.csv",
+      "bytes": 13041751,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-05-14_2024-05-18.csv",
+      "bytes": 13003475,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-05-19_2024-05-23.csv",
+      "bytes": 12872478,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-05-24_2024-05-28.csv",
+      "bytes": 13437780,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-05-29_2024-06-02.csv",
+      "bytes": 13835015,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-06-03_2024-06-07.csv",
+      "bytes": 11950195,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-06-08_2024-06-12.csv",
+      "bytes": 13497791,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-06-13_2024-06-17.csv",
+      "bytes": 12917309,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-06-18_2024-06-22.csv",
+      "bytes": 13367005,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-06-23_2024-06-27.csv",
+      "bytes": 12692858,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-06-28_2024-07-02.csv",
+      "bytes": 12733299,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-07-03_2024-07-07.csv",
+      "bytes": 15301687,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-07-08_2024-07-12.csv",
+      "bytes": 12628380,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-07-13_2024-07-17.csv",
+      "bytes": 6222971,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-07-18_2024-07-22.csv",
+      "bytes": 11451060,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-07-23_2024-07-27.csv",
+      "bytes": 13775944,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-07-28_2024-08-01.csv",
+      "bytes": 12393920,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-08-02_2024-08-06.csv",
+      "bytes": 13486757,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-08-07_2024-08-11.csv",
+      "bytes": 14791359,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-08-12_2024-08-16.csv",
+      "bytes": 12569825,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-08-17_2024-08-21.csv",
+      "bytes": 13657986,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-08-22_2024-08-26.csv",
+      "bytes": 13239819,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-08-27_2024-08-31.csv",
+      "bytes": 14424125,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-09-01_2024-09-05.csv",
+      "bytes": 12955640,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-09-06_2024-09-10.csv",
+      "bytes": 13707976,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-09-11_2024-09-15.csv",
+      "bytes": 13458289,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-09-16_2024-09-20.csv",
+      "bytes": 13652273,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-09-21_2024-09-25.csv",
+      "bytes": 12703128,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/statcast_2024-09-26_2024-09-30.csv",
+      "bytes": 11085997,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/schedule_2025.json",
+      "bytes": 3228414,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-03-18_2025-03-30.csv",
+      "bytes": 10555079,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-03-31_2025-04-04.csv",
+      "bytes": 12394809,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-04-05_2025-04-09.csv",
+      "bytes": 14048086,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-04-10_2025-04-14.csv",
+      "bytes": 11850789,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-04-15_2025-04-19.csv",
+      "bytes": 13880269,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-04-20_2025-04-24.csv",
+      "bytes": 12552896,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-04-25_2025-04-29.csv",
+      "bytes": 13582159,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-04-30_2025-05-04.csv",
+      "bytes": 14203639,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-05-05_2025-05-09.csv",
+      "bytes": 12778792,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-05-10_2025-05-14.csv",
+      "bytes": 14185279,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-05-15_2025-05-19.csv",
+      "bytes": 12533317,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-05-20_2025-05-24.csv",
+      "bytes": 13630423,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-05-25_2025-05-29.csv",
+      "bytes": 12150586,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-05-30_2025-06-03.csv",
+      "bytes": 13368274,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-06-04_2025-06-08.csv",
+      "bytes": 14207735,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-06-09_2025-06-13.csv",
+      "bytes": 12534683,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-06-14_2025-06-18.csv",
+      "bytes": 12607790,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-06-19_2025-06-23.csv",
+      "bytes": 14211080,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-06-24_2025-06-28.csv",
+      "bytes": 13812188,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-06-29_2025-07-03.csv",
+      "bytes": 12620679,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-07-04_2025-07-08.csv",
+      "bytes": 13944084,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-07-09_2025-07-13.csv",
+      "bytes": 13964240,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-07-14_2025-07-18.csv",
+      "bytes": 2936495,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-07-19_2025-07-23.csv",
+      "bytes": 14755486,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-07-24_2025-07-28.csv",
+      "bytes": 13104972,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-07-29_2025-08-02.csv",
+      "bytes": 12889640,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-08-03_2025-08-07.csv",
+      "bytes": 12438187,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-08-08_2025-08-12.csv",
+      "bytes": 14496178,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-08-13_2025-08-17.csv",
+      "bytes": 13565079,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-08-18_2025-08-22.csv",
+      "bytes": 13385292,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-08-23_2025-08-27.csv",
+      "bytes": 14340419,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-08-28_2025-09-01.csv",
+      "bytes": 13567319,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-09-02_2025-09-06.csv",
+      "bytes": 13208284,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-09-07_2025-09-11.csv",
+      "bytes": 13086067,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-09-12_2025-09-16.csv",
+      "bytes": 14267562,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-09-17_2025-09-21.csv",
+      "bytes": 14216076,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-09-22_2025-09-26.csv",
+      "bytes": 11968624,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/statcast_2025-09-27_2025-09-28.csv",
+      "bytes": 5970413,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/acquisition_audit.json",
+      "bytes": 18772,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json",
+      "bytes": 2872606,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-03-25_2026-03-29.csv",
+      "bytes": 9725238,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-03-30_2026-04-03.csv",
+      "bytes": 12227579,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-04_2026-04-08.csv",
+      "bytes": 15350252,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-09_2026-04-13.csv",
+      "bytes": 12395058,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-14_2026-04-18.csv",
+      "bytes": 14417152,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-19_2026-04-23.csv",
+      "bytes": 13145221,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-24_2026-04-28.csv",
+      "bytes": 13520790,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-29_2026-05-03.csv",
+      "bytes": 13914280,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-04_2026-05-08.csv",
+      "bytes": 12742844,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-09_2026-05-13.csv",
+      "bytes": 13130169,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-14_2026-05-18.csv",
+      "bytes": 14067291,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-19_2026-05-23.csv",
+      "bytes": 12853570,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-24_2026-05-28.csv",
+      "bytes": 12655293,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-29_2026-06-02.csv",
+      "bytes": 14116998,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-03_2026-06-07.csv",
+      "bytes": 13798585,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-08_2026-06-12.csv",
+      "bytes": 12436700,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-13_2026-06-17.csv",
+      "bytes": 13469652,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-18_2026-06-22.csv",
+      "bytes": 12225376,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-23_2026-06-27.csv",
+      "bytes": 13986093,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-28_2026-07-02.csv",
+      "bytes": 13281225,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-03_2026-07-07.csv",
+      "bytes": 13859793,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-08_2026-07-12.csv",
+      "bytes": 14523963,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-13_2026-07-17.csv",
+      "bytes": 3107572,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-18_2026-07-22.csv",
+      "bytes": 15326018,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-23_2026-07-27.csv",
+      "bytes": 12298100,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-28_2026-08-01.csv",
+      "bytes": 14429148,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-02_2026-08-06.csv",
+      "bytes": 12863673,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-07_2026-08-11.csv",
+      "bytes": 14178455,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-12_2026-08-16.csv",
+      "bytes": 13599067,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-17_2026-08-21.csv",
+      "bytes": 13303182,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-22_2026-08-26.csv",
+      "bytes": 14417305,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-27_2026-08-31.csv",
+      "bytes": 13119417,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-09-01_2026-09-05.csv",
+      "bytes": 14384508,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-09-06_2026-09-07.csv",
+      "bytes": 2973076,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/supplement_20260909_ridge_v02/acquisition_audit.json",
+      "bytes": 19712,
+      "category": "SOURCE_METADATA",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/supplement_20260909_ridge_v02/statcast_2026-09-07_missing_games.csv",
+      "bytes": 2182987,
+      "category": "SOURCE_MLB",
+      "reason": "원본·수집 스냅샷 미배포",
+      "recovery": "guides/data_setup.md: MLB 직접 확보/새 수집 감사; 과거 바이트 동일성 미보장"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/__pycache__/external_validation.cpython-312.pyc",
+      "bytes": 21310,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcai/ridge/v0.2.0/__pycache__/ridge_v02.cpython-312.pyc",
+      "bytes": 44570,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/build_report.cpython-312.pyc",
+      "bytes": 60427,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/check_artifacts.cpython-312.pyc",
+      "bytes": 7842,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/data.cpython-312.pyc",
+      "bytes": 32128,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/finalize_seal.cpython-312.pyc",
+      "bytes": 4700,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/refit_stability.cpython-312.pyc",
+      "bytes": 19907,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/run.cpython-312.pyc",
+      "bytes": 61216,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    },
+    {
+      "path": "models/bcap/__pycache__/verify_bcap.cpython-312.pyc",
+      "bytes": 42003,
+      "category": "ENVIRONMENT",
+      "reason": "설치 라이브러리·바이트코드",
+      "recovery": "requirements 설치; MLB 대상 아님"
+    }
+  ]
+}

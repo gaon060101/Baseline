@@ -1,0 +1,6 @@
+{
+  "old_results": "Viewed before extension plan, source attribution only.",
+  "new_FF_first_aggregate_access_at_utc": "2026-09-11T17:46:43.392292+00:00",
+  "plan_sealed_at_utc": "2026-09-11T17:40:16.600840+00:00",
+  "notice": "New FF score summaries first computed by this comparison run; fitting generated row scores earlier as recorded in training manifest."
+}

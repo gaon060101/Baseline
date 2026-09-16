@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": 98357,
+  "failures": 0,
+  "max_absolute_error": 2.9103830456733704e-11,
+  "tables_checked": 16,
+  "count_sections_checked": 12,
+  "behavior_count_rows_checked": 60,
+  "postseal_paired_rows_checked": 108,
+  "postseal_summaries_checked": 8,
+  "scope": "Direct comparison against existing original run aggregates; behavior rates independently reconstructed from saved A/support and outer/final policy; no model refit or new external evaluation",
+  "limitations": [
+    "Table-copy agreement does not independently validate original nuisance fits or model identification",
+    "Prose numeric source matches checked at printed precision; methodology assessed separately"
+  ],
+  "failure_details": [],
+  "started_at_utc": "2026-09-09T09:21:19.574418+00:00",
+  "finished_at_utc": "2026-09-09T09:21:26.949533+00:00"
+}

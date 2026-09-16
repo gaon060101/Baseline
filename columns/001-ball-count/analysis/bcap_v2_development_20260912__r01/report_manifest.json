@@ -1,0 +1,76 @@
+{
+  "created_at_utc": "2026-09-11T17:18:32.194386+00:00",
+  "scope": "V2 development report only",
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "1e21813d4b2c61d5469da9751e6e93aa9be5f8075df20467b36cbcadd4ed0ebf",
+      "bytes": 19665
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "9bb5801c150e480a3283199e183ff64abdc2a17d98cc2f3f33d75928461e5668",
+      "bytes": 14971
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "84f035632a1ef182a3781d7411d9ffa3b111e90f2018e758741006c522dfd4b1",
+      "bytes": 15901
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "sha256": "bcb9b69b6ff20378557d2cd2bbe0c1c101efe48a01711e71ad647f40bafca18f",
+      "bytes": 7774
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "sha256": "66c68b88a08c85c60d739f2d83b1dbd753c328d5972637f9697246b64a13d5d9",
+      "bytes": 7804
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "sha256": "70e6ff94a7479ddc609cc59c0f530e13b0e4f7d18995bc17b40740ebe36c1ad9",
+      "bytes": 121031
+    }
+  ],
+  "code": {
+    "path": "models/bcap/development_v2/v0.2.0/report.py",
+    "sha256": "f9f3a3d71ca8ca1fa5d80e62317b4a01897e0bd678db318296370e2518f77855",
+    "bytes": 22554
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report.html",
+      "sha256": "3c32f7bab3025a228a006655278dd06944bac37f8bf7eb821322e913e382a085",
+      "bytes": 71325
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/count_comparison_summary.csv",
+      "sha256": "656c1fe87c7f57dd747731f2980e3d019f7ee46b795b3b36bd92f6baaf05676e",
+      "bytes": 6058
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/batter_five_regions.csv",
+      "sha256": "640a94f2362557979b209d27de7d5d725cc1a6912b9344236df31cd52343d0b2",
+      "bytes": 36966
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/batter_region_pitch_groups.csv",
+      "sha256": "7701fa2cb1826993bc2a84547cd043eeffc4a88b9eb580ecdb9cec3f1317f08f",
+      "bytes": 73696
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/basic_summary.json",
+      "sha256": "120d333c66128aa10bef48e76a9880dc94af6710028489c97923528dd19dc17c",
+      "bytes": 2276
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/reproduction.md",
+      "sha256": "0a4618327ab9c7a465e3acb49df44e1e1baa6d24a99999b6fc4b08ab7adec86b",
+      "bytes": 1762
+    }
+  ],
+  "region_final_choice": "Five overlapping sets; corners contribute to2region tables and1model row",
+  "external_evaluations": 0,
+  "independent_review": "NOT_RUN"
+}

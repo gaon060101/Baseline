@@ -1,0 +1,288 @@
+{
+  "year": 2023,
+  "cutoff": "2023-12-31",
+  "snapshot_at": "2026-09-08T08:18:10.809546+00:00",
+  "schedule_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-01-01&endDate=2023-12-31&gameTypes=R",
+  "schedule": {
+    "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+    "sha256": "eb8b18a8a25c1bf017f6512b7770f0ecfcc0f69c04dac38707e874046788ef68",
+    "bytes": 3246455
+  },
+  "expected_games": 2430,
+  "raw_rows": 720684,
+  "included_rows": 720684,
+  "included_games": 2430,
+  "missing_games": [],
+  "extra_response_games_excluded": [],
+  "duplicate_pitch_keys": 0,
+  "first_game_date": "2023-03-30",
+  "last_game_date": "2023-10-01",
+  "files": [
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-03-30_2023-04-03.csv",
+      "sha256": "b3ef223a463499479b070b10998599a32edbd1ac26339b62c085876e1d115f04",
+      "bytes": 12297718,
+      "rows": 19352,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-03-30&game_date_lt=2023-04-03&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-04_2023-04-08.csv",
+      "sha256": "c9d3d3a1d0fd12595ec628c38553d8638edc9d40208b529c85a4d240b2941eee",
+      "bytes": 11599071,
+      "rows": 18230,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-04-04&game_date_lt=2023-04-08&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-09_2023-04-13.csv",
+      "sha256": "6d8ee2ab6bc0f4cb930a25009a8b0b855cef4bc83330539be7f47063353ab34a",
+      "bytes": 12587690,
+      "rows": 19784,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-04-09&game_date_lt=2023-04-13&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-14_2023-04-18.csv",
+      "sha256": "20bd3ee58a2d3af25110435a7af9742c1587509b72c136841083b5c461c4afc0",
+      "bytes": 13804170,
+      "rows": 21661,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-04-14&game_date_lt=2023-04-18&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-19_2023-04-23.csv",
+      "sha256": "b470a1fd3f5d0527cc1953f6cf113dcf7fcbbbd670b4c1f6ee3d6024ad42a099",
+      "bytes": 12499906,
+      "rows": 19671,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-04-19&game_date_lt=2023-04-23&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-24_2023-04-28.csv",
+      "sha256": "2f600ca9a8e764082989aab5215ae52168b6f4a7b6f6d3f29a3aa2aecdd3de77",
+      "bytes": 11801643,
+      "rows": 18586,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-04-24&game_date_lt=2023-04-28&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-04-29_2023-05-03.csv",
+      "sha256": "165b494a01307345b8dcb416eade9994e6eb2919c3475c10c9b63e7790aeba99",
+      "bytes": 12892949,
+      "rows": 20356,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-04-29&game_date_lt=2023-05-03&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-04_2023-05-08.csv",
+      "sha256": "0ef3b0fdd68eb76cfaa10d66fad8426ca0554c339a6b929317de0f817d6ea67d",
+      "bytes": 12476430,
+      "rows": 19577,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-05-04&game_date_lt=2023-05-08&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-09_2023-05-13.csv",
+      "sha256": "cc0a6dc89afba0f50225d9ec7aad9b6c8fee75b2b7225d98ed34983533c76fb4",
+      "bytes": 12144461,
+      "rows": 19071,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-05-09&game_date_lt=2023-05-13&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-14_2023-05-18.csv",
+      "sha256": "45de8834b0f338fdc74fb49c1bbf37eebabd2f0b165a6cbe1a85e12faa6e49fc",
+      "bytes": 11993055,
+      "rows": 18835,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-05-14&game_date_lt=2023-05-18&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-19_2023-05-23.csv",
+      "sha256": "013338046585a654659cf9ce360a97f055ed0d95d60d064b803fa6a3076d520a",
+      "bytes": 13444399,
+      "rows": 21121,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-05-19&game_date_lt=2023-05-23&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-24_2023-05-28.csv",
+      "sha256": "c4567429852d1252402cea0b5b3373cc3e11264c02dab0ddf64545416b17e23c",
+      "bytes": 13395345,
+      "rows": 21033,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-05-24&game_date_lt=2023-05-28&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-05-29_2023-06-02.csv",
+      "sha256": "e13b0199c40255c4b0c3245c0844fe08014dc5bea7feb31f5df7d348d9b69224",
+      "bytes": 11277665,
+      "rows": 17698,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-05-29&game_date_lt=2023-06-02&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-03_2023-06-07.csv",
+      "sha256": "29e164dd750d2c48edb75a3573b2d57578a0daa0bae715778d1b0bca4145bfaf",
+      "bytes": 12561530,
+      "rows": 19717,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-06-03&game_date_lt=2023-06-07&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-08_2023-06-12.csv",
+      "sha256": "16def9df372d9f1a74f20e8e645fefc5171ae9c4a45998e81c5f6c805bd0f95b",
+      "bytes": 12306814,
+      "rows": 19310,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-06-08&game_date_lt=2023-06-12&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-13_2023-06-17.csv",
+      "sha256": "d4218c64ed20a9a46c13666dcc73ed553cee249ca219fac12a92e8450379edfa",
+      "bytes": 13164344,
+      "rows": 20653,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-06-13&game_date_lt=2023-06-17&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-18_2023-06-22.csv",
+      "sha256": "ef76a452f20d337085e11c5b89087da1d293e8ca84ff648441b168dbd3c38c30",
+      "bytes": 11678175,
+      "rows": 18326,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-06-18&game_date_lt=2023-06-22&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-23_2023-06-27.csv",
+      "sha256": "1544cfb422f79c783c64ca3ac846daf74b8f08f3e788897ec66c48af21ab0d37",
+      "bytes": 12184353,
+      "rows": 19181,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-06-23&game_date_lt=2023-06-27&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-06-28_2023-07-02.csv",
+      "sha256": "d01ff2afc47099131ff6ffc9b7834ab90f96e409657834f51ac04bc9ff5df0ae",
+      "bytes": 13774272,
+      "rows": 21604,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-06-28&game_date_lt=2023-07-02&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-03_2023-07-07.csv",
+      "sha256": "cc12361ada90cf90eddcd5a5a6665129e143a58c6c23ee994d13f21f9199f7cd",
+      "bytes": 12635101,
+      "rows": 19812,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-07-03&game_date_lt=2023-07-07&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-08_2023-07-12.csv",
+      "sha256": "107579ef41a8e22379f3ed6e4f9fd8d4da92d874ba807049a1086f0cb9275267",
+      "bytes": 5150899,
+      "rows": 8088,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-07-08&game_date_lt=2023-07-12&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-13_2023-07-17.csv",
+      "sha256": "e9477b0b5343cfb53f9f65cdcc2071ffc6a1b7cc4185b0c89ddc89b2bbbf6d8c",
+      "bytes": 11530682,
+      "rows": 16885,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-07-13&game_date_lt=2023-07-17&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-18_2023-07-22.csv",
+      "sha256": "89e281b8afc5ead893bda77ad5b350f52790c766f5b248ac2251414fddfeccfd",
+      "bytes": 13991799,
+      "rows": 20457,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-07-18&game_date_lt=2023-07-22&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-23_2023-07-27.csv",
+      "sha256": "6fce23b3777d464433e73459329d885cee145d001e26e2c1dbcc6560143e12a3",
+      "bytes": 11868699,
+      "rows": 17486,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-07-23&game_date_lt=2023-07-27&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-07-28_2023-08-01.csv",
+      "sha256": "49b9b94a567429e3c4bc1eb975b47bb336286bb0b7fbcef9482943b9e476ff85",
+      "bytes": 13971997,
+      "rows": 20449,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-07-28&game_date_lt=2023-08-01&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-02_2023-08-06.csv",
+      "sha256": "32322bf216c42c818122c22a60bbfc581da22e138472498be927822599c0f8c0",
+      "bytes": 14049580,
+      "rows": 20563,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-08-02&game_date_lt=2023-08-06&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-07_2023-08-11.csv",
+      "sha256": "cae9c6d58803f6102d93f6b26f12aa8c15620f98d4b2e0665030fddb6231b34c",
+      "bytes": 12914717,
+      "rows": 18903,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-08-07&game_date_lt=2023-08-11&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-12_2023-08-16.csv",
+      "sha256": "ef0db9598c86efdb4470ec2ccaad14afbf3ac53979987c15f92e832febcf7270",
+      "bytes": 13931296,
+      "rows": 20346,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-08-12&game_date_lt=2023-08-16&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-17_2023-08-21.csv",
+      "sha256": "171ea6f09e6e01b538c4495ebe5ed64e083bc61e41de0cd93455b7b925883279",
+      "bytes": 12210071,
+      "rows": 17893,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-08-17&game_date_lt=2023-08-21&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-22_2023-08-26.csv",
+      "sha256": "fb9d1c08b303fd83dd4a6a47a7c9b2d9954a4efbdad0edfc52303cd6d9f2e6eb",
+      "bytes": 14095342,
+      "rows": 20611,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-08-22&game_date_lt=2023-08-26&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-08-27_2023-08-31.csv",
+      "sha256": "b029ddc8db08fc6113f81b3007016245a67909a63d40722dd3f709b049317caf",
+      "bytes": 12753246,
+      "rows": 18668,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-08-27&game_date_lt=2023-08-31&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-01_2023-09-05.csv",
+      "sha256": "7463985661e04f3ebde9d4fdf135ed57c69f76110d5cf5ff2e4de0c871a75a2b",
+      "bytes": 14811174,
+      "rows": 21638,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-09-01&game_date_lt=2023-09-05&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-06_2023-09-10.csv",
+      "sha256": "317a85ab58f282e45ea9a510406519ddf14c94cefd75409aade6a018e444bc12",
+      "bytes": 13547595,
+      "rows": 19849,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-09-06&game_date_lt=2023-09-10&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-11_2023-09-15.csv",
+      "sha256": "512b67c44e53ce432b08009023ee4de1d209b76f1cb4995772373930a126de68",
+      "bytes": 13874061,
+      "rows": 20324,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-09-11&game_date_lt=2023-09-15&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-16_2023-09-20.csv",
+      "sha256": "cb40aba4d557b9ca88d8b84e2672e00b37673702fb77bd3498e85dc31162db16",
+      "bytes": 14976398,
+      "rows": 21949,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-09-16&game_date_lt=2023-09-20&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-21_2023-09-25.csv",
+      "sha256": "2e55f5e1d4e7f115a79f102e6a42ac583595de27736b55e1cad071463b6bf2d5",
+      "bytes": 11682400,
+      "rows": 17128,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-09-21&game_date_lt=2023-09-25&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-09-26_2023-09-30.csv",
+      "sha256": "450380a788bf33c60d59674c78c9a57ccc726e049d864a5de6d516819bfde7cd",
+      "bytes": 14630746,
+      "rows": 21467,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-09-26&game_date_lt=2023-09-30&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/statcast_2023-10-01_2023-10-01.csv",
+      "sha256": "a80b6965483f923842a51871a1982b178cac31ef384d2a6f4fd04354ba22e0d4",
+      "bytes": 3000040,
+      "rows": 4402,
+      "url": "https://baseballsavant.mlb.com/statcast_search/csv?all=true&type=details&hfGT=R%7C&hfSea=2023%7C&player_type=pitcher&game_date_gt=2023-10-01&game_date_lt=2023-10-01&group_by=name&min_pitches=0&min_results=0&sort_col=pitches&sort_order=desc"
+    }
+  ]
+}

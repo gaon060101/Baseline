@@ -1,0 +1,166 @@
+{
+  "started_at_utc": "2026-09-09T09:14:45.295059+00:00",
+  "completed_at_utc": "2026-09-09T09:15:00.811167+00:00",
+  "checks": [
+    {
+      "item": "forbidden_features:bcap_pitch__mlb_2024_2025__20260909__r02",
+      "status": "PASS",
+      "features": [
+        "pitcher",
+        "batter",
+        "game_year",
+        "venue",
+        "matchup",
+        "count",
+        "base_state",
+        "outs_when_up",
+        "inning_bin",
+        "score_bin",
+        "pitch_number_bin",
+        "prev_pitch_type",
+        "prev_description",
+        "prev_release_speed_bin"
+      ],
+      "forbidden_present": [],
+      "scope": "Manifest/frozen implementation feature allowlist; actual design object fields checked by model/fold reviewer"
+    },
+    {
+      "item": "frozen_data_code_matches_current:bcap_pitch__mlb_2024_2025__20260909__r02",
+      "status": "PASS"
+    },
+    {
+      "item": "forbidden_features:bcap_swing__mlb_2024_2025__20260909__r01",
+      "status": "PASS",
+      "features": [
+        "pitcher",
+        "batter",
+        "game_year",
+        "venue",
+        "matchup",
+        "count",
+        "base_state",
+        "outs_when_up",
+        "inning_bin",
+        "score_bin",
+        "pitch_number_bin",
+        "prev_pitch_type",
+        "prev_description",
+        "prev_release_speed_bin",
+        "pitch_type",
+        "release_speed_bin",
+        "pfx_x_bin",
+        "pfx_z_bin",
+        "plate_x_bin",
+        "relative_z_bin",
+        "swing_cell"
+      ],
+      "forbidden_present": [],
+      "scope": "Manifest/frozen implementation feature allowlist; actual design object fields checked by model/fold reviewer"
+    },
+    {
+      "item": "frozen_data_code_matches_current:bcap_swing__mlb_2024_2025__20260909__r01",
+      "status": "PASS"
+    },
+    {
+      "item": "forbidden_features:bcap_pitch__mlb_2023__20260909__r01",
+      "status": "PASS",
+      "features": [
+        "pitcher",
+        "batter",
+        "game_year",
+        "venue",
+        "matchup",
+        "count",
+        "base_state",
+        "outs_when_up",
+        "inning_bin",
+        "score_bin",
+        "pitch_number_bin",
+        "prev_pitch_type",
+        "prev_description",
+        "prev_release_speed_bin"
+      ],
+      "forbidden_present": [],
+      "scope": "Manifest/frozen implementation feature allowlist; actual design object fields checked by model/fold reviewer"
+    },
+    {
+      "item": "frozen_data_code_matches_current:bcap_pitch__mlb_2023__20260909__r01",
+      "status": "PASS"
+    },
+    {
+      "item": "forbidden_features:bcap_swing__mlb_2023__20260909__r01",
+      "status": "PASS",
+      "features": [
+        "pitcher",
+        "batter",
+        "game_year",
+        "venue",
+        "matchup",
+        "count",
+        "base_state",
+        "outs_when_up",
+        "inning_bin",
+        "score_bin",
+        "pitch_number_bin",
+        "prev_pitch_type",
+        "prev_description",
+        "prev_release_speed_bin",
+        "pitch_type",
+        "release_speed_bin",
+        "pfx_x_bin",
+        "pfx_z_bin",
+        "plate_x_bin",
+        "relative_z_bin",
+        "swing_cell"
+      ],
+      "forbidden_present": [],
+      "scope": "Manifest/frozen implementation feature allowlist; actual design object fields checked by model/fold reviewer"
+    },
+    {
+      "item": "frozen_data_code_matches_current:bcap_swing__mlb_2023__20260909__r01",
+      "status": "PASS"
+    },
+    {
+      "item": "forbidden_features:bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "status": "PASS",
+      "features": [
+        "pitcher",
+        "batter",
+        "game_year",
+        "venue",
+        "matchup",
+        "count",
+        "base_state",
+        "outs_when_up",
+        "inning_bin",
+        "score_bin",
+        "pitch_number_bin",
+        "prev_pitch_type",
+        "prev_description",
+        "prev_release_speed_bin"
+      ],
+      "forbidden_present": [],
+      "scope": "Manifest/frozen implementation feature allowlist; actual design object fields checked by model/fold reviewer"
+    },
+    {
+      "item": "frozen_data_code_matches_current:bcap_pitch__mlb_2026_ytd_20260907__20260909__r01",
+      "status": "PASS"
+    },
+    {
+      "item": "description-specific_count_consistency",
+      "status": "FAIL",
+      "mismatch_rows": 6,
+      "scope": "6 recorded nonterminal ball rows fail expected next-count rule; this is a source/measurement exception, not raw-to-processed transformation mismatch. Existing broad delta checker permits unchanged counts and does not detect these."
+    },
+    {
+      "item": "true_adjudication_of_six_count_exceptions",
+      "status": "NOT_VERIFIABLE",
+      "scope": "Existing local records do not establish whether a ball was nullified, mislabelled or followed by erroneous count. No new play/video data acquired."
+    },
+    {
+      "item": "corrected_model_sensitivity_to_exceptions",
+      "status": "NOT_RUN",
+      "scope": "No input correction or model refit; only stored-score mean omission reported, never corrected-model estimates."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-08T17:45:30.902211+00:00",
+  "checks": {
+    "historical_artifact_and_input_hashes": 110,
+    "external_protocol_hashes": 4,
+    "completed_manifests_and_independent_external_MSE": 4,
+    "failed_runs_preserved": 2,
+    "all_207_fits_converged": true,
+    "all_six_selection_stages_alpha300": true,
+    "one_fold_per_game": true,
+    "internal_links": 89,
+    "source_compile": true,
+    "2026_acquisition_only_repair_provenance": true
+  },
+  "status": "PASS"
+}

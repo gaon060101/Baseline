@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "input_hash",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "years_and_keys",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "action_binary_closed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "identical_feature_list",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no_current_post_action_features",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "identical_fixed_alphas",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "same_seed_folds",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "game_split_unique",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_no_tuning",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_training_calibration_separation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_new_action_support",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_finite",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_converged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_phi0_arithmetic",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0_phi1_arithmetic",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold0/cal_outer_holdout_excluded",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_no_tuning",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_training_calibration_separation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_new_action_support",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_finite",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_converged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_phi0_arithmetic",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1_phi1_arithmetic",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold1/cal_outer_holdout_excluded",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_no_tuning",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_training_calibration_separation",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_new_action_support",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_finite",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_converged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_phi0_arithmetic",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2_phi1_arithmetic",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fold2/cal_outer_holdout_excluded",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all_eligible_scored_once",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "count_row_totals",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "scope": "Production basic checks, not independent full review"
+}

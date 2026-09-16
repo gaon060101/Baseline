@@ -1,0 +1,128 @@
+{
+  "key": "count",
+  "states": {
+    "0-0": {
+      "state": "0-0",
+      "p1": 1,
+      "delta": -0.0013051844079995057,
+      "n": 355396,
+      "games": 4859,
+      "conditional_low": -0.008688620036879986,
+      "conditional_high": 0.006078251220880975,
+      "candidate_only": true
+    },
+    "0-1": {
+      "state": "0-1",
+      "p1": 1,
+      "delta": -0.00721259719730276,
+      "n": 180770,
+      "games": 4859,
+      "conditional_low": -0.017148752089566448,
+      "conditional_high": 0.0027235576949609253,
+      "candidate_only": true
+    },
+    "0-2": {
+      "state": "0-2",
+      "p1": 0,
+      "delta": 0.0031345446966381924,
+      "n": 94549,
+      "games": 4859,
+      "conditional_low": -0.008872877575432626,
+      "conditional_high": 0.015141966968709012,
+      "candidate_only": true
+    },
+    "1-0": {
+      "state": "1-0",
+      "p1": 1,
+      "delta": -0.002217731486513752,
+      "n": 133263,
+      "games": 4859,
+      "conditional_low": -0.01458678377611276,
+      "conditional_high": 0.010151320803085256,
+      "candidate_only": true
+    },
+    "1-1": {
+      "state": "1-1",
+      "p1": 1,
+      "delta": -0.002751589117639357,
+      "n": 139503,
+      "games": 4859,
+      "conditional_low": -0.01434530507442128,
+      "conditional_high": 0.008842126839142567,
+      "candidate_only": true
+    },
+    "1-2": {
+      "state": "1-2",
+      "p1": 0,
+      "delta": 0.005652432636591565,
+      "n": 136942,
+      "games": 4859,
+      "conditional_low": -0.004911231322993884,
+      "conditional_high": 0.016216096596177013,
+      "candidate_only": true
+    },
+    "2-0": {
+      "state": "2-0",
+      "p1": 1,
+      "delta": -0.00335578000639714,
+      "n": 44460,
+      "games": 4858,
+      "conditional_low": -0.02511786820384362,
+      "conditional_high": 0.018406308191049343,
+      "candidate_only": true
+    },
+    "2-1": {
+      "state": "2-1",
+      "p1": 1,
+      "delta": -5.433621913588428e-06,
+      "n": 71303,
+      "games": 4859,
+      "conditional_low": -0.01613888717491647,
+      "conditional_high": 0.016128019931089293,
+      "candidate_only": true
+    },
+    "2-2": {
+      "state": "2-2",
+      "p1": 0,
+      "delta": 0.0023392656616518155,
+      "n": 116272,
+      "games": 4859,
+      "conditional_low": -0.00924362065462398,
+      "conditional_high": 0.01392215197792761,
+      "candidate_only": true
+    },
+    "3-0": {
+      "state": "3-0",
+      "p1": 0,
+      "delta": 0.08090974868206484,
+      "n": 13059,
+      "games": 4453,
+      "conditional_low": 0.05173907391731874,
+      "conditional_high": 0.11008042344681093,
+      "candidate_only": true
+    },
+    "3-1": {
+      "state": "3-1",
+      "p1": 1,
+      "delta": -0.009418664107581094,
+      "n": 29093,
+      "games": 4848,
+      "conditional_low": -0.03343094069097896,
+      "conditional_high": 0.014593612475816774,
+      "candidate_only": true
+    },
+    "3-2": {
+      "state": "3-2",
+      "p1": 0,
+      "delta": 0.010790089929703008,
+      "n": 70255,
+      "games": 4859,
+      "conditional_low": -0.004970104197832167,
+      "conditional_high": 0.026550284057238183,
+      "candidate_only": true
+    }
+  },
+  "fallback_p1": 0.5,
+  "conservative_change": false,
+  "reason": "Identification and full-learning uncertainty gates not satisfied; retain observed mechanism everywhere"
+}

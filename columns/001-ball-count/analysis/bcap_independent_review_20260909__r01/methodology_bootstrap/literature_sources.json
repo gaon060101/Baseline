@@ -1,0 +1,16 @@
+{
+  "access_date": "2026-09-09",
+  "scope": "Primary methodological and official measurement/rule sources; no new game-data acquisition. Project-specific implications are reviewer analysis, not claims that these sources validated BCAP.",
+  "sources": [
+    {"title":"Statcast Search CSV Documentation","url":"https://baseballsavant.mlb.com/csv-docs","verified_sections":["plate_x/plate_z front through2025, middle from2026","sz_top/sz_bot operator-defined through2025, ABS-defined from2026","pre-pitch balls/strikes, bases, outs, bat_score/fld_score; post_bat_score separately defined"],"use":"Measurement time and 2026 comparability"},
+    {"title":"MLB ABS Challenge System begins in2026 official announcement","url":"https://img.mlbstatic.com/opprops-images/image/upload/opprops/jgdgj1bak2bgiskwpdnm.pdf","verified_sections":["PDF page1 middle-of-plate two-dimensional zone","top53.5% and bottom27% of measured batter height"],"use":"Rule/measurement environment changes; removing coordinate input does not remove all behavioral/outcome pathways"},
+    {"title":"Official Baseball Rules2023","url":"https://img.mlbstatic.com/mlb-images/image/upload/mlb/wqn5ah4c3qtivwx3jatm.pdf","verified_sections":["Rule5.05(b)(2), PDF page38, hit by pitch while not attempting to hit; avoidance/zone conditions","BUNT definition, PDF page159; sacrifice-bunt scoring9.08, PDF pages133-134"],"use":"Adjudicated HBP Take label and broad offer/bunt versus full-swing distinction; only2023 rule edition directly examined"},
+    {"title":"Doubly Robust Policy Evaluation and Learning","authors":"Dudik, Langford, Li","year":2011,"url":"https://arxiv.org/html/1103.4601v2","verified_sections":["Section2 problem definition and estimator","Section3 nuisance independent of evaluation set and bias product","Section4 variance assumptions"],"use":"Distinguish DR arithmetic, nuisance consistency and policy evaluation from optimization"},
+    {"title":"Double/Debiased Machine Learning for Treatment and Causal Parameters","authors":"Chernozhukov et al.","url":"https://arxiv.org/abs/1608.00060","verified_sections":["Public abstract: orthogonal scores and nuisance regularization/cross-fitting"],"use":"Cross-fitting alone does not certify arbitrary MLB dependent-data nuisance accuracy or confidence coverage; BCAP applicability not a verified theorem"},
+    {"title":"Statistical inference for the mean outcome under a possibly non-unique optimal treatment strategy","authors":"Luedtke, van der Laan","year":2016,"url":"https://arxiv.org/abs/1603.07573","verified_sections":["Public abstract: pathwise differentiability and inference with potentially nonunique optimal strategy"],"use":"Optimal-rule tie/nonregularity requires a dedicated inference design; BCAP does not implement this paper's method"}
+  ],
+  "unsuccessful_fulltext_attempts_not_used_as_fulltext_evidence": [
+    {"url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3805254/","outcome":"reCAPTCHA; search snippet only, not used as fulltext support"},
+    {"url":"https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf","outcome":"Tool internal error; not represented as successfully read book"}
+  ]
+}

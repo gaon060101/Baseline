@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-09-09T09:21:13.431258+00:00",
+  "finished_at_utc": "2026-09-09T09:21:18.773287+00:00",
+  "scope": "Outer0/1/2 and final development policy-training conditional_low/high only; no refitting or new external evaluation",
+  "independent_method": "Reconstruct delta directly from Y/A/p/mu; per-state per-game totals; G/(G-1) ratio sandwich; t(G-1), Bonferroni family1536",
+  "tolerances": {
+    "absolute": 1e-09,
+    "relative": 1e-08
+  },
+  "policy_states": 336,
+  "interval_endpoints": 672,
+  "mismatched_states": 0,
+  "maximum_absolute_error": 2.220446049250313e-16,
+  "maximum_relative_error": 1.1234753335182192e-12,
+  "status": "PASS",
+  "family": 1536,
+  "production_functions_imported": false
+}

@@ -1,0 +1,516 @@
+{
+  "at_utc": "2026-09-11T17:23:43.516135+00:00",
+  "status": "COMPLETE",
+  "scope": "2024/2025 development; basic delivery packaging only, not independent scientific review",
+  "model_status": "EXPERIMENTAL",
+  "checks": [
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:models/bcap/development_v2/v0.2.0/report.py",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report.html",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/count_comparison_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/batter_five_regions.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/batter_region_pitch_groups.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/basic_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_asset_hash:columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/reproduction.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/pitch/v0.2.0/model_card.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/pitch/v0.2.0/model_card.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/pitch/v0.2.0/validation.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/pitch/v0.2.0/validation.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/pitch_sb/v0.1.0/model_card.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/pitch_sb/v0.1.0/model_card.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/pitch_sb/v0.1.0/validation.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/pitch_sb/v0.1.0/validation.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/swing/v0.2.0/model_card.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/swing/v0.2.0/model_card.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/swing/v0.2.0/validation.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/swing/v0.2.0/validation.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:README.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:README.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:columns/001-ball-count/column.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:columns/001-ball-count/column.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/registry.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/registry.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:models/bcap/README.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:models/bcap/README.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:columns/001-ball-count/sources.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:columns/001-ball-count/sources.md",
+      "status": "PASS"
+    },
+    {
+      "check": "registered_document_hash:columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "status": "PASS"
+    },
+    {
+      "check": "document_backup_hash:columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_completed_scope",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_pre_result_definition_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_model_card.md_status",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_validation.md_status",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_fold0_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_fold1_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_fold2_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_completed_scope",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_pre_result_definition_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_model_card.md_status",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_validation.md_status",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_fold0_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_fold1_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "pitch_sb_fold2_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_completed_scope",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_pre_result_definition_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_model_card.md_status",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_validation.md_status",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_fold0_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_fold1_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "swing_fold2_saved_nuisance",
+      "status": "PASS"
+    },
+    {
+      "check": "12_expandable_count_sections",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:../runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:../runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:../runs/bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:../runs/bcap_pitch__mlb_2024_2025__20260912__r01/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:../runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:../runs/bcap_swing__mlb_2024_2025__20260912__r01/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:batter_five_regions.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:batter_region_pitch_groups.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:basic_summary.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:reproduction.md",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:design_revisions/final_choice_before_fitting.json",
+      "status": "PASS"
+    },
+    {
+      "check": "report_link:report_manifest.json",
+      "status": "PASS"
+    }
+  ],
+  "files": [
+    {
+      "path": "models/bcap/development_v2/v0.2.0/engine.py",
+      "sha256": "83dacd3592b4401f62d29ba184f1696f9c55e5a4db14094c73282ceded8d35d3",
+      "bytes": 10069
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/prepare.py",
+      "sha256": "76521d1fb51e462e792a567aea63a854c56ba7066e029b835e08ffd10fed40c6",
+      "bytes": 6357
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/record_region_choice.py",
+      "sha256": "4cc29442973af71e3a6004d6c57655ae2adfbb109e3936523893a81e2d9857ec",
+      "bytes": 2944
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/register_results.py",
+      "sha256": "6b73816ae31004010ebf1222f0b73458285744d0443afbc3fc81ce46abe630bb",
+      "bytes": 19028
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/report.py",
+      "sha256": "f9f3a3d71ca8ca1fa5d80e62317b4a01897e0bd678db318296370e2518f77855",
+      "bytes": 22554
+    },
+    {
+      "path": "models/bcap/development_v2/v0.2.0/run.py",
+      "sha256": "4e1366314d92b6a7d295d492a3562060f89ca5a28af5cf306a587993f37797fa",
+      "bytes": 12477
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report.html",
+      "sha256": "3c32f7bab3025a228a006655278dd06944bac37f8bf7eb821322e913e382a085",
+      "bytes": 71325
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report_manifest.json",
+      "sha256": "7a2cbd5241bc8133588c6ccd6f11928b006cabf381055651f2dcd0bd4c0d2566",
+      "bytes": 3296
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/document_update.json",
+      "sha256": "0a42929aba2b08ffcd8aa3774793690d3d9ada63309b99b5319c671116801f52",
+      "bytes": 7289
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/headline_results.json",
+      "sha256": "23d57af842c7bcc248013f9385b47253cbedbf77d31a8edb00c43964ec4edd00",
+      "bytes": 2712
+    },
+    {
+      "path": "columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/basic_summary.json",
+      "sha256": "120d333c66128aa10bef48e76a9880dc94af6710028489c97923528dd19dc17c",
+      "bytes": 2276
+    }
+  ],
+  "run_manifests": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "9bb5801c150e480a3283199e183ff64abdc2a17d98cc2f3f33d75928461e5668",
+      "bytes": 14971
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "1e21813d4b2c61d5469da9751e6e93aa9be5f8075df20467b36cbcadd4ed0ebf",
+      "bytes": 19665
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/manifest.json",
+      "sha256": "84f035632a1ef182a3781d7411d9ffa3b111e90f2018e758741006c522dfd4b1",
+      "bytes": 15901
+    }
+  ],
+  "data_references": {
+    "status": "PASS",
+    "started_at_utc": "2026-09-11T17:02:23.257416+00:00",
+    "finished_at_utc": "2026-09-11T17:02:28.822168+00:00",
+    "scope": "Basic reused development-pickle checks; no raw source audit or independent verifier",
+    "years": [
+      2024,
+      2025
+    ],
+    "rows": 1424427,
+    "games": 4859,
+    "PA": 366231,
+    "eligible": {
+      "pitch": 1415566,
+      "pitch_sb": 1415566,
+      "swing": 1416043
+    },
+    "checks": [
+      {
+        "check": "development_years_only",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "unique_complete_pitch_keys",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "valid_count",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "count_labels",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "PA_Y_constant",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "terminal_event_link",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "result_classification",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "season_W_no_extra_reward",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "current_closed_pitch_mapping",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "no_fine_lag_categories",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "pitch_complete_binary_action",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "swing_complete_binary_action",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "pitch_action_definition",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "swing_action_definition",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "SB_complete_binary_action",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "SB_boundary_legacy_separate",
+        "status": "PASS",
+        "detail": null
+      },
+      {
+        "check": "known_development_exception_rows",
+        "status": "PASS",
+        "detail": null
+      }
+    ],
+    "input": {
+      "path": "columns/001-ball-count/data/processed/bcap_dev_v010_20260909_r01.pkl",
+      "sha256": "1aff16f91b58b4ed53b062a07c31381f4fe99b37ae983ece9b3d227f8c1c2fa4",
+      "bytes": 394585378
+    },
+    "output": {
+      "path": "columns/001-ball-count/data/processed/bcap_dev_v2_20260912__r01.pkl",
+      "sha256": "7ac1602e3ed5932ef1a7e3c26d9acb1cd9abc9a36e69234ff433cc3df7a05698",
+      "bytes": 417328886
+    },
+    "code": {
+      "path": "models/bcap/development_v2/v0.2.0/prepare.py",
+      "sha256": "76521d1fb51e462e792a567aea63a854c56ba7066e029b835e08ffd10fed40c6",
+      "bytes": 6357
+    },
+    "definitions": [
+      {
+        "path": "models/bcap/pitch/v0.2.0/specification.yaml",
+        "sha256": "afad66dd7ecb1ca0a9d34f25c611d35014df26fa48e84b33a7521645fbda2778",
+        "bytes": 6098
+      },
+      {
+        "path": "models/bcai/observed/v1.0.0/specification.yaml",
+        "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+        "bytes": 4980
+      }
+    ],
+    "known_exceptions": "Six known historically; two belong to2024/25 and retained. No external records opened, no cause investigation.",
+    "not_run": [
+      "external data",
+      "raw-file rehash audit",
+      "full independent review",
+      "refits or bootstrap"
+    ]
+  },
+  "preview": {
+    "local_url": "http://127.0.0.1:8766/columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report.html#regions",
+    "opened": true,
+    "visual_check": "Five-region diagram and overlapping-corner explanation rendered in browser; Korean text legible."
+  },
+  "not_run": [
+    "2023/2026 evaluation",
+    "bootstrap/repeated retraining",
+    "independent review",
+    "whole legacy asset hash audit"
+  ]
+}

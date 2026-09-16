@@ -1,0 +1,23 @@
+{
+  "sealed_at": "2026-09-08T08:11:36.582132+00:00",
+  "external_results_seen": false,
+  "development_run": "bcai_ridge__mlb_2024_2025__20260908__r02",
+  "files": [
+    {
+      "path": "models\\bcai\\ridge\\v0.2.0\\development_plan.md",
+      "sha256": "1014e5f72709220dd56ab9422c7b1b386bf9fbe1d7f83a3d711970a146684627"
+    },
+    {
+      "path": "models\\bcai\\ridge\\v0.2.0\\specification.yaml",
+      "sha256": "a1bdf90156585d4e1208aae20e7f97d543a9989c8d93f47de94279f9d2d94f7f"
+    },
+    {
+      "path": "models\\bcai\\ridge\\v0.2.0\\ridge_v02.py",
+      "sha256": "e8350ed9f721901f3e16e1455b4fde3e89eb9e2e6595484d77c9bbe01a534aed"
+    },
+    {
+      "path": "models\\bcai\\ridge\\v0.2.0\\external_validation.py",
+      "sha256": "82bacca8a77e34d1725fbae75b893ba6624ecd290317ff1a81bc66455268df5e"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "identical_eligible_row_ids",
+      "status": "PASS"
+    },
+    {
+      "check": "keys_year_count_fold_Y_equal",
+      "status": "PASS"
+    },
+    {
+      "check": "two_actions_from_correct_codes",
+      "status": "PASS"
+    },
+    {
+      "check": "0-0_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "0-1_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "0-2_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "1-0_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "1-1_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "1-2_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "2-0_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "2-1_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "2-2_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "3-0_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "3-1_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "3-2_reuse_old_no_refit_values",
+      "status": "PASS"
+    },
+    {
+      "check": "48_primary_240_aux",
+      "status": "PASS"
+    },
+    {
+      "check": "all_action_denominators",
+      "status": "PASS"
+    },
+    {
+      "check": "same_common_denominators",
+      "status": "PASS"
+    },
+    {
+      "check": "Q_delta_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "check": "finite_primary_scores",
+      "status": "PASS"
+    },
+    {
+      "check": "all_primary_sample_counts",
+      "status": "PASS"
+    },
+    {
+      "check": "composition_counts",
+      "status": "PASS"
+    },
+    {
+      "check": "aux_aggregates_match_primary",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Production saved-score aggregation checks; no independent verifier or refit"
+}

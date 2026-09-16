@@ -1,0 +1,5 @@
+﻿group,n,support,MSE,Brier,metric_scope
+all,716385,684050,0.23253557646886186,0.16905243386982619,external own OOF nuisance; not frozen development predictor
+known_dev_both,609475,583495,0.23190025982990303,0.16908099247003636,external own OOF nuisance; not frozen development predictor
+unseen_dev_any,106910,100555,0.2361574042541899,0.16888962634140875,external own OOF nuisance; not frozen development predictor
+unknown_external_nuisance_any,3956,3600,0.28557513644957744,0.1638536662378506,external own OOF nuisance; not frozen development predictor
