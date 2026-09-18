@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "created_at_utc": "2026-09-17T06:08:14.666431+00:00",
+  "scope": "새 파일 구문·로컬 링크·기록 해시·HTML 5표 구조 확인; 브라우저 시각 확인/통계 재검증 아님",
+  "syntax_files": 6,
+  "local_links": 33,
+  "hash_records": 33,
+  "documents_updated": 6,
+  "new_training": false,
+  "full_validation": false,
+  "checker_sha256": "e69b0549e910b65409ce88826a4b9fd1b7383d983caa24794dcf12edf6fbac56",
+  "document_updater_sha256": "eddb3855630700ce3fc3e9d37c6f0854734bea52d00005d23e68c2047de6ffca"
+}

@@ -1,0 +1,66 @@
+{
+  "review_id": "bcap_followup_review__mlb_2024_2025__20260918__r01",
+  "run_type": "limited_review_no_refit",
+  "status": "COMPLETE",
+  "created_at_utc": "2026-09-18T08:25:10.570841+00:00",
+  "model_ids": [
+    "BCAI-STATE-DELTA-v0.1.0",
+    "BCAP-DECOMP-v0.1.0",
+    "BCAP-PITCH-SB-v0.1.0"
+  ],
+  "states_unchanged": true,
+  "new_training": false,
+  "new_external_validation": false,
+  "allocation": [
+    {
+      "agent": "root",
+      "role": "추정 대상·분모·해석·발견 문제의 중요도 및 최종 판정"
+    },
+    {
+      "agent": "sol_csv_review",
+      "requested_model": "gpt-5.6-sol",
+      "role": "기존 소형 CSV 독립 산술 대조",
+      "fork_history": "none"
+    },
+    {
+      "agent": "sol_interface_review",
+      "requested_model": "gpt-5.6-sol",
+      "role": "새 모의 예제로 합성 인터페이스·기록 해시·표와 링크 확인",
+      "fork_history": "none"
+    }
+  ],
+  "csv_result": {
+    "checks": 906,
+    "passed": 906,
+    "failed": 0,
+    "max_numeric_absolute_error": 2.220446049250313e-16
+  },
+  "interface_result": {
+    "total": 22,
+    "passed": 22,
+    "failed": 0
+  },
+  "conclusion_ko": "명시한 검수 범위에서 중대한 계산·표현 오류 미발견; 실증 분해·반응 시나리오 보류 유지",
+  "source_evidence": [
+    "csv_review/checks.json",
+    "interface_review/checks.json",
+    "methodology_review.md"
+  ],
+  "outputs_sha256": {
+    "csv_review/checks.json": "9541c903a94b0e1d714445d2c01ad8390118cb266cf09bbdc48e28e3d2f19a80",
+    "csv_review/findings.md": "1975bef825a12795a91efcb547bcc28af2e01f3d26f99ee4f489c5aadc0fadca",
+    "csv_review/verifier.py": "89ba23977196019bdf5c508285c9c9cb9031adbf6aa8259b15b4544575c7cbc2",
+    "document_update.json": "2328311d62f970319b5ec148a9a0f1b482aaeba8eb86f4094e3a71206e296ee2",
+    "finalize_review.py": "f0d0ad9996a75bd1511bccb7863fc69747f1d47433faaaa2868c476c2037aa34",
+    "interface_review/checks.json": "5e766c5cbcbb7fa5fa4e362caa3d3c071533711bfb256a76aa3496343889214c",
+    "interface_review/cli_output.json": "b9006497aacfa2935454f9c93f1b0cc1be6003598a84f6f6d521e570eedfb641",
+    "interface_review/findings.md": "504033ab81e4cf8ba903fba4b61fa6c8da66841d2396a02453721ed1bc72cf43",
+    "interface_review/synthetic_input.json": "744f7846a702dc3a9c0ab5590aa1b6750737682433d05e1983175a9ab339409f",
+    "interface_review/synthetic_output.json": "fa7ecf17f857d5a2faf5067a285ffc77323c8217eeb94cd7b0ea50bf76c7ed0f",
+    "interface_review/verifier.py": "c63354fd03390676efbb8fa5d4ef45668bbc50dedb692f808be6a9d7f9cce076",
+    "methodology_review.md": "c29b641e0b6711426731c5a320fd18ed7f1f349b571c829358ca6b905f392d9f",
+    "report.md": "0d954376af27ee5fe44b596592c8539f683840b9ec6e8805c3a95476bf1fe0d4",
+    "review_scope.json": "cdc720b0e5615c89a31e6ba941ea87e866ce1981e8a913045a20ba7643015d12"
+  },
+  "token_savings_quantified": false
+}

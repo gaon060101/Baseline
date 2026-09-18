@@ -1,0 +1,25 @@
+{
+  "status": "WITHHELD_DESIGN_AND_JOINT_SUPPORT",
+  "empirical_calculation_executed": false,
+  "counts_of_interest": [
+    "0-2",
+    "1-2"
+  ],
+  "proposal": "고정된 공통 기준 행 i에 대해 q_i(r)=r*q_i(0), 0<=r<=1; Q_B(r)=mean_i[q_i(r)*M_B,Swing(i)+(1-q_i(r))*M_B,Take(i)].",
+  "fixed": [
+    "시즌별 최종 PA W",
+    "기준 선수·투구 전 상황 분포",
+    "존 밖 공 특성의 조건부 분포",
+    "각 공·상황에서 행동별 조건부 최종 W",
+    "존 안 공 및 존 안 반응 분포",
+    "현재 한 구 이후의 관측된 후속 행동 체계"
+  ],
+  "required": [
+    "동일 훈련/평가 게임 분리 아래 q_i와 두 M의 결합 교차 적합 예측",
+    "0-2·1-2의 양 행동 지원·ESS·보정 점검",
+    "동일 투구 전 기준 분포로 표준화한 S 기준값 및 B 값",
+    "불확실성 전달과 시나리오 해석 범위의 실행 전 고정"
+  ],
+  "forbidden_substitution": "기존 S/B Q와 기존 Swing/Take Q의 네 집단 평균을 연결할 수 없음",
+  "limits": "반응률만 바꿔도 접촉 품질·의도·상대 적응이 고정된다는 가정이며 실제 개입 효과나 Nash 균형이 아니다. 입력·지원이 없으므로 임계 반응률과 경험적 수치는 미산출."
+}

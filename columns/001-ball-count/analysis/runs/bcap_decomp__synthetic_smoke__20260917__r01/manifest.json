@@ -1,0 +1,39 @@
+{
+  "run_id": "bcap_decomp__synthetic_smoke__20260917__r01",
+  "model_id": "BCAP-DECOMP-v0.1.0",
+  "version": "0.1.0",
+  "status": "DRAFT",
+  "execution_kind": "synthetic_interface_smoke_only",
+  "created_at_utc": "2026-09-17T06:04:28.960976+00:00",
+  "python": "3.12.14",
+  "raw_MLB_read": false,
+  "model_fitting": false,
+  "command": [
+    "C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "C:\\Users\\백창현\\Desktop\\Baseline\\models\\bcap\\decomposition\\v0.1.0\\compose.py",
+    "--input",
+    "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\artifacts\\synthetic_input.json",
+    "--output",
+    "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\artifacts\\synthetic_output.json"
+  ],
+  "checks_passed": 21,
+  "input_output_code_sha256": {
+    "models/bcap/decomposition/v0.1.0/compose.py": "c020dede3d791ed67c37c31df1075de2181fa91daf0ae5eb2860bb9c4a3f933d",
+    "models/bcap/decomposition/v0.1.0/run_smoke.py": "d8bbc6d5c222cd01dbfa31864babb9c5de044c0b5137b12526d494ae29db6f55",
+    "models/bcap/decomposition/v0.1.0/specification.yaml": "d2bd7808b7a8dc52ca902d073198d418b8d90e35858cb7b623ffb280740a2e6c",
+    "models/bcap/decomposition/v0.1.0/input_contract.md": "454670db827692bb1af10f48256cade6011e0412300733e186e829b8b9477440",
+    "models/bcap/swing/v0.2.0/specification.yaml": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58",
+    "columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/artifacts/synthetic_input.json": "262b1286b668e4fe9127581dd8e05499766a66d968091221fd9863520eba1245",
+    "columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/artifacts/synthetic_output.json": "dc0766d92f8f9dd83d11548509fb05b87820be2ac113c0df5895f5b622da1915",
+    "columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/artifacts/checks.json": "436b56b298283d45d93afc289cd998e4590d14590d3b417a5ed86643c453b02c"
+  },
+  "not_estimated": [
+    "empirical_branch_probability_or_W",
+    "new_MLB_action_value",
+    "AIPW",
+    "confidence_interval",
+    "scenario",
+    "policy"
+  ]
+}

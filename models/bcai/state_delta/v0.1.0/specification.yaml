@@ -1,0 +1,44 @@
+{
+  "model_id": "BCAI-STATE-DELTA-v0.1.0",
+  "version": "0.1.0",
+  "status": "EXPERIMENTAL",
+  "format": "JSON-compatible YAML 1.2; runtime configuration",
+  "source_run": "bcai_obs__mlb_2024_2025__20260907__r01",
+  "source_directory": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01",
+  "source_season_table": "artifacts/advantage_season_sensitivity.csv",
+  "source_count_table": "artifacts/advantage_count_results.csv",
+  "source_event_table": "artifacts/advantage_event_audit.csv",
+  "source_definition": "models/bcai/observed/v1.0.0/specification.yaml",
+  "source_calculation": "columns/001-ball-count/analysis/analyze_count_advantage.py",
+  "years": [2024, 2025],
+  "unit": "시즌별 선형가중 최종 PA 공격가치 W. BCAI 0-0=100 지수·득점·확률이 아님",
+  "estimand": "각 상태에 실제 도달한 서로 다른 PA 집단의 원 W 평균 사이 산술 차이. 현재 한 공의 행동 효과나 사건조건부 W가 아님",
+  "state_value": "V_y(c) = sum_i R_i(c)*W_i / sum_i R_i(c), PA×count 중복 제거",
+  "denominator": {
+    "N_reached_PA": "해당 시즌 유효 PA 중 그 카운트가 한 번 이상 관측된 PA 수",
+    "N_eligible_PA": "해당 시즌 0-0 도달 PA 수; 기존 적격성 정의상 모든 유효 PA",
+    "reach_fraction": "N_reached_PA / N_eligible_PA; 카운트 간 중복 가능, 합이 1일 필요 없음",
+    "next_state_N": "다음 카운트에 실제 도달한 전체 PA 수. 현재 카운트에서 그 사건을 겪은 PA 수가 아님",
+    "terminal_N": "null: 종료 W는 고정된 사건 가중치이며 표본평균이 아님"
+  },
+  "formulas": {
+    "next_ball": "b<3: V_y(b+1,s); b=3: w_BB,y",
+    "next_strike": "s<2: V_y(b,s+1); s=2: W_K=0, 일반적인 헛스윙/루킹 삼진 종료",
+    "delta_ball_W": "next_ball_W-current_V_W",
+    "delta_strike_W": "next_strike_W-current_V_W",
+    "ball_minus_strike_W": "next_ball_W-next_strike_W",
+    "ordinary_foul": "s<2: next_strike_W; s=2: current_V_W; 두 스트라이크 일반 파울의 delta=0"
+  },
+  "exceptions": [
+    {"case":"번트", "handling":"일반 파울 자기유지 규칙에서 제외. 2스트라이크 파울 번트·헛번트는 실제 종료 event가 K이면 기존 W=0; 번트 인플레이는 최종 event별 W. 희생번트 OUT=0은 기존 V에 포함. 투구별 사건 표는 미실행"},
+    {"case":"HBP", "handling":"볼 전이나 BB로 합치지 않음. 최종 hit_by_pitch는 시즌 HBP 가중치, 기존 V에 포함. 별도 종료 범주이며 이번 볼/스트라이크 표의 두 분기에 포함하지 않음"},
+    {"case":"낫아웃", "handling":"실제 final event가 strikeout 또는 strikeout_double_play이면 기존 OBS 부호화 W=0. 출루했더라도 득점가치 0이라는 주장이 아님. event가 다른 경우 해당 결과 정의 사용; events만으로 낫아웃 구별이 불가하므로 빈도와 세부 전이는 미산출"},
+    {"case":"실책·야수선택", "handling":"field_error/fielders_choice는 OTHER=0으로 기존 V에 포함하지만 아웃과 동의어가 아님. 일반 삼진/볼 전이로 강제하지 않음"},
+    {"case":"파울팁", "handling":"일반 파울과 별도. 실제 스트라이크로 기록되는 경우 스트라이크 분기; 2스트라이크에서 K 종료이면 W=0. 이번 표는 description을 새로 분류하지 않음"},
+    {"case":"자동 볼·스트라이크 및 특수 기록", "handling":"기존 OBS의 유효 PA 카운트 도달에 포함된 범위 유지. 투구 사건 빈도는 새로 계산하지 않음. 판정·기록 정정·다른 종료 사건을 일반 전이에 억지로 배정하지 않음"},
+    {"case":"제외 PA", "handling":"마지막 event 결측, IBB, 타격방해, truncated, 미분류, 첫 관측 0-0 아님은 기존 OBS 제외를 그대로 계승"}
+  ],
+  "uncertainty": "이번 실행에서 계산하지 않음. 기존 상대 지수 CI를 원 W 차이에 전용하지 않음",
+  "not_executed": ["실제 투구별 전이 사건 빈도", "실제 사건 조건부 최종 W", "신규 적합", "부트스트랩", "원자료 전면 재집계", "경로별 상태 확장", "순차 정책"],
+  "prohibitions": ["현재 최종 W에 상태 차이를 매 공 더해 중복 계산하지 않음", "서로 다른 도달 집단의 차이를 인과 효과로 해석하지 않음", "연도별 가중치 차이를 무시한 공통 척도 주장 금지"]
+}

@@ -1,0 +1,90 @@
+{
+  "purpose": "저장 집계표의 표시용 차트. 새 모델 학습 없음.",
+  "inputs_sha256": {
+    "analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810",
+    "analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/sb_reformatted.csv": "ef2e00907c4f3154a2b7cfdc21a76884935290baa9f05bb693d8e418b25a45ec",
+    "analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/values.csv": "52556aa763b3fe21e735020ff208ea18a11ce2adf6de0b8297e5675c6537bf64",
+    "analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/state_delta_2024_2025.csv": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4",
+    "analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_pitch_explanators.csv": "97b2bf95f43693a6b7ae5861f03cd24ee2068082f0adfe1eaf74234281c7ea79"
+  },
+  "figures": [
+    {
+      "file": "01_bcai_grid.png",
+      "description": "12카운트 관찰 지수와 도달 타석 수",
+      "size_px": [
+        1200,
+        1190
+      ],
+      "sha256": "22f148d2cab461ab689721fcc5212d24c7bd3b31454119faa1012df482d2ea2b"
+    },
+    {
+      "file": "02_sb_development.png",
+      "description": "개발 12카운트 S−B와 기존 219개 비교 보정 구간",
+      "size_px": [
+        1200,
+        1380
+      ],
+      "sha256": "75bf43bc219f142f2e7c490bc12c92a28a096ccece7876991530a677591d2e56"
+    },
+    {
+      "file": "03_sb_2023.png",
+      "description": "2023 0-2·1-2 재현 결과와 주4개 비교 보정 구간",
+      "size_px": [
+        1200,
+        870
+      ],
+      "sha256": "2e09287a1988d4da7d056b687ff29862b2e21ff229eaaa739a351bab314b1742"
+    },
+    {
+      "file": "04_zone_map.png",
+      "description": "타자 기준 5구역 도식, 모서리 중복 설명",
+      "size_px": [
+        1200,
+        1010
+      ],
+      "sha256": "50251ac5d98bcca421be50c925beaff6d3a7039e883f8f11cabb70cba781ed37"
+    },
+    {
+      "file": "05_swing_2023.png",
+      "description": "2023 12×5 스윙/테이크 차이·방향·지원 상태와 표본 수",
+      "size_px": [
+        1440,
+        1800
+      ],
+      "sha256": "4171da0b38de5d80ce1abefb42b27f3064fc7edb1ad4df9b3c762e02d942e664"
+    },
+    {
+      "file": "06_bcai_intervals.png",
+      "description": "BCAI OBS 점추정과 동시 95% 구간",
+      "size_px": [
+        1200,
+        1360
+      ],
+      "sha256": "40a00129371bd273801f1fb9dd9f8fa9ffe15d821bc2b0fb960a816677f8664c"
+    },
+    {
+      "file": "07_state_gaps.png",
+      "description": "2024 2스트라이크 카운트의 다음 볼 상태 평균 차이",
+      "size_px": [
+        1200,
+        970
+      ],
+      "sha256": "6aa2589e410f628322629d49dc6b9f641657a10d06dd61d4f9824df6fffd0c99"
+    },
+    {
+      "file": "08_three_ball.png",
+      "description": "3볼 카운트의 상태 가치와 투구별 스윙률, 분모 분리",
+      "size_px": [
+        1200,
+        1030
+      ],
+      "sha256": "03d69e8624427e19630a6b2416688fa56d2ec0e4b1586583ec92b6af4101abfa"
+    }
+  ],
+  "swing_cell_checks": {
+    "swing": 10,
+    "take": 44,
+    "uncertain": 2,
+    "unsupported": 4
+  }
+}

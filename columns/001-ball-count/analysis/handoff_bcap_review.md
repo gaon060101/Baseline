@@ -1,5 +1,29 @@
 # BCAP 별도 검수 인계 — 실제 구현·평가 완료 범위
 
+## 최신 인계 — 2026-09-18 후속 변경 제한적 검수
+
+[검수 보고서](runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md) · [실행·분담·해시](runs/bcap_followup_review__mlb_2024_2025__20260918__r01/manifest.json). Sol 두 에이전트가 CSV 산술과 인터페이스·해시·표·링크를 나눠 확인했고 주 작업은 설계·해석·최종 판정을 담당했다. 상호 반복 검수 없이 명시 범위를 완료했다.
+
+S/B 재표시24행·상태 차이24행의 독립 산술은 일치했고 새 모의 예제로 분해 합성·오류 거부를 확인했다. 확인 범위에서 중대한 오류는 발견하지 못했다. STATE-DELTA EXPERIMENTAL·DECOMP DRAFT를 유지한다. 실제 분해 학습·교정·지원·구간·상대 반응 수치는 미실행, 2026 위치 분석은 측정 보류다. 기존 모델·수치·명세·완료 실행과 아래 인계는 보존했다. 이번 PASS를 전체 통계 검증으로 전용하지 않는다.
+
+
+## 별도 작업 전달용 현황 문서 — 2026-09-17
+
+[BCAI·BCAP 후속 구현 인수인계](handoff_bcap_followup_20260917.md)에 현재 모델 상태, 기존/신규/모의 결과, 실제 실행 경로·재현 명령, 미구현·보류 사유와 다음 작업의 시작점을 모았다. [문서 작성 후 증거](handoff_bcap_followup_20260917_evidence.json). 이번 추가는 문서 작업이며 학습·분석을 재실행하거나 기존 상태를 올리지 않았다. 아래 원 인계와 증거는 보존한다.
+
+## 최신 인계 — 2026-09-17 후속 구현·간단한 확인 완료
+
+이번 요청은 **구현 후 간단한 확인까지만**이다. [구현 보고서](runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.md) · [HTML](runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.html) · [실행·해시](runs/bcap_followup__mlb_2024_2025__20260917__r01/manifest.json) · [문서 변경 기록](runs/bcap_followup__mlb_2024_2025__20260917__r01/document_update.json).
+
+- 기존 결과 재사용: S/B 2024·2025 12카운트와 2023 12카운트의 Q(B), Q(S), Δ=S−B, 기존 보정 구간·분모·판정을 별도 표로 저장했다. [24행 CSV](runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/sb_reformatted.csv)·[표 산술 확인](runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/quick_checks.json). 새 학습/구간 계산은 없다.
+- 새 관찰 산술: [BCAI-STATE-DELTA-v0.1.0](../../../models/bcai/state_delta/v0.1.0/model_card.md), EXPERIMENTAL. 시즌별 원 W 상태 평균 차이24행·빠른 확인84항목 PASS. [실행](runs/bcai_state_delta__mlb_2024_2025__20260917__r01/manifest.json)·[표와 재현](runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md). PA×count 중복 제거 정의·저장 분모를 확인했으며 실제 투구 사건 빈도/사건조건부 W·새 구간은 미산출이다.
+- 탐색 분해: [BCAP-DECOMP-v0.1.0](../../../models/bcap/decomposition/v0.1.0/model_card.md), DRAFT. 동일 참조행의 확률×조건부 최종 W 합성·입력 검사·모의 확인만 구현했다. [실행](runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json). 실제 MLB 가지 모형의 적합·보정·지원 검토·새 AIPW/구간은 미실행이다.
+- 상대 반응: [필수 입력과 고정 가정](runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/scenario_contract.json). 기존 S/B와 타자 주변 평균의 결합은 금지한다. 같은 기준 행의 결합값·지원이 없어 0-2/1-2 시나리오 수치와 임계 반응률은 보류했다.
+
+모든 기존 모델·실행·원본·이전 인계 증거는 유지했다. OBS/V1 검증을 새 모듈에 전용하지 않았고 VALIDATED 승격도 없다. 2026 S/B·SWING 측정 보류, 이미 노출된 2023·2026 이력도 유지한다. 다음 검수자는 먼저 새 상태 표의 분모와 일반 전이/특수 사건 구분, 분해의 모의 실행 표시와 미실행 목록을 확인하면 된다. 실제 분해·시나리오 학습을 자동으로 이어가지 않는다.
+
+아래는 이전 완료 작업의 인계이며 당시 범위를 보존한다.
+
 ## 최신 인계 — 2026-09-14 외부 패턴 재현 종료
 
 **2023 네 모델·2026 구종 두 모델의 외부 패턴 재현 완료, 2026 S/B·타자는 측정 보류 — EXPERIMENTAL**. [최종 HTML](bcap_external_20260914__r01/final_report.html) · [칼럼 결론](bcap_external_20260914__r01/final_column_conclusion.md) · [계획](bcap_external_20260914__r01/plan.md) · [SHA256·시각](bcap_external_20260914__r01/plan_seal.json) · [측정 보류 근거](bcap_external_20260914__r01/measurement_review.md) · [독립 주수치 검산](bcap_external_20260914__r01/primary_verification.json) · [재현 명령](bcap_external_20260914__r01/reproduction.md).

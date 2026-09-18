@@ -1,0 +1,182 @@
+{
+  "schema_version": "1",
+  "synthetic": true,
+  "fit_provenance": "모의 입력: 실제 선수·MLB 예측·학습 결과가 아님",
+  "outcome_definition": {
+    "kind": "final_PA_W",
+    "unit": "season_weighted_final_PA_W",
+    "weight_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "fold_training_games": {
+    "0": [
+      "synthetic-game-2"
+    ],
+    "1": [
+      "synthetic-game-1"
+    ]
+  },
+  "reference_rows": [
+    {
+      "row_id": "synthetic-row-1",
+      "game_pk": "synthetic-game-1",
+      "at_bat_number": "1",
+      "pitch_number": "1",
+      "outer_fold": "0",
+      "season": 2024,
+      "count": "0-2",
+      "regions": [
+        "HIGH",
+        "OUTSIDE"
+      ],
+      "observed_description": "ball"
+    },
+    {
+      "row_id": "synthetic-row-2",
+      "game_pk": "synthetic-game-2",
+      "at_bat_number": "1",
+      "pitch_number": "1",
+      "outer_fold": "1",
+      "season": 2024,
+      "count": "0-2",
+      "regions": [
+        "HIGH",
+        "OUTSIDE"
+      ],
+      "observed_description": "hit_into_play"
+    }
+  ],
+  "predictions": [
+    {
+      "row_id": "synthetic-row-1",
+      "action": "Take",
+      "prediction_fold": "0",
+      "branches": {
+        "TAKE_BALL": {
+          "p": 0.9,
+          "mean_W": 0.8,
+          "supported": true
+        },
+        "TAKE_CALLED_STRIKE": {
+          "p": 0.1,
+          "mean_W": 0.0,
+          "supported": true
+        },
+        "TAKE_HBP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        }
+      },
+      "direct_mean_W": 0.7
+    },
+    {
+      "row_id": "synthetic-row-1",
+      "action": "Swing",
+      "prediction_fold": "0",
+      "branches": {
+        "BUNT_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_MISS": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "IN_PLAY": {
+          "p": 1.0,
+          "mean_W": 0.3,
+          "supported": true
+        },
+        "SWING_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_MISS": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        }
+      },
+      "direct_mean_W": 0.35
+    },
+    {
+      "row_id": "synthetic-row-2",
+      "action": "Take",
+      "prediction_fold": "1",
+      "branches": {
+        "TAKE_BALL": {
+          "p": 0.1,
+          "mean_W": 0.2,
+          "supported": true
+        },
+        "TAKE_CALLED_STRIKE": {
+          "p": 0.9,
+          "mean_W": 0.0,
+          "supported": true
+        },
+        "TAKE_HBP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        }
+      },
+      "direct_mean_W": 0.1
+    },
+    {
+      "row_id": "synthetic-row-2",
+      "action": "Swing",
+      "prediction_fold": "1",
+      "branches": {
+        "BUNT_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_MISS": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "IN_PLAY": {
+          "p": 1.0,
+          "mean_W": 0.5,
+          "supported": true
+        },
+        "SWING_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_MISS": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        }
+      },
+      "direct_mean_W": 0.55
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BCAP 설명서 — ‘그 카운트에서 무엇을 할까’를 비교하는 방법 | Baseline</title><style>
+:root{--ink:#19383d;--teal:#147c80;--muted:#637579;--line:#dae5e5}
+*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font-family:'Malgun Gothic','맑은 고딕',sans-serif}
+a{color:#156c76;text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:#b04e28}
+.topbar{max-width:980px;margin:auto;padding:26px 36px;display:flex;justify-content:space-between;gap:16px;font-size:13px;letter-spacing:.5px}
+.brand{font-weight:800;letter-spacing:3px;text-decoration:none}.meta{color:var(--muted)}
+nav{max-width:908px;margin:0 auto 22px;display:flex;gap:8px;flex-wrap:wrap}nav a{padding:10px 16px;border:1px solid var(--line);border-radius:22px;background:white;text-decoration:none;font-size:14px}nav a.current{background:var(--ink);color:white}
+main{max-width:908px;margin:0 auto 60px;padding:58px 64px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 24px #18393b06}
+article{font-size:18px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word}
+h1{font-size:38px;letter-spacing:-1.7px;line-height:1.45;margin:0 0 28px}h2{font-size:27px;line-height:1.5;letter-spacing:-.8px;margin:78px 0 25px;padding-top:24px;border-top:2px solid #cee1df;scroll-margin-top:24px}h3{font-size:21px;line-height:1.6;margin:40px 0 20px}
+p{margin:0 0 25px}strong{font-weight:750;color:#102f36}em{font-style:normal;color:var(--muted)}p:has(>em:only-child){font-size:13px;line-height:1.8;margin-top:-10px;margin-bottom:32px}
+blockquote{margin:28px 0;padding:25px 29px;border-left:4px solid var(--teal);background:#f2f7f6;font-size:17px}blockquote p:last-child{margin-bottom:0}
+figure{margin:35px -14px 20px}img{display:block;max-width:100%;height:auto;border:1px solid #e7eeee;margin:auto}.image-link{cursor:zoom-in}
+.table-wrap{overflow:auto;margin:26px 0 22px;border:1px solid var(--line);border-radius:5px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{padding:13px 13px;border-bottom:1px solid #e4ebea;vertical-align:top;text-align:left}th{background:#edf4f2;color:#244b50;font-weight:700}tr:last-child td{border-bottom:0}td:first-child{font-weight:650}tbody tr:nth-child(even){background:#fafcfc}
+li{margin:10px 0}ul,ol{padding-left:25px}hr{border:0;border-top:1px solid var(--line);margin:58px 0}
+.toc{margin:40px 0;padding:18px 23px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:#f8fbfa}.toc summary{cursor:pointer;font-weight:bold}.toc ul{margin:12px 0 3px}.toc a{text-decoration:none}
+.endnav{margin:46px 0 0;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:15px;flex-wrap:wrap;font-size:14px}
+.lead{font-size:20px;line-height:1.9;color:#36555a}.cards{display:grid;gap:18px;margin:38px 0}.card{display:block;text-decoration:none;background:#f4f8f6;border:1px solid var(--line);border-radius:8px;padding:26px 28px}.card small{display:block;color:var(--teal);letter-spacing:2px;margin-bottom:9px}.card b{font-size:24px;line-height:1.6}.card p{margin:12px 0 0;font-size:15px;line-height:1.8;color:var(--muted)}.note{font-size:14px;line-height:1.8;color:var(--muted);padding:20px;background:#f7f3e9;border-radius:5px}
+@media(max-width:650px){.topbar{padding:20px;display:block}.meta{display:block;margin-top:8px}nav{margin:0 16px 16px;gap:6px}nav a{font-size:12px;padding:9px 12px}main{margin:0 8px 25px;padding:32px 18px;border-radius:5px}article{font-size:17px;line-height:1.95}h1{font-size:29px;letter-spacing:-1px}h2{font-size:24px;margin-top:55px}h3{font-size:20px}p{margin-bottom:24px}.table-wrap{margin:24px -6px}table{font-size:12px;min-width:480px}th,td{padding:10px}figure{margin:28px -8px 20px}p:has(>em:only-child){font-size:12px}blockquote{padding:20px}.card{padding:23px}.card b{font-size:21px}.lead{font-size:18px}}
+@media print{body{background:white}.topbar,nav,.toc,.endnav{display:none}main{max-width:none;border:0;padding:0;box-shadow:none}article{font-size:11pt;line-height:1.8}h1{font-size:23pt}h2{font-size:18pt;margin-top:28px}figure,table{break-inside:avoid}img{max-height:850px}a{color:inherit}}
+</style></head><body><header class="topbar"><a class="brand" href="index.html">BASELINE</a><span class="meta">볼카운트 연재 · 2026.09.18 · 사용자 검토본</span></header><nav aria-label="연재 글"><a class="" href="01_ball_count.html">1. 볼카운트 분석 칼럼</a><a class="" href="02_bcai.html">2. BCAI 설명 글</a><a class="current" href="03_bcap.html">3. BCAP 설명 글</a></nav><main><article><h1>BCAP 설명서 — ‘그 카운트에서 무엇을 할까’를 비교하는 방법</h1><details class="toc"><summary>이 글의 목차</summary><ul><li><a href="#section-1">BCAI에서 한 걸음 더 들어가기</a></li><li><a href="#section-2">S와 B는 심판의 콜이 아니다</a></li><li><a href="#section-3">결과를 재는 자, W</a></li><li><a href="#section-4">‘보정했다’는 것은 무엇을 했다는 뜻일까?</a></li><li><a href="#section-5">자료가 많아도 빈칸을 남긴 이유</a></li><li><a href="#section-6">현재 결과는 어디까지 이어졌나?</a></li><li><a href="#section-7">만들면서 고친 것, 아직 답하지 못한 것</a></li><li><a href="#section-8">검산을 마쳤는데도 왜 ‘탐색 중’일까?</a></li></ul></details>
+<p><strong>볼카운트 분석의 방법 해설 · 2026년 9월 18일 작성</strong></p>
+<p><a href="01_ball_count.html">볼카운트 분석 칼럼으로 돌아가기</a> · <a href="02_bcai.html">BCAI 설명서</a></p>
+<p>0-2에서 존 밖으로 들어온 공을 타자가 따라 나와 헛스윙했다. 다음 타석에서는 비슷한 공을 참았고, 카운트가 1-2가 됐다. 어느 장면이 투수에게 더 좋은 선택이었을까?</p>
+<p>한 번의 결과만으로 답하기는 어렵다. 투수와 타자가 달랐을 수 있고, 공의 구속과 움직임도 달랐을 수 있다. 존 밖으로 나간 공이 애초에 그곳을 겨냥한 것인지도 기록만으로는 알 수 없다.</p>
+<p>BCAP는 이런 질문을 다루기 위해 만든 자체 행동 비교 모형이다. <strong>선수와 상황의 차이를 보정한 뒤, 비교할 수 있는 자료 안에서 두 행동이 어떤 최종 타석 결과와 연결됐는지 살핀다.</strong> 이 글은 본문에 등장하는 ‘존 밖 방향’, ‘스윙 방향’, ‘차이 불명확’이라는 말을 읽기 위한 설명서다.</p>
+<h2 id="section-1">BCAI에서 한 걸음 더 들어가기</h2>
+<p>BCAI의 질문은 “이 카운트에 도달한 타석들은 이후 얼마나 좋은 결과를 냈는가?”다. 카운트라는 <strong>상태의 가치</strong>를 보여준다.</p>
+<p>BCAP의 질문은 “그 카운트에서 현재 공의 위치·구종·타자 행동을 나누면, 어느 쪽의 결과가 더 좋았는가?”다. <strong>행동별 보정 가치</strong>를 비교한다.</p>
+<p>3-0이 타자에게 좋은 상황이라는 사실만으로 그 공을 휘두르는 편이 좋은지는 알 수 없다. 유리한 상황을 갖고 있다는 것과, 그 상황을 어떻게 활용할지는 다른 질문이기 때문이다.</p>
+<p>현재 BCAP에는 아래 네 가지 비교가 있다. ‘차이’는 표의 왼쪽 행동 가치에서 오른쪽 행동 가치를 뺀 값이다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>비교</th>
+<th>실제로 나눈 행동</th>
+<th>차이가 양수라면</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>투수의 위치</td>
+<td>실제 존 안 S − 실제 존 밖 B</td>
+<td>존 밖의 허용 공격가치가 낮음</td>
+</tr>
+<tr>
+<td>투수의 구종 계열</td>
+<td>FB − NFB</td>
+<td>NFB의 허용 공격가치가 낮음</td>
+</tr>
+<tr>
+<td>투수의 포심 여부</td>
+<td>포심 FF − 비포심</td>
+<td>비포심의 허용 공격가치가 낮음</td>
+</tr>
+<tr>
+<td>타자의 행동</td>
+<td>스윙 − 테이크</td>
+<td>스윙의 공격가치가 높음</td>
+</tr>
+</tbody></table></div>
+<p><em>표 1. BCAP의 네 비교와 부호. 수치 결과표가 아닌 분석 정의표다. 투수는 낮은 공격가치, 타자는 높은 공격가치가 유리한 방향이다. 정의: <a href="../../../../models/registry.md">현재 모델 목록</a>.</em> </p>
+<p>FB는 포심·싱커·커터를 묶은 이름이다. NFB는 분석에서 허용한 나머지 구종이다. 포심/비포심 비교에서는 싱커와 커터도 비포심에 들어간다. 두 분류를 모두 ‘직구 대 변화구’라고 부르면 서로 다른 비교를 같은 것으로 읽게 된다. 구종을 알 수 없는 공은 반대편 집단에 임의로 넣지 않았다.</p>
+<p>타자의 스윙에는 기록상 번트 등 공격 시도도 포함된다. 테이크에는 볼·루킹 스트라이크·몸에 맞는 공이 포함된다. 따라서 이 글의 스윙은 순수한 풀스윙만을 뜻하지 않으며, 기록 라벨로 확인되지 않는 타자의 순간 의도까지 구별한 것도 아니다.</p>
+<h2 id="section-2">S와 B는 심판의 콜이 아니다</h2>
+<p>S는 공 중심의 실제 도착 좌표가 분석용 존 안에 있는 경우, B는 밖에 있는 경우다. 가로폭 17인치와 각 투구 기록의 존 상·하단으로 판정하며, 경계는 S에 포함한다. 공의 반지름만큼 존을 넓히지는 않았다.</p>
+<p>여기서 가장 먼저 구별해야 할 것은 <strong>위치, 판정, 의도</strong>다.</p>
+<p>존 밖 공을 헛스윙하면 위치 분류는 B지만 결과는 스트라이크다. 존 안 공을 때려 홈런이 되면 위치 분류는 S지만 결과는 홈런이다. 이 둘은 정의를 설명하는 예시다.</p>
+<p>또 실제로 밖에 도착한 공에는 의도한 유인구와 제구가 어긋난 공이 함께 들어갈 수 있다. BCAP의 S/B 비교는 그 둘을 분리하지 못한다. 따라서 “존 밖 투구가 낮은 공격가치와 연결됐다”는 결과에서 곧바로 “바깥을 겨냥하면 그만큼 좋아진다”는 지시를 만들 수 없다.</p>
+<p>타자 결과는 존 안 전체와 높은 존 밖·낮은 존 밖·몸쪽 존 밖·바깥쪽 존 밖의 다섯 구역으로 읽는다. 기존 결과표의 ‘가운데’는 홈플레이트 한가운데만이 아니라 <strong>존 안 전체</strong>다.</p>
+<p>높으면서 바깥쪽인 공은 두 존 밖 구역에 모두 표시된다. 구역 비율을 더하면 100%를 넘을 수 있는 이유다. 분석의 전체 투구 수와 학습 자료에서는 같은 공을 중복하지 않았다. <a href="../../../../models/bcap/pitch_sb/v0.1.0/specification.yaml">위치와 구역의 정의</a></p>
+<figure><a class="image-link" href="../../figures/naver_20260918/04_zone_map.png" target="_blank" aria-label="그림 크게 보기"><img src="../../figures/naver_20260918/04_zone_map.png" alt="BCAP의 다섯 보고 구역. 가운데는 존 안 전체이며, 존 밖 모서리는 두 구역에 함께 포함된다."></a></figure>
+<p><em>그림 1. BCAP의 위치 분류 도식. 실제 투구 분포나 행동 권고를 그린 것이 아니라, 결과표의 구역을 설명한 그림이다.</em></p>
+<h2 id="section-3">결과를 재는 자, W</h2>
+<p>BCAP는 해당 공이 속한 <strong>타석의 최종 결과</strong>를 본다. 볼넷·단타·2루타·홈런 등에 시즌별 가중치를 부여한 공격가치를 W라고 부른다. BCAI도 이 원래 공격가치를 사용하지만, BCAP의 차이를 BCAI의 기준 100 지수와 섞어 읽어서는 안 된다.</p>
+<p>W가 크면 타자에게 유리하다. 투수는 상대의 W가 낮을수록 유리하다. W는 안타 확률이나 그 타석의 실제 득점이 아니다.</p>
+<p>아래는 실제 저장 결과다. Q(B)는 비교 기준을 맞춘 존 밖 투구의 가치, Q(S)는 존 안 투구의 가치다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>자료·카운트</th>
+<th align="right">존 밖 Q(B)</th>
+<th align="right">존 안 Q(S)</th>
+<th align="right">차이 S−B</th>
+<th>보정 구간</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024~2025 · 0-2</td>
+<td align="right">0.1937</td>
+<td align="right">0.2216</td>
+<td align="right">+0.0278</td>
+<td>+0.0152~+0.0404</td>
+</tr>
+<tr>
+<td>2024~2025 · 1-2</td>
+<td align="right">0.2185</td>
+<td align="right">0.2399</td>
+<td align="right">+0.0214</td>
+<td>+0.0110~+0.0318</td>
+</tr>
+<tr>
+<td>2023 · 0-2</td>
+<td align="right">0.1965</td>
+<td align="right">0.2308</td>
+<td align="right">+0.0343</td>
+<td>+0.0223~+0.0462</td>
+</tr>
+<tr>
+<td>2023 · 1-2</td>
+<td align="right">0.2187</td>
+<td align="right">0.2428</td>
+<td align="right">+0.0241</td>
+<td>+0.0140~+0.0342</td>
+</tr>
+</tbody></table></div>
+<p><em>표 2. 핵심 위치 비교. MLB 정규시즌, 단위 W. 개발자료는 4,859경기, 2023은 2,430경기다. 비교 투구/해당 카운트 적격 투구는 위에서부터 95,563/96,411, 138,265/139,503, 47,912/48,733, 68,412/69,569다. 투구 수는 고유 타석 수와 다르다. 구간은 고정 점수의 경기 군집 변동을 반영한 명목 95% 구간이며 개발은 219개, 2023 핵심 비교는 사전에 정한 주요 4개 비교를 보정했다. 출처: <a href="../../analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/sb_reformatted.csv">기존 결과 재표시표</a>.</em> </p>
+<p>예를 들어 개발자료 1-2에서는 0.2399−0.2185가 약 +0.0214 W다. 존 밖 쪽의 허용 가치가 그만큼 낮았다는 뜻이다. 이것을 ‘안타 확률 2.14%포인트 감소’ 또는 ‘0.0214점 절약’으로 바꿀 수는 없다.</p>
+<p>같은 타석에서 여러 공을 던졌다고 이 차이를 계속 더할 수도 없다. 각 공에 연결된 결과가 이미 그 타석의 최종 W이기 때문이다. 같은 결과를 여러 번 계산하게 된다. 새로 만든 카운트 상태 평균 차이도 여기에 덧붙이지 않는다.</p>
+<h2 id="section-4">‘보정했다’는 것은 무엇을 했다는 뜻일까?</h2>
+<p>단순 평균으로 두 행동을 비교하면 행동의 차이와 선수·상황의 차이가 섞인다. 예를 들어 좋은 변화구를 가진 투수들이 특정 카운트에서 그 공을 많이 던졌다면, 구종 평균에는 그 투수들의 특성도 들어간다.</p>
+<p>BCAP는 먼저 선수·카운트·경기 상황 등에 따라 각 행동의 결과를 예상한다. 이어 <strong>동일한 비교 대상의 선수·상황 구성을 기준으로 두 행동 값을 각각 평균낸다.</strong> 이것이 이 분석에서 말하는 표준화다. 가상의 평균 선수 한 명을 만들어 비교한 것은 아니다.</p>
+<p>결과를 예상하는 데는 Ridge 회귀를 사용했다. 선수별 자료가 적을 때 극단적인 계수가 나오지 않도록 추정을 조절하는 방식이다. 그리고 그 조건에서 해당 행동이 얼마나 자주 선택되는지도 별도로 추정했다.</p>
+<p>마지막 계산에는 AIPW라는 방법을 썼다. 풀어 말하면 <strong>행동별 결과 예측값에, 실제 결과와 예측의 차이를 행동 선택 확률로 조정해 더하는 방법</strong>이다. 단순 평균과 결과 예측만의 평균, 최종 보정값을 함께 확인해 어느 부분에서 차이가 생기는지도 살폈다.</p>
+<p>‘보정’이라는 단어가 모든 차이를 지웠다는 뜻은 아니다. 당일 구위와 컨디션, 투수가 노린 곳, 타자의 예상은 기록에 충분히 담기지 않는다. 최종 결과를 연결할 수 있는 완료 타석을 고르고 고의볼넷·결측 등을 제외한 데서 오는 선택도 남아 있다.</p>
+<p>또 자기 경기의 정답을 이미 본 모형으로 그 경기를 채점하지 않도록, 경기를 세 집단으로 나눴다. 한 집단을 평가할 때는 나머지 경기로 보조 모형을 만들었다. 같은 경기의 투구와 타석은 한쪽에 함께 뒀다. 변수의 범주를 정하거나 확률을 조정하는 작업도 훈련 경기 안에서 처리했다.</p>
+<p>투수와 타자의 보정 조건도 다르다. 투수의 구종 비교에는 현재 공의 위치·구속·스윙 결과를 넣지 않는다. S/B 비교에는 현재 구종 계열을 쓰지만 현재 좌표·스윙·구속·움직임을 보정 변수로 넣지 않는다. 반면 타자 비교는 관측된 위치·구속·움직임까지 조건으로 사용한다.</p>
+<p>분석가는 투구가 끝난 뒤 공의 특성을 볼 수 있다. 타자가 스윙을 결정할 때도 그 정보를 정확히 알고 있었다고 볼 수는 없다. 그래서 BCAP의 타자 결과를 실시간 판단의 정답표로 읽지 않는다.</p>
+<h2 id="section-5">자료가 많아도 빈칸을 남긴 이유</h2>
+<p>리그 전체 투구가 많다고 모든 세부 비교가 가능한 것은 아니다. 어떤 조건에서 대부분 테이크만 했다면, 그곳의 스윙 가치는 드문 사례에 크게 의존할 수 있다.</p>
+<p>BCAP는 양쪽 행동의 기록이 비교를 뒷받침하는 범위만 남긴다. 이를 <strong>공통 지원</strong>이라고 한다. 같은 경기 조건에서 두 선택을 비교할 발판이 얼마나 있는지를 확인하는 절차다. 선수의 실력이 좋다는 의미의 ‘지원’은 아니다.</p>
+<p>행동 선택 확률이 5~95% 범위에 있는지, 훈련 자료에서 해당 선수가 양 행동을 충분히 했는지 등을 확인한다. 결과를 표시할 집단에는 투구 수뿐 아니라 행동별 유효 표본, 경기 수, 비교에 남은 비율, 특정 경기에 가중치가 몰리는 정도의 기준도 적용한다. 유효 표본은 가중치가 한쪽에 쏠릴수록 줄어드는 양이며 원래 투구 수와 다르다.</p>
+<p>이 과정을 거쳐도 모든 세부 상황이 완전히 같아지지는 않는다. 그래서 결과표에서는 다음 네 표현을 구별한다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>표의 표시</th>
+<th>무엇을 뜻하나</th>
+<th>실제 사례</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>방향이 뚜렷함</td>
+<td>지원 기준을 통과하고 보정 구간도 같은 방향</td>
+<td>0-2·1-2 S/B의 개발·2023 결과</td>
+</tr>
+<tr>
+<td>차이 불명확</td>
+<td>비교는 가능하지만 구간이 0을 포함</td>
+<td>2023 존 안 3-0·3-1의 스윙/테이크</td>
+</tr>
+<tr>
+<td>비교 자료 부족</td>
+<td>한쪽 행동 등의 지원 기준을 통과하지 못함</td>
+<td>3-0 존 밖 네 구역의 스윙/테이크</td>
+</tr>
+<tr>
+<td>측정 보류</td>
+<td>같은 뜻으로 측정됐다는 근거가 부족해 계산을 보류</td>
+<td>2026 S/B·타자 비교</td>
+</tr>
+</tbody></table></div>
+<p><em>표 3. 판정 설명과 해당 사례. ‘불명확’은 두 행동이 같다는 뜻이 아니다. ‘측정 보류’는 계산했더니 패턴이 사라졌다는 뜻도 아니다. 출처: <a href="../../analysis/bcap_external_20260914__r01/report.md">외부 결과 보고서</a>.</em> </p>
+<p>특히 3-0 존 밖의 빈칸은 숨긴 결과가 아니다. 스윙이 드문 조건에서 충분한 비교 근거를 확보하지 못했다는 표시다. 그 빈칸을 ‘테이크가 유리하다’거나 ‘차이가 없다’로 채우지 않았다.</p>
+<h2 id="section-6">현재 결과는 어디까지 이어졌나?</h2>
+<p>개발자료인 2024~2025에서 S/B는 0-2·1-2가 존 밖 방향, 0-1은 불명확, 나머지 아홉 카운트는 존 안 방향이었다. 2023에서도 핵심 두 카운트의 존 밖 방향이 반복됐다. 표 2의 구간 전체가 기존 설계의 차이 크기 참고선인 0.01 W를 넘었다. 이 참고선은 별도로 정한 분석 기준이며 자동으로 실전 이득을 뜻하지 않는다.</p>
+<p>타자 비교는 개발자료의 존 안 열두 카운트에서 모두 스윙 쪽 점추정이 나왔지만, 3-0은 불명확했다. 2023에도 열두 카운트 모두 같은 점추정 방향이었고, 그중 열 카운트는 보정 구간도 스윙 방향이었다. 3-0과 3-1은 불명확했다.</p>
+<p>2023 존 밖에서는 48개 보고 칸 중 지원 기준을 통과한 44개가 모두 테이크 방향이었고 구간도 같은 방향이었다. 남은 네 칸은 3-0의 자료 부족이다. 모서리의 공이 보고 구역에 겹치므로 이 칸들을 서로 독립적인 실험처럼 세지는 않는다.</p>
+<figure><a class="image-link" href="../../figures/naver_20260918/05_swing_2023.png" target="_blank" aria-label="그림 크게 보기"><img src="../../figures/naver_20260918/05_swing_2023.png" alt="2023 타자 행동 비교. 존 안과 존 밖의 방향, 불명확한 비교와 자료 부족을 구별한다."></a></figure>
+<p><em>그림 2. MLB 2023 정규시즌의 카운트×5구역 스윙−테이크 비교. 단위 W, 12×5=60개 보고 칸. 표본은 각 칸의 지원 기준을 통과한 투구이며 모서리 투구는 보고 구역에 겹친다. 세부 투구 수·유효 표본·보정 구간은 <a href="../../analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/values.csv">원 결과표</a>에 있다. 관측 위치를 조건으로 한 평균 비교이며 개별 공의 스윙 지시가 아니다.</em></p>
+<p>구종 비교에서는 일반적인 우열을 찾기 어려웠다. 2023·2026, 두 구종 분류, 각 분류 자체의 비교 가능 표본과 두 분류가 함께 가능한 표본을 합친 96개 보고 비교 중 92개가 불명확했다. 3-2의 비포심 방향 단서는 외부 두 연도에서도 점추정으로 남았지만 구간으로 확정하지 못했다. FB/NFB 3-0에 남은 차이도 드문 행동의 지원과 보정 방식에 대한 의존성이 있어 일반적인 배합 지침으로 넓히지 않았다. <a href="../../analysis/bcap_external_20260914__r01/final_column_conclusion.md">결과의 상세 근거</a></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>자료</th>
+<th>수행한 비교</th>
+<th>읽을 때의 범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2024~2025</td>
+<td>위치·타자·두 구종 비교</td>
+<td>패턴을 발견하고 모형을 만든 개발자료</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>네 비교의 외부 패턴 재현</td>
+<td>과거 연도에서 같은 절차로 확인</td>
+</tr>
+<tr>
+<td>2026년 9월 7일까지</td>
+<td>두 구종 비교</td>
+<td>S/B·타자는 측정 정합성 미확보로 보류</td>
+</tr>
+</tbody></table></div>
+<p><em>표 4. 현재 자료와 수행 범위. 기간별 결과를 하나의 검증 결과로 합치지 않았다. 표본 수는 모듈·카운트·지원 조건별로 달라 <a href="../../analysis/bcap_external_20260914__r01/final_report.html">최종 결과표</a>에 따로 기록했다.</em></p>
+<p>외부 재현에서는 개발 단계에서 정한 학습 절차와 규제값을 고정하고, 각 외부 연도 안에서 다시 경기를 나눠 보조 모형을 적합했다. 개발에서 만든 단일 예측모형을 그대로 가져가 시험한 것과는 범위가 다르다. 2023과 2026 자료는 앞선 BCAI·이전 BCAP 작업에서 본 이력도 있으므로, 완전히 처음 보는 시험자료라고 부르지 않는다.</p>
+<p>2026 위치 분석은 당시 공식 필드 설명을 검토하는 과정에서 멈췄다. 좌표가 측정되는 기준면과 존 상·하단의 정의가 바뀌었는데, 기존 자료와 같은 뜻으로 맞출 근거를 확보하지 못했기 때문이다. 자료 수가 부족해서도, 결과가 마음에 들지 않아서도 아니다. 위치를 사용하지 않는 구종 비교만 진행했다. <a href="../../analysis/bcap_external_20260914__r01/measurement_review.md">측정 보류 기록</a></p>
+<h2 id="section-7">만들면서 고친 것, 아직 답하지 못한 것</h2>
+<p>처음부터 지금의 표가 한 번에 나온 것은 아니다. 구종을 묶는 방식, 위치를 정의하는 방식, 결과를 설명하는 방식이 모두 질문과 맞는지 다시 살폈다.</p>
+<p><strong>첫째, ‘어떤 공’이라는 질문을 더 분명하게 나눴다.</strong> 세부 구종 입력을 FB/NFB로 정리한 후속 버전을 만들었고, 실제 존 안/밖 비교를 별도로 추가했다. 이어 포심만 떼어 비교했다. 포심·싱커·커터를 함께 묶은 결과를 포심의 결과라고 부를 수 없었기 때문이다. 기존 결과는 보존하고 새로운 비교를 따로 기록했다.</p>
+<p>이 과정에서 3-0은 분류에 따라 다른 얼굴을 보였다. FB/NFB의 통합 차이는 남았지만 일부 분할에서 드문 구종의 유효 표본이 부족했다. 포심/비포심에서는 자료를 나눈 집단에 따라 차이 방향이 바뀌었다. 3-1에서는 결과 예측만의 비교와 최종 보정 비교가 다른 방향을 가리켰다. 평균표 한 장으로 구종의 정답을 정하기 어려웠던 이유다. <a href="../../analysis/bcap_pitch_classification_20260912__r01/report.md">구종 분류를 다시 비교한 기록</a></p>
+<p><strong>둘째, ‘차이가 있다’ 다음의 설명을 분해하려 했다.</strong> 존 밖 공의 가치가 낮다면 헛스윙이 많아서인지, 인플레이 위험이 낮아서인지, 볼 하나를 허용하는 손해가 작아서인지 궁금해진다.</p>
+<p>이를 위해 BCAP-DECOMP라는 후속 모듈의 계산 구조를 만들었다. 가능한 결과들을 나누고, 각각의 발생 확률에 그 결과 뒤의 최종 W를 곱해 더하는 방식이다. 실제 적용에서는 볼·루킹 스트라이크·몸에 맞는 공, 헛스윙·파울·인플레이와 번트 관련 예외 등을 빠뜨리지 않아야 한다.</p>
+<p>하지만 <strong>현재는 이 값들을 합치는 계산기와 모의 확인까지만 완성했다.</strong> 실제 MLB 자료로 가지별 확률과 조건부 가치를 학습한 결과는 없다. 모의 숫자를 실제 야구 결과처럼 이 글에 넣지 않았다. 이 모듈의 상태는 설계 중이라는 뜻의 DRAFT다.</p>
+<p><strong>셋째, ‘상대가 적응하면?’이라는 질문에서는 계산을 보류했다.</strong> 0-2에서 존 밖 공의 결과가 좋았더라도 타자가 그 공을 덜 따라 나오기 시작하면 가치는 달라질 수 있다. 그래서 존 밖 스윙률을 낮추는 시나리오를 검토했다.</p>
+<p>여기에는 같은 조건으로 맞춘 존 밖 스윙·테이크 가치와 반응률, 존 안의 비교 기준값이 함께 필요하다. 기존 투수 표와 타자 표의 평균 네 개를 이어 붙이면 두 표의 서로 다른 비교 조건을 섞게 된다. 필요한 결합값을 확보하지 못했으므로 ‘얼마나 덜 휘두르면 이점이 사라지는가’와 ‘최적 배합 비율’은 계산하지 않았다.</p>
+<p>이때 새로 계산한 것은 별도의 <strong>카운트 상태 평균 차이</strong>다. 다음 볼·스트라이크 카운트를 밟은 타석들의 평균을 비교해 카운트 구조를 설명하는 자료다. 실제로 볼 하나를 받은 직후의 효과나 상대 반응의 효과가 아니며, <a href="02_bcai.html">BCAI 설명서</a>에서 따로 다룬다. <a href="../../analysis/handoff_bcap_followup_20260917.md">후속 구현과 보류 범위</a></p>
+<h2 id="section-8">검산을 마쳤는데도 왜 ‘탐색 중’일까?</h2>
+<p>저장 결과의 값과 부호, 행동 수, 표본과 구간을 대조했고 핵심 위치 비교는 저장 점수에서 별도로 산술을 확인했다. 후속 검수에서도 재표시표와 상태 평균 차이표에 중대한 계산 오류는 발견하지 못했다. 분해 계산기는 모의 입력으로 확인했다.</p>
+<p>그렇지만 <strong>계산이 맞는 것과 행동을 바꿨을 때의 효과가 맞는 것은 다른 검증</strong>이다.</p>
+<p>현재 구간은 만들어진 점수를 고정한 상태에서 같은 경기의 투구들이 서로 연관되는 정도를 반영한다. 모형을 처음부터 다시 만들 때의 모든 변동, 여러 경기에 걸쳐 같은 선수가 반복 등장하는 영향, 관측되지 않은 의도와 컨디션을 모두 포함한 구간은 아니다. 여러 비교를 함께 보는 데 따른 보정도 했지만, 그것만으로 이런 한계가 사라지지는 않는다.</p>
+<p>그래서 현재 결과를 낸 네 BCAP 모델은 모두 <strong>EXPERIMENTAL, 즉 탐색 단계</strong>로 남아 있다. BCAI 관찰 지표의 검증 상태를 BCAP가 이어받는 것도 아니다. 후속 분해 모듈은 실제 자료 학습 전인 DRAFT다. <a href="../../analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md">9월 18일 제한적 검수</a></p>
+<p>본문에서 BCAP 결과를 만났을 때는 세 가지를 함께 보면 된다. <strong>무엇과 무엇을 비교했는지, 어느 자료에서 비교할 수 있었는지, 그 방향이 어디까지 확인됐는지.</strong> 0-2·1-2의 존 밖 패턴은 그 범위 안에서 얻은 결과다. 타자가 적응한 뒤에도 유지되는지, 그 위치를 겨냥하도록 지시하면 좋아지는지는 다음 질문으로 남아 있다.</p>
+<p><a href="01_ball_count.html">볼카운트 분석 칼럼으로 돌아가기</a> · <a href="02_bcai.html">BCAI 설명서 읽기</a></p>
+<hr>
+<p>이 글은 Baseline의 MLB 분석 결과와 방법 기록을 설명한 자료다. 외부 논문의 결과를 BCAP의 검증 근거로 사용하지 않았다. 상세 수치 출처와 검토 메모는 별도 <a href="03_bcap_evidence.md">집필 근거표</a>에 보관했다.</p>
+</article><div class="endnav"><a href="index.html">세 글의 읽기 안내</a><a href="01_ball_count.html">볼카운트 분석 칼럼</a><a href="02_bcai.html">BCAI 설명 글</a></div></main></body></html>

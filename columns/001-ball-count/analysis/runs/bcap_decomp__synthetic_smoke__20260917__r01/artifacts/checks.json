@@ -1,0 +1,118 @@
+{
+  "synthetic": true,
+  "n_checks": 21,
+  "checks": [
+    {
+      "name": "closed_mapping_matches_existing_12_descriptions",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "mapped_action_matches_existing_definition",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "unknown_description_not_take",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "rowwise_probability_times_W",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "not_product_of_group_means",
+      "status": "PASS",
+      "detail": "모의자료 E[p*m]=0.37, E[p]*E[m]=0.25; MLB 값 아님"
+    },
+    {
+      "name": "paired_action_delta",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "same_row_direct_gcomp_comparator",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "overlap_regions_not_duplicate_overall",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "probability_sum_rejected",
+      "status": "PASS",
+      "detail": "branch probabilities must sum to 1 without renormalization"
+    },
+    {
+      "name": "missing_positive_mass_value_rejected",
+      "status": "PASS",
+      "detail": "positive branch mass lacks supported conditional W"
+    },
+    {
+      "name": "unsupported_positive_mass_rejected",
+      "status": "PASS",
+      "detail": "positive branch mass lacks supported conditional W"
+    },
+    {
+      "name": "reference_action_mismatch_rejected",
+      "status": "PASS",
+      "detail": "Take and Swing must cover exactly the same reference rows"
+    },
+    {
+      "name": "unknown_description_rejected",
+      "status": "PASS",
+      "detail": "unclassified observed description: do not impute Take"
+    },
+    {
+      "name": "training_game_overlap_rejected",
+      "status": "PASS",
+      "detail": "evaluation game overlaps its training games"
+    },
+    {
+      "name": "prediction_fold_mismatch_rejected",
+      "status": "PASS",
+      "detail": "prediction fold differs from reference fold"
+    },
+    {
+      "name": "missing_branch_rejected",
+      "status": "PASS",
+      "detail": "branch partition incomplete or unexpected"
+    },
+    {
+      "name": "partial_direct_comparator_rejected",
+      "status": "PASS",
+      "detail": "direct comparator must cover every same row and both actions"
+    },
+    {
+      "name": "nonfinite_probability_rejected",
+      "status": "PASS",
+      "detail": "branch probability: nonfinite value"
+    },
+    {
+      "name": "inconsistent_regions_rejected",
+      "status": "PASS",
+      "detail": "inconsistent region membership"
+    },
+    {
+      "name": "CLI_result_matches_function",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "CLI_preserves_existing_output",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "not_performed": [
+    "MLB fitting",
+    "actual calibration",
+    "statistical validation",
+    "AIPW",
+    "uncertainty"
+  ]
+}

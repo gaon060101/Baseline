@@ -1,5 +1,21 @@
 # Baseline 모델 레지스트리
 
+## 2026-09-18 후속 변경 검수 — 상태 유지
+
+[제한적 검수](../columns/001-ball-count/analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md): BCAI-STATE-DELTA의 저장24행 독립 산술과 BCAP-DECOMP의 새 모의 예제·입력 오류·해시 확인을 완료했다. 명시 범위에서 중대한 오류는 발견하지 못했다. STATE-DELTA는 EXPERIMENTAL, DECOMP는 DRAFT 유지이며 실제 분해 학습·불확실성·시나리오 결과는 없다. 기존 BCAP·OBS 검증 범위를 확대하거나 VALIDATED로 승격하지 않았다.
+
+
+## 2026-09-17 후속 구현·간단한 확인 완료
+
+[구현 보고서](../columns/001-ball-count/analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.md) · [보고 실행](../columns/001-ball-count/analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/manifest.json). 기존 S/B-v0.1.0 추정값은 재사용했으며 정의·기존 상태를 바꾸지 않았다.
+
+| 모델 | 현재 상태·범위 | 정의·기본 확인 | 이번 실행 |
+| --- | --- | --- | --- |
+| BCAI-STATE-DELTA-v0.1.0 | EXPERIMENTAL · 저장된 시즌 원 W의 상태 평균 차이 24행, 간단한 산술 확인 | [카드](bcai/state_delta/v0.1.0/model_card.md) · [명세](bcai/state_delta/v0.1.0/specification.yaml) · [확인](bcai/state_delta/v0.1.0/validation.md) | [2024·2025 계산](../columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/manifest.json) |
+| BCAP-DECOMP-v0.1.0 | DRAFT · 행별 확률×조건부 W 합성 구현; 실제 MLB 학습·추정·지원·구간 미실행 | [카드](bcap/decomposition/v0.1.0/model_card.md) · [명세](bcap/decomposition/v0.1.0/specification.yaml) · [확인](bcap/decomposition/v0.1.0/validation.md) | [명시적 모의 자료 확인만](../columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json) |
+
+상태 평균 차이는 실제 전이 사건조건부 값·행동 효과가 아니다. 기존 OBS 검증 상태를 승계하지 않는다. 반응률 시나리오는 설계/지원 미확보로 수치 미산출이며 JOINT 모델을 등록하지 않았다. 기존 외부 재현 및 2026 S/B·SWING 측정 보류는 유지한다.
+
 ## BCAP 외부 패턴 재현 — 2026-09-14
 
 **2023 네 모델·2026 구종 두 모델의 외부 패턴 재현 완료, 2026 S/B·타자는 측정 보류 — EXPERIMENTAL**. 네 대상 모델의 기존 상태는 유지한다.

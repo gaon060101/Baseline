@@ -1,0 +1,182 @@
+{
+  "schema_version": "1",
+  "synthetic": true,
+  "fit_provenance": "independent synthetic contract fixture; no model fitting",
+  "outcome_definition": {
+    "kind": "final_PA_W",
+    "unit": "season_weighted_final_PA_W",
+    "weight_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "fold_training_games": {
+    "fold-A": [
+      "train-A"
+    ],
+    "fold-B": [
+      "train-B"
+    ]
+  },
+  "reference_rows": [
+    {
+      "row_id": "s1",
+      "game_pk": "eval-A",
+      "at_bat_number": "1",
+      "pitch_number": "1",
+      "outer_fold": "fold-A",
+      "count": "0-2",
+      "season": 2024,
+      "regions": [
+        "HIGH",
+        "OUTSIDE"
+      ],
+      "observed_description": "ball"
+    },
+    {
+      "row_id": "s2",
+      "game_pk": "eval-B",
+      "at_bat_number": "2",
+      "pitch_number": "1",
+      "outer_fold": "fold-B",
+      "count": "0-2",
+      "season": 2025,
+      "regions": [
+        "HIGH",
+        "OUTSIDE"
+      ],
+      "observed_description": "swinging_strike"
+    }
+  ],
+  "predictions": [
+    {
+      "row_id": "s1",
+      "action": "Take",
+      "prediction_fold": "fold-A",
+      "branches": {
+        "TAKE_BALL": {
+          "p": 0.8,
+          "mean_W": 0.6,
+          "supported": true
+        },
+        "TAKE_CALLED_STRIKE": {
+          "p": 0.2,
+          "mean_W": 0.1,
+          "supported": true
+        },
+        "TAKE_HBP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        }
+      },
+      "direct_mean_W": 0.31
+    },
+    {
+      "row_id": "s1",
+      "action": "Swing",
+      "prediction_fold": "fold-A",
+      "branches": {
+        "BUNT_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_MISS": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "IN_PLAY": {
+          "p": 0.5,
+          "mean_W": 0.5,
+          "supported": true
+        },
+        "SWING_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_MISS": {
+          "p": 0.5,
+          "mean_W": 0.1,
+          "supported": true
+        }
+      },
+      "direct_mean_W": 0.33
+    },
+    {
+      "row_id": "s2",
+      "action": "Take",
+      "prediction_fold": "fold-B",
+      "branches": {
+        "TAKE_BALL": {
+          "p": 0.2,
+          "mean_W": 0.2,
+          "supported": true
+        },
+        "TAKE_CALLED_STRIKE": {
+          "p": 0.8,
+          "mean_W": 0.05,
+          "supported": true
+        },
+        "TAKE_HBP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        }
+      },
+      "direct_mean_W": 0.09
+    },
+    {
+      "row_id": "s2",
+      "action": "Swing",
+      "prediction_fold": "fold-B",
+      "branches": {
+        "BUNT_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "BUNT_MISS": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "IN_PLAY": {
+          "p": 0.75,
+          "mean_W": 0.6,
+          "supported": true
+        },
+        "SWING_FOUL": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_FOUL_TIP": {
+          "p": 0.0,
+          "mean_W": null,
+          "supported": false
+        },
+        "SWING_MISS": {
+          "p": 0.25,
+          "mean_W": 0.2,
+          "supported": true
+        }
+      },
+      "direct_mean_W": 0.47
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "created_at_utc": "2026-09-18T08:25:10.570841+00:00",
+  "updates": [
+    {
+      "path": "README.md",
+      "before_sha256": "2ec394d688b0800493024cf424225bacfd52149ec816727a97d58e3f0dc2251e",
+      "after_sha256": "5ff4d3b563b9879d5552074038547f38d0cfd418072b13c49498d057e6e8e15b",
+      "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"
+    },
+    {
+      "path": "models/registry.md",
+      "before_sha256": "956df04f84ba2f6e79d69f5662911566a34c605f043a1612040ab66bf4439f7b",
+      "after_sha256": "d6c74bb08a3b3a606699aa621885807df2b2ab3c848a4915c843c9bdb8058133",
+      "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "before_sha256": "9ca6ba751d68086ebe0aa330d3811c3ccad90fc1730a0fa416b3b9c79d1dc055",
+      "after_sha256": "2944f09a5969ad14aa9a0dd2ecfaef319b11c37c119fb213d6ffad6874d57a28",
+      "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "before_sha256": "f3f22efb2cb6b0bd2d2d9db57664fa35b60ab03235356634848f01adbd27faf4",
+      "after_sha256": "2fc11e5c3cb08a7cc682123d118d05e827a9da36c7d6f8fd1b641b3a38b709b2",
+      "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"
+    },
+    {
+      "path": "models/bcai/state_delta/v0.1.0/validation.md",
+      "before_sha256": "0b98f3d58a6b094d7ec8495108b38ffed54ce192ce4cb204352299dc3025fde5",
+      "after_sha256": "447fb133293edd54a3574b7d2a92dd998a62498a99340e664de533536d53144e",
+      "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"
+    },
+    {
+      "path": "models/bcap/decomposition/v0.1.0/validation.md",
+      "before_sha256": "bfd800f42829fb98be024205bc52783eea47e5bac04d659a8e49100e0e366d2b",
+      "after_sha256": "dea2e01b20d63d6c926b3613c431e99d562f2d1337755b2c1f869387c1fc4436",
+      "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"
+    }
+  ]
+}

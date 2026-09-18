@@ -1,0 +1,97 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BCAI / BCAP Development Prompt</title><style>
+:root{color-scheme:light;--ink:#172f38;--accent:#0c7772}*{box-sizing:border-box}
+body{margin:0;background:#f3f5f2;color:var(--ink);font:16px/1.85 "Malgun Gothic","Segoe UI",sans-serif}
+header{background:#133e45;color:white;padding:20px 5vw}header a{color:#c8eeeb;margin-right:20px}
+main{max-width:1080px;margin:32px auto;background:white;padding:46px 58px;box-shadow:0 4px 25px #18332b0a}
+h1{font-size:32px;line-height:1.5;letter-spacing:-1px}h2{font-size:25px;margin-top:62px;border-top:2px solid #dfe9e4;padding-top:27px;line-height:1.5}
+h3{font-size:20px;margin-top:32px;line-height:1.6}h4{font-size:18px}
+a{color:var(--accent);text-underline-offset:4px;overflow-wrap:anywhere}p,li{overflow-wrap:anywhere}
+li{margin:8px 0}blockquote{margin:23px 0;padding:15px 23px;background:#edf6f1;border-left:4px solid #399589}
+.table-wrap{overflow-x:auto;margin:25px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}
+th,td{border:1px solid #dbe5df;padding:12px 14px;text-align:left;vertical-align:top}th{background:#eaf2ef}tr:nth-child(even){background:#fafcfb}
+code,pre{font-family:Consolas,monospace;background:#eff3f1}code{padding:2px 5px}pre{padding:20px;overflow-x:auto;white-space:pre-wrap}
+nav.contents{padding:18px 25px;background:#f4f7f4;border:1px solid #dce6df}nav.contents a{display:block;margin:4px 0;font-size:14px}
+hr{border:0;border-top:1px solid #dce6df;margin:40px 0}
+@media(max-width:750px){main{margin:0;padding:25px 20px}h1{font-size:26px}h2{font-size:22px}table{min-width:650px}header{padding:15px 20px}header a{display:inline-block}}
+@media print{header,nav.contents{display:none}main{margin:0;padding:0;max-width:none;box-shadow:none}h2{break-after:avoid}body{background:white;font-size:11pt}table{font-size:9pt}.table-wrap{overflow:visible}}
+</style></head><body><header><strong>BASELINE · 볼카운트 칼럼</strong><br><a href="references_in_use_20260917.html">실사용 문헌</a><a href="outline_mlb.html">집필 개요</a><a href="model_research_followup_20260917.html">모델 발전 검토</a><a href="model_followup_prompt_20260917.html">전달 프롬프트</a></header><main><h1 id="section-1">BCAI / BCAP Development Prompt</h1>
+<nav class="contents"><strong>목차</strong><a href="#section-2">Execution mode: implement first, perform a quick review, then report</a><a href="#section-3">Required reading</a><a href="#section-4">Priority 1: Reuse the existing S/B results</a><a href="#section-5">Priority 2: Add a ball/strike state-transition value table</a><a href="#section-6">Priority 3: Evaluate and implement a separate exploratory action-value decomposition</a><a href="#section-7">Priority 4: Assess feasibility before modeling changes in opponent response</a><a href="#section-8">Validation and scope</a><a href="#section-9">Deliverables</a></nav>
+<p>Copy the prompt below into the task responsible for model development. Preparing this prompt does not authorize model execution in the current documentation task.</p>
+<hr>
+<p>Develop BCAI and BCAP for the ball-count column in the Baseline project. The objective is to explain general relationships across counts, pitch locations, and actions, rather than grade individual players&#x27; moment-to-moment decisions.</p>
+<p>Before implementing anything, inspect the existing artifacts and reuse completed work where appropriate. Work in the priority order below. Keep user-facing explanations and reports in Korean; this handoff prompt is in English.</p>
+<h2 id="section-2">Execution mode: implement first, perform a quick review, then report</h2>
+<p>The user has limited time. This pass is for applying the proposed changes and completing only a lightweight review. This instruction takes precedence over any broader validation or analysis requests later in this prompt.</p>
+<ul>
+<li>Make the feasible code, configuration, documentation, and reporting changes now. Reuse the existing design review instead of repeating the literature research.</li>
+<li>Keep review brief: inspect the changes, check syntax/imports and basic arithmetic where applicable, and run one small smoke test if it can finish quickly with available inputs.</li>
+<li>Do not start full-data training, expensive model fitting, long simulations, full validation suites, broad parameter searches, or repeated tuning in this pass. Run new calculations only when they are small and quick; otherwise implement the necessary entry points and document how to run them later.</li>
+<li>For exploratory components whose implementation requires substantial unresolved design work, record the concrete design and remaining decisions rather than making unsupported assumptions to force completion.</li>
+<li>Preserve existing versions and completed results. Mark new work as implemented but not fully validated where appropriate; do not promote model status or present unexecuted analyses as results.</li>
+<li>Once the feasible changes and quick checks are complete, report back immediately. Summarize what was applied, which quick checks passed or failed, and what execution or deeper validation remains. Do not continue into those follow-up steps during this pass.</li>
+</ul>
+<h2 id="section-3">Required reading</h2>
+<ul>
+<li><code>AGENTS.md</code></li>
+<li><code>guides/analysis.md</code></li>
+<li><code>models/registry.md</code></li>
+<li><code>columns/001-ball-count/column.md</code></li>
+<li><code>columns/001-ball-count/sources.md</code></li>
+<li><code>columns/001-ball-count/model_research_followup_20260917.md</code></li>
+<li><code>models/bcai/observed/v1.0.0/model_card.md</code></li>
+<li><code>models/bcap/pitch_sb/v0.1.0/model_card.md</code> and its <code>specification.yaml</code></li>
+<li><code>models/bcap/swing/v0.2.0/model_card.md</code> and its <code>specification.yaml</code></li>
+<li><code>columns/001-ball-count/analysis/bcap_external_20260914__r01/final_report.html</code></li>
+</ul>
+<p>Check the registry for subsequent changes before treating these versions as current.</p>
+<h2 id="section-4">Priority 1: Reuse the existing S/B results</h2>
+<p>BCAP&#x27;s S/B labels describe the pitch&#x27;s observed geometric location inside or outside the defined strike zone. They do not represent called strikes/balls or the pitcher&#x27;s intended target.</p>
+<p>The existing 2024–2025 artifact already contains Q0(B), Q1(S), and their difference:</p>
+<p><code>columns/001-ball-count/analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/count_values.csv</code></p>
+<p>Produce a readable table for all 12 counts, including both action values, the difference, sample sizes, coverage, existing adjusted uncertainty intervals, classification, and units. Explain that lower allowed W favors the pitcher.</p>
+<p>Keep the 2023 pattern reproduction separate from development results. Preserve the 2026 measurement hold. Label this as presentation of existing results, not a new model estimate.</p>
+<h2 id="section-5">Priority 2: Add a ball/strike state-transition value table</h2>
+<p>Inspect the existing season-specific BCAI values in their original W units, V(c), and verify their denominators. For each count, calculate:</p>
+<ul>
+<li>Value of the next ball state minus the current state.</li>
+<li>Value of the next strike state minus the current state.</li>
+<li>Difference between the next-ball and next-strike state values.</li>
+</ul>
+<p>Describe these as differences between observed state averages, not causal effects of adding a ball or strike.</p>
+<p>Explicitly handle terminal walks on three balls, strikeouts on two strikes, ordinary two-strike fouls that leave the count unchanged, and relevant exceptions such as bunts, hit-by-pitches, uncaught third strikes, and errors. Follow the existing valid-PA and outcome definitions; document exclusions or separate categories rather than silently forcing exceptions into ordinary transitions.</p>
+<p>Distinguish the state-average difference table from any table of final W conditional on an actually observed transition event. Do not mix BCAI&#x27;s deduplicated count-reaching plate appearances with pitch-row aggregation. Report occurrence frequency separately from per-event value differences. Do not add transition rewards to final W in a way that counts the same value twice.</p>
+<h2 id="section-6">Priority 3: Evaluate and implement a separate exploratory action-value decomposition</h2>
+<p>Read Sections 2.2, 3, and 5.1 of the public v2 manuscript:</p>
+<p><strong>Evaluating plate discipline in Major League Baseball with Bayesian Additive Regression Trees</strong>, Ryan Yee and Sameer K. Deshpande   https://arxiv.org/html/2305.05752v2</p>
+<p>Design a probability-times-conditional-value decomposition while retaining BCAP&#x27;s final-PA W objective. Cover the relevant outcomes without omissions or overlap: taken balls, called strikes, hit-by-pitches, swinging misses, fouls, balls in play, and any additional categories required by the existing data definitions. Verify that branch probabilities sum to one.</p>
+<p>Report count-level and location-level averages and their components using the same common reference distribution. Do not produce individual rankings or individual action recommendations. Player effects may remain as adjustment variables where justified.</p>
+<p>Adopting BART is not itself the objective. Separate the decision to decompose outcomes from the choice of estimator. Compare the existing direct estimate and the decomposed estimate on the same sample and W scale. Evaluate predictive calibration, data support, and uncertainty. Do not claim that decomposition establishes new causal identification.</p>
+<p>If a component is unsupported, document the limitation and complete the supported components without manufacturing values.</p>
+<h2 id="section-7">Priority 4: Assess feasibility before modeling changes in opponent response</h2>
+<p>Consider assumption-based scenarios in which hitters swing less often at pitches outside the zone. Examine whether the observed outside-zone advantage at 0-2 and 1-2 persists under those scenarios.</p>
+<p>Specify what remains fixed when changing the response rate. Do not combine the existing S/B and Swing/Take marginal averages into a 2×2 payoff matrix or a Nash mixture: their conditioning sets and reference populations differ. If jointly conditioned values lack support, defer the calculation and report the missing information and reason.</p>
+<p>Review the assumptions in:</p>
+<p><strong>Computing an Optimal Pitching Strategy in a Baseball At-Bat</strong>, Connor Douglas, Everett Witt, Mia Bendy, and Yevgeniy Vorobeychik   https://arxiv.org/html/2110.04321v1</p>
+<p>In particular, examine the assumed target behavior at 3-0, pitch-type-specific Gaussian execution error, and count-invariant execution error. Treat these as modeling assumptions to assess, not established facts. Distinguish solving the assumed game from validating a policy in actual play.</p>
+<p>Also consult:</p>
+<p><strong>MONEYBaRL: Exploiting pitcher decision-making using Reinforcement Learning</strong>, Gagan Sidhu and Brian Caffo   https://arxiv.org/html/1407.8392v1</p>
+<p>Separate the policy-evaluation stage that assumes perfect recognition of the current pitch type from the subsequent simulation involving recognition error. Distinguish information available during the decision from information recorded after the pitch.</p>
+<h2 id="section-8">Validation and scope</h2>
+<ul>
+<li>Preserve existing model versions, raw data, processed data, and completed runs. Record new artifacts and design changes under appropriate versions and new run IDs, following the registry and analysis guide. Update the relevant model cards, specifications, validation records, and column links when applicable.</li>
+<li>Do not describe previously exposed external data as a fresh unseen validation set.</li>
+<li>Do not resume 2026 S/B or SWING evaluation before resolving the coordinate/strike-zone measurement issue.</li>
+<li>In this pass, perform only the lightweight checks specified above. Document the deeper denominator, split, support, calibration, and uncertainty checks required before the new results can be used in the column. Do not continue repeated tuning or enlarge the dataset automatically.</li>
+<li>If required local inputs are absent from the shared repository, inspect the data setup instructions. Do not automatically download them again.</li>
+<li>Exclude full path-dependent BCAI expansion, individual player recommendations or rankings, deployment of a full at-bat JOINT policy, KBO data collection or execution, the next RE24/runners-and-outs column, and external uploads.</li>
+<li>Treat the earlier token estimates as planning estimates, not an explicit token budget. The stopping point for this pass is implementation plus a quick review and a completion report, not full model validation.</li>
+</ul>
+<h2 id="section-9">Deliverables</h2>
+<p>Produce a concise Korean Markdown implementation report and, if quick to generate using the existing renderer, a matching HTML preview. Clearly distinguish:</p>
+<ol>
+<li>Existing results reused or reformatted.</li>
+<li>Newly computed observational results.</li>
+<li>Assumption-based sensitivity scenarios.</li>
+<li>Questions that remain unresolved.</li>
+</ol>
+<p>Include definitions, units, denominators, source artifact paths, validation outcomes, interpretation limits, and the implications for the column. State which model or documentation files changed and which analyses were deferred, with concrete reasons.</p></main></body></html>

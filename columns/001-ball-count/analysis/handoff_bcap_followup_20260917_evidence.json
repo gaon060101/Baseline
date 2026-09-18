@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-09-17T06:14:42.965617+00:00",
+  "status": "PASS",
+  "scope": "handoff_document_links_and_existing_followup_record_hashes_only",
+  "new_model_training": false,
+  "new_statistical_analysis": false,
+  "local_links_checked": 40,
+  "pending_evidence_self_link": "columns/001-ball-count/analysis/handoff_bcap_followup_20260917_evidence.json",
+  "preserved_hash_records_checked": 13,
+  "handoff_sha256": "44ebde4ac51eeca3dd1edc7272d4e476bbe5462303de2468bb02a58fe829126d",
+  "document_hashes": {
+    "README.md": "2ec394d688b0800493024cf424225bacfd52149ec816727a97d58e3f0dc2251e",
+    "columns/001-ball-count/column.md": "9ca6ba751d68086ebe0aa330d3811c3ccad90fc1730a0fa416b3b9c79d1dc055",
+    "columns/001-ball-count/analysis/handoff_bcap_review.md": "f3f22efb2cb6b0bd2d2d9db57664fa35b60ab03235356634848f01adbd27faf4",
+    "columns/001-ball-count/analysis/handoff_bcap_followup_20260917.md": "44ebde4ac51eeca3dd1edc7272d4e476bbe5462303de2468bb02a58fe829126d"
+  },
+  "source_manifests": {
+    "columns/001-ball-count/analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/manifest.json": "edc92fad601539d5a5010ae906a2526756ae45848fe3d9db193ab2d30d2dd6eb",
+    "columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/manifest.json": "f51482176b45688a49f53f9f85d4a5a242b3c108b4f7ab7af5252cb2b94b2f5c",
+    "columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json": "679f569f48366cc2513e377eb187ebb215ba94de172fd391058e0aa8eade6a3c"
+  },
+  "historical_check_note": "Prior delivery_check/document_update are historical records; new shared-document links change their after hashes. Existing completed runs, code, reports and prior evidence remain unchanged.",
+  "document_updates": [
+    {
+      "path": "README.md",
+      "before_sha256": "1d491de9b6a1fbb9afa9560199144b2b92178e34b80385848efa6f46fa94470d",
+      "after_sha256": "2ec394d688b0800493024cf424225bacfd52149ec816727a97d58e3f0dc2251e",
+      "change": "인수인계 연결 추가; 기존 본문 보존"
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "before_sha256": "5347e8a3a12f4acc94ed6ae43a94a7c0d821db84c0bfc8390c71e4a55581a2c9",
+      "after_sha256": "9ca6ba751d68086ebe0aa330d3811c3ccad90fc1730a0fa416b3b9c79d1dc055",
+      "change": "인수인계 연결 추가; 기존 본문 보존"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "before_sha256": "34cbeb69d2cdc88b0ded350843bcf70b797c878f8e672261931d5ca9002140d7",
+      "after_sha256": "f3f22efb2cb6b0bd2d2d9db57664fa35b60ab03235356634848f01adbd27faf4",
+      "change": "인수인계 연결 추가; 기존 본문 보존"
+    }
+  ],
+  "notes_ko": "이번 확인은 문서 링크·기록 해시 대조다. 과거 통계 검증을 다시 실행한 것이 아니며 신규 학습·상태 승격은 없다."
+}

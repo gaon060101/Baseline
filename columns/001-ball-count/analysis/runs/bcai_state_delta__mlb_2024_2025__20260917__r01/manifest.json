@@ -1,0 +1,90 @@
+{
+  "run_id": "bcai_state_delta__mlb_2024_2025__20260917__r01",
+  "model_id": "BCAI-STATE-DELTA-v0.1.0",
+  "version": "0.1.0",
+  "model_status": "EXPERIMENTAL",
+  "execution_status": "COMPLETED_QUICK_CHECK_ONLY",
+  "executed_at": "2026-09-17T15:00:06.528828+09:00",
+  "source_run": "bcai_obs__mlb_2024_2025__20260907__r01",
+  "paths_relative_to": "project_root",
+  "input": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/manifest.json",
+      "bytes": 6847,
+      "sha256": "0c5860a4798e09deef4cce6fde8a3783e77e7bc841abaa7d5117187cdb323d00"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_season_sensitivity.csv",
+      "bytes": 1286,
+      "sha256": "72259359b10d4e5ad2ded64ed20a0b1bfab0d820c26a251a02c1a413c2b3ff14"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv",
+      "bytes": 5153,
+      "sha256": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_event_audit.csv",
+      "bytes": 1534,
+      "sha256": "e6a175bce451a70b51866fc6d8b498470455f81d717fdea592bd3bb932fbbc07"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "bytes": 4980,
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/analyze_count_advantage.py",
+      "bytes": 13240,
+      "sha256": "0660ef928611c708de11c472fff7a3191b49e180406a1b5bfecd64d611c46d2f"
+    }
+  ],
+  "configuration": {
+    "path": "models/bcai/state_delta/v0.1.0/specification.yaml",
+    "bytes": 4416,
+    "sha256": "d33d7e7ff3a5b9c9f74479190cfc89aeb77b4ebf34227ddfba3b3088f70d66de"
+  },
+  "code": {
+    "path": "models/bcai/state_delta/v0.1.0/run.py",
+    "bytes": 11901,
+    "sha256": "0d35abca238899e60f045d1495f5bc8c079cd920cdf60ea57ab68f9c25a34814"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "dependencies": "stdlib only"
+  },
+  "sample": {
+    "summary_rows": 24,
+    "eligible_PA_by_year": {
+      "2024": 181840,
+      "2025": 182284
+    }
+  },
+  "uncertainty": "미산출",
+  "full_data_execution": false,
+  "training": false,
+  "checks_status": "PASS",
+  "checks_n": 84,
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/exception_handling.json",
+      "bytes": 1871,
+      "sha256": "bab081ea38d882358f10983235f3a472479379945e632c42f0d23e5c7af7c0f8"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/quick_checks.json",
+      "bytes": 9742,
+      "sha256": "2de023b946b8433dc74942d09f71b3daf9d29ae0314b98f241d4c13fa203e3b2"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/state_delta_2024_2025.csv",
+      "bytes": 6348,
+      "sha256": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md",
+      "bytes": 7550,
+      "sha256": "ce4bfcec3e9dc2269a90eb466f7b07be62cebe398602e80605195e885e332d5b"
+    }
+  ]
+}

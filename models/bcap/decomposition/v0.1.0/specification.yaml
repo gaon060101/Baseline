@@ -1,0 +1,25 @@
+{
+  "model_id": "BCAP-DECOMP-v0.1.0",
+  "version": "0.1.0",
+  "status": "DRAFT",
+  "scope": "외부에서 제공한 교차 적합 구성요소 예측의 산술 합성 인터페이스만 구현",
+  "outcome": "시즌별 가중 최종 PA W; BCAI·전이 보상 추가 금지",
+  "estimand": "동일 참조 투구 행에 적용한 두 행동의 결과 회귀 평균 차이; 인과 효과·정책 가치 아님",
+  "formula": "Q_a = mean_i(sum_k(p_ik(a)*m_ik(a))); Delta = Q_Swing-Q_Take",
+  "same_reference": "투구 키·row_id가 유일한 동일 행, 동일 가중치 1/n; 두 행동의 누락행 허용 안 함",
+  "crossfit_contract": "경기 하나는 평가 fold 하나; 해당 fold 훈련 경기 목록과 겹치면 실패. 실제 적합·전처리 준수는 이 검사만으로 입증되지 않음",
+  "description_mapping_source": "models/bcap/swing/v0.2.0/specification.yaml actions; 알려진 12개 description만 처리",
+  "branches": {
+    "Take": {"TAKE_BALL": ["ball", "blocked_ball"], "TAKE_CALLED_STRIKE": ["called_strike"], "TAKE_HBP": ["hit_by_pitch"]},
+    "Swing": {"SWING_MISS": ["swinging_strike", "swinging_strike_blocked"], "SWING_FOUL": ["foul"], "SWING_FOUL_TIP": ["foul_tip"], "BUNT_FOUL": ["foul_bunt"], "BUNT_MISS": ["missed_bunt"], "BUNT_FOUL_TIP": ["bunt_foul_tip"], "IN_PLAY": ["hit_into_play"]}
+  },
+  "partition": "적격·라벨 확인 투구 안에서만 상호 배타·전부 포괄. 미분류·자동 판정·피치아웃은 Take 채움 없이 입력 거부",
+  "probabilities": "[0,1] 유한값, 행동별 모든 가지 포함, 합 1 절대오차 1e-10 이하; 재정규화 없음",
+  "support": "양의 질량 가지에 supported=true 및 유한 mean_W 필수. 입력의 지원 주장만 검사하며 실제 지지 여부는 미검증",
+  "zero_mass": "p=0에 한해 지원되지 않거나 mean_W가 비어도 기여 0 허용; 관측된 사건에 확률0이면 로그손실 무한 표시",
+  "region": "CENTER·HIGH·LOW·INSIDE·OUTSIDE 보고 집합. 모서리는 두 집합, 전체 평균은 투구 한 번. 실제 위치 계산은 상위 생산자 책임",
+  "report": "전체·카운트·카운트×5구역, 행별 기여 평균·확률 평균·Q·Delta; 개인 순위 없음",
+  "optional_comparator": "모든 동일 행 양쪽 행동의 직접 결과 회귀 예측을 함께 입력한 경우 g-computation끼리만 비교. 기존 AIPW 수치와 혼동 금지",
+  "diagnostics": "관측 행동에서만 다범주 Brier(sum convention)와 로그손실; 교정 곡선이나 반사실 교정 입증 아님",
+  "unimplemented": ["실제 분기 확률·조건부 결과 회귀 적합", "규제·훈련 내부 튜닝·교정", "희소 가지의 경험적 지원 기준", "조건부 가지값의 범위 및 예측 정확도 점검", "AIPW 비교", "불확실성 전파·다중비교", "실제 MLB 산출", "반응 시나리오"]
+}

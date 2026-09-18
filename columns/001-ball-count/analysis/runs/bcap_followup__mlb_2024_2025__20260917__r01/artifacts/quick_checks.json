@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-09-17T06:06:56.376319+00:00",
+  "status": "PASS",
+  "scope": "소형 기존 집계 24행의 표기·산술 확인; 저장 점수/원자료/신뢰구간 재추정 없음",
+  "checks": [
+    {
+      "period": "2024–2025 개발",
+      "rows": 12,
+      "checks": [
+        "12개 카운트 완전성",
+        "Q_S-Q_B=delta",
+        "n_B+n_S=n",
+        "n/n_all=coverage",
+        "action B/S",
+        "stored CI contains point",
+        "original evidence retained"
+      ],
+      "status": "PASS"
+    },
+    {
+      "period": "2023 기존 재현",
+      "rows": 12,
+      "checks": [
+        "12개 카운트 완전성",
+        "Q_S-Q_B=delta",
+        "n_B+n_S=n",
+        "n/n_all=coverage",
+        "action B/S",
+        "stored CI contains point",
+        "external comparison matches source"
+      ],
+      "status": "PASS"
+    }
+  ]
+}

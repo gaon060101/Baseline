@@ -1,0 +1,40 @@
+{
+  "status": "3차 두괄식 수정·결과 영역 분리·문헌 전용 서식·사용자 검토 대기·외부 미게시",
+  "model_run": "기존 집계 재사용. 새 모델 학습·원자료 수집·KBO 분석 없음.",
+  "md_created": [
+    "01_ball_count.md",
+    "02_bcai.md",
+    "03_bcap.md",
+    "04_references_ko.md",
+    "revision_v3.md",
+    "revision_v2.md",
+    "README.md",
+    "manuscript_source_map.md",
+    "reference_audit.md",
+    "02_bcai_evidence.md",
+    "03_bcap_evidence.md"
+  ],
+  "central_md_updated": [
+    "README.md",
+    "guides/writing.md",
+    "columns/001-ball-count/column.md",
+    "columns/001-ball-count/sources.md"
+  ],
+  "figures": 8,
+  "local_links_missing": [],
+  "saved_aggregate_hashes_unchanged": true,
+  "manuscript_sha256": {
+    "01_ball_count.md": "4026620ffa8a91c0f924cb39135286f6ed8b4b8341759f18d28d103911271607",
+    "02_bcai.md": "cef947eea0d6aa06804381d32aebe8591f923d142b0286f019c79064ef2ac91e",
+    "03_bcap.md": "0165cce809fb52194084bf0649b48227f5dc6444c829a40957d0debe5f0dfda5",
+    "04_references_ko.md": "85c6432c7554cc59d1f1e7e58daca44337fc6e879ce3ec73c0ab8e89e196adb0",
+    "revision_v3.md": "37a89d6d1cac88058ce54254991a827aee093dbb8932f2cc33036e9302a109c9",
+    "revision_v2.md": "60846fcfb506393a98a73e3df33600bd09196f504f6c91772aab045e44b3d006",
+    "README.md": "4a4f9688f53a3b54e48c873e342fc375d5537b07630d615e9d9240784ead7b9b",
+    "manuscript_source_map.md": "6c55d20227134818d7710632101c298fc1d8db2f1b7489eb2c7908272836e954",
+    "reference_audit.md": "8fc18f912439e5945a12a081b9ac30626e839c024550b451a1ce8130dcd6bb3c",
+    "02_bcai_evidence.md": "50d367b6db818b2451a31965ad0d648787b21aa36ff5bdb9b97f633b47467a48",
+    "03_bcap_evidence.md": "a21803c0ad8e7ab4c50dad4105847c9e5241f60092acb9ce1828dd657d2390d0"
+  },
+  "review": "분모·정의·핵심 수치·구간·현재 모델 상태·원문 인용 검토, 8종 그림 시각 확인, 1280/390px HTML 표시 확인. 전체 모델 재검증 아님."
+}

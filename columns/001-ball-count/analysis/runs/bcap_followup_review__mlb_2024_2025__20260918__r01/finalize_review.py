@@ -1,0 +1,132 @@
+"""완료된 담당별 검수 결과를 한 번 통합하고 문서에 연결한다. 분석 재실행 없음."""
+import hashlib
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[4]
+
+
+def read(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_json(path, value):
+    with path.open("x", encoding="utf-8") as f:
+        json.dump(value, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+
+def main():
+    if (HERE / "manifest.json").exists() or (HERE / "report.md").exists():
+        raise FileExistsError("완료 검수는 보존합니다")
+    csv = read(HERE / "csv_review/checks.json")
+    api = read(HERE / "interface_review/checks.json")
+    assert csv["status"] == "PASS" and all(c["passed"] for c in csv["checks"])
+    assert all(c["status"] == "PASS" for c in api["checks"])
+    assert api["summary"]["failed"] == 0
+    assert api["summary"]["passed"] == len(api["checks"])
+    # No checker is rerun here. The root reads the results and makes the scope judgment.
+    timestamp = datetime.now(timezone.utc).isoformat()
+    report = f'''# BCAI·BCAP 후속 변경 검수 — 2026-09-18
+
+**이번에 확인한 범위에서 칼럼 수치를 바꿔야 할 중대한 계산·표현 오류는 발견하지 못했다.** 기존 S/B 표와 새 상태 평균 차이표는 각각 정해진 관찰 비교의 의미로 사용할 수 있다. 분해 모듈은 계산 인터페이스 DRAFT이며 실제 MLB 결과를 추가할 단계는 아니다. 상대 반응 시나리오는 계속 수치 보류한다.
+
+## 역할 분담과 범위
+
+사용자 요청에 따라 Sol 두 에이전트(`gpt-5.6-sol`)가 서로 겹치지 않는 반복 확인을 맡았다. `sol_csv_review`는 소형 CSV의 별도 산술 검산, `sol_interface_review`는 별도로 지정한 모의 예제·입력 오류·파일 보존·해시·표·링크를 담당했다. 주 작업은 추정 대상·분모·설계와 칼럼 표현을 판단했다. 전체 대화 이력을 Sol에 복제하지 않았고 에이전트끼리 재검수하지 않았다. 실제 비용·토큰 절감률은 측정하지 않았다.
+
+검수 대상은 2026-09-17 후속 변경이다. 이전의 전체 BCAI·BCAP 학습이나 외부 검증을 다시 수행한 것이 아니다. [검수 범위와 분담](review_scope.json) · [주 작업의 설계·해석 검토](methodology_review.md).
+
+## 항목별 판정
+
+| 항목 | 직접 확인한 내용 | 최종 판정 |
+| --- | --- | --- |
+| 기존 S/B 재표시 | 개발12·2023 12카운트 Q·차이·기존 구간·표본·포함률·ESS·지원·판정을 원 CSV와 대조 | 기존 관찰 결과로 사용 가능. 새 S/B 추정·새 외부 검증으로 부르지 않음 |
+| BCAI-STATE-DELTA-v0.1.0 | 시즌 원 W에서24행의 다음 상태·차이·도달 PA·비율·종료/일반 파울 값을 독립 재구성 | 상태 도달 집단 평균의 설명용 차이로 사용 가능. EXPERIMENTAL 유지 |
+| BCAP-DECOMP-v0.1.0 | 새 모의2행의 합성·직접 회귀 비교·가지 기여·관측 행동 진단·오류 입력 거부 | 계산 인터페이스 확인 통과. 실제 MLB 적합·성능·불확실성 주장은 보류. DRAFT 유지 |
+| 상대 반응 시나리오 | 고정 가정·필수 결합 입력·미실행 기록 검토 | 수치 보류가 적절함. 기존 두 주변 평균표로 값을 채우지 않음 |
+
+기존 카드·명세·보고서가 위 한계를 표시하고 있어 미실행을 숨긴 것으로 판단하지 않았다. 구현이 통과했다는 이유로 모델을 VALIDATED로 올리지 않았다.
+
+## 계산과 파일 확인 결과
+
+CSV 담당은 생산 함수의 재호출 없이 원 요약과 가중치에서 별도 계산했다. S/B 재표시24행과 상태 표24행의 원자료 대조·산술 검사 **{csv['summary']['passed']}항목 통과**, 실제 불일치0건이다. 최대 수치 오차는 `{csv['summary']['max_numeric_absolute_error']}`로 지정 절대 허용오차1e-10보다 작다. 검사 개수는 셀·항목별 대조 수이며 관측 표본 수나 통계적 신뢰도를 뜻하지 않는다. [상세 기록](csv_review/checks.json) · [별도 검산 코드](csv_review/verifier.py).
+
+분해 담당은 기존 시험의 예제를 그대로 부르지 않고 지정한 두 모의 행을 만들었다. 행별 합성 뒤 평균은 Take0.29 W, Swing0.40 W, 차이0.11 W로 일치했다. 평균 확률과 평균 가지값을 먼저 곱한 잘못된 Take값0.2375와 구별했다. 직접 회귀 차이0.20 W와의 차이는−0.09 W, 관측 행동별 Brier는0.08·1.125로 일치했다. 모든 숫자는 **계산기 확인용 모의 값**이다.
+
+모서리가 두 구역에 속해도 전체 분모는2행을 유지했다. 확률 합 오류·양의 확률 가지의 값/지원 누락·행동행 누락/중복·미분류·경기 겹침·fold 불일치·불가능한 구역·불완전 직접 비교·비유한 확률을 거부했다. CLI가 새 파일을 만들고 같은 파일 덮어쓰기를 거부하는 것도 확인했다. 소형 해시·표·링크 확인을 포함한 담당별 묶음 검사 **{api['summary']['passed']}항목 통과**다. [상세 기록](interface_review/checks.json) · [확인 코드](interface_review/verifier.py) · [담당 결과](interface_review/findings.md).
+
+기존 코드·명세·결과의 기록 해시와 보고서 MD/HTML 수치, 로컬 링크를 확인했다. 후속 인계·PPT 연결로 바뀐 공유 MD의 과거 after 해시는 변동 가능한 문서 이력으로 구분했다. 이것을 완료된 분석 결과의 변경으로 오판하지 않았다. 이번 검수 연결로 공유 문서는 다시 바뀌며 [문서 변경 기록](document_update.json)에 별도 기록한다.
+
+## 칼럼 표현에서 지킬 점
+
+1. **S/B:** Δ는 S−B이며 양수일 때 실제 존 밖 B의 허용 W가 낮다. 심판 판정이나 투수의 목표 위치가 아니다. 개발 구간은219개, 2023 주요 두 카운트는 주4개·나머지는 보조236개 비교 보정이다.
+2. **상태 차이:** ‘다음 볼/스트라이크 카운트의 관찰 평균’이라고 쓴다. 각 카운트를 밟은 PA 집단이 달라 볼 하나의 인과 효과나 실제 전이 사건 뒤 기대값으로 읽을 수 없다. PA 도달 비율은 실제 볼·스트라이크 발생률이 아니다.
+3. **분해:** 합성기의 지원 표시·훈련 경기 목록 검사는 실제 적합·경험적 지원·교정 검증이 아니다. 현재 구현은 같은 행의 결과회귀 평균끼리 비교하며 AIPW·정책가치나 새 MLB 행동값을 계산하지 않았다.
+4. **단위와 불확실성:** W를 득점·확률로 바꾸거나 타석 안 각 공의 차이를 합산하지 않는다. 상태 차이의 새 구간은 없고 기존 BCAP 구간도 전체 재학습·경기 간 선수 의존성을 모두 반영하지 않는다.
+
+기존 보고서 본문에는 이러한 구분이 있다. 표를 따로 옮길 때 설명을 함께 옮기는 것이 필요하다. 기존 수치·모델 코드·행동 정의·판정 기준을 수정할 근거는 이번 범위에서 발견하지 못해 보존했다.
+
+## 그대로 남는 미완료
+
+- 상태 차이: 실제 투구 사건 빈도·사건조건부 최종 W·새 차이 구간·원자료 전체 분모 감사 미실행.
+- 분해: 실제 가지 확률/결과 적합기, 규제·훈련 내부 교정, 희소 가지 지원, 실제 직접/분해 비교, AIPW·학습 불확실성 미실행.
+- 시나리오: 같은 기준 행의 q·두 행동의 조건부 W·맞춰진 S 기준값 및 지원 미확보. 반응률 임계값·최적 혼합비율 미산출.
+- 2026 S/B·SWING: 좌표 기준면·존 정의의 정합성 미확보로 측정 보류 유지. 표본 부족이나 재현 실패로 바꾸지 않음.
+
+2023·2026의 기존 노출 이력과 외부 연도 내부 교차 적합 범위를 유지한다. 이번에는 원자료 스캔·새 학습·추가 seed·부트스트랩·새 자료 확보·KBO·외부 업로드를 하지 않았다.
+
+## 칼럼용 결론 문단
+
+2024–2025 개발자료와 기존 2023 재현에서는 0-2·1-2의 실제 존 밖 투구가 더 낮은 보정 최종 공격가치와 연결됐다. 새 상태 표는 볼과 스트라이크의 다음 카운트를 밟은 타석들이 평균적으로 어떤 가치를 보였는지 설명한다. 다만 이를 투수가 볼을 하나 빼면 얻는 효과로 읽을 수는 없다. 행동 가치를 가지별로 분해하는 계산 구조는 확인했지만, 실제 자료 학습과 상대가 덜 스윙할 때의 계산은 아직 하지 않았다.
+
+## 재현과 이력
+
+[실행 manifest](manifest.json)에 담당 모델·입력 기록·코드/산출물 해시·수행 범위를 보관한다. 두 검산 코드와 입력 예제는 담당 폴더에 있으며 실제 명령은 각 checks.json 또는 verifier.py에 있다. 완료 검수 출력을 덮어쓰지 말고, 재검수가 필요하면 폴더를 새 ID로 복사한 뒤 검산 코드의 출력 위치를 먼저 확인한다. 생산 모델의 전체 학습 명령은 실행하지 않는다.
+
+CSV 검산기의 첫 실행은 검산기 자체의 프로젝트 경로 인덱스 오류로 입력을 읽기 전에 중단됐다. 경로만 바로잡은 후 위 검수를 완료했다. 이는 기존 모델 계산 실패가 아니다. 담당자의 다른 초기 검사 수정이 있다면 담당 findings의 실행 메모를 따른다.
+
+추가 반영 문서는 README·모델 레지스트리·칼럼 중심 문서·누적 인계 및 새 두 모듈의 validation.md다. 모델 카드의 현재 상태·명세와 일치함을 확인했고 정의·버전·원본·완료 실행·기존 보고서는 변경하지 않았다.
+'''
+    (HERE / "report.md").write_text(report, encoding="utf-8")
+    rel = HERE.relative_to(ROOT).as_posix()
+    additions = {
+        "README.md": f"## 2026-09-18 후속 변경 제한적 검수\n\n[검수 결과]({rel}/report.md). Sol 두 에이전트의 비중복 산술·구현 확인과 주 작업의 설계·해석 검토를 완료했다. 확인 범위에서 중대한 오류는 발견하지 못했다. 상태 표는 설명용 관찰 차이로 사용 가능하며 분해는 실제 학습 없는 DRAFT, 상대 반응·2026 위치 분석은 보류를 유지한다. 기존 모델·수치는 변경하지 않았다.\n",
+        "models/registry.md": f"## 2026-09-18 후속 변경 검수 — 상태 유지\n\n[제한적 검수](../{rel}/report.md): BCAI-STATE-DELTA의 저장24행 독립 산술과 BCAP-DECOMP의 새 모의 예제·입력 오류·해시 확인을 완료했다. 명시 범위에서 중대한 오류는 발견하지 못했다. STATE-DELTA는 EXPERIMENTAL, DECOMP는 DRAFT 유지이며 실제 분해 학습·불확실성·시나리오 결과는 없다. 기존 BCAP·OBS 검증 범위를 확대하거나 VALIDATED로 승격하지 않았다.\n",
+        "columns/001-ball-count/column.md": f"## 2026-09-18 후속 변경 제한적 검수\n\n[검수 보고서](analysis/runs/{HERE.name}/report.md)에 S/B 재표시·상태 차이의 별도 산술 대조와 분해 인터페이스 확인, 칼럼 사용 범위를 기록했다. 중대한 계산 오류는 발견하지 못했다. 상태 표는 ‘다음 카운트를 밟은 PA의 관찰 평균 차이’로 사용하며 인과 효과·실제 전이 사건 평균으로 쓰지 않는다. 분해의 실증 결과와 반응 시나리오는 보류다. 재학습·모델 변경 없이 기존 상태를 유지했다.\n",
+        "columns/001-ball-count/analysis/handoff_bcap_review.md": f"## 최신 인계 — 2026-09-18 후속 변경 제한적 검수\n\n[검수 보고서](runs/{HERE.name}/report.md) · [실행·분담·해시](runs/{HERE.name}/manifest.json). Sol 두 에이전트가 CSV 산술과 인터페이스·해시·표·링크를 나눠 확인했고 주 작업은 설계·해석·최종 판정을 담당했다. 상호 반복 검수 없이 명시 범위를 완료했다.\n\nS/B 재표시24행·상태 차이24행의 독립 산술은 일치했고 새 모의 예제로 분해 합성·오류 거부를 확인했다. 확인 범위에서 중대한 오류는 발견하지 못했다. STATE-DELTA EXPERIMENTAL·DECOMP DRAFT를 유지한다. 실제 분해 학습·교정·지원·구간·상대 반응 수치는 미실행, 2026 위치 분석은 측정 보류다. 기존 모델·수치·명세·완료 실행과 아래 인계는 보존했다. 이번 PASS를 전체 통계 검증으로 전용하지 않는다.\n",
+        "models/bcai/state_delta/v0.1.0/validation.md": f"## 2026-09-18 제한적 별도 검산 추가\n\n[검수 보고서](../../../../{rel}/report.md)와 [CSV 산술 기록](../../../../{rel}/csv_review/checks.json). 생산 함수를 재사용하지 않고 저장 시즌 W·분모·가중치에서24행을 재구성해 일치함을 확인했다. 이전 OBS의 PA×count 정의는 코드 독해로 확인했고 원자료를 새로 재집계하지 않았다. 설명용 관찰 차이로 사용 가능하되 실제 사건조건부 W·새 구간·인과 효과는 미검증이다. EXPERIMENTAL을 유지한다. 아래는 최초 구현 시점의 기록이다.\n",
+        "models/bcap/decomposition/v0.1.0/validation.md": f"## 2026-09-18 별도 모의 예제 확인 추가\n\n[검수 보고서](../../../../{rel}/report.md)와 [인터페이스 기록](../../../../{rel}/interface_review/checks.json). 기존 fixture와 다른 모의2행에서 손으로 지정한 기대값으로 행별 확률×조건부 W·공통 행 비교·가지 기여·Brier/로그손실·입력 오류·파일 보존을 확인했다. 실제 분기 적합·경험적 지원·교정·AIPW·구간·정책을 검증한 것은 아니다. DRAFT를 유지한다. 아래는 최초 구현 시점의 기록이다.\n"
+    }
+    updates = []
+    for path, addition in additions.items():
+        target = ROOT / path
+        before = sha(target)
+        old = target.read_text(encoding="utf-8-sig")
+        title, body = old.split("\n", 1)
+        target.write_text(title + "\n\n" + addition + "\n" + body, encoding="utf-8")
+        updates.append({"path": path, "before_sha256": before, "after_sha256": sha(target),
+                        "change": "제한적 검수 연결·범위 추가; 원문 이력 보존"})
+    write_json(HERE / "document_update.json", {"created_at_utc": timestamp, "updates": updates})
+    artifacts = {p.relative_to(HERE).as_posix(): sha(p) for p in sorted(HERE.rglob("*")) if p.is_file() and "__pycache__" not in p.parts}
+    write_json(HERE / "manifest.json", {
+        "review_id": HERE.name, "run_type": "limited_review_no_refit", "status": "COMPLETE",
+        "created_at_utc": timestamp, "model_ids": ["BCAI-STATE-DELTA-v0.1.0", "BCAP-DECOMP-v0.1.0", "BCAP-PITCH-SB-v0.1.0"],
+        "states_unchanged": True, "new_training": False, "new_external_validation": False,
+        "allocation": read(HERE / "review_scope.json")["allocation"],
+        "csv_result": csv["summary"], "interface_result": api["summary"],
+        "conclusion_ko": "명시한 검수 범위에서 중대한 계산·표현 오류 미발견; 실증 분해·반응 시나리오 보류 유지",
+        "source_evidence": ["csv_review/checks.json", "interface_review/checks.json", "methodology_review.md"],
+        "outputs_sha256": artifacts, "token_savings_quantified": False
+    })
+    print(json.dumps({"status": "COMPLETE", "report": str(HERE / "report.md"), "documents_updated": len(updates)}, ensure_ascii=True))
+
+
+if __name__ == "__main__":
+    main()

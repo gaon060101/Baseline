@@ -1,0 +1,433 @@
+{
+  "status": "PASS",
+  "checks_n": 84,
+  "checks": [
+    {
+      "name": "시즌별 12카운트 및 중복 없음",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "기존 manifest 해시 일치: advantage_season_sensitivity.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "기존 manifest 해시 일치: advantage_count_results.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "기존 manifest 해시 일치: advantage_event_audit.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-0 분모=기존 적격 event 합",
+      "passed": true,
+      "detail": 181840
+    },
+    {
+      "name": "2024 0-0 W 독립 가중합",
+      "passed": true,
+      "detail": {
+        "recalculated_W": 0.3094316871975363,
+        "absolute_error": 0.0
+      }
+    },
+    {
+      "name": "2024 manifest 기준 W 일치",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-0 분모=기존 적격 event 합",
+      "passed": true,
+      "detail": 182284
+    },
+    {
+      "name": "2025 0-0 W 독립 가중합",
+      "passed": true,
+      "detail": {
+        "recalculated_W": 0.3119784566939501,
+        "absolute_error": 2.220446049250313e-16
+      }
+    },
+    {
+      "name": "2025 manifest 기준 W 일치",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0-0 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 364124
+    },
+    {
+      "name": "0-1 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 184704
+    },
+    {
+      "name": "0-2 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 78453
+    },
+    {
+      "name": "1-0 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 136551
+    },
+    {
+      "name": "1-1 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 142616
+    },
+    {
+      "name": "1-2 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 109346
+    },
+    {
+      "name": "2-0 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 45648
+    },
+    {
+      "name": "2-1 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 72967
+    },
+    {
+      "name": "2-2 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 89054
+    },
+    {
+      "name": "3-0 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 13982
+    },
+    {
+      "name": "3-1 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 29886
+    },
+    {
+      "name": "3-2 시즌 분모 합=기존 OBS 분모",
+      "passed": true,
+      "detail": 51406
+    },
+    {
+      "name": "2024 0-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 0-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 1-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 2-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-0 볼넷 종료",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-1 볼넷 종료",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-2 볼넷 종료",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2024 3-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 0-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 1-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 2-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-0 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-0 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-0 볼넷 종료",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-1 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-1 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-1 볼넷 종료",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-2 유한값·도달률",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-2 차이 항등식",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-2 볼넷 종료",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2025 3-2 삼진 종료·일반 파울 자기유지",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "scope": "저장 소형 요약·기존 정의의 산술 일치 확인. 원자료 재감사·불확실성·인과 검증 아님"
+}

@@ -1,0 +1,16 @@
+{
+  "review_id": "bcap_followup_review__mlb_2024_2025__20260918__r01",
+  "scope": "2026-09-17 BCAI·BCAP 후속 변경의 제한적 산술·구현·해석 검수",
+  "allocation": [
+    {"agent": "root", "role": "추정 대상·분모·해석·발견 문제의 중요도 및 최종 판정"},
+    {"agent": "sol_csv_review", "requested_model": "gpt-5.6-sol", "role": "기존 소형 CSV 독립 산술 대조", "fork_history": "none"},
+    {"agent": "sol_interface_review", "requested_model": "gpt-5.6-sol", "role": "새 모의 예제로 합성 인터페이스·기록 해시·표와 링크 확인", "fork_history": "none"}
+  ],
+  "efficiency_rule": "서로 다른 업무를 한 번씩 수행. Sol끼리 상호 재검수하지 않음. 주 작업은 전체 계산을 중복하지 않고 발견 문제와 해석을 판단. 실제 실패 또는 증거 충돌이 있을 때만 필요한 확인 추가.",
+  "targets": ["기존 S/B 24행 재표시", "BCAI-STATE-DELTA-v0.1.0 24행", "BCAP-DECOMP-v0.1.0 DRAFT 인터페이스", "반응 시나리오 보류 및 문서 상태"],
+  "numerical_tolerance": {"CSV_absolute": 1e-10, "integer_and_labels": "exact", "display": "표시 소수 자릿수의 반 단위 반올림 범위"},
+  "evidence_types": ["DIRECT_RECALCULATION", "INTERFACE_TEST", "CODE_OR_SPEC_INSPECTION", "HISTORICAL_RECORD_ONLY"],
+  "check_statuses": ["PASS", "FAIL", "NOT_RUN", "BLOCKED", "NOT_APPLICABLE"],
+  "not_authorized_in_this_review": ["모델 정의·분류·기준 변경", "기존 결과 수정", "재학습", "추가 seed·부트스트랩", "원자료 전면 감사", "새 데이터·문헌 수집", "2026 위치 분석 재개", "KBO", "외부 업로드", "자동 VALIDATED 승격"],
+  "token_savings": "수치 측정 없음; 절감률이나 실제 토큰 사용량을 추정해 보고하지 않음"
+}

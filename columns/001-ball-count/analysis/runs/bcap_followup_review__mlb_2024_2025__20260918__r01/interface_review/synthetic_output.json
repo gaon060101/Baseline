@@ -1,0 +1,305 @@
+{
+  "model_id": "BCAP-DECOMP-v0.1.0",
+  "status": "DRAFT",
+  "synthetic": true,
+  "fit_provenance_claim": "independent synthetic contract fixture; no model fitting",
+  "n_reference_rows": 2,
+  "checks": {
+    "paired_reference_keys": "PASS",
+    "game_fold_no_train_overlap": "PASS",
+    "branch_probabilities": "PASS",
+    "positive_mass_support_flags": "PASS",
+    "actual_fitting_and_preprocessing_provenance": "NOT_VERIFIED"
+  },
+  "summaries": [
+    {
+      "level": "count",
+      "count": "0-2",
+      "region": "ALL",
+      "n": 2,
+      "unit": "season_weighted_final_PA_W",
+      "interpretation": "descriptive_g_computation_only",
+      "Take": {
+        "mean_W": 0.29000000000000004,
+        "component_contributions_W": {
+          "TAKE_BALL": 0.26,
+          "TAKE_CALLED_STRIKE": 0.030000000000000006,
+          "TAKE_HBP": 0.0
+        },
+        "mean_branch_probabilities": {
+          "TAKE_BALL": 0.5,
+          "TAKE_CALLED_STRIKE": 0.5,
+          "TAKE_HBP": 0.0
+        },
+        "direct_mean_W": 0.2
+      },
+      "Swing": {
+        "mean_W": 0.39999999999999997,
+        "component_contributions_W": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.35,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.05
+        },
+        "mean_branch_probabilities": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.625,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.375
+        },
+        "direct_mean_W": 0.4
+      },
+      "delta_Swing_minus_Take_W": 0.10999999999999993,
+      "direct_delta_W": 0.2,
+      "decomposed_minus_direct_delta_W": -0.09000000000000008
+    },
+    {
+      "level": "count_region",
+      "count": "0-2",
+      "region": "HIGH",
+      "n": 2,
+      "unit": "season_weighted_final_PA_W",
+      "interpretation": "descriptive_g_computation_only",
+      "Take": {
+        "mean_W": 0.29000000000000004,
+        "component_contributions_W": {
+          "TAKE_BALL": 0.26,
+          "TAKE_CALLED_STRIKE": 0.030000000000000006,
+          "TAKE_HBP": 0.0
+        },
+        "mean_branch_probabilities": {
+          "TAKE_BALL": 0.5,
+          "TAKE_CALLED_STRIKE": 0.5,
+          "TAKE_HBP": 0.0
+        },
+        "direct_mean_W": 0.2
+      },
+      "Swing": {
+        "mean_W": 0.39999999999999997,
+        "component_contributions_W": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.35,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.05
+        },
+        "mean_branch_probabilities": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.625,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.375
+        },
+        "direct_mean_W": 0.4
+      },
+      "delta_Swing_minus_Take_W": 0.10999999999999993,
+      "direct_delta_W": 0.2,
+      "decomposed_minus_direct_delta_W": -0.09000000000000008
+    },
+    {
+      "level": "count_region",
+      "count": "0-2",
+      "region": "OUTSIDE",
+      "n": 2,
+      "unit": "season_weighted_final_PA_W",
+      "interpretation": "descriptive_g_computation_only",
+      "Take": {
+        "mean_W": 0.29000000000000004,
+        "component_contributions_W": {
+          "TAKE_BALL": 0.26,
+          "TAKE_CALLED_STRIKE": 0.030000000000000006,
+          "TAKE_HBP": 0.0
+        },
+        "mean_branch_probabilities": {
+          "TAKE_BALL": 0.5,
+          "TAKE_CALLED_STRIKE": 0.5,
+          "TAKE_HBP": 0.0
+        },
+        "direct_mean_W": 0.2
+      },
+      "Swing": {
+        "mean_W": 0.39999999999999997,
+        "component_contributions_W": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.35,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.05
+        },
+        "mean_branch_probabilities": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.625,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.375
+        },
+        "direct_mean_W": 0.4
+      },
+      "delta_Swing_minus_Take_W": 0.10999999999999993,
+      "direct_delta_W": 0.2,
+      "decomposed_minus_direct_delta_W": -0.09000000000000008
+    },
+    {
+      "level": "overall",
+      "count": "ALL",
+      "region": "ALL",
+      "n": 2,
+      "unit": "season_weighted_final_PA_W",
+      "interpretation": "descriptive_g_computation_only",
+      "Take": {
+        "mean_W": 0.29000000000000004,
+        "component_contributions_W": {
+          "TAKE_BALL": 0.26,
+          "TAKE_CALLED_STRIKE": 0.030000000000000006,
+          "TAKE_HBP": 0.0
+        },
+        "mean_branch_probabilities": {
+          "TAKE_BALL": 0.5,
+          "TAKE_CALLED_STRIKE": 0.5,
+          "TAKE_HBP": 0.0
+        },
+        "direct_mean_W": 0.2
+      },
+      "Swing": {
+        "mean_W": 0.39999999999999997,
+        "component_contributions_W": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.35,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.05
+        },
+        "mean_branch_probabilities": {
+          "BUNT_FOUL": 0.0,
+          "BUNT_FOUL_TIP": 0.0,
+          "BUNT_MISS": 0.0,
+          "IN_PLAY": 0.625,
+          "SWING_FOUL": 0.0,
+          "SWING_FOUL_TIP": 0.0,
+          "SWING_MISS": 0.375
+        },
+        "direct_mean_W": 0.4
+      },
+      "delta_Swing_minus_Take_W": 0.10999999999999993,
+      "direct_delta_W": 0.2,
+      "decomposed_minus_direct_delta_W": -0.09000000000000008
+    }
+  ],
+  "observed_action_predictive_diagnostics": [
+    {
+      "action": "Take",
+      "n_observed": 1,
+      "multiclass_brier_sum": 0.07999999999999999,
+      "log_loss": 0.2231435513142097,
+      "zero_probability_observed_events": 0,
+      "log_loss_status": "FINITE",
+      "scope": "observed_action_only_not_counterfactual_calibration"
+    },
+    {
+      "action": "Swing",
+      "n_observed": 1,
+      "multiclass_brier_sum": 1.125,
+      "log_loss": 1.3862943611198906,
+      "zero_probability_observed_events": 0,
+      "log_loss_status": "FINITE",
+      "scope": "observed_action_only_not_counterfactual_calibration"
+    }
+  ],
+  "supplied_branch_support": [
+    {
+      "action": "Take",
+      "branch": "TAKE_BALL",
+      "n_reference": 2,
+      "positive_mass_supported": 2,
+      "zero_mass_unsupported": 0
+    },
+    {
+      "action": "Take",
+      "branch": "TAKE_CALLED_STRIKE",
+      "n_reference": 2,
+      "positive_mass_supported": 2,
+      "zero_mass_unsupported": 0
+    },
+    {
+      "action": "Take",
+      "branch": "TAKE_HBP",
+      "n_reference": 2,
+      "positive_mass_supported": 0,
+      "zero_mass_unsupported": 2
+    },
+    {
+      "action": "Swing",
+      "branch": "BUNT_FOUL",
+      "n_reference": 2,
+      "positive_mass_supported": 0,
+      "zero_mass_unsupported": 2
+    },
+    {
+      "action": "Swing",
+      "branch": "BUNT_FOUL_TIP",
+      "n_reference": 2,
+      "positive_mass_supported": 0,
+      "zero_mass_unsupported": 2
+    },
+    {
+      "action": "Swing",
+      "branch": "BUNT_MISS",
+      "n_reference": 2,
+      "positive_mass_supported": 0,
+      "zero_mass_unsupported": 2
+    },
+    {
+      "action": "Swing",
+      "branch": "IN_PLAY",
+      "n_reference": 2,
+      "positive_mass_supported": 2,
+      "zero_mass_unsupported": 0
+    },
+    {
+      "action": "Swing",
+      "branch": "SWING_FOUL",
+      "n_reference": 2,
+      "positive_mass_supported": 0,
+      "zero_mass_unsupported": 2
+    },
+    {
+      "action": "Swing",
+      "branch": "SWING_FOUL_TIP",
+      "n_reference": 2,
+      "positive_mass_supported": 0,
+      "zero_mass_unsupported": 2
+    },
+    {
+      "action": "Swing",
+      "branch": "SWING_MISS",
+      "n_reference": 2,
+      "positive_mass_supported": 2,
+      "zero_mass_unsupported": 0
+    }
+  ],
+  "not_estimated": [
+    "AIPW",
+    "confidence_intervals",
+    "policy_value",
+    "causal_effect",
+    "MLB_branch_models",
+    "calibration_curve",
+    "empirical_branch_support"
+  ]
+}

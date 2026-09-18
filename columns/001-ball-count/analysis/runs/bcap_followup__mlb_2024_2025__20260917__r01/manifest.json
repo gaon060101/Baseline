@@ -1,0 +1,47 @@
+{
+  "run_id": "bcap_followup__mlb_2024_2025__20260917__r01",
+  "run_type": "presentation_and_small_derived_results_bundle",
+  "model_id": "BCAP-PITCH-SB-v0.1.0",
+  "version": "0.1.0",
+  "model_status": "EXPERIMENTAL",
+  "related_models": [
+    "BCAI-STATE-DELTA-v0.1.0",
+    "BCAP-DECOMP-v0.1.0"
+  ],
+  "status": "COMPLETE_WITH_EXPLICIT_DEFERRALS",
+  "created_at_utc": "2026-09-17T06:06:56.376319+00:00",
+  "executed": [
+    "기존 집계 S/B 24행 재표시·산술",
+    "가정 시나리오 입력 계약 저장",
+    "완료된 새 소형 실행 연결"
+  ],
+  "not_executed": [
+    "모델 학습",
+    "원자료 전체 검토",
+    "새 신뢰구간",
+    "경험적 분해·상대반응 추정",
+    "2026 위치 평가"
+  ],
+  "inputs_sha256": {
+    "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2024_2025__20260912__r01\\artifacts\\count_values.csv": "778493cc496ff755d33adde1fe2e59d6135fdc52c593c868ef0d21be817aa5e8",
+    "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2023__20260914__r01\\artifacts\\values.csv": "63ff7f926df59f7067e6bad70a9843f3a487bd1c7712542617a77c8de9c8ba71",
+    "columns\\001-ball-count\\analysis\\bcap_external_20260914__r01\\comparison.csv": "c8f4b2fe4040512572189150dbf47bc18ab202492b68f405a1554800691f4b7b",
+    "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json": "f51482176b45688a49f53f9f85d4a5a242b3c108b4f7ab7af5252cb2b94b2f5c",
+    "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\artifacts\\state_delta_2024_2025.csv": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4",
+    "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json": "679f569f48366cc2513e377eb187ebb215ba94de172fd391058e0aa8eade6a3c",
+    "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2026_ytd_20260907__20260914__r01\\manifest.json": "16f0b61a3e80eb321c95afb569fa2d38393c9d45e06af04717e4503663913295"
+  },
+  "code_sha256": {
+    "columns\\001-ball-count\\analysis\\bcap_followup_20260917\\build_report.py": "02efe2ccbf4ef5d80308adcc96adc8aff6b3726e1b5358c817c5bf778b6d5469"
+  },
+  "command": "python -B columns/001-ball-count/analysis/bcap_followup_20260917/build_report.py --run-id bcap_followup__mlb_2024_2025__20260917__r01",
+  "outputs_sha256": {
+    "artifacts/quick_checks.json": "4783665c9a6be01c57300941b17f9c0d8508662d2f7bcdf778bf9ee63125b7ea",
+    "artifacts/report.html": "4490f633ce2a477b6df4e6d70abdca3136e36703a25991ef168900b42229af87",
+    "artifacts/report.md": "4779d57ed8987c63fd3354efadc57ee78ddc658dfa4ce16fe4f4f21c94c7b9bb",
+    "artifacts/sb_reformatted.csv": "ef2e00907c4f3154a2b7cfdc21a76884935290baa9f05bb693d8e418b25a45ec",
+    "artifacts/scenario_contract.json": "3067a287208905aa430550f149476ea3ac951f2b7cbc824688612d96815ec359"
+  },
+  "input_preservation": "PASS",
+  "sharing": "새 대형/행별 데이터·캐시·모델 객체 없음; excluded_files 추가 대상 없음"
+}

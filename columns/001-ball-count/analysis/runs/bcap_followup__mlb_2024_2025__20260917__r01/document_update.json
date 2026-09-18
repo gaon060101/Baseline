@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-09-17T06:07:13.185442+00:00",
+  "status": "COMPLETE",
+  "updates": [
+    {
+      "path": "README.md",
+      "before_sha256": "2df2354009518a2f2ae4ad82d401069c947ab95380f4311de6c1e5b6d6355492",
+      "after_sha256": "8255bf71e79bf0ad27104d7285766c89bad4336ec1e9bc35a8900531c20dbb85",
+      "change": "첫 제목 뒤 새 완료 범위 삽입; 이전 본문 보존"
+    },
+    {
+      "path": "models/registry.md",
+      "before_sha256": "6d2cc6a40c19983dd545a7e5a3892d83707e2c2c8a41af389b1d53d5c848920b",
+      "after_sha256": "956df04f84ba2f6e79d69f5662911566a34c605f043a1612040ab66bf4439f7b",
+      "change": "첫 제목 뒤 새 완료 범위 삽입; 이전 본문 보존"
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "before_sha256": "981a6d26d2370cdc523f6e3ccdcf55c7605d0c015eea40f5b4133fa177969226",
+      "after_sha256": "02a3fa525e82c91703c9bf7e27976d076aa53b09204916f5f90dc7caef6f7900",
+      "change": "첫 제목 뒤 새 완료 범위 삽입; 이전 본문 보존"
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "before_sha256": "689b8f8a1b514496f9f621b6ae3139e396a80d8b7681ec55fa1f10ad60988a84",
+      "after_sha256": "cc7968edb557727e8ac0bf6922eedd01ee38ec02ddf9e4a88c53f5bc8a048751",
+      "change": "첫 제목 뒤 새 완료 범위 삽입; 이전 본문 보존"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+      "before_sha256": "68a35196f8723eac3405df479ddd0fb201942937b65f1a18dcd3cc497c235f5f",
+      "after_sha256": "34cbeb69d2cdc88b0ded350843bcf70b797c878f8e672261931d5ca9002140d7",
+      "change": "첫 제목 뒤 새 완료 범위 삽입; 이전 본문 보존"
+    },
+    {
+      "path": "columns/001-ball-count/model_research_followup_20260917.md",
+      "before_sha256": "874f25ce41236cc33ce42856e84aac8c9d7a319cae8022ecb948fe74e95f4715",
+      "after_sha256": "b392596a8815316dad9f875727f41798cae4bd44c3eeff4c0e57b3e9a5feab92",
+      "change": "첫 제목 뒤 새 완료 범위 삽입; 이전 본문 보존"
+    }
+  ]
+}

@@ -1,0 +1,2204 @@
+{
+  "snapshot": "2026-09-18 interface review snapshot before root appends review links",
+  "synthetic_fixture": true,
+  "source_hashes": {
+    "compose.py": "c020dede3d791ed67c37c31df1075de2181fa91daf0ae5eb2860bb9c4a3f933d",
+    "input_contract.md": "454670db827692bb1af10f48256cade6011e0412300733e186e829b8b9477440",
+    "swing_specification.yaml": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58"
+  },
+  "summary": {
+    "total": 22,
+    "passed": 22,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "exact_composition",
+      "status": "PASS",
+      "expected": {
+        "n": 2,
+        "take_mean": 0.29,
+        "swing_mean": 0.4,
+        "delta": 0.11,
+        "direct_delta": 0.2,
+        "decomp_minus_direct": -0.09,
+        "take_ball": 0.26,
+        "take_called": 0.03,
+        "swing_miss": 0.05,
+        "swing_inplay": 0.35
+      },
+      "actual": {
+        "n": 2,
+        "take_mean": 0.29000000000000004,
+        "swing_mean": 0.39999999999999997,
+        "delta": 0.10999999999999993,
+        "direct_delta": 0.2,
+        "decomp_minus_direct": -0.09000000000000008,
+        "take_ball": 0.26,
+        "take_called": 0.030000000000000006,
+        "swing_miss": 0.05,
+        "swing_inplay": 0.35
+      },
+      "evidence_type": "synthetic_execution"
+    },
+    {
+      "name": "overlap_regions_no_overall_duplication",
+      "status": "PASS",
+      "expected": "four groups each n=2; no n=4",
+      "actual": [
+        {
+          "level": "count",
+          "count": "0-2",
+          "region": "ALL",
+          "n": 2
+        },
+        {
+          "level": "count_region",
+          "count": "0-2",
+          "region": "HIGH",
+          "n": 2
+        },
+        {
+          "level": "count_region",
+          "count": "0-2",
+          "region": "OUTSIDE",
+          "n": 2
+        },
+        {
+          "level": "overall",
+          "count": "ALL",
+          "region": "ALL",
+          "n": 2
+        }
+      ],
+      "evidence_type": "synthetic_execution"
+    },
+    {
+      "name": "not_product_of_means",
+      "status": "PASS",
+      "expected": {
+        "correct": 0.29,
+        "wrong_product_of_means": 0.2375
+      },
+      "actual": 0.29000000000000004,
+      "evidence_type": "synthetic_execution"
+    },
+    {
+      "name": "observed_action_diagnostics",
+      "status": "PASS",
+      "expected": {
+        "Take_brier": 0.08,
+        "Swing_brier": 1.125,
+        "Take_logloss": 0.2231435513142097,
+        "Swing_logloss": 1.3862943611198906
+      },
+      "actual": {
+        "Take_brier": 0.07999999999999999,
+        "Swing_brier": 1.125,
+        "Take_logloss": 0.2231435513142097,
+        "Swing_logloss": 1.3862943611198906
+      },
+      "evidence_type": "synthetic_execution"
+    },
+    {
+      "name": "invalid_probability_sum",
+      "status": "PASS",
+      "expected": "reject containing 'sum to 1'",
+      "actual": "ValueError: branch probabilities must sum to 1 without renormalization",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "positive_mass_missing_mu",
+      "status": "PASS",
+      "expected": "reject containing 'lacks supported'",
+      "actual": "ValueError: positive branch mass lacks supported conditional W",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "positive_mass_unsupported",
+      "status": "PASS",
+      "expected": "reject containing 'lacks supported'",
+      "actual": "ValueError: positive branch mass lacks supported conditional W",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "missing_action_row",
+      "status": "PASS",
+      "expected": "reject containing 'exactly the same'",
+      "actual": "ValueError: Take and Swing must cover exactly the same reference rows",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "duplicate_action_row",
+      "status": "PASS",
+      "expected": "reject containing 'duplicate row/action'",
+      "actual": "ValueError: duplicate row/action prediction",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "unknown_label",
+      "status": "PASS",
+      "expected": "reject containing 'unclassified'",
+      "actual": "ValueError: unclassified observed description: do not impute Take",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "train_eval_overlap",
+      "status": "PASS",
+      "expected": "reject containing 'overlaps'",
+      "actual": "ValueError: evaluation game overlaps its training games",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "fold_mismatch",
+      "status": "PASS",
+      "expected": "reject containing 'differs'",
+      "actual": "ValueError: prediction fold differs from reference fold",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "inconsistent_regions",
+      "status": "PASS",
+      "expected": "reject containing 'inconsistent'",
+      "actual": "ValueError: inconsistent region membership",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "partial_direct",
+      "status": "PASS",
+      "expected": "reject containing 'cover every'",
+      "actual": "ValueError: direct comparator must cover every same row and both actions",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "nonfinite_probability",
+      "status": "PASS",
+      "expected": "reject containing 'nonfinite'",
+      "actual": "ValueError: branch probability: nonfinite value",
+      "evidence_type": "negative_synthetic_execution"
+    },
+    {
+      "name": "cli_first_write",
+      "status": "PASS",
+      "expected": "returncode 0 and output created",
+      "actual": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "evidence_type": "cli_execution"
+    },
+    {
+      "name": "cli_overwrite_refusal",
+      "status": "PASS",
+      "expected": "nonzero return and unchanged SHA256",
+      "actual": {
+        "returncode": 1,
+        "before": "b9006497aacfa2935454f9c93f1b0cc1be6003598a84f6f6d521e570eedfb641",
+        "after": "b9006497aacfa2935454f9c93f1b0cc1be6003598a84f6f6d521e570eedfb641",
+        "stderr_tail": "FileExistsError: [Errno 17] File exists: 'C:\\\\Users\\\\백창현\\\\Desktop\\\\Baseline\\\\columns\\\\001-ball-count\\\\analysis\\\\runs\\\\bcap_followup_review__mlb_2024_2025__20260918__r01\\\\interface_review\\\\cli_output.json'"
+      },
+      "evidence_type": "cli_execution"
+    },
+    {
+      "name": "description_mapping_vs_swing_spec",
+      "status": "PASS",
+      "expected": {
+        "ball": "Take",
+        "blocked_ball": "Take",
+        "called_strike": "Take",
+        "hit_by_pitch": "Take",
+        "swinging_strike": "Swing",
+        "swinging_strike_blocked": "Swing",
+        "foul": "Swing",
+        "foul_tip": "Swing",
+        "hit_into_play": "Swing",
+        "foul_bunt": "Swing",
+        "missed_bunt": "Swing",
+        "bunt_foul_tip": "Swing"
+      },
+      "actual": {
+        "ball": "Take",
+        "blocked_ball": "Take",
+        "called_strike": "Take",
+        "hit_by_pitch": "Take",
+        "swinging_strike": "Swing",
+        "swinging_strike_blocked": "Swing",
+        "foul": "Swing",
+        "foul_tip": "Swing",
+        "foul_bunt": "Swing",
+        "missed_bunt": "Swing",
+        "bunt_foul_tip": "Swing",
+        "hit_into_play": "Swing"
+      },
+      "evidence_type": "code_config_comparison"
+    },
+    {
+      "name": "three_manifest_declared_small_hashes",
+      "status": "PASS",
+      "expected": "all declared small input/code/config/output hashes match",
+      "actual": [
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2024_2025__20260912__r01\\artifacts\\count_values.csv",
+          "expected": "778493cc496ff755d33adde1fe2e59d6135fdc52c593c868ef0d21be817aa5e8",
+          "actual": "778493cc496ff755d33adde1fe2e59d6135fdc52c593c868ef0d21be817aa5e8",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2023__20260914__r01\\artifacts\\values.csv",
+          "expected": "63ff7f926df59f7067e6bad70a9843f3a487bd1c7712542617a77c8de9c8ba71",
+          "actual": "63ff7f926df59f7067e6bad70a9843f3a487bd1c7712542617a77c8de9c8ba71",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\bcap_external_20260914__r01\\comparison.csv",
+          "expected": "c8f4b2fe4040512572189150dbf47bc18ab202492b68f405a1554800691f4b7b",
+          "actual": "c8f4b2fe4040512572189150dbf47bc18ab202492b68f405a1554800691f4b7b",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "expected": "f51482176b45688a49f53f9f85d4a5a242b3c108b4f7ab7af5252cb2b94b2f5c",
+          "actual": "f51482176b45688a49f53f9f85d4a5a242b3c108b4f7ab7af5252cb2b94b2f5c",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\artifacts\\state_delta_2024_2025.csv",
+          "expected": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4",
+          "actual": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "expected": "679f569f48366cc2513e377eb187ebb215ba94de172fd391058e0aa8eade6a3c",
+          "actual": "679f569f48366cc2513e377eb187ebb215ba94de172fd391058e0aa8eade6a3c",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "inputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2026_ytd_20260907__20260914__r01\\manifest.json",
+          "expected": "16f0b61a3e80eb321c95afb569fa2d38393c9d45e06af04717e4503663913295",
+          "actual": "16f0b61a3e80eb321c95afb569fa2d38393c9d45e06af04717e4503663913295",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "code_sha256",
+          "path": "columns\\001-ball-count\\analysis\\bcap_followup_20260917\\build_report.py",
+          "expected": "02efe2ccbf4ef5d80308adcc96adc8aff6b3726e1b5358c817c5bf778b6d5469",
+          "actual": "02efe2ccbf4ef5d80308adcc96adc8aff6b3726e1b5358c817c5bf778b6d5469",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\artifacts\\quick_checks.json",
+          "expected": "4783665c9a6be01c57300941b17f9c0d8508662d2f7bcdf778bf9ee63125b7ea",
+          "actual": "4783665c9a6be01c57300941b17f9c0d8508662d2f7bcdf778bf9ee63125b7ea",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\artifacts\\report.html",
+          "expected": "4490f633ce2a477b6df4e6d70abdca3136e36703a25991ef168900b42229af87",
+          "actual": "4490f633ce2a477b6df4e6d70abdca3136e36703a25991ef168900b42229af87",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\artifacts\\report.md",
+          "expected": "4779d57ed8987c63fd3354efadc57ee78ddc658dfa4ce16fe4f4f21c94c7b9bb",
+          "actual": "4779d57ed8987c63fd3354efadc57ee78ddc658dfa4ce16fe4f4f21c94c7b9bb",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\artifacts\\sb_reformatted.csv",
+          "expected": "ef2e00907c4f3154a2b7cfdc21a76884935290baa9f05bb693d8e418b25a45ec",
+          "actual": "ef2e00907c4f3154a2b7cfdc21a76884935290baa9f05bb693d8e418b25a45ec",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\artifacts\\scenario_contract.json",
+          "expected": "3067a287208905aa430550f149476ea3ac951f2b7cbc824688612d96815ec359",
+          "actual": "3067a287208905aa430550f149476ea3ac951f2b7cbc824688612d96815ec359",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "input",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_obs__mlb_2024_2025__20260907__r01\\manifest.json",
+          "expected": "0c5860a4798e09deef4cce6fde8a3783e77e7bc841abaa7d5117187cdb323d00",
+          "actual": "0c5860a4798e09deef4cce6fde8a3783e77e7bc841abaa7d5117187cdb323d00",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "input",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_obs__mlb_2024_2025__20260907__r01\\artifacts\\advantage_season_sensitivity.csv",
+          "expected": "72259359b10d4e5ad2ded64ed20a0b1bfab0d820c26a251a02c1a413c2b3ff14",
+          "actual": "72259359b10d4e5ad2ded64ed20a0b1bfab0d820c26a251a02c1a413c2b3ff14",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "input",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_obs__mlb_2024_2025__20260907__r01\\artifacts\\advantage_count_results.csv",
+          "expected": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810",
+          "actual": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "input",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_obs__mlb_2024_2025__20260907__r01\\artifacts\\advantage_event_audit.csv",
+          "expected": "e6a175bce451a70b51866fc6d8b498470455f81d717fdea592bd3bb932fbbc07",
+          "actual": "e6a175bce451a70b51866fc6d8b498470455f81d717fdea592bd3bb932fbbc07",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "input",
+          "path": "models\\bcai\\observed\\v1.0.0\\specification.yaml",
+          "expected": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+          "actual": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "input",
+          "path": "columns\\001-ball-count\\analysis\\analyze_count_advantage.py",
+          "expected": "0660ef928611c708de11c472fff7a3191b49e180406a1b5bfecd64d611c46d2f",
+          "actual": "0660ef928611c708de11c472fff7a3191b49e180406a1b5bfecd64d611c46d2f",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "configuration",
+          "path": "models\\bcai\\state_delta\\v0.1.0\\specification.yaml",
+          "expected": "d33d7e7ff3a5b9c9f74479190cfc89aeb77b4ebf34227ddfba3b3088f70d66de",
+          "actual": "d33d7e7ff3a5b9c9f74479190cfc89aeb77b4ebf34227ddfba3b3088f70d66de",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "code",
+          "path": "models\\bcai\\state_delta\\v0.1.0\\run.py",
+          "expected": "0d35abca238899e60f045d1495f5bc8c079cd920cdf60ea57ab68f9c25a34814",
+          "actual": "0d35abca238899e60f045d1495f5bc8c079cd920cdf60ea57ab68f9c25a34814",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\artifacts\\exception_handling.json",
+          "expected": "bab081ea38d882358f10983235f3a472479379945e632c42f0d23e5c7af7c0f8",
+          "actual": "bab081ea38d882358f10983235f3a472479379945e632c42f0d23e5c7af7c0f8",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\artifacts\\quick_checks.json",
+          "expected": "2de023b946b8433dc74942d09f71b3daf9d29ae0314b98f241d4c13fa203e3b2",
+          "actual": "2de023b946b8433dc74942d09f71b3daf9d29ae0314b98f241d4c13fa203e3b2",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\artifacts\\state_delta_2024_2025.csv",
+          "expected": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4",
+          "actual": "8424011c65fc98bb4c673b78d867a16ec5f98c3df8bfc7db01fbf27dca12eab4",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\manifest.json",
+          "section": "outputs",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcai_state_delta__mlb_2024_2025__20260917__r01\\report.md",
+          "expected": "ce4bfcec3e9dc2269a90eb466f7b07be62cebe398602e80605195e885e332d5b",
+          "actual": "ce4bfcec3e9dc2269a90eb466f7b07be62cebe398602e80605195e885e332d5b",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "models\\bcap\\decomposition\\v0.1.0\\compose.py",
+          "expected": "c020dede3d791ed67c37c31df1075de2181fa91daf0ae5eb2860bb9c4a3f933d",
+          "actual": "c020dede3d791ed67c37c31df1075de2181fa91daf0ae5eb2860bb9c4a3f933d",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "models\\bcap\\decomposition\\v0.1.0\\run_smoke.py",
+          "expected": "d8bbc6d5c222cd01dbfa31864babb9c5de044c0b5137b12526d494ae29db6f55",
+          "actual": "d8bbc6d5c222cd01dbfa31864babb9c5de044c0b5137b12526d494ae29db6f55",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "models\\bcap\\decomposition\\v0.1.0\\specification.yaml",
+          "expected": "d2bd7808b7a8dc52ca902d073198d418b8d90e35858cb7b623ffb280740a2e6c",
+          "actual": "d2bd7808b7a8dc52ca902d073198d418b8d90e35858cb7b623ffb280740a2e6c",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "models\\bcap\\decomposition\\v0.1.0\\input_contract.md",
+          "expected": "454670db827692bb1af10f48256cade6011e0412300733e186e829b8b9477440",
+          "actual": "454670db827692bb1af10f48256cade6011e0412300733e186e829b8b9477440",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "models\\bcap\\swing\\v0.2.0\\specification.yaml",
+          "expected": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58",
+          "actual": "1134dcf48b2064cf195dea07dbac3f5d75991fadc691c72de48b581037060b58",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\artifacts\\synthetic_input.json",
+          "expected": "262b1286b668e4fe9127581dd8e05499766a66d968091221fd9863520eba1245",
+          "actual": "262b1286b668e4fe9127581dd8e05499766a66d968091221fd9863520eba1245",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\artifacts\\synthetic_output.json",
+          "expected": "dc0766d92f8f9dd83d11548509fb05b87820be2ac113c0df5895f5b622da1915",
+          "actual": "dc0766d92f8f9dd83d11548509fb05b87820be2ac113c0df5895f5b622da1915",
+          "match": true
+        },
+        {
+          "manifest": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\manifest.json",
+          "section": "input_output_code_sha256",
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_decomp__synthetic_smoke__20260917__r01\\artifacts\\checks.json",
+          "expected": "436b56b298283d45d93afc289cd998e4590d14590d3b417a5ed86643c453b02c",
+          "actual": "436b56b298283d45d93afc289cd998e4590d14590d3b417a5ed86643c453b02c",
+          "match": true
+        }
+      ],
+      "evidence_type": "sha256_recalculation"
+    },
+    {
+      "name": "followup_report_md_html_numeric_tokens",
+      "status": "PASS",
+      "expected": {
+        "all_md_numeric_tokens_in_html": true,
+        "permitted_html_only_document_label": {
+          "001": 1
+        },
+        "count": 611,
+        "tokens": {
+          "2026": 3,
+          "-09": 1,
+          "-17": 1,
+          "12": 2,
+          "2023": 6,
+          "24": 4,
+          "1.0": 2,
+          "1": 18,
+          "2024": 5,
+          "2025": 5,
+          "0": 21,
+          "-0": 18,
+          "0.3236": 1,
+          "0.2926": 1,
+          "-0.0310": 1,
+          "-0.0375": 1,
+          "-0.0246": 1,
+          "359,177": 1,
+          "363,467": 1,
+          "98.8%": 1,
+          "196,809": 1,
+          "162,368": 1,
+          "-1": 16,
+          "0.2655": 1,
+          "0.2609": 1,
+          "-0.0046": 1,
+          "-0.0135": 1,
+          "+0.0044": 2,
+          "182,647": 1,
+          "184,560": 1,
+          "99.0%": 2,
+          "115,591": 1,
+          "67,056": 1,
+          "-2": 22,
+          "0.1937": 1,
+          "0.2216": 1,
+          "+0.0278": 1,
+          "+0.0152": 1,
+          "+0.0404": 1,
+          "95,563": 1,
+          "96,411": 1,
+          "99.1%": 3,
+          "71,317": 1,
+          "24,246": 1,
+          "0.3723": 1,
+          "0.3229": 1,
+          "-0.0494": 1,
+          "-0.0601": 1,
+          "-0.0387": 1,
+          "134,737": 1,
+          "136,475": 1,
+          "98.7%": 1,
+          "72,319": 1,
+          "62,418": 1,
+          "0.3010": 1,
+          "0.2796": 1,
+          "-0.0214": 1,
+          "-0.0315": 1,
+          "-0.0113": 1,
+          "140,970": 1,
+          "142,511": 1,
+          "98.9%": 2,
+          "82,700": 1,
+          "58,270": 1,
+          "0.2185": 1,
+          "0.2399": 1,
+          "+0.0214": 1,
+          "+0.0110": 1,
+          "+0.0318": 1,
+          "138,265": 1,
+          "139,503": 1,
+          "96,298": 1,
+          "41,967": 1,
+          "2": 18,
+          "0.4667": 1,
+          "0.3733": 1,
+          "-0.0933": 1,
+          "-0.1109": 1,
+          "-0.0758": 1,
+          "44,963": 1,
+          "45,621": 1,
+          "98.6%": 2,
+          "22,567": 1,
+          "22,396": 1,
+          "0.3821": 1,
+          "0.3152": 1,
+          "-0.0669": 1,
+          "-0.0810": 1,
+          "-0.0528": 1,
+          "72,086": 1,
+          "72,921": 1,
+          "37,723": 1,
+          "34,363": 1,
+          "0.2722": 1,
+          "0.2572": 1,
+          "-0.0151": 1,
+          "-0.0261": 1,
+          "-0.0041": 1,
+          "117,460": 1,
+          "118,584": 1,
+          "72,471": 1,
+          "44,989": 1,
+          "3": 16,
+          "0.6317": 1,
+          "0.4697": 1,
+          "-0.1620": 1,
+          "-0.1859": 1,
+          "-0.1380": 1,
+          "13,729": 1,
+          "13,969": 1,
+          "98.3%": 5,
+          "6,365": 1,
+          "7,364": 1,
+          "0.5471": 1,
+          "0.3992": 1,
+          "-0.1479": 1,
+          "-0.1670": 1,
+          "-0.1289": 1,
+          "29,449": 1,
+          "29,867": 1,
+          "13,933": 1,
+          "15,516": 1,
+          "0.4349": 1,
+          "0.3153": 1,
+          "-0.1196": 2,
+          "-0.1330": 1,
+          "-0.1062": 1,
+          "70,947": 1,
+          "71,677": 1,
+          "35,780": 1,
+          "35,167": 1,
+          "219": 2,
+          "0.3299": 1,
+          "0.2977": 1,
+          "-0.0323": 1,
+          "-0.0415": 1,
+          "-0.0230": 1,
+          "179,336": 1,
+          "182,894": 1,
+          "98.1%": 1,
+          "100,613": 1,
+          "78,723": 1,
+          "0.2711": 1,
+          "0.2643": 1,
+          "-0.0068": 1,
+          "-0.0194": 1,
+          "+0.0058": 1,
+          "91,283": 1,
+          "92,901": 1,
+          "58,389": 1,
+          "32,894": 1,
+          "0.1965": 1,
+          "0.2308": 1,
+          "+0.0343": 1,
+          "+0.0223": 1,
+          "+0.0462": 1,
+          "47,912": 1,
+          "48,733": 1,
+          "35,634": 1,
+          "12,278": 1,
+          "0.3726": 1,
+          "0.3371": 1,
+          "-0.0355": 1,
+          "-0.0504": 1,
+          "-0.0207": 1,
+          "68,532": 1,
+          "70,014": 1,
+          "97.9%": 1,
+          "37,670": 1,
+          "30,862": 1,
+          "0.3056": 1,
+          "0.2892": 1,
+          "-0.0164": 1,
+          "-0.0307": 1,
+          "-0.0021": 1,
+          "71,082": 1,
+          "72,416": 1,
+          "98.2%": 1,
+          "42,831": 1,
+          "28,251": 1,
+          "0.2187": 1,
+          "0.2428": 1,
+          "+0.0241": 1,
+          "+0.0140": 1,
+          "+0.0342": 1,
+          "68,412": 1,
+          "69,569": 1,
+          "47,808": 1,
+          "20,604": 1,
+          "0.4686": 1,
+          "0.3734": 1,
+          "-0.0952": 1,
+          "-0.0707": 1,
+          "23,156": 1,
+          "23,694": 1,
+          "97.7%": 1,
+          "11,816": 1,
+          "11,340": 1,
+          "0.3831": 1,
+          "0.3209": 1,
+          "-0.0622": 1,
+          "-0.0819": 1,
+          "-0.0426": 1,
+          "36,625": 1,
+          "37,379": 1,
+          "98.0%": 2,
+          "19,822": 1,
+          "16,803": 1,
+          "0.2762": 1,
+          "0.2651": 1,
+          "-0.0111": 1,
+          "-0.0266": 1,
+          "58,448": 1,
+          "59,449": 1,
+          "36,755": 1,
+          "21,693": 1,
+          "0.6259": 1,
+          "0.4752": 1,
+          "-0.1507": 1,
+          "-0.1838": 1,
+          "-0.1176": 1,
+          "7,136": 1,
+          "7,319": 1,
+          "97.5%": 1,
+          "3,459": 1,
+          "3,677": 1,
+          "0.5524": 1,
+          "0.3976": 1,
+          "-0.1548": 1,
+          "-0.1819": 1,
+          "-0.1277": 1,
+          "15,209": 1,
+          "15,555": 1,
+          "97.8%": 1,
+          "7,473": 1,
+          "7,736": 1,
+          "0.4279": 1,
+          "0.3185": 1,
+          "-0.1094": 1,
+          "-0.1278": 1,
+          "-0.0909": 1,
+          "35,484": 1,
+          "36,190": 1,
+          "18,540": 1,
+          "16,944": 1,
+          "4": 2,
+          "10": 1,
+          "236": 1,
+          "181,840": 2,
+          "182,284": 2,
+          "100": 1,
+          "100.0%": 2,
+          "0.3094": 1,
+          "0.3503": 2,
+          "0.2634": 2,
+          "0.0408": 1,
+          "-0.0461": 1,
+          "0.0869": 1,
+          "92,663": 1,
+          "51.0%": 1,
+          "0.2914": 3,
+          "0.1979": 2,
+          "0.0281": 1,
+          "-0.0654": 1,
+          "0.0935": 1,
+          "39,534": 1,
+          "21.7%": 1,
+          "0.2217": 4,
+          "0.0000": 8,
+          "0.0238": 1,
+          "-0.1979": 1,
+          "67,814": 1,
+          "37.3%": 1,
+          "0.4207": 2,
+          "0.0704": 1,
+          "-0.0588": 1,
+          "0.1292": 1,
+          "71,330": 1,
+          "39.2%": 1,
+          "0.3490": 3,
+          "0.0576": 1,
+          "-0.0697": 1,
+          "0.1273": 1,
+          "54,844": 1,
+          "30.2%": 1,
+          "0.2650": 4,
+          "0.0432": 1,
+          "-0.2217": 1,
+          "22,496": 1,
+          "12.4%": 1,
+          "0.5426": 2,
+          "0.1219": 1,
+          "-0.0716": 1,
+          "0.1935": 1,
+          "36,360": 1,
+          "20.0%": 1,
+          "0.4650": 3,
+          "0.1159": 1,
+          "-0.0841": 1,
+          "0.2000": 1,
+          "44,425": 1,
+          "24.4%": 1,
+          "0.3719": 4,
+          "0.1069": 1,
+          "-0.2650": 1,
+          "6,842": 1,
+          "3.8%": 1,
+          "0.6890": 4,
+          "0.1464": 1,
+          "-0.0776": 1,
+          "0.2240": 2,
+          "14,958": 1,
+          "8.2%": 2,
+          "-0.0931": 1,
+          "0.3171": 2,
+          "25,658": 1,
+          "14.1%": 2,
+          "-0.3719": 1,
+          "0.3120": 1,
+          "0.3517": 2,
+          "0.2652": 2,
+          "0.0397": 1,
+          "-0.0467": 1,
+          "0.0864": 1,
+          "92,041": 1,
+          "50.5%": 1,
+          "0.2937": 3,
+          "0.1997": 2,
+          "0.0284": 1,
+          "-0.0656": 1,
+          "0.0940": 1,
+          "38,919": 1,
+          "21.4%": 1,
+          "0.2196": 4,
+          "0.0200": 1,
+          "-0.1997": 1,
+          "68,737": 1,
+          "37.7%": 1,
+          "0.4236": 2,
+          "0.0719": 1,
+          "-0.0580": 1,
+          "0.1299": 1,
+          "71,286": 1,
+          "39.1%": 1,
+          "0.3519": 3,
+          "0.0582": 1,
+          "-0.0740": 1,
+          "0.1322": 1,
+          "54,502": 1,
+          "29.9%": 1,
+          "0.2639": 4,
+          "0.0442": 1,
+          "-0.2196": 1,
+          "23,152": 1,
+          "12.7%": 1,
+          "0.5474": 2,
+          "0.1239": 1,
+          "-0.0717": 1,
+          "0.1955": 1,
+          "36,607": 1,
+          "20.1%": 1,
+          "0.4753": 3,
+          "0.1234": 1,
+          "-0.0880": 1,
+          "0.2114": 1,
+          "44,629": 1,
+          "24.5%": 1,
+          "0.3721": 4,
+          "0.1083": 1,
+          "-0.2639": 1,
+          "7,140": 1,
+          "3.9%": 1,
+          "0.6910": 4,
+          "0.1436": 1,
+          "-0.0721": 1,
+          "0.2157": 2,
+          "14,928": 1,
+          "-0.1031": 1,
+          "0.3189": 2,
+          "25,748": 1,
+          "-0.3721": 1,
+          "5": 1,
+          "5.1": 2,
+          "2.2": 1,
+          "4.2": 2,
+          "4.1": 1,
+          "0.028": 1,
+          "0.021": 1,
+          "001": 1,
+          "20260917": 2
+        }
+      },
+      "actual": {
+        "count": 612,
+        "tokens": {
+          "2026": 3,
+          "-09": 1,
+          "-17": 1,
+          "12": 2,
+          "2023": 6,
+          "24": 4,
+          "1.0": 2,
+          "1": 18,
+          "2024": 5,
+          "2025": 5,
+          "0": 21,
+          "-0": 18,
+          "0.3236": 1,
+          "0.2926": 1,
+          "-0.0310": 1,
+          "-0.0375": 1,
+          "-0.0246": 1,
+          "359,177": 1,
+          "363,467": 1,
+          "98.8%": 1,
+          "196,809": 1,
+          "162,368": 1,
+          "-1": 16,
+          "0.2655": 1,
+          "0.2609": 1,
+          "-0.0046": 1,
+          "-0.0135": 1,
+          "+0.0044": 2,
+          "182,647": 1,
+          "184,560": 1,
+          "99.0%": 2,
+          "115,591": 1,
+          "67,056": 1,
+          "-2": 22,
+          "0.1937": 1,
+          "0.2216": 1,
+          "+0.0278": 1,
+          "+0.0152": 1,
+          "+0.0404": 1,
+          "95,563": 1,
+          "96,411": 1,
+          "99.1%": 3,
+          "71,317": 1,
+          "24,246": 1,
+          "0.3723": 1,
+          "0.3229": 1,
+          "-0.0494": 1,
+          "-0.0601": 1,
+          "-0.0387": 1,
+          "134,737": 1,
+          "136,475": 1,
+          "98.7%": 1,
+          "72,319": 1,
+          "62,418": 1,
+          "0.3010": 1,
+          "0.2796": 1,
+          "-0.0214": 1,
+          "-0.0315": 1,
+          "-0.0113": 1,
+          "140,970": 1,
+          "142,511": 1,
+          "98.9%": 2,
+          "82,700": 1,
+          "58,270": 1,
+          "0.2185": 1,
+          "0.2399": 1,
+          "+0.0214": 1,
+          "+0.0110": 1,
+          "+0.0318": 1,
+          "138,265": 1,
+          "139,503": 1,
+          "96,298": 1,
+          "41,967": 1,
+          "2": 18,
+          "0.4667": 1,
+          "0.3733": 1,
+          "-0.0933": 1,
+          "-0.1109": 1,
+          "-0.0758": 1,
+          "44,963": 1,
+          "45,621": 1,
+          "98.6%": 2,
+          "22,567": 1,
+          "22,396": 1,
+          "0.3821": 1,
+          "0.3152": 1,
+          "-0.0669": 1,
+          "-0.0810": 1,
+          "-0.0528": 1,
+          "72,086": 1,
+          "72,921": 1,
+          "37,723": 1,
+          "34,363": 1,
+          "0.2722": 1,
+          "0.2572": 1,
+          "-0.0151": 1,
+          "-0.0261": 1,
+          "-0.0041": 1,
+          "117,460": 1,
+          "118,584": 1,
+          "72,471": 1,
+          "44,989": 1,
+          "3": 16,
+          "0.6317": 1,
+          "0.4697": 1,
+          "-0.1620": 1,
+          "-0.1859": 1,
+          "-0.1380": 1,
+          "13,729": 1,
+          "13,969": 1,
+          "98.3%": 5,
+          "6,365": 1,
+          "7,364": 1,
+          "0.5471": 1,
+          "0.3992": 1,
+          "-0.1479": 1,
+          "-0.1670": 1,
+          "-0.1289": 1,
+          "29,449": 1,
+          "29,867": 1,
+          "13,933": 1,
+          "15,516": 1,
+          "0.4349": 1,
+          "0.3153": 1,
+          "-0.1196": 2,
+          "-0.1330": 1,
+          "-0.1062": 1,
+          "70,947": 1,
+          "71,677": 1,
+          "35,780": 1,
+          "35,167": 1,
+          "219": 2,
+          "0.3299": 1,
+          "0.2977": 1,
+          "-0.0323": 1,
+          "-0.0415": 1,
+          "-0.0230": 1,
+          "179,336": 1,
+          "182,894": 1,
+          "98.1%": 1,
+          "100,613": 1,
+          "78,723": 1,
+          "0.2711": 1,
+          "0.2643": 1,
+          "-0.0068": 1,
+          "-0.0194": 1,
+          "+0.0058": 1,
+          "91,283": 1,
+          "92,901": 1,
+          "58,389": 1,
+          "32,894": 1,
+          "0.1965": 1,
+          "0.2308": 1,
+          "+0.0343": 1,
+          "+0.0223": 1,
+          "+0.0462": 1,
+          "47,912": 1,
+          "48,733": 1,
+          "35,634": 1,
+          "12,278": 1,
+          "0.3726": 1,
+          "0.3371": 1,
+          "-0.0355": 1,
+          "-0.0504": 1,
+          "-0.0207": 1,
+          "68,532": 1,
+          "70,014": 1,
+          "97.9%": 1,
+          "37,670": 1,
+          "30,862": 1,
+          "0.3056": 1,
+          "0.2892": 1,
+          "-0.0164": 1,
+          "-0.0307": 1,
+          "-0.0021": 1,
+          "71,082": 1,
+          "72,416": 1,
+          "98.2%": 1,
+          "42,831": 1,
+          "28,251": 1,
+          "0.2187": 1,
+          "0.2428": 1,
+          "+0.0241": 1,
+          "+0.0140": 1,
+          "+0.0342": 1,
+          "68,412": 1,
+          "69,569": 1,
+          "47,808": 1,
+          "20,604": 1,
+          "0.4686": 1,
+          "0.3734": 1,
+          "-0.0952": 1,
+          "-0.0707": 1,
+          "23,156": 1,
+          "23,694": 1,
+          "97.7%": 1,
+          "11,816": 1,
+          "11,340": 1,
+          "0.3831": 1,
+          "0.3209": 1,
+          "-0.0622": 1,
+          "-0.0819": 1,
+          "-0.0426": 1,
+          "36,625": 1,
+          "37,379": 1,
+          "98.0%": 2,
+          "19,822": 1,
+          "16,803": 1,
+          "0.2762": 1,
+          "0.2651": 1,
+          "-0.0111": 1,
+          "-0.0266": 1,
+          "58,448": 1,
+          "59,449": 1,
+          "36,755": 1,
+          "21,693": 1,
+          "0.6259": 1,
+          "0.4752": 1,
+          "-0.1507": 1,
+          "-0.1838": 1,
+          "-0.1176": 1,
+          "7,136": 1,
+          "7,319": 1,
+          "97.5%": 1,
+          "3,459": 1,
+          "3,677": 1,
+          "0.5524": 1,
+          "0.3976": 1,
+          "-0.1548": 1,
+          "-0.1819": 1,
+          "-0.1277": 1,
+          "15,209": 1,
+          "15,555": 1,
+          "97.8%": 1,
+          "7,473": 1,
+          "7,736": 1,
+          "0.4279": 1,
+          "0.3185": 1,
+          "-0.1094": 1,
+          "-0.1278": 1,
+          "-0.0909": 1,
+          "35,484": 1,
+          "36,190": 1,
+          "18,540": 1,
+          "16,944": 1,
+          "4": 2,
+          "10": 1,
+          "236": 1,
+          "181,840": 2,
+          "182,284": 2,
+          "100": 1,
+          "100.0%": 2,
+          "0.3094": 1,
+          "0.3503": 2,
+          "0.2634": 2,
+          "0.0408": 1,
+          "-0.0461": 1,
+          "0.0869": 1,
+          "92,663": 1,
+          "51.0%": 1,
+          "0.2914": 3,
+          "0.1979": 2,
+          "0.0281": 1,
+          "-0.0654": 1,
+          "0.0935": 1,
+          "39,534": 1,
+          "21.7%": 1,
+          "0.2217": 4,
+          "0.0000": 8,
+          "0.0238": 1,
+          "-0.1979": 1,
+          "67,814": 1,
+          "37.3%": 1,
+          "0.4207": 2,
+          "0.0704": 1,
+          "-0.0588": 1,
+          "0.1292": 1,
+          "71,330": 1,
+          "39.2%": 1,
+          "0.3490": 3,
+          "0.0576": 1,
+          "-0.0697": 1,
+          "0.1273": 1,
+          "54,844": 1,
+          "30.2%": 1,
+          "0.2650": 4,
+          "0.0432": 1,
+          "-0.2217": 1,
+          "22,496": 1,
+          "12.4%": 1,
+          "0.5426": 2,
+          "0.1219": 1,
+          "-0.0716": 1,
+          "0.1935": 1,
+          "36,360": 1,
+          "20.0%": 1,
+          "0.4650": 3,
+          "0.1159": 1,
+          "-0.0841": 1,
+          "0.2000": 1,
+          "44,425": 1,
+          "24.4%": 1,
+          "0.3719": 4,
+          "0.1069": 1,
+          "-0.2650": 1,
+          "6,842": 1,
+          "3.8%": 1,
+          "0.6890": 4,
+          "0.1464": 1,
+          "-0.0776": 1,
+          "0.2240": 2,
+          "14,958": 1,
+          "8.2%": 2,
+          "-0.0931": 1,
+          "0.3171": 2,
+          "25,658": 1,
+          "14.1%": 2,
+          "-0.3719": 1,
+          "0.3120": 1,
+          "0.3517": 2,
+          "0.2652": 2,
+          "0.0397": 1,
+          "-0.0467": 1,
+          "0.0864": 1,
+          "92,041": 1,
+          "50.5%": 1,
+          "0.2937": 3,
+          "0.1997": 2,
+          "0.0284": 1,
+          "-0.0656": 1,
+          "0.0940": 1,
+          "38,919": 1,
+          "21.4%": 1,
+          "0.2196": 4,
+          "0.0200": 1,
+          "-0.1997": 1,
+          "68,737": 1,
+          "37.7%": 1,
+          "0.4236": 2,
+          "0.0719": 1,
+          "-0.0580": 1,
+          "0.1299": 1,
+          "71,286": 1,
+          "39.1%": 1,
+          "0.3519": 3,
+          "0.0582": 1,
+          "-0.0740": 1,
+          "0.1322": 1,
+          "54,502": 1,
+          "29.9%": 1,
+          "0.2639": 4,
+          "0.0442": 1,
+          "-0.2196": 1,
+          "23,152": 1,
+          "12.7%": 1,
+          "0.5474": 2,
+          "0.1239": 1,
+          "-0.0717": 1,
+          "0.1955": 1,
+          "36,607": 1,
+          "20.1%": 1,
+          "0.4753": 3,
+          "0.1234": 1,
+          "-0.0880": 1,
+          "0.2114": 1,
+          "44,629": 1,
+          "24.5%": 1,
+          "0.3721": 4,
+          "0.1083": 1,
+          "-0.2639": 1,
+          "7,140": 1,
+          "3.9%": 1,
+          "0.6910": 4,
+          "0.1436": 1,
+          "-0.0721": 1,
+          "0.2157": 2,
+          "14,928": 1,
+          "-0.1031": 1,
+          "0.3189": 2,
+          "25,748": 1,
+          "-0.3721": 1,
+          "5": 1,
+          "5.1": 2,
+          "2.2": 1,
+          "4.2": 2,
+          "4.1": 1,
+          "0.028": 1,
+          "0.021": 1,
+          "001": 2,
+          "20260917": 2
+        },
+        "md_only": {},
+        "html_only": {
+          "001": 1
+        }
+      },
+      "evidence_type": "document_parse_no_csv_recalculation"
+    },
+    {
+      "name": "new_cards_reports_handoff_local_links",
+      "status": "PASS",
+      "expected": "all parsed local Markdown targets exist",
+      "actual": [
+        {
+          "document": "models\\bcap\\decomposition\\v0.1.0\\model_card.md",
+          "target": "specification.yaml",
+          "exists": true
+        },
+        {
+          "document": "models\\bcap\\decomposition\\v0.1.0\\model_card.md",
+          "target": "input_contract.md",
+          "exists": true
+        },
+        {
+          "document": "models\\bcap\\decomposition\\v0.1.0\\model_card.md",
+          "target": "validation.md",
+          "exists": true
+        },
+        {
+          "document": "models\\bcap\\decomposition\\v0.1.0\\model_card.md",
+          "target": "../../../../columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "models\\bcap\\decomposition\\v0.1.0\\validation.md",
+          "target": "../../../../columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "models\\bcap\\decomposition\\v0.1.0\\validation.md",
+          "target": "../../../../columns/001-ball-count/analysis/runs/bcap_decomp__synthetic_smoke__20260917__r01/artifacts/checks.json",
+          "exists": true
+        },
+        {
+          "document": "models\\bcai\\state_delta\\v0.1.0\\model_card.md",
+          "target": "specification.yaml",
+          "exists": true
+        },
+        {
+          "document": "models\\bcai\\state_delta\\v0.1.0\\model_card.md",
+          "target": "run.py",
+          "exists": true
+        },
+        {
+          "document": "models\\bcai\\state_delta\\v0.1.0\\model_card.md",
+          "target": "validation.md",
+          "exists": true
+        },
+        {
+          "document": "models\\bcai\\state_delta\\v0.1.0\\model_card.md",
+          "target": "../../../../columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "models\\bcai\\state_delta\\v0.1.0\\model_card.md",
+          "target": "../../../../columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md",
+          "exists": true
+        },
+        {
+          "document": "models\\bcai\\state_delta\\v0.1.0\\validation.md",
+          "target": "../../../../columns/001-ball-count/analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/quick_checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "references_in_use_20260917.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "model_followup_prompt_20260917.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "../../models/bcap/pitch_sb/v0.1.0/specification.yaml",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "analysis/runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "analysis/bcap_v2_development_20260912__r01/report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "analysis/bcap_external_20260914__r01/final_report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "../../models/bcap/swing/v0.2.0/model_card.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\model_research_followup_20260917.md",
+          "target": "../../models/bcap/swing/v0.2.0/specification.yaml",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../AGENTS.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../README.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../guides/analysis.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/registry.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../column.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../sources.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../model_research_followup_20260917.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "handoff_bcap_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "bcap_column_light_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "bcap_external_20260914__r01/final_report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcai/state_delta/v0.1.0/model_card.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcai/state_delta/v0.1.0/specification.yaml",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcai/state_delta/v0.1.0/validation.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/model_card.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/specification.yaml",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/input_contract.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/validation.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/sb_reformatted.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/count_values.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_pitch_sb__mlb_2023__20260914__r01/artifacts/values.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "bcap_external_20260914__r01/measurement_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/state_delta_2024_2025.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/exception_handling.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/compose.py",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/input_contract.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_decomp__synthetic_smoke__20260917__r01/README.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/scenario_contract.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../model_research_followup_20260917.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/quick_checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/artifacts/quick_checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_decomp__synthetic_smoke__20260917__r01/artifacts/checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/delivery_check.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "handoff_bcap_followup_20260917_evidence.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../guides/data_setup.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_followup_20260917.md",
+          "target": "../../../guides/excluded_files.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "handoff_bcap_followup_20260917.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "handoff_bcap_followup_20260917_evidence.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/document_update.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/sb_reformatted.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/quick_checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcai/state_delta/v0.1.0/model_card.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/decomposition/v0.1.0/model_card.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_decomp__synthetic_smoke__20260917__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/scenario_contract.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/final_report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/final_column_conclusion.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/plan.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/plan_seal.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/measurement_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/primary_verification.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/reproduction.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_sb__mlb_2023__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_sb__mlb_2026_ytd_20260907__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2023__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2026_ytd_20260907__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2023__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2026_ytd_20260907__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_ff__mlb_2023__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_ff__mlb_2026_ytd_20260907__20260914__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_external_20260914__r01/document_update.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_column_light_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_column_light_review_20260914__r01/check_saved_results.py",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_column_light_review_20260914__r01/checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/report.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/comparison_12counts.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/primary_values.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/year_fold_values.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/pitch_composition.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/reproduction.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/preparation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_ff__mlb_2024_2025__20260912__r01/artifacts/basic_checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_compare__mlb_2024_2025__20260912__r01/artifacts/basic_checks.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/analysis_plan.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/analysis_plan.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/plan_seal.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/result_access_log.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_pitch_classification_20260912__r01/document_update.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/request_original.txt",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/report.html",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/design_before_results.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/design_revisions/final_choice_before_fitting.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/basic_summary.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/reproduction.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v2_development_20260912__r01/document_update.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2024_2025__20260912__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/pitch/v0.2.0/validation.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch_sb__mlb_2024_2025__20260912__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/pitch_sb/v0.1.0/validation.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2024_2025__20260912__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/swing/v0.2.0/validation.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v010_report_20260909.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/behavior_comparison.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/README.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_execution_evidence_20260909.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_document_update_20260909.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_original_handoff_20260909/handoff_bcap_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "handoff_bcap_review_evidence.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "handoff_bcap_review_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/legacy_asset_preservation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_execution_progress_20260909.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_v010_primary_report_20260909.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_request_original.txt",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/design_decisions.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/measurement_review.md",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2024_2025__20260909__r02/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2024_2025__20260909__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2024_2025__20260909__r03/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2024_2025__20260909__r02/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2023__20260909__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2023__20260909__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_swing__mlb_2026_ytd_20260907__20260909__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2024_2025__20260909__r01/manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2024_2025__20260909__r01/artifacts/run_failed_source.py",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "runs/bcap_pitch__mlb_2024_2025__20260909__r01/provenance_extension_20260909.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "../../../models/bcap/external_seal_20260909_r01.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/pitch_development_complete_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/swing_development_complete_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/pitch_2023_external_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/swing_2023_external_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/pitch_2026_external_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/action_lineage_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/score_timing_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/bootstrap_final_validation.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/postseal_descriptive_comparison/comparison_manifest.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_implementation_review_20260909/postseal_descriptive_comparison/direction_and_correlation_summary.csv",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_execution_evidence_20260909.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_execution_commands_20260909.json",
+          "exists": true
+        },
+        {
+          "document": "columns\\001-ball-count\\analysis\\handoff_bcap_review.md",
+          "target": "bcap_final_validation_20260909",
+          "exists": true
+        }
+      ],
+      "evidence_type": "local_link_resolution"
+    },
+    {
+      "name": "mutable_document_delivery_records_classified",
+      "status": "PASS",
+      "expected": "record current hashes without treating later handoff/PPT mutation as immutable result mismatch",
+      "actual": [
+        {
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\document_update.json",
+          "current_sha256": "577e77cb8a3e29cf6da971461e0d1629a5756a44c88ccb873998327933c3cf26",
+          "classification": "mutable process/document record, not an immutable run output",
+          "recorded_document_after_hashes": [
+            {
+              "path": "README.md",
+              "recorded_after": "8255bf71e79bf0ad27104d7285766c89bad4336ec1e9bc35a8900531c20dbb85",
+              "current": "2ec394d688b0800493024cf424225bacfd52149ec816727a97d58e3f0dc2251e",
+              "still_equal": false
+            },
+            {
+              "path": "models/registry.md",
+              "recorded_after": "956df04f84ba2f6e79d69f5662911566a34c605f043a1612040ab66bf4439f7b",
+              "current": "956df04f84ba2f6e79d69f5662911566a34c605f043a1612040ab66bf4439f7b",
+              "still_equal": true
+            },
+            {
+              "path": "columns/001-ball-count/column.md",
+              "recorded_after": "02a3fa525e82c91703c9bf7e27976d076aa53b09204916f5f90dc7caef6f7900",
+              "current": "9ca6ba751d68086ebe0aa330d3811c3ccad90fc1730a0fa416b3b9c79d1dc055",
+              "still_equal": false
+            },
+            {
+              "path": "columns/001-ball-count/sources.md",
+              "recorded_after": "cc7968edb557727e8ac0bf6922eedd01ee38ec02ddf9e4a88c53f5bc8a048751",
+              "current": "cc7968edb557727e8ac0bf6922eedd01ee38ec02ddf9e4a88c53f5bc8a048751",
+              "still_equal": true
+            },
+            {
+              "path": "columns/001-ball-count/analysis/handoff_bcap_review.md",
+              "recorded_after": "34cbeb69d2cdc88b0ded350843bcf70b797c878f8e672261931d5ca9002140d7",
+              "current": "f3f22efb2cb6b0bd2d2d9db57664fa35b60ab03235356634848f01adbd27faf4",
+              "still_equal": false
+            },
+            {
+              "path": "columns/001-ball-count/model_research_followup_20260917.md",
+              "recorded_after": "b392596a8815316dad9f875727f41798cae4bd44c3eeff4c0e57b3e9a5feab92",
+              "current": "b392596a8815316dad9f875727f41798cae4bd44c3eeff4c0e57b3e9a5feab92",
+              "still_equal": true
+            }
+          ]
+        },
+        {
+          "path": "columns\\001-ball-count\\analysis\\runs\\bcap_followup__mlb_2024_2025__20260917__r01\\delivery_check.json",
+          "current_sha256": "146a41c629f96d2f7382969e7696e54b32ea393956f4a4a816a3291de1ac4de4",
+          "classification": "mutable process/document record, not an immutable run output",
+          "recorded_checker_hashes": {
+            "checker_sha256": "e69b0549e910b65409ce88826a4b9fd1b7383d983caa24794dcf12edf6fbac56",
+            "document_updater_sha256": "eddb3855630700ce3fc3e9d37c6f0854734bea52d00005d23e68c2047de6ffca"
+          }
+        }
+      ],
+      "evidence_type": "provenance_classification"
+    }
+  ]
+}
