@@ -1,5 +1,29 @@
 # Baseline
 
+## 협업 공유 — 2026-09-29
+
+BCAI 17차·BCAP 19차·다섯 번째 글 20차와 보관·검수 자료의 [새 인수인계](collaboration/pending/20260929-022642-gaon-manuscript-update/changes.md)를 준비했다. 실제 Git 전송 상태는 이 인수인계를 따른다. 아래 이전 공유 안내는 당시 이력이다.
+
+## 최신 작업 상태 — 2026-09-29 시행착오 회고 20차
+
+[데이터·분석·검증·시행착오 글](columns/001-ball-count/publish/naver_20260918/05_data_validation.html)을 작업 시간순의 개인 회고로 재구성했다. 기존 내용과 수치를 살리고 나머지 네 글은 보존했다. [수정·검수](columns/001-ball-count/publish/naver_20260918/revision_v20.md). 로컬 사용자 검토 단계다.
+
+## 최신 작업 상태 — 2026-09-29 BCAP 피드백 반영 완료
+
+[BCAP 19차](columns/001-ball-count/publish/naver_20260918/03_bcap.html)의 9·10단계 보충과 PC·모바일 확인을 마쳤다. 이번 보충으로 피드백을 종료한다는 사용자 지정 범위를 완료했으며 추가 편집은 새 요청을 따른다. [수정·검수](columns/001-ball-count/publish/naver_20260918/revision_v19.md). BCAI는 17차를 유지한다.
+
+## 최신 작업 상태 — 2026-09-29 BCAP 해설 18차
+
+[BCAP](columns/001-ball-count/publish/naver_20260918/03_bcap.html)에 분류별·최종 결론을 추가하고 9단계 이후의 사전지식과 설명 공백을 점검했다. [변경·검수](columns/001-ball-count/publish/naver_20260918/revision_v18.md). BCAI 17차 및 다른 원고는 보존했으며 로컬 사용자 검토 단계다.
+
+## 최신 작업 상태 — 2026-09-29 BCAI 해설 17차
+
+[BCAI 해설](columns/001-ball-count/publish/naver_20260918/02_bcai.html)의 구간 계산 설명을 보강하고 2024·2025 Ridge 결과표와 본문의 상태 간격 설명 연결을 추가했다. [수정·검수](columns/001-ball-count/publish/naver_20260918/revision_v17.md). BCAP와 다른 원고는 보존했으며 로컬 사용자 검토 단계다.
+
+## 최신 작업 상태 — 2026-09-28 모델 해설 16차
+
+[BCAI](columns/001-ball-count/publish/naver_20260918/02_bcai.html)는 불확실성·Ridge·STATE-DELTA 계산을 보강하고, [BCAP](columns/001-ball-count/publish/naver_20260918/03_bcap.html)는 W를 독립 설명하며 공통 계산과 분류별 표·계산을 구분했다. 발행 다섯 글 안에서 필요한 설명을 완결하는 기조를 기록했다. [수정·검수](columns/001-ball-count/publish/naver_20260918/revision_v16.md). 로컬 사용자 검토본이며 아래는 이전 이력이다.
+
 ## 협업 공유 — 2026-09-28
 
 백가온의 요청으로 오늘 완료 업무와 앞선 미공유 기반 문서를 GitHub 공유 대상으로 정리했다. 최신 원고는 본문 15차와 모델 해설 15차이며, 2015–2025 R 분석·역사 비교는 완료 상태다. [이번 인수인계](collaboration/pending/20260928-210719-gaon-daily-share/changes.md)와 [팀원용 프롬프트](collaboration/pending/20260928-210719-gaon-daily-share/continuation_prompt.md)를 시작점으로 삼는다. 실제 전송 상태·내용 커밋은 인수인계에서 확인한다. 아래의 과거 ‘push 미실시’는 당시 기록이며, Drive/Docs·블로그 게시와 Git 공유는 별개다.

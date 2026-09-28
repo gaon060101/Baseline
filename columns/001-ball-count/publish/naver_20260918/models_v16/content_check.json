@@ -1,0 +1,150 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "check": "보관본 01_ball_count.md",
+      "pass": true
+    },
+    {
+      "check": "보관본 01_ball_count.html",
+      "pass": true
+    },
+    {
+      "check": "보관본 02_bcai.md",
+      "pass": true
+    },
+    {
+      "check": "보관본 02_bcai.html",
+      "pass": true
+    },
+    {
+      "check": "보관본 03_bcap.md",
+      "pass": true
+    },
+    {
+      "check": "보관본 03_bcap.html",
+      "pass": true
+    },
+    {
+      "check": "보관본 04_references_ko.md",
+      "pass": true
+    },
+    {
+      "check": "보관본 04_references_ko.html",
+      "pass": true
+    },
+    {
+      "check": "보관본 05_data_validation.md",
+      "pass": true
+    },
+    {
+      "check": "보관본 05_data_validation.html",
+      "pass": true
+    },
+    {
+      "check": "보관본 02_bcai_evidence.md",
+      "pass": true
+    },
+    {
+      "check": "보관본 03_bcap_evidence.md",
+      "pass": true
+    },
+    {
+      "check": "범위 밖 보존 01_ball_count.md",
+      "pass": true
+    },
+    {
+      "check": "범위 밖 보존 01_ball_count.html",
+      "pass": true
+    },
+    {
+      "check": "범위 밖 보존 04_references_ko.md",
+      "pass": true
+    },
+    {
+      "check": "범위 밖 보존 04_references_ko.html",
+      "pass": true
+    },
+    {
+      "check": "범위 밖 보존 05_data_validation.md",
+      "pass": true
+    },
+    {
+      "check": "범위 밖 보존 05_data_validation.html",
+      "pass": true
+    },
+    {
+      "check": "BCAI 표 보존",
+      "pass": true
+    },
+    {
+      "check": "위치 표 보존",
+      "pass": true
+    },
+    {
+      "check": "본문 비교표 | 카운트 | 존 안의 스윙·테이크 비교 | 존 밖의 스윙·테이크 비교 |",
+      "pass": true
+    },
+    {
+      "check": "본문 비교표 | 카운트 | 패스트볼 계열 대 나머지 | 포심 대 비포심 |",
+      "pass": true
+    },
+    {
+      "check": "위치 표가 2부 안에 있음",
+      "pass": true
+    },
+    {
+      "check": "스윙 표가 3부 안에 있음",
+      "pass": true
+    },
+    {
+      "check": "구종 표가 4부 안에 있음",
+      "pass": true
+    },
+    {
+      "check": "BCAI 질문형 제목 없음",
+      "pass": true
+    },
+    {
+      "check": "BCAI 발행 5편 밖 내부 링크 없음",
+      "pass": true
+    },
+    {
+      "check": "BCAI W 독립 설명",
+      "pass": true
+    },
+    {
+      "check": "BCAP 질문형 제목 없음",
+      "pass": true
+    },
+    {
+      "check": "BCAP 발행 5편 밖 내부 링크 없음",
+      "pass": true
+    },
+    {
+      "check": "BCAP W 독립 설명",
+      "pass": true
+    },
+    {
+      "check": "Ridge 지수 가상 산술",
+      "pass": true
+    },
+    {
+      "check": "상태 차이 가상 산술",
+      "pass": true
+    },
+    {
+      "check": "AIPW 0행 가상 산술",
+      "pass": true
+    },
+    {
+      "check": "가상 평균과 차이",
+      "pass": true
+    },
+    {
+      "check": "ESS 가상 산술",
+      "pass": true
+    }
+  ],
+  "scope": "원고의 표·산술 예시·구성·링크 범위·보존 확인. 통계 재분석 아님."
+}

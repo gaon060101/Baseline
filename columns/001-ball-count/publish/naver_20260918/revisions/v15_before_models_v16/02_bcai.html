@@ -1,0 +1,231 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BCAI 해설 — 타석 기록에서 카운트별 점수가 만들어지는 과정 | Baseline</title><style>
+:root{--ink:#19383d;--teal:#147c80;--muted:#637579;--line:#dae5e5}
+*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font-family:'Malgun Gothic','맑은 고딕',sans-serif}
+a{color:#156c76;text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:#b04e28}
+.topbar{max-width:980px;margin:auto;padding:26px 36px;display:flex;justify-content:space-between;gap:16px;font-size:13px;letter-spacing:.5px}
+.brand{font-weight:800;letter-spacing:3px;text-decoration:none}.meta{color:var(--muted)}
+nav{max-width:908px;margin:0 auto 22px;display:flex;gap:8px;flex-wrap:wrap}nav a{padding:10px 16px;border:1px solid var(--line);border-radius:22px;background:white;text-decoration:none;font-size:14px}nav a.current{background:var(--ink);color:white}
+main{max-width:908px;margin:0 auto 60px;padding:58px 64px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 24px #18393b06}
+article{font-size:18px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word}
+h1{font-size:38px;letter-spacing:-1.7px;line-height:1.45;margin:0 0 28px}h2{font-size:27px;line-height:1.5;letter-spacing:-.8px;margin:78px 0 25px;padding-top:24px;border-top:2px solid #cee1df;scroll-margin-top:24px}h3{font-size:21px;line-height:1.6;margin:40px 0 20px}
+p{margin:0 0 25px}strong{font-weight:750;color:#102f36}em{font-style:normal;color:var(--muted)}p:has(>em:only-child){font-size:13px;line-height:1.8;margin-top:-10px;margin-bottom:32px}
+blockquote{margin:28px 0;padding:25px 29px;border-left:4px solid var(--teal);background:#f2f7f6;font-size:17px}blockquote p:last-child{margin-bottom:0}
+.interpretation-note{margin:30px 0;padding:23px 26px;border-left:5px solid #ae773a;background:#fbf3e6;color:#644928;font-family:'Batang','바탕',serif;font-size:16px;line-height:1.95}.interpretation-note strong{font-family:'Malgun Gothic',sans-serif;color:#79521f;font-size:15px}.interpretation-note p:last-child,.citation-note p:last-child{margin-bottom:0}.citation-note{margin:28px 0;padding:23px 26px;border-left:5px solid #34845d;background:#eef7ee;font-size:17px}.citation-note strong{color:#236342}a[id^='ref-']{display:block;scroll-margin-top:25px}
+.result-note{margin:26px 0 32px;padding:26px 28px;background:#e8f5f2;border:2px solid #167e78;border-radius:8px;font-size:19px;line-height:1.85}.result-note strong{display:block;color:#075b56;font-size:16px}.result-note p:last-child,.reference-note p:last-child{margin-bottom:0}.reference-note{margin:30px 0;padding:24px 27px;background:#f3f0fa;border:1px solid #d9cfeb;border-left:5px solid #8062ac;border-radius:0 8px 8px 0;font-size:16px;line-height:1.95}.reference-note strong{color:#64468c}.reference-note a{color:#62448e}h2{background:#edf3f2;padding:22px 20px;border-top:3px solid #577e7b;border-radius:3px}h3{padding-left:15px;border-left:3px solid #aac1bd}.sub-number{display:block;color:#6c8582;font-size:12px;letter-spacing:.7px;margin-bottom:4px}.section-summary{font-size:19px;color:#163f42}.toc li.subtopic{margin-left:18px;font-size:12px;border-left:2px solid #d8e5e2;padding-left:12px}.results-section>.table-wrap{border:2px solid #72a8a0}.results-section>h2{background:#dceee9;border-color:#147c80}h4{font-size:17px;margin:26px 0 14px}
+figure{margin:35px -14px 20px}img{display:block;max-width:100%;height:auto;border:1px solid #e7eeee;margin:auto}.image-link{cursor:zoom-in}
+.table-wrap{overflow:auto;margin:26px 0 22px;border:1px solid var(--line);border-radius:5px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{padding:13px 13px;border-bottom:1px solid #e4ebea;vertical-align:top;text-align:left}th{background:#edf4f2;color:#244b50;font-weight:700}tr:last-child td{border-bottom:0}td:first-child{font-weight:650}tbody tr:nth-child(even){background:#fafcfc}
+li{margin:10px 0}ul,ol{padding-left:25px}hr{border:0;border-top:1px solid var(--line);margin:58px 0}
+.toc{margin:40px 0;padding:18px 23px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:#f8fbfa}.toc summary{cursor:pointer;font-weight:bold}.toc ul{margin:12px 0 3px}.toc a{text-decoration:none}
+.endnav{margin:46px 0 0;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:15px;flex-wrap:wrap;font-size:14px}
+.lead{font-size:20px;line-height:1.9;color:#36555a}.cards{display:grid;gap:18px;margin:38px 0}.card{display:block;text-decoration:none;background:#f4f8f6;border:1px solid var(--line);border-radius:8px;padding:26px 28px}.card small{display:block;color:var(--teal);letter-spacing:2px;margin-bottom:9px}.card b{font-size:24px;line-height:1.6}.card p{margin:12px 0 0;font-size:15px;line-height:1.8;color:var(--muted)}.note{font-size:14px;line-height:1.8;color:var(--muted);padding:20px;background:#f7f3e9;border-radius:5px}
+@media(max-width:650px){.topbar{padding:20px;display:block}.meta{display:block;margin-top:8px}nav{margin:0 16px 16px;gap:6px}nav a{font-size:12px;padding:9px 12px}main{margin:0 8px 25px;padding:32px 18px;border-radius:5px}article{font-size:17px;line-height:1.95}h1{font-size:29px;letter-spacing:-1px}h2{font-size:24px;margin-top:55px}h3{font-size:20px}p{margin-bottom:24px}.table-wrap{margin:24px -6px}table{font-size:12px;min-width:480px}th,td{padding:10px}figure{margin:28px -8px 20px}p:has(>em:only-child){font-size:12px}blockquote{padding:20px}.card{padding:23px}.card b{font-size:21px}.lead{font-size:18px}}
+@media(max-width:650px){.model-explainer table{min-width:0;table-layout:fixed}.model-explainer th,.model-explainer td{padding:10px 7px;overflow-wrap:anywhere}.model-explainer h4{padding:12px;background:#f6f8f7;border-bottom:1px solid #dae5e5}}
+figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{display:block;width:900px}.figure-scroll.zoomed img{width:900px;max-width:none}.figure-toggle{font:inherit;font-size:14px;padding:8px 12px;color:#126d79;background:#eef6f3;border:1px solid #a7c7bf;border-radius:5px;cursor:pointer}
+@media(max-width:650px){.table-wrap{overflow:visible;margin:22px 0}table.mobile-cards,table.mobile-cards tbody,table.mobile-cards tr,table.mobile-cards td{display:block;width:100%;min-width:0}table.mobile-cards thead{display:none}table.mobile-cards tr{margin-bottom:14px;border:1px solid #bcd1cd;border-radius:6px;padding:7px;background:#f8fbfa}table.mobile-cards td{border:0;border-bottom:1px solid #e0e8e6;font-size:15px;padding:8px;overflow-wrap:anywhere}table.mobile-cards td:before{content:attr(data-label);display:block;font-size:13px;font-weight:bold;color:#19615f}figure{margin-left:0;margin-right:0}}
+
+/* Main manuscript: count matrices retain their 4 by 3 arrangement on phones. */
+.model-explainer .count-board{margin:28px 0 20px;padding:18px 8px;background:#fff;border:1px solid #dbe6e4;border-radius:10px}
+.model-explainer .board-subtitle{font-size:12px;color:#5b7376;margin:0 8px 12px}.model-explainer .board-title{font-size:18px;font-weight:750;margin:0 8px 12px;line-height:1.6}
+.model-explainer table.count-matrix{width:100%;min-width:0;table-layout:fixed;border-collapse:separate;border-spacing:8px;font-size:14px}
+.model-explainer .count-matrix th{background:none;border:0;text-align:center;padding:4px;font-size:16px;vertical-align:middle}
+.model-explainer .count-matrix th:first-child{width:48px}
+.model-explainer .count-matrix td{border:0;border-radius:12px;text-align:center;vertical-align:middle;padding:15px 5px;line-height:1.5}
+.model-explainer .count-matrix tr{background:none}
+.cell-count{display:block;font-size:15px;color:#546d71;margin-bottom:6px}
+.cell-value{display:block;font-size:23px;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.6px}
+.count-matrix small{display:block;font-size:12px;color:#50696c;margin-top:7px;letter-spacing:-.3px}
+.count-matrix .pitcher{background:#deeeee}.count-matrix .pitcher strong{color:#147f83}.count-matrix .pitcher.strong-cell{background:#bfdddd}
+.count-matrix .batter{background:#f8eae3}.count-matrix .batter strong{color:#b64f29}.count-matrix .batter.strong-cell{background:#e9bba7}
+.count-matrix .neutral{background:#f0f3f3}.count-matrix .neutral strong{color:#365156}
+.count-matrix .inside{background:#deeeeb}.count-matrix .inside strong{color:#1c6e62}.count-matrix .outside{background:#e8e1f3}.count-matrix .outside strong{color:#715095}
+.board-legend{font-size:12px;display:flex;gap:14px;flex-wrap:wrap;padding:12px 10px 0}.pitcher-key{color:#147f83}.batter-key{color:#b64f29}
+u.source-claim{text-decoration-color:#9577b9;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+.model-explainer .reference-note{font-size:14px;padding:15px 20px;margin:18px 0 28px;line-height:1.8}
+.model-explainer .reference-note strong{font-size:14px}.model-explainer .reference-note p{margin-bottom:10px}
+.model-explainer h3{margin-top:42px}.model-explainer h4{font-size:19px;line-height:1.7;margin:32px 0 18px}
+.model-explainer .comparison-table{table-layout:fixed}.model-explainer .comparison-table td:first-child{width:35%}.model-explainer .comparison-table td strong{font-size:16px}
+@media(max-width:650px){
+ .model-explainer .count-board{padding:12px 2px;margin:24px -5px}.model-explainer .board-title{font-size:15px;margin:0 6px 8px}
+ .model-explainer table.count-matrix{border-spacing:4px}.model-explainer .count-matrix th{font-size:12px;padding:3px 0;white-space:nowrap}.model-explainer .count-matrix th:first-child{width:28px}
+ .model-explainer .count-matrix td{padding:12px 2px;border-radius:8px;overflow-wrap:normal}.cell-count{font-size:12px;margin-bottom:5px}
+ .cell-value{font-size:18px;letter-spacing:-.3px;line-height:1.3}.range-end{display:block}.count-matrix small{font-size:10px;letter-spacing:-.5px;margin-top:6px}
+ .model-explainer .location-board .cell-value{font-size:20px}.board-legend{font-size:11px;gap:3px 12px;padding:8px 6px 0}
+ .model-explainer .comparison-table{width:100%;min-width:0;font-size:13px}.model-explainer .comparison-table th,.model-explainer .comparison-table td{padding:12px 8px}
+ .model-explainer .comparison-table td strong{font-size:15px}.model-explainer h4{font-size:18px;padding:10px 0;background:none}
+}
+
+
+.model-explainer .question-group{margin:42px 0 22px;padding:14px 18px;border-top:2px solid #72918e;border-bottom:1px solid #cadbd8;background:#edf4f2;color:#285552;font-size:16px;font-weight:750}
+.model-explainer .bcai-board .cell-value{font-size:34px;line-height:1.4}
+@media(max-width:650px){.model-explainer .bcai-board .cell-value{font-size:27px}.model-explainer .question-group{font-size:15px;padding:12px}}
+
+@media print{body{background:white}.topbar,nav,.toc,.endnav{display:none}main{max-width:none;border:0;padding:0;box-shadow:none}article{font-size:11pt;line-height:1.8}h1{font-size:23pt}h2{font-size:18pt;margin-top:28px}figure,table{break-inside:avoid}img{max-height:850px}a{color:inherit}}
+</style></head><body class="model-explainer"><header class="topbar"><a class="brand" href="index.html">BASELINE</a><span class="meta">볼카운트 연재 · 2026.09.28 · 모델 해설 15차 검토본</span></header><nav aria-label="연재 글"><a class="" href="01_ball_count.html">1. 볼카운트 분석 칼럼</a><a class="current" href="02_bcai.html">2. BCAI 설명 글</a><a class="" href="03_bcap.html">3. BCAP 설명 글</a><a class="" href="04_references_ko.html">4. 참고문헌 한국어 해설</a><a class="" href="05_data_validation.html">5. 데이터·검증·개발 과정</a></nav><main><article><h1>BCAI 해설 — 타석 기록에서 카운트별 점수가 만들어지는 과정</h1><details class="toc"><summary>이 글의 목차 — 결과·방법·해석</summary><ul><li class=""><a href="#section-1">본문에서 본 BCAI 표</a></li><li class=""><a href="#section-2">1. 투구 기록을 타석 단위로 정리한다</a></li><li class=""><a href="#section-3">2. 각 타석의 최종 결과를 공격가치 W로 바꾼다</a></li><li class=""><a href="#section-4">3. 각 타석이 거친 카운트에 같은 W를 연결한다</a></li><li class=""><a href="#section-5">4. 시즌별로 카운트 도달 타석의 평균 W를 구한다</a></li><li class=""><a href="#section-6">5. 타석 시작 평균을 100으로 맞춘다</a></li><li class=""><a href="#section-7">6. 연도별 지수를 본문의 평균 정수표로 정리한다</a></li><li class="subtopic"><a href="#section-7-sub-1">시즌별 계산과 통합 계산의 구별</a></li><li class=""><a href="#section-8">7. 경기 단위로 다시 뽑아 지수의 불확실성을 계산한다</a></li><li class=""><a href="#section-9">8. 주 지수와 별도 보조 계산을 구분한다</a></li><li class=""><a href="#section-10">계산 근거와 구현</a></li></ul></details>
+<p><em>Baseline 볼카운트 연재 ② · 2026년 9월 28일 · 모델 해설 15차 검토본</em></p>
+<p><a href="01_ball_count.html">① 볼카운트 분석 칼럼</a> · <a href="03_bcap.html">③ BCAP 해설</a></p>
+<p>BCAI(Ball Count Advantage Index, 볼카운트 유불리 지수)는 <strong>각 카운트를 거친 타석의 최종 공격가치를, 타석 시작 평균이 100이 되도록 바꾼 지수</strong>다. 본문에서 본 카운트별 점수가 만들어지는 과정을 이 글에서 설명한다.</p>
+<p>먼저 본문의 표를 다시 놓았다. 이 표의 각 숫자는 <strong>타석을 정리하고 → 최종 결과에 가중치를 붙이고 → 카운트별로 평균을 낸 뒤 → 시작 평균으로 나누어</strong> 얻는다. 표 아래부터는 이 계산 순서에 집중한다.</p>
+<section class="content-section " aria-labelledby="section-1"><h2 id="section-1">본문에서 본 BCAI 표</h2>
+<div class="count-board bcai-board"><div class="board-title">카운트별 BCAI · 타석 시작 평균 = 100</div><p class="board-subtitle">MLB 2015–2025 · 11개 시즌 점수의 평균 · 정수로 반올림</p>
+<table class="count-matrix"><thead><tr><th scope="col">볼</th><th scope="col">0스트라이크</th><th scope="col">1스트라이크</th><th scope="col">2스트라이크</th></tr></thead><tbody>
+<tr><th scope="row">0볼</th>
+<td class="neutral" data-count="0-0"><span class="cell-count">0-0</span><strong class="cell-value">100</strong><small>1,896,892타석</small></td>
+<td class="pitcher" data-count="0-1"><span class="cell-count">0-1</span><strong class="cell-value">85</strong><small>952,314타석</small></td>
+<td class="pitcher strong-cell" data-count="0-2"><span class="cell-count">0-2</span><strong class="cell-value">63</strong><small>398,928타석</small></td>
+</tr>
+<tr><th scope="row">1볼</th>
+<td class="batter" data-count="1-0"><span class="cell-count">1-0</span><strong class="cell-value">113</strong><small>732,356타석</small></td>
+<td class="pitcher" data-count="1-1"><span class="cell-count">1-1</span><strong class="cell-value">95</strong><small>751,486타석</small></td>
+<td class="pitcher" data-count="1-2"><span class="cell-count">1-2</span><strong class="cell-value">71</strong><small>559,579타석</small></td>
+</tr>
+<tr><th scope="row">2볼</th>
+<td class="batter" data-count="2-0"><span class="cell-count">2-0</span><strong class="cell-value">136</strong><small>248,670타석</small></td>
+<td class="batter" data-count="2-1"><span class="cell-count">2-1</span><strong class="cell-value">113</strong><small>388,929타석</small></td>
+<td class="pitcher" data-count="2-2"><span class="cell-count">2-2</span><strong class="cell-value">85</strong><small>457,382타석</small></td>
+</tr>
+<tr><th scope="row">3볼</th>
+<td class="batter strong-cell" data-count="3-0"><span class="cell-count">3-0</span><strong class="cell-value">174</strong><small>76,643타석</small></td>
+<td class="batter" data-count="3-1"><span class="cell-count">3-1</span><strong class="cell-value">151</strong><small>161,435타석</small></td>
+<td class="batter" data-count="3-2"><span class="cell-count">3-2</span><strong class="cell-value">119</strong><small>262,990타석</small></td>
+</tr>
+</tbody></table>
+<div class="board-legend"><span class="pitcher-key">100 미만 · 시작보다 투수 유리</span><span class="batter-key">100 초과 · 시작보다 타자 유리</span></div>
+</div>
+
+<p><em>표 1. MLB 2015–2025, 1,896,892타석·25,193경기. 큰 숫자는 11개 연도별 BCAI의 단순평균을 정수로 반올림한 값, 작은 숫자는 그 카운트를 거친 11시즌 타석 수다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcai_all_132.csv">연도별 점수·타석 수</a> · <a href="main_v10/bcai_means.csv">평균 계산표</a>.</em></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 표에 표시한 평균</strong></p>
+<p>연도별 BCAI 11개를 같은 비중으로 평균 내고 정수로 반올림했다. 2020년처럼 경기 수가 적은 해도 한 시즌으로 센다. 전체 타석을 한꺼번에 모아 계산한 통합 지수와는 다르다. 같은 타석이 여러 카운트를 거치므로 칸별 타석 수를 모두 더하지 않는다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-2"><h2 id="section-2">1. 투구 기록을 타석 단위로 정리한다</h2>
+<p>계산의 출발점은 공 하나씩 기록된 투구 자료다. 그러나 BCAI가 평균을 내는 단위는 <strong>투구가 아니라 타석</strong>이다. 경기 번호와 그 경기의 타석 번호로 기록을 묶고, 투구 순서대로 정렬해 한 타석의 진행 과정을 만든다.</p>
+<p>그다음 마지막 기록에서 타석의 최종 결과를 확인한다. 앞선 공의 볼·스트라이크 판정이 아니라, 타석 전체가 볼넷·안타·삼진 등 무엇으로 끝났는지를 가져온다. 마지막 결과가 비어 있으면 앞의 기록으로 임의로 채우지 않는다.</p>
+<p>계산에는 0-0에서 시작한 기록과 최종 결과를 확인할 수 있는 타석을 남긴다. 고의볼넷, 타격방해, 중간에서 끊긴 타석, 최종 결과가 없거나 정의한 결과 분류에 들어가지 않는 타석은 제외한다. 같은 투구가 중복돼 있으면 집계를 진행하지 않고 확인한다.</p>
+<p>이렇게 먼저 유효 타석을 정해야 카운트마다 같은 기준으로 평균을 낼 수 있다. 결과가 누락된 타석을 0점으로 넣으면, 기록이 없다는 이유만으로 성적이 낮아지는 문제가 생긴다.</p>
+<p><a id="weight-calculation"></a></p>
+</section><section class="content-section " aria-labelledby="section-3"><h2 id="section-3">2. 각 타석의 최종 결과를 공격가치 W로 바꾼다</h2>
+<p>타석 결과를 평균내려면 볼넷·단타·홈런처럼 서로 다른 결과를 하나의 숫자 체계로 바꿔야 한다. BCAI는 결과별로 가중치를 붙인 <strong>공격가치 W</strong>를 사용한다. 볼넷과 안타를 모두 출루 한 번으로만 세지 않고, 장타의 차이까지 반영하기 위한 값이다.</p>
+<p>가중치는 시즌별 wOBA 계수를 사용한다. 아래는 계산 과정을 설명하기 위한 2024년 계수표다. 다른 시즌에는 그 시즌의 계수를 적용한다.</p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>타석의 최종 결과</th>
+<th align="right">부여하는 W</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+타석의 최종 결과">비고의 볼넷</td>
+<td align="right" data-label="부여하는 W">0.689</td>
+</tr>
+<tr>
+<td data-label="
+
+타석의 최종 결과">몸에 맞는 공</td>
+<td align="right" data-label="부여하는 W">0.720</td>
+</tr>
+<tr>
+<td data-label="
+
+타석의 최종 결과">단타</td>
+<td align="right" data-label="부여하는 W">0.882</td>
+</tr>
+<tr>
+<td data-label="
+
+타석의 최종 결과">2루타</td>
+<td align="right" data-label="부여하는 W">1.254</td>
+</tr>
+<tr>
+<td data-label="
+
+타석의 최종 결과">3루타</td>
+<td align="right" data-label="부여하는 W">1.590</td>
+</tr>
+<tr>
+<td data-label="
+
+타석의 최종 결과">홈런</td>
+<td align="right" data-label="부여하는 W">2.050</td>
+</tr>
+<tr>
+<td data-label="
+
+타석의 최종 결과">삼진·기타 아웃·정의된 기타 결과</td>
+<td align="right" data-label="부여하는 W">0</td>
+</tr>
+</tbody></table></div>
+<p><em>계산에 사용한 계수이며 분석 결과표가 아니다. 출처: <a href="../../../../models/bcai/observed/v1.0.0/specification.yaml">BCAI 명세</a>와 <a href="../../analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/manifest.json">실행의 가중치 기록</a>.</em></p>
+<p>가령 한 타석이 볼넷으로 끝나면 그 타석에 0.689를, 홈런으로 끝나면 2.050을 붙인다. 한 타석에는 최종 결과의 점수 하나가 연결된다. 중간에 볼을 골랐거나 파울을 쳤다고 W를 따로 더하지 않는다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | W의 단위와 분모</strong></p>
+<p>W는 실제 득점 수나 확률이 아니다. 솔로홈런과 만루홈런도 같은 시즌에는 같은 가중치를 받는다. 실책 출루와 아웃 없는 야수선택은 아웃으로 분류하지 않지만 이 계산에서는 W=0이다. 희생번트도 유효 타석의 분모에 포함하므로, wOBA 계수를 사용했다는 이유로 평균 W를 공식 wOBA와 동일하게 부르지 않는다.</p>
+</aside>
+<p>가중치의 배경과 자체 집계 기준은 <a href="02_bcai_evidence.md">집필 근거표</a>에 연결했다. 여기서는 저장된 계수를 어떻게 타석 점수로 사용하는지 설명한다.</p>
+</section><section class="content-section " aria-labelledby="section-4"><h2 id="section-4">3. 각 타석이 거친 카운트에 같은 W를 연결한다</h2>
+<p>이제 한 타석을 카운트별 집계에 넣는다. 기준은 <strong>그 카운트에서 끝났는지</strong>가 아니라 <strong>그 카운트를 한 번이라도 거쳤는지</strong>다. 자료의 카운트는 공을 던지기 직전의 볼·스트라이크 수를 사용한다.</p>
+<p>다음은 집계 방법을 보여주는 가상 타석이다.</p>
+<blockquote>
+<p>0-0 → 0-1 → 0-2 → 1-2 → 1-2에서 일반 파울 → 2-2 → 홈런</p>
+</blockquote>
+<p>이 타석은 0-0, 0-1, 0-2, 1-2, 2-2에 각각 한 번 들어간다. 1-2에서 파울로 같은 카운트가 반복돼도 1-2에 두 번 넣지 않는다. 2024년 계수라면 다섯 카운트 모두에 같은 최종 W=2.050이 연결된다.</p>
+<p>이 방식으로 0-2 집계를 만들면, 0-2 다음 공에서 끝난 타석뿐 아니라 이후 여러 공을 더 보고 끝난 타석도 포함된다. 해당 카운트에 도달한 뒤의 최종 결과를 평균내기 때문이다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 카운트 안에서는 한 번, 카운트 사이에는 중복</strong></p>
+<p>같은 타석은 같은 카운트에서 한 번만 센다. 다른 카운트에는 다시 들어갈 수 있다. 다섯 카운트에 홈런 점수가 연결됐다고 홈런 다섯 개를 기록한 것도, 다섯 W를 더해 그 타석의 가치를 계산한 것도 아니다. 각 카운트의 평균을 따로 만들기 위한 집계다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-5"><h2 id="section-5">4. 시즌별로 카운트 도달 타석의 평균 W를 구한다</h2>
+<p>한 시즌의 특정 카운트에 들어온 타석들의 W를 모두 더하고, 그 타석 수로 나눈다. 이 값이 그 카운트의 평균 공격가치다.</p>
+<blockquote>
+<p><strong>카운트 평균 W = 그 카운트를 거친 유효 타석의 W 합계 ÷ 해당 타석 수</strong></p>
+</blockquote>
+<p>예를 들어 어떤 카운트를 거친 타석이 삼진·볼넷·단타로 끝난 세 개뿐이라고 가정하자. 위 계수를 사용하면 평균은 다음과 같다.</p>
+<blockquote>
+<p>(0 + 0.689 + 0.882) ÷ 3 = 약 0.524 W</p>
+</blockquote>
+<p>이는 나눗셈을 설명하는 가상 예시이며 실제 카운트의 성적이 아니다. 실제 계산에서도 같은 방식으로 해당 카운트에 도달한 유효 타석 전부를 사용한다.</p>
+<p>동시에 0-0의 평균 W도 구한다. 유효 타석은 모두 0-0에서 시작하므로 이 값은 그 시즌의 유효 시작 타석 전체 평균이다. 다음 단계에서는 이 평균을 비교 기준으로 사용한다.</p>
+</section><section class="content-section " aria-labelledby="section-6"><h2 id="section-6">5. 타석 시작 평균을 100으로 맞춘다</h2>
+<p>카운트별 평균 W를 그대로 두는 대신, 각 시즌의 시작 평균을 100으로 맞춘다. 어느 카운트의 공격가치가 그해 출발점보다 얼마나 높거나 낮은지 읽기 쉽게 만들기 위해서다.</p>
+<blockquote>
+<p><strong>시즌별 BCAI = 해당 카운트 평균 W ÷ 같은 시즌 0-0 평균 W × 100</strong></p>
+</blockquote>
+<p>설명용으로 어떤 시즌의 시작 평균 W가 0.300이고 한 카운트의 평균 W가 0.240이라면, 그 카운트의 BCAI는 0.240÷0.300×100=80이다. 시작 평균보다 가중 공격가치가 20% 낮다는 뜻이다. 실제 시즌 결과를 인용한 예시는 아니다.</p>
+<p>이 계산에서 0-0은 자기 평균을 자기 평균으로 나누므로 언제나 100이 된다. BCAI 100은 타자와 투수의 승률이 반반이라는 뜻이 아니며, BCAI 80도 출루 확률 80%라는 뜻이 아니다.</p>
+<p>기호로는 <strong>Iᵧ(c) = 100 × Vᵧ(c) / Vᵧ(0-0)</strong>로 쓴다. y는 시즌, c는 카운트, V는 앞 단계에서 구한 평균 W다. 새로운 계산이 아니라 위 나눗셈을 짧게 적은 식이다.</p>
+</section><section class="content-section " aria-labelledby="section-7"><h2 id="section-7">6. 연도별 지수를 본문의 평균 정수표로 정리한다</h2>
+<p>본문의 표는 2015–2025 각 시즌에서 앞의 계산을 수행한 뒤, 같은 카운트의 지수 11개를 평균낸 것이다.</p>
+<blockquote>
+<p><strong>본문 표시 점수 = 11개 시즌 BCAI의 합계 ÷ 11 → 정수로 반올림</strong></p>
+</blockquote>
+<p>반올림은 마지막 표시 단계에서만 한다. 각 시즌의 소수점 지수를 먼저 정수로 바꿔 평균내지 않는다. 표의 작은 타석 수는 같은 카운트의 시즌별 도달 타석 수를 더한 값이다. 지수는 시즌별 동일 비중 평균이고, 타석 수는 합계이므로 두 숫자의 집계 방식이 다르다.</p>
+<h3 id="section-7-sub-1"><span class="sub-number">6.1</span>시즌별 계산과 통합 계산의 구별</h3>
+<p>모델에는 여러 시즌의 지수를 고정 비중으로 합치는 정의도 있다. 이 경우 각 시즌의 유효 시작 타석 수가 전체에서 차지하는 비중을 qᵧ로 정하고, 모든 카운트에 동일하게 적용한다.</p>
+<blockquote>
+<p><strong>고정 비중 통합 BCAI(c) = Σᵧ qᵧ × Iᵧ(c)</strong></p>
+</blockquote>
+<p>Σ는 시즌별 값을 더한다는 뜻이다. 어떤 카운트는 한 시즌의 비중이 크고 다른 카운트는 다른 시즌의 비중이 커지는 일을 피하려는 정의다. 과거 두 시즌 통합 계산에서 사용한 방식이며, 이 글 앞에 재사용한 본문 표의 단순평균과 구분한다.</p>
+</section><section class="content-section " aria-labelledby="section-8"><h2 id="section-8">7. 경기 단위로 다시 뽑아 지수의 불확실성을 계산한다</h2>
+<p>지수 하나를 계산한 다음에는 표본이 달라졌을 때 그 값이 얼마나 흔들릴 수 있는지 살핀다. BCAI는 시즌 안에서 <strong>경기를 통째로 복원추출하는 계산을 2,000회 반복</strong>한다. 복원추출은 뽑은 경기를 다시 뽑을 수 있게 하는 방식이다.</p>
+<p>한 경기의 타석들은 구장·상대 투수 등 환경을 공유한다. 따라서 타석을 각각 독립적으로 다시 뽑는 대신 경기 안의 타석들을 함께 움직인다. 같은 재표본을 모든 카운트에 사용하고, 매번 카운트별 평균과 0-0 평균을 다시 계산한다. 시즌별 외부 가중치는 고정한다. 고정 비중 통합 계산에서는 시즌 비중도 고정한다.</p>
+<p>반복해서 얻은 지수의 분포로 개별 구간을 만든다. 열두 카운트를 함께 읽을 때는 0-0을 제외한 11개 지수의 변동을 함께 고려한 근사 동시 구간도 사용한다. 두 카운트를 직접 비교할 때는 매 재표본에서 두 지수를 빼서 차이 자체의 구간을 구한다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 평균 정수표와 구간의 역할</strong></p>
+<p>앞의 정수표는 결과를 빠르게 읽기 위한 요약이다. 정수 하나에 오차가 없다는 뜻은 아니다. 연도별 구간은 <a href="../../analysis/history_comparison_20260928_r01/tables/bcai_all_132.csv">전체 수치표</a>에 따로 남아 있다. 같은 선수가 여러 경기에 반복 출전하는 관계와 외부 가중치의 추정 오차까지 모두 반영한 구간은 아니다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-9"><h2 id="section-9">8. 주 지수와 별도 보조 계산을 구분한다</h2>
+<p>여기까지가 본문 표에 사용한 <strong>BCAI-OBS</strong>의 계산이다. 선수 능력을 예측하는 모형을 먼저 학습해야 지수를 만들 수 있는 것은 아니다. 유효 타석의 결과를 가중 평균하고 시작점과 비교하는 관찰 지수다.</p>
+<p><strong>BCAI-Ridge</strong>는 별도 보조 계산이다. 타석 시작의 선수·상황을 사용해 W를 예상하고, 그 예상 부분을 고려하면 카운트별 지수가 얼마나 달라지는지 살핀다. 이 보정은 앞의 OBS 점수에 섞지 않는다. 상세 계산과 검증 범위는 <a href="../../analysis/ridge_v02_validation_report.md">Ridge 보고서</a>에 있다.</p>
+<p><strong>BCAI-STATE-DELTA</strong>는 계산된 카운트 평균 W 두 개를 빼는 보조 표다. 서로 다른 카운트에 도달한 타석 집단의 평균 차이이며, 동일 타석에서 볼 하나를 던진 전후 효과를 측정한 값이 아니다. <a href="../../analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md">상태 평균 차이의 정의</a>에서 계산 범위를 확인할 수 있다.</p>
+<p>다음 공의 위치·구종·스윙에 따른 결과 비교는 <a href="03_bcap.html">BCAP</a>에서 별도로 계산한다. BCAI에 그 행동 차이를 더해 새 점수를 만들지는 않는다.</p>
+</section><section class="content-section " aria-labelledby="section-10"><h2 id="section-10">계산 근거와 구현</h2>
+<ul>
+<li><a href="../../../../models/bcai/observed/v1.0.0/specification.yaml">BCAI-OBS 명세</a>: 결과 분류, 제외 기준, 중복 처리, 지수와 구간의 정의.</li>
+<li><a href="../../../../models/bcai/observed/v1.0.0/r/README.md">R 구현 안내</a>: 같은 정의를 구현한 코드와 실행 방식.</li>
+<li><a href="main_v10/bcai_means.csv">본문 평균표의 계산값</a>: 연도별 평균, 반올림 표시값, 도달 타석 합계.</li>
+<li><a href="05_data_validation.html">데이터 검증·모델 한계·개발 과정</a>: 집계와 구현에서 확인한 범위.</li>
+</ul>
+<p><em>모델 정의와 검증 상태는 변경하지 않았다. 본문의 주 지수는 OBS이며, 보조 계산의 상태와 검증 범위를 그대로 구분한다.</em></p>
+<p><a href="01_ball_count.html">본문으로 돌아가기</a> · <a href="03_bcap.html">BCAP 계산 설명</a></p>
+</section></article><div class="endnav"><a href="index.html">연재와 문헌 읽기 안내</a><a href="01_ball_count.html">볼카운트 분석 칼럼</a><a href="03_bcap.html">BCAP 설명 글</a><a href="04_references_ko.html">참고문헌 한국어 해설</a><a href="05_data_validation.html">데이터·검증·개발 과정</a></div></main></body></html>

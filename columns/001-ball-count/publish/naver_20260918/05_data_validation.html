@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>이번 볼카운트 분석은 어디까지 믿을 수 있을까? | Baseline</title><style>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>볼카운트 칼럼을 쓰면서 — 데이터와 모델을 고쳐 온 기록 | Baseline</title><style>
 :root{--ink:#19383d;--teal:#147c80;--muted:#637579;--line:#dae5e5}
 *{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font-family:'Malgun Gothic','맑은 고딕',sans-serif}
 a{color:#156c76;text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:#b04e28}
@@ -19,72 +19,55 @@ li{margin:10px 0}ul,ol{padding-left:25px}hr{border:0;border-top:1px solid var(--
 .endnav{margin:46px 0 0;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:15px;flex-wrap:wrap;font-size:14px}
 .lead{font-size:20px;line-height:1.9;color:#36555a}.cards{display:grid;gap:18px;margin:38px 0}.card{display:block;text-decoration:none;background:#f4f8f6;border:1px solid var(--line);border-radius:8px;padding:26px 28px}.card small{display:block;color:var(--teal);letter-spacing:2px;margin-bottom:9px}.card b{font-size:24px;line-height:1.6}.card p{margin:12px 0 0;font-size:15px;line-height:1.8;color:var(--muted)}.note{font-size:14px;line-height:1.8;color:var(--muted);padding:20px;background:#f7f3e9;border-radius:5px}
 @media(max-width:650px){.topbar{padding:20px;display:block}.meta{display:block;margin-top:8px}nav{margin:0 16px 16px;gap:6px}nav a{font-size:12px;padding:9px 12px}main{margin:0 8px 25px;padding:32px 18px;border-radius:5px}article{font-size:17px;line-height:1.95}h1{font-size:29px;letter-spacing:-1px}h2{font-size:24px;margin-top:55px}h3{font-size:20px}p{margin-bottom:24px}.table-wrap{margin:24px -6px}table{font-size:12px;min-width:480px}th,td{padding:10px}figure{margin:28px -8px 20px}p:has(>em:only-child){font-size:12px}blockquote{padding:20px}.card{padding:23px}.card b{font-size:21px}.lead{font-size:18px}}
-@media(max-width:650px){.main-column table{min-width:0;table-layout:fixed}.main-column th,.main-column td{padding:10px 7px;overflow-wrap:anywhere}.main-column h4{padding:12px;background:#f6f8f7;border-bottom:1px solid #dae5e5}}
+@media(max-width:650px){.model-explainer table{min-width:0;table-layout:fixed}.model-explainer th,.model-explainer td{padding:10px 7px;overflow-wrap:anywhere}.model-explainer h4{padding:12px;background:#f6f8f7;border-bottom:1px solid #dae5e5}}
 figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{display:block;width:900px}.figure-scroll.zoomed img{width:900px;max-width:none}.figure-toggle{font:inherit;font-size:14px;padding:8px 12px;color:#126d79;background:#eef6f3;border:1px solid #a7c7bf;border-radius:5px;cursor:pointer}
 @media(max-width:650px){.table-wrap{overflow:visible;margin:22px 0}table.mobile-cards,table.mobile-cards tbody,table.mobile-cards tr,table.mobile-cards td{display:block;width:100%;min-width:0}table.mobile-cards thead{display:none}table.mobile-cards tr{margin-bottom:14px;border:1px solid #bcd1cd;border-radius:6px;padding:7px;background:#f8fbfa}table.mobile-cards td{border:0;border-bottom:1px solid #e0e8e6;font-size:15px;padding:8px;overflow-wrap:anywhere}table.mobile-cards td:before{content:attr(data-label);display:block;font-size:13px;font-weight:bold;color:#19615f}figure{margin-left:0;margin-right:0}}
+
+/* Main manuscript: count matrices retain their 4 by 3 arrangement on phones. */
+.model-explainer .count-board{margin:28px 0 20px;padding:18px 8px;background:#fff;border:1px solid #dbe6e4;border-radius:10px}
+.model-explainer .board-subtitle{font-size:12px;color:#5b7376;margin:0 8px 12px}.model-explainer .board-title{font-size:18px;font-weight:750;margin:0 8px 12px;line-height:1.6}
+.model-explainer table.count-matrix{width:100%;min-width:0;table-layout:fixed;border-collapse:separate;border-spacing:8px;font-size:14px}
+.model-explainer .count-matrix th{background:none;border:0;text-align:center;padding:4px;font-size:16px;vertical-align:middle}
+.model-explainer .count-matrix th:first-child{width:48px}
+.model-explainer .count-matrix td{border:0;border-radius:12px;text-align:center;vertical-align:middle;padding:15px 5px;line-height:1.5}
+.model-explainer .count-matrix tr{background:none}
+.cell-count{display:block;font-size:15px;color:#546d71;margin-bottom:6px}
+.cell-value{display:block;font-size:23px;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.6px}
+.count-matrix small{display:block;font-size:12px;color:#50696c;margin-top:7px;letter-spacing:-.3px}
+.count-matrix .pitcher{background:#deeeee}.count-matrix .pitcher strong{color:#147f83}.count-matrix .pitcher.strong-cell{background:#bfdddd}
+.count-matrix .batter{background:#f8eae3}.count-matrix .batter strong{color:#b64f29}.count-matrix .batter.strong-cell{background:#e9bba7}
+.count-matrix .neutral{background:#f0f3f3}.count-matrix .neutral strong{color:#365156}
+.count-matrix .inside{background:#deeeeb}.count-matrix .inside strong{color:#1c6e62}.count-matrix .outside{background:#e8e1f3}.count-matrix .outside strong{color:#715095}
+.board-legend{font-size:12px;display:flex;gap:14px;flex-wrap:wrap;padding:12px 10px 0}.pitcher-key{color:#147f83}.batter-key{color:#b64f29}
+u.source-claim{text-decoration-color:#9577b9;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+.model-explainer .reference-note{font-size:14px;padding:15px 20px;margin:18px 0 28px;line-height:1.8}
+.model-explainer .reference-note strong{font-size:14px}.model-explainer .reference-note p{margin-bottom:10px}
+.model-explainer h3{margin-top:42px}.model-explainer h4{font-size:19px;line-height:1.7;margin:32px 0 18px}
+.model-explainer .comparison-table{table-layout:fixed}.model-explainer .comparison-table td:first-child{width:35%}.model-explainer .comparison-table td strong{font-size:16px}
+@media(max-width:650px){
+ .model-explainer .count-board{padding:12px 2px;margin:24px -5px}.model-explainer .board-title{font-size:15px;margin:0 6px 8px}
+ .model-explainer table.count-matrix{border-spacing:4px}.model-explainer .count-matrix th{font-size:12px;padding:3px 0;white-space:nowrap}.model-explainer .count-matrix th:first-child{width:28px}
+ .model-explainer .count-matrix td{padding:12px 2px;border-radius:8px;overflow-wrap:normal}.cell-count{font-size:12px;margin-bottom:5px}
+ .cell-value{font-size:18px;letter-spacing:-.3px;line-height:1.3}.range-end{display:block}.count-matrix small{font-size:10px;letter-spacing:-.5px;margin-top:6px}
+ .model-explainer .location-board .cell-value{font-size:20px}.board-legend{font-size:11px;gap:3px 12px;padding:8px 6px 0}
+ .model-explainer .comparison-table{width:100%;min-width:0;font-size:13px}.model-explainer .comparison-table th,.model-explainer .comparison-table td{padding:12px 8px}
+ .model-explainer .comparison-table td strong{font-size:15px}.model-explainer h4{font-size:18px;padding:10px 0;background:none}
+}
+
+
+.model-explainer .question-group{margin:42px 0 22px;padding:14px 18px;border-top:2px solid #72918e;border-bottom:1px solid #cadbd8;background:#edf4f2;color:#285552;font-size:16px;font-weight:750}
+.model-explainer .bcai-board .cell-value{font-size:34px;line-height:1.4}
+@media(max-width:650px){.model-explainer .bcai-board .cell-value{font-size:27px}.model-explainer .question-group{font-size:15px;padding:12px}}
+
 @media print{body{background:white}.topbar,nav,.toc,.endnav{display:none}main{max-width:none;border:0;padding:0;box-shadow:none}article{font-size:11pt;line-height:1.8}h1{font-size:23pt}h2{font-size:18pt;margin-top:28px}figure,table{break-inside:avoid}img{max-height:850px}a{color:inherit}}
-</style></head><body><header class="topbar"><a class="brand" href="index.html">BASELINE</a><span class="meta">볼카운트 연재 · 2026.09.28 · 11시즌 반영 7차 검토본</span></header><nav aria-label="연재 글"><a class="" href="01_ball_count.html">1. 볼카운트 분석 칼럼</a><a class="" href="02_bcai.html">2. BCAI 설명 글</a><a class="" href="03_bcap.html">3. BCAP 설명 글</a><a class="" href="04_references_ko.html">4. 참고문헌 한국어 해설</a><a class="current" href="05_data_validation.html">5. 데이터·검증·개발 과정</a></nav><main><article><h1>이번 볼카운트 분석은 어디까지 믿을 수 있을까?</h1><details class="toc"><summary>이 글의 목차 — 결과·방법·해석</summary><ul><li class=""><a href="#section-1">1. 먼저 보는 결론 — 확인한 것과 남은 것</a></li><li class=""><a href="#section-2">2. 데이터 — 11시즌 약 190만 타석과 비교별 분모</a></li><li class="subtopic"><a href="#section-2-sub-1">기간을 넓히니 표본은 얼마나 늘었을까?</a></li><li class="subtopic"><a href="#section-2-sub-2">기존 두 시즌에서는 어떤 타석을 제외했을까?</a></li><li class="subtopic"><a href="#section-2-sub-3">BCAI는 타석을, 스윙률은 공을 센다</a></li><li class=""><a href="#section-3">3. 숫자의 단위 — W는 실제 득점도, 승리 확률도 아니다</a></li><li class="subtopic"><a href="#section-3-sub-1">볼넷과 장타를 함께 세기 위한 척도다</a></li><li class="subtopic"><a href="#section-3-sub-2">BCAI와 BCAP는 같은 재료를 다른 방식으로 읽는다</a></li><li class=""><a href="#section-4">4. 검증 — 계산 확인, 예측 평가, 다른 해의 확인을 나눴다</a></li><li class="subtopic"><a href="#section-4-sub-1">모델의 상태 표시는 사용 범위까지 읽어야 한다</a></li><li class="subtopic"><a href="#section-4-sub-2">Ridge는 계산을 고쳤지만 주 결과로 올리지 않았다</a></li><li class="subtopic"><a href="#section-4-sub-3">과거 2023년 확인은 두 모델에서 방식이 달랐다</a></li><li class="subtopic"><a href="#section-4-sub-4">R로 바뀐 것과 기간이 늘어난 것을 구별했을까?</a></li><li class="subtopic"><a href="#section-4-sub-5">2020과 측정 초기 두 해를 빼면 결론도 바뀔까?</a></li><li class="subtopic"><a href="#section-4-sub-6">이번 검수는 어디까지 확인했을까?</a></li><li class=""><a href="#section-5">5. 불확실성 — 선이 0을 지나는 것과 빈칸은 다르다</a></li><li class="subtopic"><a href="#section-5-sub-1">차이가 불명확한 경우와 비교 자체가 어려운 경우를 나눴다</a></li><li class="subtopic"><a href="#section-5-sub-2">그림의 가로선도 계산한 범위가 있다</a></li><li class=""><a href="#section-6">6. 시행착오 — 고친 문제와 보류한 문제</a></li><li class="subtopic"><a href="#section-6-sub-1">같은 숫자처럼 보여도 질문이 달랐다</a></li><li class="subtopic"><a href="#section-6-sub-2">2026년 위치 비교는 결과가 나빠서 뺀 것이 아니다</a></li><li class="subtopic"><a href="#section-6-sub-3">해결한 문제와 남은 문제를 한 줄로 읽기</a></li><li class=""><a href="#section-7">7. 아직 남은 질문 — 왜 그랬는지와 무엇을 할지는 다음 단계다</a></li><li class="subtopic"><a href="#section-7-sub-1">카운트 평균의 간격은 한 공의 효과가 아니다</a></li><li class="subtopic"><a href="#section-7-sub-2">존 밖이 좋았던 이유를 비율로 나누지는 못했다</a></li><li class="subtopic"><a href="#section-7-sub-3">타자가 적응하면 이득도 달라질 수 있다</a></li><li class=""><a href="#section-8">8. 본문으로 돌아갈 때 기억할 세 가지</a></li><li class=""><a href="#section-9">이 글의 용어 메모</a></li><li class=""><a href="#section-10">자료와 확인 기록</a></li></ul></details>
-<p><strong>카운트별 모습은 확인했다. 다음 공의 정답까지 알아낸 것은 아니다.</strong></p>
-<p>이번 분석에서 가장 또렷했던 결과는 0-2·1-2의 실제 존 밖 투구가 더 낮은 보정 공격가치와 연결됐다는 점이다. 2015–2025의 열한 시즌 모두 같은 점추정 방향이었다. 다만 구간까지 같은 방향은 0-2가 10/11시즌, 1-2가 8/11시즌이었다. 다만 이것을 모든 투수에게 적용할 투구 지시로 바꾸려면 아직 확인할 것이 있다.</p>
-<p><strong>데이터 검증, 모델의 한계, 개발 과정의 시행착오를 함께 읽는 글이다.</strong></p>
-<p>이 글은 그 사이의 거리를 설명한다. 어떤 기록을 썼는지, 계산하면서 무엇을 고쳤는지, ‘확인했다’는 말을 어디까지 쓸 수 있는지 한곳에 모았다. <a href="01_ball_count.html">본문 칼럼</a>을 읽다가 근거가 궁금할 때 찾아와도 좋다.</p>
-<section class="content-section " aria-labelledby="section-1"><h2 id="section-1">1. 먼저 보는 결론 — 확인한 것과 남은 것</h2>
-<aside class="result-note" aria-label="결과 요약">
-<p><strong>결과 요약 | 지금 사용할 수 있는 결론</strong></p>
-<p>BCAI는 카운트에 도달한 타석들의 평균적인 형편을 보여준다. BCAP는 그 카운트 안에서 선수·상황 차이를 보정한 행동별 결과를 비교한다. 기록의 패턴과 계산의 안정성을 확인했지만, 행동을 강제로 바꾼 효과나 최적 배합을 확인한 것은 아니다.</p>
-</aside>
-<div class="table-wrap"><table class="mobile-cards">
-<thead>
-<tr>
-<th>질문</th>
-<th>이번에 확인한 범위</th>
-<th>아직 남은 범위</th>
-</tr>
-</thead>
-<tbody><tr>
-<td data-label="
-
-질문">어느 카운트가 타자에게 좋았나?</td>
-<td data-label="이번에 확인한 범위">11시즌 모두 0-2 최저·3-0 최고; 1-1은 100 아래·3-2는 100 위</td>
-<td data-label="아직 남은 범위">같은 선수의 카운트만 바꾸면 얼마나 좋아지는가</td>
-</tr>
-<tr>
-<td data-label="
-
-질문">0-2·1-2에서는 어디가 좋았나?</td>
-<td data-label="이번에 확인한 범위">11/11년 지원·존 밖 점추정; 구간도 같은 방향은 10/11·8/11년</td>
-<td data-label="아직 남은 범위">의도적으로 존 밖을 더 겨냥했을 때의 효과</td>
-</tr>
-<tr>
-<td data-label="
-
-질문">타자는 언제 휘두르는 편이 좋았나?</td>
-<td data-label="이번에 확인한 범위">존 안 132칸 중 130칸 스윙 점추정, 존 밖 481/528칸 지원·모두 테이크 점추정</td>
-<td data-label="아직 남은 범위">타자가 위치를 불완전하게 알아보는 실전에서의 최적 판단</td>
-</tr>
-<tr>
-<td data-label="
-
-질문">어떤 구종이 좋았나?</td>
-<td data-label="이번에 확인한 범위">FB/NFB 3-0은 10/11년 지원·모두 NFB 방향 구간; 포심/비포심 3-2는 11/11 양수·5/11 양수 구간</td>
-<td data-label="아직 남은 범위">카운트만으로 통용되는 구종 우열·최적 배합</td>
-</tr>
-<tr>
-<td data-label="
-
-질문">다른 리그에도 맞나?</td>
-<td data-label="이번에 확인한 범위">이번 분석은 MLB 자료</td>
-<td data-label="아직 남은 범위">KBO 검증</td>
-</tr>
-</tbody></table></div>
-<p><em>BCAI는 시작 평균=100인 지수다. W는 타석의 최종 결과에 볼넷·안타·장타별 가중치를 붙인 공격가치다. 표의 자체 결과는 아래 자료 기록과 두 모델 해설에 연결했다. 2026년은 9월 7일까지다.</em></p>
-<p>‘어디까지 믿을 수 있나’에 하나의 확률을 붙이지 않은 이유도 여기 있다. 표를 제대로 계산했는지와 실제 작전을 바꿔도 좋아지는지는 서로 다른 질문이다. 앞의 확인을 마쳤다고 뒤의 답까지 자동으로 생기지는 않는다.</p>
-</section><section class="content-section " aria-labelledby="section-2"><h2 id="section-2">2. 데이터 — 11시즌 약 190만 타석과 비교별 분모</h2>
-<h3 id="section-2-sub-1"><span class="sub-number">2.1</span>기간을 넓히니 표본은 얼마나 늘었을까?</h3>
-<p class="section-summary"><strong>전체 2015–2025는 1,896,892 유효 완료 타석·25,193경기다.</strong> 기존 2024·2025의 364,124타석·4,859경기에 추가 2015–2023의 1,532,768타석·20,334경기를 연결했다. 카운트별 도달 타석을 더한 합계가 아니라 시작 타석 기준이다. <a href="../../analysis/history_comparison_20260928_r01/tables/year_denominators.html">시즌별 분모</a></p>
-<p>BCAP는 위치·구종·스윙에 필요한 정보와 행동별 지원 조건을 추가로 적용하므로 이 분모와 다르다. 모든 비교에 ‘190만 타석’이라는 같은 표본 크기를 붙이지 않는다.</p>
-<h3 id="section-2-sub-2"><span class="sub-number">2.2</span>기존 두 시즌에서는 어떤 타석을 제외했을까?</h3>
-<p class="section-summary"><strong>기존 BCAI 기준 표는 MLB 두 시즌, 4,859경기의 유효 완료 364,124타석으로 만들었다.</strong> 원자료는 Statcast 기록이다. 한 타석의 시작부터 최종 결과까지 연결할 수 있는지를 먼저 확인했다.</p>
+</style></head><body><header class="topbar"><a class="brand" href="index.html">BASELINE</a><span class="meta">볼카운트 연재 · 2026.09.29 · 작업 회고 20차 검토본</span></header><nav aria-label="연재 글"><a class="" href="01_ball_count.html">1. 볼카운트 분석 칼럼</a><a class="" href="02_bcai.html">2. BCAI 설명 글</a><a class="" href="03_bcap.html">3. BCAP 설명 글</a><a class="" href="04_references_ko.html">4. 참고문헌 한국어 해설</a><a class="current" href="05_data_validation.html">5. 데이터·검증·개발 과정</a></nav><main><article><h1>볼카운트 칼럼을 쓰면서 — 데이터와 모델을 고쳐 온 기록</h1><details class="toc"><summary>이 글의 목차 — 결과·방법·해석</summary><ul><li class=""><a href="#section-1">1. 9월 6–7일 — 질문보다 먼저 집계 기준을 정해야 했다</a></li><li class=""><a href="#section-2">2. 9월 8–9일 — Ridge가 멈췄다고 계산이 끝난 것은 아니었다</a></li><li class=""><a href="#section-3">3. 9월 9–12일 — 행동을 비교하려니 이름과 분류부터 다시 봐야 했다</a></li><li class=""><a href="#section-4">4. 9월 14일 — 다른 해를 확인하면서 비교하지 않기로 한 자료도 생겼다</a></li><li class=""><a href="#section-5">5. 9월 15–18일 — 문헌을 읽고도 바로 채울 수 없는 설명이 남았다</a></li><li class=""><a href="#section-6">6. 9월 26–27일 — 계산한 순서와 독자가 이해하는 순서가 달랐다</a></li><li class=""><a href="#section-7">7. 9월 28일 — R로 계산을 확인하고 열한 시즌으로 넓혔다</a></li><li class=""><a href="#section-8">8. 9월 28–29일 — 반복된 결과와 예외를 원고에 함께 남겼다</a></li><li class=""><a href="#section-9">9. 지금 남겨 두는 한계 — 확인한 것과 하지 않은 것을 나누기</a></li><li class=""><a href="#section-10">이 글의 용어 메모</a></li></ul></details>
+<p><em>Baseline 볼카운트 연재 ⑤ · 2026년 9월 29일 · 작업 회고 20차</em></p>
+<p>이번 칼럼을 준비하며 했던 작업을 시간순으로 정리해 두려고 한다. 결과를 한 번 계산하고 글로 옮긴 것은 아니었다. 무엇을 한 번으로 셀지 정하고, 계산이 제대로 끝났는지 확인하고, 다른 연도의 자료를 붙여 보면서 설명과 분석의 범위를 여러 차례 고쳤다.</p>
+<p>아래 날짜는 남아 있는 작업 기록을 기준으로 했다. 서로 겹쳐 진행한 일은 주요 수정과 확인이 이루어진 시점에 묶었다. 새롭게 분석한 글이 아니라, 무엇을 시도했고 무엇을 고쳤으며 끝내 어디까지밖에 말할 수 없었는지를 남기는 개인적인 정리다.</p>
+<section class="content-section " aria-labelledby="section-1"><h2 id="section-1">1. 9월 6–7일 — 질문보다 먼저 집계 기준을 정해야 했다</h2>
+<p>처음에는 카운트별로 다음 구종과 선택 비율, 볼·스트라이크 결과, 스윙 여부, 다음 공과 최종 타석 결과까지 함께 보고 싶었다. 같은 카운트라도 어떤 경로로 왔는지, 점수와 주자 상황이 다른지도 관심사였다. 그런데 이 질문들을 한꺼번에 다루기 전에, 우선 ‘카운트가 유리하다’는 말을 어떤 숫자로 표현할지부터 정해야 했다.</p>
+<p>첫 기준 자료는 MLB 2024·2025였다. 처음부터 지금의 11시즌 결과가 있었던 것은 아니다. 먼저 두 시즌의 기록에서 타석의 시작과 끝을 연결하고, 카운트에 도달한 타석의 결과를 평균내는 BCAI를 정리했다.</p>
+<p><strong>기존 BCAI 기준 표는 MLB 두 시즌, 4,859경기의 유효 완료 364,124타석으로 만들었다.</strong> 원자료는 Statcast 기록이다. 한 타석의 시작부터 최종 결과까지 연결할 수 있는지를 먼저 확인했다.</p>
 <div class="table-wrap"><table class="mobile-cards">
 <thead>
 <tr>
@@ -138,8 +121,8 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 </tbody></table></div>
 <p><em>기존 2024·2025 BCAI의 표본 흐름이다. 11년 전체의 제외 합계가 아니다. 이 숫자를 BCAP의 모든 위치·구종 비교에 그대로 적용하지 않는다. 각 행동 비교에서는 필요한 변수와 양쪽 행동의 비교 가능성을 추가로 확인한다.</em></p>
 <p>가령 마지막 결과가 비어 있는 타석을 아웃으로 채우면 표를 완성하기는 쉽다. 하지만 없던 실패를 만든 셈이 된다. 이번에는 그렇게 채우지 않고 제외했다. 따라서 ‘MLB에서 실제로 발생한 모든 타석을 하나도 빠짐없이 복원했다’는 의미의 총계는 아니다.</p>
-<h3 id="section-2-sub-3"><span class="sub-number">2.3</span>BCAI는 타석을, 스윙률은 공을 센다</h3>
-<p class="section-summary"><strong>같은 카운트에서 파울을 세 번 쳐도 BCAI에서는 그 타석을 한 번만 센다. 스윙률에서는 실제 던진 공들을 각각 센다.</strong></p>
+<p>이 과정에서 ‘자료에 숫자가 있다’와 ‘같은 기준으로 셀 수 있다’가 다르다는 점을 계속 확인해야 했다. 특히 타석을 세는 표와 공을 세는 표를 한 문장에 넣으면, 서로 다른 비율을 같은 기준처럼 읽기 쉬웠다.</p>
+<p><strong>같은 카운트에서 파울을 세 번 쳐도 BCAI에서는 그 타석을 한 번만 센다. 스윙률에서는 실제 던진 공들을 각각 센다.</strong></p>
 <p>예를 들어 1-2에서 파울 두 개를 친 뒤 볼을 골라 2-2로 갔다고 하자. 이 타석은 BCAI의 1-2 집단에 한 번 들어간다. 우리가 묻는 것은 ‘1-2를 거친 타석이 어떻게 끝났나’이기 때문이다. 반면 1-2의 스윙률을 구할 때는 파울 두 공과 볼 한 공이 각각 판단 기회다.</p>
 <div class="table-wrap"><table class="mobile-cards">
 <thead>
@@ -176,68 +159,18 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 <p><strong>해석 메모 | 많은 공이 모두 별개의 실험은 아니다</strong></p>
 <p>한 타석의 여러 공은 같은 최종 결과를 공유한다. 같은 경기의 기록도 서로 관련될 수 있다. 투구 수가 많다는 이유만으로 모두 독립된 관찰이라고 계산하지 않았으며, 불확실성을 구할 때 경기 단위를 고려했다.</p>
 </aside>
-</section><section class="content-section " aria-labelledby="section-3"><h2 id="section-3">3. 숫자의 단위 — W는 실제 득점도, 승리 확률도 아니다</h2>
-<h3 id="section-3-sub-1"><span class="sub-number">3.1</span>볼넷과 장타를 함께 세기 위한 척도다</h3>
-<p class="section-summary"><strong>W는 타석의 최종 결과에 점수를 붙여 서로 비교하는 척도다.</strong> 2024년에는 비고의 볼넷 0.689, 단타 0.882, 홈런 2.050처럼 해당 시즌의 wOBA 가중치를 사용했다. 이 점수를 평균 내면 안타 수만 세는 것보다 볼넷과 장타를 함께 볼 수 있다.</p>
+<p>결과를 점수로 바꾼 뒤에도 단위 설명이 필요했다. 단순히 ‘공격가치’라고 쓰면 실제 득점이나 확률로 읽힐 수 있었기 때문이다.</p>
+<p><strong>W는 타석의 최종 결과에 점수를 붙여 서로 비교하는 척도다.</strong> 2024년에는 비고의 볼넷 0.689, 단타 0.882, 홈런 2.050처럼 해당 시즌의 wOBA 가중치를 사용했다. 이 점수를 평균 내면 안타 수만 세는 것보다 볼넷과 장타를 함께 볼 수 있다.</p>
 <p>다만 분모에는 희생번트도 포함한 유효 완료 타석을 사용했다. 그래서 이번 평균 W를 공식 wOBA와 같은 값이라고 부르지 않는다. 실책 출루나 아웃 없는 야수선택은 별도 분류이며 이 척도에서는 0을 주지만, 그것을 기록상 아웃으로 바꾼 것도 아니다.</p>
 <aside class="interpretation-note" aria-label="해석 메모">
 <p><strong>해석 메모 | 0점은 실제 영향이 없었다는 뜻이 아니다</strong></p>
 <p>이 점수표에 별도 공격 크레딧을 주지 않았다는 뜻이다. 실책으로 주자가 들어온 경기 장면까지 ‘아무 득점 영향이 없었다’고 평가한 것이 아니다. 주자 진루와 병살의 상황별 실제 득점 변화를 모두 반영하는 척도도 아니다.</p>
 </aside>
-<h3 id="section-3-sub-2"><span class="sub-number">3.2</span>BCAI와 BCAP는 같은 재료를 다른 방식으로 읽는다</h3>
-<p class="section-summary"><strong>BCAI는 시작 평균을 100으로 바꾼 지수이고, BCAP의 차이는 원래 W 단위다.</strong> BCAI 120은 시작 평균보다 가중 공격가치가 20% 높았다는 뜻이다. BCAP에서 0.02 W 차이가 났다고 BCAI 2포인트 차이로 읽으면 안 된다.</p>
-<p>현재 11시즌 비교는 연도별 지수·범위를 제시한다. 기존 두 시즌의 BCAI는 시즌별 시작 평균과 비교한 비율을 먼저 구한 뒤, 고정된 시즌 비중으로 합쳤다. 어떤 카운트에 특정 시즌의 기록이 더 많다는 이유만으로 비교가 흔들리는 일을 줄이기 위해서다. 정확한 공식과 전체 결과는 <a href="02_bcai.html">BCAI 설명 글</a>에 있다.</p>
-<p><a id="validation-years"></a></p>
-</section><section class="content-section " aria-labelledby="section-4"><h2 id="section-4">4. 검증 — 계산 확인, 예측 평가, 다른 해의 확인을 나눴다</h2>
-<h3 id="section-4-sub-1"><span class="sub-number">4.1</span>모델의 상태 표시는 사용 범위까지 읽어야 한다</h3>
-<p class="section-summary"><strong>관찰 지수의 계산을 검증했다고 행동 비교까지 검증 완료가 되는 것은 아니다.</strong> 이번 분석 도구들은 역할과 현재 상태가 다르다.</p>
-<div class="table-wrap"><table class="mobile-cards">
-<thead>
-<tr>
-<th>도구</th>
-<th>현재 상태</th>
-<th>이 상태가 뜻하는 것</th>
-</tr>
-</thead>
-<tbody><tr>
-<td data-label="
-
-도구">BCAI-OBS v1.0.0</td>
-<td data-label="현재 상태">명시 범위 검증 · VALIDATED</td>
-<td data-label="이 상태가 뜻하는 것">도달 타석의 관찰 지수와 해당 검증 범위를 확인</td>
-</tr>
-<tr>
-<td data-label="
-
-도구">BCAI-Ridge v0.2.0</td>
-<td data-label="현재 상태">탐색 · EXPERIMENTAL</td>
-<td data-label="이 상태가 뜻하는 것">선수·상황 보정의 보조 진단. 수렴은 확인했지만 높은 예측력 인증은 아님</td>
-</tr>
-<tr>
-<td data-label="
-
-도구">BCAI 상태 평균 차이 v0.1.0</td>
-<td data-label="현재 상태">탐색 · EXPERIMENTAL</td>
-<td data-label="이 상태가 뜻하는 것">카운트 도달 집단의 평균 차이. 한 공의 인과 효과는 아님</td>
-</tr>
-<tr>
-<td data-label="
-
-도구">BCAP 위치·스윙·두 구종 비교</td>
-<td data-label="현재 상태">탐색 · EXPERIMENTAL</td>
-<td data-label="이 상태가 뜻하는 것">관측 자료의 행동별 보정 비교</td>
-</tr>
-<tr>
-<td data-label="
-
-도구">BCAP 사건별 기여도 분해</td>
-<td data-label="현재 상태">설계 단계 · DRAFT</td>
-<td data-label="이 상태가 뜻하는 것">모의 자료로 계산 구조 확인. 실제 MLB 기여도는 미산출</td>
-</tr>
-</tbody></table></div>
-<p>‘검증’도 몇 층으로 나누면 이해하기 쉽다. 첫째는 분모와 표의 값이 맞는지다. 둘째는 반복 계산이 안정된 답에 도착했는지다. 셋째는 결과를 얼마나 잘 예측하는지다. 넷째는 다른 자료에서도 비슷한 모습이 남는지다. 실제 행동을 바꾸는 실험은 이와 또 다른 층이다.</p>
-<h3 id="section-4-sub-2"><span class="sub-number">4.2</span>Ridge는 계산을 고쳤지만 주 결과로 올리지 않았다</h3>
-<p class="section-summary"><strong>아래는 기존 개발·외부 평가 기록이다. 역사 11시즌 확장은 관찰 BCAI이며 Ridge의 11시즌 확장을 새로 확인한 것은 아니다.</strong></p>
+<p><strong>BCAI는 시작 평균을 100으로 바꾼 지수이고, BCAP의 차이는 원래 W 단위다.</strong> BCAI 120은 시작 평균보다 가중 공격가치가 20% 높았다는 뜻이다. BCAP에서 0.02 W 차이가 났다고 BCAI 2포인트 차이로 읽으면 안 된다.</p>
+<p>이후 11시즌 비교에서는 연도별 지수·범위를 함께 확인했고, 본문의 표는 연도별 지수의 평균을 정수로 표시했다. 기존 두 시즌의 BCAI는 시즌별 시작 평균과 비교한 비율을 먼저 구한 뒤, 고정된 시즌 비중으로 합쳤다. 어떤 카운트에 특정 시즌의 기록이 더 많다는 이유만으로 비교가 흔들리는 일을 줄이기 위해서다. 정확한 공식과 전체 결과는 <a href="02_bcai.html">BCAI 설명 글</a>에 있다.</p>
+</section><section class="content-section " aria-labelledby="section-2"><h2 id="section-2">2. 9월 8–9일 — Ridge가 멈췄다고 계산이 끝난 것은 아니었다</h2>
+<p>카운트별 평균을 만든 다음에는 선수와 시작 상황이 섞여 있다는 문제가 남았다. 이를 고려하기 위해 Ridge 보정을 붙였지만, 초기 계산은 반복 횟수 한도에서 멈췄다. 출력값이 생겼다는 것만으로 안정된 답을 얻었다고 볼 수 없었다.</p>
+<p><strong>아래는 기존 개발·외부 평가 기록이다. 역사 11시즌 확장은 관찰 BCAI이며 Ridge의 11시즌 확장을 새로 확인한 것은 아니다.</strong></p>
 <p><strong>후속 Ridge의 207개 적합은 모두 수렴 기준을 충족했다. 그래도 타석별 예측 오차의 개선은 작아 BCAI-OBS를 주 결과로 유지했다.</strong></p>
 <p>초기 버전에서는 15개 적합 모두 반복 계산 150회 한도에 도달했다. 정해 둔 안정성 기준을 만족한 상태에서 멈춘 것이 아니었다. 선수와 구장 효과를 시즌마다 완전히 따로 두던 구조를 수정하고, 학습 자료 안에서 기준값과 보정 강도를 정하도록 절차를 보완했다. 계산 방식도 손보고, 후속 버전에서는 계산을 더 진행해도 예측이 사실상 달라지지 않는지 확인했다. 별도의 계산 방법으로 얻은 해와도 대조했다.</p>
 <p>하지만 잘 멈추는 계산과 잘 맞히는 모형은 다르다. 모형의 타석별 예측 오차를 단순한 상수 예측과 비교한 개선 폭은 다음과 같았다.</p>
@@ -273,64 +206,12 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 <p><strong>해석 메모 | ‘수정 전후’ 비교의 범위</strong></p>
 <p>후속 버전은 계산 방법뿐 아니라 변수와 평가 절차도 바뀌었다. 개선분 전체를 어느 한 수정의 효과로 나누어 설명할 수는 없다. 초기 실행은 지우지 않고 별도로 보존했다.</p>
 </aside>
-<h3 id="section-4-sub-3"><span class="sub-number">4.3</span>과거 2023년 확인은 두 모델에서 방식이 달랐다</h3>
-<p class="section-summary"><strong>BCAI-Ridge의 외부 예측 평가와 BCAP의 다른 연도 패턴 확인은 구별해야 한다.</strong> 같은 ‘2023년 확인’이라고 불러도 시행한 일이 다르다.</p>
-<div class="table-wrap"><table class="mobile-cards">
-<thead>
-<tr>
-<th>분석</th>
-<th>2023년에 한 일</th>
-<th>적절한 해석</th>
-</tr>
-</thead>
-<tbody><tr>
-<td data-label="
-
-분석">BCAI-Ridge</td>
-<td data-label="2023년에 한 일">개발 자료에서 정한 최종 모형으로 예측</td>
-<td data-label="적절한 해석">고정 모형의 외부 자료 예측 평가</td>
-</tr>
-<tr>
-<td data-label="
-
-분석">BCAP</td>
-<td data-label="2023년에 한 일">개발에서 정한 절차를 유지하고 2023년 안에서 보조 모형을 다시 학습</td>
-<td data-label="적절한 해석">같은 분석 절차로 다른 연도의 패턴 확인</td>
-</tr>
-</tbody></table></div>
-<p>BCAP의 경우 경기 단위로 자료를 나누어, 학습에 쓰지 않은 부분에서 비교 점수를 계산했다. 그러나 2023년 자료는 이전 BCAI·BCAP 초기 분석에서 이미 살펴본 적이 있었다. 따라서 ‘전혀 보지 않은 미래 자료에서 최종 모형을 시험했다’고 표현하지 않는다.</p>
-<p>그 범위 안에서 0-2의 존 안−존 밖 차이는 2023년 <strong>+0.034266 W</strong>, 1-2는 <strong>+0.024117 W</strong>였다. 양수는 존 밖의 허용 W가 더 낮았다는 뜻이다. 보정 구간도 각각 [0.022304, 0.046228], [0.014006, 0.034228]로 같은 방향이었다. 이런 확인은 한 시기의 우연한 모습일 가능성을 살피는 데 보탬이 되지만, 투구 지시의 실험을 대신하지는 않는다.</p>
-<figure><button class="figure-toggle" type="button" aria-expanded="false" onclick="const box=this.nextElementSibling;const expanded=box.classList.toggle('zoomed');this.setAttribute('aria-expanded',expanded);this.textContent=expanded?'그림 축소 · 좌우로 밀어 읽기':'그림 확대해서 읽기';">그림 확대해서 읽기</button><div class="figure-scroll"><a class="image-link" href="../../figures/naver_20260918/03_sb_2023.png" target="_blank" aria-label="그림 크게 보기"><img src="../../figures/naver_20260918/03_sb_2023.png" alt="2023년 0-2와 1-2의 위치 비교"></a></div></figure>
-<p><em>그림 1. MLB 2023의 과거 연도 재현. 0-2는 47,912투구, 1-2는 68,412투구가 비교에 포함됐다. 차이는 각각 +0.034266 W, +0.024117 W. 주요 4개 비교를 보정한 구간은 각각 [+0.022304, +0.046228], [+0.014006, +0.034228] W다. 출처: 기존 BCAP 외부 연도 결과. 개발 그림과 다중비교 보정 범위가 다르다.</em></p>
-<h3 id="section-4-sub-4"><span class="sub-number">4.4</span>R로 바뀐 것과 기간이 늘어난 것을 구별했을까?</h3>
-<p class="section-summary"><strong>기준 두 시즌의 R 재현과 추가 연도의 별도 적합을 나눠 확인했다.</strong> BCAI는 기존 점추정·분모·제외를 재현했고, BCAP는 기존 분할·보정 경기·규제값을 사용한 R 재적합과 행별 점수·지원 마스크를 대조했다. 추가 연도는 각 해 자체 자료와 R 경기 분할로 별도 적합했다. 언어 전환의 수치 대조가 기간 비교의 모든 조건을 같게 만든 것은 아니다.</p>
-<p>예를 들어 기존 Python 2023 위치 0-2는 +0.034266 W·47,912지원 투구, 새 R 결과는 +0.035043 W·47,932투구다. 같은 방향이지만 같은 지원 행·점수의 복제는 아니다. 기존 핵심 4개 비교 보정과 새 연도 상한 255개 보정도 다르다.</p>
-<h3 id="section-4-sub-5"><span class="sub-number">4.5</span>2020과 측정 초기 두 해를 빼면 결론도 바뀔까?</h3>
-<p class="section-summary"><strong>주요 방향은 남지만, 제외만으로 비교 문제가 해결되지는 않는다.</strong> 2020은 898경기·66,269 유효 타석의 단축 시즌이다. 2015·2016 구속은 보정 PITCHf/x 기반으로 2017 이후 Statcast와 직접 동등성이 확인되지 않았다. 이전 구속 변수가 네 BCAP 모듈에 쓰여 모두 관련되는 제한이다.</p>
-<p>추가 기간에서 2020을 빼면 FB/NFB 3-0은 8/8년 지원·양수 구간이다. 2017–2023으로 한정하면 6/7년 지원·지원된 6년 양수 구간이다. 포심/비포심 3-2는 2017–2023에서 7/7년 양수 점추정·3/7년 양수 구간이었다. 기간이 바뀌면 분모도 바뀌므로 원 결과의 ‘수정된 정답’이라고 부르지 않는다. <a href="../../analysis/history_comparison_20260928_r01/report.html">범위별 민감도와 실제 가중치</a></p>
-<p>시즌별 W 가중치·표본 구성·지원 선택, 공유 적합과 연도별 적합의 차이는 남는다. 단일 공통 가중치의 재평가, 모든 해의 반복 분할·전체 재학습, 역사 Ridge 확장은 수행하지 않았다.</p>
-<h3 id="section-4-sub-6"><span class="sub-number">4.6</span>이번 검수는 어디까지 확인했을까?</h3>
-<p class="section-summary"><strong>BCAI 132행과 BCAP 2,552집단 전체를 먼저 살핀 뒤 사례를 골랐다.</strong> 53개 완료 실행과 입력 장부 172개 파일을 연결하고 지원 기준·차이·구간 공식·가중치·미지원 값 보류를 검산했다. <a href="../../analysis/history_comparison_20260928_r01/audit/final_review.md">수치 검사 13항목과 화면 검사</a>는 저장 출력의 산술·출처·표시 확인이다. 원자료 전체의 새 재적합이나 인과 타당성 검증은 아니다.</p>
-<p>FanGraphs 과거 시즌 상수는 기존 출처 기록의 검색 색인 확인과 직접 접근 실패를 구분해 유지했다. 이번 편집에서 새 원문을 읽었다고 주장하지 않는다. <a href="../../sources.md">확보 기록</a></p>
-<p><a id="uncertainty"></a></p>
-</section><section class="content-section " aria-labelledby="section-5"><h2 id="section-5">5. 불확실성 — 선이 0을 지나는 것과 빈칸은 다르다</h2>
-<h3 id="section-5-sub-1"><span class="sub-number">5.1</span>차이가 불명확한 경우와 비교 자체가 어려운 경우를 나눴다</h3>
-<p class="section-summary"><strong>‘불명확’은 차이를 분명히 가리지 못했다는 뜻이고, ‘자료 부족’은 비교를 지탱할 기록이 부족하다는 뜻이다.</strong> 둘 다 ‘차이가 없다’로 바꾸지 않았다.</p>
-<p>예를 들어 대부분의 타자가 지켜본 상황에서 드물게 휘두른 몇 타석만 남았다면, 양쪽을 비교하는 일이 어려워진다. 전체 기록이 많아도 그 조건 안에서 양쪽 행동이 충분히 관찰됐는지가 중요하다. BCAP는 이런 비교 가능성을 확인하는 기준을 두었다. 원리는 <a href="03_bcap.html">BCAP 설명 글</a>에 예시와 함께 정리했다.</p>
-<p>2023년 존 안 3-0·3-1은 스윙 쪽 점추정이었지만 구간이 0을 포함했다. 존 밖 3-0의 네 구역은 비교 자료가 부족했다. 그래서 앞은 회색, 뒤는 빈칸으로 구분했다.</p>
-<h3 id="section-5-sub-2"><span class="sub-number">5.2</span>그림의 가로선도 계산한 범위가 있다</h3>
-<p class="section-summary"><strong>역사 BCAP 구간은 연도별 비교 가족 상한 255를 적용한 조건부 구간이다.</strong> 11년의 모든 비교를 동시에 보장하는 구간이 아니다. 2024·2025 공유 적합의 PITCH/SB/SWING은 기존 219, FF는 255 가족을 사용했다. 연도별 구간이 겹치는지 또는 유의한 해가 몇 개인지로 연도 차이를 검정하지 않는다. <a href="../../analysis/history_comparison_20260928_r01/technical_appendix.html">구간 공식과 적용 가족</a>. 아래는 기존 개발·외부 확인에서 사용했던 구간의 범위다.</p>
-<p><strong>구간은 점 하나보다 많은 정보를 주지만, 분석의 모든 불확실성을 한꺼번에 담지는 않는다.</strong></p>
-<p>BCAI-OBS에서는 경기를 단위로 다시 뽑는 계산을 2,000회 수행하고, 기준 0-0을 제외한 11카운트의 동시 95% 구간을 구했다. 같은 자료를 조금 다르게 구성했을 때 지수가 얼마나 흔들리는지 살피는 방식이다. 이 구간을 Ridge 결과에 그대로 붙이지 않았다.</p>
-<p>BCAP는 경기 안의 기록이 관련될 수 있다는 점과 여러 비교를 함께 보고 있다는 점을 고려한 구간을 사용했다. 다만 이미 얻은 비교 점수를 바탕으로 한 구간이라, 보조 모형을 다시 학습할 때 생기는 전체 변동까지 모두 포함하지는 않는다. 선수 단위의 모든 상관까지 해결한 것도 아니다.</p>
-<aside class="interpretation-note" aria-label="해석 메모">
-<p><strong>해석 메모 | 두 그림의 선 길이를 겨루지 않는다</strong></p>
-<p>개발 위치 그림은 219개 비교 보정, 2023년 핵심 위치 그림은 사전에 둔 4개 주요 비교 보정을 사용했다. 다른 보조 결과에는 236개 비교 보정이 쓰였다. 비교 묶음이 다르므로 선이 짧다는 이유만으로 어느 해가 더 정확한 모형이라고 결론 내리지 않는다.</p>
-</aside>
+<p>이 시기의 외부 평가 준비에서는 2026년 9월 7일의 11경기가 처음 자료에서 빠져 있는 것도 확인했다. 누락분을 보충한 뒤 고정한 모형으로 평가했고, 실패한 실행과 완료된 실행은 따로 남겼다. 2026년 결과는 9월 7일까지의 부분 시즌이며, 2025년 가중치를 고정해 사용했다는 조건도 함께 적었다.</p>
+<p>계산이 안정됐다는 것, 자료를 보충했다는 것, 예측력이 높아졌다는 것은 각각 다른 확인이었다. 이 구분 때문에 Ridge를 주 지수로 올리지 않고 보조 진단으로 남겼다.</p>
 <p><a id="development"></a></p>
-</section><section class="content-section " aria-labelledby="section-6"><h2 id="section-6">6. 시행착오 — 고친 문제와 보류한 문제</h2>
-<h3 id="section-6-sub-1"><span class="sub-number">6.1</span>같은 숫자처럼 보여도 질문이 달랐다</h3>
-<p class="section-summary"><strong>분모와 이름을 정리하는 작업이 결과 해석을 바꿨다.</strong> 타석과 투구를 구별하고, 반복 카운트의 중복을 정리했으며, 구종 비교도 두 종류로 나눴다.</p>
+</section><section class="content-section " aria-labelledby="section-3"><h2 id="section-3">3. 9월 9–12일 — 행동을 비교하려니 이름과 분류부터 다시 봐야 했다</h2>
+<p>BCAI로 카운트의 상태를 본 뒤에는 같은 카운트에서 어떤 공과 행동이 다른 결과로 이어졌는지를 비교했다. BCAP의 초기 구현을 거쳐 위치·스윙·구종 비교를 정리하는 동안, 계산값뿐 아니라 비교의 이름이 중요해졌다. ‘패스트볼’, ‘포심’, ‘가운데’, ‘볼’이 서로 다른 뜻으로 읽힐 수 있었기 때문이다.</p>
+<p><strong>분모와 이름을 정리하는 작업이 결과 해석을 바꿨다.</strong> 타석과 투구를 구별하고, 반복 카운트의 중복을 정리했으며, 구종 비교도 두 종류로 나눴다.</p>
 <div class="table-wrap"><table class="mobile-cards">
 <thead>
 <tr>
@@ -376,8 +257,44 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 </tr>
 </tbody></table></div>
 <p>기존 개발·2023·2026 외부 확인에서 구종은 분류별 표본뿐 아니라 두 분류가 함께 비교 가능한 공통 표본에서도 살폈다. 분류를 바꾸면서 비교 대상까지 바뀌면 무엇 때문에 결과가 달라졌는지 알기 어려워서다. 96개 보고 비교에는 이렇게 겹치는 표본과 분류가 들어 있다. 독립된 실험 96개를 한 것은 아니다. 이번 역사 R 묶음은 분류별 자체 지원 표본이며 그 공통 표본 설계를 모든 해에 복원하지 않았다.</p>
-<h3 id="section-6-sub-2"><span class="sub-number">6.2</span>2026년 위치 비교는 결과가 나빠서 뺀 것이 아니다</h3>
-<p class="section-summary"><strong>2026년의 위치 비교는 앞선 연도와 같은 자로 잰다는 근거를 확보하지 못해 보류했다.</strong> 새로운 외부 행동별 결과를 계산·열람하기 전에 내린 판단이다.</p>
+<p>위 표의 2026년 누락 보충은 앞 절의 평가 준비에서 처리한 일이다. 분류 문제와 함께 작업 중 고친 항목으로 남겨 두었다. 이후 11시즌 확장에서 공통 표본 설계를 모든 해에 복원하지 않았다는 점도 당시 비교와 현재 결과를 구분하기 위한 기록이다.</p>
+<p><a id="uncertainty"></a></p>
+<p><strong>‘불명확’은 차이를 분명히 가리지 못했다는 뜻이고, ‘자료 부족’은 비교를 지탱할 기록이 부족하다는 뜻이다.</strong> 둘 다 ‘차이가 없다’로 바꾸지 않았다.</p>
+<p>예를 들어 대부분의 타자가 지켜본 상황에서 드물게 휘두른 몇 타석만 남았다면, 양쪽을 비교하는 일이 어려워진다. 전체 기록이 많아도 그 조건 안에서 양쪽 행동이 충분히 관찰됐는지가 중요하다. BCAP는 이런 비교 가능성을 확인하는 기준을 두었다. 원리는 <a href="03_bcap.html">BCAP 설명 글</a>에 예시와 함께 정리했다.</p>
+<p>2023년 존 안 3-0·3-1은 스윙 쪽 점추정이었지만 구간이 0을 포함했다. 존 밖 3-0의 네 구역은 비교 자료가 부족했다. 그래서 앞은 회색, 뒤는 빈칸으로 구분했다.</p>
+<p>자료가 많다는 이유만으로 세부 비교도 모두 가능할 것이라고 취급할 수는 없었다. 이때부터 불명확한 차이와 비교 자료가 없는 경우를 다른 표시로 남겼다. 빈칸을 보기 좋게 채우는 것보다 판단을 보류한 이유를 드러내는 편이 분석에 맞았다.</p>
+</section><section class="content-section " aria-labelledby="section-4"><h2 id="section-4">4. 9월 14일 — 다른 해를 확인하면서 비교하지 않기로 한 자료도 생겼다</h2>
+<p>같은 결과가 다른 해에도 남는지 확인했지만, 여기서도 ‘외부 검증’이라는 말 하나로 묶을 수 없는 작업들이 있었다. 이미 만든 모형을 그대로 적용한 경우와 같은 절차로 그해 모형을 다시 만든 경우는 다른 일이었다.</p>
+<p><strong>BCAI-Ridge의 외부 예측 평가와 BCAP의 다른 연도 패턴 확인은 구별해야 한다.</strong> 같은 ‘2023년 확인’이라고 불러도 시행한 일이 다르다.</p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>분석</th>
+<th>2023년에 한 일</th>
+<th>적절한 해석</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+분석">BCAI-Ridge</td>
+<td data-label="2023년에 한 일">개발 자료에서 정한 최종 모형으로 예측</td>
+<td data-label="적절한 해석">고정 모형의 외부 자료 예측 평가</td>
+</tr>
+<tr>
+<td data-label="
+
+분석">BCAP</td>
+<td data-label="2023년에 한 일">개발에서 정한 절차를 유지하고 2023년 안에서 보조 모형을 다시 학습</td>
+<td data-label="적절한 해석">같은 분석 절차로 다른 연도의 패턴 확인</td>
+</tr>
+</tbody></table></div>
+<p>BCAP의 경우 경기 단위로 자료를 나누어, 학습에 쓰지 않은 부분에서 비교 점수를 계산했다. 그러나 2023년 자료는 이전 BCAI·BCAP 초기 분석에서 이미 살펴본 적이 있었다. 따라서 ‘전혀 보지 않은 미래 자료에서 최종 모형을 시험했다’고 표현하지 않는다.</p>
+<p>그 범위 안에서 0-2의 존 안−존 밖 차이는 2023년 <strong>+0.034266 W</strong>, 1-2는 <strong>+0.024117 W</strong>였다. 양수는 존 밖의 허용 W가 더 낮았다는 뜻이다. 보정 구간도 각각 [0.022304, 0.046228], [0.014006, 0.034228]로 같은 방향이었다. 이런 확인은 한 시기의 우연한 모습일 가능성을 살피는 데 보탬이 되지만, 투구 지시의 실험을 대신하지는 않는다.</p>
+<figure><button class="figure-toggle" type="button" aria-expanded="false" onclick="const box=this.nextElementSibling;const expanded=box.classList.toggle('zoomed');this.setAttribute('aria-expanded',expanded);this.textContent=expanded?'그림 축소 · 좌우로 밀어 읽기':'그림 확대해서 읽기';">그림 확대해서 읽기</button><div class="figure-scroll"><a class="image-link" href="../../figures/naver_20260918/03_sb_2023.png" target="_blank" aria-label="그림 크게 보기"><img src="../../figures/naver_20260918/03_sb_2023.png" alt="2023년 0-2와 1-2의 위치 비교"></a></div></figure>
+<p><em>그림 1. MLB 2023의 과거 연도 재현. 0-2는 47,912투구, 1-2는 68,412투구가 비교에 포함됐다. 차이는 각각 +0.034266 W, +0.024117 W. 주요 4개 비교를 보정한 구간은 각각 [+0.022304, +0.046228], [+0.014006, +0.034228] W다. 출처: 기존 BCAP 외부 연도 결과. 개발 그림과 다중비교 보정 범위가 다르다.</em></p>
+<p>2026년 자료는 더 조심해서 다뤄야 했다. 표본의 기간만 다른 것이 아니라 위치를 측정하는 기준도 달라져 있었기 때문이다.</p>
+<p><strong>2026년의 위치 비교는 앞선 연도와 같은 자로 잰다는 근거를 확보하지 못해 보류했다.</strong> 새로운 외부 행동별 결과를 계산·열람하기 전에 내린 판단이다.</p>
 <p>기존에 확인한 공식 필드 설명에서는 공의 위치 좌표가 2025년까지 홈플레이트 앞면, 2026년부터 중간면 기준으로 구분돼 있었다. 존의 위아래 경계 정의도 달라졌다. ‘어디에서 잰 위치인가’와 ‘어디까지를 존이라고 부르는가’가 함께 달라진 셈이다.</p>
 <p>존 경계 근처를 지나는 공이라면 이 차이가 분류에 영향을 줄 수 있다. 단순히 좌표의 단위를 맞추거나 높이를 비율로 바꾸는 것만으로 문제가 해결됐다고 볼 수 없었다. 검증된 대응 방법을 확보하지 못한 상태에서 앞선 해와 곧바로 비교하지 않았다.</p>
 <div class="table-wrap"><table class="mobile-cards">
@@ -410,13 +327,99 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 <td data-label="이유">해당 모형은 위치 좌표와 존 파생변수를 사용하지 않음</td>
 </tr>
 </tbody></table></div>
-<p><em>2026-09-14 측정 검토에 기록된 판단이다. 2026 자료는 9월 7일까지이며, 전체 시즌 결과가 아니다. 당시 공식 문서와 검토 경위는 아래 자료 기록에 연결했다.</em></p>
+<p><em>2026-09-14 측정 검토에 기록된 판단이다. 2026 자료는 9월 7일까지이며, 전체 시즌 결과가 아니다. 당시 확인한 문서와 검토 경위는 내부 작업 기록에 보존했다.</em></p>
 <aside class="interpretation-note" aria-label="해석 메모">
 <p><strong>해석 메모 | 보류와 재현 실패는 다르다</strong></p>
 <p>2026년에 반대 결과가 나왔다는 뜻이 아니다. 같은 대상을 비교할 수 있는지를 먼저 해결해야 한다는 뜻이다. 구종 비교를 진행한 것도 구종 측정의 모든 연도 차이를 완전히 검증했다는 의미는 아니다.</p>
 </aside>
-<h3 id="section-6-sub-3"><span class="sub-number">6.3</span>해결한 문제와 남은 문제를 한 줄로 읽기</h3>
-<p class="section-summary"><strong>개발 과정의 결론은 ‘모두 해결했다’가 아니라, 어떤 문제를 처리했고 무엇을 남겼는지 분리했다는 것이다.</strong></p>
+</section><section class="content-section " aria-labelledby="section-5"><h2 id="section-5">5. 9월 15–18일 — 문헌을 읽고도 바로 채울 수 없는 설명이 남았다</h2>
+<p>이 시기에는 볼카운트 문헌을 넓게 찾아 읽고, 실제 원문을 확인한 자료와 확인하지 못한 자료를 구분했다. 초록만 확인한 연구를 충분히 읽은 근거처럼 쓰지 않았고, 원문을 읽은 경우에도 외부 연구의 결과를 자체 모형의 검증 결과와 섞지 않았다. 참고문헌을 늘리는 일과 지금의 주장을 뒷받침하는 일은 같지 않았다.</p>
+<p>상태 평균 차이와 사건별 기여도 분해도 후속으로 살폈다. 계산을 하나 더 만들었다고 처음의 질문이 곧바로 해결되지는 않았다.</p>
+<p><strong>0-2와 1-2의 평균 차이를 곧바로 ‘0-2에서 볼 하나를 던진 비용’으로 읽을 수는 없다.</strong> 1-2에 도달한 타석 중에는 0-2를 거치지 않은 타석도 있기 때문이다.</p>
+<p>2024년 평균 W 간격은 0-2와 1-2 사이에서 약 0.0238, 2-2와 3-2 사이에서 약 0.1069였다. 뒤쪽 간격이 더 컸다는 관찰은 가능하다. 그러나 서로 다른 도달 집단을 비교한 것이므로 같은 타석의 그 공만 볼로 바꾼 결과는 아니다. 이 차이의 계산 방법과 해석 범위는 <a href="02_bcai.html">BCAI 해설</a>의 STATE-DELTA 절에 정리했다.</p>
+<p><strong>헛스윙·약한 타구·다음 카운트가 각각 얼마나 기여했는지는 아직 실제 MLB 수치로 분해하지 못했다.</strong></p>
+<p>존 밖 투구의 허용 W가 낮은 이유로 여러 경로를 생각할 수 있다. 타자가 따라 나와 헛스윙했을 수도 있고, 맞혔지만 좋지 않은 타구가 됐을 수도 있다. 지켜본 뒤 이어진 승부가 중요했을 수도 있다. 현재 결과만으로 어느 경로가 몇 퍼센트를 설명한다고 말할 수는 없다.</p>
+<p>사건별 확률과 이후 가치를 합하는 계산 구조는 만들었다. 다만 모의 자료로 구조를 확인한 단계다. 계산식이 합을 제대로 내는지 확인한 것과 실제 야구에서 그 재료를 추정한 것은 구분해야 한다.</p>
+<p><strong>현재의 평균 차이를 그대로 다음 경기의 배합 비율로 바꿀 수는 없다.</strong> 0-2마다 존 밖만 던진다는 규칙을 타자가 알아채면, 지금보다 덜 따라 나올 수 있다.</p>
+<p>이때 이득이 얼마나 줄어드는지 계산하려면 같은 선수·위치·상황에서 스윙 확률과 각 선택 이후의 가치를 함께 알아야 한다. 별도의 표에서 얻은 평균들을 임의로 곱해 답을 만들지 않았다. 상대 적응, 최적 혼합비율, 타석 전체의 최적 정책은 미산출 상태다. 관련 선행 연구의 접근은 <a href="04_references_ko.html#ref-09">문헌 해설 9–11</a>에서 따로 읽을 수 있다.</p>
+<p>9월 18일에는 후속 계산의 저장값과 산술을 확인했다. 그러나 합계와 수식이 맞는다는 확인을 실제 MLB의 원인별 기여도나 전략 효과를 얻었다는 말로 바꾸지는 않았다. 이 구분은 이후 원고에서도 계속 남겼다.</p>
+</section><section class="content-section " aria-labelledby="section-6"><h2 id="section-6">6. 9월 26–27일 — 계산한 순서와 독자가 이해하는 순서가 달랐다</h2>
+<p>원고를 다듬으면서는 설명 자체도 수정 대상이 됐다. 모델을 만들며 확인한 내용을 순서대로 나열하면 독자는 정작 결과와 단위, 비교 대상을 놓칠 수 있었다. 본문과 모델 설명, 참고문헌 해설, 검증·시행착오의 역할을 나누고 필수 단위와 해석 조건은 결과 곁에 남겼다.</p>
+<p>본문은 야구 장면과 실제 결과를 중심으로 읽게 하고, 계산은 모델 해설로 옮겼다. 문헌은 이름만 붙이는 대신 무엇을 비교하고 어떤 결과를 얻었는지 풀어 썼다. 옮긴 설명이 사라지지 않도록 기존 원고와 수정 기록도 보존했다. 이 단계의 수정은 새로운 분석 결과를 만든 작업이 아니라, 이미 계산한 내용을 독자가 이해할 수 있게 정리하는 작업이었다.</p>
+</section><section class="content-section " aria-labelledby="section-7"><h2 id="section-7">7. 9월 28일 — R로 계산을 확인하고 열한 시즌으로 넓혔다</h2>
+<p>이날은 도구를 바꾸는 일과 자료의 기간을 늘리는 일을 구분했다. 먼저 2024·2025 계산을 R로 재현해 기존 값과 대조하고, 그다음 2023년에서 2015년까지 연도별로 확장했다. 새 언어에서 코드가 실행된다는 사실만으로 기존 계산을 재현했다고 말하지 않았다.</p>
+<p><strong>기준 두 시즌의 R 재현과 추가 연도의 별도 적합을 나눠 확인했다.</strong> BCAI는 기존 점추정·분모·제외를 재현했고, BCAP는 기존 분할·보정 경기·규제값을 사용한 R 재적합과 행별 점수·지원 마스크를 대조했다. 추가 연도는 각 해 자체 자료와 R 경기 분할로 별도 적합했다. 언어 전환의 수치 대조가 기간 비교의 모든 조건을 같게 만든 것은 아니다.</p>
+<p>예를 들어 기존 Python 2023 위치 0-2는 +0.034266 W·47,912지원 투구, 새 R 결과는 +0.035043 W·47,932투구다. 같은 방향이지만 같은 지원 행·점수의 복제는 아니다. 기존 핵심 4개 비교 보정과 새 연도 상한 255개 보정도 다르다.</p>
+<p><strong>전체 2015–2025는 1,896,892 유효 완료 타석·25,193경기다.</strong> 기존 2024·2025의 364,124타석·4,859경기에 추가 2015–2023의 1,532,768타석·20,334경기를 연결했다. 카운트별 도달 타석을 더한 합계가 아니라 시작 타석 기준이다.</p>
+<p>BCAP는 위치·구종·스윙에 필요한 정보와 행동별 지원 조건을 추가로 적용하므로 이 분모와 다르다. 모든 비교에 ‘190만 타석’이라는 같은 표본 크기를 붙이지 않는다.</p>
+<p><strong>주요 방향은 남지만, 제외만으로 비교 문제가 해결되지는 않는다.</strong> 2020은 898경기·66,269 유효 타석의 단축 시즌이다. 2015·2016 구속은 보정 PITCHf/x 기반으로 2017 이후 Statcast와 직접 동등성이 확인되지 않았다. 이전 구속 변수가 네 BCAP 모듈에 쓰여 모두 관련되는 제한이다.</p>
+<p>추가 기간에서 2020을 빼면 FB/NFB 3-0은 8/8년 지원·양수 구간이다. 2017–2023으로 한정하면 6/7년 지원·지원된 6년 양수 구간이다. 포심/비포심 3-2는 2017–2023에서 7/7년 양수 점추정·3/7년 양수 구간이었다. 기간이 바뀌면 분모도 바뀌므로 원 결과의 ‘수정된 정답’이라고 부르지 않는다. 범위별 민감도와 실제 가중치</p>
+<p>시즌별 W 가중치·표본 구성·지원 선택, 공유 적합과 연도별 적합의 차이는 남는다. 단일 공통 가중치의 재평가, 모든 해의 반복 분할·전체 재학습, 역사 Ridge 확장은 수행하지 않았다.</p>
+<p>기간이 넓어지면서 불확실성 구간도 같은 방식으로 읽고 있는지 다시 확인했다. 그림의 선이 짧아졌다는 이유만으로 더 좋은 검증이라고 부를 수는 없었다.</p>
+<p><strong>역사 BCAP 구간은 연도별 비교 가족 상한 255를 적용한 조건부 구간이다.</strong> 11년의 모든 비교를 동시에 보장하는 구간이 아니다. 2024·2025 공유 적합의 PITCH/SB/SWING은 기존 219, FF는 255 가족을 사용했다. 연도별 구간이 겹치는지 또는 유의한 해가 몇 개인지로 연도 차이를 검정하지 않는다. 구간 공식과 적용 가족. 아래는 기존 개발·외부 확인에서 사용했던 구간의 범위다.</p>
+<p><strong>구간은 점 하나보다 많은 정보를 주지만, 분석의 모든 불확실성을 한꺼번에 담지는 않는다.</strong></p>
+<p>BCAI-OBS에서는 경기를 단위로 다시 뽑는 계산을 2,000회 수행하고, 기준 0-0을 제외한 11카운트의 동시 95% 구간을 구했다. 같은 자료를 조금 다르게 구성했을 때 지수가 얼마나 흔들리는지 살피는 방식이다. 이 구간을 Ridge 결과에 그대로 붙이지 않았다.</p>
+<p>BCAP는 경기 안의 기록이 관련될 수 있다는 점과 여러 비교를 함께 보고 있다는 점을 고려한 구간을 사용했다. 다만 이미 얻은 비교 점수를 바탕으로 한 구간이라, 보조 모형을 다시 학습할 때 생기는 전체 변동까지 모두 포함하지는 않는다. 선수 단위의 모든 상관까지 해결한 것도 아니다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 두 그림의 선 길이를 겨루지 않는다</strong></p>
+<p>개발 위치 그림은 219개 비교 보정, 2023년 핵심 위치 그림은 사전에 둔 4개 주요 비교 보정을 사용했다. 다른 보조 결과에는 236개 비교 보정이 쓰였다. 비교 묶음이 다르므로 선이 짧다는 이유만으로 어느 해가 더 정확한 모형이라고 결론 내리지 않는다.</p>
+</aside>
+<p><strong>BCAI 132행과 BCAP 2,552집단 전체를 먼저 살핀 뒤 사례를 골랐다.</strong> 53개 완료 실행과 입력 장부 172개 파일을 연결하고 지원 기준·차이·구간 공식·가중치·미지원 값 보류를 검산했다. 수치 검사 13항목과 화면 검사는 저장 출력의 산술·출처·표시 확인이다. 원자료 전체의 새 재적합이나 인과 타당성 검증은 아니다.</p>
+<p>FanGraphs 과거 시즌 상수는 기존 출처 기록의 검색 색인 확인과 직접 접근 실패를 구분해 유지했다. 이 회고를 쓰면서 새 원문을 읽은 것으로 기록하지도 않았다.</p>
+</section><section class="content-section " aria-labelledby="section-8"><h2 id="section-8">8. 9월 28–29일 — 반복된 결과와 예외를 원고에 함께 남겼다</h2>
+<p>열한 시즌을 보면서 앞서 본 큰 모습이 반복되는 부분도 있었고, 설명을 더 제한해야 하는 부분도 있었다. 존 안 스윙의 반대 점추정이나 특정 카운트의 구종 차이를 지우고 하나의 결론으로 정리할 수는 없었다. 반복되는 방향, 구간의 명확성, 자료의 충분성을 구별해 글을 다시 맞췄다.</p>
+<p>모델 해설은 본문을 읽은 뒤 계산이 궁금한 독자가 읽는 글로 정리했다. 질문과 답을 반복하기보다 계산 순서를 따라 설명하고, BCAI의 Ridge·상태 평균 차이와 BCAP의 공통 계산·분류별 계산도 각 글 안에서 끝까지 다뤘다. 통계 용어만 덧붙이는 것으로 설명이 충분해지는 것은 아니어서, 비교 기준과 불확실성에는 짧은 예시를 보충했다.</p>
+<p>최종 발행 글은 본문, BCAI 설명, BCAP 설명, 참고문헌 한국어 설명, 이 시행착오 기록의 다섯 편으로 정했다. 독자가 필수 설명을 찾으려고 별도의 내부 기술 문서를 따라가야 하는 구성을 피하려고 했다.</p>
+<p><a id="validation-years"></a></p>
+</section><section class="content-section " aria-labelledby="section-9"><h2 id="section-9">9. 지금 남겨 두는 한계 — 확인한 것과 하지 않은 것을 나누기</h2>
+<p>작업을 마무리하며 다시 정리한 기준은 ‘무엇이 검증됐는가’를 구체적으로 쓰는 것이다. 계산이 맞고 반복 실행이 안정됐어도 예측력이 높은 것은 아니고, 다른 해에 비슷한 방향이 나와도 실제 행동을 바꾼 효과가 확인되는 것은 아니다.</p>
+<p><strong>관찰 지수의 계산을 검증했다고 행동 비교까지 검증 완료가 되는 것은 아니다.</strong> 이번 분석 도구들은 역할과 현재 상태가 다르다.</p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>도구</th>
+<th>현재 상태</th>
+<th>이 상태가 뜻하는 것</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+도구">BCAI-OBS v1.0.0</td>
+<td data-label="현재 상태">명시 범위 검증 · VALIDATED</td>
+<td data-label="이 상태가 뜻하는 것">도달 타석의 관찰 지수와 해당 검증 범위를 확인</td>
+</tr>
+<tr>
+<td data-label="
+
+도구">BCAI-Ridge v0.2.0</td>
+<td data-label="현재 상태">탐색 · EXPERIMENTAL</td>
+<td data-label="이 상태가 뜻하는 것">선수·상황 보정의 보조 진단. 수렴은 확인했지만 높은 예측력 인증은 아님</td>
+</tr>
+<tr>
+<td data-label="
+
+도구">BCAI 상태 평균 차이 v0.1.0</td>
+<td data-label="현재 상태">탐색 · EXPERIMENTAL</td>
+<td data-label="이 상태가 뜻하는 것">카운트 도달 집단의 평균 차이. 한 공의 인과 효과는 아님</td>
+</tr>
+<tr>
+<td data-label="
+
+도구">BCAP 위치·스윙·두 구종 비교</td>
+<td data-label="현재 상태">탐색 · EXPERIMENTAL</td>
+<td data-label="이 상태가 뜻하는 것">관측 자료의 행동별 보정 비교</td>
+</tr>
+<tr>
+<td data-label="
+
+도구">BCAP 사건별 기여도 분해</td>
+<td data-label="현재 상태">설계 단계 · DRAFT</td>
+<td data-label="이 상태가 뜻하는 것">모의 자료로 계산 구조 확인. 실제 MLB 기여도는 미산출</td>
+</tr>
+</tbody></table></div>
+<p>‘검증’도 몇 층으로 나누면 이해하기 쉽다. 첫째는 분모와 표의 값이 맞는지다. 둘째는 반복 계산이 안정된 답에 도착했는지다. 셋째는 결과를 얼마나 잘 예측하는지다. 넷째는 다른 자료에서도 비슷한 모습이 남는지다. 실제 행동을 바꾸는 실험은 이와 또 다른 층이다.</p>
+<p><strong>개발 과정의 결론은 ‘모두 해결했다’가 아니라, 어떤 문제를 처리했고 무엇을 남겼는지 분리했다는 것이다.</strong></p>
 <div class="table-wrap"><table class="mobile-cards">
 <thead>
 <tr>
@@ -468,29 +471,60 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 <td data-label="남은 범위">실제 MLB 기여도·상대 반응 효과 미산출</td>
 </tr>
 </tbody></table></div>
-</section><section class="content-section " aria-labelledby="section-7"><h2 id="section-7">7. 아직 남은 질문 — 왜 그랬는지와 무엇을 할지는 다음 단계다</h2>
-<h3 id="section-7-sub-1"><span class="sub-number">7.1</span>카운트 평균의 간격은 한 공의 효과가 아니다</h3>
-<p class="section-summary"><strong>0-2와 1-2의 평균 차이를 곧바로 ‘0-2에서 볼 하나를 던진 비용’으로 읽을 수는 없다.</strong> 1-2에 도달한 타석 중에는 0-2를 거치지 않은 타석도 있기 때문이다.</p>
-<p>2024년 평균 W 간격은 0-2와 1-2 사이에서 약 0.0238, 2-2와 3-2 사이에서 약 0.1069였다. 뒤쪽 간격이 더 컸다는 관찰은 가능하다. 그러나 서로 다른 도달 집단을 비교한 것이므로 같은 타석의 그 공만 볼로 바꾼 결과는 아니다. 전체 표는 BCAI 해설의 보조 결과에서 볼 수 있다.</p>
-<h3 id="section-7-sub-2"><span class="sub-number">7.2</span>존 밖이 좋았던 이유를 비율로 나누지는 못했다</h3>
-<p class="section-summary"><strong>헛스윙·약한 타구·다음 카운트가 각각 얼마나 기여했는지는 아직 실제 MLB 수치로 분해하지 못했다.</strong></p>
-<p>존 밖 투구의 허용 W가 낮은 이유로 여러 경로를 생각할 수 있다. 타자가 따라 나와 헛스윙했을 수도 있고, 맞혔지만 좋지 않은 타구가 됐을 수도 있다. 지켜본 뒤 이어진 승부가 중요했을 수도 있다. 현재 결과만으로 어느 경로가 몇 퍼센트를 설명한다고 말할 수는 없다.</p>
-<p>사건별 확률과 이후 가치를 합하는 계산 구조는 만들었다. 다만 모의 자료로 구조를 확인한 단계다. 계산식이 합을 제대로 내는지 확인한 것과 실제 야구에서 그 재료를 추정한 것은 구분해야 한다.</p>
-<h3 id="section-7-sub-3"><span class="sub-number">7.3</span>타자가 적응하면 이득도 달라질 수 있다</h3>
-<p class="section-summary"><strong>현재의 평균 차이를 그대로 다음 경기의 배합 비율로 바꿀 수는 없다.</strong> 0-2마다 존 밖만 던진다는 규칙을 타자가 알아채면, 지금보다 덜 따라 나올 수 있다.</p>
-<p>이때 이득이 얼마나 줄어드는지 계산하려면 같은 선수·위치·상황에서 스윙 확률과 각 선택 이후의 가치를 함께 알아야 한다. 별도의 표에서 얻은 평균들을 임의로 곱해 답을 만들지 않았다. 상대 적응, 최적 혼합비율, 타석 전체의 최적 정책은 미산출 상태다. 관련 선행 연구의 접근은 <a href="04_references_ko.html#ref-09">문헌 해설 9–11</a>에서 따로 읽을 수 있다.</p>
-</section><section class="content-section " aria-labelledby="section-8"><h2 id="section-8">8. 본문으로 돌아갈 때 기억할 세 가지</h2>
-<p class="section-summary"><strong>열한 시즌이 더해 준 것은 반복의 범위와 예외의 위치다.</strong> BCAI의 큰 모양, 0-2·1-2의 위치 방향, 지원된 존 밖의 테이크 방향은 넓게 이어졌다. 존 안 스윙의 반대 점추정과 구종의 반복 단서는 설명을 고칠 이유가 됐다. 그러나 방향 반복·구간의 명확성·자료 충분성은 서로 다른 주장이다.</p>
-<p><strong>숫자를 읽을 때 ‘무엇을 센 값인지, 무엇과 비교했는지, 어디까지 확인했는지’를 함께 보면 된다.</strong></p>
-<ol>
-<li><strong>BCAI는 카운트의 형편이다.</strong> 그 카운트를 거친 타석의 최종 평균을 보여준다.</li>
-<li><strong>BCAP는 관측된 행동의 보정 비교다.</strong> 선수·상황 차이를 줄여 비교했지만, 실제 행동을 바꾼 실험은 아니다.</li>
-<li><strong>불명확·자료 부족·보류는 다른 결과다.</strong> 차이를 가리지 못한 것, 비교 기록이 부족한 것, 측정 기준을 맞추지 못한 것을 나눠 읽는다.</li>
-</ol>
-<p>이 범위를 지키면 0-2·1-2의 존 밖 결과는 충분히 흥미롭다. 익숙한 야구 조언을 자료와 연결해 볼 수 있고, 다음에 무엇을 더 확인해야 하는지도 구체적으로 알 수 있다.</p>
-<p><a href="01_ball_count.html">본문 칼럼으로 돌아가기</a> · <a href="02_bcai.html">BCAI 결과와 계산</a> · <a href="03_bcap.html">BCAP 결과와 계산</a></p>
-<hr>
-</section><section class="content-section " aria-labelledby="section-9"><h2 id="section-9">이 글의 용어 메모</h2>
+<aside class="result-note" aria-label="결과 요약">
+<p><strong>결과 요약 | 지금 사용할 수 있는 결론</strong></p>
+<p>BCAI는 카운트에 도달한 타석들의 평균 공격가치을 보여준다. BCAP는 그 카운트 안에서 선수·상황 차이를 보정한 행동별 결과를 비교한다. 기록의 패턴과 계산의 안정성을 확인했지만, 행동을 강제로 바꾼 효과나 최적 배합을 확인한 것은 아니다.</p>
+</aside>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>질문</th>
+<th>이번에 확인한 범위</th>
+<th>아직 남은 범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+질문">어느 카운트가 타자에게 좋았나?</td>
+<td data-label="이번에 확인한 범위">11시즌 모두 0-2 최저·3-0 최고; 1-1은 100 아래·3-2는 100 위</td>
+<td data-label="아직 남은 범위">같은 선수의 카운트만 바꾸면 얼마나 좋아지는가</td>
+</tr>
+<tr>
+<td data-label="
+
+질문">0-2·1-2에서는 어디가 좋았나?</td>
+<td data-label="이번에 확인한 범위">11/11년 지원·존 밖 점추정; 구간도 같은 방향은 10/11·8/11년</td>
+<td data-label="아직 남은 범위">의도적으로 존 밖을 더 겨냥했을 때의 효과</td>
+</tr>
+<tr>
+<td data-label="
+
+질문">타자는 언제 휘두르는 편이 좋았나?</td>
+<td data-label="이번에 확인한 범위">존 안 132칸 중 130칸 스윙 점추정, 존 밖 481/528칸 지원·모두 테이크 점추정</td>
+<td data-label="아직 남은 범위">타자가 위치를 불완전하게 알아보는 실전에서의 최적 판단</td>
+</tr>
+<tr>
+<td data-label="
+
+질문">어떤 구종이 좋았나?</td>
+<td data-label="이번에 확인한 범위">FB/NFB 3-0은 10/11년 지원·모두 NFB 방향 구간; 포심/비포심 3-2는 11/11 양수·5/11 양수 구간</td>
+<td data-label="아직 남은 범위">카운트만으로 통용되는 구종 우열·최적 배합</td>
+</tr>
+<tr>
+<td data-label="
+
+질문">다른 리그에도 맞나?</td>
+<td data-label="이번에 확인한 범위">이번 분석은 MLB 자료</td>
+<td data-label="아직 남은 범위">KBO 검증</td>
+</tr>
+</tbody></table></div>
+<p><em>BCAI는 시작 평균=100인 지수다. W는 타석의 최종 결과에 볼넷·안타·장타별 가중치를 붙인 공격가치다. 자체 계산은 두 모델 해설에서 설명한다. 별도 2026년 보조 자료의 기준일은 9월 7일이다.</em></p>
+<p>‘어디까지 믿을 수 있나’에 하나의 확률을 붙이지 않은 이유도 여기 있다. 표를 제대로 계산했는지와 실제 작전을 바꿔도 좋아지는지는 서로 다른 질문이다. 앞의 확인을 마쳤다고 뒤의 답까지 자동으로 생기지는 않는다.</p>
+<p>이 작업에서 남기고 싶은 것은 결과표뿐 아니라 결과에 붙어 있는 조건이다. 타석과 투구를 나누고, 관찰과 행동 효과를 나누고, 불명확·자료 부족·측정 보류를 나누는 일을 반복했다. 그 구분을 유지해야 다음 작업에서도 이미 한 일과 아직 하지 않은 일을 혼동하지 않을 수 있다.</p>
+<p>KBO 검증, 상대가 적응했을 때의 효과, 타석 전체의 최적 전략은 아직 남아 있다. 이번 칼럼을 마쳤다는 것과 이 질문들에 답했다는 것은 같은 말이 아니다.</p>
+<p><a href="01_ball_count.html">본문 칼럼</a> · <a href="02_bcai.html">BCAI 설명</a> · <a href="03_bcap.html">BCAP 설명</a> · <a href="04_references_ko.html">참고문헌 한국어 설명</a></p>
+</section><section class="content-section " aria-labelledby="section-10"><h2 id="section-10">이 글의 용어 메모</h2>
 <div class="table-wrap"><table class="mobile-cards">
 <thead>
 <tr>
@@ -535,18 +569,4 @@ figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{dis
 <td data-label="뜻">같은 개념을 같은 기준으로 잰다는 근거가 부족해 비교를 미룬 상태</td>
 </tr>
 </tbody></table></div>
-</section><section class="content-section " aria-labelledby="section-10"><h2 id="section-10">자료와 확인 기록</h2>
-<ul>
-<li><a href="../../analysis/history_comparison_20260928_r01/report.md">11시즌 확장 비교 보고서</a> · <a href="../../analysis/history_comparison_20260928_r01/claim_comparison.md">주장 비교</a> · <a href="../../analysis/history_comparison_20260928_r01/audit/source_hashes.csv">원천 파일 장부</a>. 아래 기존 기록은 해당 기간·설계의 검증 이력이다.</li>
-</ul>
-<p>이 글은 이번 분석의 저장 결과와 검증 기록을 독자용으로 풀어 쓴 것이다. 새로운 데이터 분석이나 모델 재학습을 수행한 글은 아니다. 아래는 검토용 근거 링크이며, 네이버 게시 전 공개 가능한 출처 주소와 연결을 정리해야 한다.</p>
-<ul>
-<li><a href="../../analysis/count_advantage_2024_2025.md">표본·가중치·BCAI 계산 기록</a>: 표본과 W, 반복 카운트 처리, OBS 구간.</li>
-<li><a href="../../analysis/ridge_v02_validation_report.md">Ridge 수정·검증 보고서</a>: 수렴, 예측 평가, 외부 자료와 누락 보충.</li>
-<li><a href="../../analysis/bcap_external_20260914__r01/report.md">BCAP 다른 연도 결과</a>: 2023년 재학습 방식, 주요·보조 비교와 구간.</li>
-<li><a href="../../analysis/bcap_external_20260914__r01/measurement_review.md">2026년 위치 측정 검토</a>: 당시 확인한 공식 문서와 위치 보류 판단.</li>
-<li><a href="../../analysis/bcap_pitch_classification_20260912__r01/report.md">구종 분류 비교 기록</a>: 두 분류와 자체·공통 표본의 차이.</li>
-<li><a href="../../analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md">후속 계산 검수</a>: 산술 확인과 사건 분해의 실제 완료 범위.</li>
-<li><a href="../../../../models/registry.md">모델 상태 기록</a>: OBS·Ridge·BCAP의 역할과 상태.</li>
-</ul>
 </section></article><div class="endnav"><a href="index.html">연재와 문헌 읽기 안내</a><a href="01_ball_count.html">볼카운트 분석 칼럼</a><a href="02_bcai.html">BCAI 설명 글</a><a href="03_bcap.html">BCAP 설명 글</a><a href="04_references_ko.html">참고문헌 한국어 해설</a></div></main></body></html>

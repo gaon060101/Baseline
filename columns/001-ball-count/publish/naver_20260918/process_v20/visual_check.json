@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "width": 1280,
+      "overflow": false,
+      "brokenImages": [],
+      "literalEmphasis": false,
+      "brokenLinks": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "literalEmphasis": false,
+      "brokenLinks": [],
+      "pass": true
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "brokenImages": [],
+      "literalEmphasis": false,
+      "brokenLinks": [],
+      "pass": true
+    }
+  ]
+}

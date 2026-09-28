@@ -1,18 +1,11 @@
 {
   "articles": [
     {
-      "file": "02_bcai.md",
-      "characters": 9004,
-      "images": 0,
-      "tables": 1,
-      "headings": 11
-    },
-    {
-      "file": "03_bcap.md",
-      "characters": 14355,
+      "file": "05_data_validation.md",
+      "characters": 16181,
       "images": 1,
-      "tables": 5,
-      "headings": 31
+      "tables": 10,
+      "headings": 10
     }
   ],
   "missing_links": [],

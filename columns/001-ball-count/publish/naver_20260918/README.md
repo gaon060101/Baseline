@@ -1,5 +1,25 @@
 # 네이버 블로그용 볼카운트 연재 — 사용자 검토본
 
+## 최신 상태 — 시행착오 회고 20차
+
+[다섯 번째 글 HTML](05_data_validation.html) · [MD](05_data_validation.md) · [변경 기록](revision_v20.md). 검증 주제별 설명을 실제 작업 날짜에 따른 개인 회고로 바꿨다. 기존 표·수치·그림을 유지했으며 01–04는 보존했다. 생성 도구는 `build_process_v20.mjs`다.
+
+## 최신 상태 — BCAP 19차 보충 완료
+
+[BCAP HTML](03_bcap.html) · [MD](03_bcap.md) · [수정·검수](revision_v19.md). 9·10단계의 설명을 조금 보충해 요청된 마지막 피드백을 반영했다. 추가 편집은 새 요청을 따른다. 렌더러는 `build_bcap_v19.mjs`다.
+
+## 최신 상태 — 2026-09-29 BCAP 해설 18차
+
+[BCAP HTML](03_bcap.html) · [MD](03_bcap.md) · [수정·검수](revision_v18.md). 위치·스윙·구종별 결론과 최종 결론을 추가했다. BCAI는 17차를 유지한다. BCAP 렌더러는 `build_bcap_v18.mjs`다.
+
+## 최신 상태 — 2026-09-29 BCAI 해설 17차
+
+[BCAI HTML](02_bcai.html) · [MD](02_bcai.md) · [수정·검수](revision_v17.md). 7-2·7-4 설명, 2024·2025 Ridge 결과, STATE-DELTA의 본문 연결을 반영했다. BCAP는 16차를 유지한다. BCAI만 재생성하는 도구는 `build_bcai_v17.mjs`다.
+
+## 최신 상태 — 2026-09-28 모델 해설 16차
+
+[BCAI 읽기](02_bcai.html) · [BCAP 읽기](03_bcap.html) · [수정·검수](revision_v16.md). BCAI 불확실성·Ridge·STATE-DELTA를 보강하고 BCAP 공통 계산과 분류별 표·계산을 재구성했다. 별도 기술 글 없이 발행 다섯 편 안에서 모델 설명을 완결한다. 두 해설의 렌더러는 `build_models_v16.mjs`다. 이전 ZIP과 아래 설명은 과거 이력이다.
+
 ## 최신 상태 — 2026-09-28 모델 해설 15차
 
 [BCAI 읽기](02_bcai.html) · [BCAP 읽기](03_bcap.html) · [수정·보존·검수 기록](revision_v15.md).

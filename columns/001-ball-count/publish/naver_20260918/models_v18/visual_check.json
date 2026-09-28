@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "03_bcap",
+      "width": 1280,
+      "overflow": false,
+      "brokenImages": [],
+      "literalEmphasis": false,
+      "strikethrough": 0,
+      "questionHeadings": [],
+      "matrixCells": 12,
+      "cellOverflow": false,
+      "brokenLinks": [],
+      "pass": true
+    },
+    {
+      "name": "03_bcap",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "literalEmphasis": false,
+      "strikethrough": 0,
+      "questionHeadings": [],
+      "matrixCells": 12,
+      "cellOverflow": false,
+      "brokenLinks": [],
+      "pass": true
+    },
+    {
+      "name": "03_bcap",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": [],
+      "literalEmphasis": false,
+      "strikethrough": 0,
+      "questionHeadings": [],
+      "matrixCells": 12,
+      "cellOverflow": false,
+      "brokenLinks": [],
+      "pass": true
+    }
+  ]
+}

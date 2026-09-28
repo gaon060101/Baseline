@@ -52,3 +52,14 @@ CSV의 ‘행’은 헤더를 제외한 데이터 행이다. 소수는 본문에
 - 새 원본 수집·모델 재실행·원자료 재감사·KBO 분석·게시·업로드 없음. 저장 CSV에 대한 행 선택·열 대조는 집필용 확인이며 새 추정이 아니다.
 - 설명표4개와 주 작업이 제작하는 공통 그림2개를 연결했다. `04_zone_map.png`는 정의 도식, `05_swing_2023.png`는 위 2023 타자 원 CSV의60셀에 근거한다. 그림의 실제 생성·렌더링 확인은 주 작업에서 완료한 뒤 전달한다.
 - 집필 중 저장 CSV의 열을 직접 읽어 2023 존 안12/12 양수·보정 하한양수10/12·불명확3-0/3-1, 존 밖지원44/48·지원44개의 보정상한 모두음수, 외부구종 각연도46/48 불명확을 확인했다. 모델을 재학습하거나 새 추정량을 계산한 작업은 아니다.
+
+## 16차 계산 설명 근거
+
+필수 설명은 원고 안에 완결하고 아래는 비발행 편집 근거로 보존한다.
+
+- [지원 기준 명세](../../../../models/bcap/swing/v0.2.0/specification.yaml)
+- [BCAP 연도별 결과](../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv)
+- [원천 결과](../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv)
+- [위치·보고 구역 명세](../../../../models/bcap/pitch_sb/v0.1.0/specification.yaml)
+
+- [BCAP R 엔진](../../../../models/bcap/r/engine.R): Ridge·Platt·AIPW·ESS·경기 군집 구간의 수식 대조.

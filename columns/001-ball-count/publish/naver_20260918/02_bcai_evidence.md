@@ -1,5 +1,9 @@
 # BCAI 해설 원고 근거·편집 기록
 
+## 2026-09-29 17차 추가 근거
+
+[수정 기록](revision_v17.md). 7-2·7-4의 숫자는 명시적 가상 예시다. Ridge의 시즌별 24행은 [저장 지수](../../analysis/runs/bcai_ridge__mlb_2024_2025__20260908__r02/artifacts/count_indices.csv)의 period=2024,2025, I·J·shift 열을 각각 반올림했다. 통합 최대 이동 1.61035378과 개발 오차 개선 약 0.43%는 [개발 보고](../../analysis/ridge_v02_validation_report.md) 5·8절로 확인했다. 본문 1절의 인접 지수 차이와 마지막 0-2 해석은 STATE-DELTA 모듈의 원 W 출력 직접 인용과 구분했다. 이전 근거 기록은 아래 보존한다.
+
 **현재 원고 — 2026-09-28 모델 해설 15차:** [개편 기록](revision_v15.md). 본문 평균 정수표만 초반에 재사용하고 이후는 명세의 타석·W·카운트·평균·지수·구간 계산 순서로 설명한다. 아래 결과 주장 대응은 과거 원고의 근거 기록이며 삭제하지 않았다. 수정 전 원고는 [보관본](revisions/v14_before_models_v15/02_bcai.md)에 있다.
 
 **최신 기준 — 2026-09-28 7차:** 2015–2025의 11시즌 반영을 완료했다. 현재 주장·근거·변경 위치는 [7차 반영표](revision_v7.md), 정확한 파생 표는 `revision_v7_tables/`, 수치·보존 검수는 [검사 기록](revision_v7_numerical.json)을 따른다. 아래는 기존 두 시즌·외부 확인 원고의 작성 당시 근거로 보존하며 현재 결과 전체로 일반화하지 않는다.
@@ -65,3 +69,16 @@
 - 내부 형제 글 링크 `01_ball_count.md`, `03_bcap.md`는 주 작업이 만들 파일 기준이다. 실제 블로그 업로드 전 글 URL로 교체해야 한다.
 - 원고 하단의 근거 MD·CSV 링크는 로컬 검토 패키지 링크다. 공개본에는 사용자 공개 자료 링크가 있는 경우 그 링크로 대체하거나 독자에게 자료 안내만 남긴다. 미발행 URL을 만들지 않는다.
 - 작성자의 진술은 분석의 실제 정의·작업 기록 범위다. 확인하지 않은 대화의 감정·발언·인용을 만들지 않았다.
+
+## 16차 계산 설명 근거
+
+필수 설명은 원고 안에 완결하고 아래는 비발행 편집 근거로 보존한다.
+
+- [연도별 점수·타석 수](../../analysis/history_comparison_20260928_r01/tables/bcai_all_132.csv)
+- [평균 계산표](main_v10/bcai_means.csv)
+- [BCAI 명세](../../../../models/bcai/observed/v1.0.0/specification.yaml)
+- [실행의 가중치 기록](../../analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/manifest.json)
+- [집필 근거표](02_bcai_evidence.md)
+
+- [Ridge 명세](../../../../models/bcai/ridge/v0.2.0/specification.yaml) · [Ridge 개발 보고](../../analysis/ridge_v02_validation_report.md)
+- [STATE-DELTA 명세](../../../../models/bcai/state_delta/v0.1.0/specification.yaml)
