@@ -1,0 +1,129 @@
+{
+  "role": "format transport only; no new estimates, eligibility or folds",
+  "source": "columns\\001-ball-count\\data\\processed\\bcap_dev_v2_20260912__r01.pkl",
+  "source_sha256": "7ac1602e3ed5932ef1a7e3c26d9acb1cd9abc9a36e69234ff433cc3df7a05698",
+  "rows": 1424427,
+  "fields": [
+    "row_id",
+    "game_pk",
+    "at_bat_number",
+    "pitch_number",
+    "game_year",
+    "game_date",
+    "count",
+    "pitcher",
+    "batter",
+    "final_event",
+    "result",
+    "Y",
+    "zone",
+    "pitch_group",
+    "pitch_type",
+    "stand",
+    "plate_x",
+    "plate_z",
+    "sz_top",
+    "sz_bot",
+    "release_speed",
+    "pfx_x",
+    "pfx_z",
+    "venue",
+    "matchup",
+    "base_state",
+    "outs_when_up",
+    "inning_bin",
+    "score_bin",
+    "pitch_number_bin",
+    "prev_pitch_group",
+    "prev_description",
+    "prev_release_speed_bin",
+    "eligible_pitch",
+    "eligible_pitch_sb",
+    "eligible_swing",
+    "A_pitch",
+    "A_pitch_sb",
+    "A_swing",
+    "known_count_exception"
+  ],
+  "python_pandas": "3.0.1",
+  "references": {
+    "pitch": {
+      "run": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_pitch__mlb_2024_2025__20260912__r01",
+      "manifest_sha256": "9bb5801c150e480a3283199e183ff64abdc2a17d98cc2f3f33d75928461e5668",
+      "split_records_sha256": "36f69aa1548e96238943120a3d032ec58e6d8bed51f9922c482cc01e1c00f34c",
+      "scores_sha256": "aecf25a430c6123ab8e41da4469de48ef4cc8f1af14d01f7450c7b1fc88f3320"
+    },
+    "pitch_sb": {
+      "run": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2024_2025__20260912__r01",
+      "manifest_sha256": "1e21813d4b2c61d5469da9751e6e93aa9be5f8075df20467b36cbcadd4ed0ebf",
+      "split_records_sha256": "78c91d8546bf9d057951838baee379fa197e349038475bbfc008ef1366a86c97",
+      "scores_sha256": "40a006dc7a4e544832f508f902edc4429c1d23d0696c543fd6e431a470bd3681"
+    },
+    "swing": {
+      "run": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_swing__mlb_2024_2025__20260912__r01",
+      "manifest_sha256": "84f035632a1ef182a3781d7411d9ffa3b111e90f2018e758741006c522dfd4b1",
+      "split_records_sha256": "36f69aa1548e96238943120a3d032ec58e6d8bed51f9922c482cc01e1c00f34c",
+      "scores_sha256": "c5648d65e94f66edf0210b7b74602f7f899fa49fd2b0a2e3504ff24fc5c54b52"
+    },
+    "pitch_ff": {
+      "run": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_pitch_ff__mlb_2024_2025__20260912__r01",
+      "manifest_sha256": "3b4a34d7cee35f00e46a360f43cd9650e23b5641cde979fed04704c27de5a9a7",
+      "split_records_sha256": "36f69aa1548e96238943120a3d032ec58e6d8bed51f9922c482cc01e1c00f34c",
+      "scores_sha256": "c8dbcadb43c702b8118addd9dd3949b6a53557e73792363c9a5763ed18b1ef9d"
+    }
+  },
+  "outputs": {
+    "pitch_calibration_games.csv": {
+      "sha256": "53b896e6759e659dd66baffdf349ed4b4069ca5912bb5ac720aa580c435b277d",
+      "bytes": 19460
+    },
+    "pitch_ff_calibration_games.csv": {
+      "sha256": "53b896e6759e659dd66baffdf349ed4b4069ca5912bb5ac720aa580c435b277d",
+      "bytes": 19460
+    },
+    "pitch_ff_folds.csv": {
+      "sha256": "bc63dd984380e72088fccf5cf5ccd14d95c797ebc9dbd8c98bca7d901d03713b",
+      "bytes": 48604
+    },
+    "pitch_ff_reference_scores.csv": {
+      "sha256": "4617490b039b11eff6b682acabf1ca4fca51740f39fd2103dd2d7eaf42387a9d",
+      "bytes": 157424824
+    },
+    "pitch_folds.csv": {
+      "sha256": "bc63dd984380e72088fccf5cf5ccd14d95c797ebc9dbd8c98bca7d901d03713b",
+      "bytes": 48604
+    },
+    "pitch_reference_scores.csv": {
+      "sha256": "ae588b0721a7994021dbd74937c3f04c7c579e84c068e86cc8b34c3b72d4e4f5",
+      "bytes": 156550995
+    },
+    "pitch_sb_calibration_games.csv": {
+      "sha256": "53b896e6759e659dd66baffdf349ed4b4069ca5912bb5ac720aa580c435b277d",
+      "bytes": 19460
+    },
+    "pitch_sb_folds.csv": {
+      "sha256": "bc63dd984380e72088fccf5cf5ccd14d95c797ebc9dbd8c98bca7d901d03713b",
+      "bytes": 48604
+    },
+    "pitch_sb_reference_scores.csv": {
+      "sha256": "33e7d265e36525fad535f5532ffa165cd9c0895b23707982085fde0217fa6702",
+      "bytes": 156825396
+    },
+    "rows.csv": {
+      "sha256": "6a12dab34b556646df2e19619e8b8905025f00220dd04fbe5f213b7f56779a9d",
+      "bytes": 324546120
+    },
+    "swing_calibration_games.csv": {
+      "sha256": "53b896e6759e659dd66baffdf349ed4b4069ca5912bb5ac720aa580c435b277d",
+      "bytes": 19460
+    },
+    "swing_folds.csv": {
+      "sha256": "bc63dd984380e72088fccf5cf5ccd14d95c797ebc9dbd8c98bca7d901d03713b",
+      "bytes": 48604
+    },
+    "swing_reference_scores.csv": {
+      "sha256": "881c0b11db71abd36b006dc11e49b018b8968b550deba378e4a8aa533aeeb472",
+      "bytes": 157502157
+    }
+  }
+}

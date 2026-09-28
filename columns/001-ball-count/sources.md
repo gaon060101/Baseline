@@ -1,5 +1,29 @@
 # 001. 출처와 데이터 확보 기록
 
+## 11시즌 원고 반영 — 2026-09-28
+
+사용자 요청에 따라 저장 결과를 [7차 원고](publish/naver_20260918/index.html)에 반영했다. [주장·근거 대응표](publish/naver_20260918/revision_v7.md)와 [수치·보존 검사](publish/naver_20260918/revision_v7_numerical.json)를 연결한다. 기존 비교 보고서의 원 주장에 해당하는 원고 5개는 [수정 전 보관본](publish/naver_20260918/revisions/v6_before_history_v7/)으로 보존했고 당시 원천 해시와 일치함을 [대조표](publish/naver_20260918/revision_v7_source_preservation.csv)에 남겼다. 새 문헌·데이터 확보·재적합은 없으며 FanGraphs 접근 한계와 2026 측정 보류를 유지한다.
+
+## 역사 비교 보고서의 근거 연결 — 2026-09-28
+
+[2015–2025 비교 보고서](analysis/history_comparison_20260928_r01/report.md)는 저장된 자체 분석을 사용했다. [원 주장 장부](analysis/history_comparison_20260928_r01/tables/original_claim_ledger.csv)의 주장 ID → 원문 경로·실행 ID, [주장 비교표](analysis/history_comparison_20260928_r01/claim_comparison.md)의 ID → 파생 표, 각 전체 결과표의 source_csv/source_manifest → 완료 실행으로 추적한다. [입력 해시 장부](analysis/history_comparison_20260928_r01/audit/source_hashes.csv)는 172개 파일·53개 완료 manifest를 기록한다. [최종 검수](analysis/history_comparison_20260928_r01/audit/final_review.md)는 저장 수치·보존 검사와 브라우저 검사를 구분한다.
+
+새 외부 문헌·원문 열람·데이터 수집·모델 재적합은 수행하지 않았다. 아래 FanGraphs 과거 상수의 직접 접근 제한과 기존 확인 범위를 그대로 유지한다. 승인 원고는 보존했고 제안 문구만 별도로 제공한다.
+
+## R 과거 연도 확장 준비 — 2026-09-28
+
+사용자 요청으로 2024·2025 R 재계산 후 2023에서 2015까지 역순 분석 및 BCAP R 구현을 진행한다. [사전 계획](analysis/r_history_20260928/plan.md). 아래는 확보 전 확인이며 연도별 성공 여부는 새 실행 manifest와 수집 기록을 따른다.
+
+- [Statcast CSV 공식 설명](https://baseballsavant.mlb.com/csv-docs) 본문 재확인: game_year, game_date, 투구 전 balls/strikes, events, 구종·구속·위치 필드를 제공한다. 2015·2016 구속은 PitchFX 보정값, 2017 이후는 Statcast다. 2026 위치·존 정의 변경 때문에 기존 S/B·SWING 보류를 유지한다.
+- [MLB 이용약관](https://www.mlb.com/official-information/terms-of-use) 재열람. 자동 수집 제한 조항 및 별도 허가·원본 재배포 권한 미확인 상태를 유지한다. 접근 거부를 우회하지 않고, 이번에는 로컬 분석만 수행한다.
+- [FanGraphs Guts](https://www.fangraphs.com/tools/guts)의 2015~2025 시즌별 상수는 공식 표 검색 색인에서 확인했다. 당일 직접 열기는 403으로 실패했으므로 본문 재열람 완료라고 표시하지 않는다. 2023~2025 값은 기존 저장 명세와 일치하며 [고정 가중치 표](analysis/r_history_20260928/weights.csv)에 사용할 값만 기록했다. 2026 잠정값은 사용하지 않는다.
+- 2024·2025 입력은 기존 캐시의 열 형식 변환만 했으며 원본·캐시 해시는 보존했다. R에서 별도로 PA 집계·제외·가중치·BCAI를 계산한다. 과거 원본 수집 과정 자체의 독립 재검증은 아니다.
+
+## 2026-09-27 4차 편집의 문헌 역할 구분
+
+본문 직접 인용은 문헌 1·4·5·6·7·8·9, 확장 읽기는 2·3·10·11·12로 구분했다. [한국어 해설](publish/naver_20260918/04_references_ko.md)의 12건 내용·번호·원문 링크는 유지한다. 새 논문 결과·미열람 주장을 추가하지 않았으며 기존 열람 범위 안에서 재배치했다. 데이터 검증과 개발 설명은 [⑤](publish/naver_20260918/05_data_validation.md)에 모았다. 상세 이동은 [4차 기록](publish/naver_20260918/revision_v4.md)을 따른다.
+
+
 ## 2026-09-18 3차 문헌 배치 수정
 
 [본문](publish/naver_20260918/01_ball_count.md)의 외부 문헌을 보라색 전용 상자로 분리했다. [한국어 해설](publish/naver_20260918/04_references_ko.md)은 기존 원문 결과·결론과 실제 인용 부분을 앞에 두고 자료·방법을 뒤에서 설명한다. 새 문헌·미열람 수치는 추가하지 않았다. 원문 링크·읽은 판본·제외 기준은 유지한다.

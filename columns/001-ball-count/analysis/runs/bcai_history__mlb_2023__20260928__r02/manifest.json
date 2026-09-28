@@ -1,0 +1,249 @@
+{
+  "run_id": "bcai_history__mlb_2023__20260928__r02",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "role": "R observational recalculation and exploratory year comparison",
+  "status": "COMPLETE",
+  "model_status": "VALIDATED within prior documented scope; no promotion",
+  "started_at": "2026-09-28T12:03:38+0900",
+  "input": [
+    {
+      "path": "columns/001-ball-count/data/processed/r_history_20260928/2023/pitches.csv",
+      "bytes": 25960327,
+      "sha256": "2b36199932611c9a80e2997b73ffefc615f8ed188e2dd5b1f8b4b47fdf7d5951"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_history_20260928/2023/pitches.provenance.json",
+      "bytes": 9699,
+      "sha256": "10a6ea5fe4259b5184d244ad1a7452b4c57cfaa5b2a8139204a1af06d6970767"
+    },
+    {
+      "path": "./columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/config.json",
+      "bytes": 1088,
+      "sha256": "16f17bc7bbae0ce8e5110817774335b2fa3946efb529a5b11865c3bf9f88a694"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+      "bytes": 3246455,
+      "sha256": "eb8b18a8a25c1bf017f6512b7770f0ecfcc0f69c04dac38707e874046788ef68"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/weights.csv",
+      "bytes": 475,
+      "sha256": "7ec71f46b745d9b193298d19b458501a81384425003d131087cbd32c7154cc5c"
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "bytes": 61448,
+      "sha256": "1bddd8f67378f0f138ef5ad5011e2a8212453df68a4adfc2d07d005dcff518c3"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "bytes": 4980,
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7"
+    }
+  ],
+  "code": [
+    {
+      "path": "models/bcai/observed/v1.0.0/r/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/r/run.R",
+      "bytes": 10805,
+      "sha256": "f189a4daa7b4c65f95470162ff7379cedde7e2727ca8aa889ec3599e69fed257"
+    }
+  ],
+  "parameters": {
+    "run_id": "bcai_history__mlb_2023__20260928__r02",
+    "model_id": "BCAI-OBS-v1.0.0",
+    "version": "1.0.0",
+    "input_csv": [
+      "columns/001-ball-count/data/processed/r_history_20260928/2023/pitches.csv"
+    ],
+    "input_provenance": [
+      "columns/001-ball-count/data/processed/r_history_20260928/2023/pitches.provenance.json"
+    ],
+    "years": [
+      2023
+    ],
+    "seasons": [
+      {
+        "year": 2023,
+        "cutoff": "2023-12-31",
+        "scope": "full_regular_season",
+        "schedule": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json"
+      }
+    ],
+    "weights": [
+      {
+        "year": 2023,
+        "BB": 0.696,
+        "HBP": 0.726,
+        "1B": 0.883,
+        "2B": 1.244,
+        "3B": 1.569,
+        "HR": 2.004
+      }
+    ],
+    "weights_source": "columns/001-ball-count/analysis/r_history_20260928/weights.csv",
+    "bootstrap_replicates": 2000,
+    "seed": 20260928,
+    "comparisons": [],
+    "tolerance": 1e-09,
+    "data_source": "MLB Baseball Savant; archived Statcast",
+    "source_notes": "columns/001-ball-count/sources.md"
+  },
+  "environment": {
+    "R": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": [
+      {
+        "package": "data.table",
+        "version": "1.18.6.1"
+      },
+      {
+        "package": "ggplot2",
+        "version": "4.0.3"
+      },
+      {
+        "package": "jsonlite",
+        "version": "2.0.0"
+      },
+      {
+        "package": "digest",
+        "version": "0.6.39"
+      }
+    ]
+  },
+  "completed_at": "2026-09-28T12:03:58+0900",
+  "sample": {
+    "raw_rows": 720684,
+    "all_PA": 184478,
+    "eligible_PA": 183534,
+    "games": 2430,
+    "repeated_count_rows_removed": 49220,
+    "exclusions": {
+      "included": 183534,
+      "truncated": 272,
+      "intentional_walk": 474,
+      "missing_final": 102,
+      "catcher_interference": 96
+    }
+  },
+  "coverage": [
+    {
+      "year": 2023,
+      "scope": "full_regular_season",
+      "cutoff": "2023-12-31",
+      "games": 2430,
+      "first": "2023-03-30",
+      "last": "2023-10-01",
+      "schedule_match": true
+    }
+  ],
+  "critical": {
+    "season": {
+      "2023": 2.74448840082135
+    },
+    "combined": 2.74448840082135,
+    "contrasts": {}
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/bootstrap_draws.rds",
+      "bytes": 311555,
+      "sha256": "a02923dff130b98937a8d7223da2c169af66a4b3b2fb14df4ea25aff6a4c1df6"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "ece591175854a76620046a08a66071ccc7290d349e7873a3250ef2a313c684a6"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/combined_indices.csv",
+      "bytes": 1359,
+      "sha256": "3333d86c1655ca9f8d6d4497a34c2eb8a249fe674b4c01d52323a1be37b70ff9"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/event_rates.csv",
+      "bytes": 3294,
+      "sha256": "014228fdcaae885a96e4845f23304621d57b47b88fb96f5bf6d3bc62daa087b6"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/exclusion_audit.csv",
+      "bytes": 783,
+      "sha256": "f4b0496c5f437b4ec3395b0730a07de86c9667cecc697978909ee342516b710d"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/pre_bootstrap_check.json",
+      "bytes": 688,
+      "sha256": "eafd5490cf3d2892c26fca98c43653de9396617f36ac0916fa1f2fed43e1a4d3"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/season_indices.csv",
+      "bytes": 1643,
+      "sha256": "80b9ffae23156fbbac6d3916aa532ef904fee1837b22a62d98264becbf963b32"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/sessionInfo.txt",
+      "bytes": 949,
+      "sha256": "7cd4885016967f7c950cbf507253e4c15f1a4d22971a713ce2dc8f22cee127d1"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/validation.json",
+      "bytes": 1064,
+      "sha256": "1261e33cf863240b4bf4aef0cac709e9980d7e32336cc47fc290b54de90da701"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/year_differences.csv",
+      "bytes": 120,
+      "sha256": "2123efa15f7012b2bdc7d128a216887412ddd2cea4df931eb056fc50e440e3fd"
+    },
+    {
+      "path": "columns/001-ball-count/figures/bcai_history__mlb_2023__20260928__r02/season_comparison.png",
+      "bytes": 29133,
+      "sha256": "e3756a2d54da452232138e68dd354e0f55d49bbcbabcec56a5aed0280af36b64"
+    }
+  ],
+  "figures": "columns/001-ball-count/figures/bcai_history__mlb_2023__20260928__r02",
+  "validation": {
+    "input_schedule_coverage": [
+      {
+        "year": 2023,
+        "scope": "full_regular_season",
+        "cutoff": "2023-12-31",
+        "games": 2430,
+        "first": "2023-03-30",
+        "last": "2023-10-01",
+        "schedule_match": true
+      }
+    ],
+    "sample": {
+      "raw_rows": 720684,
+      "all_PA": 184478,
+      "eligible_PA": 183534,
+      "games": 2430,
+      "repeated_count_rows_removed": 49220,
+      "exclusions": {
+        "included": 183534,
+        "truncated": 272,
+        "intentional_walk": 474,
+        "missing_final": 102,
+        "catcher_interference": 96
+      }
+    },
+    "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python",
+    "status": "PASS",
+    "inputs_unchanged": true,
+    "bootstrap_criticals": {
+      "season": {
+        "2023": 2.74448840082135
+      },
+      "combined": 2.74448840082135,
+      "contrasts": {}
+    },
+    "RNG": ["Mersenne-Twister", "Inversion", "Rejection"],
+    "bootstrap_scope": "fixed external weights; within-season game clusters; no cross-game/player dependence correction"
+  }
+}

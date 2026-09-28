@@ -1,0 +1,271 @@
+{
+  "run_id": "bcai_history__mlb_2018__20260928__r01",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "role": "R observational recalculation and exploratory year comparison",
+  "status": "COMPLETE",
+  "model_status": "VALIDATED within prior documented scope; no promotion",
+  "started_at": "2026-09-28T13:07:17+0900",
+  "input": [
+    {
+      "path": "columns/001-ball-count/data/processed/r_history_20260928/2018/pitches.csv",
+      "bytes": 26102318,
+      "sha256": "654b650aa2f9ba0ada018a2a0984207549bb415282b528ced62d190ff7bab797"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_history_20260928/2018/pitches.provenance.json",
+      "bytes": 9699,
+      "sha256": "f72cedfe53eb3c0a1bbac0af29b9d58afebea6db93d521da380f8a5f502d0c44"
+    },
+    {
+      "path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcai_history__mlb_2018__20260928__r01\\config.json",
+      "bytes": 1085,
+      "sha256": "2692e38e383d5f499cf39713759a2ed3ad7f2bbde6f78ca89328bd79df0d08a9"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2018/snapshot_20260928_r_history/schedule_2018.json",
+      "bytes": 3261263,
+      "sha256": "1e4f07f54161e93bcfe4823d923fc868ba1cf0d42ecd39ff4d5db7382759aa9c"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/weights.csv",
+      "bytes": 475,
+      "sha256": "7ec71f46b745d9b193298d19b458501a81384425003d131087cbd32c7154cc5c"
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "bytes": 61448,
+      "sha256": "1bddd8f67378f0f138ef5ad5011e2a8212453df68a4adfc2d07d005dcff518c3"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "bytes": 4980,
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7"
+    }
+  ],
+  "code": [
+    {
+      "path": "C:/Users/백창현/Desktop/Baseline/models/bcai/observed/v1.0.0/r/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "C:/Users/백창현/Desktop/Baseline/models/bcai/observed/v1.0.0/r/run.R",
+      "bytes": 12369,
+      "sha256": "f37d6e1162d07697341f09583bb64d06e254735691dae47769bbc96fea3de27f"
+    }
+  ],
+  "parameters": {
+    "run_id": "bcai_history__mlb_2018__20260928__r01",
+    "model_id": "BCAI-OBS-v1.0.0",
+    "version": "1.0.0",
+    "input_csv": [
+      "columns/001-ball-count/data/processed/r_history_20260928/2018/pitches.csv"
+    ],
+    "input_provenance": [
+      "columns/001-ball-count/data/processed/r_history_20260928/2018/pitches.provenance.json"
+    ],
+    "years": [
+      2018
+    ],
+    "seasons": [
+      {
+        "year": 2018,
+        "cutoff": "2018-12-31",
+        "scope": "full_regular_season",
+        "schedule": "columns/001-ball-count/data/raw/mlb/2018/snapshot_20260928_r_history/schedule_2018.json"
+      }
+    ],
+    "weights": [
+      {
+        "year": 2018,
+        "BB": 0.69,
+        "HBP": 0.72,
+        "1B": 0.88,
+        "2B": 1.247,
+        "3B": 1.578,
+        "HR": 2.031
+      }
+    ],
+    "weights_source": "columns/001-ball-count/analysis/r_history_20260928/weights.csv",
+    "bootstrap_replicates": 2000,
+    "seed": 20260928,
+    "comparisons": [],
+    "tolerance": 1e-09,
+    "data_source": "MLB Baseball Savant; archived Statcast",
+    "source_notes": "columns/001-ball-count/sources.md"
+  },
+  "environment": {
+    "R": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": [
+      {
+        "package": "data.table",
+        "version": "1.18.6.1"
+      },
+      {
+        "package": "ggplot2",
+        "version": "4.0.3"
+      },
+      {
+        "package": "jsonlite",
+        "version": "2.0.0"
+      },
+      {
+        "package": "digest",
+        "version": "0.6.39"
+      }
+    ]
+  },
+  "code_snapshot": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/code/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/code/run.R",
+      "bytes": 12369,
+      "sha256": "f37d6e1162d07697341f09583bb64d06e254735691dae47769bbc96fea3de27f"
+    }
+  ],
+  "completed_at": "2026-09-28T13:07:43+0900",
+  "sample": {
+    "raw_rows": 724452,
+    "all_PA": 185544,
+    "eligible_PA": 184170,
+    "games": 2431,
+    "repeated_count_rows_removed": 48788,
+    "exclusions": {
+      "included": 184170,
+      "intentional_walk": 929,
+      "missing_final": 129,
+      "truncated": 304,
+      "catcher_interference": 12
+    }
+  },
+  "coverage": [
+    {
+      "year": 2018,
+      "scope": "full_regular_season",
+      "cutoff": "2018-12-31",
+      "games": 2431,
+      "first": "2018-03-29",
+      "last": "2018-10-01",
+      "schedule_match": true
+    }
+  ],
+  "critical": {
+    "season": {
+      "2018": 2.77002248620207
+    },
+    "combined": 2.77002248620207,
+    "contrasts": {}
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/bootstrap_draws.rds",
+      "bytes": 311991,
+      "sha256": "dcc9ef3b84ca78cc4e5d95dba43d38dfb0abf9af831c0a90f6e2bc6045f2499c"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/code/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/code/run.R",
+      "bytes": 12369,
+      "sha256": "f37d6e1162d07697341f09583bb64d06e254735691dae47769bbc96fea3de27f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "584b360b44f88a17b56667a7bf36b9296f442708f5a2d944491ec8bf6918b992"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/combined_indices.csv",
+      "bytes": 1358,
+      "sha256": "6ab81540cc049470d42d59d8423104a4b112f9963e5e36c86d9b1bc94812c3bd"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/event_rates.csv",
+      "bytes": 3295,
+      "sha256": "7b6d4d909525d6de8ebcd4ef93cda71e6da88b211a10ef71a87d4d7d9fe62c3e"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/exclusion_audit.csv",
+      "bytes": 821,
+      "sha256": "c3afead9a0283e810dfdda2b2e5265ec8c942f666270972c104743588735df7d"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/pre_bootstrap_check.json",
+      "bytes": 688,
+      "sha256": "62aa49f11177c4bd586e983e2f8975b34c183e1667c301f5506a9cf50f7517c8"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1641,
+      "sha256": "ae2dc76e6b7b6ccf594c8863c90db8fabe1f65530846fade03a83101ec24c0e5"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/sessionInfo.txt",
+      "bytes": 949,
+      "sha256": "7cd4885016967f7c950cbf507253e4c15f1a4d22971a713ce2dc8f22cee127d1"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/validation.json",
+      "bytes": 1064,
+      "sha256": "49562ac8bbd9d6c26d95220217d49ee2895612bfee7fb1d007ffbbfef32ae632"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/year_differences.csv",
+      "bytes": 120,
+      "sha256": "2123efa15f7012b2bdc7d128a216887412ddd2cea4df931eb056fc50e440e3fd"
+    },
+    {
+      "path": "columns/001-ball-count/figures/bcai_history__mlb_2018__20260928__r01/season_comparison.png",
+      "bytes": 27900,
+      "sha256": "347e947bd4bd2bd0ceb9972ae97f04aa086b7ca98a79aa0ba7a1ef48995923c7"
+    }
+  ],
+  "figures": "columns/001-ball-count/figures/bcai_history__mlb_2018__20260928__r01",
+  "validation": {
+    "input_schedule_coverage": [
+      {
+        "year": 2018,
+        "scope": "full_regular_season",
+        "cutoff": "2018-12-31",
+        "games": 2431,
+        "first": "2018-03-29",
+        "last": "2018-10-01",
+        "schedule_match": true
+      }
+    ],
+    "sample": {
+      "raw_rows": 724452,
+      "all_PA": 185544,
+      "eligible_PA": 184170,
+      "games": 2431,
+      "repeated_count_rows_removed": 48788,
+      "exclusions": {
+        "included": 184170,
+        "intentional_walk": 929,
+        "missing_final": 129,
+        "truncated": 304,
+        "catcher_interference": 12
+      }
+    },
+    "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python",
+    "status": "PASS",
+    "inputs_unchanged": true,
+    "bootstrap_criticals": {
+      "season": {
+        "2018": 2.77002248620207
+      },
+      "combined": 2.77002248620207,
+      "contrasts": {}
+    },
+    "RNG": ["Mersenne-Twister", "Inversion", "Rejection"],
+    "bootstrap_scope": "fixed external weights; within-season game clusters; no cross-game/player dependence correction"
+  }
+}

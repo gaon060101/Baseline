@@ -1,0 +1,14 @@
+{
+  "only_reference_passages_changed": true,
+  "untouched": {
+    "02_bcai.md": true,
+    "02_bcai.html": true,
+    "03_bcap.md": true,
+    "03_bcap.html": true,
+    "04_references_ko.md": true,
+    "04_references_ko.html": true,
+    "05_data_validation.md": true,
+    "05_data_validation.html": true,
+    "index.html": true
+  }
+}

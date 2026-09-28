@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "snapshot_files_verified": 34,
+  "numerical_checks": true,
+  "browser_checks": true,
+  "outputs": {
+    "01_ball_count.md": "dd42e816d356189f7a88f44c5df7b24bdbfdb5913f2b028821b26d0d92dbd66e",
+    "01_ball_count.html": "a40cce193f0f46a8f69d4086b1b574257ec05b5dda34af5942c264e84a16722d",
+    "02_bcai.md": "303363394924703d69fc0f96d5158aaea585e0bf430be214277b5894f3bc3639",
+    "02_bcai.html": "fa3c26295f1732cba6cbf35744a459020d6a62fbc8657e45ef4cd048f64eaea1",
+    "03_bcap.md": "942a9425e3c29fcd6269010b327b6fafcd67dcc2c2fc6a348343aded9d3d8ef0",
+    "03_bcap.html": "30aac468de8e463e4850965c7c62230f7fe34789354f523202e85064362ddfe9",
+    "04_references_ko.md": "25564d5196002c1157765c2380f717c1ec7b769b3eda9b1d6e70a9ee829527b0",
+    "04_references_ko.html": "461b79b46c4e229ac0259696db137a7adcaceb70480817ed4e2fb9dd03ae6e7c",
+    "05_data_validation.md": "d660a7ca46eb43b567a56bc54e04959e468c8c31db58e4cccea477ef67fe4826",
+    "05_data_validation.html": "725e4a9457961bae83c36d2cd75513343c13d566a29748844a050da116b30306"
+  },
+  "note": "최종 편집본. 원고·해설·표·그림 연결과 화면 검토 완료. 모델 재적합·게시·업로드는 미실시.",
+  "browser_checked_at": "2026-09-28T08:33:04.867Z",
+  "visual_review": "PC·모바일 본문·해설·요약표·메모·확대 그림 확인. 숫자 범위 취소선과 한국어 조사 앞 강조 표식 문제 수정 후 재확인."
+}

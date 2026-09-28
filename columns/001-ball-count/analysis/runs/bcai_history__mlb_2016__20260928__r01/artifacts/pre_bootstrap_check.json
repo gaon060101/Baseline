@@ -1,0 +1,28 @@
+{
+  "input_schedule_coverage": [
+    {
+      "year": 2016,
+      "scope": "full_regular_season",
+      "cutoff": "2016-12-31",
+      "games": 2428,
+      "first": "2016-04-03",
+      "last": "2016-10-02",
+      "schedule_match": true
+    }
+  ],
+  "sample": {
+    "raw_rows": 715823,
+    "all_PA": 184978,
+    "eligible_PA": 183610,
+    "games": 2428,
+    "repeated_count_rows_removed": 47920,
+    "exclusions": {
+      "included": 183610,
+      "intentional_walk": 932,
+      "truncated": 308,
+      "missing_final": 122,
+      "catcher_interference": 6
+    }
+  },
+  "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python"
+}

@@ -1,0 +1,14 @@
+{
+  "n": 262953,
+  "support": 244570,
+  "coverage": 0.93009016820496437,
+  "games": 898,
+  "MSE": 0.23466587142185408,
+  "Brier": 0.16512176799315328,
+  "logloss": 0.49806549943491146,
+  "all_fit_converged": true,
+  "fit_logs": 12,
+  "summary_groups": 193,
+  "years": 2020,
+  "policy_learning": false
+}

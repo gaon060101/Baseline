@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "transport_rows_hash",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "required_eligibility",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "unique_complete_pitch_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_actions_outcomes",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_counts",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "requested_years",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_model_features",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "no_forbidden_predictors",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "coarse_lag_only",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "transport_hash_pitch_sb_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "transport_hash_pitch_sb_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "complete_one_game_one_fold",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold1_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold1_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold2_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold2_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_eligible_scored_once",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "same_action_denominator",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "Q_difference_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "count_totals",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "finite_supported_groups",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "support_flow_total",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "transport_reference_hash",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "reference_rows_match",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "python_nuisance_tolerance",
+      "status": "PASS",
+      "detail": {
+        "field": ["p", "mu0", "mu1", "phi0", "phi1"],
+        "max_absolute_error": [8.3087724478403402e-09, 6.3060923150004555e-10, 2.1617100887105778e-09, 7.7017186406180826e-08, 5.0967958209469089e-07],
+        "mean_absolute_error": [2.0068342972137545e-09, 4.8717311469772865e-11, 1.8396823677712634e-11, 1.262170533666765e-09, 2.3042296870875646e-09]
+      }
+    },
+    {
+      "check": "python_AIPW_tolerance",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "python_support_exact",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "python_summary_tolerance",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "input_preserved_after_fit",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "split_preserved_pitch_sb_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "split_preserved_pitch_sb_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    }
+  ],
+  "scope": "Numerical implementation and original-score reproduction; not causal validation"
+}

@@ -1,0 +1,482 @@
+[
+  {
+    "model": "swing",
+    "count": "0-0",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "0-0",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 42,
+    "unclear": 2
+  },
+  {
+    "model": "swing",
+    "count": "0-1",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "0-1",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "0-2",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "0-2",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "1-0",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "1-0",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 43,
+    "unclear": 1
+  },
+  {
+    "model": "swing",
+    "count": "1-1",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "1-1",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "1-2",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "1-2",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "2-0",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 5,
+    "negative": 0,
+    "unclear": 6
+  },
+  {
+    "model": "swing",
+    "count": "2-0",
+    "region": "OUT",
+    "total": 44,
+    "supported": 43,
+    "positive": 0,
+    "negative": 42,
+    "unclear": 1
+  },
+  {
+    "model": "swing",
+    "count": "2-1",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 10,
+    "negative": 0,
+    "unclear": 1
+  },
+  {
+    "model": "swing",
+    "count": "2-1",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "2-2",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "2-2",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "3-0",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "swing",
+    "count": "3-0",
+    "region": "OUT",
+    "total": 44,
+    "supported": 0,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "3-1",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "swing",
+    "count": "3-1",
+    "region": "OUT",
+    "total": 44,
+    "supported": 42,
+    "positive": 0,
+    "negative": 42,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "3-2",
+    "region": "CENTER",
+    "total": 11,
+    "supported": 11,
+    "positive": 11,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "swing",
+    "count": "3-2",
+    "region": "OUT",
+    "total": 44,
+    "supported": 44,
+    "positive": 0,
+    "negative": 44,
+    "unclear": 0
+  },
+  {
+    "model": "pitch",
+    "count": "0-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "0-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "0-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "0-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "0-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 3,
+    "negative": 0,
+    "unclear": 8
+  },
+  {
+    "model": "pitch_ff",
+    "count": "0-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "1-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "1-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "1-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "1-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "1-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 2,
+    "negative": 0,
+    "unclear": 9
+  },
+  {
+    "model": "pitch_ff",
+    "count": "1-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 1,
+    "negative": 0,
+    "unclear": 10
+  },
+  {
+    "model": "pitch",
+    "count": "2-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "2-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "2-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "2-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "2-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 1,
+    "negative": 0,
+    "unclear": 10
+  },
+  {
+    "model": "pitch_ff",
+    "count": "2-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "3-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 10,
+    "positive": 10,
+    "negative": 0,
+    "unclear": 0
+  },
+  {
+    "model": "pitch_ff",
+    "count": "3-0",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "3-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch_ff",
+    "count": "3-1",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 0,
+    "negative": 0,
+    "unclear": 11
+  },
+  {
+    "model": "pitch",
+    "count": "3-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 3,
+    "negative": 0,
+    "unclear": 8
+  },
+  {
+    "model": "pitch_ff",
+    "count": "3-2",
+    "region": "ALL",
+    "total": 11,
+    "supported": 11,
+    "positive": 5,
+    "negative": 0,
+    "unclear": 6
+  }
+]

@@ -1,0 +1,93 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>기술 부록 — 저장 결과 비교의 범위와 재현</title><style>*{box-sizing:border-box}body{background:#f3f6f5;color:#203b43;font-family:'Malgun Gothic',sans-serif;margin:0;line-height:1.9}main{max-width:960px;margin:28px auto;padding:45px 50px;background:white}h1{font-size:32px;line-height:1.45}h2{margin-top:65px;padding:16px;background:#e6f1ed;border-top:3px solid #287970;font-size:25px;line-height:1.6}h3{margin-top:35px;padding-left:12px;border-left:3px solid #87aaa5;font-size:21px}p,li{font-size:18px}a{color:#126d79;overflow-wrap:anywhere}strong{color:#103e41}img{display:block;width:100%;height:auto;margin:30px auto 10px}figure{margin:30px 0;max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{display:block;width:900px}.figure-toggle{font:inherit;font-size:14px;color:#126d79;background:#eef6f3;border:1px solid #a7c7bf;border-radius:5px;padding:8px 12px;cursor:pointer}blockquote{margin:22px 0;padding:12px 18px;border-left:4px solid #ac7b4d;background:#fbf5ea}blockquote p{font-size:15px}.caption,p:has(>em:only-child){font-size:15px;color:#596b70}em{font-style:normal}nav,details{font-size:15px;background:#f0f5f4;padding:18px;margin:22px 0}nav{display:flex;gap:18px;flex-wrap:wrap}details ul li{font-size:15px}.table-wrap{overflow-x:auto;margin:25px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{border:1px solid #d4dfdc;padding:11px;text-align:left;vertical-align:top}th{background:#e7f0ed}tbody tr:nth-child(even){background:#f7faf9}code{overflow-wrap:anywhere}pre{overflow-x:auto;font-size:13px;background:#f1f3f5;padding:16px}.note{padding:17px;border-left:4px solid #ac7b4d;background:#fbf5ea;font-size:15px}h2,h3{scroll-margin-top:18px}@media(max-width:650px){main{margin:0;padding:23px 18px}h1{font-size:27px}h2{font-size:23px}h3{font-size:20px}p,li{font-size:17px}.table-wrap{overflow:visible}table.wide,table.wide tbody,table.wide tr,table.wide td{display:block;width:100%}table.wide thead{display:none}table.wide tr{margin-bottom:16px;border:1px solid #bcd1cd;border-radius:6px;padding:7px;background:#f8fbfa}table.wide td{border:0;border-bottom:1px solid #e0e8e6;font-size:15px;padding:8px}table.wide td:before{content:attr(data-label);display:block;font-weight:700;color:#19615f;font-size:13px}table:not(.wide){font-size:12px}th,td{padding:7px}details li{word-break:keep-all}img{margin-top:20px}nav{gap:12px}}</style></head><body><main><nav><a href="report.html">전체 보고서</a><a href="claim_comparison.html">문구 제안</a><a href="technical_appendix.html">기술 부록</a><a href="README.html">파일·재현 안내</a></nav><p class="caption">Baseline · 2026-09-28 · 기존 원고를 보존한 확장 비교 보고서</p><details><summary>목차 열기</summary><ul><li><a href="#s1">1. 입력과 보존</a></li><li><a href="#s2">2. 분모와 추정 대상</a></li><li><a href="#s3">3. 지원과 수치 보류</a></li><li><a href="#s4">4. 실제 구간 정의</a></li><li><a href="#s7">5. 기간 비교에서 남는 차이</a></li><li><a href="#s8">6. 반복해서 만들 수 있는 범위</a></li><li><a href="#s9">7. 이번 저장 결과로 답하지 못한 질문</a></li></ul></details><h1>기술 부록 — 저장 결과 비교의 범위와 재현</h1>
+<h2 id="s1">1. 입력과 보존</h2>
+<p>핵심 입력은 기존 BCAI 허브의 <code>summary.csv</code> 132행과 BCAP 허브의 <code>summary.csv</code> 2,552행이다. 요약표만 믿고 계산하지 않고 각 행의 <code>source_csv</code>와 <code>source_manifest</code>를 따라 완료 실행의 원 산출물을 읽었다. manifest의 <code>status=COMPLETE</code>를 확인하고, 원 CSV의 SHA-256을 해당 manifest의 outputs와 대조한 뒤 요약표의 원 수치 열·문자 열을 정렬하여 전부 비교했다. 정수·문자·결측은 그대로, 부동소수 값은 허용 오차 1e-12로 확인한다.</p>
+<p>추가 9년은 BCAI 연도별 9실행, BCAP 네 모듈×9실행이다. 기준 두 시즌은 BCAI 1실행, BCAP 4개 공유 실행의 연도별 표다. 합계 50개의 완료 실행을 본 비교에 연결하고, 2026은 별도 3실행을 연결했다. 실패 실행을 최신 성공 실행으로 오인하거나 덮어쓰지 않았다. 원자료 전체를 새로 전수 감사한 작업은 아니다.</p>
+<p>입력 CSV·완료 manifest·본문 근거·동결 구현의 실제 경로와 SHA-256은 <a href="audit/source_hashes.csv">입력 장부</a>, 연도별 실행·모델 ID와 구간 가족은 <a href="tables/run_methods.csv">실행별 방법</a>에 있다. 원고 5개와 기존 수치 산출물은 작업 전후 해시로 보존 여부를 확인한다. 새 산출물과 코드는 이 폴더 안에만 둔다. 루트 README·column.md·sources.md에는 새 보고서의 상태·근거를 연결한다.</p>
+<p>요청문에서 언급한 별도 ‘accompanying handoff’ 첨부 파일은 이 요청에 따로 제공되지 않았다. 대신 프로젝트의 <a href="../r_history_20260928/completion.md">완료 인계</a>, <a href="../../../../models/bcap/r/README.md">R 실행 안내</a>, <a href="../r_bcap_history_20260928/implementation_review.md">구현 검토</a>, <a href="../r_supplement_20260928/report.md">2026 보조 제한</a>을 읽고 현재 완료 상태·보류·제한을 확인했다. 계산에 필요한 저장 산출물은 접근 가능했다.</p>
+<h2 id="s2">2. 분모와 추정 대상</h2>
+<p>BCAI는 해당 카운트를 한 번 이상 거친 고유 타석의 최종 W 평균을 시즌 0-0 평균으로 나눈 지수다. 같은 타석이 여러 카운트에 들어가므로 12카운트 N의 합은 전체 PA가 아니다. 연도별 극값·순위·상태 평균 간격은 각 저장 값의 서술적 변환이다. 원 W의 표본과 카운트는 <a href="tables/bcai_all_132.csv">전체 BCAI 표</a>에 있다.</p>
+<p>원래 두 시즌 통합 지수는 각 시즌의 지수를 0-0 유효 PA 비중으로 혼합했다. 이 보고서는 그 저장값을 비교 기준으로 읽으며 새 11년 통합 추정량을 만들지 않는다. 민감도 표의 연도 지수 단순평균은 각 해 1/k, PA 가중 연도 지수 평균은 해당 기간 내 N(0-0)/합계 N(0-0)이다. 모든 카운트에 같은 연도 가중치를 적용한다. 중앙값·범위는 연도 지수의 서술 요약이다. <a href="tables/annual_summary_weights.csv">가중치 전체</a>.</p>
+<p>BCAP는 같은 지원된 현재 의사결정 행에 두 행동을 적용한 OOF AIPW 점수의 평균 차이다. Δ=Q1−Q0. PITCH는 FB−NFB, S/B는 S−B, SWING은 Swing−Take, FF는 FF−non-FF다. 타자는 양수·음수를 높은 W 관점에서, 투수는 낮은 허용 W 관점에서 읽는다. 한 타석의 공별 Δ를 합쳐 타석 정책 가치를 만들지 않는다.</p>
+<p>전체 결과를 읽은 뒤 전체 카운트·region·region_pitch·overall 각각을 요약했다. 한 연도 232행은 PITCH13 + S/B13 + SWING193 + FF13이다. SWING193은 overall1/count12/region60/region_pitch120이다. 모서리 투구가 보고 구역에 중복되어 독립된 193개 실험이 아니다. 카운트 요약과 구역 요약의 추정 집단도 다르다.</p>
+<h2 id="s3">3. 지원과 수치 보류</h2>
+<p>행 단위 공통 지원은 보정 선택 확률 0.05~0.95와 훈련 자료에서 해당 투수 또는 타자의 양 행동 관측 각각 30회 이상을 요구한다. SWING은 물리량·위치·구종의 유효성도 적용한다. 평가 집단은 지원 N≥500, 행동별 ESS≥200, 행동별 경기≥100, 포함률≥0.5, 어느 한 경기의 행동별 최대 가중치 비중≤0.05를 모두 만족해야 한다.</p>
+<p>새 보고서는 <code>support_gate</code>를 먼저 적용한다. <strong>원 감사 CSV에는 지원 미달이어도 계산된 Δ·구간이 남는 행이 있었다.</strong> 따라서 단순히 숫자가 존재한다는 이유로 활용하지 않았다. 해당 행의 수치를 해석용 표에서 NA로 만들고 상태를 ‘자료 부족’으로 유지한다. 원본은 수정하지 않는다. <a href="tables/unsupported_source_audit_not_for_interpretation.csv">원 감사값 보관표</a>는 감사용으로만 두며, 공개 해석용 <a href="tables/bcap_unsupported_cells.csv">지원 부족표</a>는 값을 가린다.</p>
+<p>‘양수/음수 연도’는 지원 행에서만 센다. ‘구간 양수’는 저장 하한&gt;0, ‘구간 음수’는 저장 상한&lt;0, 나머지 지원 행은 불명확이다. 반올림하기 전 값을 사용한다. 비교 대상으로 삼은 전체 연도 수와 지원 연도 수를 항상 별도 열로 남겼다. 연도를 센 표와 여러 카운트의 보고 칸을 센 표는 단위가 다르다.</p>
+<h2 id="s4">4. 실제 구간 정의</h2>
+<h3 id="s5">BCAI</h3>
+<p>각 시즌 안에서 경기를 단위로 2,000회 재표집했다. 개별 구간은 bootstrap 2.5·97.5 백분위수다. 근사 동시 구간은 11개 비기준 카운트의 표준화 편차 절댓값 최댓값을 각 재표집에서 구하고 그 95백분위 임계값×SE를 점추정 양쪽에 더한다. 0-0은 정의상 100이고 그 지수의 SE는 0이다. 출발 W까지 오차가 없다는 뜻은 아니다.</p>
+<p>기존 2024·2025 R 실행에는 지정된 2025−2024 차이 11개의 별도 근사 동시 구간이 있고 모두 0을 포함했다. 이는 해당 비교 설계 안의 결과이며 동등성 검정이 아니다. 본 보고서는 저장된 별도 연도 bootstrap draw를 같은 seed·행번호라는 이유로 짝지어 새로운 연도 차이를 만들지 않았다. 2015–2023 대 2024–2025의 공식 차이 검정은 수행하지 않았다.</p>
+<h3 id="s6">BCAP</h3>
+<p>동결 코드의 <code>bc_cluster()</code>는 고정된 OOF 점수의 경기별 중심화 합을 구해 군집 표준오차를 계산한다. n은 지원 투구 수, G는 그 표본의 경기 수다. SE = sqrt{G/(G−1) × Σg[Σi∈g(φi−평균φ)]²}/n. 보정 구간은 Δ ± t(1−0.05/(2M), G−1)×SE다. 이 식을 저장된 SE·G·가족 M으로 별도 대조한다.</p>
+<div class="table-wrap"><table class="">
+<thead>
+<tr>
+<th>표·실행</th>
+<th>비교 가족 M</th>
+<th>적용 범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+표·실행">원 개발 PITCH/SB/SWING 및 해당 R 재현</td>
+<td data-label="비교 가족 M">219</td>
+<td data-label="적용 범위">당시 세 모듈의 표시 집단</td>
+</tr>
+<tr>
+<td data-label="
+
+표·실행">원 FF 확장과 FF R 재현</td>
+<td data-label="비교 가족 M">255</td>
+<td data-label="적용 범위">원 확장에서 확정한 비교 가족</td>
+</tr>
+<tr>
+<td data-label="
+
+표·실행">2015–2023 역사 R 실행</td>
+<td data-label="비교 가족 M">255</td>
+<td data-label="적용 범위">각 연도 232개 보고의 사전 보수적 상한</td>
+</tr>
+<tr>
+<td data-label="
+
+표·실행">기존 Python 2023 핵심 위치 비교</td>
+<td data-label="비교 가족 M">4</td>
+<td data-label="적용 범위">사전에 정한 핵심 비교; 모든 역사 비교가 아님</td>
+</tr>
+<tr>
+<td data-label="
+
+표·실행">기존 Python 2023 타자 표시</td>
+<td data-label="비교 가족 M">236</td>
+<td data-label="적용 범위">당시 외부 확인의 보고 가족</td>
+</tr>
+<tr>
+<td data-label="
+
+표·실행">2026 새 R 구종 보조</td>
+<td data-label="비교 가족 M">255</td>
+<td data-label="적용 범위">별도 YTD 실행의 비교 가족</td>
+</tr>
+</tbody></table></div>
+<p>구간은 보조 모형 전체 재학습 변동과 경기 간 선수 의존성을 포함하지 않으며 실제 명목 포함률도 검증되지 않았다. 같은 공유 적합에서 뽑은 2024·2025 하위 표를 서로 독립된 모델의 실험처럼 세지 않는다. 한 해 내부의 구간이 여러 해 전체를 동시에 보장하지 않는다. 구간의 겹침·비겹침이나 유의성 표시 개수로 연도 차이의 유의성을 판단하지 않는다.</p>
+<p>0.01 W는 기존 설계의 실질 차이 참고선이다. 하한이 0을 넘는 것과 하한이 0.01을 넘는 것도 구별한다. 반복 횟수는 메타분석이나 결합 유의확률이 아니다.</p>
+<h2 id="s7">5. 기간 비교에서 남는 차이</h2>
+<ul>
+<li><strong>적합:</strong> 기준 두 해는 공유 적합, 추가 각 해는 별도 적합. 역사 R 분할은 원 NumPy 분할의 재현이 아니다. 모형의 정의가 같아도 학습 자료량·지원 집단·수축 정도가 다를 수 있다.</li>
+<li><strong>가중치:</strong> 원 시즌별 BB/HBP/단타/장타 계수를 그대로 쓴다. <code>season_event_weights.csv</code>에 수치를 남겼다. 과거 계수는 프로젝트 출처 기록에서 공식 표 검색 색인 확인과 직접 본문 접근 실패를 구별했다. 이번에는 새 원문 열람 완료나 계수의 새 독립 검증을 주장하지 않는다.</li>
+<li><strong>측정:</strong> 2015·2016 구속은 보정 PITCHf/x이고 2017 이후 Statcast다. 이전 구속 특징을 포함한 네 모듈 모두에 관련된다. 2017 이후 제한은 그 두 해를 빼는 서술 민감도이며 남은 측정의 완전한 동등성을 보장하지 않는다.</li>
+<li><strong>2020:</strong> 단축 시즌으로 경기·선수·행동 표본이 다르다. 제외 요약은 다른 목표 기간을 보는 것이다. 단축 시즌을 지웠다는 이유로 남은 차이를 인과적 시대 효과로 읽지 않는다.</li>
+<li><strong>구장:</strong> 역사 준비기의 <code>legacy_last_schedule_record</code>는 재개 경기의 마지막 일정 구장을 사용해 기존 Python 처리를 재현했다. 2020·2021의 서로 다른 구장 재개 사례는 모든 투구의 실제 구장을 복원한 것이 아니다. 기존 <a href="../r_bcap_history_20260928/implementation_review.md">구현 검토</a>에 기록됐다.</li>
+<li><strong>표본:</strong> 완료 타석·최종 사건 조건과 지원 조건은 관측 결과 및 행동 선택과 관련될 수 있다. 결측·지원 제외를 실패·0 효과로 바꾸지 않는다. 원자료 확보 단계 전체를 새로 독립 검증하지 않았다.</li>
+<li><strong>분류:</strong> 역사 FF 실행은 자체 지원 표본만 계산했다. 기존 두 분류 공통 표본의 48개 비교를 모든 역사 연도에 새로 복원하지 않았다. 분류간 차이를 SI/FC의 인과 기여로 분해할 수 없다.</li>
+</ul>
+<h2 id="s8">6. 반복해서 만들 수 있는 범위</h2>
+<p>저장소 루트에서 다음 명령을 쓴다. 새 목적지 인자를 주면 보고서 입력 요약과 그림을 별도 폴더에 생성한다. 실행은 저장 결과만 읽고 원자료 다운로드·모델 적합·자동화 호출을 하지 않는다.</p>
+<pre><code class="language-powershell">&amp; ./tools/run_r.ps1 -Script ./columns/001-ball-count/analysis/history_comparison_20260928_r01/present.R &lt;새로운_출력_폴더&gt;
+</code></pre>
+<p><code>present.R</code>는 <code>analyze.R</code>를 읽어 원 주장 장부·입력 검증·새 요약·표를 만들고 그림 5개를 저장한다. 현재 보고서 폴더를 지정하면 <strong>이 보고서의 파생 산출물만</strong> 재생성한다. 기존 완료 실행·원고 경로에는 쓰지 않는다. R 환경은 <a href="audit/sessionInfo.txt">sessionInfo</a>에 있다.</p>
+<p>본문의 문장은 <code>report.template.md</code>, 비교 문구는 <code>claim_comparison.md</code>, 기술 설명은 이 파일이다. <code>build_report.mjs</code>가 생성된 표를 본문에 넣고 실제 <code>report.md</code>·HTML과 목차·로컬 링크를 만든다. HTML 검사는 <code>check_report.mjs</code>, 저장 수치 산술·보존 검사는 <code>verify.R</code>다. 문헌 원문·데이터의 새 수집 없이 기존 자체 근거만 사용했다.</p>
+<h2 id="s9">7. 이번 저장 결과로 답하지 못한 질문</h2>
+<p>연도 차이의 인과 원인, 매 시즌 같은 모형·동일 지원 집단에서 재평가한 결과, 공통 고정 가중치의 기여 분해, 반복 분할·전체 재학습 불확실성, 투수 의도·실제 실행 오차·타자 인식, 사건별 매개 기여, 최적 구종 혼합·순차 정책, 역사 Ridge 확장, KBO 검증은 미실시다. 이를 해결한 것처럼 승인 원고를 바꾸지 않았다.</p>
+<nav><a href="report.html">전체 보고서</a><a href="claim_comparison.html">문구 제안</a><a href="technical_appendix.html">기술 부록</a><a href="README.html">파일·재현 안내</a></nav></main></body></html>

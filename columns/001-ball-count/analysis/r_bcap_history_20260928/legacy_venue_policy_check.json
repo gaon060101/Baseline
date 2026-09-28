@@ -1,0 +1,226 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-28T12:59:09+0900",
+  "code": {
+    "path": "C:/Users/백창현/Desktop/Baseline/models/bcap/r/prepare_raw.R",
+    "sha256": "5a9920937beae72efffeaf69914c86d66e59cf7f0014e9315322082960b231a5"
+  },
+  "legacy_code": {
+    "path": "models/bcap/data.py",
+    "sha256": "6dd3b6373e94c6df3c91246f2e665ca6b74aadd0c1cddac2ce4d4b42eee37689"
+  },
+  "policy": "legacy_last_schedule_record",
+  "scope": "Game-level venue only; no pitch-level relocation reconstruction.",
+  "checks": [
+    {
+      "year": 2020,
+      "path": "columns/001-ball-count/data/raw/mlb/2020/snapshot_20260928_r_history/schedule_2020.json",
+      "sha256": "f16bed1f2c142b2a5b975be5fc5491d82a93e6b4ff761a8d511c77fcb8f0a093",
+      "games": 898,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 900,
+        "unique_games": 898,
+        "duplicated_games": 2,
+        "records_removed": 2,
+        "identical_records_removed": 1,
+        "conflicting_games": 1,
+        "venue_conflicts_resolved": 1,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": [
+        {
+          "game_pk": 630882,
+          "year": 2020,
+          "venue": 3309,
+          "official_date": "2020-08-09",
+          "cutoff": "2020-12-31",
+          "schedule_record_index": 238,
+          "schedule_date": "2020-08-09",
+          "game_date": "2020-08-09T16:35:00Z",
+          "venue_name": "Nationals Park",
+          "resume_date": "2020-08-14T21:05:00Z",
+          "description": "Completed in Baltimore",
+          "normalization_record_order": 206,
+          "selected_schedule_record": false,
+          "selected_venue": 2,
+          "resolution_policy": "legacy_last_schedule_record"
+        },
+        {
+          "game_pk": 630882,
+          "year": 2020,
+          "venue": 2,
+          "official_date": "2020-08-09",
+          "cutoff": "2020-12-31",
+          "schedule_record_index": 303,
+          "schedule_date": "2020-08-14",
+          "game_date": "2020-08-14T21:05:00Z",
+          "venue_name": "Oriole Park at Camden Yards",
+          "resumed_from": "2020-08-09T16:35:00Z",
+          "description": "Completed in Baltimore",
+          "normalization_record_order": 265,
+          "selected_schedule_record": true,
+          "selected_venue": 2,
+          "resolution_policy": "legacy_last_schedule_record"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "path": "columns/001-ball-count/data/raw/mlb/2021/snapshot_20260928_r_history/schedule_2021.json",
+      "sha256": "30f58024eda83d94d03ee3d097bd5bf28760d7931eb28edb5770272d0fb44059",
+      "games": 2429,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 2437,
+        "unique_games": 2429,
+        "duplicated_games": 8,
+        "records_removed": 8,
+        "identical_records_removed": 7,
+        "conflicting_games": 1,
+        "venue_conflicts_resolved": 1,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": [
+        {
+          "game_pk": 633224,
+          "year": 2021,
+          "venue": 4705,
+          "official_date": "2021-07-21",
+          "cutoff": "2021-12-31",
+          "schedule_record_index": 1488,
+          "schedule_date": "2021-07-21",
+          "game_date": "2021-07-21T21:20:00Z",
+          "venue_name": "Truist Park",
+          "resume_date": "2021-09-25T00:10:00Z",
+          "description": "Makeup of 7/19 PPD",
+          "normalization_record_order": 1428,
+          "selected_schedule_record": false,
+          "selected_venue": 2680,
+          "resolution_policy": "legacy_last_schedule_record"
+        },
+        {
+          "game_pk": 633224,
+          "year": 2021,
+          "venue": 2680,
+          "official_date": "2021-07-21",
+          "cutoff": "2021-12-31",
+          "schedule_record_index": 2384,
+          "schedule_date": "2021-09-24",
+          "game_date": "2021-09-25T00:10:00Z",
+          "venue_name": "Petco Park",
+          "resumed_from": "2021-07-21T21:20:00Z",
+          "description": "Makeup of 7/19 PPD",
+          "normalization_record_order": 2309,
+          "selected_schedule_record": true,
+          "selected_venue": 2680,
+          "resolution_policy": "legacy_last_schedule_record"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "path": "columns/001-ball-count/data/raw/mlb/2022/snapshot_20260928_r_history/schedule_2022.json",
+      "sha256": "11eeea60d8fa2616e66a191d9e0d3b0c30185c6e5fc3d5786884a0c4b1e1ba86",
+      "games": 2430,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 2431,
+        "unique_games": 2430,
+        "duplicated_games": 1,
+        "records_removed": 1,
+        "identical_records_removed": 1,
+        "conflicting_games": 0,
+        "venue_conflicts_resolved": 0,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2023,
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+      "sha256": "eb8b18a8a25c1bf017f6512b7770f0ecfcc0f69c04dac38707e874046788ef68",
+      "games": 2430,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 2437,
+        "unique_games": 2430,
+        "duplicated_games": 7,
+        "records_removed": 7,
+        "identical_records_removed": 7,
+        "conflicting_games": 0,
+        "venue_conflicts_resolved": 0,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2024,
+      "path": "columns/001-ball-count/data/raw/mlb/2024/schedule_2024.json",
+      "sha256": "9733d248b6a6d1635eb91802f504d70ebedc49b5aa87e7ae962cafb40b18879b",
+      "games": 2429,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 2432,
+        "unique_games": 2429,
+        "duplicated_games": 3,
+        "records_removed": 3,
+        "identical_records_removed": 3,
+        "conflicting_games": 0,
+        "venue_conflicts_resolved": 0,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2025,
+      "path": "columns/001-ball-count/data/raw/mlb/2025/schedule_2025.json",
+      "sha256": "a8e90faf13a67f04762e019c465e38c66def1d7c4fbc8621c47cb0785fac2948",
+      "games": 2430,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 2434,
+        "unique_games": 2430,
+        "duplicated_games": 4,
+        "records_removed": 4,
+        "identical_records_removed": 4,
+        "conflicting_games": 0,
+        "venue_conflicts_resolved": 0,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2026,
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json",
+      "sha256": "c988379d50a35284bc87b8c6e82b3a50c9b8c059df867532f8195c84c4380d88",
+      "games": 2165,
+      "all_selected_venues_match_legacy_dictionary": true,
+      "normalization": {
+        "records_before": 2166,
+        "unique_games": 2165,
+        "duplicated_games": 1,
+        "records_removed": 1,
+        "identical_records_removed": 1,
+        "conflicting_games": 0,
+        "venue_conflicts_resolved": 0,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games."
+      },
+      "conflicting_records": []
+    }
+  ]
+}

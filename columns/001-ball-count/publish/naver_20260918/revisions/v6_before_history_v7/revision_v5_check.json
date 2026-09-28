@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "checks": {
+    "five_chapters_same_order": true,
+    "six_new_tables": true,
+    "same_five_images": true,
+    "same_external_references": true,
+    "chapter_links": true,
+    "visual_check": true
+  }
+}

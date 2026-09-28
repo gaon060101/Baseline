@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": {
+    "BCAI_11_seasons_132_counts": true,
+    "BCAI_start_denominator": true,
+    "BCAI_extrema_every_year": true,
+    "BCAI_11_ranges": true,
+    "SB_0-2": true,
+    "SB_1-2": true,
+    "swing_inside": true,
+    "swing_outside": true,
+    "FB_30": true,
+    "FF_32": true,
+    "original_manuscripts_archived_and_167_other_sources_unchanged": true
+  },
+  "note": "편집에 쓰인 저장 수치와 수정 전 원고 보관본 검산. 역사 보고서의 당시 원고 경로는 보관본으로 대조했으며 기존 감사 파일은 변경하지 않음. 재적합·새 인과 검증 아님."
+}

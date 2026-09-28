@@ -1,0 +1,65 @@
+{
+  "years": [
+    2026
+  ],
+  "input_csv": [
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-03-25_2026-03-29.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-03-30_2026-04-03.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-04_2026-04-08.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-09_2026-04-13.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-14_2026-04-18.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-19_2026-04-23.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-24_2026-04-28.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-04-29_2026-05-03.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-04_2026-05-08.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-09_2026-05-13.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-14_2026-05-18.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-19_2026-05-23.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-24_2026-05-28.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-05-29_2026-06-02.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-03_2026-06-07.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-08_2026-06-12.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-13_2026-06-17.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-18_2026-06-22.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-23_2026-06-27.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-06-28_2026-07-02.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-03_2026-07-07.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-08_2026-07-12.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-13_2026-07-17.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-18_2026-07-22.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-23_2026-07-27.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-07-28_2026-08-01.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-02_2026-08-06.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-07_2026-08-11.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-12_2026-08-16.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-17_2026-08-21.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-22_2026-08-26.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-08-27_2026-08-31.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-09-01_2026-09-05.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/statcast_2026-09-06_2026-09-07.csv",
+    "columns/001-ball-count/data/raw/mlb/2026/supplement_20260909_ridge_v02/statcast_2026-09-07_missing_games.csv"
+  ],
+  "seasons": [
+    {
+      "year": 2026,
+      "cutoff": "2026-09-07",
+      "scope": "archived_partial_season",
+      "schedule": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json"
+    }
+  ],
+  "weights": [
+    {
+      "year": 2026,
+      "BB": 0.691,
+      "HBP": 0.722,
+      "1B": 0.882,
+      "2B": 1.252,
+      "3B": 1.584,
+      "HR": 2.037
+    }
+  ],
+  "weights_source": "columns/001-ball-count/analysis/r_supplement_20260928/weights.json",
+  "source_notes": "columns/001-ball-count/sources.md",
+  "output_rds": "columns/001-ball-count/data/processed/r_bcap_supplement_20260928/2026/prepared.rds",
+  "audit_dir": "columns/001-ball-count/data/processed/r_bcap_supplement_20260928/2026/audit"
+}

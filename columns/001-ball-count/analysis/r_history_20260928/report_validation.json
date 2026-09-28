@@ -1,0 +1,524 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-09-28 13:57:11 KST",
+  "role": "완료된 저장 결과만 모은 보고서; 통계 재계산 없음",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "completed_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "pending_years": [],
+  "completed_seasons": 11,
+  "pending_seasons": 0,
+  "summary_rows": 132,
+  "coverage_note_ko": "2015~2025의 모든 목표 시즌 계산이 완료됐다.",
+  "continuous_target_coverage": true,
+  "selected_runs": [
+    "bcai_history__mlb_2015__20260928__r01",
+    "bcai_history__mlb_2016__20260928__r01",
+    "bcai_history__mlb_2017__20260928__r01",
+    "bcai_history__mlb_2018__20260928__r01",
+    "bcai_history__mlb_2019__20260928__r01",
+    "bcai_history__mlb_2020__20260928__r02",
+    "bcai_history__mlb_2021__20260928__r01",
+    "bcai_history__mlb_2022__20260928__r01",
+    "bcai_history__mlb_2023__20260928__r02",
+    "bcai_r_check__mlb_2024_2025__20260928__r02"
+  ],
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2015__20260928__r01/manifest.json",
+      "bytes": 9549,
+      "sha256": "bfff01ec625d850e589874a76be8c805a4403d08d696b5d36f34bcafe6604e83"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2015__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1644,
+      "sha256": "6301497b333767dbb341a2c64e538a22603dbb4b43c3cf34a0275e586220bd2f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2015__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "851bb25f10deb9945a51e0ac1c1de83850b8954d43437dd5fd8718b16a528097"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2015__20260928__r01/artifacts/validation.json",
+      "bytes": 1063,
+      "sha256": "9f5bcc23dc3ecfabe617c1a912d505bbdd5e85b24202094720f409915a3dc214"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2016__20260928__r01/manifest.json",
+      "bytes": 9549,
+      "sha256": "336e113702825dbe61a444789e3638b7d98592c29b5105fe310aeee6596c9d9f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2016__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1645,
+      "sha256": "670a06b14eb55e2e88572d0986c1fefbb33b009fe9e00cbad5e88f888a709322"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2016__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "ba4cbb63823a60f5af7fe877495ccc9fb23b346934dafcaafffe5d18bdca2b04"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2016__20260928__r01/artifacts/validation.json",
+      "bytes": 1063,
+      "sha256": "1a6a9b353bbc9d8295c33431c01ef25f0dc621526297c8583e643a363178ea87"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2017__20260928__r01/manifest.json",
+      "bytes": 9604,
+      "sha256": "325cd48038582186403e01bc9a00591999b6687b104f88e5a76ca4e7f8b15838"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2017__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1640,
+      "sha256": "3a4f98b407d83af31629d72415d7984e6a8eda1ef4969f8a30645a3d6fa7e0fd"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2017__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "354a8ca255be2ca135d46b00cdf9fa73d40eb000171efd6db676af6a020b0264"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2017__20260928__r01/artifacts/validation.json",
+      "bytes": 1090,
+      "sha256": "fbc48b229358000d6d8b07052dfc1dd2ed6ef36d7dd7540e76ffee5799d8fcd3"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/manifest.json",
+      "bytes": 9548,
+      "sha256": "6a9062a9431c8964cf65be80da513f5174c8f8b384bc2e27f869db8c5993b716"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1641,
+      "sha256": "ae2dc76e6b7b6ccf594c8863c90db8fabe1f65530846fade03a83101ec24c0e5"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "584b360b44f88a17b56667a7bf36b9296f442708f5a2d944491ec8bf6918b992"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2018__20260928__r01/artifacts/validation.json",
+      "bytes": 1064,
+      "sha256": "49562ac8bbd9d6c26d95220217d49ee2895612bfee7fb1d007ffbbfef32ae632"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2019__20260928__r01/manifest.json",
+      "bytes": 9542,
+      "sha256": "246716e557f7e3a88728a8bf01aeec186a66b49918143250787a16da44934f14"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2019__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1641,
+      "sha256": "79318e10a06e557a7d88148f60136e68ffe258c7d449e6828fb3bfe80d16a29b"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2019__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "792130da5c3a8522010a94edcd2453d54a6233b87e69c4689e01ca5d2f01ca99"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2019__20260928__r01/artifacts/validation.json",
+      "bytes": 1061,
+      "sha256": "d9745f73315764289d068e6a97c69ebc8b266b0f36a3f556fdc1d2db51583897"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2020__20260928__r02/manifest.json",
+      "bytes": 9490,
+      "sha256": "2a9f2a4bc60d2112742c8bbdf60c8aebd7be6533c784fedb71f75c4c81b16212"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2020__20260928__r02/artifacts/season_indices.csv",
+      "bytes": 1639,
+      "sha256": "ae56f4d3c682085c200b56daa59f27db876e6cac1f382133ae2f7e72502b3d90"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2020__20260928__r02/artifacts/cohorts.csv",
+      "bytes": 88,
+      "sha256": "32c3f43830aaee4286d30eab21e4863236faa7382f8d700dbc24a7fbf13cc019"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2020__20260928__r02/artifacts/validation.json",
+      "bytes": 1057,
+      "sha256": "f87f6b194f934e2118394cca088db1c43fd8edd859fe04e2203c1586bc319747"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2021__20260928__r01/manifest.json",
+      "bytes": 9545,
+      "sha256": "668cfe0632dff3c5588a99f543848313363c5e0d43fa3ab368b4e209d719701b"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2021__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1641,
+      "sha256": "d19118f8601d7ac2c930e523ecf60a425831e7cf4d606a5eda30d9c16c95159f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2021__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "a4c43bfc807f0e9fd3d5941364a48e0c28867e44281f8ffcf7e651684053d480"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2021__20260928__r01/artifacts/validation.json",
+      "bytes": 1061,
+      "sha256": "133b285675ac92ba9057d516957b5406fba96d81e6860a90009fd35b748178d5"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2022__20260928__r01/manifest.json",
+      "bytes": 9548,
+      "sha256": "48c713daa4dab6f3b6aa0c5a294d6a6b47ae034e2158f7c63235a248b6893b73"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2022__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1639,
+      "sha256": "104a3d01e66d9b1b5cf9b4ae0072131c4107082cf2151c981157aa89ae88bbde"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2022__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "0c2ede4da9adba37ac24e16ca28debd95315c3a45d534e335654b2e550209d14"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2022__20260928__r01/artifacts/validation.json",
+      "bytes": 1063,
+      "sha256": "fdac7f28e5560732323df812cdbfdc5ccca28cb389b11e446dd73973f692012f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/manifest.json",
+      "bytes": 8464,
+      "sha256": "14b7537e37372bce67d5f5175a2f83f9f4bae00e5f9b8fb852dad045adaf8747"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/season_indices.csv",
+      "bytes": 1643,
+      "sha256": "80b9ffae23156fbbac6d3916aa532ef904fee1837b22a62d98264becbf963b32"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "ece591175854a76620046a08a66071ccc7290d349e7873a3250ef2a313c684a6"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r02/artifacts/validation.json",
+      "bytes": 1064,
+      "sha256": "1261e33cf863240b4bf4aef0cac709e9980d7e32336cc47fc290b54de90da701"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/manifest.json",
+      "bytes": 11531,
+      "sha256": "a3f1f3ea17dd5638e4be11b26ab23968b438587419663d92035854d091332fd9"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/artifacts/season_indices.csv",
+      "bytes": 3193,
+      "sha256": "006d0d4786966974a2149a475ca1af612e208798832ccf6ccfe79b845995ce40"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/artifacts/cohorts.csv",
+      "bytes": 158,
+      "sha256": "f715160bb9fb814799058bdf859dba6d7650c1d910e9f28ac019f09a1ec3e564"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/artifacts/validation.json",
+      "bytes": 2430,
+      "sha256": "42aeffbc2e5156e279f75350bccce993d49c42e017a5fb3069f9b5d444708ecb"
+    }
+  ],
+  "inputs_unchanged": true,
+  "ignored_runs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2020__20260928__r01/manifest.json",
+      "status": "FAILED"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r01/manifest.json",
+      "status": "FAILED"
+    }
+  ],
+  "checks": {
+    "complete_manifests_only": true,
+    "saved_validation_pass": true,
+    "source_output_hashes_match": true,
+    "all_twelve_counts": true,
+    "no_duplicate_year_count": true,
+    "baseline_100": true,
+    "baseline_PA_matches": true,
+    "cohort_totals_match": true,
+    "missing_local_links": [],
+    "checked_local_links": 30,
+    "cross_year_inference_computed": false,
+    "bootstrap_draws_loaded": false
+  },
+  "code": {
+    "path": "tools/render_bcai_history.R",
+    "bytes": 23192,
+    "sha256": "79b473e98eaf431e1280134bb6fcea8d9977236efbd6ebc215f7619a1472aa05"
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/report.md",
+      "bytes": 8809,
+      "sha256": "9ecbade22da32aadf7364cdb48640704d4e45c7590261a258280f45e59be91ad"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/report.html",
+      "bytes": 13299,
+      "sha256": "4127eddc9053e4b58a9a8c938ca6864d70d287998baedf1452979336f2479fe8"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/summary.csv",
+      "bytes": 61510,
+      "sha256": "62326e2e02af5247fa80de9103b460bceac4cb7e812922e1ba5a37bfdbb020b0"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_history_20260928/bcai_year_count_heatmap.png",
+      "bytes": 128622,
+      "sha256": "f256a988f91d14d7be44d53f495cf067010ec70102e478db6b5d868fc5be0135"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_history_20260928/bcai_0balls_blog.png",
+      "bytes": 80403,
+      "sha256": "d57f723b198eb26f262a2865d120aaa07fa43dcfc88d51c943110735e618bf50"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_history_20260928/bcai_1balls_blog.png",
+      "bytes": 77535,
+      "sha256": "92aa96e1a1da9293fd3be87f9794919d573fdc053367544ec318c6b1c60b841a"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_history_20260928/bcai_2balls_blog.png",
+      "bytes": 85980,
+      "sha256": "07316b38e3d8a34e8e5c628f9ef7616a9f7e6c02a4e7023d95fed3da760e994c"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_history_20260928/bcai_3balls_blog.png",
+      "bytes": 80614,
+      "sha256": "fed4f7997a885065fde1771816a3dcda95c82407bf74f0c4e496f8917bc4faa2"
+    }
+  ],
+  "browser_check": {
+    "checked_at": "2026-09-28T04:58:10.964Z",
+    "report_html_sha256": "4127eddc9053e4b58a9a8c938ca6864d70d287998baedf1452979336f2479fe8",
+    "viewports": [
+      {
+        "width": 390,
+        "images": 5,
+        "unloaded_images": 0,
+        "horizontal_page_overflow": false,
+        "complete_coverage_message": true,
+        "old_2016_gap_message": false,
+        "sample_rows": 11,
+        "count_rows": 12,
+        "has_2016_sample": true,
+        "mobile_panels": [
+          {
+            "alt": "0볼에서 시즌별 BCAI",
+            "width": 340,
+            "natural_width": 1050,
+            "natural_height": 1520
+          },
+          {
+            "alt": "1볼에서 시즌별 BCAI",
+            "width": 340,
+            "natural_width": 1050,
+            "natural_height": 1520
+          },
+          {
+            "alt": "2볼에서 시즌별 BCAI",
+            "width": 340,
+            "natural_width": 1050,
+            "natural_height": 1520
+          },
+          {
+            "alt": "3볼에서 시즌별 BCAI",
+            "width": 340,
+            "natural_width": 1050,
+            "natural_height": 1520
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "images": 5,
+        "unloaded_images": 0,
+        "horizontal_page_overflow": false,
+        "complete_coverage_message": true,
+        "old_2016_gap_message": false,
+        "sample_rows": 11,
+        "count_rows": 12,
+        "has_2016_sample": true,
+        "mobile_panels": [
+          {
+            "alt": "0볼에서 시즌별 BCAI",
+            "width": 512,
+            "natural_width": 1050,
+            "natural_height": 1520
+          },
+          {
+            "alt": "1볼에서 시즌별 BCAI",
+            "width": 512,
+            "natural_width": 1050,
+            "natural_height": 1520
+          },
+          {
+            "alt": "2볼에서 시즌별 BCAI",
+            "width": 512,
+            "natural_width": 1050,
+            "natural_height": 1520
+          },
+          {
+            "alt": "3볼에서 시즌별 BCAI",
+            "width": 512,
+            "natural_width": 1050,
+            "natural_height": 1520
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "viewport_width": 390,
+        "label": "top",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_top.png",
+        "sha256": "117f72f8c6f4c5e7caa959b6e97ef5ce3744314722247dab664905dff863b3d4"
+      },
+      {
+        "viewport_width": 390,
+        "label": "overview",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_overview.png",
+        "sha256": "45c8c4ddf6d496bc49a0098958f7dfe6cfa1a93a3dc74ec62db58be9c952a545"
+      },
+      {
+        "viewport_width": 390,
+        "label": "mobile_0balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_0balls.png",
+        "sha256": "551448eff485e532ab57f34656e026a9cec059e99bb1c005e304593650fd7863"
+      },
+      {
+        "viewport_width": 390,
+        "label": "mobile_1balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_1balls.png",
+        "sha256": "a8013630e53253250f712700009e59f632c79f785db51616b024893e76b88f11"
+      },
+      {
+        "viewport_width": 390,
+        "label": "mobile_2balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_2balls.png",
+        "sha256": "428fa8dcfd63fea43e6f6d2a0da86d15836bf0e8695cb4d1661549c9f1a778ae"
+      },
+      {
+        "viewport_width": 390,
+        "label": "mobile_3balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_3balls.png",
+        "sha256": "4a58745e2e83bddac7e6cd20927a12facd7ba4218183ee07751fa5ff1619c357"
+      },
+      {
+        "viewport_width": 1280,
+        "label": "top",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_top.png",
+        "sha256": "08e240fb6d1f71068fd88d805c677303379236de14eb6a9e28dfd843515b4f51"
+      },
+      {
+        "viewport_width": 1280,
+        "label": "overview",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_overview.png",
+        "sha256": "2a7186e9f5dec04fa30d20eb2497ab415ec355af69f0bff9a78484f4858f1646"
+      },
+      {
+        "viewport_width": 1280,
+        "label": "mobile_0balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_mobile_0balls.png",
+        "sha256": "bfda5029ace2e604d18a98895ae479082ce032a363957d1a880ddb4872f39fd8"
+      },
+      {
+        "viewport_width": 1280,
+        "label": "mobile_1balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_mobile_1balls.png",
+        "sha256": "08bde382b71db37642f4a32e9f81c67a274e412338038068514f8b807513a085"
+      },
+      {
+        "viewport_width": 1280,
+        "label": "mobile_2balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_mobile_2balls.png",
+        "sha256": "a4ee28bc3ad69cb0bfc8e4305557765cf5f3e06727ef95e662bf4ef1c625f284"
+      },
+      {
+        "viewport_width": 1280,
+        "label": "mobile_3balls",
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_mobile_3balls.png",
+        "sha256": "0e3ceade45f5d0d97de41e14b819116625c7869488922171a09b6e0a60e69cab"
+      }
+    ],
+    "note_ko": "390px 및 1280px 실제 브라우저에서 이미지 5개 로드, 페이지 가로 넘침 없음, 표본 11행·카운트 12행, 2016 포함 및 전체 완료 문구를 확인했다. 스크린샷의 직접 육안 확인은 별도 기록한다."
+  },
+  "independent_csv_comparison": {
+    "status": "PASS",
+    "checked_at": "2026-09-28T04:58:48.541Z",
+    "rows": 132,
+    "source_csvs": 10,
+    "max_absolute_numeric_error": 0,
+    "missing_years": [],
+    "fields": [
+      "N",
+      "value",
+      "index",
+      "SE",
+      "CI95_low",
+      "CI95_high",
+      "simultaneous95_low",
+      "simultaneous95_high"
+    ],
+    "summary_sha256": "62326e2e02af5247fa80de9103b460bceac4cb7e812922e1ba5a37bfdbb020b0",
+    "note_ko": "PowerShell로 10개 원 season_indices.csv와 summary.csv의 132개 연도·카운트 행을 독립 대조했으며 8개 비교 수치의 최대 절대 오차는 0이다."
+  },
+  "visual_review": {
+    "checked_at": "2026-09-28T04:58:48.542Z",
+    "status": "PASS",
+    "directly_viewed_images": [
+      {
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_top.png",
+        "sha256": "117f72f8c6f4c5e7caa959b6e97ef5ce3744314722247dab664905dff863b3d4"
+      },
+      {
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_0balls.png",
+        "sha256": "551448eff485e532ab57f34656e026a9cec059e99bb1c005e304593650fd7863"
+      },
+      {
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_1balls.png",
+        "sha256": "a8013630e53253250f712700009e59f632c79f785db51616b024893e76b88f11"
+      },
+      {
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_2balls.png",
+        "sha256": "428fa8dcfd63fea43e6f6d2a0da86d15836bf0e8695cb4d1661549c9f1a778ae"
+      },
+      {
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_390_mobile_3balls.png",
+        "sha256": "4a58745e2e83bddac7e6cd20927a12facd7ba4218183ee07751fa5ff1619c357"
+      },
+      {
+        "path": "columns/001-ball-count/figures/r_history_20260928/qa_20260928045808_1280_overview.png",
+        "sha256": "2a7186e9f5dec04fa30d20eb2497ab415ec355af69f0bff9a78484f4858f1646"
+      }
+    ],
+    "note_ko": "390px 상단과 0·1·2·3볼 분할 그림, 1280px 전체 히트맵을 직접 열어 확인했다. 2016 행이 포함되고 이전 공백 배너가 사라졌으며, 2015~2025의 11개 시즌 완료 문구와 미완료 없음이 표시된다. 한글 제목·수치·축·범례가 잘리지 않는다. 모바일에서는 세 칸 분할 그림으로 수치를 읽고 전체 비교 그림은 패턴 개관 또는 원본 확대용으로 사용한다."
+  },
+  "validation_notes_ko": [
+    "2015~2025 모든 11개 시즌의 COMPLETE 저장 결과를 반영했다. 2016을 포함하여 누락 연도 없이 132개 연도·카운트 행이다.",
+    "통계 재계산·다운로드·원 실행 수정 없이 결과 모음과 PNG만 갱신했다.",
+    "원 입력 및 보고서 출력 해시, 로컬 링크 30개를 확인했다. 이전 QA 스냅샷과 검증 기록 사본을 보존했다.",
+    "390px와 1280px 브라우저에서 이미지 5개가 모두 로드되고 가로 넘침이 없음을 확인했다.",
+    "2020 단축 시즌과 각 연도 정규화의 한계를 유지했다. 별도 연도 간 유의성 검정은 수행하지 않았다."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "articles": [
+    {
+      "file": "01_ball_count.md",
+      "characters": 13989,
+      "images": 2,
+      "tables": 5,
+      "headings": 25
+    }
+  ],
+  "missing_links": [],
+  "figure_count": 2
+}

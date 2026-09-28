@@ -1,0 +1,40 @@
+{
+  "run_id": "bcai_supplement__mlb_2026_ytd_20260907__20260928__r01",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "input_csv": [
+    "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/2026/pitches.csv"
+  ],
+  "input_provenance": [
+    "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/2026/pitches.provenance.json"
+  ],
+  "years": [
+    2026
+  ],
+  "seasons": [
+    {
+      "year": 2026,
+      "cutoff": "2026-09-07",
+      "scope": "archived_partial_season",
+      "schedule": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json"
+    }
+  ],
+  "weights": [
+    {
+      "year": 2026,
+      "BB": 0.691,
+      "HBP": 0.722,
+      "1B": 0.882,
+      "2B": 1.252,
+      "3B": 1.584,
+      "HR": 2.037
+    }
+  ],
+  "weights_source": "columns/001-ball-count/analysis/r_supplement_20260928/weights.json",
+  "bootstrap_replicates": 2000,
+  "seed": 20262954,
+  "comparisons": [],
+  "tolerance": 1e-09,
+  "data_source": "Archived MLB Baseball Savant Statcast; frozen 2026-09-07 cutoff; 2025 weights",
+  "source_notes": "columns/001-ball-count/sources.md"
+}

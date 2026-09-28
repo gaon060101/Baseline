@@ -1,0 +1,108 @@
+{
+  "pass": true,
+  "extractedOutsideProject": true,
+  "pages": 12,
+  "clickedLinks": [
+    "문헌1",
+    "용어1",
+    "다섯 번째 글"
+  ],
+  "checks": [
+    {
+      "name": "index",
+      "width": 390,
+      "viewport": 390,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "01_ball_count",
+      "width": 390,
+      "viewport": 390,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "02_bcai",
+      "width": 390,
+      "viewport": 390,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "03_bcap",
+      "width": 390,
+      "viewport": 390,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "04_references_ko",
+      "width": 390,
+      "viewport": 390,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "05_data_validation",
+      "width": 390,
+      "viewport": 390,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "index",
+      "width": 1280,
+      "viewport": 1280,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "01_ball_count",
+      "width": 1280,
+      "viewport": 1280,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "02_bcai",
+      "width": 1280,
+      "viewport": 1280,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "03_bcap",
+      "width": 1280,
+      "viewport": 1280,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "04_references_ko",
+      "width": 1280,
+      "viewport": 1280,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    },
+    {
+      "name": "05_data_validation",
+      "width": 1280,
+      "viewport": 1280,
+      "images": true,
+      "nav": 5,
+      "localPaths": []
+    }
+  ]
+}

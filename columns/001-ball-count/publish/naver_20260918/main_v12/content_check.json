@@ -1,0 +1,9 @@
+{
+  "explainers_and_index_preserved": true,
+  "swing_section_removed": true,
+  "zone_figure_removed_from_main": true,
+  "zone_figure_retained_in_explainer": true,
+  "requested_sentence_removed": true,
+  "no_unsupported_ability_ranking": true,
+  "pass": true
+}

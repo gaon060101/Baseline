@@ -1,0 +1,73 @@
+{
+  "input_schedule_coverage": [
+    {
+      "year": 2024,
+      "scope": "full_regular_season",
+      "cutoff": "2024-12-31",
+      "games": 2429,
+      "first": "2024-03-20",
+      "last": "2024-09-30",
+      "schedule_match": true
+    },
+    {
+      "year": 2025,
+      "scope": "full_regular_season",
+      "cutoff": "2025-12-31",
+      "games": 2430,
+      "first": "2025-03-18",
+      "last": "2025-09-28",
+      "schedule_match": true
+    }
+  ],
+  "sample": {
+    "raw_rows": 1424427,
+    "all_PA": 366231,
+    "eligible_PA": 364124,
+    "games": 4859,
+    "repeated_count_rows_removed": 98606,
+    "exclusions": {
+      "included": 364124,
+      "truncated": 635,
+      "catcher_interference": 186,
+      "missing_final": 221,
+      "intentional_walk": 1065
+    }
+  },
+  "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python",
+  "max_combined_index_error": 6.26982910034712e-11,
+  "max_season_index_error": 7.17079728929093e-11,
+  "max_season_value_error": 1.55098156540134e-13,
+  "historical_reference": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01",
+  "reference_hashes": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv",
+      "bytes": 5153,
+      "sha256": "642b001917094c0f0a4c3c654c8ba7553add231cc2468781f5c50781c1308810"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_season_sensitivity.csv",
+      "bytes": 1286,
+      "sha256": "72259359b10d4e5ad2ded64ed20a0b1bfab0d820c26a251a02c1a413c2b3ff14"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_audit.json",
+      "bytes": 20841,
+      "sha256": "2f52f1bf9aaccb1d50e628412127e370b2c9c6c9071d656fb019a4821d8c9400"
+    }
+  ],
+  "status": "PASS",
+  "inputs_unchanged": true,
+  "bootstrap_criticals": {
+    "season": {
+      "2024": 2.75250887181288,
+      "2025": 2.82987700182842
+    },
+    "combined": 2.78315704114459,
+    "contrasts": {
+      "value": 2.7910130642975,
+      "family_size": 11
+    }
+  },
+  "RNG": ["Mersenne-Twister", "Inversion", "Rejection"],
+  "bootstrap_scope": "fixed external weights; within-season game clusters; no cross-game/player dependence correction"
+}

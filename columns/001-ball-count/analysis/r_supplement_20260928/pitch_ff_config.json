@@ -1,0 +1,11 @@
+{
+  "model": "pitch_ff",
+  "years": [
+    2026
+  ],
+  "input_rds": "columns/001-ball-count/data/processed/r_bcap_supplement_20260928/2026/prepared.rds",
+  "output_dir": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r_supplement__mlb_2026_ytd_20260907__20260928__r01",
+  "comparison_family": 255,
+  "seed": 20262954,
+  "purpose": "2026-09-07 archived supplement with frozen 2025 weights; no SB/SWING measurement application"
+}

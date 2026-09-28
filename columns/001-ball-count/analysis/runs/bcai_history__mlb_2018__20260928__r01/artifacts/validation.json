@@ -1,0 +1,39 @@
+{
+  "input_schedule_coverage": [
+    {
+      "year": 2018,
+      "scope": "full_regular_season",
+      "cutoff": "2018-12-31",
+      "games": 2431,
+      "first": "2018-03-29",
+      "last": "2018-10-01",
+      "schedule_match": true
+    }
+  ],
+  "sample": {
+    "raw_rows": 724452,
+    "all_PA": 185544,
+    "eligible_PA": 184170,
+    "games": 2431,
+    "repeated_count_rows_removed": 48788,
+    "exclusions": {
+      "included": 184170,
+      "intentional_walk": 929,
+      "missing_final": 129,
+      "truncated": 304,
+      "catcher_interference": 12
+    }
+  },
+  "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python",
+  "status": "PASS",
+  "inputs_unchanged": true,
+  "bootstrap_criticals": {
+    "season": {
+      "2018": 2.77002248620207
+    },
+    "combined": 2.77002248620207,
+    "contrasts": {}
+  },
+  "RNG": ["Mersenne-Twister", "Inversion", "Rejection"],
+  "bootstrap_scope": "fixed external weights; within-season game clusters; no cross-game/player dependence correction"
+}

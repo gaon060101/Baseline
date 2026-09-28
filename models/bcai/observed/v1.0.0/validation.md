@@ -1,5 +1,11 @@
 # BCAI-OBS-v1.0.0 검증
 
+## R 재계산 확인 — 2026-09-28
+
+[새 실행 r02](../../../../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/manifest.json)와 [한국어 보고서](../../../../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md)를 추가했다. 혼합 지수 최대 오차 6.27e-11, 시즌 지수 최대 오차 7.18e-11로 허용치 1e-9 이내였다. 유효 PA·경기·카운트별 분모·제외·반복 카운트 감사가 기존 실행과 일치했다. 모의 자료의 수계산, 입력 순서, 중복 키 거부, 제외 순서, 다른 연도 설정, 다년 대비·재표본 재현성도 확인했다.
+
+2024·2025 새 R 구간은 연도별 경기 재표본 2,000회, 별도 R 난수에 기반한다. Python 구간 끝점의 동일성, 모든 원본 투구의 완전성, 미래 예측·인과·KBO 일반화의 검증으로 확대하지 않는다. 연도 차이는 탐색이며 11개 동시 구간 모두 0을 포함하나 동등성은 검정하지 않았다. r01의 전체/유효 PA 감사 범위 불일치는 FAILED로 보존했다.
+
 ## 근거와 범위
 
 2026-09-07 [기존 보고서](../../../../columns/001-ball-count/analysis/count_advantage_2024_2025.md)와 [인계](../../../../columns/001-ball-count/analysis/handoff_count_advantage.md)의 사실을 등록했다. 이번 등록일은 2026-09-08이며 재분석일이 아니다. [실행 기록](../../../../columns/001-ball-count/analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/manifest.json)에 입력·환경·실제 설정·산출물 해시가 있다.

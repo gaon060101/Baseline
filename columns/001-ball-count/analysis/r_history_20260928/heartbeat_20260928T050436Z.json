@@ -1,0 +1,214 @@
+{
+  "checked_at": "2026-09-28T14:04:37.3479843+09:00",
+  "status": "CONTINUING_BCAP",
+  "note": "BCAI2015~2025 전11시즌 완료·보고서132행·그림 확인 완료.2016복구 감사 통과. BCAP2018~2025네모듈 완료,2017→2015남음.2026위치·스윙 보류 유지.원고·외부 게시 미변경.",
+  "processes": [
+    {
+      "ProcessId": 21892,
+      "Name": "python.exe",
+      "CommandLine": "\"C:\\Users\\백창현\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -B tools/run_bcap_history.py --years 2023 2022 2021 2020 2019 2018 2017 2016 2015 --rscript C:\\Users\\백창현\\AppData\\Local\\Programs\\R\\R-4.6.1\\bin\\Rscript.exe --wait-for-inputs --preparation-attempt 2"
+    },
+    {
+      "ProcessId": 19848,
+      "Name": "Rscript.exe",
+      "CommandLine": "C:\\Users\\백창현\\AppData\\Local\\Programs\\R\\R-4.6.1\\bin\\Rscript.exe --vanilla models/bcap/r/prepare_raw.R C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\data\\processed\\r_bcap_history_20260928\\2017\\r02\\config.json"
+    },
+    {
+      "ProcessId": 7760,
+      "Name": "Rscript.exe",
+      "CommandLine": "\"C:\\Users\\백창현\\AppData\\Local\\Programs\\R\\R-4.6.1\\bin\\x64\\Rscript.exe\"  \"--vanilla\" \"models/bcap/r/prepare_raw.R\" \"C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\data\\processed\\r_bcap_history_20260928\\2017\\r02\\config.json\""
+    }
+  ],
+  "historical_manifests": [
+    {
+      "run": "bcai_history__mlb_2015__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "bfff01ec625d850e589874a76be8c805a4403d08d696b5d36f34bcafe6604e83"
+    },
+    {
+      "run": "bcai_history__mlb_2016__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "336e113702825dbe61a444789e3638b7d98592c29b5105fe310aeee6596c9d9f"
+    },
+    {
+      "run": "bcai_history__mlb_2017__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "325cd48038582186403e01bc9a00591999b6687b104f88e5a76ca4e7f8b15838"
+    },
+    {
+      "run": "bcai_history__mlb_2018__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "6a9062a9431c8964cf65be80da513f5174c8f8b384bc2e27f869db8c5993b716"
+    },
+    {
+      "run": "bcai_history__mlb_2019__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "246716e557f7e3a88728a8bf01aeec186a66b49918143250787a16da44934f14"
+    },
+    {
+      "run": "bcai_history__mlb_2020__20260928__r01",
+      "status": "FAILED",
+      "manifest_sha256": "45db71b7cd1584fd0fcde5f98b988e8f9a3dcf345f87110c2da7fae4052127c7"
+    },
+    {
+      "run": "bcai_history__mlb_2020__20260928__r02",
+      "status": "COMPLETE",
+      "manifest_sha256": "2a9f2a4bc60d2112742c8bbdf60c8aebd7be6533c784fedb71f75c4c81b16212"
+    },
+    {
+      "run": "bcai_history__mlb_2021__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "668cfe0632dff3c5588a99f543848313363c5e0d43fa3ab368b4e209d719701b"
+    },
+    {
+      "run": "bcai_history__mlb_2022__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "48c713daa4dab6f3b6aa0c5a294d6a6b47ae034e2158f7c63235a248b6893b73"
+    },
+    {
+      "run": "bcai_history__mlb_2023__20260928__r01",
+      "status": "FAILED",
+      "manifest_sha256": "1dfe892b9aed3decc4eb9379d4c9cea002b167ef921943266e2a205a0267b417"
+    },
+    {
+      "run": "bcai_history__mlb_2023__20260928__r02",
+      "status": "COMPLETE",
+      "manifest_sha256": "14b7537e37372bce67d5f5175a2f83f9f4bae00e5f9b8fb852dad045adaf8747"
+    },
+    {
+      "run": "bcap_pitch_ff_r_history__mlb_2018__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "daae8d4f56d8495ca3f7ccf6e90c4cf7f4eddcd047f3101e5d877c1725814bac"
+    },
+    {
+      "run": "bcap_pitch_ff_r_history__mlb_2019__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "aa9f8070cbed33d173bad98a57655576ca5ed4dcbcdf715f3aaf634879539765"
+    },
+    {
+      "run": "bcap_pitch_ff_r_history__mlb_2020__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "0dcab3600de0d20bf7bca314d2b2f116c15539344df49d0c82d6ad9cdd77c707"
+    },
+    {
+      "run": "bcap_pitch_ff_r_history__mlb_2021__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "e39e195e0f280054ae57f52305f3b4f659b3f17ae0baaa10eef22927f7af9750"
+    },
+    {
+      "run": "bcap_pitch_ff_r_history__mlb_2022__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "70ced357cab7a286e277b822e5980d49bbb0359c726c635c517bb1f396578f3a"
+    },
+    {
+      "run": "bcap_pitch_ff_r_history__mlb_2023__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "a4e7ab04b9bb24b3a3a33ec52c11cb0934f91c4e0f0a419e4dba15af411ebb24"
+    },
+    {
+      "run": "bcap_pitch_r_history__mlb_2018__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "5a128d5f2a52a063811107898c4e2624af5d0d4532e5bc6d69e2b5a5f05e2c89"
+    },
+    {
+      "run": "bcap_pitch_r_history__mlb_2019__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "382413c661cf6e805189ea72f5af44a062a8b6625466efc412c0a410d47fe47d"
+    },
+    {
+      "run": "bcap_pitch_r_history__mlb_2020__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "eed1fd74b9727a94efc88fbff57a38bcec451bd3a354ecd47465a05695932686"
+    },
+    {
+      "run": "bcap_pitch_r_history__mlb_2021__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "ac351b2172ae5aff60b66e4a34d059300ec02e46829619164c3c676a2ea4ce72"
+    },
+    {
+      "run": "bcap_pitch_r_history__mlb_2022__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "bc244b9cfb0efe4e3ae0f9d09d14fd081db092d2b120529b64b860389d9218a0"
+    },
+    {
+      "run": "bcap_pitch_r_history__mlb_2023__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "ab201b1dc8abf3f6d2f4f54592ba24d70f0c9ad83507729472d529c54975fc75"
+    },
+    {
+      "run": "bcap_pitch_sb_r_history__mlb_2018__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "8f35b7542c048edb007385c2f678b7dae94dc49ec4a12619f0f0b1a399ae3fb8"
+    },
+    {
+      "run": "bcap_pitch_sb_r_history__mlb_2019__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "3cb38bd54e697ef3f3fb767e5d95b6d2fe2b9bd6fc98b4a41366870288f0482d"
+    },
+    {
+      "run": "bcap_pitch_sb_r_history__mlb_2020__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "753aed5153aefa6ed85f246f1fb9dda9e1106519f5edc49e70297fb0d2aa8b77"
+    },
+    {
+      "run": "bcap_pitch_sb_r_history__mlb_2021__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "fe0d7ebc8159abd5fceec0088d20ef5a64ec75819ec0c1feac2a7fdfaae68870"
+    },
+    {
+      "run": "bcap_pitch_sb_r_history__mlb_2022__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "bde5e6a67dd33e58161fa8a9eeccf647a129c6e6a53dbd057318a0d9d64ca843"
+    },
+    {
+      "run": "bcap_pitch_sb_r_history__mlb_2023__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "1993d8bfee9b928091766c4ba337956075dc03a1cf52b4ba872a0163c6e78aca"
+    },
+    {
+      "run": "bcap_swing_r_history__mlb_2018__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "a23dae9da890d2c2353ee2c763067cd40c6aafc1a62b6e02d7bd65a1fb93fef0"
+    },
+    {
+      "run": "bcap_swing_r_history__mlb_2019__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "32fc8d1686c101aa90260fbed7d25f1590bbf2401ceb18f7b9d1bc2a735e6bb2"
+    },
+    {
+      "run": "bcap_swing_r_history__mlb_2020__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "835617c25e677e49f69737faf398d6df7e776042b2f901a71d232f206ffcbf35"
+    },
+    {
+      "run": "bcap_swing_r_history__mlb_2021__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "feaa1bf3800d08992baebe1c9524ce59e43bd3627adbadde770b8e225713d99a"
+    },
+    {
+      "run": "bcap_swing_r_history__mlb_2022__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "11876bf4763400ee61ead0a9a8a7daf1f2584932e65071a5b2d8388f7a400410"
+    },
+    {
+      "run": "bcap_swing_r_history__mlb_2023__20260928__r01",
+      "status": "COMPLETE",
+      "manifest_sha256": "eacd421d82de4044f7cb892b05e7090d077069291bcfbacb619efa549ab5fbfa"
+    }
+  ],
+  "verified_artifacts": [
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/report_validation.json",
+      "sha256": "e5019019c83fe6c1c5dc031d8451e043b7af3acc7edabcdefcc5b827d48b1b8d"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/recovery_2016_audit_20260928_135832.json",
+      "sha256": "7fc597ef46b158f337aa36512e44fe79f2ade00359ab017e01c95812f5e6e9f8"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2019_20260928T045736Z/review.md",
+      "sha256": "d5d58ea4386ffa88639b66cfd09a03add62996f1f82e6134b401c0e3b3c2e0ed"
+    }
+  ],
+  "remaining": "BCAP2017→2015완료와새2018이후결과·그림검수. 전체 완료 후상태문서갱신·heartbeat일시중지."
+}

@@ -1,0 +1,20 @@
+{
+  "analysis_year": 2026,
+  "frozen_weight_year": 2025,
+  "weights": [
+    {
+      "year": 2026,
+      "BB": 0.691,
+      "HBP": 0.722,
+      "1B": 0.882,
+      "2B": 1.252,
+      "3B": 1.584,
+      "HR": 2.037
+    }
+  ],
+  "source": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+    "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad"
+  },
+  "cutoff": "2026-09-07"
+}

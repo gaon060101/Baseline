@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "method": "Codex view_image로 각 PNG 직접 확인",
+  "checks": [
+    "한글 글꼴·제목·축·범례 표시",
+    "주요 내용 잘림 없음",
+    "카운트·시즌 구분",
+    "SWING 구역 자료 부족 표시"
+  ],
+  "images": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_r__mlb_2024_2025__20260928__r02/artifacts/count_by_year.png",
+      "sha256": "c86079d245b0b35c40943a6bfdf55596ce18888191ddaa4a6849989fd34b3b46",
+      "status": "PASS"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_sb_r__mlb_2024_2025__20260928__r01/artifacts/count_by_year.png",
+      "sha256": "acb30c307ccad88497923459df27959424e660872ece4901cd2d62c3a3ecb145",
+      "status": "PASS"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing_r__mlb_2024_2025__20260928__r01/artifacts/count_by_year.png",
+      "sha256": "626ad007fda54dae33f762707a8b86635ff26462b57608d34484f2474de1f819",
+      "status": "PASS"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_swing_r__mlb_2024_2025__20260928__r01/artifacts/swing_regions_by_year.png",
+      "sha256": "b6fd0b06ebc08c0cdfd70f7eb9dedfd2ace7a99f211ab65e22c99bc5c2879868",
+      "status": "PASS"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r__mlb_2024_2025__20260928__r01/artifacts/count_by_year.png",
+      "sha256": "0e72ffac84ff65006e5991b0ca4677cfd47f418ba0712bb2efe5a4d71de9380c",
+      "status": "PASS"
+    }
+  ],
+  "note": "모델 식별자는 원 표기를 유지. 블로그용 통합 허브에서는 행동명을 한국어로 별도 표시 가능."
+}

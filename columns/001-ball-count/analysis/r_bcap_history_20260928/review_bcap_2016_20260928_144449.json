@@ -1,0 +1,974 @@
+{
+  "status": "PASS_WITH_MEASUREMENT_LIMITS",
+  "title": "2016 BCAP 완료 실행 4개 독립 수치 감사",
+  "checked_at": "2026-09-28T14:44:49.5725861+09:00",
+  "scope": "2016 PITCH·S/B·SWING·FF의 COMPLETE 실행만 읽기 전용으로 점검했다. 원자료 전체 로드, 정제 재계산, 모형 적합, 다운로드, 기존 파일 수정과 시각 QA는 수행하지 않았으며 2015 실행을 기다리지 않았다.",
+  "blocking_issues": [],
+  "conclusion": "네 완료 실행의 파일 무결성·수렴·지원 기준·표 산술에서 불일치를 발견하지 못했다. 2016 구속의 측정 방식과 물리량 구간의 연도 간 비교 한계는 유지한다.",
+  "summary": {
+    "completed_runs_reviewed": 4,
+    "saved_checks_passed": 112,
+    "fit_diagnostics_passed": 48,
+    "unique_input_code_output_files_hashed": 99,
+    "manifests_checked_and_unchanged": 4,
+    "hash_mismatches": 0,
+    "report_groups_reviewed": 232,
+    "groups_passing_support": 206,
+    "groups_failing_support": 26,
+    "support_gate_disagreements": 0,
+    "delta_identity_failures": 0,
+    "interval_order_failures": 0,
+    "count_denominator_failures": 0,
+    "coverage_ratio_failures": 0
+  },
+  "findings": [
+    {
+      "severity": "확인",
+      "topic": "무결성·수렴",
+      "detail": "입력 RDS·준비 감사·실행 코드·명세·기록된 모든 출력의 고유 99개 실제 SHA-256이 manifest와 일치하고, 네 manifest도 각각 검토 중 바뀌지 않았다. 112개 저장 검사와 48개 적합 진단이 모두 통과했다. 최대 relative gradient는 1.37966228472341e-9, 최대 calibrator projected gradient는 5.72734757610699e-8로 모두 1e-7 기준 미만이다."
+    },
+    {
+      "severity": "확인",
+      "topic": "분모·지원 기준",
+      "detail": "네 모델의 game_folds 고유 경기 수는 각각 2,428이고 중복이 없으며 metrics와 일치한다. 전체 및 12카운트의 대상·지원 행수 합계와 coverage 비율도 일치한다. N>=500, 각 행동 ESS>=200, 각 행동 경기>=100, coverage>=0.5, 최대 경기 가중치<=0.05를 저장 표에서 별도 계산해 support_gate와 대조했고 Q1-Q0=delta(허용 1e-12)와 nominal/family 구간 순서도 확인했다."
+    },
+    {
+      "severity": "블로그 표기 유의",
+      "topic": "SWING 자료 부족",
+      "detail": "PITCH·S/B·FF는 각각 13개 집단이 모두 통과한다. SWING 193개 중 167개는 통과하고 구역·구역구종 세부 집단 26개는 자료 부족이다. 전체·카운트 단위는 모두 통과한다. 부족한 26개 모두 적어도 한 행동의 ESS가 200 미만이며, 이 중 18개는 행동 경기 수 부족, 11개는 N 부족, 12개는 최대 경기 가중치 초과도 겹친다. 원인 개수는 중복 집계다. 자료 부족 문구와 빈 point_direction은 올바르므로 해당 집단의 원시 점추정치를 뚜렷한 방향이나 행동 추천으로 표시하지 않는다."
+    },
+    {
+      "severity": "연도 비교 제한",
+      "topic": "2017년 이전 측정 방식",
+      "detail": "해시가 일치한 준비 감사에는 2015·2016 release_speed가 보정된 PITCHf/x, 2017년 이후가 Statcast이며 과거 물리량 구간의 비교 가능성은 검증되지 않았다고 기록돼 있다. 네 모델 모두 prev_release_speed_bin을 사용하고 SWING은 현재 구속·움직임·위치 구간도 사용한다. 따라서 이 한계는 SWING에만 국한되지 않으며 2016/2017 지표 차이를 모두 야구 행동 변화로 해석하면 안 된다. 이번 감사는 측정 변환이나 연도 간 동등성을 검증하지 않았다."
+    },
+    {
+      "severity": "추론 제한",
+      "topic": "조건부 구간·관찰 자료",
+      "detail": "모형은 EXPERIMENTAL이며 고정 OOF 점수의 경기 군집 조건부 구간을 사용한다. 전체 학습 변동과 경기 간 선수 의존성은 포함하지 않는다. 255는 해당 연도 232개 보고 집단을 포함하는 보수적 비교 상한이며 여러 해 전체에 대한 동시 보장이 아니다. 무결성·수렴 통과는 인과 효과, 행동 추천, 실제 구간 포함률 또는 외부 검증 완료를 뜻하지 않는다."
+    }
+  ],
+  "support_failures": {
+    "unsupported_groups": [
+      {
+        "level": "region_pitch",
+        "count": "0-0",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 3460,
+        "ESS0": 3225.51810631335,
+        "ESS1": 145.314299457257,
+        "games0": 1685,
+        "games1": 183,
+        "coverage": 0.753648442605097,
+        "failed_criteria": [
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "0-1",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 1625,
+        "ESS0": 1193.85370895355,
+        "ESS1": 148.07499567423,
+        "games0": 1004,
+        "games1": 207,
+        "coverage": 0.882193268186754,
+        "failed_criteria": [
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "0-2",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 624,
+        "ESS0": 292.892433990325,
+        "ESS1": 125.090793328221,
+        "games0": 405,
+        "games1": 149,
+        "coverage": 0.936936936936937,
+        "failed_criteria": [
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "1-0",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 1211,
+        "ESS0": 1090.15107538492,
+        "ESS1": 50.0357899259578,
+        "games0": 882,
+        "games1": 75,
+        "coverage": 0.849228611500701,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "1-1",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 1545,
+        "ESS0": 1142.97969268849,
+        "ESS1": 151.767032645325,
+        "games0": 995,
+        "games1": 186,
+        "coverage": 0.916370106761566,
+        "failed_criteria": [
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "2-0",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 290,
+        "ESS0": 261.622073252619,
+        "ESS1": 13.8662170555617,
+        "games0": 262,
+        "games1": 17,
+        "coverage": 0.86053412462908,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "2-0",
+        "region": "INSIDE",
+        "pitch_group": "NFB",
+        "n": 474,
+        "ESS0": 326.019394138736,
+        "ESS1": 81.3390048083069,
+        "games0": 313,
+        "games1": 120,
+        "coverage": 0.908045977011494,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "2-1",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 657,
+        "ESS0": 473.637198673459,
+        "ESS1": 51.2069197552797,
+        "games0": 498,
+        "games1": 74,
+        "coverage": 0.920168067226891,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region",
+        "count": "3-0",
+        "region": "HIGH",
+        "pitch_group": "ALL",
+        "n": 429,
+        "ESS0": 413.426801839973,
+        "ESS1": 13.3571994868857,
+        "games0": 377,
+        "games1": 15,
+        "coverage": 0.608510638297872,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "HIGH",
+        "pitch_group": "FB",
+        "n": 402,
+        "ESS0": 386.491600180238,
+        "ESS1": 13.3571994868857,
+        "games0": 356,
+        "games1": 15,
+        "coverage": 0.599105812220566,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 27,
+        "ESS0": 26.9521035351753,
+        "ESS1": 0,
+        "games0": 27,
+        "games1": 0,
+        "coverage": 0.84375,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region",
+        "count": "3-0",
+        "region": "LOW",
+        "pitch_group": "ALL",
+        "n": 785,
+        "ESS0": 722.06748174061,
+        "ESS1": 54.7208168762317,
+        "games0": 613,
+        "games1": 61,
+        "coverage": 0.745489078822412,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "LOW",
+        "pitch_group": "FB",
+        "n": 719,
+        "ESS0": 664.471149549796,
+        "ESS1": 48.1031782742832,
+        "games0": 571,
+        "games1": 53,
+        "coverage": 0.741237113402062,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "LOW",
+        "pitch_group": "NFB",
+        "n": 66,
+        "ESS0": 57.6992448959882,
+        "ESS1": 7.13218146466022,
+        "games0": 57,
+        "games1": 8,
+        "coverage": 0.795180722891566,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region",
+        "count": "3-0",
+        "region": "INSIDE",
+        "pitch_group": "ALL",
+        "n": 554,
+        "ESS0": 503.603402803066,
+        "ESS1": 41.6777152686653,
+        "games0": 448,
+        "games1": 48,
+        "coverage": 0.72608125819135,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "INSIDE",
+        "pitch_group": "FB",
+        "n": 525,
+        "ESS0": 476.794466162896,
+        "ESS1": 39.8785984030971,
+        "games0": 424,
+        "games1": 46,
+        "coverage": 0.724137931034483,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "INSIDE",
+        "pitch_group": "NFB",
+        "n": 29,
+        "ESS0": 26.8530421271769,
+        "ESS1": 1.96707484365854,
+        "games0": 27,
+        "games1": 2,
+        "coverage": 0.763157894736842,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region",
+        "count": "3-0",
+        "region": "OUTSIDE",
+        "pitch_group": "ALL",
+        "n": 1263,
+        "ESS0": 1185.07971757814,
+        "ESS1": 64.3178162416431,
+        "games0": 924,
+        "games1": 72,
+        "coverage": 0.714366515837104,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "OUTSIDE",
+        "pitch_group": "FB",
+        "n": 1192,
+        "ESS0": 1121.05648186207,
+        "ESS1": 58.7902937066042,
+        "games0": 888,
+        "games1": 66,
+        "coverage": 0.712066905615293,
+        "failed_criteria": [
+          "ESS<200",
+          "action_games<100"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "OUTSIDE",
+        "pitch_group": "NFB",
+        "n": 71,
+        "ESS0": 64.2190861952332,
+        "ESS1": 5.66363396654438,
+        "games0": 63,
+        "games1": 6,
+        "coverage": 0.771739130434783,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-0",
+        "region": "CENTER",
+        "pitch_group": "NFB",
+        "n": 154,
+        "ESS0": 119.217579844665,
+        "ESS1": 27.5134855969354,
+        "games0": 119,
+        "games1": 33,
+        "coverage": 0.993548387096774,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-1",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 123,
+        "ESS0": 99.8813274251378,
+        "ESS1": 11.6497745201547,
+        "games0": 108,
+        "games1": 14,
+        "coverage": 0.917910447761194,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-1",
+        "region": "LOW",
+        "pitch_group": "NFB",
+        "n": 620,
+        "ESS0": 313.415194597274,
+        "ESS1": 192.955760709835,
+        "games0": 314,
+        "games1": 262,
+        "coverage": 0.955315870570108,
+        "failed_criteria": [
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-1",
+        "region": "INSIDE",
+        "pitch_group": "NFB",
+        "n": 258,
+        "ESS0": 159.734388300787,
+        "ESS1": 47.9436744619323,
+        "games0": 171,
+        "games1": 79,
+        "coverage": 0.928057553956835,
+        "failed_criteria": [
+          "N<500",
+          "ESS<200",
+          "action_games<100",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-1",
+        "region": "OUTSIDE",
+        "pitch_group": "NFB",
+        "n": 581,
+        "ESS0": 356.885064939521,
+        "ESS1": 125.17431998043,
+        "games0": 362,
+        "games1": 176,
+        "coverage": 0.961920529801325,
+        "failed_criteria": [
+          "ESS<200"
+        ],
+        "evidence": "비교 자료 부족"
+      },
+      {
+        "level": "region_pitch",
+        "count": "3-2",
+        "region": "HIGH",
+        "pitch_group": "NFB",
+        "n": 596,
+        "ESS0": 301.828037083674,
+        "ESS1": 99.1328971339755,
+        "games0": 390,
+        "games1": 149,
+        "coverage": 0.973856209150327,
+        "failed_criteria": [
+          "ESS<200",
+          "max_game_share>0.05"
+        ],
+        "evidence": "비교 자료 부족"
+      }
+    ],
+    "failure_reason_counts": [
+      {
+        "Name": "action_games<100",
+        "Count": 18
+      },
+      {
+        "Name": "ESS<200",
+        "Count": 26
+      },
+      {
+        "Name": "max_game_share>0.05",
+        "Count": 12
+      },
+      {
+        "Name": "N<500",
+        "Count": 11
+      }
+    ],
+    "measurement_related_features": [
+      {
+        "model": "pitch",
+        "previous_speed_bin_used": true,
+        "features": [
+          "pitcher",
+          "batter",
+          "game_year",
+          "venue",
+          "matchup",
+          "count",
+          "base_state",
+          "outs_when_up",
+          "inning_bin",
+          "score_bin",
+          "pitch_number_bin",
+          "prev_pitch_group",
+          "prev_description",
+          "prev_release_speed_bin"
+        ]
+      },
+      {
+        "model": "pitch_sb",
+        "previous_speed_bin_used": true,
+        "features": [
+          "pitcher",
+          "batter",
+          "game_year",
+          "venue",
+          "matchup",
+          "count",
+          "base_state",
+          "outs_when_up",
+          "inning_bin",
+          "score_bin",
+          "pitch_number_bin",
+          "prev_pitch_group",
+          "prev_description",
+          "prev_release_speed_bin",
+          "pitch_group"
+        ]
+      },
+      {
+        "model": "swing",
+        "previous_speed_bin_used": true,
+        "features": [
+          "pitcher",
+          "batter",
+          "game_year",
+          "venue",
+          "matchup",
+          "count",
+          "base_state",
+          "outs_when_up",
+          "inning_bin",
+          "score_bin",
+          "pitch_number_bin",
+          "prev_pitch_group",
+          "prev_description",
+          "prev_release_speed_bin",
+          "pitch_group",
+          "release_speed_bin",
+          "pfx_x_bin",
+          "pfx_z_bin",
+          "plate_x_bin",
+          "relative_z_bin",
+          "swing_cell"
+        ]
+      },
+      {
+        "model": "pitch_ff",
+        "previous_speed_bin_used": true,
+        "features": [
+          "pitcher",
+          "batter",
+          "game_year",
+          "venue",
+          "matchup",
+          "count",
+          "base_state",
+          "outs_when_up",
+          "inning_bin",
+          "score_bin",
+          "pitch_number_bin",
+          "prev_pitch_group",
+          "prev_description",
+          "prev_release_speed_bin"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "year": 2016,
+      "model": "pitch",
+      "run": "bcap_pitch_r_history__mlb_2016__20260928__r01",
+      "manifest_sha256": "87d1e13fe30579ea5a079ebf3a7d5812b2c1f087e9a9664704f10e261dcd5307",
+      "manifest_unchanged": true,
+      "status": "COMPLETE",
+      "model_status": "EXPERIMENTAL",
+      "metrics": {
+        "n": 709932,
+        "support": 692428,
+        "coverage": 0.9753441174647712,
+        "games": 2428,
+        "MSE": 0.23820132372507524,
+        "Brier": 0.2132381259270509,
+        "logloss": 0.6126874664808981,
+        "all_fit_converged": true,
+        "fit_logs": 12,
+        "summary_groups": 13,
+        "years": 2016,
+        "policy_learning": false
+      },
+      "checks_status": "PASS",
+      "checks_count": 28,
+      "failed_checks": [],
+      "hashes_checked": 26,
+      "hash_mismatches": [],
+      "fit_diagnostics_count": 12,
+      "fit_failures": [],
+      "max_relative_gradient": 9.84303590479362e-10,
+      "max_calibrator_gradient": 2.66037880947471e-11,
+      "groups": 13,
+      "year_value_groups": 13,
+      "support_pass": 13,
+      "support_fail": 0,
+      "support_gate_disagreements": [],
+      "delta_identity_failures": [],
+      "interval_order_failures": [],
+      "insufficient_label_failures": 0,
+      "game_folds_unique": 2428,
+      "game_folds_duplicate_rows": 0,
+      "game_count_matches_metrics": true,
+      "overall_n_matches_metrics": true,
+      "count_n_matches_metrics": true,
+      "comparison_family": 255,
+      "unsupported_overall_or_counts": [],
+      "preparation": {
+        "path": "columns/001-ball-count/data/processed/r_bcap_history_20260928/2016/r02/audit/preparation_audit.json",
+        "sha256": "01ade4936fa6cdc54725f8b44f3e08c5b5aed9cb16befa475a275275042961e8",
+        "status": "PASS",
+        "games": 2428,
+        "rows": 715823,
+        "PA": 184978,
+        "eligible_PA": 183610,
+        "measurement_note": "2015/2016 release_speed uses adjusted PITCHf/x; 2017+ Statcast. Historical physical-bin comparability is not verified.",
+        "weights": [
+          {
+            "year": 2016,
+            "BB": 0.691,
+            "HBP": 0.721,
+            "1B": 0.878,
+            "2B": 1.242,
+            "3B": 1.569,
+            "HR": 2.015
+          }
+        ],
+        "schedule_policy": {
+          "records_before": 2429,
+          "unique_games": 2428,
+          "duplicated_games": 1,
+          "records_removed": 1,
+          "identical_records_removed": 1,
+          "conflicting_games": 0,
+          "venue_conflicts_resolved": 0,
+          "venue_policy": "legacy_last_schedule_record",
+          "compared_fields": [
+            "game_pk",
+            "year",
+            "venue",
+            "official_date",
+            "cutoff"
+          ],
+          "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games.",
+          "venue_policy_explicit": false,
+          "venue_policy_default_reason": "Preserve models/bcap/data.py dictionary last-occurrence game-level venue assignment; no pitch-level relocation reconstruction."
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "model": "pitch_sb",
+      "run": "bcap_pitch_sb_r_history__mlb_2016__20260928__r01",
+      "manifest_sha256": "f5a703a8010dc33f68c2bdb0bd5f2b607bb5eb9cabbd3d08335604625e7cef40",
+      "manifest_unchanged": true,
+      "status": "COMPLETE",
+      "model_status": "EXPERIMENTAL",
+      "metrics": {
+        "n": 709932,
+        "support": 700184,
+        "coverage": 0.9862691074638135,
+        "games": 2428,
+        "MSE": 0.23776259990054469,
+        "Brier": 0.2325900410203559,
+        "logloss": 0.6572058375394817,
+        "all_fit_converged": true,
+        "fit_logs": 12,
+        "summary_groups": 13,
+        "years": 2016,
+        "policy_learning": false
+      },
+      "checks_status": "PASS",
+      "checks_count": 28,
+      "failed_checks": [],
+      "hashes_checked": 26,
+      "hash_mismatches": [],
+      "fit_diagnostics_count": 12,
+      "fit_failures": [],
+      "max_relative_gradient": 1.09098884716479e-9,
+      "max_calibrator_gradient": 9.19200710220024e-10,
+      "groups": 13,
+      "year_value_groups": 13,
+      "support_pass": 13,
+      "support_fail": 0,
+      "support_gate_disagreements": [],
+      "delta_identity_failures": [],
+      "interval_order_failures": [],
+      "insufficient_label_failures": 0,
+      "game_folds_unique": 2428,
+      "game_folds_duplicate_rows": 0,
+      "game_count_matches_metrics": true,
+      "overall_n_matches_metrics": true,
+      "count_n_matches_metrics": true,
+      "comparison_family": 255,
+      "unsupported_overall_or_counts": [],
+      "preparation": {
+        "path": "columns/001-ball-count/data/processed/r_bcap_history_20260928/2016/r02/audit/preparation_audit.json",
+        "sha256": "01ade4936fa6cdc54725f8b44f3e08c5b5aed9cb16befa475a275275042961e8",
+        "status": "PASS",
+        "games": 2428,
+        "rows": 715823,
+        "PA": 184978,
+        "eligible_PA": 183610,
+        "measurement_note": "2015/2016 release_speed uses adjusted PITCHf/x; 2017+ Statcast. Historical physical-bin comparability is not verified.",
+        "weights": [
+          {
+            "year": 2016,
+            "BB": 0.691,
+            "HBP": 0.721,
+            "1B": 0.878,
+            "2B": 1.242,
+            "3B": 1.569,
+            "HR": 2.015
+          }
+        ],
+        "schedule_policy": {
+          "records_before": 2429,
+          "unique_games": 2428,
+          "duplicated_games": 1,
+          "records_removed": 1,
+          "identical_records_removed": 1,
+          "conflicting_games": 0,
+          "venue_conflicts_resolved": 0,
+          "venue_policy": "legacy_last_schedule_record",
+          "compared_fields": [
+            "game_pk",
+            "year",
+            "venue",
+            "official_date",
+            "cutoff"
+          ],
+          "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games.",
+          "venue_policy_explicit": false,
+          "venue_policy_default_reason": "Preserve models/bcap/data.py dictionary last-occurrence game-level venue assignment; no pitch-level relocation reconstruction."
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "model": "swing",
+      "run": "bcap_swing_r_history__mlb_2016__20260928__r01",
+      "manifest_sha256": "5bbf91b1d966108d9c69f2aed0ae62ae188ee80578e9d03ede526c66f1ac0123",
+      "manifest_unchanged": true,
+      "status": "COMPLETE",
+      "model_status": "EXPERIMENTAL",
+      "metrics": {
+        "n": 710644,
+        "support": 666955,
+        "coverage": 0.9385219603627133,
+        "games": 2428,
+        "MSE": 0.23439006881409855,
+        "Brier": 0.16762122592832937,
+        "logloss": 0.5043961187474716,
+        "all_fit_converged": true,
+        "fit_logs": 12,
+        "summary_groups": 193,
+        "years": 2016,
+        "policy_learning": false
+      },
+      "checks_status": "PASS",
+      "checks_count": 28,
+      "failed_checks": [],
+      "hashes_checked": 27,
+      "hash_mismatches": [],
+      "fit_diagnostics_count": 12,
+      "fit_failures": [],
+      "max_relative_gradient": 1.29191654565965e-9,
+      "max_calibrator_gradient": 5.55436753079378e-10,
+      "groups": 193,
+      "year_value_groups": 193,
+      "support_pass": 167,
+      "support_fail": 26,
+      "support_gate_disagreements": [],
+      "delta_identity_failures": [],
+      "interval_order_failures": [],
+      "insufficient_label_failures": 0,
+      "game_folds_unique": 2428,
+      "game_folds_duplicate_rows": 0,
+      "game_count_matches_metrics": true,
+      "overall_n_matches_metrics": true,
+      "count_n_matches_metrics": true,
+      "comparison_family": 255,
+      "unsupported_overall_or_counts": [],
+      "preparation": {
+        "path": "columns/001-ball-count/data/processed/r_bcap_history_20260928/2016/r02/audit/preparation_audit.json",
+        "sha256": "01ade4936fa6cdc54725f8b44f3e08c5b5aed9cb16befa475a275275042961e8",
+        "status": "PASS",
+        "games": 2428,
+        "rows": 715823,
+        "PA": 184978,
+        "eligible_PA": 183610,
+        "measurement_note": "2015/2016 release_speed uses adjusted PITCHf/x; 2017+ Statcast. Historical physical-bin comparability is not verified.",
+        "weights": [
+          {
+            "year": 2016,
+            "BB": 0.691,
+            "HBP": 0.721,
+            "1B": 0.878,
+            "2B": 1.242,
+            "3B": 1.569,
+            "HR": 2.015
+          }
+        ],
+        "schedule_policy": {
+          "records_before": 2429,
+          "unique_games": 2428,
+          "duplicated_games": 1,
+          "records_removed": 1,
+          "identical_records_removed": 1,
+          "conflicting_games": 0,
+          "venue_conflicts_resolved": 0,
+          "venue_policy": "legacy_last_schedule_record",
+          "compared_fields": [
+            "game_pk",
+            "year",
+            "venue",
+            "official_date",
+            "cutoff"
+          ],
+          "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games.",
+          "venue_policy_explicit": false,
+          "venue_policy_default_reason": "Preserve models/bcap/data.py dictionary last-occurrence game-level venue assignment; no pitch-level relocation reconstruction."
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "model": "pitch_ff",
+      "run": "bcap_pitch_ff_r_history__mlb_2016__20260928__r01",
+      "manifest_sha256": "de2f9691c75771ff9af3111438a1bb94fc862413b65c9222c77ac6d36bc27407",
+      "manifest_unchanged": true,
+      "status": "COMPLETE",
+      "model_status": "EXPERIMENTAL",
+      "metrics": {
+        "n": 709932,
+        "support": 642534,
+        "coverage": 0.9050641469887257,
+        "games": 2428,
+        "MSE": 0.23828290331709673,
+        "Brier": 0.18910594831819194,
+        "logloss": 0.5550495599285092,
+        "all_fit_converged": true,
+        "fit_logs": 12,
+        "summary_groups": 13,
+        "years": 2016,
+        "policy_learning": false
+      },
+      "checks_status": "PASS",
+      "checks_count": 28,
+      "failed_checks": [],
+      "hashes_checked": 26,
+      "hash_mismatches": [],
+      "fit_diagnostics_count": 12,
+      "fit_failures": [],
+      "max_relative_gradient": 1.37966228472341e-9,
+      "max_calibrator_gradient": 5.72734757610699e-8,
+      "groups": 13,
+      "year_value_groups": 13,
+      "support_pass": 13,
+      "support_fail": 0,
+      "support_gate_disagreements": [],
+      "delta_identity_failures": [],
+      "interval_order_failures": [],
+      "insufficient_label_failures": 0,
+      "game_folds_unique": 2428,
+      "game_folds_duplicate_rows": 0,
+      "game_count_matches_metrics": true,
+      "overall_n_matches_metrics": true,
+      "count_n_matches_metrics": true,
+      "comparison_family": 255,
+      "unsupported_overall_or_counts": [],
+      "preparation": {
+        "path": "columns/001-ball-count/data/processed/r_bcap_history_20260928/2016/r02/audit/preparation_audit.json",
+        "sha256": "01ade4936fa6cdc54725f8b44f3e08c5b5aed9cb16befa475a275275042961e8",
+        "status": "PASS",
+        "games": 2428,
+        "rows": 715823,
+        "PA": 184978,
+        "eligible_PA": 183610,
+        "measurement_note": "2015/2016 release_speed uses adjusted PITCHf/x; 2017+ Statcast. Historical physical-bin comparability is not verified.",
+        "weights": [
+          {
+            "year": 2016,
+            "BB": 0.691,
+            "HBP": 0.721,
+            "1B": 0.878,
+            "2B": 1.242,
+            "3B": 1.569,
+            "HR": 2.015
+          }
+        ],
+        "schedule_policy": {
+          "records_before": 2429,
+          "unique_games": 2428,
+          "duplicated_games": 1,
+          "records_removed": 1,
+          "identical_records_removed": 1,
+          "conflicting_games": 0,
+          "venue_conflicts_resolved": 0,
+          "venue_policy": "legacy_last_schedule_record",
+          "compared_fields": [
+            "game_pk",
+            "year",
+            "venue",
+            "official_date",
+            "cutoff"
+          ],
+          "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games.",
+          "venue_policy_explicit": false,
+          "venue_policy_default_reason": "Preserve models/bcap/data.py dictionary last-occurrence game-level venue assignment; no pitch-level relocation reconstruction."
+        }
+      }
+    }
+  ]
+}

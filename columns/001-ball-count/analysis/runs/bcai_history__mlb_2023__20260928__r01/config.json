@@ -1,0 +1,40 @@
+{
+  "run_id": "bcai_history__mlb_2023__20260928__r01",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "input_csv": [
+    "columns/001-ball-count/data/processed/r_history_20260928/2023/pitches.csv"
+  ],
+  "input_provenance": [
+    "columns/001-ball-count/data/processed/r_history_20260928/2023/pitches.provenance.json"
+  ],
+  "years": [
+    2023
+  ],
+  "seasons": [
+    {
+      "year": 2023,
+      "cutoff": "2023-12-31",
+      "scope": "full_regular_season",
+      "schedule": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json"
+    }
+  ],
+  "weights": [
+    {
+      "year": 2023,
+      "BB": 0.696,
+      "HBP": 0.726,
+      "1B": 0.883,
+      "2B": 1.244,
+      "3B": 1.569,
+      "HR": 2.004
+    }
+  ],
+  "weights_source": "columns/001-ball-count/analysis/r_history_20260928/weights.csv",
+  "bootstrap_replicates": 2000,
+  "seed": 20260928,
+  "comparisons": [],
+  "tolerance": 1e-09,
+  "data_source": "MLB Baseball Savant; archived Statcast",
+  "source_notes": "columns/001-ball-count/sources.md"
+}

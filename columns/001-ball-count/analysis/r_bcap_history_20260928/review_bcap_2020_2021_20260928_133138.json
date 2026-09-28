@@ -1,0 +1,751 @@
+{
+  "status": "PASS_WITH_INTERPRETATION_LIMITS",
+  "title": "2021·2020 BCAP 완료 실행 독립 점검",
+  "checked_at": "2026-09-28T13:31:38.8646349+09:00",
+  "scope": "저장된 2021·2020 준비 감사, COMPLETE manifest, 산출물 해시, 적합 진단, 지원 기준과 구장·완료 경기 정책만 읽기 전용으로 점검했다. 진행 중인 역사 드라이버를 복제·중단하지 않았으며 재적합·새 실험·기존 파일 수정을 하지 않았다.",
+  "conclusion": "실행을 막거나 완료 결과를 무효로 판단할 불일치는 발견하지 못했다. 8개 실행의 수렴·구조 검사와 지원 기준 표기가 일치한다. 다만 이 확인은 통계적 타당성, 인과 효과, 전체 학습 불확실성이나 실제 구간 포함률의 검증이 아니다.",
+  "summary": {
+    "completed_runs": 8,
+    "saved_checks_passed": 224,
+    "fit_diagnostics_passed": 96,
+    "unique_files_hashed": 255,
+    "hash_mismatches": 0,
+    "independent_support_gate_disagreements": 0,
+    "delta_identity_failures": 0,
+    "interval_order_failures": 0
+  },
+  "findings": [
+    {
+      "severity": "확인",
+      "topic": "2020 완료 경기",
+      "detail": "원 RDS에서 264,262행, 66,638타석, 유효 66,269타석, 898경기를 확인했다. 네 모델 모두 898경기를 사용했다. 미실시 연기 경기 631471·631472의 행은 0이다. 완료 일정 기록 900개를 동일 경기 별칭 정책으로 정리한 고유 경기 수 898과 일치한다."
+    },
+    {
+      "severity": "확인",
+      "topic": "구장 정책",
+      "detail": "2020 경기 630882의 모든 281행은 구장 2, 2021 경기 633224의 모든 326행은 구장 2680을 사용한다. 기존 Python의 마지막 일정 기록 연결과 일치한다. 두 준비 config는 정책 키가 없었으며 감사 기록에 기본값 legacy_last_schedule_record와 venue_policy_explicit=false가 명시돼 있다. 두 구장 기록과 선택 행도 CSV에 보존돼 있다."
+    },
+    {
+      "severity": "블로그 표기 유의",
+      "topic": "2021 모델별 경기 수",
+      "detail": "준비 자료 전체는 2,429경기다. 632924의 317행은 구종이 모두 없어 PITCH·FF·S/B에서 제외된다. 632812는 254행 중 44행의 구종이 없고 나머지 210행은 유효 기하 정보가 없어 S/B에서 모두 제외된다. 따라서 PITCH·FF 2,428경기, S/B 2,427경기, SWING 2,429경기는 기록과 자격 기준에 부합한다. 수집 누락으로 설명하지 않는다."
+    },
+    {
+      "severity": "블로그 표기 유의",
+      "topic": "지원 부족 결과",
+      "detail": "2021은 232개 집단 중 206개가 지원 기준 통과, SWING 26개는 자료 부족이다. 2020은 181개 통과, PITCH 1개와 SWING 50개는 자료 부족이다. 특히 2020 PITCH 3-0은 NFB 유효표본크기 ESS0=113.775233455517로 기준 200보다 작다. 숫자 차이를 행동 권고나 뚜렷한 방향으로 제시하지 않는다. 저장 표의 자료 부족 문구와 빈 point_direction은 모두 올바르다."
+    },
+    {
+      "severity": "해석 경계",
+      "topic": "추론과 구장",
+      "detail": "모형은 EXPERIMENTAL이고 고정 OOF 점수의 경기 군집 조건부 구간을 사용한다. 255는 각 연도 232개 보고 집단을 포함하는 보수적 비교 상한이며 여러 해 전체의 동시 보장을 뜻하지 않는다. 경기 전체에 마지막 구장을 부여하는 방식은 재개 전후 투구별 실제 구장 복원과 다르다."
+    }
+  ],
+  "review_method": {
+    "integrity": "manifest에 기록된 모든 출력, 실행 코드, 모델 명세, 공통 RDS·준비 감사와 준비 입력/출력의 실제 SHA-256을 대조했다. 공통 파일은 캐시하여 고유 255개 파일을 읽었으며 불일치는 없었다.",
+    "saved_checks": "8개 checks.json의 각 28개 PASS와 fit_diagnostics.csv의 각 12개 수렴 기록을 확인했다. relative/projected gradient 모두 1e-7 미만이다.",
+    "independent_arithmetic": "저장 action_values.csv에서 N>=500, 각 행동 ESS>=200, 각 행동 경기>=100, coverage>=0.5, 최대 경기 가중치<=0.05를 별도 재계산했다. Q1-Q0=delta(허용 1e-12), nominal/family 구간 순서와 자료 부족 표시도 확인했다.",
+    "rds_readback": "정제 RDS를 두 해 각각 읽어 실제 행·경기·타석 수, 선택 구장, 제외 경기의 사유를 직접 요약했다. RDS와 원본은 수정하지 않았다.",
+    "exclusions": "모든 원자료를 다시 준비하거나 모델을 다시 적합하지 않았다. 그림의 렌더링 검토와 점수별 재산출은 범위에 포함하지 않았다."
+  },
+  "rds_readback": [
+    {
+      "year": 2021,
+      "rows": 712320,
+      "games": 2429,
+      "PA": 182131,
+      "eligible_PA": 181054,
+      "selected_venue": [
+        {
+          "game_pk": 633224,
+          "venue": 2680,
+          "rows": 326
+        }
+      ],
+      "invalid_completed_game_rows": 0,
+      "games_without_any_eligible_rows": [
+        {
+          "game_pk": 632812,
+          "rows": 254,
+          "pitch": 210,
+          "pitch_sb": 0,
+          "swing": 254
+        },
+        {
+          "game_pk": 632924,
+          "rows": 317,
+          "pitch": 0,
+          "pitch_sb": 0,
+          "swing": 317
+        }
+      ],
+      "reasons_for_those_games": [
+        {
+          "game_pk": 632812,
+          "reason_pitch": "missing_pitch_type",
+          "reason_pitch_sb": "missing_pitch_type",
+          "reason_swing": "included",
+          "rows": 44
+        },
+        {
+          "game_pk": 632812,
+          "reason_pitch": "included",
+          "reason_pitch_sb": "invalid_geometry",
+          "reason_swing": "included",
+          "rows": 210
+        },
+        {
+          "game_pk": 632924,
+          "reason_pitch": "missing_pitch_type",
+          "reason_pitch_sb": "missing_pitch_type",
+          "reason_swing": "included",
+          "rows": 317
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "rows": 264262,
+      "games": 898,
+      "PA": 66638,
+      "eligible_PA": 66269,
+      "selected_venue": [
+        {
+          "game_pk": 630882,
+          "venue": 2,
+          "rows": 281
+        }
+      ],
+      "invalid_completed_game_rows": 0,
+      "games_without_any_eligible_rows": [],
+      "reasons_for_those_games": []
+    }
+  ],
+  "evidence": [
+    {
+      "year": 2021,
+      "preparation_status": "PASS",
+      "preparation_sha256": "dc46747f3ca96f8e77ed7c0363eb7336ef0a18611d80776abae72856179d0918",
+      "raw_rows": 712320,
+      "all_PA": 182131,
+      "eligible_PA": 181054,
+      "games": 2429,
+      "schedule": [
+        {
+          "year": 2021,
+          "games": 2429,
+          "first": "2021-04-01",
+          "last": "2021-10-03",
+          "cutoff": "2021-12-31"
+        }
+      ],
+      "schedule_policy": {
+        "records_before": 2437,
+        "unique_games": 2429,
+        "duplicated_games": 8,
+        "records_removed": 8,
+        "identical_records_removed": 7,
+        "conflicting_games": 1,
+        "venue_conflicts_resolved": 1,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": [
+          "game_pk",
+          "year",
+          "venue",
+          "official_date",
+          "cutoff"
+        ],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games.",
+        "venue_policy_explicit": false,
+        "venue_policy_default_reason": "Preserve models/bcap/data.py dictionary last-occurrence game-level venue assignment; no pitch-level relocation reconstruction."
+      },
+      "schedule_filter": "gameType=R; abstractGameState=Final; codedGameState=F; detailedState in {Final, Completed Early}; explicit year/cutoff",
+      "preparation_checks": {
+        "duplicate_pitch_keys": 0,
+        "invalid_counts": 0,
+        "first_pitch_number_not_one_PA": 0,
+        "pitch_sequence_gaps": 0,
+        "nonmonotonic_pitch_numbers": 0,
+        "count_transition_anomalies": 0,
+        "multiple_nonnull_events_PA": 0,
+        "multiple_distinct_nonnull_events_PA": 0,
+        "missing_last_event_with_earlier_nonnull_PA": 0,
+        "PA_multiple_pitchers": 63,
+        "PA_multiple_batters": 22,
+        "prev_features_first_row_clear": true,
+        "Y_constant_within_PA": true,
+        "eligible_pitch_label_complete": true,
+        "eligible_swing_label_complete": true,
+        "eligible_pitch_sb_label_complete": true
+      },
+      "hashes_checked": 46,
+      "hash_mismatches": [],
+      "venue_conflicts": [
+        {
+          "game_pk": "633224",
+          "year": "2021",
+          "venue": "4705",
+          "official_date": "2021-07-21",
+          "cutoff": "2021-12-31",
+          "schedule_source": "columns/001-ball-count/data/raw/mlb/2021/snapshot_20260928_r_history/schedule_2021.json",
+          "schedule_record_index": "1488",
+          "schedule_date": "2021-07-21",
+          "game_date": "2021-07-21T21:20:00Z",
+          "venue_name": "Truist Park",
+          "resume_date": "2021-09-25T00:10:00Z",
+          "resumed_from": "__BCAP_NA__",
+          "description": "Makeup of 7/19 PPD",
+          "coded_state": "F",
+          "detailed_state": "Final",
+          "normalization_record_order": "1428",
+          "selected_schedule_record": "FALSE",
+          "selected_venue": "2680",
+          "resolution_policy": "legacy_last_schedule_record"
+        },
+        {
+          "game_pk": "633224",
+          "year": "2021",
+          "venue": "2680",
+          "official_date": "2021-07-21",
+          "cutoff": "2021-12-31",
+          "schedule_source": "columns/001-ball-count/data/raw/mlb/2021/snapshot_20260928_r_history/schedule_2021.json",
+          "schedule_record_index": "2384",
+          "schedule_date": "2021-09-24",
+          "game_date": "2021-09-25T00:10:00Z",
+          "venue_name": "Petco Park",
+          "resume_date": "__BCAP_NA__",
+          "resumed_from": "2021-07-21T21:20:00Z",
+          "description": "Makeup of 7/19 PPD",
+          "coded_state": "F",
+          "detailed_state": "Final",
+          "normalization_record_order": "2309",
+          "selected_schedule_record": "TRUE",
+          "selected_venue": "2680",
+          "resolution_policy": "legacy_last_schedule_record"
+        }
+      ],
+      "models": [
+        {
+          "run": "bcap_pitch_r_history__mlb_2021__20260928__r01",
+          "manifest_sha256": "ac351b2172ae5aff60b66e4a34d059300ec02e46829619164c3c676a2ea4ce72",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 708011,
+            "support": 685919,
+            "coverage": 0.968797094960389,
+            "games": 2428,
+            "MSE": 0.2386900655964861,
+            "Brier": 0.22083701254624824,
+            "logloss": 0.6297966576929588,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 13,
+            "years": 2021,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 26,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.24518620887577e-9,
+          "max_calibrator_gradient": 9.30112137330542e-11,
+          "groups": 13,
+          "support_pass": 13,
+          "support_fail": 0,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 2428,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [
+            "632924"
+          ],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2021,
+              "BB": 0.692,
+              "HBP": 0.722,
+              "1B": 0.879,
+              "2B": 1.242,
+              "3B": 1.568,
+              "HR": 2.007
+            }
+          ]
+        },
+        {
+          "run": "bcap_pitch_sb_r_history__mlb_2021__20260928__r01",
+          "manifest_sha256": "fe0d7ebc8159abd5fceec0088d20ef5a64ec75819ec0c1feac2a7fdfaae68870",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 707801,
+            "support": 692799,
+            "coverage": 0.9788047770489163,
+            "games": 2427,
+            "MSE": 0.238120682550674,
+            "Brier": 0.2337395217854891,
+            "logloss": 0.6596069928662138,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 13,
+            "years": 2021,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 26,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 8.56928982745659e-10,
+          "max_calibrator_gradient": 1.34563497723285e-8,
+          "groups": 13,
+          "support_pass": 13,
+          "support_fail": 0,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 2427,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [
+            "632812",
+            "632924"
+          ],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2021,
+              "BB": 0.692,
+              "HBP": 0.722,
+              "1B": 0.879,
+              "2B": 1.242,
+              "3B": 1.568,
+              "HR": 2.007
+            }
+          ]
+        },
+        {
+          "run": "bcap_swing_r_history__mlb_2021__20260928__r01",
+          "manifest_sha256": "feaa1bf3800d08992baebe1c9524ce59e43bd3627adbadde770b8e225713d99a",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 708377,
+            "support": 659961,
+            "coverage": 0.9316522134400185,
+            "games": 2429,
+            "MSE": 0.23427896066099577,
+            "Brier": 0.16417448708293245,
+            "logloss": 0.4954220376941575,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 193,
+            "years": 2021,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 27,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.04820891173569e-9,
+          "max_calibrator_gradient": 4.82125863162843e-10,
+          "groups": 193,
+          "support_pass": 167,
+          "support_fail": 26,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 2429,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2021,
+              "BB": 0.692,
+              "HBP": 0.722,
+              "1B": 0.879,
+              "2B": 1.242,
+              "3B": 1.568,
+              "HR": 2.007
+            }
+          ]
+        },
+        {
+          "run": "bcap_pitch_ff_r_history__mlb_2021__20260928__r01",
+          "manifest_sha256": "e39e195e0f280054ae57f52305f3b4f659b3f17ae0baaa10eef22927f7af9750",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 708011,
+            "support": 605655,
+            "coverage": 0.8554316246498995,
+            "games": 2428,
+            "MSE": 0.23867434141305535,
+            "Brier": 0.18739295622106045,
+            "logloss": 0.5481103083448527,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 13,
+            "years": 2021,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 26,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.36865194488401e-9,
+          "max_calibrator_gradient": 1.09161885190822e-10,
+          "groups": 13,
+          "support_pass": 13,
+          "support_fail": 0,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 2428,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [
+            "632924"
+          ],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2021,
+              "BB": 0.692,
+              "HBP": 0.722,
+              "1B": 0.879,
+              "2B": 1.242,
+              "3B": 1.568,
+              "HR": 2.007
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "preparation_status": "PASS",
+      "preparation_sha256": "cc3d291d3591ebf1bacbbc0b23344436a5ca566466b00a1c32ad8f5fda12ddf7",
+      "raw_rows": 264262,
+      "all_PA": 66638,
+      "eligible_PA": 66269,
+      "games": 898,
+      "schedule": [
+        {
+          "year": 2020,
+          "games": 898,
+          "first": "2020-07-23",
+          "last": "2020-09-27",
+          "cutoff": "2020-12-31"
+        }
+      ],
+      "schedule_policy": {
+        "records_before": 900,
+        "unique_games": 898,
+        "duplicated_games": 2,
+        "records_removed": 2,
+        "identical_records_removed": 1,
+        "conflicting_games": 1,
+        "venue_conflicts_resolved": 1,
+        "venue_policy": "legacy_last_schedule_record",
+        "compared_fields": [
+          "game_pk",
+          "year",
+          "venue",
+          "official_date",
+          "cutoff"
+        ],
+        "venue_note": "Legacy policy assigns the last retained archived schedule venue to every row of a game; it does not reconstruct pitch-level venues for suspended games.",
+        "venue_policy_explicit": false,
+        "venue_policy_default_reason": "Preserve models/bcap/data.py dictionary last-occurrence game-level venue assignment; no pitch-level relocation reconstruction."
+      },
+      "schedule_filter": "gameType=R; abstractGameState=Final; codedGameState=F; detailedState in {Final, Completed Early}; explicit year/cutoff",
+      "preparation_checks": {
+        "duplicate_pitch_keys": 0,
+        "invalid_counts": 0,
+        "first_pitch_number_not_one_PA": 0,
+        "pitch_sequence_gaps": 0,
+        "nonmonotonic_pitch_numbers": 0,
+        "count_transition_anomalies": 0,
+        "multiple_nonnull_events_PA": 0,
+        "multiple_distinct_nonnull_events_PA": 0,
+        "missing_last_event_with_earlier_nonnull_PA": 0,
+        "PA_multiple_pitchers": 45,
+        "PA_multiple_batters": 8,
+        "prev_features_first_row_clear": true,
+        "Y_constant_within_PA": true,
+        "eligible_pitch_label_complete": true,
+        "eligible_swing_label_complete": true,
+        "eligible_pitch_sb_label_complete": true
+      },
+      "hashes_checked": 22,
+      "hash_mismatches": [],
+      "venue_conflicts": [
+        {
+          "game_pk": "630882",
+          "year": "2020",
+          "venue": "3309",
+          "official_date": "2020-08-09",
+          "cutoff": "2020-12-31",
+          "schedule_source": "columns/001-ball-count/data/raw/mlb/2020/snapshot_20260928_r_history/schedule_2020.json",
+          "schedule_record_index": "238",
+          "schedule_date": "2020-08-09",
+          "game_date": "2020-08-09T16:35:00Z",
+          "venue_name": "Nationals Park",
+          "resume_date": "2020-08-14T21:05:00Z",
+          "resumed_from": "__BCAP_NA__",
+          "description": "Completed in Baltimore",
+          "coded_state": "F",
+          "detailed_state": "Final",
+          "normalization_record_order": "206",
+          "selected_schedule_record": "FALSE",
+          "selected_venue": "2",
+          "resolution_policy": "legacy_last_schedule_record"
+        },
+        {
+          "game_pk": "630882",
+          "year": "2020",
+          "venue": "2",
+          "official_date": "2020-08-09",
+          "cutoff": "2020-12-31",
+          "schedule_source": "columns/001-ball-count/data/raw/mlb/2020/snapshot_20260928_r_history/schedule_2020.json",
+          "schedule_record_index": "303",
+          "schedule_date": "2020-08-14",
+          "game_date": "2020-08-14T21:05:00Z",
+          "venue_name": "Oriole Park at Camden Yards",
+          "resume_date": "__BCAP_NA__",
+          "resumed_from": "2020-08-09T16:35:00Z",
+          "description": "Completed in Baltimore",
+          "coded_state": "F",
+          "detailed_state": "Final",
+          "normalization_record_order": "265",
+          "selected_schedule_record": "TRUE",
+          "selected_venue": "2",
+          "resolution_policy": "legacy_last_schedule_record"
+        }
+      ],
+      "models": [
+        {
+          "run": "bcap_pitch_r_history__mlb_2020__20260928__r01",
+          "manifest_sha256": "eed1fd74b9727a94efc88fbff57a38bcec451bd3a354ecd47465a05695932686",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 262929,
+            "support": 237633,
+            "coverage": 0.9037915178622365,
+            "games": 898,
+            "MSE": 0.23888726730236995,
+            "Brier": 0.22294812068357847,
+            "logloss": 0.6345594324806668,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 13,
+            "years": 2020,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 26,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.22274710552021e-9,
+          "max_calibrator_gradient": 4.28704226015464e-11,
+          "groups": 13,
+          "support_pass": 12,
+          "support_fail": 1,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 898,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2020,
+              "BB": 0.699,
+              "HBP": 0.728,
+              "1B": 0.883,
+              "2B": 1.238,
+              "3B": 1.558,
+              "HR": 1.979
+            }
+          ]
+        },
+        {
+          "run": "bcap_pitch_sb_r_history__mlb_2020__20260928__r01",
+          "manifest_sha256": "753aed5153aefa6ed85f246f1fb9dda9e1106519f5edc49e70297fb0d2aa8b77",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 262929,
+            "support": 244922,
+            "coverage": 0.931513830729969,
+            "games": 898,
+            "MSE": 0.2382256036803698,
+            "Brier": 0.23120730487200003,
+            "logloss": 0.6543042614531639,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 13,
+            "years": 2020,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 26,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.00451925876983e-9,
+          "max_calibrator_gradient": 9.73403941355119e-10,
+          "groups": 13,
+          "support_pass": 13,
+          "support_fail": 0,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 898,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2020,
+              "BB": 0.699,
+              "HBP": 0.728,
+              "1B": 0.883,
+              "2B": 1.238,
+              "3B": 1.558,
+              "HR": 1.979
+            }
+          ]
+        },
+        {
+          "run": "bcap_swing_r_history__mlb_2020__20260928__r01",
+          "manifest_sha256": "835617c25e677e49f69737faf398d6df7e776042b2f901a71d232f206ffcbf35",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 262953,
+            "support": 244570,
+            "coverage": 0.9300901682049644,
+            "games": 898,
+            "MSE": 0.23466587142185408,
+            "Brier": 0.16512176799315328,
+            "logloss": 0.49806549943491146,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 193,
+            "years": 2020,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 27,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.56042294201585e-9,
+          "max_calibrator_gradient": 4.77757905224883e-10,
+          "groups": 193,
+          "support_pass": 143,
+          "support_fail": 50,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 898,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2020,
+              "BB": 0.699,
+              "HBP": 0.728,
+              "1B": 0.883,
+              "2B": 1.238,
+              "3B": 1.558,
+              "HR": 1.979
+            }
+          ]
+        },
+        {
+          "run": "bcap_pitch_ff_r_history__mlb_2020__20260928__r01",
+          "manifest_sha256": "0dcab3600de0d20bf7bca314d2b2f116c15539344df49d0c82d6ad9cdd77c707",
+          "status": "COMPLETE",
+          "model_status": "EXPERIMENTAL",
+          "metrics": {
+            "n": 262929,
+            "support": 198493,
+            "coverage": 0.7549300381471804,
+            "games": 898,
+            "MSE": 0.2389679197918149,
+            "Brier": 0.18828404211616045,
+            "logloss": 0.5519871320930643,
+            "all_fit_converged": true,
+            "fit_logs": 12,
+            "summary_groups": 13,
+            "years": 2020,
+            "policy_learning": false
+          },
+          "checks_status": "PASS",
+          "checks_count": 28,
+          "failed_checks": [],
+          "hashes_checked": 26,
+          "hash_mismatches": [],
+          "fit_diagnostics_count": 12,
+          "fit_failures": [],
+          "max_relative_gradient": 1.17401197973333e-9,
+          "max_calibrator_gradient": 4.44712331889105e-10,
+          "groups": 13,
+          "support_pass": 13,
+          "support_fail": 0,
+          "support_gate_disagreements": [],
+          "delta_identity_failures": [],
+          "interval_order_failures": [],
+          "insufficient_label_failures": 0,
+          "game_folds_unique": 898,
+          "game_folds_duplicate_rows": 0,
+          "excluded_full_games": [],
+          "comparison_family": 255,
+          "weights": [
+            {
+              "year": 2020,
+              "BB": 0.699,
+              "HBP": 0.728,
+              "1B": 0.883,
+              "2B": 1.238,
+              "3B": 1.558,
+              "HR": 1.979
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

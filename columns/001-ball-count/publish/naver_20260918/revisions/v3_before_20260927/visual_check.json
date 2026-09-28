@@ -1,0 +1,1211 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "index",
+      "title": "볼카운트 연재 세 글 | Baseline",
+      "viewport": 1280,
+      "width": 1280,
+      "images": [],
+      "tables": 0,
+      "headings": 1
+    },
+    {
+      "name": "01_ball_count",
+      "title": "스트라이크는 언제나 좋은 공일까? | Baseline",
+      "viewport": 1280,
+      "width": 1280,
+      "images": [
+        {
+          "src": "../../figures/naver_20260918/01_bcai_grid.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/02_sb_development.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/03_sb_2023.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/04_zone_map.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/05_swing_2023.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/08_three_ball.png",
+          "loaded": true
+        }
+      ],
+      "tables": 6,
+      "headings": 1,
+      "notes": 22,
+      "cited": 0,
+      "results": 7,
+      "references": 11,
+      "subheadings": 26,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "02_bcai",
+      "title": "BCAI 해설 — 0-2의 불리함과 3-0의 유리함을 숫자로 읽는 법 | Baseline",
+      "viewport": 1280,
+      "width": 1280,
+      "images": [
+        {
+          "src": "../../figures/naver_20260918/06_bcai_intervals.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/07_state_gaps.png",
+          "loaded": true
+        }
+      ],
+      "tables": 4,
+      "headings": 1,
+      "notes": 11,
+      "cited": 0,
+      "results": 1,
+      "references": 1,
+      "subheadings": 13,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "03_bcap",
+      "title": "BCAP 설명서 — 결과부터 읽는 카운트별 행동 비교 | Baseline",
+      "viewport": 1280,
+      "width": 1280,
+      "images": [
+        {
+          "src": "../../figures/naver_20260918/05_swing_2023.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/04_zone_map.png",
+          "loaded": true
+        }
+      ],
+      "tables": 5,
+      "headings": 1,
+      "notes": 12,
+      "cited": 0,
+      "results": 1,
+      "references": 0,
+      "subheadings": 17,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "04_references_ko",
+      "title": "볼카운트 칼럼의 참고문헌을 한국어로 읽기 | Baseline",
+      "viewport": 1280,
+      "width": 1280,
+      "images": [],
+      "tables": 8,
+      "headings": 1,
+      "notes": 12,
+      "cited": 12,
+      "results": 0,
+      "references": 12,
+      "subheadings": 40,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "index",
+      "title": "볼카운트 연재 세 글 | Baseline",
+      "viewport": 390,
+      "width": 390,
+      "images": [],
+      "tables": 0,
+      "headings": 1
+    },
+    {
+      "name": "01_ball_count",
+      "title": "스트라이크는 언제나 좋은 공일까? | Baseline",
+      "viewport": 390,
+      "width": 390,
+      "images": [
+        {
+          "src": "../../figures/naver_20260918/01_bcai_grid.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/02_sb_development.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/03_sb_2023.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/04_zone_map.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/05_swing_2023.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/08_three_ball.png",
+          "loaded": true
+        }
+      ],
+      "tables": 6,
+      "headings": 1,
+      "notes": 22,
+      "cited": 0,
+      "results": 7,
+      "references": 11,
+      "subheadings": 26,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "02_bcai",
+      "title": "BCAI 해설 — 0-2의 불리함과 3-0의 유리함을 숫자로 읽는 법 | Baseline",
+      "viewport": 390,
+      "width": 390,
+      "images": [
+        {
+          "src": "../../figures/naver_20260918/06_bcai_intervals.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/07_state_gaps.png",
+          "loaded": true
+        }
+      ],
+      "tables": 4,
+      "headings": 1,
+      "notes": 11,
+      "cited": 0,
+      "results": 1,
+      "references": 1,
+      "subheadings": 13,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "03_bcap",
+      "title": "BCAP 설명서 — 결과부터 읽는 카운트별 행동 비교 | Baseline",
+      "viewport": 390,
+      "width": 390,
+      "images": [
+        {
+          "src": "../../figures/naver_20260918/05_swing_2023.png",
+          "loaded": true
+        },
+        {
+          "src": "../../figures/naver_20260918/04_zone_map.png",
+          "loaded": true
+        }
+      ],
+      "tables": 5,
+      "headings": 1,
+      "notes": 12,
+      "cited": 0,
+      "results": 1,
+      "references": 0,
+      "subheadings": 17,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    },
+    {
+      "name": "04_references_ko",
+      "title": "볼카운트 칼럼의 참고문헌을 한국어로 읽기 | Baseline",
+      "viewport": 390,
+      "width": 390,
+      "images": [],
+      "tables": 8,
+      "headings": 1,
+      "notes": 12,
+      "cited": 12,
+      "results": 0,
+      "references": 12,
+      "subheadings": 40,
+      "noteFont": "Batang, 바탕, serif",
+      "bodyFont": "\"Malgun Gothic\", \"맑은 고딕\", sans-serif"
+    }
+  ],
+  "anchorChecks": [
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2-sub-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-2-sub-6",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-3-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-3-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-3-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-3-sub-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-4-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-4-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-4-sub-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-5-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-5-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-5-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-5-sub-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-6",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-6-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-6-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-6-sub-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-7",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-8",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "01_ball_count.html",
+      "anchor": "section-9",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-01",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-02",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-03",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-04",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-05",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-06",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-07",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-08",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-09",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-10",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-11",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count",
+      "target": "04_references_ko.html",
+      "anchor": "ref-12",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-1-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-3",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-4",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-5",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-6",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-7",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-8",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-8-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-8-sub-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-8-sub-3",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-9",
+      "exists": true
+    },
+    {
+      "from": "02_bcai",
+      "target": "02_bcai.html",
+      "anchor": "section-9-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-1-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-1-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-1-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-1-sub-4",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-2-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-4",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-5",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-6",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-6-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-6-sub-4",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-6-sub-5",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-7",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-8",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-8-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-8-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-8-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap",
+      "target": "03_bcap.html",
+      "anchor": "section-9",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-2-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-3-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-3-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-4-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-5",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-5-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-5-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-6",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-7",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-7-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-7-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-7-sub-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-7-sub-5",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-8",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-8-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-8-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-8-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-9",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-9-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-9-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-9-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-10",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-10-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-10-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-10-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-11",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-11-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-11-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-11-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-11-sub-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-11-sub-5",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-12",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-12-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-12-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-12-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-12-sub-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-13",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-13-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-13-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-13-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-14",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "section-15",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-01",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-02",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-03",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-04",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-05",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-06",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-07",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-08",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-09",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-10",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-11",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko",
+      "target": "04_references_ko.html",
+      "anchor": "ref-12",
+      "exists": true
+    }
+  ]
+}

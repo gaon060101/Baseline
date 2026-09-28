@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-09-28T11:30:24.135Z",
+  "pass": true,
+  "pages": 1,
+  "viewports": [
+    1280,
+    390,
+    360
+  ],
+  "checks": [
+    {
+      "file": "01_ball_count.html",
+      "width": 1280,
+      "overflow": false,
+      "brokenImages": [],
+      "brokenLinks": [],
+      "wideTables": 0,
+      "mobileCards": null,
+      "unintendedStrikethrough": 0,
+      "literalEmphasis": false,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 1280,
+      "matrix": "bcai-board",
+      "cells": 12,
+      "rows": 4,
+      "overflow": false,
+      "boardWidth": 778,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 1280,
+      "matrix": "location-board",
+      "cells": 12,
+      "rows": 4,
+      "overflow": false,
+      "boardWidth": 778,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "brokenLinks": [],
+      "wideTables": 0,
+      "mobileCards": true,
+      "unintendedStrikethrough": 0,
+      "literalEmphasis": false,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 390,
+      "matrix": "bcai-board",
+      "cells": 12,
+      "rows": 4,
+      "overflow": false,
+      "boardWidth": 346,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 390,
+      "matrix": "location-board",
+      "cells": 12,
+      "rows": 4,
+      "overflow": false,
+      "boardWidth": 346,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": [],
+      "brokenLinks": [],
+      "wideTables": 0,
+      "mobileCards": null,
+      "unintendedStrikethrough": 0,
+      "literalEmphasis": false,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 360,
+      "matrix": "bcai-board",
+      "cells": 12,
+      "rows": 4,
+      "overflow": false,
+      "boardWidth": 316,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 360,
+      "matrix": "location-board",
+      "cells": 12,
+      "rows": 4,
+      "overflow": false,
+      "boardWidth": 316,
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "note": "실제 Edge 1280·390·360px 렌더링, 이미지·로컬 링크·앵커·4×3 표 및 셀 넘침 검사. 외부 웹 접근 및 수치 검증과는 별도."
+}

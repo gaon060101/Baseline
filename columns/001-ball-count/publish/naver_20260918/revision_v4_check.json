@@ -1,0 +1,1638 @@
+{
+  "date": "2026-09-27",
+  "protected_files_compared": 1296,
+  "protected_files_changed": [],
+  "protection_scope": "선택한 MD/JSON/CSV/YAML/PY/PNG 중 20MB 이하 1296개; runtime/qa/대형파일 제외. 전체 원본 데이터 해시 검사는 아님.",
+  "original_tables": [
+    {
+      "file": "02_bcai",
+      "original_tables": 4,
+      "all_original_tables_preserved": true
+    },
+    {
+      "file": "03_bcap",
+      "original_tables": 5,
+      "all_original_tables_preserved": true
+    },
+    {
+      "file": "04_references_ko",
+      "original_tables": 8,
+      "all_original_tables_preserved": true
+    }
+  ],
+  "bundle_link_checks": [
+    {
+      "from": "01_ball_count.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-1-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-2-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-2-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-3-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-3-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-3-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-4-sub-3",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-4-sub-4",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-4-sub-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-5",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-6",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-7",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-8",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#section-9",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#term-01",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-01",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/01_bcai_grid.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/01_bcai_grid.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#term-02",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/02_sb_development.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/02_sb_development.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "#term-03",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "05_data_validation.html#validation-years",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-04",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-05",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-06",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/04_zone_map.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/04_zone_map.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/05_swing_2023.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/05_swing_2023.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/08_three_ball.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "assets/08_three_ball.png",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-07",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-08",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-09",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html#ref-09",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "05_data_validation.html#uncertainty",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "01_ball_count.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-1-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-3",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-4",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-5",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-6",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-7",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-8",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-9",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-9-sub-1",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "#section-10",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "assets/06_bcai_intervals.png",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "assets/06_bcai_intervals.png",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "assets/07_state_gaps.png",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "assets/07_state_gaps.png",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "02_bcai.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-1-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-1-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-1-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-1-sub-4",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-2-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-4",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-5",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-6",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-6-sub-3",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-6-sub-4",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-6-sub-5",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-7",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-8",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-9",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "#section-10",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "assets/05_swing_2023.png",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "assets/05_swing_2023.png",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html#validation-years",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html#development",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "assets/04_zone_map.png",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "assets/04_zone_map.png",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html#validation-years",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "03_bcap.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-2-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-3-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-3-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-4-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-5",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-5-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-5-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-6",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-7",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-7-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-7-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-7-sub-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-7-sub-5",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-8",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-8-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-8-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-8-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-9",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-9-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-9-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-9-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-10",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-10-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-10-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-10-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-11",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-11-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-11-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-11-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-11-sub-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-11-sub-5",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-12",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-12-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-12-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-12-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-12-sub-4",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-13",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-13-sub-1",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-13-sub-2",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-13-sub-3",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-14",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-15",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#section-16",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-01",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-02",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-03",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-04",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-05",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-06",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-07",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-08",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-09",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-10",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-11",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "#ref-12",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "04_references_ko.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-2-sub-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-2-sub-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-3",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-3-sub-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-3-sub-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-4",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-4-sub-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-4-sub-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-4-sub-3",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-5",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-5-sub-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-5-sub-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-6",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-6-sub-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-6-sub-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-6-sub-3",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-7",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-7-sub-1",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-7-sub-2",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-7-sub-3",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-8",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-9",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "#section-10",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "assets/03_sb_2023.png",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "assets/03_sb_2023.png",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "04_references_ko.html#ref-09",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "05_data_validation.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "index.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "01_ball_count.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "02_bcai.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "03_bcap.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "04_references_ko.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "05_data_validation.html",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "네이버_첨부그림_8장_v4.zip",
+      "exists": true
+    },
+    {
+      "from": "index.html",
+      "url": "README.md",
+      "exists": true
+    }
+  ],
+  "internal_links_rendered_as_text": [
+    {
+      "from": "02_bcai",
+      "url": "../../analysis/count_advantage_2024_2025.md"
+    },
+    {
+      "from": "02_bcai",
+      "url": "../../analysis/runs/bcai_obs__mlb_2024_2025__20260907__r01/artifacts/advantage_count_results.csv"
+    },
+    {
+      "from": "02_bcai",
+      "url": "../../analysis/ridge_v02_validation_report.md"
+    },
+    {
+      "from": "02_bcai",
+      "url": "../../analysis/runs/bcai_state_delta__mlb_2024_2025__20260917__r01/report.md"
+    },
+    {
+      "from": "02_bcai",
+      "url": "../../analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/sb_reformatted.csv"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../analysis/runs/bcap_swing__mlb_2023__20260914__r01/artifacts/values.csv"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../analysis/bcap_external_20260914__r01/final_column_conclusion.md"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../analysis/bcap_external_20260914__r01/final_report.html"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../../../models/registry.md"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../../../models/bcap/pitch_sb/v0.1.0/specification.yaml"
+    },
+    {
+      "from": "03_bcap",
+      "url": "../../analysis/bcap_external_20260914__r01/report.md"
+    },
+    {
+      "from": "03_bcap",
+      "url": "03_bcap_evidence.md"
+    },
+    {
+      "from": "04_references_ko",
+      "url": "reference_audit.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../analysis/count_advantage_2024_2025.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../analysis/ridge_v02_validation_report.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../analysis/bcap_external_20260914__r01/report.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../analysis/bcap_external_20260914__r01/measurement_review.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../analysis/bcap_pitch_classification_20260912__r01/report.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md"
+    },
+    {
+      "from": "05_data_validation",
+      "url": "../../../../models/registry.md"
+    }
+  ],
+  "main_length": {
+    "counting": "공백 포함 MD 문자 수, 줄바꿈 LF 통일",
+    "before": 24898,
+    "after": 14674,
+    "reduction_pct": 41.1
+  },
+  "pass": true
+}

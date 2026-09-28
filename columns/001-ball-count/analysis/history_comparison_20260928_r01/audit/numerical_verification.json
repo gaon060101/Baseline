@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "checks": {
+    "all_12_counts_11_seasons": true,
+    "BCAI_ratio": true,
+    "all_report_groups_screened": true,
+    "saved_support_gate_recomputed": true,
+    "unsupported_values_withheld": true,
+    "supported_delta_equals_Q1_minus_Q0": true,
+    "BCAP_frozen_interval_formula": true,
+    "annual_weights_normalized": true,
+    "pattern_partition": true,
+    "counts_no_duplicate_keys": true,
+    "all_used_sources_unchanged": true,
+    "original_claim_sources_exist": true,
+    "original_claim_run_ids_exist": true
+  },
+  "source_files": 172,
+  "complete_run_manifests": 53,
+  "note": "Saved-output arithmetic/provenance audit only; no raw-data refit or inferential validation."
+}

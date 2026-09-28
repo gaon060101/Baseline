@@ -1,0 +1,28 @@
+{
+  "input_schedule_coverage": [
+    {
+      "year": 2022,
+      "scope": "full_regular_season",
+      "cutoff": "2022-12-31",
+      "games": 2430,
+      "first": "2022-04-07",
+      "last": "2022-10-05",
+      "schedule_match": true
+    }
+  ],
+  "sample": {
+    "raw_rows": 710210,
+    "all_PA": 182433,
+    "eligible_PA": 181502,
+    "games": 2430,
+    "repeated_count_rows_removed": 48886,
+    "exclusions": {
+      "included": 181502,
+      "truncated": 298,
+      "missing_final": 84,
+      "intentional_walk": 475,
+      "catcher_interference": 74
+    }
+  },
+  "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python"
+}

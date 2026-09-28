@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-28T06:35:27.5120344Z",
+  "snapshot_report_generated_at": "2026-09-28 15:16:27 KST",
+  "report_validation_sha256": "6dda91897da1d7ccef31147cdeb27bd39a9b1083ad40b3bbcad40b54d23a9a37",
+  "complete_model_years": 44,
+  "pending_model_years": 0,
+  "all_snapshot_and_original_hashes_verified": 253,
+  "completed_run_input_hashes_verified": 200,
+  "aggregate_rows_exactly_match_originals": 2552,
+  "main_chart_rows": 528,
+  "supported_main_rows": 527,
+  "unsupported_main_rows": [
+    {
+      "model": "pitch",
+      "game_year": "2020",
+      "count": "3-0",
+      "support_gate": "FALSE",
+      "evidence": "비교 자료 부족"
+    }
+  ],
+  "all_48_chart_axes_pass": true,
+  "velocity_caption_required_charts": 12,
+  "required_velocity_captions_present": true,
+  "viewed_images": [
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 900,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2015_count_mobile.png",
+      "height_px": 1350,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/pitch_2015_count_mobile.png",
+      "sha256": "ce488559dd26707eca6ca6751d253595217c84d282d6fe2b8262367ecc969ba5",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 1860,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_count_history.png",
+      "height_px": 3860,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/pitch_count_history.png",
+      "sha256": "72544509091cc2320fe5bfd50a65954d533d9a86264b9493e9b327f568ef0421",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 900,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2015_count_mobile.png",
+      "height_px": 1350,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/pitch_sb_2015_count_mobile.png",
+      "sha256": "b03a9c9403cc048be854a26bcad097f110a9b5a0ae5ca9cd126736597b710610",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 1860,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_count_history.png",
+      "height_px": 3860,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/pitch_sb_count_history.png",
+      "sha256": "b7a9ea54dfbfdcb8e563568e4b0d9d84e4ab753fd5ac77770555df03a2db4276",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 900,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2015_count_mobile.png",
+      "height_px": 1350,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/swing_2015_count_mobile.png",
+      "sha256": "673786d5b2b7016125ace8be1e2c6b30b8f377ce72529897945767c0cb682da7",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 1860,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_count_history.png",
+      "height_px": 3860,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/swing_count_history.png",
+      "sha256": "5df66f29827b689c75923756bbb380e64865a492f39feb95eca231f641fc88bc",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 900,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2015_count_mobile.png",
+      "height_px": 1350,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/pitch_ff_2015_count_mobile.png",
+      "sha256": "eaea1ed2d1453429234b1fe7e8aa09a00f5cc7c98ccf63c97902d7acf9e241dc",
+      "view_detail": "original",
+      "status": "PASS"
+    },
+    {
+      "notes": "원 해상도로 직접 열람. 한글·축·구속 측정 주의문·조건부 구간·연도별/공유 적합 설명 정상. 텍스트·점·구간 잘림 없음.",
+      "width_px": 1860,
+      "original_path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_count_history.png",
+      "height_px": 3860,
+      "actual_visual_review": true,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/final_visual_review_20260928T063228Z/snapshot/pitch_ff_count_history.png",
+      "sha256": "6041761fecda27a6e20c9823a54cff2d407ff3e3cb7b17ad73b5c8d295f0f0e3",
+      "view_detail": "original",
+      "status": "PASS"
+    }
+  ],
+  "year2015": [
+    {
+      "supported_primary_counts": 12,
+      "model": "pitch",
+      "summary_groups": 13,
+      "unsupported_groups": 0
+    },
+    {
+      "supported_primary_counts": 12,
+      "model": "pitch_sb",
+      "summary_groups": 13,
+      "unsupported_groups": 0
+    },
+    {
+      "supported_primary_counts": 12,
+      "model": "swing",
+      "summary_groups": 193,
+      "unsupported_groups": 27
+    },
+    {
+      "supported_primary_counts": 12,
+      "model": "pitch_ff",
+      "summary_groups": 13,
+      "unsupported_groups": 0
+    }
+  ],
+  "renderer_executed": false,
+  "models_recomputed": false,
+  "scope": "2015 모바일 4장과 2015~2025 최종 종합 4장을 원본 해상도로 직접 열람. 2,552행은 원 저장 집계와 필드별 정확히 일치. 원 점수 재계산·인과 검증·전체 학습 불확실성 검증은 수행하지 않음. 다른 모바일 PNG의 육안 확인은 이전 날짜별 기록을 따른다."
+}

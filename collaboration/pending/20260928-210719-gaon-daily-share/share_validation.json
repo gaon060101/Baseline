@@ -1,0 +1,49 @@
+{
+  "checked_at_kst": "2026-09-28T21:10:47",
+  "base_commit": "5280aa9743bc1f202fc0b6aab5a8ec40388a16a5",
+  "selected_files_before_audit_files": 2527,
+  "selected_bytes": 79340534,
+  "secret_pattern_hits": 0,
+  "row_level_csv_header_hits": 0,
+  "large_files_above_50MiB": 0,
+  "current_html_pages_checked": 10,
+  "current_html_local_links_checked": 508,
+  "current_html_missing_shared_targets": [],
+  "handoff_md_local_links_checked": 20,
+  "excluded_prior_unrelated_files": [
+    "columns/001-ball-count/analysis/credit_usage_estimate_20260920.md",
+    "columns/001-ball-count/publish/ball_count_pt_20260917.pptx",
+    "columns/001-ball-count/figures/pt_build_20260917/build.mjs",
+    "columns/001-ball-count/figures/pt_build_20260917/candidate.pptx",
+    "columns/001-ball-count/figures/pt_build_20260917/candidate.pptx.inspect.ndjson",
+    "columns/001-ball-count/figures/pt_build_20260917/inspect.json",
+    "columns/001-ball-count/figures/pt_build_20260917/inspect.mjs",
+    "columns/001-ball-count/figures/pt_build_20260917/ref-1.png",
+    "columns/001-ball-count/figures/pt_build_20260917/ref-26.png",
+    "columns/001-ball-count/figures/pt_build_20260917/ref-5.png",
+    "columns/001-ball-count/figures/pt_build_20260917/ref-6.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-1.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-2.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-3.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-4.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-5.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-6.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-7.png",
+    "columns/001-ball-count/figures/pt_build_20260917/slide-8.png",
+    "columns/001-ball-count/figures/pt_build_20260917/validation.json"
+  ],
+  "excluded_prior_reason": "이전 사용량 개인 기록 및 9월17일 발표자료는 오늘 분석·원고 인계에 필요하지 않아 로컬 보존",
+  "excluded_other": "원본·행별 자료·캐시·RDS·설치환경은 .gitignore와 guides/excluded_files.json 참조. tmp 문헌 사본도 제외",
+  "limits": [
+    "기존 저장 검수 기록을 읽었으며 통계 재적합·전체 브라우저 검수를 다시 실행하지 않음",
+    "비밀키 검사는 알려진 형식의 패턴 점검이며 모든 민감정보 부재를 보장하지 않음",
+    "과거 보관본의 링크·제외 입력을 가리키는 역사적 manifest 전체는 검사 대상이 아님"
+  ],
+  "inventory_note": "shared_files.csv는 내용 커밋 전 선택 파일의 작업트리 바이트 해시. 전송 증빙 후 changes.md는 후속 커밋에서 바뀜. 목록 자신과 이 검사 JSON은 자기 참조 방지를 위해 목록에서 제외",
+  "pass": true,
+  "whitespace_check": {
+    "exit_code": 2,
+    "diagnostic_lines": 1399,
+    "note": "Windows CRLF를 허용해 확인. 기존 원고·검수·보관본의 공백 경고는 원본 보존을 위해 자동 수정하지 않음. 업로드 제외·최신 링크 검사는 통과."
+  }
+}

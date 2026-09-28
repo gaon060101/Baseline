@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-09-28T15:03:37.3168601+09:00",
+  "status": "PASS_DOCUMENTATION_SCOPE",
+  "scope": "R 재사용 안내4개의 로컬 링크와 실행기 인수·설정 형식을 읽어 대조했다. 예제 명령을 실행하거나 모델을 다시 적합한 검사는 아니다. 외부 URL의 현재 접근 여부는 확인하지 않았다.",
+  "link_count": 26,
+  "missing_links": [],
+  "links": [
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/column.md",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../models/bcai/observed/v1.0.0/r/README.md",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../models/bcap/r/README.md",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/plan.md",
+      "exists": true
+    },
+    {
+      "document": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_history_20260928/plan.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "../../../../../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "../model_card.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "../specification.yaml",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "bcai.R",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "run.R",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "test_bcai.R",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "../../../../../guides/r_setup.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "../../../../../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/config.json",
+      "exists": true
+    },
+    {
+      "document": "models/bcai/observed/v1.0.0/r/README.md",
+      "target": "../../../../../columns/001-ball-count/sources.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcap/r/README.md",
+      "target": "../../../columns/001-ball-count/analysis/runs/bcap_pitch_r__mlb_2024_2025__20260928__r02/README.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcap/r/README.md",
+      "target": "../../../columns/001-ball-count/analysis/runs/bcap_pitch_sb_r__mlb_2024_2025__20260928__r01/README.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcap/r/README.md",
+      "target": "../../../columns/001-ball-count/analysis/runs/bcap_swing_r__mlb_2024_2025__20260928__r01/README.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcap/r/README.md",
+      "target": "../../../columns/001-ball-count/analysis/runs/bcap_pitch_ff_r__mlb_2024_2025__20260928__r01/README.md",
+      "exists": true
+    },
+    {
+      "document": "models/bcap/r/README.md",
+      "target": "../../../columns/001-ball-count/analysis/runs/bcap_r_postflight__mlb_2024_2025__20260928__r02/README.md",
+      "exists": true
+    },
+    {
+      "document": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "../r_history_20260928/plan.md",
+      "exists": true
+    },
+    {
+      "document": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "../../column.md",
+      "exists": true
+    },
+    {
+      "document": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "../../../../guides/excluded_files.json",
+      "exists": true
+    }
+  ],
+  "files": [
+    {
+      "path": "guides/r_setup.md",
+      "sha256": "c9d7fa90f25e7d3c31b3d550d3fd036a23822d9bad516779584fcf6170b7f9b6"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/r/README.md",
+      "sha256": "b8090a1ee23c1ff072b2f09bb334ca007a37d993897cb45b167b0d0abbf055fa"
+    },
+    {
+      "path": "models/bcap/r/README.md",
+      "sha256": "5f2be03ee1eba45036e03af95efdd78808c2db1af076ac8bc6f4a8aa18361ce6"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "sha256": "685d00f7d47052c34b9aebb7c837448213fb39bb750907a81c632a44db32e334"
+    },
+    {
+      "path": "tools/run_r.ps1",
+      "sha256": "efdbaf1c6bb69422eaa1e44bd4031af3d4a1eb922262f291ef3f1fe1420eb9ab"
+    },
+    {
+      "path": "tools/run_bcap_r_models.ps1",
+      "sha256": "a1553122ee1b431517f1a5562a3833ae689a98655244d1e7346cfa2d947a5805"
+    },
+    {
+      "path": "tools/run_bcap_history.py",
+      "sha256": "e04557309942861775a14e214d3a8f9612152fc61ff3b2ff26f591431bb48302"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/r/run.R",
+      "sha256": "f37d6e1162d07697341f09583bb64d06e254735691dae47769bbc96fea3de27f"
+    }
+  ],
+  "interface_findings": [
+    "run_r.ps1은 Script와나머지인수를R에전달한다.",
+    "BCAI run.R은설정JSON하나와새run_id를요구한다.",
+    "BCAP다중실행기는InputDirectory와InputRds중하나및Years를받는다.",
+    "현재역사순차드라이버는2015~2023의고유연도를받는다. 일반새연도계산은R설정및별도원자료준비를사용한다.",
+    "원본·완료실행보존,외부출처·연도가중치검토,2026측정보류가안내에남아있다."
+  ]
+}

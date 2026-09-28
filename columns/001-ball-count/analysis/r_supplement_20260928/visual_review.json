@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "method": "Codex view_image로 PNG 3개 직접 확인",
+  "checks": [
+    "제목에 2026년 9월 7일 기준일 명시",
+    "캡션에 2025 가중치 고정 명시",
+    "2026 전체 시즌 결과가 아님을 표시",
+    "한글·축·범례·구간 표시 및 잘림 확인"
+  ],
+  "images": [
+    {
+      "path": "columns/001-ball-count/figures/r_supplement_20260928/bcai_2026_ytd.png",
+      "sha256": "dbd10d232902d3c47a3360d93bdc13c0079b7aa360720d59f4444ca1a1ebc69a",
+      "status": "PASS"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_supplement_20260928/bcap_pitch_2026_ytd.png",
+      "sha256": "1b292a705772ff28d70edd623bd20ac5ba102b696ea07bb4781674ccf5448e4c",
+      "status": "PASS"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_supplement_20260928/bcap_pitch_ff_2026_ytd.png",
+      "sha256": "06f20a48aba85921e5520c2415a008c000c4b25c4b5337c76331244f3f511b12",
+      "status": "PASS"
+    }
+  ]
+}

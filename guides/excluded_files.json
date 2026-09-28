@@ -5,12 +5,52 @@
   "note": "로컬 파일을 삭제하지 않고 Git 업로드만 제외. 읽기 불가 runtime 하위는 폴더 단위 제외하여 파일별 목록은 불완전.",
   "excluded_directory_scopes": [
     {
+      "path": "columns/001-ball-count/analysis/r_supplement_20260928/known_exception_retained.csv",
+      "reason": "2026 보조 분석의 알려진 카운트 예외 행 감사. 동결 R 준비본과 game_pk/at_bat_number/pitch_number 키로 재생성; 보고서·집계·postflight는 공유 가능"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/**/*.csv",
+      "reason": "2026 보조 계산의 행별 8필드 CSV. 작은 provenance·config의35개 원본 목록과 해시로 새 경로에 형식변환하여 복원; 통계 계산은 R"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_bcap_supplement_20260928/**/{pa_index.csv,sequence_anomalies.csv}",
+      "reason": "2026 BCAP 원자료 준비의 행별 감사. 동결 prepare_raw.R와 기록된 입력 config로 재생성; RDS는 공통 *.rds 규칙으로 제외하고 작은 JSON·집계 감사는 공유 가능"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_bcap_history_20260928/",
+      "reason": "BCAP 연도별 RDS·행별 준비 감사. tools/run_bcap_history.py와 models/bcap/r/prepare_raw.R에서 기록된 원본·가중치로 새 경로에 재생성; MLB에서 정제본을 다운로드하지 않음"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_r_input__mlb_2024_2025__20260928__r01/{rows.csv,*_reference_scores.csv}",
+      "reason": "기존 BCAP 입력·행별 점수의 대용량 R 변환 CSV. tools/export_bcap_r_input.py와 provenance.json으로 재생성; 작은 분할·해시 기록은 공유 가능"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcap_*_r*__mlb_*__20260928__r*/artifacts/fold_membership.csv",
+      "reason": "R 실행별 행 단위 분할 목록. 해당 config·고정 R 코드 및 게임 분할로 새 실행에 재생성; 집계표·게임 분할·manifest는 보존"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/driver.lock",
+      "reason": "동일 연도 묶음의 중복 프로세스를 막는 로컬 OS 잠금 파일. 실행기가 생성하며 통계 결과가 아님"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_transport_20260928_r01/",
+      "reason": "R 입력용 행별 CSV 및 형식 변환 기록. 기존 캐시를 tools/export_bcai_r_input.py로 새 경로에 변환해 복원; 원본은 MLB 재다운로드 대상이 아님"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_history_20260928/",
+      "reason": "연도별 R 입력용 행별 CSV. tools/run_bcai_history.py가 기록된 로컬 원본에서 생성; 원본이 없으면 출처 조건 확인 선행"
+    },
+    {
+      "path": "**/*.rds",
+      "reason": "R 재표본 추출·모델 객체. 해당 새 run config와 고정 코드로 재생성; 기존 완료 run 덮어쓰기 금지"
+    },
+    {
       "path": "columns/001-ball-count/analysis/runtime_ridge_v02/",
       "reason": "설치 라이브러리. scipy 일부 읽기 거부; 전부 제외, 개별 열거 불가"
     },
     {
       "path": ".codex/",
-      "reason": "로컬 설정"
+      "reason": "로컬 설정 및 R 연결 확인용 모의 CSV·PNG·환경 기록. 칼럼 결과가 아님. 복원: guides/r_setup.md의 tools/check_r.R 실행 절차"
     },
     {
       "path": "**/data/raw/",
@@ -19,6 +59,12 @@
     {
       "path": "**/__pycache__/",
       "reason": "재생성 바이트코드"
+    },
+    {
+      "path": "tmp/",
+      "role": "로컬 문헌 사본·추출물·편집 임시자료",
+      "reason": "오늘 산출물 공유 대상이 아니며 문헌 원문 재배포 권한을 확인하지 않음",
+      "recovery": "로컬 보존. 필요하면 sources.md의 원문 출처와 제공 조건 확인 후 별도 확보; 보고서 열람에 불필요"
     }
   ],
   "files": [
@@ -2486,5 +2532,6 @@
       "reason": "설치 라이브러리·바이트코드",
       "recovery": "requirements 설치; MLB 대상 아님"
     }
-  ]
+  ],
+  "sharing_review_as_of": "2026-09-28"
 }

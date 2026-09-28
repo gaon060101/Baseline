@@ -1,0 +1,34 @@
+{
+  "01_ball_count": {
+    "old_tables": 4,
+    "unchanged_tables": 4,
+    "notes": 22,
+    "result_boxes": 7,
+    "reference_boxes": 11
+  },
+  "02_bcai": {
+    "old_tables": 4,
+    "unchanged_tables": 4,
+    "notes": 11,
+    "result_boxes": 1,
+    "reference_boxes": 1
+  },
+  "03_bcap": {
+    "old_tables": 4,
+    "unchanged_tables": 4,
+    "notes": 12,
+    "result_boxes": 1,
+    "reference_boxes": 0
+  },
+  "04_references_ko": {
+    "old_tables": 8,
+    "unchanged_tables": 8,
+    "notes": 12,
+    "result_boxes": 0,
+    "reference_boxes": 12
+  },
+  "result_before_method": {
+    "BCAI": true,
+    "BCAP": true
+  }
+}

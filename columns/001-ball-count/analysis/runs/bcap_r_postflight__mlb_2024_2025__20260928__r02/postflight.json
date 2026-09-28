@@ -1,0 +1,833 @@
+{
+  "status": "PASS",
+  "at_utc": "2026-09-28T03:29:51Z",
+  "checks": [
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "complete_manifest",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "all_runtime_checks_pass",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "all_artifact_hashes_match",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "input_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "frozen_engine_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "frozen_runner_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "original_fold_maps_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "nuisance_and_AIPW_tolerances",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "same_denominator_and_Q_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_ff_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_ff_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_ff_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_sb_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_sb_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_pitch_sb_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_rows.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_swing_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_swing_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "transport_hash_swing_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "original_aggregate_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "original_aggregate_numerics",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "original_aggregate_denominators_support",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_r__mlb_2024_2025__20260928__r02",
+      "check": "original_evidence_labels",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "complete_manifest",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "all_runtime_checks_pass",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "all_artifact_hashes_match",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "input_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "frozen_engine_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "frozen_runner_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "original_fold_maps_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "nuisance_and_AIPW_tolerances",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "same_denominator_and_Q_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_rows.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "original_aggregate_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "original_aggregate_numerics",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "original_aggregate_denominators_support",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01",
+      "check": "original_evidence_labels",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "complete_manifest",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "all_runtime_checks_pass",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "all_artifact_hashes_match",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "input_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "frozen_engine_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "frozen_runner_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "original_fold_maps_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "nuisance_and_AIPW_tolerances",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "same_denominator_and_Q_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_rows.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "original_aggregate_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "original_aggregate_numerics",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "original_aggregate_denominators_support",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_swing_r__mlb_2024_2025__20260928__r01",
+      "check": "original_evidence_labels",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "complete_manifest",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "all_runtime_checks_pass",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "all_artifact_hashes_match",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "input_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "frozen_engine_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "frozen_runner_matches_executed_code",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "original_fold_maps_preserved",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "nuisance_and_AIPW_tolerances",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "same_denominator_and_Q_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_ff_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_pitch_sb_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_rows.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01",
+      "check": "transport_hash_swing_reference_scores.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "shared_input",
+      "check": "known_handedness",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "shared_input",
+      "check": "geometric_SB_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "shared_input",
+      "check": "maximum_two_overlapping_regions",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "run_id": "shared_input",
+      "check": "no_infinite_physical_measurements",
+      "status": "PASS",
+      "detail": {}
+    }
+  ],
+  "numeric_comparisons": {
+    "bcap_pitch_r__mlb_2024_2025__20260928__r02": [
+      {
+        "field": "p",
+        "max_absolute_error": 5.2474511402778002e-09,
+        "mean_absolute_error": 2.3210717099379399e-10
+      },
+      {
+        "field": "mu0",
+        "max_absolute_error": 4.66313654357009e-11,
+        "mean_absolute_error": 7.0125014353083303e-12
+      },
+      {
+        "field": "mu1",
+        "max_absolute_error": 1.56320234534491e-10,
+        "mean_absolute_error": 1.72075936474038e-11
+      },
+      {
+        "field": "phi0",
+        "max_absolute_error": 4.7943114367399202e-08,
+        "mean_absolute_error": 2.2007962507210199e-10
+      },
+      {
+        "field": "phi1",
+        "max_absolute_error": 7.1094298448315398e-08,
+        "mean_absolute_error": 1.9782430551200499e-10
+      }
+    ],
+    "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01": [
+      {
+        "field": "p",
+        "max_absolute_error": 8.3087724478403402e-09,
+        "mean_absolute_error": 2.00683429721375e-09
+      },
+      {
+        "field": "mu0",
+        "max_absolute_error": 6.3060923150004597e-10,
+        "mean_absolute_error": 4.8717311469772898e-11
+      },
+      {
+        "field": "mu1",
+        "max_absolute_error": 2.1617100887105799e-09,
+        "mean_absolute_error": 1.8396823677712602e-11
+      },
+      {
+        "field": "phi0",
+        "max_absolute_error": 7.70171864061808e-08,
+        "mean_absolute_error": 1.2621705336667699e-09
+      },
+      {
+        "field": "phi1",
+        "max_absolute_error": 5.0967958209469099e-07,
+        "mean_absolute_error": 2.30422968708756e-09
+      }
+    ],
+    "bcap_swing_r__mlb_2024_2025__20260928__r01": [
+      {
+        "field": "p",
+        "max_absolute_error": 4.4590701020474903e-08,
+        "mean_absolute_error": 7.5444873650222096e-10
+      },
+      {
+        "field": "mu0",
+        "max_absolute_error": 6.1191723910169995e-10,
+        "mean_absolute_error": 4.4255856030741298e-11
+      },
+      {
+        "field": "mu1",
+        "max_absolute_error": 1.13624226694142e-09,
+        "mean_absolute_error": 5.2260788890815699e-11
+      },
+      {
+        "field": "phi0",
+        "max_absolute_error": 5.8787550472061401e-07,
+        "mean_absolute_error": 8.5847693901199597e-10
+      },
+      {
+        "field": "phi1",
+        "max_absolute_error": 2.4103660791752199e-06,
+        "mean_absolute_error": 8.2745192186316203e-10
+      }
+    ],
+    "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01": [
+      {
+        "field": "p",
+        "max_absolute_error": 5.87143894614783e-09,
+        "mean_absolute_error": 2.5144833874947501e-10
+      },
+      {
+        "field": "mu0",
+        "max_absolute_error": 1.03385078276119e-10,
+        "mean_absolute_error": 1.0740637036507e-11
+      },
+      {
+        "field": "mu1",
+        "max_absolute_error": 6.5960492623418097e-10,
+        "mean_absolute_error": 3.15171630152245e-11
+      },
+      {
+        "field": "phi0",
+        "max_absolute_error": 7.0049111400294403e-08,
+        "mean_absolute_error": 1.6781246008015001e-10
+      },
+      {
+        "field": "phi1",
+        "max_absolute_error": 4.3922607062540898e-07,
+        "mean_absolute_error": 4.6097392611059598e-10
+      }
+    ]
+  },
+  "references": {
+    "bcap_pitch_r__mlb_2024_2025__20260928__r02": {
+      "path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_pitch__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "sha256": "66c68b88a08c85c60d739f2d83b1dbd753c328d5972637f9697246b64a13d5d9",
+      "comparison": "Original independently computed Python aggregate CSV"
+    },
+    "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01": {
+      "path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_pitch_sb__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "sha256": "bcb9b69b6ff20378557d2cd2bbe0c1c101efe48a01711e71ad647f40bafca18f",
+      "comparison": "Original independently computed Python aggregate CSV"
+    },
+    "bcap_swing_r__mlb_2024_2025__20260928__r01": {
+      "path": "C:\\Users\\백창현\\Desktop\\Baseline\\columns\\001-ball-count\\analysis\\runs\\bcap_swing__mlb_2024_2025__20260912__r01/artifacts/action_values.csv",
+      "sha256": "70e6ff94a7479ddc609cc59c0f530e13b0e4f7d18995bc17b40740ebe36c1ad9",
+      "comparison": "Original independently computed Python aggregate CSV"
+    },
+    "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01": {
+      "comparison": "No original standalone aggregate; full-row original score and R recomputed aggregate comparisons passed"
+    }
+  },
+  "metrics": {
+    "bcap_pitch_r__mlb_2024_2025__20260928__r02": {
+      "n": 1415566,
+      "support": 1395443,
+      "coverage": 0.98578448479265535,
+      "games": 4859,
+      "MSE": 0.23596844921628121,
+      "Brier": 0.22552820888125849,
+      "logloss": 0.6405613448842542,
+      "all_fit_converged": true,
+      "fit_logs": 12,
+      "summary_groups": 13,
+      "years": [
+        2024,
+        2025
+      ],
+      "policy_learning": false
+    },
+    "bcap_pitch_sb_r__mlb_2024_2025__20260928__r01": {
+      "n": 1415566,
+      "support": 1399993,
+      "coverage": 0.98899874679103628,
+      "games": 4859,
+      "MSE": 0.23526494305270987,
+      "Brier": 0.23403791081371281,
+      "logloss": 0.66005259391282822,
+      "all_fit_converged": true,
+      "fit_logs": 12,
+      "summary_groups": 13,
+      "years": [
+        2024,
+        2025
+      ],
+      "policy_learning": false
+    },
+    "bcap_swing_r__mlb_2024_2025__20260928__r01": {
+      "n": 1416043,
+      "support": 1355719,
+      "coverage": 0.95739959874099867,
+      "games": 4859,
+      "MSE": 0.23156973715874191,
+      "Brier": 0.16932667697282666,
+      "logloss": 0.50860424761191103,
+      "all_fit_converged": true,
+      "fit_logs": 12,
+      "summary_groups": 193,
+      "years": [
+        2024,
+        2025
+      ],
+      "policy_learning": false
+    },
+    "bcap_pitch_ff_r__mlb_2024_2025__20260928__r01": {
+      "n": 1415566,
+      "support": 1271802,
+      "coverage": 0.89844062375049982,
+      "games": 4859,
+      "MSE": 0.23598113442080348,
+      "Brier": 0.1846825185185916,
+      "logloss": 0.54316287843910271,
+      "all_fit_converged": true,
+      "fit_logs": 12,
+      "summary_groups": 13,
+      "years": [
+        2024,
+        2025
+      ],
+      "policy_learning": false
+    }
+  },
+  "error": {},
+  "limitations": "저장된 산출물의 보존·산술 검산. 통계 식별·전체 학습 불확실성·구간 실제 포함률을 검증하지 않음.",
+  "execution_note": "SB r01은 COMPLETE 저장 이후 원 실행기 수정 중 후속 파싱 오류로 프로세스가 종료됐음. 본 감사가 동결 코드·산출물 해시 및 원 Python 집계와 수치 일치를 따로 확인함. 완료 manifest를 수정하지 않음."
+}

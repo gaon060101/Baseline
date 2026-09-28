@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "preparation_manifest_exists",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "prepared_RDS_hash",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "required_eligibility",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "unique_complete_pitch_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_actions_outcomes",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_counts",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "requested_years",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_model_features",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "no_forbidden_predictors",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "coarse_lag_only",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "known_stand_for_side_reports",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "overlapping_regions_max_two",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "center_equals_geometric_SB",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "complete_one_game_one_fold",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold1_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold1_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold2_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold2_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_eligible_scored_once",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "same_action_denominator",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "Q_difference_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "count_totals",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "finite_supported_groups",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "support_flow_total",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "input_preserved_after_fit",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "preparation_manifest_preserved",
+      "status": "PASS",
+      "detail": {}
+    }
+  ],
+  "scope": "Structural and numerical checks only; no reference-score reproduction performed; not causal validation"
+}

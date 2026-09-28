@@ -1,0 +1,56 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "check": "required_eligibility",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "unique_complete_pitch_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_actions_outcomes",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_counts",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "requested_years",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_model_features",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "no_forbidden_predictors",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "coarse_lag_only",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "complete_one_game_one_fold",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    }
+  ],
+  "error": "'by' appears to evaluate to column names but isn't c() or key(). Use by=list(...) if you can. Otherwise, by=eval(c$support_entity) should work. This is for efficiency so data.table can detect which columns are needed."
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "bcai_history__mlb_2020__20260928__r01",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "input_csv": [
+    "columns/001-ball-count/data/processed/r_history_20260928/2020/pitches.csv"
+  ],
+  "input_provenance": [
+    "columns/001-ball-count/data/processed/r_history_20260928/2020/pitches.provenance.json"
+  ],
+  "years": [
+    2020
+  ],
+  "seasons": [
+    {
+      "year": 2020,
+      "cutoff": "2020-12-31",
+      "scope": "full_regular_season",
+      "schedule": "columns/001-ball-count/data/raw/mlb/2020/snapshot_20260928_r_history/schedule_2020.json"
+    }
+  ],
+  "weights": [
+    {
+      "year": 2020,
+      "BB": 0.699,
+      "HBP": 0.728,
+      "1B": 0.883,
+      "2B": 1.238,
+      "3B": 1.558,
+      "HR": 1.979
+    }
+  ],
+  "weights_source": "columns/001-ball-count/analysis/r_history_20260928/weights.csv",
+  "bootstrap_replicates": 2000,
+  "seed": 20260928,
+  "comparisons": [],
+  "tolerance": 1e-09,
+  "data_source": "MLB Baseball Savant; archived Statcast",
+  "source_notes": "columns/001-ball-count/sources.md"
+}

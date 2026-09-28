@@ -1,5 +1,17 @@
 # Baseline 모델 레지스트리
 
+## BCAP R 구현 확인 — 2026-09-28
+
+PITCH-v0.2.0, PITCH-SB-v0.1.0, SWING-v0.2.0, PITCH-FF-v0.1.0의 2024·2025 R 재현과 2023→2015 연도별 적용을 모두 완료했다. 개발 자료는 기존 경기 분할·선택 규제값으로 새로 적합하고 보조 추정값·AIPW·지원 마스크·집계를 대조했다. 과거 연도는 새로운 R 분할을 사용한 별도 실행이다. [R 구현 안내](bcap/r/README.md) · [완료 결과 허브](../columns/001-ball-count/analysis/r_bcap_history_20260928/report.html) · [독립 구현 검토](../columns/001-ball-count/analysis/r_bcap_history_20260928/implementation_review.md). 네 모델은 EXPERIMENTAL을 유지한다. 수치 재현과 계산 완료를 과거 연도 일반화·인과 검증으로 확대하지 않는다. 2026 위치·스윙 측정 보류도 유지한다.
+
+별도 [2026 R 보조 보고서](../columns/001-ball-count/analysis/r_supplement_20260928/report.html)에서 보존된9월7일 기준2,165경기와2025고정가중치로 BCAI 및 BCAP PITCH/FF를 계산했다. 새 R 분할이며 원 NumPy 점수 재현·미노출 외부 검증이 아니다. 검산24개와기준일을표시한PNG3개를확인했고 S/B·SWING은 측정 보류로 남겼다. 기존 모델 상태·명세는 바꾸지 않는다.
+
+## BCAI R 구현 확인 — 2026-09-28
+
+BCAI-OBS-v1.0.0의 정의·가중치·제외 규칙을 유지한 [R 구현](bcai/observed/v1.0.0/r/README.md)을 추가했다. [2024·2025 r02 보고서](../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md)에서 364,124 유효 PA·4,859경기, 기존 점추정·분모·제외 집계가 허용 오차 1e-9 이내로 일치했다. R 난수로 다시 계산한 구간은 Python의 구간 끝점 재현으로 주장하지 않는다. R의 연도 차이 구간은 별도 후속 탐색이며 모델 상태를 승격하지 않았다. 기존 등급·보조 득점환경 지수·Ridge 출력은 이번 R 구현 대상이 아니다.
+
+2015~2025 전 11시즌의 BCAI 및 BCAP 네 모듈 R 계산을 완료했다. 실행별 검증 범위와 보류는 [칼럼 상태](../columns/001-ball-count/column.md#current-status) 및 새 실행 manifest를 따른다. 기존 불변 명세와 과거 실행은 보존하며 모델 상태는 바꾸지 않는다.
+
 ## 2026-09-18 후속 변경 검수 — 상태 유지
 
 [제한적 검수](../columns/001-ball-count/analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md): BCAI-STATE-DELTA의 저장24행 독립 산술과 BCAP-DECOMP의 새 모의 예제·입력 오류·해시 확인을 완료했다. 명시 범위에서 중대한 오류는 발견하지 못했다. STATE-DELTA는 EXPERIMENTAL, DECOMP는 DRAFT 유지이며 실제 분해 학습·불확실성·시나리오 결과는 없다. 기존 BCAP·OBS 검증 범위를 확대하거나 VALIDATED로 승격하지 않았다.

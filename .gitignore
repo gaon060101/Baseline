@@ -18,6 +18,18 @@ venv/
 *.joblib
 *.parquet
 *.feather
+*.rds
+/columns/001-ball-count/data/processed/r_transport_20260928_r01/
+/columns/001-ball-count/data/processed/r_history_20260928/
+/columns/001-ball-count/data/processed/r_bcap_history_20260928/
+/columns/001-ball-count/data/processed/r_bcai_supplement_20260928/**/*.csv
+/columns/001-ball-count/data/processed/r_bcap_supplement_20260928/**/pa_index.csv
+/columns/001-ball-count/data/processed/r_bcap_supplement_20260928/**/sequence_anomalies.csv
+/columns/001-ball-count/analysis/runs/bcap_r_input__mlb_2024_2025__20260928__r01/rows.csv
+/columns/001-ball-count/analysis/runs/bcap_r_input__mlb_2024_2025__20260928__r01/*_reference_scores.csv
+/columns/001-ball-count/analysis/runs/bcap_*_r*__mlb_*__20260928__r*/artifacts/fold_membership.csv
+/columns/001-ball-count/analysis/r_bcap_history_20260928/driver.lock
+/columns/001-ball-count/analysis/r_supplement_20260928/known_exception_retained.csv
 **/docs_sync_*/
 **/fold_records.json
 # Reviewed row-level CSVs / other explicit exclusions
@@ -83,3 +95,6 @@ venv/
 /columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_07/sampled_game_multiplicity_and_outer_fold.csv
 /columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260909__r02/artifacts/replicate_08/sampled_game_multiplicity_and_outer_fold.csv
 /columns/001-ball-count/analysis/runs/bcap_swing__mlb_2024_2025__20260912__r01/artifacts/fold_membership.csv
+
+# Local temporary source copies and editing scratch files
+/tmp/

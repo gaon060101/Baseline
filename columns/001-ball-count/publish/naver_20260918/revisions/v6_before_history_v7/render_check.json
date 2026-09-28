@@ -1,0 +1,41 @@
+{
+  "articles": [
+    {
+      "file": "01_ball_count.md",
+      "characters": 19268,
+      "images": 5,
+      "tables": 6,
+      "headings": 25
+    },
+    {
+      "file": "02_bcai.md",
+      "characters": 14407,
+      "images": 2,
+      "tables": 5,
+      "headings": 20
+    },
+    {
+      "file": "03_bcap.md",
+      "characters": 13879,
+      "images": 2,
+      "tables": 6,
+      "headings": 24
+    },
+    {
+      "file": "04_references_ko.md",
+      "characters": 22912,
+      "images": 0,
+      "tables": 10,
+      "headings": 56
+    },
+    {
+      "file": "05_data_validation.md",
+      "characters": 12446,
+      "images": 1,
+      "tables": 10,
+      "headings": 25
+    }
+  ],
+  "missing_links": [],
+  "figure_count": 8
+}

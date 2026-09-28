@@ -1,0 +1,37 @@
+[
+  {
+    "year": 2021,
+    "status": "COMPLETE",
+    "run": "bcai_history__mlb_2021__20260928__r01"
+  },
+  {
+    "year": 2020,
+    "status": "FAILED",
+    "error": "Command '['C:\\\\Users\\\\백창현\\\\AppData\\\\Local\\\\Programs\\\\R\\\\R-4.6.1\\\\bin\\\\Rscript.exe', '--vanilla', 'models/bcai/observed/v1.0.0/r/run.R', 'C:\\\\Users\\\\백창현\\\\Desktop\\\\Baseline\\\\columns\\\\001-ball-count\\\\analysis\\\\runs\\\\bcai_history__mlb_2020__20260928__r01\\\\config.json']' returned non-zero exit status 1."
+  },
+  {
+    "year": 2019,
+    "status": "COMPLETE",
+    "run": "bcai_history__mlb_2019__20260928__r01"
+  },
+  {
+    "year": 2018,
+    "status": "FAILED",
+    "error": "Remote end closed connection without response"
+  },
+  {
+    "year": 2017,
+    "status": "COMPLETE",
+    "run": "bcai_history__mlb_2017__20260928__r01"
+  },
+  {
+    "year": 2016,
+    "status": "FAILED",
+    "error": "IncompleteRead(4695698 bytes read, 6536451 more expected)"
+  },
+  {
+    "year": 2015,
+    "status": "COMPLETE",
+    "run": "bcai_history__mlb_2015__20260928__r01"
+  }
+]

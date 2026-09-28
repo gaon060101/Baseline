@@ -1,0 +1,13 @@
+{
+  "articles": [
+    {
+      "file": "03_bcap.md",
+      "characters": 19159,
+      "images": 4,
+      "tables": 9,
+      "headings": 30
+    }
+  ],
+  "missing_links": [],
+  "figure_count": 4
+}

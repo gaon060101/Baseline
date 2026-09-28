@@ -1,0 +1,320 @@
+{
+  "status": "PASS",
+  "scope_ko": "최신 완료 상태 및 수정한 안내 문서의 로컬 링크 확인. 외부 URL과 과거 이력 전체는 대상 아님.",
+  "checked_links": 55,
+  "missing": [],
+  "files": [
+    {
+      "path": "README.md",
+      "checked_first_lines": 8,
+      "sha256": "1e58b873101c8e36e4bbb421af12343b4ed3bf507007134e4f8a1f1cf64d43cb"
+    },
+    {
+      "path": "columns/001-ball-count/column.md",
+      "checked_first_lines": 23,
+      "sha256": "fd0efe5c6b0c67b0715a8cfe2a4aea5f64908a2b1ba4d655dffeea597674b548"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "checked_first_lines": null,
+      "sha256": "68045f1a0f9641e0e3e4a5dce61bd8859b5a5de7efb94946e73512682de92b26"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_history_20260928/continuation.md",
+      "checked_first_lines": 14,
+      "sha256": "c26090e4b2dd17eba6fc4863b5345800180f4a4b13bfa8d975fd9fe4ae786fef"
+    },
+    {
+      "path": "guides/r_setup.md",
+      "checked_first_lines": null,
+      "sha256": "b95069008f3f066a665807f2fbf10f68cc1a568ede8089b144a6395a294a0eed"
+    },
+    {
+      "path": "models/registry.md",
+      "checked_first_lines": 20,
+      "sha256": "28b36ca76d0464d545fdd9280905b4be10695c2ca6df89eff4852773c91a327d"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "checked_first_lines": null,
+      "sha256": "ff469717212f54ec1b075faa68c6615f7efdf2a3eae90b8c537fbfdd199b6422"
+    }
+  ],
+  "links": [
+    {
+      "file": "README.md",
+      "target": "columns/001-ball-count/analysis/r_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "columns/001-ball-count/analysis/r_supplement_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "guides/r_setup.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "columns/001-ball-count/column.md#current-status",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_history_20260928/completion.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_supplement_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "../../guides/r_setup.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/runs/bcap_r_postflight__mlb_2024_2025__20260928__r02/postflight.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_bcap_history_20260928/README.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/column.md",
+      "target": "analysis/r_supplement_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_supplement_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../runs/bcap_r_postflight__mlb_2024_2025__20260928__r02/postflight.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "final_integrity_20260928.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "report_validation.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_bcap_history_20260928/report_validation.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_bcap_history_20260928/review_bcap_2015_20260928_153222.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_bcap_history_20260928/final_browser_review.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_bcap_history_20260928/final_visual_review_20260928T063228Z/review.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_supplement_20260928/postflight.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../r_supplement_20260928/visual_review.json",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "continuation.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../../../../guides/r_setup.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../../../../models/bcai/observed/v1.0.0/r/README.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/completion.md",
+      "target": "../../../../models/bcap/r/README.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_history_20260928/continuation.md",
+      "target": "completion.md",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/column.md#current-status",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../models/bcai/observed/v1.0.0/r/README.md",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../models/bcap/r/README.md",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/plan.md",
+      "exists": true
+    },
+    {
+      "file": "guides/r_setup.md",
+      "target": "../columns/001-ball-count/analysis/r_history_20260928/plan.md",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "bcap/r/README.md",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "../columns/001-ball-count/analysis/r_bcap_history_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "../columns/001-ball-count/analysis/r_bcap_history_20260928/implementation_review.md",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "../columns/001-ball-count/analysis/r_supplement_20260928/report.html",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "bcai/observed/v1.0.0/r/README.md",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "../columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "../columns/001-ball-count/column.md#current-status",
+      "exists": true
+    },
+    {
+      "file": "models/registry.md",
+      "target": "../columns/001-ball-count/analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "../r_history_20260928/plan.md",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "../../column.md#current-status",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "report.html",
+      "exists": true
+    },
+    {
+      "file": "columns/001-ball-count/analysis/r_bcap_history_20260928/README.md",
+      "target": "../../../../guides/excluded_files.json",
+      "exists": true
+    }
+  ]
+}

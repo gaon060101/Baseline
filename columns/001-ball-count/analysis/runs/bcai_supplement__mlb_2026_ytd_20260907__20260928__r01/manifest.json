@@ -1,0 +1,271 @@
+{
+  "run_id": "bcai_supplement__mlb_2026_ytd_20260907__20260928__r01",
+  "model_id": "BCAI-OBS-v1.0.0",
+  "version": "1.0.0",
+  "role": "R observational recalculation and exploratory year comparison",
+  "status": "COMPLETE",
+  "model_status": "VALIDATED within prior documented scope; no promotion",
+  "started_at": "2026-09-28T12:34:46+0900",
+  "input": [
+    {
+      "path": "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/2026/pitches.csv",
+      "bytes": 23020353,
+      "sha256": "eee162af87618b605bb4be15caac48fa3ddd40813256229641a6632e62007654"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/2026/pitches.provenance.json",
+      "bytes": 10212,
+      "sha256": "6170d7844132a7b705354d8d60e3f80653d5f576790c1369021278f0921f6517"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/config.json",
+      "bytes": 1167,
+      "sha256": "57c4643b8f61575370dca2921692aca2e9631ee845a5fa39f4275221806f4f07"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json",
+      "bytes": 2872606,
+      "sha256": "c988379d50a35284bc87b8c6e82b3a50c9b8c059df867532f8195c84c4380d88"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_supplement_20260928/weights.json",
+      "bytes": 453,
+      "sha256": "82b88e9cbfc3fe398b887d0ee2f64bf9f72dcd4e8d4cd3e41b6552ca2d94eb47"
+    },
+    {
+      "path": "columns/001-ball-count/sources.md",
+      "bytes": 61448,
+      "sha256": "1bddd8f67378f0f138ef5ad5011e2a8212453df68a4adfc2d07d005dcff518c3"
+    },
+    {
+      "path": "models/bcai/observed/v1.0.0/specification.yaml",
+      "bytes": 4980,
+      "sha256": "4b7f585b1af3b492c0f5779c6c9fffcdccd8ad2bc14e5be7b971a873b2c978f7"
+    }
+  ],
+  "code": [
+    {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/execution_snapshot/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "C:/Users/백창현/Desktop/Baseline/columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/execution_snapshot/run.R",
+      "bytes": 12076,
+      "sha256": "830db5535b562ed4ed88b6aee7060c57d4c72fa718325287c3f6c2107d28245c"
+    }
+  ],
+  "parameters": {
+    "run_id": "bcai_supplement__mlb_2026_ytd_20260907__20260928__r01",
+    "model_id": "BCAI-OBS-v1.0.0",
+    "version": "1.0.0",
+    "input_csv": [
+      "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/2026/pitches.csv"
+    ],
+    "input_provenance": [
+      "columns/001-ball-count/data/processed/r_bcai_supplement_20260928/2026/pitches.provenance.json"
+    ],
+    "years": [
+      2026
+    ],
+    "seasons": [
+      {
+        "year": 2026,
+        "cutoff": "2026-09-07",
+        "scope": "archived_partial_season",
+        "schedule": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json"
+      }
+    ],
+    "weights": [
+      {
+        "year": 2026,
+        "BB": 0.691,
+        "HBP": 0.722,
+        "1B": 0.882,
+        "2B": 1.252,
+        "3B": 1.584,
+        "HR": 2.037
+      }
+    ],
+    "weights_source": "columns/001-ball-count/analysis/r_supplement_20260928/weights.json",
+    "bootstrap_replicates": 2000,
+    "seed": 20262954,
+    "comparisons": [],
+    "tolerance": 1e-09,
+    "data_source": "Archived MLB Baseball Savant Statcast; frozen 2026-09-07 cutoff; 2025 weights",
+    "source_notes": "columns/001-ball-count/sources.md"
+  },
+  "environment": {
+    "R": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": [
+      {
+        "package": "data.table",
+        "version": "1.18.6.1"
+      },
+      {
+        "package": "ggplot2",
+        "version": "4.0.3"
+      },
+      {
+        "package": "jsonlite",
+        "version": "2.0.0"
+      },
+      {
+        "package": "digest",
+        "version": "0.6.39"
+      }
+    ]
+  },
+  "code_snapshot": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/code/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/code/run.R",
+      "bytes": 12076,
+      "sha256": "830db5535b562ed4ed88b6aee7060c57d4c72fa718325287c3f6c2107d28245c"
+    }
+  ],
+  "completed_at": "2026-09-28T12:34:58+0900",
+  "sample": {
+    "raw_rows": 639042,
+    "all_PA": 164281,
+    "eligible_PA": 163327,
+    "games": 2165,
+    "repeated_count_rows_removed": 44237,
+    "exclusions": {
+      "included": 163327,
+      "truncated": 292,
+      "intentional_walk": 489,
+      "missing_final": 96,
+      "catcher_interference": 77
+    }
+  },
+  "coverage": [
+    {
+      "year": 2026,
+      "scope": "archived_partial_season",
+      "cutoff": "2026-09-07",
+      "games": 2165,
+      "first": "2026-03-25",
+      "last": "2026-09-07",
+      "schedule_match": true
+    }
+  ],
+  "critical": {
+    "season": {
+      "2026": 2.73808087384442
+    },
+    "combined": 2.73808087384442,
+    "contrasts": {}
+  },
+  "outputs": [
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/bootstrap_draws.rds",
+      "bytes": 312007,
+      "sha256": "77865e96d4d1c8e02d19d3903ecc3a4ad64458847d16c6a52cf4e180aac418e7"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/code/bcai.R",
+      "bytes": 8803,
+      "sha256": "84e705e149c64026a961e3b2e25dc93510329d86f62e913de79399cf63073d2b"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/code/run.R",
+      "bytes": 12076,
+      "sha256": "830db5535b562ed4ed88b6aee7060c57d4c72fa718325287c3f6c2107d28245c"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/cohorts.csv",
+      "bytes": 91,
+      "sha256": "b8440d1293c0465142de1d1508e7b0ee205c47a80a032fac9db2236022886177"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/combined_indices.csv",
+      "bytes": 1360,
+      "sha256": "4d6864add8e9885fc0bbac625d8f4028c8be6e8c9681ff669a09a51208e1e9ca"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/event_rates.csv",
+      "bytes": 3292,
+      "sha256": "b1a14fdbade7b37d2e38eefa87d0d35da6a28c2a9f94370a8bf33f2de07af0b5"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/exclusion_audit.csv",
+      "bytes": 780,
+      "sha256": "4570c095dc35c31caa8a138fa1fb8720a14a56510a87c82b88db3b7d7752ea7f"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/pre_bootstrap_check.json",
+      "bytes": 691,
+      "sha256": "8ba45e07986a7967c0e769c859b64a7f0a74b2e544ad3a915bee55ca1a095d90"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/season_indices.csv",
+      "bytes": 1642,
+      "sha256": "5742a281e818f18c719b4d2231c9fcdc884e6cd1af8b93f8196736d5285b3b74"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/sessionInfo.txt",
+      "bytes": 949,
+      "sha256": "7cd4885016967f7c950cbf507253e4c15f1a4d22971a713ce2dc8f22cee127d1"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/validation.json",
+      "bytes": 1067,
+      "sha256": "8e82d5a5f39328a5fa7f2e6cb55075a9c5f12adc9df93273940388c98381c841"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/runs/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/artifacts/year_differences.csv",
+      "bytes": 120,
+      "sha256": "2123efa15f7012b2bdc7d128a216887412ddd2cea4df931eb056fc50e440e3fd"
+    },
+    {
+      "path": "columns/001-ball-count/figures/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01/season_comparison.png",
+      "bytes": 25010,
+      "sha256": "184daa1e935751cc20ac164664b8d685466b2d8ba5db6345da662b52985fe3cf"
+    }
+  ],
+  "figures": "columns/001-ball-count/figures/bcai_supplement__mlb_2026_ytd_20260907__20260928__r01",
+  "validation": {
+    "input_schedule_coverage": [
+      {
+        "year": 2026,
+        "scope": "archived_partial_season",
+        "cutoff": "2026-09-07",
+        "games": 2165,
+        "first": "2026-03-25",
+        "last": "2026-09-07",
+        "schedule_match": true
+      }
+    ],
+    "sample": {
+      "raw_rows": 639042,
+      "all_PA": 164281,
+      "eligible_PA": 163327,
+      "games": 2165,
+      "repeated_count_rows_removed": 44237,
+      "exclusions": {
+        "included": 163327,
+        "truncated": 292,
+        "intentional_walk": 489,
+        "missing_final": 96,
+        "catcher_interference": 77
+      }
+    },
+    "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python",
+    "status": "PASS",
+    "inputs_unchanged": true,
+    "bootstrap_criticals": {
+      "season": {
+        "2026": 2.73808087384442
+      },
+      "combined": 2.73808087384442,
+      "contrasts": {}
+    },
+    "RNG": ["Mersenne-Twister", "Inversion", "Rejection"],
+    "bootstrap_scope": "fixed external weights; within-season game clusters; no cross-game/player dependence correction"
+  }
+}

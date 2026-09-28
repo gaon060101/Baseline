@@ -1,0 +1,11 @@
+Reading R inputs
+Calculating plate-appearance eligibility and BCAI
+Game-cluster bootstrap: 2000 replicates per year
+COMPLETE: bcai_history__mlb_2023__20260928__r01 eligible PA 183534 
+Error in eval(jsub, SDenv, parent.frame()) : 
+  object 'comparison' not found
+Calls: tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+In addition: Warning message:
+In fwrite(result$differences, file.path(art, "year_differences.csv"),  :
+  Input has no columns; creating an empty file at 'columns/001-ball-count/analysis/runs/bcai_history__mlb_2023__20260928__r01/artifacts/year_differences.csv' and exiting.
+Execution halted

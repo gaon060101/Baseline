@@ -1,0 +1,28 @@
+{
+  "input_schedule_coverage": [
+    {
+      "year": 2023,
+      "scope": "full_regular_season",
+      "cutoff": "2023-12-31",
+      "games": 2430,
+      "first": "2023-03-30",
+      "last": "2023-10-01",
+      "schedule_match": true
+    }
+  ],
+  "sample": {
+    "raw_rows": 720684,
+    "all_PA": 184478,
+    "eligible_PA": 183534,
+    "games": 2430,
+    "repeated_count_rows_removed": 49220,
+    "exclusions": {
+      "included": 183534,
+      "truncated": 272,
+      "intentional_walk": 474,
+      "missing_final": 102,
+      "catcher_interference": 96
+    }
+  },
+  "comparison_scope": "points, denominators, exclusions; bootstrap RNG differs from Python"
+}

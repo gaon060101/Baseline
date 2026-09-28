@@ -1,0 +1,675 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-28T14:22:27+0900",
+  "scope": "저장된2015·2016 원본 CSV의 필수 열 존재만 사전 점검했다. 결측률·측정 동등성·모형 적합 통과를 뜻하지 않는다. 원자료 준비·통계 계산·다운로드는 하지 않았다.",
+  "preparation_code_sha256": "5a9920937beae72efffeaf69914c86d66e59cf7f0014e9315322082960b231a5",
+  "files_checked": 74,
+  "records": [
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-04-03_2016-04-07.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-04-08_2016-04-12.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-04-13_2016-04-17.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-04-18_2016-04-22.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-04-23_2016-04-27.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-04-28_2016-05-02.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-05-03_2016-05-07.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-05-08_2016-05-12.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-05-13_2016-05-17.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-05-18_2016-05-22.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-05-23_2016-05-27.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-05-28_2016-06-01.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-06-02_2016-06-06.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-06-07_2016-06-11.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-06-12_2016-06-16.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-06-17_2016-06-21.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-06-22_2016-06-26.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-06-27_2016-07-01.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-07-02_2016-07-06.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-07-07_2016-07-11.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-07-12_2016-07-16.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-07-17_2016-07-21.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-07-22_2016-07-26.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-07-27_2016-07-31.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-01_2016-08-05.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-06_2016-08-10.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-11_2016-08-15.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-16_2016-08-20.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-21_2016-08-25.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-26_2016-08-30.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-08-31_2016-09-04.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-09-05_2016-09-09.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-09-10_2016-09-14.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-09-15_2016-09-19.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-09-20_2016-09-24.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-09-25_2016-09-29.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2016,
+      "path": "columns/001-ball-count/data/raw/mlb/2016/snapshot_20260928_r_history/statcast_2016-09-30_2016-10-03.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-04-05_2015-04-09.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-04-10_2015-04-14.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-04-15_2015-04-19.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-04-20_2015-04-24.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-04-25_2015-04-29.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-04-30_2015-05-04.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-05-05_2015-05-09.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-05-10_2015-05-14.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-05-15_2015-05-19.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-05-20_2015-05-24.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-05-25_2015-05-29.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-05-30_2015-06-03.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-06-04_2015-06-08.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-06-09_2015-06-13.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-06-14_2015-06-18.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-06-19_2015-06-23.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-06-24_2015-06-28.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-06-29_2015-07-03.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-07-04_2015-07-08.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-07-09_2015-07-13.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-07-14_2015-07-18.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-07-19_2015-07-23.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-07-24_2015-07-28.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-07-29_2015-08-02.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-08-03_2015-08-07.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-08-08_2015-08-12.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-08-13_2015-08-17.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-08-18_2015-08-22.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-08-23_2015-08-27.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-08-28_2015-09-01.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-09-02_2015-09-06.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-09-07_2015-09-11.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-09-12_2015-09-16.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-09-17_2015-09-21.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-09-22_2015-09-26.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-09-27_2015-10-01.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    },
+    {
+      "year": 2015,
+      "path": "columns/001-ball-count/data/raw/mlb/2015/snapshot_20260928_r_history/statcast_2015-10-02_2015-10-04.csv",
+      "header_sha256": "e131a14c7821296ac664360ee6ba17fae1c444629f39d2e161fc267e890648b1",
+      "required_fields": 30,
+      "available_fields": 119,
+      "missing_fields": [],
+      "pass": true
+    }
+  ]
+}

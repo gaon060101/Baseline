@@ -1,0 +1,10 @@
+{
+  "status": "WITHHELD_MEASUREMENT",
+  "models": ["BCAP-PITCH-SB-v0.1.0", "BCAP-SWING-v0.2.0"],
+  "reason": "2026 좌표 기준·존 정의 변경으로 이전 연도와 측정 비교 가능성 보류. 수치 적합·행동 추천 없음.",
+  "source": {
+    "path": "columns/001-ball-count/analysis/bcap_external_20260914__r01/plan.json",
+    "sha256": "116957ffe2bb3338c4610a48aa95fedaebfe4701e01be8d1cec1444327bbb4ad",
+    "bytes": 40247
+  }
+}

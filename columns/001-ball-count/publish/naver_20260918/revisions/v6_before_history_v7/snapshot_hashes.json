@@ -1,0 +1,138 @@
+[
+  {
+    "path": "01_ball_count.html",
+    "sha256": "9b87dfa3230e213f715ac096e363df8fc115636ae84369944e2a7b3be9f007ec"
+  },
+  {
+    "path": "01_ball_count.md",
+    "sha256": "4da4838c71cc23ceb415aeb7eb8fa2efab6867c941a842297324e6c9aa7259fa"
+  },
+  {
+    "path": "02_bcai.html",
+    "sha256": "76477d8f14d1e0f6d9a0a55f99a3456c28ed9525c4c8a276ebdc8a8b7f506c53"
+  },
+  {
+    "path": "02_bcai.md",
+    "sha256": "6178f82f9821dabb5b766fc393d7c783ed91477af1af41f1d46074c1b64f16f1"
+  },
+  {
+    "path": "02_bcai_evidence.md",
+    "sha256": "50d367b6db818b2451a31965ad0d648787b21aa36ff5bdb9b97f633b47467a48"
+  },
+  {
+    "path": "03_bcap.html",
+    "sha256": "aa673b7b801d52e6c3cfa66a09cfd2893315e3b5534541dfdd7351ac28c9641f"
+  },
+  {
+    "path": "03_bcap.md",
+    "sha256": "402ad155a3057fbdb812853f5d7ad3846b81c5540fbf065dfca4a7a556f671c5"
+  },
+  {
+    "path": "03_bcap_evidence.md",
+    "sha256": "a21803c0ad8e7ab4c50dad4105847c9e5241f60092acb9ce1828dd657d2390d0"
+  },
+  {
+    "path": "04_references_ko.html",
+    "sha256": "d2cb46890c31fa68c58a4a6cf92d2efd7ca8d33e5b5e9cc3787aeb0e0a07f8ec"
+  },
+  {
+    "path": "04_references_ko.md",
+    "sha256": "d338ad2bf72af416942c7f5c0d6dfc7984ac2690eaf3a384d45f3e138e1deedc"
+  },
+  {
+    "path": "05_data_validation.html",
+    "sha256": "299e384d0e11a980cdcdaebc4090d80e85217e77c78fcefb97e9f90e3ccfa220"
+  },
+  {
+    "path": "05_data_validation.md",
+    "sha256": "e22333d4af53ad4809a297161cf2e3121364f508af9902698068ffe9313b4d4f"
+  },
+  {
+    "path": "blog_post_list_20260919.md",
+    "sha256": "331ff678163d31115c1fb5b6a5696033561a3c331c48e304b33102ffe918c877"
+  },
+  {
+    "path": "build_preview.mjs",
+    "sha256": "480c36e3b00072ae35746a36b5da5973004296e230f7ff625c9259101c87b06f"
+  },
+  {
+    "path": "check_portable_v4.mjs",
+    "sha256": "acc44604394f18b391f9dff48f15a6db1640429de8639a355c3eca3d4060fc13"
+  },
+  {
+    "path": "check_preview.mjs",
+    "sha256": "0ea38de829fc395c4d63f122cf116358ca8a7c48a307fab4090b237b5f0114b1"
+  },
+  {
+    "path": "delivery_check.json",
+    "sha256": "f9192e747c0b0948856c4cdf6e4fe8de6ef47ded3c45920c31f5b06cd73cbd13"
+  },
+  {
+    "path": "index.html",
+    "sha256": "7e5a3b154b428ceec8f3082e0041396c49d4b0e2f94f6a620fcd60a12f342898"
+  },
+  {
+    "path": "manuscript_source_map.md",
+    "sha256": "adc7ef4a18671d48791987cd6fb5fe74e08d0e064abe29642cf8aa89b2a09bfb"
+  },
+  {
+    "path": "portable_check_v4.json",
+    "sha256": "dc83735ab875e973029ce1114beb86cc02a1ee7dd447fbafaa97301826af45ca"
+  },
+  {
+    "path": "README.md",
+    "sha256": "396133d2220da1a882a7e20338d0da875defd839a063b91f71cc2fbce3106e32"
+  },
+  {
+    "path": "reference_audit.md",
+    "sha256": "8fc18f912439e5945a12a081b9ac30626e839c024550b451a1ce8130dcd6bb3c"
+  },
+  {
+    "path": "render_check.json",
+    "sha256": "b893196f76393bc1c208cb6c5886b4f13d3a2eadb6b1e1b844eb84b78424e4bb"
+  },
+  {
+    "path": "revision_v2.md",
+    "sha256": "60846fcfb506393a98a73e3df33600bd09196f504f6c91772aab045e44b3d006"
+  },
+  {
+    "path": "revision_v3.md",
+    "sha256": "37a89d6d1cac88058ce54254991a827aee093dbb8932f2cc33036e9302a109c9"
+  },
+  {
+    "path": "revision_v3_check.json",
+    "sha256": "db26ba0955b370f3652a369867a464aa88195dc940a3ad00070a32ebdf781cb6"
+  },
+  {
+    "path": "revision_v4.md",
+    "sha256": "f62bd9d9865217e04db082d8732cd6f029de90dbba02145274805967a0319220"
+  },
+  {
+    "path": "revision_v4_check.json",
+    "sha256": "c0ba2ebd407fd657a9d0ed1c22573bd93eac2ab62d5698044f7a5d6f797f3de1"
+  },
+  {
+    "path": "revision_v4_metrics.json",
+    "sha256": "66c7ab029a0bec487cda2f4bbf77e26de21caa7444d475fd24d60ea84843fe80"
+  },
+  {
+    "path": "revision_v5.md",
+    "sha256": "3df58e51c64da617e4b59fe2ea5f842a470d894c91ebbc47c5dfbc3e9d89d229"
+  },
+  {
+    "path": "revision_v5_check.json",
+    "sha256": "95ea67f6d9d22adcf7d96f0b63cfbd1eb0308cedf8de0a61d8fa7e5368a05e00"
+  },
+  {
+    "path": "revision_v6.md",
+    "sha256": "cd810822d00d72a0dbedbe4ffdcdb977da9d4fc8d40c6b37b032cc2b2473bd10"
+  },
+  {
+    "path": "revision_v6_check.json",
+    "sha256": "bac6c6c07b80dad6ab4052dd418d798871ac7d238029c8ecc08ea5fe83ea840e"
+  },
+  {
+    "path": "visual_check.json",
+    "sha256": "048167666a8322cb412cb7cbd06615731a18de3a57f72ef0e74664fbc1ca637e"
+  }
+]

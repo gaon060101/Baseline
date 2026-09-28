@@ -1,0 +1,205 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "transport_rows_hash",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "required_eligibility",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "unique_complete_pitch_keys",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_actions_outcomes",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "valid_counts",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "requested_years",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_model_features",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "no_forbidden_predictors",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "coarse_lag_only",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "known_stand_for_side_reports",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "overlapping_regions_max_two",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "center_equals_geometric_SB",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "transport_hash_swing_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "transport_hash_swing_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "complete_one_game_one_fold",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold0_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold1_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold1_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold2_no_game_leakage",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "fold2_finite_scores",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "all_eligible_scored_once",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "same_action_denominator",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "Q_difference_identity",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "count_totals",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "finite_supported_groups",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "support_flow_total",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "transport_reference_hash",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "reference_rows_match",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "python_nuisance_tolerance",
+      "status": "PASS",
+      "detail": {
+        "field": ["p", "mu0", "mu1", "phi0", "phi1"],
+        "max_absolute_error": [4.459070102047491e-08, 6.1191723910170026e-10, 1.1362422669414229e-09, 5.8787550472061412e-07, 2.4103660791752191e-06],
+        "mean_absolute_error": [7.5444873650222137e-10, 4.4255856030741266e-11, 5.2260788890815661e-11, 8.5847693901199638e-10, 8.2745192186316192e-10]
+      }
+    },
+    {
+      "check": "python_AIPW_tolerance",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "python_support_exact",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "python_summary_tolerance",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "original_python_summary_groups",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "original_python_aggregate_values",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "original_python_aggregate_denominators",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "input_preserved_after_fit",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "split_preserved_swing_folds.csv",
+      "status": "PASS",
+      "detail": {}
+    },
+    {
+      "check": "split_preserved_swing_calibration_games.csv",
+      "status": "PASS",
+      "detail": {}
+    }
+  ],
+  "scope": "Numerical implementation and original-score reproduction; not causal validation"
+}

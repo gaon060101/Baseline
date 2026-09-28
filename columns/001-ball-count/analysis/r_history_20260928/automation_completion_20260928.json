@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "automation_id": "bcai-bcap-r",
+  "automation_status": "PAUSED",
+  "updated_at_unix_ms": 1790577561736,
+  "unchanged_fields": [
+    "id",
+    "kind",
+    "name",
+    "prompt",
+    "rrule",
+    "target_thread_id"
+  ],
+  "reason_ko": "승인된 R 계산과 최종 수치·그림·보고서 검수 완료 뒤 자동 후속 확인을 일시 중지했다. 앱 도구 응답과 저장된 상태를 함께 확인했다."
+}

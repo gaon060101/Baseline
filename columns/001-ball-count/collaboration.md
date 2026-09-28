@@ -1,5 +1,10 @@
 # 001 협업 기록
 
+## GitHub 공유 — 2026-09-28
+
+백가온 요청으로 오늘 완료 업무·재사용 코드·원고·검수·보관본과 앞선 미공유 기반 문서를 정리했다. [인수인계와 전송 상태](../../collaboration/pending/20260928-210719-gaon-daily-share/changes.md), [팀원용 이어가기 프롬프트](../../collaboration/pending/20260928-210719-gaon-daily-share/continuation_prompt.md). Drive/Docs 반영이나 팀원 읽음 확인은 수행하지 않았다.
+
+
 ## 위치
 
 - 칼럼 폴더: https://drive.google.com/drive/folders/1fthOKlpTFBMbAAZ6win-o6uHUiKPVJor

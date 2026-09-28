@@ -1,0 +1,9 @@
+{
+  "model": "swing",
+  "years": [
+    2024,
+    2025
+  ],
+  "output_dir": "C:\\Users\\백창현\\Desktop\\Baseline\\tools\\..\\columns\\001-ball-count\\analysis\\runs\\bcap_swing_r__mlb_2024_2025__20260928__r01",
+  "input_dir": "columns/001-ball-count/analysis/runs/bcap_r_input__mlb_2024_2025__20260928__r01"
+}

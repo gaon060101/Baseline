@@ -1,0 +1,54 @@
+<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>BCAI 과거 연도 결과 모음</title>
+<style>body{margin:0;background:#f3f5f7;color:#183244;font:17px/1.75 'Malgun Gothic',sans-serif}main{max-width:1080px;margin:auto;padding:40px 26px 70px}h1{font-size:2.1rem;line-height:1.35}h2{font-size:1.4rem;margin-top:2.4rem}a{color:#176692;text-underline-offset:3px}.card,figure{background:white;border:1px solid #d9e3e9;border-radius:14px;padding:22px;margin:22px 0}.lead{font-size:1.15rem;font-weight:700}.muted{color:#576b79;font-size:.88rem}.status{display:flex;gap:14px;flex-wrap:wrap}.status div{background:#e6eef2;border-radius:10px;padding:12px 20px}.status strong{font-size:1.4rem}figure img{width:100%;height:auto;display:block}figcaption{font-size:.87rem;color:#576b79;margin-top:10px}.table-scroll{overflow-x:auto;border:1px solid #d9e3e9;border-radius:10px}table{border-collapse:collapse;width:100%;background:white;font-size:.9rem}th,td{padding:10px 14px;white-space:nowrap;border-bottom:1px solid #e5edf1;text-align:right}th:first-child,td:first-child{text-align:left}thead{background:#e8eff3}p{margin:1em 0;overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.grid figure{margin:0;padding:8px}li{margin:10px 0}code{font:14px/1.6 Consolas,monospace;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#e6eef2;padding:16px;border-radius:10px}@media(max-width:620px){main{padding:24px 16px 46px}h1{font-size:1.7rem}.grid{grid-template-columns:1fr}.card,figure{padding:12px}.status div{padding:10px 14px}}</style></head><body><main>
+<p class='muted'>Baseline · BCAI-OBS-v1.0.0 · 저장 결과 보고서</p><h1>볼카운트의 가치,<br>여러 해를 나란히 보기</h1>
+<div class='card'><p class='lead'>목표 11개 시즌 중 11개 시즌의 R 계산을 완료했습니다.</p><div class='status'><div>완료 <strong>11</strong>개</div><div>미완료 <strong>0</strong>개</div></div><p>완료: 2015·2016·2017·2018·2019·2020·2021·2022·2023·2024·2025</p><p>미완료: 없음</p><p class='muted'>완료 결과만 표시합니다. 계산 중·대기·실패의 구분은 <a href='progress.json'>진행 기록</a>을 따릅니다. 2026 보조 비교는 이 표에 포함하지 않았습니다.<br>갱신: 2026-09-28 13:57:11 KST</p></div>
+<p class='lead'>2015~2025의 모든 목표 시즌 계산이 완료됐다.</p>
+<h2>여러 해의 모양은 어떤가?</h2><p>색과 숫자는 카운트별 관찰 BCAI입니다. 각 시즌의 0-0이 100이며, 아래 그림만으로 연도 차이가 확실하거나 차이가 없다고 판단하지 않습니다.</p>
+<figure><a href='../../figures/r_history_20260928/bcai_year_count_heatmap.png'><img src='../../figures/r_history_20260928/bcai_year_count_heatmap.png' alt='완료 연도별 12카운트 BCAI 히트맵'></a><figcaption>작은 화면에서는 그림을 눌러 원본 크기로 볼 수 있습니다. 시즌별 구간은 아래 CSV에 보존했습니다.</figcaption></figure>
+<h2>표본과 결과의 출처</h2>
+<p>2024·2025는 기존 Python의 BCAI 점추정·분모·제외 내역을 R로 재현했다. 과거 연도의 실행 완료는 해당 연도의 자료·내부 확인을 뜻하며 Python 교차 재현이나 모델의 검증 범위 확장을 자동으로 뜻하지 않는다.</p>
+<div class='table-scroll'><table><thead><tr><th>시즌</th><th>유효 타석</th><th>경기</th><th>관측 날짜</th><th>기간 구분</th><th>근거</th></tr></thead><tbody>
+<tr><th>2025</th><td>182,284</td><td>2,430</td><td>2025-03-18<br>~2025-09-28</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_r_check__mlb_2024_2025__20260928__r02/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_r_check__mlb_2024_2025__20260928__r02/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2024</th><td>181,840</td><td>2,429</td><td>2024-03-20<br>~2024-09-30</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_r_check__mlb_2024_2025__20260928__r02/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_r_check__mlb_2024_2025__20260928__r02/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2023</th><td>183,534</td><td>2,430</td><td>2023-03-30<br>~2023-10-01</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2023__20260928__r02/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2023__20260928__r02/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2022</th><td>181,502</td><td>2,430</td><td>2022-04-07<br>~2022-10-05</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2022__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2022__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2021</th><td>181,054</td><td>2,429</td><td>2021-04-01<br>~2021-10-03</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2021__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2021__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2020</th><td>66,269</td><td>898</td><td>2020-07-23<br>~2020-09-27</td><td>단축 시즌 — 기간·경기 수가 다른 시즌과 다름</td><td><a href='../runs/bcai_history__mlb_2020__20260928__r02/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2020__20260928__r02/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2019</th><td>185,704</td><td>2,429</td><td>2019-03-20<br>~2019-09-29</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2019__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2019__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2018</th><td>184,170</td><td>2,431</td><td>2018-03-29<br>~2018-10-01</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2018__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2018__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2017</th><td>184,280</td><td>2,430</td><td>2017-04-02<br>~2017-10-01</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2017__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2017__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2016</th><td>183,610</td><td>2,428</td><td>2016-04-03<br>~2016-10-02</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2016__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2016__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+<tr><th>2015</th><td>182,645</td><td>2,429</td><td>2015-04-05<br>~2015-10-04</td><td>정규시즌 전체 일정 대조</td><td><a href='../runs/bcai_history__mlb_2015__20260928__r01/artifacts/season_indices.csv'>CSV</a> · <a href='../runs/bcai_history__mlb_2015__20260928__r01/manifest.json'>실행 기록</a></td></tr>
+</tbody></table></div>
+<p><a href='summary.csv'>합친 수치·구간 CSV</a> · <a href='report_validation.json'>입력 해시·확인 기록</a> · <a href='../runs/bcai_r_check__mlb_2024_2025__20260928__r02/report.md'>2024·2025 재현·연도 차이 해설</a></p>
+<h2>카운트별 점추정 표</h2><div class='table-scroll'><table><thead><tr><th>카운트</th>
+<th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
+</tr></thead><tbody>
+<tr><th>0-0</th><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td><td>100.00</td></tr>
+<tr><th>0-1</th><td>85.23</td><td>84.52</td><td>84.38</td><td>84.89</td><td>84.05</td><td>84.67</td><td>84.50</td><td>84.42</td><td>84.73</td><td>85.11</td><td>85.02</td></tr>
+<tr><th>0-2</th><td>64.78</td><td>62.82</td><td>61.10</td><td>63.01</td><td>62.40</td><td>62.84</td><td>62.72</td><td>62.27</td><td>63.65</td><td>63.97</td><td>64.01</td></tr>
+<tr><th>1-0</th><td>113.11</td><td>113.62</td><td>114.19</td><td>113.29</td><td>113.52</td><td>113.02</td><td>113.23</td><td>113.52</td><td>113.00</td><td>113.19</td><td>112.72</td></tr>
+<tr><th>1-1</th><td>94.51</td><td>94.37</td><td>95.38</td><td>95.11</td><td>94.44</td><td>93.40</td><td>95.53</td><td>94.83</td><td>94.58</td><td>94.19</td><td>94.13</td></tr>
+<tr><th>1-2</th><td>71.25</td><td>70.90</td><td>69.67</td><td>70.97</td><td>70.44</td><td>70.41</td><td>70.88</td><td>70.42</td><td>70.48</td><td>71.66</td><td>70.40</td></tr>
+<tr><th>2-0</th><td>135.88</td><td>134.79</td><td>136.26</td><td>136.16</td><td>135.18</td><td>135.80</td><td>135.83</td><td>135.97</td><td>133.61</td><td>135.95</td><td>135.76</td></tr>
+<tr><th>2-1</th><td>112.58</td><td>112.07</td><td>114.47</td><td>113.98</td><td>112.77</td><td>111.29</td><td>113.65</td><td>113.73</td><td>112.03</td><td>112.80</td><td>112.79</td></tr>
+<tr><th>2-2</th><td>85.41</td><td>85.38</td><td>86.20</td><td>86.59</td><td>85.03</td><td>83.82</td><td>86.00</td><td>84.56</td><td>85.04</td><td>85.64</td><td>84.57</td></tr>
+<tr><th>3-0</th><td>172.28</td><td>174.96</td><td>170.75</td><td>174.61</td><td>171.34</td><td>176.95</td><td>172.31</td><td>176.09</td><td>173.66</td><td>175.34</td><td>175.47</td></tr>
+<tr><th>3-1</th><td>150.86</td><td>150.05</td><td>149.36</td><td>151.99</td><td>149.29</td><td>151.37</td><td>152.22</td><td>151.96</td><td>149.68</td><td>150.27</td><td>152.34</td></tr>
+<tr><th>3-2</th><td>119.33</td><td>120.15</td><td>120.61</td><td>119.35</td><td>117.89</td><td>116.10</td><td>121.08</td><td>120.08</td><td>117.47</td><td>120.18</td><td>119.28</td></tr>
+</tbody></table></div>
+<h2>모바일 블로그용 그림</h2><p>연도 수가 늘어도 세 칸씩 읽도록 볼 수에 따라 나눴습니다. 네 그림은 같은 색상 범위를 씁니다.</p><div class='grid'>
+<figure><a href='../../figures/r_history_20260928/bcai_0balls_blog.png'><img src='../../figures/r_history_20260928/bcai_0balls_blog.png' alt='0볼에서 시즌별 BCAI'></a></figure>
+<figure><a href='../../figures/r_history_20260928/bcai_1balls_blog.png'><img src='../../figures/r_history_20260928/bcai_1balls_blog.png' alt='1볼에서 시즌별 BCAI'></a></figure>
+<figure><a href='../../figures/r_history_20260928/bcai_2balls_blog.png'><img src='../../figures/r_history_20260928/bcai_2balls_blog.png' alt='2볼에서 시즌별 BCAI'></a></figure>
+<figure><a href='../../figures/r_history_20260928/bcai_3balls_blog.png'><img src='../../figures/r_history_20260928/bcai_3balls_blog.png' alt='3볼에서 시즌별 BCAI'></a></figure>
+</div>
+<h2>해석할 때 남겨둘 선</h2><ul>
+<li>BCAI는 해당 카운트에 도달한 타석의 최종 가중 공격가치를 그 시즌 0-0 평균과 비교한 값이다. 120은 시작점 대비 20% 높은 관찰 평균이며, 승률·인과 효과·최적 행동의 점수가 아니다.</li>
+<li>각 시즌을 서로 다른 기준 평균으로 정규화하므로 연도 간 절대 리그 실력이나 득점 환경의 우열을 읽을 수 없다. 이 표와 히트맵은 패턴을 탐색하기 위한 나란한 표시이며 연도 차이의 유의성 검정이 아니다.</li>
+<li>시즌별 개별·근사 동시 구간은 summary.csv와 원 결과표에 보존했다. 동시 구간은 각 실행의 정의를 따르며, 전체 역사 연도와 모든 비교를 한꺼번에 보장하는 구간은 아니다. 따로 실행한 단일 연도의 같은 seed 재표본을 임의로 짝지어 빼지 않았다.</li>
+<li>경기 단위 부트스트랩은 경기 안의 의존성을 반영하지만 경기 사이 동일 선수의 의존성과 외부 가중치 추정 오차까지 반영하지 않는다. 일정 경기 ID 일치는 경기 안의 투구·타석 완전성 보장이 아니다.</li>
+<li>2020은 단축 시즌이며 실제 경기 수·관측 기간을 표에 별도 표시했다. 표본 크기가 다르므로 다른 시즌과 같은 정밀도로 간주하지 않는다.</li>
+</ul>
+<h2>파일 사용과 갱신 방법</h2><p>report.html은 그림과 표를 함께 보는 화면, report.md는 편집 가능한 보고서입니다. summary.csv에는 점추정·구간·분모와 원 실행 경로, report_validation.json에는 입력 해시와 확인 범위가 있습니다. 블로그에는 전체 히트맵이나 모바일용 0·1·2·3볼 PNG를 사용하고 단위·출처·해석 주의를 함께 남깁니다.</p><p>새로 완료된 실행이 생기면 저장소 루트에서 다시 실행합니다. 이 허브와 그림만 갱신하며 통계 재계산·다운로드·기존 실행 변경은 하지 않습니다.</p><pre><code>./tools/run_r.ps1 -Script tools/render_bcai_history.R</code></pre>
+<p class='muted'>연도별 최신 COMPLETE 과거 실행과 고정된 2024·2025 r02를 선택합니다. 원 CSV·표본·검증 JSON의 해시, 12카운트와 0-0 기준을 확인합니다. 실패 실행·기존 원고·외부 게시물은 변경하지 않습니다. <a href='report.md'>보고서 Markdown</a></p></main></body></html>

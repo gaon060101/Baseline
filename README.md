@@ -1,177 +1,104 @@
 # Baseline
 
-## 2026-09-18 3차 원고 — 결과 우선·두괄식·서식 분리
+## 협업 공유 — 2026-09-28
 
-001의 [읽기 화면](columns/001-ball-count/publish/naver_20260918/index.html)을 두괄식으로 갱신했다. BCAI·BCAP는 결과를 앞쪽에 모으고 계산을 뒤에서 설명한다. 본문 첫머리에 모델의 역할과 결과 요약을 두었으며, 결과·해석 메모·참고문헌을 독립 서식으로 구분했다. [수정 내역과 MD 목록](columns/001-ball-count/publish/naver_20260918/revision_v3.md). 최신 두괄식 요청이 이전 질문 우선 순서에 우선한다. 2차 원고는 `revisions/v2/`에 보관했고 사용자 검토 대기·외부 미게시 상태다.
-
-## 2026-09-18 2차 집필 수정 — 설명 확장·문헌 해설 추가
-
-001의 [읽기 화면](columns/001-ball-count/publish/naver_20260918/index.html)을 갱신했다. 세 원고의 기존 구조를 유지하면서 질문·비교·그림 읽기를 자세히 풀고, 해석 메모를 별도 상자로 표시했다. [참고문헌 한국어 해설](columns/001-ball-count/publish/naver_20260918/04_references_ko.md)은 원문 12건의 연구 내용·칼럼 인용 부분·개념 예시를 구분한다. [수정 기록](columns/001-ball-count/publish/naver_20260918/revision_v2.md). 이전 세 원고는 `publish/naver_20260918/revisions/v1/`에 보관했다. 사용자 검토 대기이며 분석·모델 상태와 외부 미게시 상태는 유지한다.
-
-## 2026-09-18 네이버 블로그용 세 글 집필 완료 — 사용자 검토 대기
-
-001의 [세 글 읽기 화면](columns/001-ball-count/publish/naver_20260918/index.html)을 만들었다. [볼카운트 본문](columns/001-ball-count/publish/naver_20260918/01_ball_count.md), [BCAI 설명](columns/001-ball-count/publish/naver_20260918/02_bcai.md), [BCAP 설명](columns/001-ball-count/publish/naver_20260918/03_bcap.md)을 상호 연결했다. 상세 개요·독후 의견·최신 후속 구현·검수를 반영했고, 표 12개와 차트·도식 8종을 기존 저장 결과에서 제작했다. [배치·원고 안내](columns/001-ball-count/publish/naver_20260918/README.md) · [집필 반영표](columns/001-ball-count/publish/naver_20260918/manuscript_source_map.md).
-
-본문 사용 논문·분석 글 12건은 이번 집필에서 원문 본문을 재열람했다. 전문 미확인 자료는 제외했다. 네이버 게시·Drive/Docs 업로드는 하지 않았다. 기존 모델·원본·실행과 OBS/Ridge/BCAP 상태는 유지한다.
-
-## 2026-09-18 후속 변경 제한적 검수
-
-[검수 결과](columns/001-ball-count/analysis/runs/bcap_followup_review__mlb_2024_2025__20260918__r01/report.md). Sol 두 에이전트의 비중복 산술·구현 확인과 주 작업의 설계·해석 검토를 완료했다. 확인 범위에서 중대한 오류는 발견하지 못했다. 상태 표는 설명용 관찰 차이로 사용 가능하며 분해는 실제 학습 없는 DRAFT, 상대 반응·2026 위치 분석은 보류를 유지한다. 기존 모델·수치는 변경하지 않았다.
+백가온의 요청으로 오늘 완료 업무와 앞선 미공유 기반 문서를 GitHub 공유 대상으로 정리했다. 최신 원고는 본문 15차와 모델 해설 15차이며, 2015–2025 R 분석·역사 비교는 완료 상태다. [이번 인수인계](collaboration/pending/20260928-210719-gaon-daily-share/changes.md)와 [팀원용 프롬프트](collaboration/pending/20260928-210719-gaon-daily-share/continuation_prompt.md)를 시작점으로 삼는다. 실제 전송 상태·내용 커밋은 인수인계에서 확인한다. 아래의 과거 ‘push 미실시’는 당시 기록이며, Drive/Docs·블로그 게시와 Git 공유는 별개다.
 
 
-001 발표 자료: [간단 PT용 PPT 8장](columns/001-ball-count/publish/ball_count_pt_20260917.pptx) — 2026-09-17 상세 개요 기반, 약 5~7분 발표용 사용자 검토본. 제작·렌더링·검증 기록은 `columns/001-ball-count/figures/pt_build_20260917/`에 보관한다. 분석·모델 상태는 유지한다.
+## 최신 작업 상태 — 2026-09-28 모델 해설 15차
 
-## 2026-09-17 후속 구현·간단한 확인 완료
+[BCAI](columns/001-ball-count/publish/naver_20260918/02_bcai.html)·[BCAP](columns/001-ball-count/publish/naver_20260918/03_bcap.html)를 계산 순서 중심의 설명형 원고로 수정했다. 초반에는 본문의 표를 재사용하고 계산 도중의 분석 결과 서술을 제거했다. [수정·보존·검수 기록](columns/001-ball-count/publish/naver_20260918/revision_v15.md). 본문·문헌·검증 글은 보존했으며 로컬 사용자 검토 단계다. 아래는 이전 작업 이력이다.
 
-다음 작업의 시작 문서: [BCAI·BCAP 후속 구현 인수인계](columns/001-ball-count/analysis/handoff_bcap_followup_20260917.md). 완료 결과·DRAFT 구현·보류 사유·재현 명령을 구분했다.
+2026-09-28: [볼카운트 본문 15차](columns/001-ball-count/publish/naver_20260918/01_ball_count.html)의 참고문헌 연구 결과 보완을 끝으로 사용자 요청에 따른 본문 편집을 마무리했다. 추가 요청 전까지 유지한다. [수정·검수 기록](columns/001-ball-count/publish/naver_20260918/revision_v15.md). 외부 게시·업로드는 미실시다.
 
-001의 [한국어 구현 보고서](columns/001-ball-count/analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.md)·[HTML](columns/001-ball-count/analysis/runs/bcap_followup__mlb_2024_2025__20260917__r01/artifacts/report.html)를 추가했다. 기존 S/B 개발·2023 결과는 재표시했고, BCAI 원 W에서 시즌별 상태 평균 차이 24행을 새로 계산했다. 상태 차이 모듈은 EXPERIMENTAL, 행동 가치 분해는 계산 코드와 모의 확인만 갖춘 DRAFT다. 상대 반응 시나리오는 결합값·공통 지원 미확보로 수치 보류한다. 전체 학습·전체 검증은 하지 않았으며 기존 BCAP 상태와 2026 위치 측정 보류를 유지한다.
+## 최신 작업 상태 — 2026-09-28 11시즌 원고 반영 완료
 
-아래는 앞선 작업 시점의 기록이다.
+사용자 요청으로 [볼카운트 연재 7차 검토본](columns/001-ball-count/publish/naver_20260918/index.html)을 완성했다. 본문·BCAI·BCAP·검증 글의 결론과 표·그림을 2015–2025로 갱신하고 문헌 해설의 연결을 맞췄다. [수정·근거·검수 기록](columns/001-ball-count/publish/naver_20260918/revision_v7.md). 기존 승인 원고는 수정 전 보관본으로 남겼다. BCAP EXPERIMENTAL·2026 위치/스윙 보류를 유지하며 외부 게시·업로드는 미실시다. 아래는 이전 작업 이력이다.
 
-## 2026-09-17 실사용 참고문헌·개요 개정
+## 최신 작업 상태 — 2026-09-28 역사 비교 보고서 완료
 
-001 칼럼의 [실사용 문헌 해설](columns/001-ball-count/references_in_use_20260917.md)·[미리보기](columns/001-ball-count/references_in_use_20260917.html)를 만들고 [집필 개요](columns/001-ball-count/outline_mlb.md)를 독후 의견에 맞춰 개정했다. 본문 12편의 본문을 확인했고 2024 미니맥스 연구는 전문 확보 전 조건부다. [모델 발전 검토](columns/001-ball-count/model_research_followup_20260917.md)와 [다른 작업 전달 프롬프트](columns/001-ball-count/model_followup_prompt_20260917.md)를 저장했다. 모델·실행 상태는 유지한다. KBO 선수 집단 특성은 후속 분석, 주자·아웃카운트는 다음 칼럼 후보로 기록했다.
+기존 2024–2025 주장과 추가 2015–2023 증거를 대조하고 전체 11시즌을 정리한 [비교 보고서](columns/001-ball-count/analysis/history_comparison_20260928_r01/report.html)를 완료했다. 주장 비교 14건·한국어 그림 5장·파생 표·재사용 R 코드와 근거 장부를 포함한다. [최종 검수](columns/001-ball-count/analysis/history_comparison_20260928_r01/audit/final_review.md): 저장 수치 검사 13개, 13개 HTML의 PC·모바일 화면과 링크 검사 통과. 승인 원고·기존 모델 실행을 보존했으며 BCAP EXPERIMENTAL과 2026 위치·스윙 보류를 유지한다. 아래 계산·편집 상태는 이전 이력이다.
 
-## 2026-09-17 참고문헌 해설 심화
+## 최신 작업 상태 — 2026-09-28 R 전 연도 계산·검수 완료
 
-001 볼카운트 칼럼의 [한국어 참고문헌 해설집](columns/001-ball-count/reading_references_ko.md)과 [미리보기](columns/001-ball-count/reading_references_ko.html)를 개정했다. 45건의 실제 내용·결과·결론을 보강하고 본문/초록 확인 범위를 구별했다. 칼럼 집필 참고자료 보강 완료이며 모델·실행 상태는 기존과 같다.
+2024·2025 BCAI와 BCAP 네 모듈의 R 재현·대조 및 2023→2015 적용을 모두 마쳤다. 2015~2025 전 11시즌의 결과와 재사용 코드·한국어 블로그 PNG를 준비하고 수치·PC·모바일 화면을 확인했다. 2026은 9월 7일까지·2025 고정 가중치의 별도 보조 결과(BCAI·구종 2종)이며 위치·스윙은 측정 보류다. [BCAI 결과](columns/001-ball-count/analysis/r_history_20260928/report.html) · [BCAP 결과](columns/001-ball-count/analysis/r_bcap_history_20260928/report.html) · [2026 보조](columns/001-ball-count/analysis/r_supplement_20260928/report.html) · [완료·검수 기록](columns/001-ball-count/analysis/r_history_20260928/completion.md) · [R 재사용 안내](guides/r_setup.md) · [칼럼 상태](columns/001-ball-count/column.md#current-status). BCAP은 EXPERIMENTAL을 유지한다. 아래는 이전 이력이다.
 
-MLB 데이터로 가설을 세우고 KBO 데이터로 검증하는 야구 분석 칼럼 프로젝트.
+## 최신 작업 상태 — 2026-09-28 일시 중단
 
-## GitHub 공유본 시작하기
+사용자의 “잠깐 멈춰봐” 지시로 R 추가 분석과 자료 수집을 중단했다. BCAI 2022~2025와 BCAP PITCH 2024·2025 R 계산까지 완료됐으며 후속 계산·통합 검수는 미완료다. [칼럼 상태](columns/001-ball-count/column.md#current-status)를 기준으로 명시적인 재개 요청을 기다린다. 아래는 중단 전 이력이다.
 
-이 저장소는 코드·문서·모델 정의·집계 결과 공유본입니다. 원본 데이터·대형 캐시·행별 예측·설치 라이브러리는 포함하지 않습니다. 로컬 원본은 삭제하지 않았습니다.
+## R 분석 진행 — 2026-09-28
 
-- [공유 범위](guides/github_sharing.md)
-- [데이터 직접 확보·재생성 안내](guides/data_setup.md)
-- [업로드 제외 파일별 목록](guides/excluded_files.json)
+사용자가 재개를 지시해 **BCAI 2024·2025 R 재계산과 연도 차이 분석을 완료**했다. [실행 기록](columns/001-ball-count/analysis/runs/bcai_r_check__mlb_2024_2025__20260928__r02/manifest.json) · [R 연결 안내](guides/r_setup.md). 기존 점추정·표본을 재현했고, 2023부터 2015까지 순차 적용과 BCAP R 구현을 진행 중이다. 실제 연도별 완료 여부는 [진행표](columns/001-ball-count/analysis/r_history_20260928/progress.json)와 칼럼 상태를 따른다. 기존 원고 검토 상태는 아래와 같다.
 
-보고서 열람에는 다운로드가 필요 없습니다. 재분석할 팀원만 출처·이용 조건을 확인한 뒤 필요한 MLB 원본을 직접 확보하고 정제본/모델 객체를 새 실행으로 생성합니다. 과거 manifest가 참조하는 제외 파일은 클론에 없으므로 전체 검증은 입력 복원 전 실행할 수 없습니다.
+## 현재 편집 상태 — 2026-09-27
 
-## 칼럼 목록
+**최신: 본문 6차.** 질문 → 짧은 답과 결과 → 상세 풀이의 흐름을 복원했다. 5차의 목차·새 표는 유지한다. [본문 MD](columns/001-ball-count/publish/naver_20260918/01_ball_count.md) · [6차 기록](columns/001-ball-count/publish/naver_20260918/revision_v6.md). 아래 5차 설명은 이전 이력이다.
 
-한 스레드에서 칼럼 한 편씩 진행한다. 새 스레드에는 칼럼 번호와 주제를 알려주고, 기존 작업을 이어갈 때는 해당 `column.md`를 기준으로 시작한다. 세부 작업 규칙은 `AGENTS.md`를 따른다.
+**추가 피드백 반영:** 01 본문을 5차 구조 개편본으로 갱신했다. 각 분석 장을 간단 설명 → 결과 한눈에 보기 → 상세 설명으로 통일하고 표 6개를 새로 구성했다. [본문 MD](columns/001-ball-count/publish/naver_20260918/01_ball_count.md) · [5차 기록](columns/001-ball-count/publish/naver_20260918/revision_v5.md). 02–05 원고와 기존 공유 ZIP은 4차 상태다. 아래 4차 설명은 이전 편집 이력이다.
 
-| 번호 | 제목 | 상태 | 중심 문서 |
-| --- | --- | --- | --- |
-| 001 | 볼카운트별 상황 분석 | 네이버용 본문·BCAI·BCAP 3편 초안 작성 / 사용자 검토 대기 · BCAP EXPERIMENTAL·2026 위치 보류·KBO 미착수 | [첫 번째 칼럼](columns/001-ball-count/column.md) |
+001의 원고 수정 계획이 승인되어 편집을 재개했다. [다섯 편의 읽기 화면](columns/001-ball-count/publish/naver_20260918/index.html)과 [4차 수정 기록](columns/001-ball-count/publish/naver_20260918/revision_v4.md)을 기준으로 사용자 검토를 받는다. 본문은 결과·야구 이야기 중심으로 줄이고 검증·개발 과정은 ⑤로 분리했다. 원본·분석·모델 상태는 유지한다. 아래 9월 26일의 편집 중단은 당시 기록이며 현재는 재개 후 검토 단계다. 외부 게시·공동 Docs 반영·업로드는 미실시다.
 
-## 작업 구조
 
-001 참고문헌 읽기: [한국어 상세 해설집](columns/001-ball-count/reading_references_ko.md) · [미리보기](columns/001-ball-count/reading_references_ko.html) — 2026-09-17 자료 45건의 한국어 해설과 정식 제목·원문 링크 정리. 개요에서도 정식 제목으로 연결.
+MLB 데이터로 가설을 만들고 KBO 데이터로 검증하는 야구 분석 칼럼 프로젝트다. 칼럼 한 편을 하나의 폴더·작업으로 관리한다.
 
-001 집필: [상세 개요](columns/001-ball-count/outline_mlb.md) · [미리보기](columns/001-ball-count/outline_mlb.html) — 2026-09-16 여섯 절의 문단·근거·자료 45건 활용 배치 정리 완료. 로컬 집필 제안이며 공동 Docs에는 미전송.
+## 현재 작업 — 2026-09-28 11시즌 반영 7차 원고 검토
 
-001 참고자료: [볼카운트 전반 리서치 — 2026-09-15](columns/001-ball-count/research_ball_counts_20260915.md). 해외 논문을 포함한 문헌·공식 자료 45건과 12카운트별 연구 질문 정리 완료. 기존 분석·모델 상태는 유지한다.
+| 칼럼 | 상태 | 시작 문서 |
+| --- | --- | --- |
+| 001. 볼카운트별 상황 분석 | 11시즌 반영 7차 원고·수치·화면 검수 완료 · 이전 원고 보관 · KBO 미착수 | [현재 상태](columns/001-ball-count/column.md#current-status) · [인수인계](columns/001-ball-count/column.md#handoff) |
+
+상태의 상세 기준은 `column.md` 상단이다. 사용자가 9월 27일 수정 계획을 승인해 편집을 재개했다. 다섯 편 모두 [읽기 화면](columns/001-ball-count/publish/naver_20260918/index.html)에서 확인한다. [데이터·검증 글](columns/001-ball-count/publish/naver_20260918/05_data_validation.html)의 HTML과 글 사이 연결을 추가했다. 과거 원고는 보존했고 분석·모델·공동 Docs는 변경하지 않았다.
+
+## 새 작업에서 읽을 순서
+
+1. [공통 지침](AGENTS.md)을 확인한다.
+2. 해당 [칼럼의 현재 상태·인수인계](columns/001-ball-count/column.md#current-status)를 읽고 요청 범위를 정한다.
+3. [Codex 작업 안내](guides/codex_workflow.md)에 따라 필요한 지침·출처·대상 파일만 읽는다. 과거 대화나 모든 원본 CSV를 읽을 필요는 없다.
+
+GitHub로 함께 작업할 때는 [협업 폴더](collaboration/README.md)에서 대기 인수인계도 먼저 읽는다. 백가온·박민수의 코멘트와 읽음 확인을 분리하며, 양쪽 확인과 Git 보존 조건이 충족된 건만 대기 폴더에서 지운다.
+
+## 구조와 기준 위치
+
+아래는 주요 역할별 구조다. 데이터·코드·실행·원고·그림의 기존 경로는 유지한다.
 
 ```text
 Baseline/
-├─ AGENTS.md
-├─ README.md
-├─ guides/
-│  ├─ analysis.md
-│  ├─ github_sharing.md
-│  ├─ data_setup.md
-│  ├─ excluded_files.json
-│  ├─ writing.md
-│  └─ collaboration.md
+├─ AGENTS.md                      # 공통 작업 규칙
+├─ README.md                      # 시작점·칼럼 목록
+├─ README_history_20260926.md      # 정리 전 README 원문 보관
+├─ collaboration/                 # Git push별 임시 인수인계
+│  ├─ templates/                  # 변경사항·팀원 코멘트 양식
+│  └─ pending/                    # 양쪽 확인 전 기록만 유지; 안내는 상시 유지
+├─ guides/                        # 공통 분석·집필·협업·데이터 준비 원칙
+│  ├─ codex_workflow.md           # 작업별 최소 문맥·종료 절차
+│  └─ organization_20260926.md     # 이번 문서 정리·검증 기록
 ├─ models/
-│  ├─ registry.md
-│  ├─ migration_20260908.md / migration_20260908.json
-│  ├─ bcai/
-│  │  ├─ README.md
-│  │  ├─ observed/v1.0.0/  # model_card.md, specification.yaml, validation.md
-│  │  └─ ridge/
-│  │     ├─ v0.1.0/      # 기존 모델 정의 보존
-│  │     └─ v0.2.0/      # 정의·사전 계획·고정 코드·검증 문서
-│  └─ bcap/
-│     ├─ README.md / design_decisions.md / measurement_review.md
-│     ├─ pitch/v0.1.0/ / swing/v0.1.0/  # 기존 카드·불변 명세·검증
-│     ├─ pitch/v0.2.0/ / swing/v0.2.0/ / pitch_sb/v0.1.0/  # V2 개발
-│     ├─ development_v2/v0.2.0/  # V2 준비·실행·보고·문서 연결
-│     ├─ pitch_ff/v0.1.0/  # 포심/비포심 정의·코드·기본 확인
-│     ├─ run.py / data.py / verify_bcap.py
-│     ├─ refit_stability.py / supplement_diagnostics.py
-│     ├─ build_report.py / finish_documents.py / record_invocations.py
-│     └─ check_artifacts.py / finalize_seal.py
-├─ tools/                # check_model_structure.py, check_ridge_v02.py
-├─ columns/
-│  └─ 001-ball-count/
-│     ├─ column.md
-│     ├─ sources.md
-│     ├─ research_ball_counts_20260915.md  # 12카운트 전반·해외 논문 자료집
-│     ├─ reading_references_ko.md / .html  # 45건 한국어 해설·읽기 순서
-│     ├─ collaboration.md
-│     ├─ data/
-│     │  ├─ raw/mlb/
-│     │  ├─ raw/kbo/
-│     │  └─ processed/
-│     ├─ analysis/        # 기존 코드·캐시·통합 보고서·인계 유지
-│     │  ├─ bcai_paths.py
-│     │  ├─ bcap_original_handoff_20260909/  # 원 인계·문서 스냅샷 보존
-│     │  ├─ bcap_implementation_review_20260909/  # 독립 검산·보조 표
-│     │  ├─ bcap_report_20260909_r01/  # 16종 CSV·보고 manifest
-│     │  ├─ bcap_v2_development_20260912__r01/  # V2 통합 보고·CSV·변경 기록
-│     │  ├─ bcap_pitch_classification_20260912__r01/  # FB/NFB·FF/non-FF 비교 보고
-│     │  ├─ bcap_document_backups_20260909_r01/  # MD 갱신 전 보존
-│     │  └─ runs/             # BCAI 및 BCAP 개발·외부·재학습·실패 실행 보존
-│     │     ├─ bcai_obs__mlb_2024_2025__20260907__r01/  # README, manifest, artifacts
-│     │     ├─ bcai_ridge__mlb_2024_2025__20260907__r01/  # 기존 공동 결과 참조
-│     │     └─ bcai_ridge__mlb_*__20260908·20260909__r*/  # 신규 개발·외부·실패 실행 각각 보존
-│     ├─ figures/
-│     │  └─ naver_20260918/  # PNG 차트·도식 8종, 입력 기록, 표시 검토 이미지
-│     └─ publish/
-│        └─ naver_20260918/  # 세 원고·문헌 해설 MD/HTML, 근거표, 그림 묶음, revisions/v1·v2 이전본
-└─ shared/
+│  ├─ registry.md                 # 모델 ID·버전·상태·실행 연결의 기준
+│  ├─ bcai/                       # observed, ridge, state_delta
+│  └─ bcap/                       # 구종·위치·스윙·분해 등 모델 정의와 코드
+├─ columns/001-ball-count/
+│  ├─ column.md                   # 현재 상태·결정·인수인계·날짜별 이력
+│  ├─ sources.md                  # 출처·확보 조건·원문 확인 범위
+│  ├─ collaboration.md            # 공동 문서 연결·업로드 기록
+│  ├─ data/{raw,processed}/       # 원본·정제 데이터; 일부는 로컬 전용
+│  ├─ analysis/                   # 분석 코드·보고서·과거 인계
+│  │  └─ runs/<run_id>/manifest.json
+│  ├─ figures/                    # 결과 그림·제작/검수 자료
+│  └─ publish/naver_20260918/      # 날짜별 원고 MD·기존 HTML·수정 이력
+├─ shared/                        # 공유용 자료
+└─ tools/                         # 구조·검증 도구; 실행 전 쓰기 동작 확인
 ```
 
-이 트리는 프로젝트 구조의 기준 문서다. 폴더 역할을 변경하거나 공통 구조를 확장할 때 함께 갱신한다. 빈 폴더는 Git에 자동 보존되지 않으므로 새 환경에서는 이 구조를 참고해 필요한 폴더를 생성한다.
+분석 정의·상태는 [모델 레지스트리](models/registry.md), 해석 원칙은 [분석 지침](guides/analysis.md), 집필 원칙은 [집필 지침](guides/writing.md)을 따른다. 현재 원고의 상태와 모델 검증 상태를 혼동하지 않는다.
 
-- `AGENTS.md`: 프로젝트 작업 규칙과 MD 반영·보고 규칙
-- `guides/analysis.md`: 가설 설계, 데이터 검증, 해석 기준
-- `guides/writing.md`: 원고·출처·발행 자료 작성 기준
-- `guides/collaboration.md`: 드라이브 업로드와 공동 집필 운영 기준
-- `columns/`: 칼럼별 원고, 출처, 데이터, 분석, 차트, 발행본
-- `shared/`: 여러 칼럼에서 실제로 재사용하게 된 코드
+## 로컬·GitHub·공동 문서의 구분
 
-각 칼럼은 `column.md`에서 질문·가설·분석 설계·본문·남은 확인 사항을 관리한다. 출처와 데이터 확보 이력은 같은 폴더의 `sources.md`에 기록한다.
+- Git 공유 범위와 제외 자료 복원은 [공유 안내](guides/github_sharing.md) · [데이터 준비](guides/data_setup.md) · [제외 목록](guides/excluded_files.json)이 기준이다. 보고서 열람에 데이터 재수집은 필요하지 않다. 제외 목록은 작성일이 있는 기록이며 모든 미추적 파일의 목록이 아니다.
+- push 인수인계의 읽음·정리 조건은 [협업 운영 규칙](guides/collaboration.md#git-handoff)이 기준이다. 폴더 생성만으로 push·상대의 읽음·삭제가 완료된 것은 아니다.
+- 날짜별 로컬 원고는 공동 Google Docs를 자동 대체하지 않는다. 공동 편집의 최신본·업로드 절차는 [협업 지침](guides/collaboration.md)과 [001 협업 기록](columns/001-ball-count/collaboration.md)을 따른다.
+- 로컬 저장, Git 커밋·push, Drive/Docs 반영, 블로그 게시는 별도 작업이다. 이번 정리는 로컬 문서에만 반영했으며 원격 최신 상태는 확인하지 않았다.
 
-진행 순서: 기획 → 자료 확보 → 분석 → 집필 → 검토 → 발행.
-MLB 탐색 뒤 KBO 검증 전에 가설과 판단 기준을 기록한다. 분석 결과에 따라 이전 단계로 돌아갈 수 있다.
+## 이력
 
-새 칼럼에는 필요한 폴더만 만든다. 001에는 향후 작업을 위한 기본 폴더를 준비해 두었다. 주제가 정해지면 폴더 이름과 이 목록을 함께 갱신한다.
-
-## Google Drive 협업
-
-- [Baseline 공유 대상 폴더](https://drive.google.com/drive/folders/1kIsnL50yB1T7tkCkAqDhAcct9k_sZbVs)
-- [첫 칼럼 드라이브 폴더](https://drive.google.com/drive/folders/1fthOKlpTFBMbAAZ6win-o6uHUiKPVJor)
-- 업로드 정책: [협업 지침](guides/collaboration.md)
-- 칼럼별 파일 링크와 업로드 이력: [001 협업 기록](columns/001-ball-count/collaboration.md)
-
-로컬 Baseline과 드라이브는 자동 동기화 설정된 관계가 아니다. 현재는 플러그인을 통한 명시적 업로드 방식으로 운영한다. 드라이브 폴더 생성·업로드는 팀원 초대나 외부 발행과 구분한다.
-
-## 다음 작업
-
-2026-09-12 추가 비교: [FB/NFB와 포심/비포심 보고서](columns/001-ball-count/analysis/bcap_pitch_classification_20260912__r01/report.html). 기존 FB는 재학습 없이 재사용하고 FF만 새로 학습했다. 자체·공통 표본을 비교했고, 0-0의 작은 범위와3-2 비포심 방향의 제한된 개발 단서를 남겼다. 요청 범위에서 완료·종료했으며 외부 검증/추가 개선은 진행하지 않는다.
-
-2026-09-12: [BCAP V2 통합 개발 보고서](columns/001-ball-count/analysis/bcap_v2_development_20260912__r01/report.html)를 완료했다. 2024·2025 개발 결과 산출, 후속 검증 미실시이며 세 모듈 모두 EXPERIMENTAL이다. 타자 상·하·좌·우·가운데 5구역의 모서리 중복은 보고 표에만 반영했다. 외부 검증·반복 재학습·별도 독립 검수는 후속 요청 범위다. 아래 2026-09-09 기록은 V1 이력이다.
-
-2026-09-09: [BCAP 실제 보고서](columns/001-ball-count/analysis/bcap_v010_report_20260909.md)와 [갱신 인계](columns/001-ball-count/analysis/handoff_bcap_review.md)에 모델 구현·개발·외부 진단·독립 검산·8회 전체 재학습 안정성을 연결했다. 두 모델은 EXPERIMENTAL이며 모든 행동 추천을 보류한다. 2026 SWING은 측정 정합성 부족으로 전체 평가를 보류했다. 이어서 검수할 항목은 인과 식별·실시간 지각 자료·측정 교량·완전한 학습 불확실성이다.
-
-이어서 할 업무 요청 시 [001의 다음에 이어서 할 업무](columns/001-ball-count/column.md#다음에-이어서-할-업무)를 기준으로 안내한다. 로컬 폴더만 주제에 맞춰 변경했고 드라이브에는 미반영.
-
-
-
-## 분석 모델 목록
-
-[모델 레지스트리](models/registry.md)를 기준으로 설계와 칼럼 실행을 분리한다. 현재 BCAI-OBS-v1.0.0은 VALIDATED 주 모델, BCAI-RIDGE-v0.1.0은 EXPERIMENTAL 민감도 모델이다. [BCAI 안내](models/bcai/README.md)에 단일 결과 보관 위치와 새 실행 절차를 기록했다. [2026-09-08 구조 변경 기록](models/migration_20260908.md) 참조. 이번 모델 구조 변경은 로컬만 반영하며 Drive/Docs 변경·데이터 재수집·KBO 분석은 수행하지 않는다.
-
-2026-09-09 후속 작업: [BCAI-RIDGE-v0.2.0](models/bcai/ridge/v0.2.0/model_card.md)을 EXPERIMENTAL로 추가했다.2024·2025 개발,2023 외부 재현,2026-09-07까지 외부 시간 순방향 검증을 완료했다. [보고서](columns/001-ball-count/analysis/ridge_v02_validation_report.md). 요청 범위의2023·2026 원본만 새 스냅샷에 확보했으며 기존 입력·모델·실행은 보존했다.2026 첫 확보 실패 후 누락 경기만 보충한 이력을 분리한다. Drive/Docs·KBO에는 미반영.
-
-
-
-
-## BCAP 실제 구현·평가 반영 — 2026-09-09
-
-두 BCAP 모델은 EXPERIMENTAL이다. 실제 개발과 외부 진단·독립 검산을 수행했지만 행동 추천은 없으며 SWING의 2026 검증은 측정 정의 불일치로 보류했다. [모델 안내](models/bcap/README.md) · [주 보고서](columns/001-ball-count/analysis/bcap_v010_report_20260909.md) · [수정 MD와 변경 이력](columns/001-ball-count/analysis/bcap_document_update_20260909.json). 기존 BCAI 자산·원본·실행은 보존하고 KBO·Drive·외부 게시에는 반영하지 않았다.
+[정리 전 README 원문](README_history_20260926.md)은 날짜별 과거 기록이다. 그 안의 ‘현재’, ‘최신’, ‘다음 작업’은 당시 시점을 뜻하며 편집 재개 지시가 아니다. [2026-09-26 정리 보고서](guides/organization_20260926.md)에 변경 범위·상태 차이·보존 검증을 기록했다.

@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "captured_utc": "2026-09-28T05:25:26.1514659Z",
+  "report_generated_at": "2026-09-28 14:24:42 KST",
+  "complete_model_years": 36,
+  "report_validation_sha256": "8ddb3df3e4075071f1c74d9276d1f2a27143e2ad2194202615a6cf5161456d2c",
+  "selected_2017_runs": [
+    {
+      "model": "pitch",
+      "year": 2017,
+      "run_id": "bcap_pitch_r_history__mlb_2017__20260928__r01"
+    },
+    {
+      "model": "pitch_sb",
+      "year": 2017,
+      "run_id": "bcap_pitch_sb_r_history__mlb_2017__20260928__r01"
+    },
+    {
+      "model": "swing",
+      "year": 2017,
+      "run_id": "bcap_swing_r_history__mlb_2017__20260928__r01"
+    },
+    {
+      "model": "pitch_ff",
+      "year": 2017,
+      "run_id": "bcap_pitch_ff_r_history__mlb_2017__20260928__r01"
+    }
+  ],
+  "source_validation_unchanged_during_capture": true,
+  "files": [
+    {
+      "bytes": 23640,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/report.md",
+      "sha256": "4d7fd9d3a19ce4792e131c027813b6abc22eebeba587c77e9d0033d65a2912dc",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.md"
+    },
+    {
+      "bytes": 44640,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/report.html",
+      "sha256": "150f788542682b8fed0f653fcafe00e46609a51fab16a5ab272e96945f338351",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.html"
+    },
+    {
+      "bytes": 2002023,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/summary.csv",
+      "sha256": "cb293195d7ef32f05bf085f5a98ecbc4e69e2768696c791a50b825278682b8e9",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/analysis/r_bcap_history_20260928/summary.csv"
+    },
+    {
+      "bytes": 26126,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/pitch_2017_count_mobile.png",
+      "sha256": "a424c76000fb5ff9718aebe08c0d5ae28f8e11778fab4184f23a680a37dfd24a",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2017_count_mobile.png"
+    },
+    {
+      "bytes": 24145,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/pitch_sb_2017_count_mobile.png",
+      "sha256": "e3f022f10534a6cee71552cb8277d2b072d2b3ded0b507ae3bffadf9adff9c50",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2017_count_mobile.png"
+    },
+    {
+      "bytes": 26534,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/swing_2017_count_mobile.png",
+      "sha256": "6a8a291c2011aed725ed532fce7c7479ccbd3040be6bbd86cf61eabdfb595327",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2017_count_mobile.png"
+    },
+    {
+      "bytes": 25420,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/pitch_ff_2017_count_mobile.png",
+      "sha256": "d7ee68d79f147d8c440790edc6239a1c010ff8ab49e801954d8a61b1ddefe4d7",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2017_count_mobile.png"
+    },
+    {
+      "bytes": 64546,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/report_validation.json",
+      "sha256": "8ddb3df3e4075071f1c74d9276d1f2a27143e2ad2194202615a6cf5161456d2c",
+      "role": "report_or_2017_mobile",
+      "source": "columns/001-ball-count/analysis/r_bcap_history_20260928/report_validation.json"
+    },
+    {
+      "bytes": 30381,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_r_history__mlb_2017__20260928__r01/manifest.json",
+      "sha256": "aa801947001453a6943d20b2e3e26b046cd547a293e2126ae13666f66ebefa70",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_r_history__mlb_2017__20260928__r01/manifest.json"
+    },
+    {
+      "bytes": 7408,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_r_history__mlb_2017__20260928__r01/year_values.csv",
+      "sha256": "c295dfab26b73b0d827bbbff9b7794085d4e381708d3d85ee86ef23754a35499",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_r_history__mlb_2017__20260928__r01/artifacts/year_values.csv"
+    },
+    {
+      "bytes": 7333,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_r_history__mlb_2017__20260928__r01/action_values.csv",
+      "sha256": "249208fff0c095b355e98bfcc530a81c7271eec8465dac7c1bac8d866ae4ff07",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_r_history__mlb_2017__20260928__r01/artifacts/action_values.csv"
+    },
+    {
+      "bytes": 3002,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_r_history__mlb_2017__20260928__r01/checks.json",
+      "sha256": "38b1faa42c603d3ea29051b686cd9bd221ae38c28b1d610be49b74004fe207d7",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_r_history__mlb_2017__20260928__r01/artifacts/checks.json"
+    },
+    {
+      "bytes": 316,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_r_history__mlb_2017__20260928__r01/metrics.json",
+      "sha256": "adbfe3649589ae3c4eab16afade5d41b9f9cdce50488950e172c36e783c357e2",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_r_history__mlb_2017__20260928__r01/artifacts/metrics.json"
+    },
+    {
+      "bytes": 30425,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/manifest.json",
+      "sha256": "69e95b66829339fd5590c063f92fd8e7e36fe25122ff0907bfc5ca54eed386e8",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/manifest.json"
+    },
+    {
+      "bytes": 7378,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/year_values.csv",
+      "sha256": "d13f77577f92218cfa63901d11dd3a2c58114041fbbfa0ebc5aa32e2a1797560",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/artifacts/year_values.csv"
+    },
+    {
+      "bytes": 7303,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/action_values.csv",
+      "sha256": "182ad869d5368077b01c6922d4b52b09628d0215db7111b378d4ef55783397e2",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/artifacts/action_values.csv"
+    },
+    {
+      "bytes": 3002,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/checks.json",
+      "sha256": "38b1faa42c603d3ea29051b686cd9bd221ae38c28b1d610be49b74004fe207d7",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/artifacts/checks.json"
+    },
+    {
+      "bytes": 317,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/metrics.json",
+      "sha256": "1b7cfaa1fe2947bb0ef9b4d9c3a60a7b25c264bf73054c12f8361daf3db07b79",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_sb_r_history__mlb_2017__20260928__r01/artifacts/metrics.json"
+    },
+    {
+      "bytes": 30778,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_swing_r_history__mlb_2017__20260928__r01/manifest.json",
+      "sha256": "26be2301af7e37ffa1edb43c8d006bcd7a20adf274e9210d7916023365099b7b",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_swing_r_history__mlb_2017__20260928__r01/manifest.json"
+    },
+    {
+      "bytes": 109325,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_swing_r_history__mlb_2017__20260928__r01/year_values.csv",
+      "sha256": "b3b8ea37688cf70174becdf0f5295e68596df473422cd00856e72f0efec50f21",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_swing_r_history__mlb_2017__20260928__r01/artifacts/year_values.csv"
+    },
+    {
+      "bytes": 108350,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_swing_r_history__mlb_2017__20260928__r01/action_values.csv",
+      "sha256": "9572b56052a8730d3d2b1031945f480e3f8843e8cf48c5d64fe179f6a97fe70e",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_swing_r_history__mlb_2017__20260928__r01/artifacts/action_values.csv"
+    },
+    {
+      "bytes": 3002,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_swing_r_history__mlb_2017__20260928__r01/checks.json",
+      "sha256": "38b1faa42c603d3ea29051b686cd9bd221ae38c28b1d610be49b74004fe207d7",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_swing_r_history__mlb_2017__20260928__r01/artifacts/checks.json"
+    },
+    {
+      "bytes": 318,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_swing_r_history__mlb_2017__20260928__r01/metrics.json",
+      "sha256": "2cd55330a97f3a375d142c5549b2f52cde33f7b678349423122bee5ca26de2b7",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_swing_r_history__mlb_2017__20260928__r01/artifacts/metrics.json"
+    },
+    {
+      "bytes": 29656,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/manifest.json",
+      "sha256": "589e28ea1631a6a5cd1dfc14e7d0b8e03a8066aad812070be028b288af8818bf",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/manifest.json"
+    },
+    {
+      "bytes": 7495,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/year_values.csv",
+      "sha256": "9dd594cbd3b37832fa852d9ea504ead45c1bfd15b5a68ee8d3c5d7d44ad200ea",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/artifacts/year_values.csv"
+    },
+    {
+      "bytes": 7420,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/action_values.csv",
+      "sha256": "78c49f0f983b9ad8ff7ec5e4dbe86e8c3697d14a4a89cc15ec999ee0d8700659",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/artifacts/action_values.csv"
+    },
+    {
+      "bytes": 3002,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/checks.json",
+      "sha256": "38b1faa42c603d3ea29051b686cd9bd221ae38c28b1d610be49b74004fe207d7",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/artifacts/checks.json"
+    },
+    {
+      "bytes": 317,
+      "saved": "columns/001-ball-count/analysis/r_bcap_history_20260928/figure_review_2017_20260928T052449Z/snapshot/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/metrics.json",
+      "sha256": "3c53b8d24766a1bc2c5a81bfcae5fbf3939feba26d542d79185daba91a7c9791",
+      "role": "2017_model_saved_output",
+      "source": "columns/001-ball-count/analysis/runs/bcap_pitch_ff_r_history__mlb_2017__20260928__r01/artifacts/metrics.json"
+    }
+  ]
+}

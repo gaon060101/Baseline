@@ -1,0 +1,850 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BCAP 설명서 — 결과부터 읽는 카운트별 행동 비교 | Baseline</title><style>
+:root{--ink:#19383d;--teal:#147c80;--muted:#637579;--line:#dae5e5}
+*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font-family:'Malgun Gothic','맑은 고딕',sans-serif}
+a{color:#156c76;text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:#b04e28}
+.topbar{max-width:980px;margin:auto;padding:26px 36px;display:flex;justify-content:space-between;gap:16px;font-size:13px;letter-spacing:.5px}
+.brand{font-weight:800;letter-spacing:3px;text-decoration:none}.meta{color:var(--muted)}
+nav{max-width:908px;margin:0 auto 22px;display:flex;gap:8px;flex-wrap:wrap}nav a{padding:10px 16px;border:1px solid var(--line);border-radius:22px;background:white;text-decoration:none;font-size:14px}nav a.current{background:var(--ink);color:white}
+main{max-width:908px;margin:0 auto 60px;padding:58px 64px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 24px #18393b06}
+article{font-size:18px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word}
+h1{font-size:38px;letter-spacing:-1.7px;line-height:1.45;margin:0 0 28px}h2{font-size:27px;line-height:1.5;letter-spacing:-.8px;margin:78px 0 25px;padding-top:24px;border-top:2px solid #cee1df;scroll-margin-top:24px}h3{font-size:21px;line-height:1.6;margin:40px 0 20px}
+p{margin:0 0 25px}strong{font-weight:750;color:#102f36}em{font-style:normal;color:var(--muted)}p:has(>em:only-child){font-size:13px;line-height:1.8;margin-top:-10px;margin-bottom:32px}
+blockquote{margin:28px 0;padding:25px 29px;border-left:4px solid var(--teal);background:#f2f7f6;font-size:17px}blockquote p:last-child{margin-bottom:0}
+.interpretation-note{margin:30px 0;padding:23px 26px;border-left:5px solid #ae773a;background:#fbf3e6;color:#644928;font-family:'Batang','바탕',serif;font-size:16px;line-height:1.95}.interpretation-note strong{font-family:'Malgun Gothic',sans-serif;color:#79521f;font-size:15px}.interpretation-note p:last-child,.citation-note p:last-child{margin-bottom:0}.citation-note{margin:28px 0;padding:23px 26px;border-left:5px solid #34845d;background:#eef7ee;font-size:17px}.citation-note strong{color:#236342}a[id^='ref-']{display:block;scroll-margin-top:25px}
+.result-note{margin:26px 0 32px;padding:26px 28px;background:#e8f5f2;border:2px solid #167e78;border-radius:8px;font-size:19px;line-height:1.85}.result-note strong{display:block;color:#075b56;font-size:16px}.result-note p:last-child,.reference-note p:last-child{margin-bottom:0}.reference-note{margin:30px 0;padding:24px 27px;background:#f3f0fa;border:1px solid #d9cfeb;border-left:5px solid #8062ac;border-radius:0 8px 8px 0;font-size:16px;line-height:1.95}.reference-note strong{color:#64468c}.reference-note a{color:#62448e}h2{background:#edf3f2;padding:22px 20px;border-top:3px solid #577e7b;border-radius:3px}h3{padding-left:15px;border-left:3px solid #aac1bd}.sub-number{display:block;color:#6c8582;font-size:12px;letter-spacing:.7px;margin-bottom:4px}.section-summary{font-size:19px;color:#163f42}.toc li.subtopic{margin-left:18px;font-size:12px;border-left:2px solid #d8e5e2;padding-left:12px}.results-section>.table-wrap{border:2px solid #72a8a0}.results-section>h2{background:#dceee9;border-color:#147c80}h4{font-size:17px;margin:26px 0 14px}
+figure{margin:35px -14px 20px}img{display:block;max-width:100%;height:auto;border:1px solid #e7eeee;margin:auto}.image-link{cursor:zoom-in}
+.table-wrap{overflow:auto;margin:26px 0 22px;border:1px solid var(--line);border-radius:5px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{padding:13px 13px;border-bottom:1px solid #e4ebea;vertical-align:top;text-align:left}th{background:#edf4f2;color:#244b50;font-weight:700}tr:last-child td{border-bottom:0}td:first-child{font-weight:650}tbody tr:nth-child(even){background:#fafcfc}
+li{margin:10px 0}ul,ol{padding-left:25px}hr{border:0;border-top:1px solid var(--line);margin:58px 0}
+.toc{margin:40px 0;padding:18px 23px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:#f8fbfa}.toc summary{cursor:pointer;font-weight:bold}.toc ul{margin:12px 0 3px}.toc a{text-decoration:none}
+.endnav{margin:46px 0 0;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:15px;flex-wrap:wrap;font-size:14px}
+.lead{font-size:20px;line-height:1.9;color:#36555a}.cards{display:grid;gap:18px;margin:38px 0}.card{display:block;text-decoration:none;background:#f4f8f6;border:1px solid var(--line);border-radius:8px;padding:26px 28px}.card small{display:block;color:var(--teal);letter-spacing:2px;margin-bottom:9px}.card b{font-size:24px;line-height:1.6}.card p{margin:12px 0 0;font-size:15px;line-height:1.8;color:var(--muted)}.note{font-size:14px;line-height:1.8;color:var(--muted);padding:20px;background:#f7f3e9;border-radius:5px}
+@media(max-width:650px){.topbar{padding:20px;display:block}.meta{display:block;margin-top:8px}nav{margin:0 16px 16px;gap:6px}nav a{font-size:12px;padding:9px 12px}main{margin:0 8px 25px;padding:32px 18px;border-radius:5px}article{font-size:17px;line-height:1.95}h1{font-size:29px;letter-spacing:-1px}h2{font-size:24px;margin-top:55px}h3{font-size:20px}p{margin-bottom:24px}.table-wrap{margin:24px -6px}table{font-size:12px;min-width:480px}th,td{padding:10px}figure{margin:28px -8px 20px}p:has(>em:only-child){font-size:12px}blockquote{padding:20px}.card{padding:23px}.card b{font-size:21px}.lead{font-size:18px}}
+@media(max-width:650px){.main-column table{min-width:0;table-layout:fixed}.main-column th,.main-column td{padding:10px 7px;overflow-wrap:anywhere}.main-column h4{padding:12px;background:#f6f8f7;border-bottom:1px solid #dae5e5}}
+figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{display:block;width:900px}.figure-scroll.zoomed img{width:900px;max-width:none}.figure-toggle{font:inherit;font-size:14px;padding:8px 12px;color:#126d79;background:#eef6f3;border:1px solid #a7c7bf;border-radius:5px;cursor:pointer}
+@media(max-width:650px){.table-wrap{overflow:visible;margin:22px 0}table.mobile-cards,table.mobile-cards tbody,table.mobile-cards tr,table.mobile-cards td{display:block;width:100%;min-width:0}table.mobile-cards thead{display:none}table.mobile-cards tr{margin-bottom:14px;border:1px solid #bcd1cd;border-radius:6px;padding:7px;background:#f8fbfa}table.mobile-cards td{border:0;border-bottom:1px solid #e0e8e6;font-size:15px;padding:8px;overflow-wrap:anywhere}table.mobile-cards td:before{content:attr(data-label);display:block;font-size:13px;font-weight:bold;color:#19615f}figure{margin-left:0;margin-right:0}}
+
+/* Main manuscript: count matrices retain their 4 by 3 arrangement on phones. */
+.main-column .count-board{margin:28px 0 20px;padding:18px 8px;background:#fff;border:1px solid #dbe6e4;border-radius:10px}
+.main-column .board-subtitle{font-size:12px;color:#5b7376;margin:0 8px 12px}.main-column .board-title{font-size:18px;font-weight:750;margin:0 8px 12px;line-height:1.6}
+.main-column table.count-matrix{width:100%;min-width:0;table-layout:fixed;border-collapse:separate;border-spacing:8px;font-size:14px}
+.main-column .count-matrix th{background:none;border:0;text-align:center;padding:4px;font-size:16px;vertical-align:middle}
+.main-column .count-matrix th:first-child{width:48px}
+.main-column .count-matrix td{border:0;border-radius:12px;text-align:center;vertical-align:middle;padding:15px 5px;line-height:1.5}
+.main-column .count-matrix tr{background:none}
+.cell-count{display:block;font-size:15px;color:#546d71;margin-bottom:6px}
+.cell-value{display:block;font-size:23px;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.6px}
+.count-matrix small{display:block;font-size:12px;color:#50696c;margin-top:7px;letter-spacing:-.3px}
+.count-matrix .pitcher{background:#deeeee}.count-matrix .pitcher strong{color:#147f83}.count-matrix .pitcher.strong-cell{background:#bfdddd}
+.count-matrix .batter{background:#f8eae3}.count-matrix .batter strong{color:#b64f29}.count-matrix .batter.strong-cell{background:#e9bba7}
+.count-matrix .neutral{background:#f0f3f3}.count-matrix .neutral strong{color:#365156}
+.count-matrix .inside{background:#deeeeb}.count-matrix .inside strong{color:#1c6e62}.count-matrix .outside{background:#e8e1f3}.count-matrix .outside strong{color:#715095}
+.board-legend{font-size:12px;display:flex;gap:14px;flex-wrap:wrap;padding:12px 10px 0}.pitcher-key{color:#147f83}.batter-key{color:#b64f29}
+u.source-claim{text-decoration-color:#9577b9;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+.main-column .reference-note{font-size:14px;padding:15px 20px;margin:18px 0 28px;line-height:1.8}
+.main-column .reference-note strong{font-size:14px}.main-column .reference-note p{margin-bottom:10px}
+.main-column h3{margin-top:42px}.main-column h4{font-size:19px;line-height:1.7;margin:32px 0 18px}
+.main-column .comparison-table{table-layout:fixed}.main-column .comparison-table td:first-child{width:35%}.main-column .comparison-table td strong{font-size:16px}
+@media(max-width:650px){
+ .main-column .count-board{padding:12px 2px;margin:24px -5px}.main-column .board-title{font-size:15px;margin:0 6px 8px}
+ .main-column table.count-matrix{border-spacing:4px}.main-column .count-matrix th{font-size:12px;padding:3px 0;white-space:nowrap}.main-column .count-matrix th:first-child{width:28px}
+ .main-column .count-matrix td{padding:12px 2px;border-radius:8px;overflow-wrap:normal}.cell-count{font-size:12px;margin-bottom:5px}
+ .cell-value{font-size:18px;letter-spacing:-.3px;line-height:1.3}.range-end{display:block}.count-matrix small{font-size:10px;letter-spacing:-.5px;margin-top:6px}
+ .main-column .location-board .cell-value{font-size:20px}.board-legend{font-size:11px;gap:3px 12px;padding:8px 6px 0}
+ .main-column .comparison-table{width:100%;min-width:0;font-size:13px}.main-column .comparison-table th,.main-column .comparison-table td{padding:12px 8px}
+ .main-column .comparison-table td strong{font-size:15px}.main-column h4{font-size:18px;padding:10px 0;background:none}
+}
+
+
+.main-column .question-group{margin:42px 0 22px;padding:14px 18px;border-top:2px solid #72918e;border-bottom:1px solid #cadbd8;background:#edf4f2;color:#285552;font-size:16px;font-weight:750}
+.main-column .bcai-board .cell-value{font-size:34px;line-height:1.4}
+@media(max-width:650px){.main-column .bcai-board .cell-value{font-size:27px}.main-column .question-group{font-size:15px;padding:12px}}
+
+@media print{body{background:white}.topbar,nav,.toc,.endnav{display:none}main{max-width:none;border:0;padding:0;box-shadow:none}article{font-size:11pt;line-height:1.8}h1{font-size:23pt}h2{font-size:18pt;margin-top:28px}figure,table{break-inside:avoid}img{max-height:850px}a{color:inherit}}
+</style></head><body><header class="topbar"><a class="brand" href="index.html">BASELINE</a><span class="meta">볼카운트 연재 · 2026.09.28 · 11시즌 반영 7차 검토본</span></header><nav aria-label="연재 글"><a class="" href="01_ball_count.html">1. 볼카운트 분석 칼럼</a><a class="" href="02_bcai.html">2. BCAI 설명 글</a><a class="current" href="03_bcap.html">3. BCAP 설명 글</a><a class="" href="04_references_ko.html">4. 참고문헌 한국어 해설</a><a class="" href="05_data_validation.html">5. 데이터·검증·개발 과정</a></nav><main><article><h1>BCAP 설명서 — 결과부터 읽는 카운트별 행동 비교</h1><details class="toc"><summary>이 글의 목차 — 결과·방법·해석</summary><ul><li class=""><a href="#section-1">1. 결과 — 열한 시즌의 방향·구간·자료 부족</a></li><li class="subtopic"><a href="#section-1-sub-1">오래 보니 무엇이 같고 무엇이 달랐을까?</a></li><li class="subtopic"><a href="#section-1-sub-2">위치 — 0-2의 존 밖 방향은 얼마나 반복됐을까?</a></li><li class="subtopic"><a href="#section-1-sub-3">스윙 — 존 안에서 늘 휘두르는 쪽이었을까?</a></li><li class="subtopic"><a href="#section-1-sub-4">구종 — “대부분 불명확”에서 무엇을 더 말할 수 있을까?</a></li><li class="subtopic"><a href="#section-1-sub-5">기간을 늘렸으니 직접 비교해도 될까?</a></li><li class=""><a href="#section-2">2. 이 결과는 무엇을 뜻하나 — 가능한 설명과 확인한 원인은 다르다</a></li><li class="subtopic"><a href="#section-2-sub-1">위치 결과의 해석 — 볼의 비용과 타자의 반응이 함께 작용할 수 있다</a></li><li class="subtopic"><a href="#section-2-sub-2">타자 결과의 해석 — 위치에 따라 두 선택이 남기는 기회가 다르다</a></li><li class="subtopic"><a href="#section-2-sub-3">구종 결과의 해석 — 반복된 단서도 일반 지침과는 다르다</a></li><li class=""><a href="#section-3">3. 비교의 정의 — BCAI는 상태, BCAP는 행동</a></li><li class=""><a href="#section-4">4. 위치의 정의 — S·B는 실제 도착 위치</a></li><li class=""><a href="#section-5">5. 숫자의 뜻 — W는 최종 타석의 가중 공격가치</a></li><li class="subtopic"><a href="#section-5-sub-1">표에 들어가는 숫자는 어떻게 읽을까?</a></li><li class=""><a href="#section-6">6. 계산 방법 — 선수·상황을 맞춰 두 행동 비교하기</a></li><li class="subtopic"><a href="#section-6-sub-1">1단계: 같은 선수·상황 목록에 두 선택을 올려놓기</a></li><li class="subtopic"><a href="#section-6-sub-2">2단계: 결과 예측과 행동 선택 확률을 따로 만들기</a></li><li class="subtopic"><a href="#section-6-sub-3">3단계: 예측과 실제 기록 사이의 차이를 반영하기</a></li><li class="subtopic"><a href="#section-6-sub-4">4단계: 평가할 경기의 결과를 먼저 보지 않기</a></li><li class="subtopic"><a href="#section-6-sub-5">비교하는 선택에 따라 쓸 수 있는 정보도 달라진다</a></li><li class=""><a href="#section-7">7. 비교의 조건 — 자료 부족과 차이 불명확 구별하기</a></li><li class="subtopic"><a href="#section-7-sub-1">공이 많다는 것과 비교가 충분하다는 것은 다르다</a></li><li class=""><a href="#section-8">8. 개발 과정을 더 읽고 싶다면</a></li><li class=""><a href="#section-9">9. 결과를 사용할 때 기억할 범위</a></li><li class=""><a href="#section-10">이 글의 용어 메모</a></li><li class=""><a href="#section-11">본문에서 이어 읽기 — W 차이와 스윙 비교 횟수</a></li><li class="subtopic"><a href="#section-11-sub-1">W로 평균과 차이를 어떻게 읽을까?</a></li><li class="subtopic"><a href="#section-11-sub-2">위치·구종 차이는 어느 정도였을까?</a></li><li class="subtopic"><a href="#section-11-sub-3">스윙과 지켜보기의 평균을 나란히 놓으면?</a></li><li class="subtopic"><a href="#section-11-sub-4">132번과 481번은 무엇을 센 숫자일까?</a></li></ul></details>
+<p><a href="01_ball_count.html">볼카운트 분석 칼럼</a> · <a href="02_bcai.html">BCAI 설명서</a></p>
+<p><strong>열한 시즌을 살피니 반복되는 방향과 반복되는 예외가 함께 보였다.</strong> 0-2·1-2의 위치 점추정은 매년 존 밖 방향이었다. 존 밖 테이크도 지원된 모든 칸에서 같은 점추정이었지만, 존 안 스윙에는 예외가 있었다. 구종은 일반적인 우열을 정하기 어렵더라도 특정 카운트의 반복 단서를 따로 설명해야 한다.</p>
+<p>BCAP는 <strong>같은 카운트에서 선수·상황 차이를 고려해 위치·구종·스윙 여부에 따른 최종 타석 결과를 비교하는 자체 모형</strong>이다. W는 볼넷·안타·장타 등에 가중치를 붙인 공격가치다. 타자는 높은 W, 투수는 낮은 허용 W가 좋은 방향이다. 네 모듈 모두 <strong>EXPERIMENTAL</strong>이다.</p>
+<section class="content-section results-section" aria-labelledby="section-1"><h2 id="section-1">1. 결과 — 열한 시즌의 방향·구간·자료 부족</h2>
+<h3 id="section-1-sub-1"><span class="sub-number">1.1</span>오래 보니 무엇이 같고 무엇이 달랐을까?</h3>
+<aside class="result-note" aria-label="결과 요약">
+<p><strong>결과 요약 | 방향의 반복과 확실성은 구별해야 한다</strong></p>
+<p>2015–2025의 연도별 결과를 읽는다. 점추정은 대표 값, 보정 구간은 정해진 계산 안의 불확실성이다. 자료가 부족한 결과는 숫자를 숨기고 따로 센다.</p>
+</aside>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>비교</th>
+<th>전체·지원 범위</th>
+<th>반복된 점추정</th>
+<th>구간까지 같은 방향</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+비교">S−B · 0-2</td>
+<td data-label="전체·지원 범위">11/11시즌 지원</td>
+<td data-label="반복된 점추정">존 밖 11시즌</td>
+<td data-label="구간까지 같은 방향">10시즌</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">S−B · 1-2</td>
+<td data-label="전체·지원 범위">11/11시즌 지원</td>
+<td data-label="반복된 점추정">존 밖 11시즌</td>
+<td data-label="구간까지 같은 방향">8시즌</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">스윙−테이크 · 존 안</td>
+<td data-label="전체·지원 범위">132/132칸 지원</td>
+<td data-label="반복된 점추정">스윙 130칸·테이크 2칸</td>
+<td data-label="구간까지 같은 방향">스윙 103칸</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">스윙−테이크 · 존 밖</td>
+<td data-label="전체·지원 범위">481/528칸 지원</td>
+<td data-label="반복된 점추정">테이크 481칸</td>
+<td data-label="구간까지 같은 방향">테이크 477칸</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">FB−NFB · 3-0</td>
+<td data-label="전체·지원 범위">10/11시즌 지원</td>
+<td data-label="반복된 점추정">NFB 10시즌</td>
+<td data-label="구간까지 같은 방향">10시즌</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">포심−비포심 · 3-2</td>
+<td data-label="전체·지원 범위">11/11시즌 지원</td>
+<td data-label="반복된 점추정">비포심 11시즌</td>
+<td data-label="구간까지 같은 방향">5시즌</td>
+</tr>
+</tbody></table></div>
+<p><em>칸은 카운트×구역×연도이며 투구 수나 독립 실험 수가 아니다. 존 밖 모서리 투구는 구역에 중복된다. 2026은 제외했다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/window_totals.csv">기간별 집계</a>, <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_pattern_counts_all_groups.csv">연도 반복 표</a>.</em></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 열한 시즌의 값도 하나의 통합 효과는 아니다</strong></p>
+<p>2024·2025는 공유 적합의 연도별 결과이고, 2015–2023은 해마다 별도 적합했다. Δ를 평균 내어 11년 통합 효과로 만들지 않았다. 아래 범위는 지원된 연도별 점추정의 최솟값~최댓값이며 신뢰구간이 아니다.</p>
+</aside>
+<h3 id="section-1-sub-2"><span class="sub-number">1.2</span>위치 — 0-2의 존 밖 방향은 얼마나 반복됐을까?</h3>
+<p class="section-summary"><strong>0-2·1-2는 각각 11/11년 지원, 11/11년 존 밖 점추정이었다.</strong> 구간까지 같은 방향은 각각 10년과 8년이었다. 추가 아홉 해의 차이는 0-2 +0.0240–+0.0350 W, 1-2 +0.0111–+0.0261 W였다.</p>
+<figure><button class="figure-toggle" type="button" aria-expanded="false" onclick="const box=this.nextElementSibling;const expanded=box.classList.toggle('zoomed');this.setAttribute('aria-expanded',expanded);this.textContent=expanded?'그림 축소 · 좌우로 밀어 읽기':'그림 확대해서 읽기';">그림 확대해서 읽기</button><div class="figure-scroll"><a class="image-link" href="../../analysis/history_comparison_20260928_r01/figures/03_location_years.png" target="_blank" aria-label="그림 크게 보기"><img src="../../analysis/history_comparison_20260928_r01/figures/03_location_years.png" alt="열한 시즌의 위치 비교"></a></div></figure>
+<p><em>그림 1. 존 안−존 밖 ΔW. 양수면 존 밖의 허용 W가 낮다. 선은 고정 점수의 경기 군집 변동에 따른 연도별 보정 구간이다. 추가 연도는 255개 비교 상한, 기준 두 해는 기존 219개 가족을 사용했다. 역사 비교 전체의 동시 보장은 아니다. 정확한 지원 투구·분모는 <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv">전체 표</a>에 있다.</em></p>
+<p><strong>표 1. 위치 비교의 12카운트 전체 — 2015–2025</strong></p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>카운트</th>
+<th>지원 연도/전체</th>
+<th>양수/음수 점추정</th>
+<th>양수/음수/불명확 구간</th>
+<th>지원된 ΔW 범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+카운트">0-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.0362–-0.0277</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">0-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">1/10</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0119–+0.0014</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">0-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">11/0</td>
+<td data-label="양수/음수/불명확 구간">10/0/1</td>
+<td data-label="지원된 ΔW 범위">+0.0225–+0.0350</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.0514–-0.0349</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/9/2</td>
+<td data-label="지원된 ΔW 범위">-0.0236–-0.0102</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">11/0</td>
+<td data-label="양수/음수/불명확 구간">8/0/3</td>
+<td data-label="지원된 ΔW 범위">+0.0111–+0.0261</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.0962–-0.0700</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.0758–-0.0493</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0156–-0.0022</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.1760–-0.1258</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.1634–-0.1280</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">0/11</td>
+<td data-label="양수/음수/불명확 구간">0/11/0</td>
+<td data-label="지원된 ΔW 범위">-0.1264–-0.0842</td>
+</tr>
+</tbody></table></div>
+<p><em>양수는 존 밖, 음수는 존 안의 허용 W가 낮은 방향. ‘양수/음수/불명확 구간’은 각각 그 상태의 연도 수다. 0-1·2-2는 11년 모두 불명확했다. 지원된 범위와 구간을 구별해 읽는다.</em></p>
+<p>2021년 1-2는 +0.01110 W [−0.00348, +0.02567], 지원 66,831투구였다. 점은 존 밖을 가리켜도 구간은 0을 포함한다. 기존 두 시즌 통합 2-2의 구간이 존 안 방향이었다는 사실도, 연도별 2-2가 매년 불명확하다는 사실과 함께 성립한다. 두 시즌을 합친 정보량과 한 해의 정보량이 같지 않기 때문이다.</p>
+<h3 id="section-1-sub-3"><span class="sub-number">1.3</span>스윙 — 존 안에서 늘 휘두르는 쪽이었을까?</h3>
+<p class="section-summary"><strong>존 안은 132칸 중 130칸이 스윙 점추정이었지만, 두 칸은 반대였다.</strong> 2015년 3-0은 −0.00887 W [−0.11939, +0.10165], 2020년 3-0은 −0.00021 W [−0.17507, +0.17465]였다. 지원 투구는 각각 3,656/3,749개, 1,443/1,480개다. 둘 다 구간이 넓어 테이크 우세를 확인한 반례는 아니다.</p>
+<p>추가 아홉 해만 보면 존 안 108칸은 모두 지원되고 106칸 양수·2칸 음수, 84칸 양수 구간이었다. 특히 3-0·3-1은 9/9년 모두 구간이 불명확했다. <a href="../../analysis/history_comparison_20260928_r01/tables/swing_center_12counts.html">존 안 카운트별 상세 표</a></p>
+<p>존 밖은 11년 전체 528칸 중 481칸이 지원되고 모두 음수 점추정, 477칸은 구간도 음수였다. 남은 지원 4칸은 불명확, 47칸은 자료 부족이다. 추가 아홉 해에서는 393/432칸 지원·393칸 음수·390칸 음수 구간이었다. 존 밖 3-0 네 구역은 매년 자료가 부족했다.</p>
+<figure><button class="figure-toggle" type="button" aria-expanded="false" onclick="const box=this.nextElementSibling;const expanded=box.classList.toggle('zoomed');this.setAttribute('aria-expanded',expanded);this.textContent=expanded?'그림 축소 · 좌우로 밀어 읽기':'그림 확대해서 읽기';">그림 확대해서 읽기</button><div class="figure-scroll"><a class="image-link" href="../../analysis/history_comparison_20260928_r01/figures/04_swing_support.png" target="_blank" aria-label="그림 크게 보기"><img src="../../analysis/history_comparison_20260928_r01/figures/04_swing_support.png" alt="존 안과 존 밖의 연도별 스윙 결과"></a></div></figure>
+<p><em>그림 2. 매년 존 안 12칸·존 밖 48칸. 막대는 투구 수가 아니다. 스윙에는 번트가 포함된다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv">전체 결과표</a>, level=region. 자료 부족의 수치는 해석표에서 숨겼다.</em></p>
+<p>구종 계열까지 세분하면 자료 부족이 더 늘어난다. 추가 아홉 시즌의 존 밖×FB/NFB 864칸 중 674칸만 지원됐고 모두 음수 점추정, 602칸이 음수 구간이었다. 190개 빈칸을 반대 증거나 0 효과로 세지 않는다. 이 세부 집계도 <a href="../../analysis/history_comparison_20260928_r01/tables/swing_fine_groups_supported.csv">근거 표</a>에 남겼다.</p>
+<h3 id="section-1-sub-4"><span class="sub-number">1.4</span>구종 — “대부분 불명확”에서 무엇을 더 말할 수 있을까?</h3>
+<p class="section-summary"><strong>3-0의 FB/NFB와 3-2의 포심/비포심을 따로 볼 이유가 생겼다.</strong> FB는 포심·싱커·커터, NFB는 나머지 분석 허용 구종이다. 포심 비교에서는 싱커·커터가 비포심으로 옮겨 간다.</p>
+<p>FB/NFB 3-0은 11년 중 10년 지원, 10년 모두 NFB 방향의 점·구간이었다. 지원되지 않은 해는 2020이다. 2,349/2,863투구가 행 지원에 남았지만 NFB 유효 표본 ESS가 113.78로 기준 200에 못 미쳤다. 지원된 추가 여덟 해도 실제 NFB가 해마다 278–389개뿐이라는 제약은 남는다.</p>
+<p>포심/비포심 3-2는 11/11년 모두 양수였고 5/11년은 구간도 양수였다. 그 다섯 해는 2015·2016·2018·2019·2021이다. 예를 들어 2019년은 +0.03704 W [+0.01498, +0.05911], 2023년은 +0.01611 W [−0.00623, +0.03845]였다. 지원 투구는 각각 33,334/37,346개, 31,295/36,190개다.</p>
+<figure><button class="figure-toggle" type="button" aria-expanded="false" onclick="const box=this.nextElementSibling;const expanded=box.classList.toggle('zoomed');this.setAttribute('aria-expanded',expanded);this.textContent=expanded?'그림 축소 · 좌우로 밀어 읽기':'그림 확대해서 읽기';">그림 확대해서 읽기</button><div class="figure-scroll"><a class="image-link" href="../../analysis/history_comparison_20260928_r01/figures/05_pitch_patterns.png" target="_blank" aria-label="그림 크게 보기"><img src="../../analysis/history_comparison_20260928_r01/figures/05_pitch_patterns.png" alt="구종의 반복 단서와 자료 부족"></a></div></figure>
+<p><em>그림 3. 두 분류 각각의 자체 지원 표본. 양수는 뒤쪽 구종의 허용 W가 낮은 방향이다. 패널별 축 범위가 다르며 선은 조건부 보정 구간이다. 공통 표본에서 구종 분류만 바꾼 비교가 아니다.</em></p>
+<p><strong>표 2. FB−NFB의 12카운트 전체 — 2015–2025</strong></p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>카운트</th>
+<th>지원 연도/전체</th>
+<th>양수/음수 점추정</th>
+<th>양수/음수/불명확 구간</th>
+<th>지원된 ΔW 범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+카운트">0-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">2/9</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0046–+0.0001</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">0-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">8/3</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0111–+0.0099</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">0-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">10/1</td>
+<td data-label="양수/음수/불명확 구간">3/0/8</td>
+<td data-label="지원된 ΔW 범위">-0.0016–+0.0218</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">4/7</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0080–+0.0044</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">5/6</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0075–+0.0112</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">11/0</td>
+<td data-label="양수/음수/불명확 구간">2/0/9</td>
+<td data-label="지원된 ΔW 범위">+0.0004–+0.0185</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">2/9</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0192–+0.0092</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">5/6</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0082–+0.0142</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">10/1</td>
+<td data-label="양수/음수/불명확 구간">1/0/10</td>
+<td data-label="지원된 ΔW 범위">-0.0032–+0.0163</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-0</td>
+<td data-label="지원 연도/전체">10/11</td>
+<td data-label="양수/음수 점추정">10/0</td>
+<td data-label="양수/음수/불명확 구간">10/0/0</td>
+<td data-label="지원된 ΔW 범위">+0.0675–+0.1179</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">3/8</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0193–+0.0083</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">11/0</td>
+<td data-label="양수/음수/불명확 구간">3/0/8</td>
+<td data-label="지원된 ΔW 범위">+0.0089–+0.0346</td>
+</tr>
+</tbody></table></div>
+<p><strong>표 3. 포심−비포심의 12카운트 전체 — 2015–2025</strong></p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>카운트</th>
+<th>지원 연도/전체</th>
+<th>양수/음수 점추정</th>
+<th>양수/음수/불명확 구간</th>
+<th>지원된 ΔW 범위</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+카운트">0-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">7/4</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0058–+0.0040</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">0-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">8/3</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0064–+0.0167</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">0-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">10/1</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0028–+0.0193</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">8/3</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0051–+0.0140</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">8/3</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0045–+0.0161</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">1-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">10/1</td>
+<td data-label="양수/음수/불명확 구간">1/0/10</td>
+<td data-label="지원된 ΔW 범위">-0.0007–+0.0225</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">5/6</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0148–+0.0074</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">8/3</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0064–+0.0143</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">2-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">9/2</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0020–+0.0219</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-0</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">6/5</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0265–+0.0134</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-1</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">9/2</td>
+<td data-label="양수/음수/불명확 구간">0/0/11</td>
+<td data-label="지원된 ΔW 범위">-0.0093–+0.0139</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트">3-2</td>
+<td data-label="지원 연도/전체">11/11</td>
+<td data-label="양수/음수 점추정">11/0</td>
+<td data-label="양수/음수/불명확 구간">5/0/6</td>
+<td data-label="지원된 ΔW 범위">+0.0140–+0.0370</td>
+</tr>
+</tbody></table></div>
+<p><em>두 표 모두 양수는 뒤쪽 구종의 허용 W가 낮은 방향이다. 각 행의 지원 연도 안에서 부호·구간 상태를 센다. ΔW 범위는 점추정 범위다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_pattern_counts_all_groups.csv">기간별 12카운트 패턴</a>.</em></p>
+<p>추가 아홉 시즌에서는 FB/NFB 108개 중 107개 지원·90개 불명확, 포심/비포심 108개 전부 지원·102개 불명확이었다. 따라서 넓은 구종 묶음의 일반적 우열은 여전히 정하기 어렵다. 하지만 반복된 특정 카운트를 함께 적어야 장기 결과를 빠뜨리지 않는다.</p>
+<h3 id="section-1-sub-5"><span class="sub-number">1.5</span>기간을 늘렸으니 직접 비교해도 될까?</h3>
+<p class="section-summary"><strong>반복을 기술할 수 있지만, 시대 변화의 원인을 가려낸 것은 아니다.</strong> 기준 두 해의 공유 적합과 추가 각 해의 별도 적합, 시즌 가중치·지원 집단·측정의 차이가 남는다. 기존 2023 핵심 위치 비교는 4개 가족 보정, 이번 R 역사 결과는 연도별 상한 255 보정이다. 과거 2023·2026 자체/공통 표본의 ‘96개 중 92개 불명확’도 별도 설계의 결과로 <a href="../../analysis/bcap_external_20260914__r01/final_column_conclusion.md">당시 보고서</a>에 보존했다.</p>
+<p>2026은 9월 7일까지·2025 고정 가중치의 구종 보조 결과만 있다. FB/NFB 3-0은 +0.09282 W [+0.05292, +0.13272], 포심/비포심 3-2는 +0.01743 W [−0.00549, +0.04035]다. 지원 투구는 각각 6,124/6,819개, 28,418/31,879개다. 위치·스윙은 측정 보류이며 11시즌 본 비교에 넣지 않았다. <a href="../../analysis/history_comparison_20260928_r01/tables/supplement_2026_bcap.csv">보조 결과</a></p>
+<p>정확한 적합·지원·구간의 정의와 민감도는 <a href="05_data_validation.html#validation-years">⑤ 검증 글</a> 및 <a href="../../analysis/history_comparison_20260928_r01/technical_appendix.html">기술 부록</a>에서 확인한다.</p>
+</section><section class="content-section " aria-labelledby="section-2"><h2 id="section-2">2. 이 결과는 무엇을 뜻하나 — 가능한 설명과 확인한 원인은 다르다</h2>
+<p class="section-summary"><strong>결과의 방향은 확인했지만, 그 차이가 생긴 원인을 사건별 수치로 분해한 단계는 아니다.</strong> 아래 설명은 야구의 상황과 결과를 연결하는 해석이며, 각 원인의 기여도를 측정했다는 뜻은 아니다.</p>
+<h3 id="section-2-sub-1"><span class="sub-number">2.1</span>위치 결과의 해석 — 볼의 비용과 타자의 반응이 함께 작용할 수 있다</h3>
+<p class="section-summary"><strong>0-2·1-2에서 존 밖 공은 헛스윙이나 불리한 접촉을 끌어낼 기회와, 볼을 허용할 비용을 함께 갖는다.</strong> 볼이 되면 승부가 이어지고, 따라 나온 타자가 실패하면 투수에게 유리해질 수 있다. 어느 가지가 전체 차이를 얼마나 만들었는지는 별도 계산이 필요하다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | BCAI를 함께 보는 이유</strong></p>
+<p>BCAI는 해당 카운트를 거친 타석의 평균 공격가치를 100 기준으로 읽는 지수다. 서로 다른 출발 상황을 설명하는 데 쓴다. BCAI의 상태 평균 차이를 BCAP의 행동 차이에 더하거나, 실제 볼 한 개의 효과로 바꾸지는 않는다.</p>
+</aside>
+<h3 id="section-2-sub-2"><span class="sub-number">2.2</span>타자 결과의 해석 — 위치에 따라 두 선택이 남기는 기회가 다르다</h3>
+<p class="section-summary"><strong>스윙과 테이크의 비교는 ‘좋은 카운트니까 휘두른다’만으로 정리되지 않았다.</strong> 지켜봤을 때 볼을 얻는 기회, 스트라이크를 받는 비용, 휘둘렀을 때 접촉하거나 실패하는 가능성을 함께 생각해야 한다. 그래서 BCAP는 카운트와 공의 위치를 함께 조건으로 두었다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 타자의 판단 시점</strong></p>
+<p>위치별 비교에는 투구 뒤에 확인한 좌표가 쓰인다. 타자가 날아오는 공의 위치를 정확히 알았다고 가정한 실시간 스윙 지침은 아니다. 존 안 3-0·3-1의 불명확함과 존 밖 3-0의 자료 부족도 그대로 남는다.</p>
+</aside>
+<h3 id="section-2-sub-3"><span class="sub-number">2.3</span>구종 결과의 해석 — 반복된 단서도 일반 지침과는 다르다</h3>
+<p class="section-summary"><strong>여러 카운트의 불명확함은 ‘구종이 중요하지 않다’는 결과가 아니다.</strong> 같은 계열 안에서도 투수·구위·세부 구종이 다르고, 어느 구종이 드물게 선택됐는지에 따라 비교 근거도 달라진다. 현재 분석은 카운트마다 통용되는 구종 지침을 뒷받침하지 못했다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 원인 분해와 상대 적응</strong></p>
+<p>사건별 확률과 후속 가치를 합치는 DECOMP는 모의 확인 단계다. 실제 MLB의 원인별 기여도와 타자가 덜 따라 나올 때의 가치 변화, 최적 혼합비율은 아직 산출하지 않았다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-3"><h2 id="section-3">3. 비교의 정의 — BCAI는 상태, BCAP는 행동</h2>
+<p>BCAI의 질문은 “이 카운트에 도달한 타석들은 이후 얼마나 좋은 결과를 냈는가?”다. 카운트라는 <strong>상태의 가치</strong>를 보여준다.</p>
+<p>BCAP의 질문은 “그 카운트에서 현재 공의 위치·구종·타자 행동을 나누면, 어느 쪽의 결과가 더 좋았는가?”다. <strong>행동별 보정 가치</strong>를 비교한다.</p>
+<p>3-0이 타자에게 좋은 상황이라는 사실만으로 그 공을 휘두르는 편이 좋은지는 알 수 없다. 유리한 상황을 갖고 있다는 것과, 그 상황을 어떻게 활용할지는 다른 질문이기 때문이다.</p>
+<p>현재 BCAP에는 아래 네 가지 비교가 있다. ‘차이’는 표의 왼쪽 행동 가치에서 오른쪽 행동 가치를 뺀 값이다.</p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>비교</th>
+<th>실제로 나눈 행동</th>
+<th>차이가 양수라면</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+비교">투수의 위치</td>
+<td data-label="실제로 나눈 행동">실제 존 안 S − 실제 존 밖 B</td>
+<td data-label="차이가 양수라면">존 밖의 허용 공격가치가 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">투수의 구종 계열</td>
+<td data-label="실제로 나눈 행동">FB − NFB</td>
+<td data-label="차이가 양수라면">NFB의 허용 공격가치가 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">투수의 포심 여부</td>
+<td data-label="실제로 나눈 행동">포심 FF − 비포심</td>
+<td data-label="차이가 양수라면">비포심의 허용 공격가치가 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">타자의 행동</td>
+<td data-label="실제로 나눈 행동">스윙 − 테이크</td>
+<td data-label="차이가 양수라면">스윙의 공격가치가 높음</td>
+</tr>
+</tbody></table></div>
+<p><em>표 4. BCAP의 네 비교와 부호. 수치 결과표가 아닌 분석 정의표다. 투수는 낮은 공격가치, 타자는 높은 공격가치가 유리한 방향이다. 정의: <a href="../../../../models/registry.md">현재 모델 목록</a>.</em> </p>
+<p>FB는 포심·싱커·커터를 묶은 이름이다. NFB는 분석에서 허용한 나머지 구종이다. 포심/비포심 비교에서는 싱커와 커터도 비포심에 들어간다. 두 분류를 모두 ‘직구 대 변화구’라고 부르면 서로 다른 비교를 같은 것으로 읽게 된다. 구종을 알 수 없는 공은 반대편 집단에 임의로 넣지 않았다.</p>
+<p>타자의 스윙에는 기록상 번트 등 공격 시도도 포함된다. 테이크에는 볼·루킹 스트라이크·몸에 맞는 공이 포함된다. 따라서 이 글의 스윙은 순수한 풀스윙만을 뜻하지 않으며, 기록 라벨로 확인되지 않는 타자의 순간 의도까지 구별한 것도 아니다.</p>
+</section><section class="content-section " aria-labelledby="section-4"><h2 id="section-4">4. 위치의 정의 — S·B는 실제 도착 위치</h2>
+<p>S는 공 중심의 실제 도착 좌표가 분석용 존 안에 있는 경우, B는 밖에 있는 경우다. 가로폭 17인치와 각 투구 기록의 존 상·하단으로 판정하며, 경계는 S에 포함한다. 공의 반지름만큼 존을 넓히지는 않았다.</p>
+<p>여기서 가장 먼저 구별해야 할 것은 <strong>위치, 판정, 의도</strong>다.</p>
+<p>존 밖 공을 헛스윙하면 위치 분류는 B지만 결과는 스트라이크다. 존 안 공을 때려 홈런이 되면 위치 분류는 S지만 결과는 홈런이다. 이 둘은 정의를 설명하는 예시다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 실제 위치와 목표 위치</strong></p>
+<p>또 실제로 밖에 도착한 공에는 의도한 유인구와 제구가 어긋난 공이 함께 들어갈 수 있다. BCAP의 S/B 비교는 그 둘을 분리하지 못한다. 따라서 “존 밖 투구가 낮은 공격가치와 연결됐다”는 결과에서 곧바로 “바깥을 겨냥하면 그만큼 좋아진다”는 지시를 만들 수 없다.</p>
+</aside>
+<p>타자 결과는 존 안 전체와 높은 존 밖·낮은 존 밖·몸쪽 존 밖·바깥쪽 존 밖의 다섯 구역으로 읽는다. 기존 결과표의 ‘가운데’는 홈플레이트 한가운데만이 아니라 <strong>존 안 전체</strong>다.</p>
+<p>높으면서 바깥쪽인 공은 두 존 밖 구역에 모두 표시된다. 구역 비율을 더하면 100%를 넘을 수 있는 이유다. 분석의 전체 투구 수와 학습 자료에서는 같은 공을 중복하지 않았다. <a href="../../../../models/bcap/pitch_sb/v0.1.0/specification.yaml">위치와 구역의 정의</a></p>
+<figure><button class="figure-toggle" type="button" aria-expanded="false" onclick="const box=this.nextElementSibling;const expanded=box.classList.toggle('zoomed');this.setAttribute('aria-expanded',expanded);this.textContent=expanded?'그림 축소 · 좌우로 밀어 읽기':'그림 확대해서 읽기';">그림 확대해서 읽기</button><div class="figure-scroll"><a class="image-link" href="../../figures/naver_20260918/04_zone_map.png" target="_blank" aria-label="그림 크게 보기"><img src="../../figures/naver_20260918/04_zone_map.png" alt="BCAP의 다섯 보고 구역. 가운데는 존 안 전체이며, 존 밖 모서리는 두 구역에 함께 포함된다."></a></div></figure>
+<p><em>그림 4. BCAP의 위치 분류 도식. 실제 투구 분포나 행동 권고를 그린 것이 아니라, 결과표의 구역을 설명한 그림이다.</em></p>
+</section><section class="content-section " aria-labelledby="section-5"><h2 id="section-5">5. 숫자의 뜻 — W는 최종 타석의 가중 공격가치</h2>
+<p>BCAP는 해당 공이 속한 <strong>타석의 최종 결과</strong>를 본다. 볼넷·단타·2루타·홈런 등에 시즌별 가중치를 부여한 공격가치를 W라고 부른다. BCAI도 이 원래 공격가치를 사용하지만, BCAP의 차이를 BCAI의 기준 100 지수와 섞어 읽어서는 안 된다.</p>
+<p>W가 크면 타자에게 유리하다. 투수는 상대의 W가 낮을수록 유리하다. W는 안타 확률이나 그 타석의 실제 득점이 아니다.</p>
+<h3 id="section-5-sub-1"><span class="sub-number">5.1</span>표에 들어가는 숫자는 어떻게 읽을까?</h3>
+<p>예를 들어 존 안의 값이 0.240, 존 밖의 값이 0.220이라면, ‘존 안−존 밖’은 +0.020이다. 이 숫자는 뺄셈을 읽기 위한 설명용 예시다. 양수라고 항상 좋은 결과라는 뜻은 없다. 타자는 큰 W를 원하지만 투수는 작은 W를 원하므로, 이 경우 투수에게는 존 밖 쪽이 좋은 방향이다.</p>
+<p>실제 표에서는 값이 어느 쪽인지뿐 아니라 구간이 0을 지나는지도 함께 본다. 앞의 표 1은 그렇게 얻은 연도별 차이를 부호·구간 상태·범위로 요약한 표다. 양수 점추정과 양수 구간의 연도 수가 다를 수 있다는 점을 함께 읽는다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 최종 결과를 중복해서 더하지 않기</strong></p>
+<p>같은 타석에서 여러 공을 던졌다고 이 차이를 계속 더할 수도 없다. 각 공에 연결된 결과가 이미 그 타석의 최종 W이기 때문이다. 같은 결과를 여러 번 계산하게 된다. 새로 만든 카운트 상태 평균 차이도 여기에 덧붙이지 않는다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-6"><h2 id="section-6">6. 계산 방법 — 선수·상황을 맞춰 두 행동 비교하기</h2>
+<p class="section-summary"><strong>보정은 두 행동을 같은 선수·상황 구성에서 비교하고, 예측과 실제 기록의 차이를 반영하는 과정이다.</strong> 아래 네 단계가 그 계산을 설명한다.</p>
+<p>단순 평균으로 두 행동을 비교하면 행동의 차이와 선수·상황의 차이가 섞인다. 예를 들어 좋은 변화구를 가진 투수들이 특정 카운트에서 그 공을 많이 던졌다면, 구종 평균에는 그 투수들의 특성도 들어간다.</p>
+<h3 id="section-6-sub-1"><span class="sub-number">6.1</span>1단계: 같은 선수·상황 목록에 두 선택을 올려놓기</h3>
+<p class="section-summary"><strong>두 행동을 같은 선수·상황 구성에 놓고 평균내는 것이 표준화다.</strong></p>
+<p>설명용으로 A 투수의 기록과 B 투수의 기록이 섞여 있다고 하자. A는 존 밖을 많이 쓰고 B는 존 안을 많이 쓴다면, 단순 평균은 서로 다른 구성의 투수들을 비교하게 된다. 표준화는 두 행동을 평가할 때 기준이 되는 선수·상황 목록을 같게 두는 작업이다. 그 목록의 각 조건에서 두 행동의 결과를 예상하고, 같은 비중으로 평균낸다.</p>
+<p>BCAP는 먼저 선수·카운트·경기 상황 등에 따라 각 행동의 결과를 예상한다. 이어 <strong>동일한 비교 대상의 선수·상황 구성을 기준으로 두 행동 값을 각각 평균낸다.</strong> 이것이 이 분석에서 말하는 표준화다. 가상의 평균 선수 한 명을 만들어 비교한 것은 아니다.</p>
+<h3 id="section-6-sub-2"><span class="sub-number">6.2</span>2단계: 결과 예측과 행동 선택 확률을 따로 만들기</h3>
+<p class="section-summary"><strong>행동별 예상 W와 그 행동을 선택할 확률을 별도로 추정한다.</strong></p>
+<p>여기에는 서로 다른 두 질문이 있다. 하나는 “이 조건에서 이 행동의 결과는 어느 정도일까”이고, 다른 하나는 “이 조건에서 이 행동은 얼마나 흔했을까”다. 결과가 좋을 것 같은 행동과 자주 선택되는 행동은 같을 수도 있지만, 처음부터 같은 값으로 취급할 수는 없다.</p>
+<p>결과를 예상하는 데는 Ridge 회귀를 사용했다. 선수별 자료가 적을 때 극단적인 계수가 나오지 않도록 추정을 조절하는 방식이다. 그리고 그 조건에서 해당 행동이 얼마나 자주 선택되는지도 별도로 추정했다.</p>
+<h3 id="section-6-sub-3"><span class="sub-number">6.3</span>3단계: 예측과 실제 기록 사이의 차이를 반영하기</h3>
+<p class="section-summary"><strong>AIPW는 결과 예측에 실제 관측 오차를 행동 확률로 조정해 더한다.</strong></p>
+<p>예측 모형만 믿으면 모형이 놓친 부분도 그대로 평균에 들어간다. 실제 기록에서는 그 행동을 했을 때 예측보다 얼마나 높거나 낮은 결과가 나왔는지 확인할 수 있다. 이 차이를 보정에 사용하되, 어떤 조건에서 흔한 행동이었고 드문 행동이었는지도 함께 고려한다.</p>
+<p>마지막 계산에는 AIPW라는 방법을 썼다. 풀어 말하면 <strong>행동별 결과 예측값에, 실제 결과와 예측의 차이를 행동 선택 확률로 조정해 더하는 방법</strong>이다. 단순 평균과 결과 예측만의 평균, 최종 보정값을 함께 확인해 어느 부분에서 차이가 생기는지도 살폈다.</p>
+<p>감각을 잡기 위한 <strong>가상 예시</strong>를 보자. 결과 예측이 0.30인데 실제 관측이 0.50이었다면 오차는 +0.20이다. 그 행동의 선택 확률을 0.5로 추정했다면, 역확률 가중 오차의 해당 기여는 +0.40이 된다. 이것만으로 최종 비교값을 만드는 것은 아니다. 관측된 행동의 표시, 각 투구의 예측값, 전체 평균 계산이 함께 들어간다. 다만 드물게 관측된 행동에 큰 가중치가 붙을 수 있다는 점을 보여준다.</p>
+<p>그래서 보정 방법을 선택한 다음에는 반드시 비교가 충분히 가능한지도 확인해야 한다. 그 이야기는 다음 절의 빈칸으로 이어진다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 기록으로 지울 수 없는 차이</strong></p>
+<p>‘보정’이라는 단어가 모든 차이를 지웠다는 뜻은 아니다. 당일 구위와 컨디션, 투수가 노린 곳, 타자의 예상은 기록에 충분히 담기지 않는다. 최종 결과를 연결할 수 있는 완료 타석을 고르고 고의볼넷·결측 등을 제외한 데서 오는 선택도 남아 있다.</p>
+</aside>
+<h3 id="section-6-sub-4"><span class="sub-number">6.4</span>4단계: 평가할 경기의 결과를 먼저 보지 않기</h3>
+<p class="section-summary"><strong>경기를 세 묶음으로 나눠, 해당 경기를 배우지 않은 모형으로 그 경기를 평가했다.</strong></p>
+<p>또 자기 경기의 정답을 이미 본 모형으로 그 경기를 채점하지 않도록, 경기를 세 집단으로 나눴다. 한 집단을 평가할 때는 나머지 경기로 보조 모형을 만들었다. 같은 경기의 투구와 타석은 한쪽에 함께 뒀다. 변수의 범주를 정하거나 확률을 조정하는 작업도 훈련 경기 안에서 처리했다.</p>
+<p>이 과정을 세 번 바꾸어 수행하면 각 경기는 자신을 학습에 넣지 않은 모형으로 평가받는다. 경기 1개를 평가하려고 매번 모형을 새로 만드는 대신, 세 경기 묶음을 번갈아 맡긴 것이다. 같은 경기의 앞 타석을 배우고 뒤 타석을 시험하는 식의 섞임도 피했다. 이 절차를 교차적합이라고 부른다.</p>
+<h3 id="section-6-sub-5"><span class="sub-number">6.5</span>비교하는 선택에 따라 쓸 수 있는 정보도 달라진다</h3>
+<p class="section-summary"><strong>투수의 선택과 타자의 선택은 보정에 쓰는 정보가 다르다.</strong></p>
+<p>투수와 타자의 보정 조건도 다르다. 투수의 구종 비교에는 현재 공의 위치·구속·스윙 결과를 넣지 않는다. S/B 비교에는 현재 구종 계열을 쓰지만 현재 좌표·스윙·구속·움직임을 보정 변수로 넣지 않는다. 반면 타자 비교는 관측된 위치·구속·움직임까지 조건으로 사용한다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 타자가 알 수 있었던 정보</strong></p>
+<p>분석가는 투구가 끝난 뒤 공의 특성을 볼 수 있다. 타자가 스윙을 결정할 때도 그 정보를 정확히 알고 있었다고 볼 수는 없다. 그래서 BCAP의 타자 결과를 실시간 판단의 정답표로 읽지 않는다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-7"><h2 id="section-7">7. 비교의 조건 — 자료 부족과 차이 불명확 구별하기</h2>
+<p class="section-summary"><strong>빈칸은 양쪽 행동을 비교할 자료가 충분하지 않다는 표시다. 차이가 없다는 결과와 구분한다.</strong></p>
+<p>리그 전체 투구가 많다고 모든 세부 비교가 가능한 것은 아니다. 어떤 조건에서 대부분 테이크만 했다면, 그곳의 스윙 가치는 드문 사례에 크게 의존할 수 있다.</p>
+<p>BCAP는 양쪽 행동의 기록이 비교를 뒷받침하는 범위만 남긴다. 이를 <strong>공통 지원</strong>이라고 한다. 같은 경기 조건에서 두 선택을 비교할 발판이 얼마나 있는지를 확인하는 절차다. 선수의 실력이 좋다는 의미의 ‘지원’은 아니다.</p>
+<h3 id="section-7-sub-1"><span class="sub-number">7.1</span>공이 많다는 것과 비교가 충분하다는 것은 다르다</h3>
+<p class="section-summary"><strong>한쪽 행동에 기록이 몰리거나 일부 투구에 가중치가 집중되면, 전체 투구가 많아도 비교 근거는 부족할 수 있다.</strong></p>
+<p>가령 가상의 어떤 구역에 투구가 1,000개 있어도 999개를 지켜보고 한 개만 휘둘렀다면, 스윙 쪽 비교는 사실상 그 한 사례에 크게 기대게 된다. 전체 개수만 보고 자료가 충분하다고 판단하기 어려운 이유다. 게다가 몇 개의 기록에 큰 가중치가 몰리면, 겉으로 보이는 투구 수보다 실제 비교를 지탱하는 정보는 작아진다.</p>
+<p>행동 선택 확률이 5–95% 범위에 있는지, 훈련 자료에서 해당 선수가 양 행동을 충분히 했는지 등을 확인한다. 결과를 표시할 집단에는 투구 수뿐 아니라 행동별 유효 표본, 경기 수, 비교에 남은 비율, 특정 경기에 가중치가 몰리는 정도의 기준도 적용한다. 유효 표본은 가중치가 한쪽에 쏠릴수록 줄어드는 양이며 원래 투구 수와 다르다.</p>
+<p>이 과정을 거쳐도 모든 세부 상황이 완전히 같아지지는 않는다. 그래서 결과표에서는 다음 네 표현을 구별한다.</p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>표의 표시</th>
+<th>무엇을 뜻하나</th>
+<th>실제 사례</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+표의 표시">방향이 뚜렷함</td>
+<td data-label="무엇을 뜻하나">지원 기준을 통과하고 보정 구간도 같은 방향</td>
+<td data-label="실제 사례">0-2 S/B의 11시즌 중 10시즌</td>
+</tr>
+<tr>
+<td data-label="
+
+표의 표시">차이 불명확</td>
+<td data-label="무엇을 뜻하나">비교는 가능하지만 구간이 0을 포함</td>
+<td data-label="실제 사례">추가 9시즌 존 안 3-0·3-1의 스윙/테이크</td>
+</tr>
+<tr>
+<td data-label="
+
+표의 표시">비교 자료 부족</td>
+<td data-label="무엇을 뜻하나">한쪽 행동 등의 지원 기준을 통과하지 못함</td>
+<td data-label="실제 사례">3-0 존 밖 네 구역의 스윙/테이크</td>
+</tr>
+<tr>
+<td data-label="
+
+표의 표시">측정 보류</td>
+<td data-label="무엇을 뜻하나">같은 뜻으로 측정됐다는 근거가 부족해 계산을 보류</td>
+<td data-label="실제 사례">2026 S/B·타자 비교</td>
+</tr>
+</tbody></table></div>
+<p><em>표 5. 판정 설명과 해당 사례. ‘불명확’은 두 행동이 같다는 뜻이 아니다. ‘측정 보류’는 계산했더니 패턴이 사라졌다는 뜻도 아니다. 출처: <a href="../../analysis/bcap_external_20260914__r01/report.md">외부 결과 보고서</a>.</em> </p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 자료 부족의 의미</strong></p>
+<p>특히 3-0 존 밖의 빈칸은 숨긴 결과가 아니다. 스윙이 드문 조건에서 충분한 비교 근거를 확보하지 못했다는 표시다. 그 빈칸을 ‘테이크가 유리하다’거나 ‘차이가 없다’로 채우지 않았다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-8"><h2 id="section-8">8. 개발 과정을 더 읽고 싶다면</h2>
+<p class="section-summary"><strong>결과를 읽는 데 필요한 정의와 계산은 이 글에, 분모·수렴·분류를 고친 과정은 별도 검증 글에 모았다.</strong></p>
+<p><a href="05_data_validation.html">⑤ 데이터 검증·모델 한계·개발 과정</a>에서 문제를 발견한 이유, 수정한 내용, 확인한 범위와 남은 질문을 차례로 볼 수 있다. 계산을 안정화한 것과 예측력이 높아진 것, 다른 연도의 패턴과 실제 전략의 효과는 나눠 설명했다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 저장값이 있어도 지원 기준부터 본다</strong></p>
+<p>원 감사 파일에는 지원 기준 미달이어도 계산된 숫자가 남아 있다. 독자용 표와 그림에서는 그 숫자를 숨겼다. 원 파일에 값이 있다는 이유로 방향·범위에 포함하지 않는다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-9"><h2 id="section-9">9. 결과를 사용할 때 기억할 범위</h2>
+<p class="section-summary"><strong>BCAP는 관측된 행동을 보정해 비교하는 탐색 단계의 모델이다.</strong> 표의 방향을 곧바로 모든 선수의 투구·타격 지시로 바꾸지 않는다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 비교 결과와 실전 선택</strong></p>
+<p>실제 도착 위치를 안 뒤의 비교와 날아오는 공을 판단하는 일은 다르다. 투수가 겨냥한 위치와 실제 간 위치도 같지 않다. 상대가 배합을 알아채고 대응한 뒤의 효과는 아직 계산하지 않았다.</p>
+</aside>
+<p>무엇을 검산했고 구간에 어떤 불확실성이 포함됐는지, 왜 탐색 상태를 유지하는지는 <a href="05_data_validation.html#validation-years">⑤ 검증 글 4–5절</a>에 모았다. 이 글에서는 <strong>무엇을 비교했는지, 어떤 자료가 비교를 뒷받침하는지, 숫자의 방향이 무엇인지</strong>를 먼저 읽으면 된다.</p>
+<p><a href="01_ball_count.html">볼카운트 분석 칼럼으로 돌아가기</a> · <a href="02_bcai.html">BCAI 설명서 읽기</a></p>
+<hr>
+<p>이 글은 Baseline의 MLB 분석 결과와 방법 기록을 설명한 자료다. 외부 논문의 결과를 BCAP의 검증 근거로 사용하지 않았다. 상세 수치 출처와 검토 메모는 별도 <a href="03_bcap_evidence.md">집필 근거표</a>에 보관했다.</p>
+<p><a href="04_references_ko.html">참고문헌 한국어 해설</a>의 기대값·게임이론·타석 정책 해설을 함께 보면, 현재 BCAP와 외부 연구가 각각 어느 질문을 다루는지 비교할 수 있다.</p>
+</section><section class="content-section " aria-labelledby="section-10"><h2 id="section-10">이 글의 용어 메모</h2>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>용어</th>
+<th>이 글에서의 뜻</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+용어">스윙·테이크</td>
+<td data-label="이 글에서의 뜻">방망이를 내는 행동과 지켜보는 행동. 이번 스윙 분류에는 번트 시도도 포함</td>
+</tr>
+<tr>
+<td data-label="
+
+용어">보정</td>
+<td data-label="이 글에서의 뜻">선수·상황 구성의 차이를 고려해 비교하는 계산</td>
+</tr>
+<tr>
+<td data-label="
+
+용어">성향점수</td>
+<td data-label="이 글에서의 뜻">기록된 조건에서 해당 행동을 선택할 것으로 추정한 확률</td>
+</tr>
+<tr>
+<td data-label="
+
+용어">교차적합</td>
+<td data-label="이 글에서의 뜻">자료를 나누어 보조 모형을 학습하고, 학습에 쓰지 않은 부분에서 비교 점수를 계산하는 방식</td>
+</tr>
+<tr>
+<td data-label="
+
+용어">공통 지원</td>
+<td data-label="이 글에서의 뜻">비교할 조건에서 두 행동이 모두 관찰돼 비교를 뒷받침할 수 있는 범위</td>
+</tr>
+<tr>
+<td data-label="
+
+용어">AIPW</td>
+<td data-label="이 글에서의 뜻">결과 예측과 행동 선택 확률을 함께 사용하고 실제 기록과의 차이를 반영하는 추정 방법</td>
+</tr>
+<tr>
+<td data-label="
+
+용어">신뢰구간</td>
+<td data-label="이 글에서의 뜻">정해진 반복 표집 절차에 바탕을 둔 불확실성 구간. 이번 구간이 포함하는 변동의 범위는 검증 글에서 설명</td>
+</tr>
+</tbody></table></div>
+<p><a href="05_data_validation.html">데이터와 검증 기록</a> · <a href="01_ball_count.html">본문으로 돌아가기</a></p>
+<p><a id="main-numeric-examples"></a></p>
+</section><section class="content-section " aria-labelledby="section-11"><h2 id="section-11">본문에서 이어 읽기 — W 차이와 스윙 비교 횟수</h2>
+<p>본문에서는 행동별 결과를 읽는 데 집중하고, 점수 차이와 비교 횟수의 세부 사항은 이 절에 모았다.</p>
+<h3 id="section-11-sub-1">W로 평균과 차이를 어떻게 읽을까?</h3>
+<p>W는 볼넷·사구·안타·장타 등 최종 타석 결과에 연도별 가중치를 붙인 공격가치다. BCAP는 같은 카운트에서 위치·스윙·구종의 두 집단을 나누고, 기록된 선수·경기 상황 차이를 보정한 평균을 비교한다. 원래 단위 W의 차이를 사용하며 BCAI처럼 100 기준으로 바꾸지 않는다. 타자에게는 평균이 높은 행동, 투수에게는 낮은 공격가치를 허용한 쪽이 좋은 방향이다.</p>
+<h3 id="section-11-sub-2">위치·구종 차이는 어느 정도였을까?</h3>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>비교</th>
+<th>연도별로 추정한 차이</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+비교">위치 · 0-2</td>
+<td data-label="연도별로 추정한 차이">존 밖의 허용 공격가치가 0.023–0.035 W 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">위치 · 1-2</td>
+<td data-label="연도별로 추정한 차이">존 밖이 0.011–0.026 W 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">위치 · 3-0</td>
+<td data-label="연도별로 추정한 차이">존 안이 0.126–0.176 W 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">패스트볼 계열 · 3-0</td>
+<td data-label="연도별로 추정한 차이">비교 가능한 10시즌에서 나머지 구종이 0.068–0.118 W 낮음</td>
+</tr>
+<tr>
+<td data-label="
+
+비교">포심 · 3-2</td>
+<td data-label="연도별로 추정한 차이">비포심이 0.014–0.037 W 낮음</td>
+</tr>
+</tbody></table></div>
+<p><em>MLB 2015–2025. 소수 셋째 자리로 반올림한 연도별 차이의 범위이며 신뢰구간은 아니다. 점추정과 구간의 확실성은 이 글 앞의 결과표에서 구별했다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv">BCAP 전체 결과</a>.</em></p>
+<h3 id="section-11-sub-3">스윙과 지켜보기의 평균을 나란히 놓으면?</h3>
+<p>2023년 0-2의 예다. 같은 카운트·위치 구역에서 보정한 최종 공격가치이며, 단일 시즌의 사례를 11시즌 평균으로 해석하지 않는다.</p>
+<div class="table-wrap"><table class="mobile-cards">
+<thead>
+<tr>
+<th>위치</th>
+<th>스윙</th>
+<th>지켜보기</th>
+<th>스윙−지켜보기</th>
+<th>보정 구간</th>
+<th>사용 투구 수</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+위치">존 안</td>
+<td data-label="스윙">0.250</td>
+<td data-label="지켜보기">0.040</td>
+<td data-label="스윙−지켜보기">+0.210</td>
+<td data-label="보정 구간">+0.183–+0.238</td>
+<td data-label="사용 투구 수">11,948</td>
+</tr>
+<tr>
+<td data-label="
+
+위치">바깥쪽 존 밖</td>
+<td data-label="스윙">0.123</td>
+<td data-label="지켜보기">0.199</td>
+<td data-label="스윙−지켜보기">−0.077</td>
+<td data-label="보정 구간">−0.100–−0.054</td>
+<td data-label="사용 투구 수">15,323</td>
+</tr>
+</tbody></table></div>
+<p><em>단위 W. 평균과 차이를 각각 반올림해 표시했다. <a href="main_v10/swing_example_2023.csv">2023년 0-2 원 수치</a>.</em></p>
+<p>0.03 W의 차이는 승률 3%나 실제 득점 0.03점이 아니다. 넓은 위치 구역 안에서도 세부 위치·공의 질 등의 차이가 남으며, 관측 자료의 보정으로 같은 공에 두 행동을 실험한 효과를 얻은 것은 아니다.</p>
+<h3 id="section-11-sub-4">132번과 481번은 무엇을 센 숫자일까?</h3>
+<p>‘2019년 0-2의 존 안 공’에서 스윙과 지켜보기를 비교하면 한 번이다. 투구 수나 선수 수가 아니라 카운트·시즌·위치별 비교를 센다.</p>
+<ul>
+<li>존 안: 12카운트×11시즌=132번. 130번에서 스윙 쪽 평균이 높았고, 그중 103번은 불확실성 구간까지 같은 방향이었다. 나머지 두 번은 3-0에서 지켜보기 방향으로 추정됐으나 차이가 불명확했다.</li>
+<li>존 밖: 12카운트×11시즌×4구역=528번 중 481번이 비교 기준을 통과했다. 이 481번은 모두 지켜보기 방향이었고, 477번은 구간까지 같은 방향이었다. 나머지 47번은 자료 부족 등으로 판단을 보류했다. 모서리 공이 두 구역에 포함될 수 있으므로 서로 독립된 투구 집단 528개라는 뜻은 아니다.</li>
+<li>두 스트라이크만 보면: 0-2·1-2·2-2·3-2×11시즌×존 밖 4구역=176번 모두 비교 가능했고, 모두 지켜보기 쪽 평균이 높았다. 그중 0-2만 세면 44번이다. 이 횟수는 점추정의 방향이며, 전부 유의하거나 서로 독립된 실험이라는 뜻은 아니다.</li>
+</ul>
+<p><a href="main_v10/two_strike_swing.csv">두 스트라이크 비교 집계</a> · <a href="01_ball_count.html#chapter-swing">본문으로 돌아가기</a></p>
+</section></article><div class="endnav"><a href="index.html">연재와 문헌 읽기 안내</a><a href="01_ball_count.html">볼카운트 분석 칼럼</a><a href="02_bcai.html">BCAI 설명 글</a><a href="04_references_ko.html">참고문헌 한국어 해설</a><a href="05_data_validation.html">데이터·검증·개발 과정</a></div></main></body></html>

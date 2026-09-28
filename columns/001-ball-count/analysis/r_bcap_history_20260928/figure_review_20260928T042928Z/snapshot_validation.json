@@ -1,0 +1,300 @@
+{
+  "status": "PASS",
+  "captured_utc": "2026-09-28T04:35:50.9756534Z",
+  "before_generated_at": "2026-09-28 13:24:53 KST",
+  "after_generated_at": "2026-09-28 13:34:44 KST",
+  "before_model_years": 24,
+  "after_model_years": 25,
+  "old_summary_rows": 1392,
+  "current_summary_rows": 1405,
+  "overlapping_rows_exactly_unchanged": 1392,
+  "original_input_hashes_unchanged": 100,
+  "chart_axis_checks": 29,
+  "all_chart_axes_standard_order": true,
+  "unsupported_3_0_retains_standard_position": true,
+  "standard_order_top_to_bottom": [
+    "0-0",
+    "0-1",
+    "0-2",
+    "1-0",
+    "1-1",
+    "1-2",
+    "2-0",
+    "2-1",
+    "2-2",
+    "3-0",
+    "3-1",
+    "3-2"
+  ],
+  "inputs": [
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/report_validation.json",
+      "sha256": "d20e9ce1a40d4df7a3d2524691ca01a33b340eff6ff893b527207d88f3e73989",
+      "bytes": 37254,
+      "modified_utc": "2026-09-28T04:24:54.2088248Z"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.md",
+      "sha256": "910e9071bc0b630bf774e8d4f02dd4a79d3995223cecec07561e3d51c7436bac",
+      "bytes": 18246,
+      "modified_utc": "2026-09-28T04:24:53.474363Z"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.html",
+      "sha256": "75a137cacd3b9df9931e96097bac032c953560dd20c71b82ca888f7eecf2cc6c",
+      "bytes": 33714,
+      "modified_utc": "2026-09-28T04:24:53.5056223Z"
+    },
+    {
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/summary.csv",
+      "sha256": "371571dc19bed06585b1c49552a32d53b2f95aeba57a8d36111e30f4f4196b83",
+      "bytes": 1331441,
+      "modified_utc": "2026-09-28T04:24:28.9672422Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2020_count_mobile.png",
+      "sha256": "c0a3e7433c80af984715c0fcd3d27ee0b69ede82525cf737af492bc10395bb13",
+      "bytes": 25241,
+      "modified_utc": "2026-09-28T04:24:35.5215064Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2021_count_mobile.png",
+      "sha256": "dbc7bb144a57db0527979eee823fc4cb7ce68f98ba8f7ed9646c83ca1a3e313c",
+      "bytes": 25324,
+      "modified_utc": "2026-09-28T04:24:34.6166103Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_count_history.png",
+      "sha256": "1154b2f3727fee0cc5dd748a8f9a1f727032cb69d03d266ab8aef91b1862cce5",
+      "bytes": 58434,
+      "modified_utc": "2026-09-28T04:24:30.5316808Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2020_count_mobile.png",
+      "sha256": "7ca30cd2350b526a4caa235baaf3a6c54f4eafbf4f2ae49d14219d9efe64b1e8",
+      "bytes": 24557,
+      "modified_utc": "2026-09-28T04:24:41.5149449Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2021_count_mobile.png",
+      "sha256": "2ea1ce40033ab7fc502aab1ac064be7de7120d675968bdf77373b806216a710f",
+      "bytes": 24039,
+      "modified_utc": "2026-09-28T04:24:40.8370855Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_count_history.png",
+      "sha256": "a70ca93f65dcda63232448858ea917d22935af1e6605bf3dba29cf6b3399ed2a",
+      "bytes": 63770,
+      "modified_utc": "2026-09-28T04:24:37.3277733Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2020_count_mobile.png",
+      "sha256": "3c8e794f386ab141471f7f6bc289927987ebbc0ae570e14a8a88a9cbfa93856d",
+      "bytes": 25344,
+      "modified_utc": "2026-09-28T04:24:47.37113Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2021_count_mobile.png",
+      "sha256": "120494c9509dce5950cf86fc5bd5aea6a5016dd812bd40ccf984ab0d8c9246d3",
+      "bytes": 25514,
+      "modified_utc": "2026-09-28T04:24:46.7102305Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_count_history.png",
+      "sha256": "204cc6e3bd33caa977a32a8549a826c323be77fc2a730b01c247eb0e05e9957e",
+      "bytes": 60621,
+      "modified_utc": "2026-09-28T04:24:43.2622722Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2020_count_mobile.png",
+      "sha256": "bb569008b0b996e1131011c90aa1cdb3360e8fb94e5a375b04827e3013ed36da",
+      "bytes": 22452,
+      "modified_utc": "2026-09-28T04:24:53.2276926Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2021_count_mobile.png",
+      "sha256": "04def3c81e77a6a880e2ff14b1b31a3dcc5230bfb90a67cbba9bc1668e5d5047",
+      "bytes": 24221,
+      "modified_utc": "2026-09-28T04:24:52.5400862Z"
+    },
+    {
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_count_history.png",
+      "sha256": "0d4adfd989ec010f63d52b75de52a1d14ab17e7d33883d6186a1fd86edb2a329",
+      "bytes": 73381,
+      "modified_utc": "2026-09-28T04:24:49.070009Z"
+    }
+  ],
+  "after_files": [
+    {
+      "bytes": 18683,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.md",
+      "sha256": "ed958a45ac162f07f11634ce74f1a5c4eb57f5437922ab3d54787e340fe125d9"
+    },
+    {
+      "bytes": 34601,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/report.html",
+      "sha256": "bcb1b86609bfa7a51f62484992d41a033a8b3a502579389a9bb615acb02e863c"
+    },
+    {
+      "bytes": 1343631,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/summary.csv",
+      "sha256": "25651a3e8a1f235ae84b2eb0985b31f40e60d6a9cf8544a9013e43f4a691f9f5"
+    },
+    {
+      "bytes": 70558,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_count_history.png",
+      "sha256": "a2d22e805c836ec664497eeb50497c28eaa1f806c1333724a56ee25f5c505f34"
+    },
+    {
+      "bytes": 24619,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2025_count_mobile.png",
+      "sha256": "0567132c80c9a9085be2ad4bbbcfb853f622e2da9d8fc0f56aef16e66a7259bc"
+    },
+    {
+      "bytes": 25465,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2024_count_mobile.png",
+      "sha256": "debe2b7d48ba565e27eda891c6a19374deaf2056a9068de1ae6dd42edeab4b59"
+    },
+    {
+      "bytes": 25662,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2023_count_mobile.png",
+      "sha256": "5fc777c01e60d4e54c6c7014b6ffc1ee133743805a45941f56caba7c42d3fb3c"
+    },
+    {
+      "bytes": 25940,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2022_count_mobile.png",
+      "sha256": "f88b9304b5bf6506dbad6a90015f2697ed71959ba9be0b5ed759cabb26925abf"
+    },
+    {
+      "bytes": 25324,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2021_count_mobile.png",
+      "sha256": "dbc7bb144a57db0527979eee823fc4cb7ce68f98ba8f7ed9646c83ca1a3e313c"
+    },
+    {
+      "bytes": 25178,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2020_count_mobile.png",
+      "sha256": "f786210543fc96b42d7082a787431ff73a52abd73260b6b90cca5ba1dc5a88eb"
+    },
+    {
+      "bytes": 25540,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_2019_count_mobile.png",
+      "sha256": "2494a06a74cc92a28093d5af1245c58fe99ed72a115d9f154751b0f2c68309a5"
+    },
+    {
+      "bytes": 63770,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_count_history.png",
+      "sha256": "a70ca93f65dcda63232448858ea917d22935af1e6605bf3dba29cf6b3399ed2a"
+    },
+    {
+      "bytes": 25179,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2025_count_mobile.png",
+      "sha256": "595248b73d3b47849bc0dc8c3ac53cd8e009d05540d2112908d311b2ee05ca1e"
+    },
+    {
+      "bytes": 24608,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2024_count_mobile.png",
+      "sha256": "d4f2ac6fe9548404141e5777448e313b6ade79fe10d2438ada769b154db95f3c"
+    },
+    {
+      "bytes": 24183,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2023_count_mobile.png",
+      "sha256": "76c9d8a576fffb052681ab227fc4eafdfa06d3ed035a517cbf4cb0313b19ae1b"
+    },
+    {
+      "bytes": 24920,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2022_count_mobile.png",
+      "sha256": "8b847395b967bb9f05a22169eaeee6428ab6b4e6d833326e8c3a46d3ccecb6fe"
+    },
+    {
+      "bytes": 24039,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2021_count_mobile.png",
+      "sha256": "2ea1ce40033ab7fc502aab1ac064be7de7120d675968bdf77373b806216a710f"
+    },
+    {
+      "bytes": 24557,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_sb_2020_count_mobile.png",
+      "sha256": "7ca30cd2350b526a4caa235baaf3a6c54f4eafbf4f2ae49d14219d9efe64b1e8"
+    },
+    {
+      "bytes": 60621,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_count_history.png",
+      "sha256": "204cc6e3bd33caa977a32a8549a826c323be77fc2a730b01c247eb0e05e9957e"
+    },
+    {
+      "bytes": 27162,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2025_count_mobile.png",
+      "sha256": "2d440329c4daf3fd265ff9debb2aa9a44306070cee29804a5adec18743e3fcab"
+    },
+    {
+      "bytes": 26690,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2024_count_mobile.png",
+      "sha256": "92017c51f791315a29448f379646e234f287a12b04fb801b89f2b09c7118e741"
+    },
+    {
+      "bytes": 23768,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2023_count_mobile.png",
+      "sha256": "02a82b661ab46c2cad13aec3dd4f457def3eac5129d92735dcf7025becc9ad4a"
+    },
+    {
+      "bytes": 25497,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2022_count_mobile.png",
+      "sha256": "2a158bca1c477715f9a3f2de9507028ee353269adb9eff0933c3e4f6bb352256"
+    },
+    {
+      "bytes": 25514,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2021_count_mobile.png",
+      "sha256": "120494c9509dce5950cf86fc5bd5aea6a5016dd812bd40ccf984ab0d8c9246d3"
+    },
+    {
+      "bytes": 25344,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/swing_2020_count_mobile.png",
+      "sha256": "3c8e794f386ab141471f7f6bc289927987ebbc0ae570e14a8a88a9cbfa93856d"
+    },
+    {
+      "bytes": 73381,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_count_history.png",
+      "sha256": "0d4adfd989ec010f63d52b75de52a1d14ab17e7d33883d6186a1fd86edb2a329"
+    },
+    {
+      "bytes": 23196,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2025_count_mobile.png",
+      "sha256": "b0fc018af9f743cc90028725fa6246ed6719c8fa426b9353c1f26893b25632c3"
+    },
+    {
+      "bytes": 23070,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2024_count_mobile.png",
+      "sha256": "1fd008867d9ab124d3bb2f201c7657173c9b3f2dd1b76ea49c7203c468065579"
+    },
+    {
+      "bytes": 25198,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2023_count_mobile.png",
+      "sha256": "139d542f9a1250326078c6fb923460def0b2d3a3001ae14be0a53d2b58ff005c"
+    },
+    {
+      "bytes": 22853,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2022_count_mobile.png",
+      "sha256": "575a398aaf2fc6edc24b18001b7f550d04147fb8aa8761877b736bedc54b4251"
+    },
+    {
+      "bytes": 24221,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2021_count_mobile.png",
+      "sha256": "04def3c81e77a6a880e2ff14b1b31a3dcc5230bfb90a67cbba9bc1668e5d5047"
+    },
+    {
+      "bytes": 22452,
+      "path": "columns/001-ball-count/figures/r_bcap_history_20260928/pitch_ff_2020_count_mobile.png",
+      "sha256": "bb569008b0b996e1131011c90aa1cdb3360e8fb94e5a375b04827e3013ed36da"
+    },
+    {
+      "bytes": 45486,
+      "path": "columns/001-ball-count/analysis/r_bcap_history_20260928/report_validation.json",
+      "sha256": "f091bf63039c0b5a91982d4e9c717c5f419d8b596e676053603516cd635612f6"
+    },
+    {
+      "bytes": 27369,
+      "path": "tools/render_bcap_history.R",
+      "sha256": "a825d7f2942739d5cd3799356400862c2252052a58e92f0ca1c99c8a92919776"
+    }
+  ],
+  "scope": "보존한 보고서 사본의 축 순서·집계 불변·원 입력 해시 확인. 이후 자동 갱신 결과에 대한 육안 검수 주장이 아님."
+}

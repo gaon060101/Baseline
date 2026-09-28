@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-09-28T09:16:26.979Z",
+  "pass": true,
+  "pages": 1,
+  "viewports": [
+    1280,
+    390
+  ],
+  "checks": [
+    {
+      "file": "01_ball_count.html",
+      "width": 1280,
+      "overflow": false,
+      "brokenImages": [],
+      "brokenLinks": [],
+      "wideTables": 5,
+      "mobileCards": null,
+      "unintendedStrikethrough": 0,
+      "literalEmphasis": false,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "brokenLinks": [],
+      "wideTables": 5,
+      "mobileCards": true,
+      "unintendedStrikethrough": 0,
+      "literalEmphasis": false,
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 390,
+      "figure": 1,
+      "zoom": {
+        "expanded": true,
+        "imageWidth": 900,
+        "documentOverflow": false
+      },
+      "pass": true
+    },
+    {
+      "file": "01_ball_count.html",
+      "width": 390,
+      "figure": 2,
+      "zoom": {
+        "expanded": true,
+        "imageWidth": 900,
+        "documentOverflow": false
+      },
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "note": "실제 Edge 렌더링·이미지·로컬 파일 링크·명시된 내부 앵커·모바일 카드·문서 가로 넘침 검사. 외부 웹 접근 및 수치 검증과는 별도."
+}

@@ -1,0 +1,14 @@
+{
+  "n": 706627,
+  "support": 686918,
+  "coverage": 0.97210834004361568,
+  "games": 2429,
+  "MSE": 0.2357199960248251,
+  "Brier": 0.22330566563274232,
+  "logloss": 0.63554349255412779,
+  "all_fit_converged": true,
+  "fit_logs": 12,
+  "summary_groups": 13,
+  "years": 2022,
+  "policy_learning": false
+}

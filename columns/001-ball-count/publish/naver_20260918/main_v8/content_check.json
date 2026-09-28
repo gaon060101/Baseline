@@ -1,0 +1,29 @@
+{
+  "other_files_unchanged": {
+    "02_bcai.md": true,
+    "02_bcai.html": true,
+    "03_bcap.md": true,
+    "03_bcap.html": true,
+    "04_references_ko.md": true,
+    "04_references_ko.html": true,
+    "05_data_validation.md": true,
+    "05_data_validation.html": true,
+    "index.html": true
+  },
+  "all_12_scores_match_R_output": {
+    "0-0": true,
+    "0-1": true,
+    "0-2": true,
+    "1-0": true,
+    "1-1": true,
+    "1-2": true,
+    "2-0": true,
+    "2-1": true,
+    "2-2": true,
+    "3-0": true,
+    "3-1": true,
+    "3-2": true
+  },
+  "old_expansion_prose_absent": true,
+  "pass": true
+}

@@ -1,0 +1,180 @@
+{
+  "status": "PASS_PREDICATE_WITH_PREPARATION_BLOCKERS",
+  "checked_at": "2026-09-28T12:45:18+0900",
+  "code": {
+    "path": "C:/Users/백창현/Desktop/Baseline/models/bcap/r/prepare_raw.R",
+    "sha256": "1120a5834f06723fa5477b9438f3991cab7e6f1aadecc0721772c2bcd5c983b7"
+  },
+  "bcai_code": {
+    "path": "models/bcai/observed/v1.0.0/r/run.R",
+    "sha256": "f37d6e1162d07697341f09583bb64d06e254735691dae47769bbc96fea3de27f"
+  },
+  "checks": [
+    {
+      "year": 2020,
+      "path": "columns/001-ball-count/data/raw/mlb/2020/snapshot_20260928_r_history/schedule_2020.json",
+      "sha256": "f16bed1f2c142b2a5b975be5fc5491d82a93e6b4ff761a8d511c77fcb8f0a093",
+      "matches_bcai_on_all_records": true,
+      "old_records": 971,
+      "completed_records": 900,
+      "old_unique_games": 900,
+      "completed_unique_games": 898,
+      "removed_ids": [
+        631472,
+        631471
+      ],
+      "preparation_gate": "BLOCKED_CONFLICTING_VENUE",
+      "normalization": {},
+      "conflicting_records": [
+        {
+          "game_pk": 630882,
+          "year": 2020,
+          "venue": 3309,
+          "official_date": "2020-08-09",
+          "cutoff": "2020-12-31"
+        },
+        {
+          "game_pk": 630882,
+          "year": 2020,
+          "venue": 2,
+          "official_date": "2020-08-09",
+          "cutoff": "2020-12-31"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "path": "columns/001-ball-count/data/raw/mlb/2021/snapshot_20260928_r_history/schedule_2021.json",
+      "sha256": "30f58024eda83d94d03ee3d097bd5bf28760d7931eb28edb5770272d0fb44059",
+      "matches_bcai_on_all_records": true,
+      "old_records": 2511,
+      "completed_records": 2437,
+      "old_unique_games": 2429,
+      "completed_unique_games": 2429,
+      "removed_ids": [],
+      "preparation_gate": "BLOCKED_CONFLICTING_VENUE",
+      "normalization": {},
+      "conflicting_records": [
+        {
+          "game_pk": 633224,
+          "year": 2021,
+          "venue": 4705,
+          "official_date": "2021-07-21",
+          "cutoff": "2021-12-31"
+        },
+        {
+          "game_pk": 633224,
+          "year": 2021,
+          "venue": 2680,
+          "official_date": "2021-07-21",
+          "cutoff": "2021-12-31"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "path": "columns/001-ball-count/data/raw/mlb/2022/snapshot_20260928_r_history/schedule_2022.json",
+      "sha256": "11eeea60d8fa2616e66a191d9e0d3b0c30185c6e5fc3d5786884a0c4b1e1ba86",
+      "matches_bcai_on_all_records": true,
+      "old_records": 2479,
+      "completed_records": 2431,
+      "old_unique_games": 2430,
+      "completed_unique_games": 2430,
+      "removed_ids": [],
+      "preparation_gate": "PASS",
+      "normalization": {
+        "records_before": 2431,
+        "unique_games": 2430,
+        "duplicated_games": 1,
+        "identical_records_removed": 1,
+        "conflicting_games": 0,
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"]
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2023,
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+      "sha256": "eb8b18a8a25c1bf017f6512b7770f0ecfcc0f69c04dac38707e874046788ef68",
+      "matches_bcai_on_all_records": true,
+      "old_records": 2476,
+      "completed_records": 2437,
+      "old_unique_games": 2430,
+      "completed_unique_games": 2430,
+      "removed_ids": [],
+      "preparation_gate": "PASS",
+      "normalization": {
+        "records_before": 2437,
+        "unique_games": 2430,
+        "duplicated_games": 7,
+        "identical_records_removed": 7,
+        "conflicting_games": 0,
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"]
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2024,
+      "path": "columns/001-ball-count/data/raw/mlb/2024/schedule_2024.json",
+      "sha256": "9733d248b6a6d1635eb91802f504d70ebedc49b5aa87e7ae962cafb40b18879b",
+      "matches_bcai_on_all_records": true,
+      "old_records": 2468,
+      "completed_records": 2432,
+      "old_unique_games": 2429,
+      "completed_unique_games": 2429,
+      "removed_ids": [],
+      "preparation_gate": "PASS",
+      "normalization": {
+        "records_before": 2432,
+        "unique_games": 2429,
+        "duplicated_games": 3,
+        "identical_records_removed": 3,
+        "conflicting_games": 0,
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"]
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2025,
+      "path": "columns/001-ball-count/data/raw/mlb/2025/schedule_2025.json",
+      "sha256": "a8e90faf13a67f04762e019c465e38c66def1d7c4fbc8621c47cb0785fac2948",
+      "matches_bcai_on_all_records": true,
+      "old_records": 2464,
+      "completed_records": 2434,
+      "old_unique_games": 2430,
+      "completed_unique_games": 2430,
+      "removed_ids": [],
+      "preparation_gate": "PASS",
+      "normalization": {
+        "records_before": 2434,
+        "unique_games": 2430,
+        "duplicated_games": 4,
+        "identical_records_removed": 4,
+        "conflicting_games": 0,
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"]
+      },
+      "conflicting_records": []
+    },
+    {
+      "year": 2026,
+      "path": "columns/001-ball-count/data/raw/mlb/2026/snapshot_20260908_ridge_v02/schedule_2026.json",
+      "sha256": "c988379d50a35284bc87b8c6e82b3a50c9b8c059df867532f8195c84c4380d88",
+      "matches_bcai_on_all_records": true,
+      "old_records": 2192,
+      "completed_records": 2166,
+      "old_unique_games": 2165,
+      "completed_unique_games": 2165,
+      "removed_ids": [],
+      "preparation_gate": "PASS",
+      "normalization": {
+        "records_before": 2166,
+        "unique_games": 2165,
+        "duplicated_games": 1,
+        "identical_records_removed": 1,
+        "conflicting_games": 0,
+        "compared_fields": ["game_pk", "year", "venue", "official_date", "cutoff"]
+      },
+      "conflicting_records": []
+    }
+  ]
+}

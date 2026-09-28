@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-28T06:07:03.0578390Z",
+  "report_generated_at": "2026-09-28 15:04:43 KST",
+  "actually_viewed": [
+    {
+      "sha256": "9b4185a1ac0b551ff4e55716a726265a6c186e2412d21651716b843a5ce09a8d",
+      "path": "after/pitch_2016_count_mobile.png",
+      "width_px": 900,
+      "no_interval_clipping": true,
+      "height_px": 1350,
+      "visible_velocity_caption": "구속: 보정 PITCHf/x · 2017년 이후와 측정 차이 유의",
+      "no_caption_clipping": true,
+      "no_axis_overlap": true
+    },
+    {
+      "sha256": "85225e5327ecfa886492157e1a806e0b0b49bf449dd901a29d2e0f64b128e13a",
+      "path": "after/pitch_sb_2016_count_mobile.png",
+      "width_px": 900,
+      "no_interval_clipping": true,
+      "height_px": 1350,
+      "visible_velocity_caption": "구속: 보정 PITCHf/x · 2017년 이후와 측정 차이 유의",
+      "no_caption_clipping": true,
+      "no_axis_overlap": true
+    },
+    {
+      "sha256": "c721597bfc65e35e9a01c0439d38ae11d666f539d6fc8dc621ab42336f789df7",
+      "path": "after/swing_2016_count_mobile.png",
+      "width_px": 900,
+      "no_interval_clipping": true,
+      "height_px": 1350,
+      "visible_velocity_caption": "구속: 보정 PITCHf/x · 2017년 이후와 측정 차이 유의",
+      "no_caption_clipping": true,
+      "no_axis_overlap": true
+    },
+    {
+      "sha256": "1f35d72a4d477f29cfbe385928d672467e694ab1952eab806e4745bf156a33a3",
+      "path": "after/pitch_ff_2016_count_mobile.png",
+      "width_px": 900,
+      "no_interval_clipping": true,
+      "height_px": 1350,
+      "visible_velocity_caption": "구속: 보정 PITCHf/x · 2017년 이후와 측정 차이 유의",
+      "no_caption_clipping": true,
+      "no_axis_overlap": true
+    }
+  ],
+  "unchanged_pngs": 36,
+  "changed_pngs": [
+    "pitch_count_history.png",
+    "pitch_2016_count_mobile.png",
+    "pitch_sb_count_history.png",
+    "pitch_sb_2016_count_mobile.png",
+    "swing_count_history.png",
+    "swing_2016_count_mobile.png",
+    "pitch_ff_count_history.png",
+    "pitch_ff_2016_count_mobile.png"
+  ],
+  "overview_caption_configuration_checks": 4,
+  "model_statistics_changed": false,
+  "scope": "수정 후 2016 모바일 4장만 실제 열람. 종합 4장의 캡션은 실제 ggplot 캡션 검증으로 확인했으며 이번 수정 후 육안 열람으로 기록하지 않음. 2015년은 생성 조건만 적용되며 아직 그림 검수하지 않음."
+}

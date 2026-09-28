@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "file": "02_bcai.md",
+      "characters": 9004,
+      "images": 0,
+      "tables": 1,
+      "headings": 11
+    },
+    {
+      "file": "03_bcap.md",
+      "characters": 14355,
+      "images": 1,
+      "tables": 5,
+      "headings": 31
+    }
+  ],
+  "missing_links": [],
+  "figure_count": 1
+}

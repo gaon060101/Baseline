@@ -1,0 +1,410 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>스트라이크는 언제나 좋은 공일까? | Baseline</title><style>
+:root{--ink:#19383d;--teal:#147c80;--muted:#637579;--line:#dae5e5}
+*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font-family:'Malgun Gothic','맑은 고딕',sans-serif}
+a{color:#156c76;text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:#b04e28}
+.topbar{max-width:980px;margin:auto;padding:26px 36px;display:flex;justify-content:space-between;gap:16px;font-size:13px;letter-spacing:.5px}
+.brand{font-weight:800;letter-spacing:3px;text-decoration:none}.meta{color:var(--muted)}
+nav{max-width:908px;margin:0 auto 22px;display:flex;gap:8px;flex-wrap:wrap}nav a{padding:10px 16px;border:1px solid var(--line);border-radius:22px;background:white;text-decoration:none;font-size:14px}nav a.current{background:var(--ink);color:white}
+main{max-width:908px;margin:0 auto 60px;padding:58px 64px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 24px #18393b06}
+article{font-size:18px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word}
+h1{font-size:38px;letter-spacing:-1.7px;line-height:1.45;margin:0 0 28px}h2{font-size:27px;line-height:1.5;letter-spacing:-.8px;margin:78px 0 25px;padding-top:24px;border-top:2px solid #cee1df;scroll-margin-top:24px}h3{font-size:21px;line-height:1.6;margin:40px 0 20px}
+p{margin:0 0 25px}strong{font-weight:750;color:#102f36}em{font-style:normal;color:var(--muted)}p:has(>em:only-child){font-size:13px;line-height:1.8;margin-top:-10px;margin-bottom:32px}
+blockquote{margin:28px 0;padding:25px 29px;border-left:4px solid var(--teal);background:#f2f7f6;font-size:17px}blockquote p:last-child{margin-bottom:0}
+.interpretation-note{margin:30px 0;padding:23px 26px;border-left:5px solid #ae773a;background:#fbf3e6;color:#644928;font-family:'Batang','바탕',serif;font-size:16px;line-height:1.95}.interpretation-note strong{font-family:'Malgun Gothic',sans-serif;color:#79521f;font-size:15px}.interpretation-note p:last-child,.citation-note p:last-child{margin-bottom:0}.citation-note{margin:28px 0;padding:23px 26px;border-left:5px solid #34845d;background:#eef7ee;font-size:17px}.citation-note strong{color:#236342}a[id^='ref-']{display:block;scroll-margin-top:25px}
+.result-note{margin:26px 0 32px;padding:26px 28px;background:#e8f5f2;border:2px solid #167e78;border-radius:8px;font-size:19px;line-height:1.85}.result-note strong{display:block;color:#075b56;font-size:16px}.result-note p:last-child,.reference-note p:last-child{margin-bottom:0}.reference-note{margin:30px 0;padding:24px 27px;background:#f3f0fa;border:1px solid #d9cfeb;border-left:5px solid #8062ac;border-radius:0 8px 8px 0;font-size:16px;line-height:1.95}.reference-note strong{color:#64468c}.reference-note a{color:#62448e}h2{background:#edf3f2;padding:22px 20px;border-top:3px solid #577e7b;border-radius:3px}h3{padding-left:15px;border-left:3px solid #aac1bd}.sub-number{display:block;color:#6c8582;font-size:12px;letter-spacing:.7px;margin-bottom:4px}.section-summary{font-size:19px;color:#163f42}.toc li.subtopic{margin-left:18px;font-size:12px;border-left:2px solid #d8e5e2;padding-left:12px}.results-section>.table-wrap{border:2px solid #72a8a0}.results-section>h2{background:#dceee9;border-color:#147c80}h4{font-size:17px;margin:26px 0 14px}
+figure{margin:35px -14px 20px}img{display:block;max-width:100%;height:auto;border:1px solid #e7eeee;margin:auto}.image-link{cursor:zoom-in}
+.table-wrap{overflow:auto;margin:26px 0 22px;border:1px solid var(--line);border-radius:5px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{padding:13px 13px;border-bottom:1px solid #e4ebea;vertical-align:top;text-align:left}th{background:#edf4f2;color:#244b50;font-weight:700}tr:last-child td{border-bottom:0}td:first-child{font-weight:650}tbody tr:nth-child(even){background:#fafcfc}
+li{margin:10px 0}ul,ol{padding-left:25px}hr{border:0;border-top:1px solid var(--line);margin:58px 0}
+.toc{margin:40px 0;padding:18px 23px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:#f8fbfa}.toc summary{cursor:pointer;font-weight:bold}.toc ul{margin:12px 0 3px}.toc a{text-decoration:none}
+.endnav{margin:46px 0 0;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:15px;flex-wrap:wrap;font-size:14px}
+.lead{font-size:20px;line-height:1.9;color:#36555a}.cards{display:grid;gap:18px;margin:38px 0}.card{display:block;text-decoration:none;background:#f4f8f6;border:1px solid var(--line);border-radius:8px;padding:26px 28px}.card small{display:block;color:var(--teal);letter-spacing:2px;margin-bottom:9px}.card b{font-size:24px;line-height:1.6}.card p{margin:12px 0 0;font-size:15px;line-height:1.8;color:var(--muted)}.note{font-size:14px;line-height:1.8;color:var(--muted);padding:20px;background:#f7f3e9;border-radius:5px}
+@media(max-width:650px){.topbar{padding:20px;display:block}.meta{display:block;margin-top:8px}nav{margin:0 16px 16px;gap:6px}nav a{font-size:12px;padding:9px 12px}main{margin:0 8px 25px;padding:32px 18px;border-radius:5px}article{font-size:17px;line-height:1.95}h1{font-size:29px;letter-spacing:-1px}h2{font-size:24px;margin-top:55px}h3{font-size:20px}p{margin-bottom:24px}.table-wrap{margin:24px -6px}table{font-size:12px;min-width:480px}th,td{padding:10px}figure{margin:28px -8px 20px}p:has(>em:only-child){font-size:12px}blockquote{padding:20px}.card{padding:23px}.card b{font-size:21px}.lead{font-size:18px}}
+@media(max-width:650px){.main-column table{min-width:0;table-layout:fixed}.main-column th,.main-column td{padding:10px 7px;overflow-wrap:anywhere}.main-column h4{padding:12px;background:#f6f8f7;border-bottom:1px solid #dae5e5}}
+figure{max-width:100%}.figure-scroll{overflow-x:auto}.figure-scroll.zoomed a{display:block;width:900px}.figure-scroll.zoomed img{width:900px;max-width:none}.figure-toggle{font:inherit;font-size:14px;padding:8px 12px;color:#126d79;background:#eef6f3;border:1px solid #a7c7bf;border-radius:5px;cursor:pointer}
+@media(max-width:650px){.table-wrap{overflow:visible;margin:22px 0}table.mobile-cards,table.mobile-cards tbody,table.mobile-cards tr,table.mobile-cards td{display:block;width:100%;min-width:0}table.mobile-cards thead{display:none}table.mobile-cards tr{margin-bottom:14px;border:1px solid #bcd1cd;border-radius:6px;padding:7px;background:#f8fbfa}table.mobile-cards td{border:0;border-bottom:1px solid #e0e8e6;font-size:15px;padding:8px;overflow-wrap:anywhere}table.mobile-cards td:before{content:attr(data-label);display:block;font-size:13px;font-weight:bold;color:#19615f}figure{margin-left:0;margin-right:0}}
+
+/* Main manuscript: count matrices retain their 4 by 3 arrangement on phones. */
+.main-column .count-board{margin:28px 0 20px;padding:18px 8px;background:#fff;border:1px solid #dbe6e4;border-radius:10px}
+.main-column .board-subtitle{font-size:12px;color:#5b7376;margin:0 8px 12px}.main-column .board-title{font-size:18px;font-weight:750;margin:0 8px 12px;line-height:1.6}
+.main-column table.count-matrix{width:100%;min-width:0;table-layout:fixed;border-collapse:separate;border-spacing:8px;font-size:14px}
+.main-column .count-matrix th{background:none;border:0;text-align:center;padding:4px;font-size:16px;vertical-align:middle}
+.main-column .count-matrix th:first-child{width:48px}
+.main-column .count-matrix td{border:0;border-radius:12px;text-align:center;vertical-align:middle;padding:15px 5px;line-height:1.5}
+.main-column .count-matrix tr{background:none}
+.cell-count{display:block;font-size:15px;color:#546d71;margin-bottom:6px}
+.cell-value{display:block;font-size:23px;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.6px}
+.count-matrix small{display:block;font-size:12px;color:#50696c;margin-top:7px;letter-spacing:-.3px}
+.count-matrix .pitcher{background:#deeeee}.count-matrix .pitcher strong{color:#147f83}.count-matrix .pitcher.strong-cell{background:#bfdddd}
+.count-matrix .batter{background:#f8eae3}.count-matrix .batter strong{color:#b64f29}.count-matrix .batter.strong-cell{background:#e9bba7}
+.count-matrix .neutral{background:#f0f3f3}.count-matrix .neutral strong{color:#365156}
+.count-matrix .inside{background:#deeeeb}.count-matrix .inside strong{color:#1c6e62}.count-matrix .outside{background:#e8e1f3}.count-matrix .outside strong{color:#715095}
+.board-legend{font-size:12px;display:flex;gap:14px;flex-wrap:wrap;padding:12px 10px 0}.pitcher-key{color:#147f83}.batter-key{color:#b64f29}
+u.source-claim{text-decoration-color:#9577b9;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+.main-column .reference-note{font-size:14px;padding:15px 20px;margin:18px 0 28px;line-height:1.8}
+.main-column .reference-note strong{font-size:14px}.main-column .reference-note p{margin-bottom:10px}
+.main-column h3{margin-top:42px}.main-column h4{font-size:19px;line-height:1.7;margin:32px 0 18px}
+.main-column .comparison-table{table-layout:fixed}.main-column .comparison-table td:first-child{width:35%}.main-column .comparison-table td strong{font-size:16px}
+@media(max-width:650px){
+ .main-column .count-board{padding:12px 2px;margin:24px -5px}.main-column .board-title{font-size:15px;margin:0 6px 8px}
+ .main-column table.count-matrix{border-spacing:4px}.main-column .count-matrix th{font-size:12px;padding:3px 0;white-space:nowrap}.main-column .count-matrix th:first-child{width:28px}
+ .main-column .count-matrix td{padding:12px 2px;border-radius:8px;overflow-wrap:normal}.cell-count{font-size:12px;margin-bottom:5px}
+ .cell-value{font-size:18px;letter-spacing:-.3px;line-height:1.3}.range-end{display:block}.count-matrix small{font-size:10px;letter-spacing:-.5px;margin-top:6px}
+ .main-column .location-board .cell-value{font-size:20px}.board-legend{font-size:11px;gap:3px 12px;padding:8px 6px 0}
+ .main-column .comparison-table{width:100%;min-width:0;font-size:13px}.main-column .comparison-table th,.main-column .comparison-table td{padding:12px 8px}
+ .main-column .comparison-table td strong{font-size:15px}.main-column h4{font-size:18px;padding:10px 0;background:none}
+}
+
+
+.main-column .question-group{margin:42px 0 22px;padding:14px 18px;border-top:2px solid #72918e;border-bottom:1px solid #cadbd8;background:#edf4f2;color:#285552;font-size:16px;font-weight:750}
+.main-column .bcai-board .cell-value{font-size:34px;line-height:1.4}
+@media(max-width:650px){.main-column .bcai-board .cell-value{font-size:27px}.main-column .question-group{font-size:15px;padding:12px}}
+
+@media print{body{background:white}.topbar,nav,.toc,.endnav{display:none}main{max-width:none;border:0;padding:0;box-shadow:none}article{font-size:11pt;line-height:1.8}h1{font-size:23pt}h2{font-size:18pt;margin-top:28px}figure,table{break-inside:avoid}img{max-height:850px}a{color:inherit}}
+</style></head><body class="main-column"><header class="topbar"><a class="brand" href="index.html">BASELINE</a><span class="meta">볼카운트 연재 · 2026.09.28 · 본문 12차 검토본</span></header><nav aria-label="연재 글"><a class="current" href="01_ball_count.html">1. 볼카운트 분석 칼럼</a><a class="" href="02_bcai.html">2. BCAI 설명 글</a><a class="" href="03_bcap.html">3. BCAP 설명 글</a><a class="" href="04_references_ko.html">4. 참고문헌 한국어 해설</a><a class="" href="05_data_validation.html">5. 데이터·검증·개발 과정</a></nav><main><article><h1>스트라이크는 언제나 좋은 공일까?</h1>
+<p><strong>0-2에서는 하나 빼라?</strong></p>
+<p><strong>0-2에서 존 밖으로 승부할 만한 근거는 있었다.</strong> MLB 2015–2025년의 열한 시즌 모두, 0-2에서는 실제 존 밖 공이 존 안 공보다 투수에게 더 좋은 결과를 남긴 것으로 추정됐다. 다만 이것이 한 구를 무조건 멀리 버리라는 뜻은 아니다. 타자가 따라 나올 만한 공인지까지 봐야 한다.</p>
+<p>이 조언의 출발점은 카운트다. 0-2에서는 타자가 헛스윙 한 번으로 삼진을 당할 수 있지만, 볼 하나를 골라도 아직 볼넷은 아니다. 투수에게는 타자가 따라 나오는지 시험할 여유가 생긴다. 반대로 3-0에서는 볼 하나가 곧 출루로 이어진다. 같은 존 밖 공이라도 카운트에 따라 의미가 달라지는 것이다.</p>
+<p>그렇다면 <strong>각 카운트는 타자와 투수 중 누구에게 얼마나 유리하고, 그 상황에서 어떤 행동이 더 좋은 결과와 연결됐을까?</strong> 이 글은 이 두 질문을 MLB 11시즌 기록으로 살펴본다. 카운트별 유불리는 BCAI로, 같은 카운트에서의 위치·스윙·구종별 차이는 BCAP로 읽는다.</p>
+<p><a id="count-basics"></a></p>
+<section class="content-section " aria-labelledby="section-1"><h2 id="section-1">먼저, 0-2와 3-0은 무슨 뜻일까?</h2>
+<p class="section-summary"><strong>앞 숫자는 볼, 뒤 숫자는 스트라이크다.</strong> 0-2는 ‘0볼 2스트라이크’, 3-0은 ‘3볼 0스트라이크’다. 한 타자가 타석에 들어서면 0-0에서 시작하며, 공 하나를 두고 벌이는 승부가 쌓여 카운트가 달라진다.</p>
+<ul>
+<li><strong>볼이 네 개면 볼넷:</strong> 타자는 공을 치지 않고도 1루로 나간다.</li>
+<li><strong>스트라이크가 세 개면 삼진:</strong> 타자는 보통 아웃된다.</li>
+<li><strong>스트라이크존:</strong> 홈플레이트 위의 정해진 높이 범위다. 휘두르지 않은 공의 볼·스트라이크 판정 기준이 된다. 존 밖 공도 헛스윙하면 스트라이크다.</li>
+</ul>
+<p><em>기본 규칙: MLB <a href="https://www.mlb.com/glossary/standard-stats/walk">볼넷</a> · <a href="https://www.mlb.com/glossary/standard-stats/strikeout">삼진</a> · <a href="https://www.mlb.com/glossary/rules/strike-zone">스트라이크존</a>.</em></p>
+<p>그래서 일반적으로 볼이 쌓이면 타자는 볼넷에, 스트라이크가 쌓이면 투수는 삼진에 가까워진다. 하지만 ‘유리하다’는 말만으로는 차이의 크기를 알 수 없다. <strong>0-2가 얼마나 불리한지, 볼과 스트라이크를 하나씩 받은 1-1은 처음과 같은지</strong>를 실제 타석 결과로 확인할 필요가 있다.</p>
+<h3 id="section-1-sub-1">이 글에서 ‘좋은 결과’는 어떻게 셀까?</h3>
+<p class="section-summary"><strong>타자가 볼넷으로 나간 것과 홈런을 친 것을 같은 성과로 셀 수는 없다.</strong> 그래서 타석이 끝난 결과마다 서로 다른 점수를 붙였다. 볼넷·사구·단타·2루타·3루타·홈런이 득점에 기여하는 정도를 반영한 점수이며, 이 글에서는 이를 <strong>공격가치 W</strong>라고 부른다. 점수가 높을수록 타자에게, 낮을수록 투수에게 좋은 결과다.</p>
+<p>계산은 두 단계로 읽으면 된다. <strong>먼저 각 타석의 최종 결과를 W로 바꾸고, 그다음 비교하려는 타석들의 평균을 낸다.</strong> 0-2 이후 삼진을 당한 타석도, 끝까지 버텨 볼넷을 얻은 타석도 각각 마지막 결과로 센다. 다음 공 하나가 스트라이크였는지만 평가하는 점수가 아니다.</p>
+<p>이 공통 점수로 <strong>BCAI는 카운트별 평균을 100 기준으로 바꾸고, BCAP는 같은 카운트에서 위치·스윙·구종에 따른 평균을 비교한다.</strong> 아래에서는 원래 점수의 작은 소수 차이보다, 누가 유리했고 어떤 행동 뒤의 결과가 좋았는지를 중심으로 읽는다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 점수의 재료</strong></p>
+<p>W는 연도별 wOBA 가중치를 이용한 최종 타석 점수이며, 실제 득점 수나 승률은 아니다. 공식 wOBA와도 분모가 다르다. 결과별 가중치와 계산은 <a href="02_bcai.html">BCAI 상세 설명</a>, 행동별 비교는 <a href="03_bcap.html">BCAP 상세 설명</a>에 있다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-2"><h2 id="section-2">이 글의 순서</h2>
+<ol>
+<li><a href="#chapter-bcai">BCAI — 카운트별로 누가 얼마나 유리할까?</a></li>
+<li><a href="#chapter-bcap">BCAP — 같은 카운트에서 어떤 행동의 결과가 좋았을까?</a><ul>
+<li><a href="#chapter-location">투수: 존 안과 존 밖</a></li>
+<li><a href="#chapter-pitch">투수: 구종 선택</a></li>
+</ul>
+</li>
+<li><a href="#chapter-questions">결과에서 이어지는 질문 — 왜 이런 차이가 생길까?</a></li>
+<li><a href="#chapter-game">다시 0-2로 — 경기에서 무엇을 볼까?</a></li>
+</ol>
+<p><a id="chapter-bcai"></a></p>
+</section><section class="content-section " aria-labelledby="section-3"><h2 id="section-3">1. BCAI — 카운트별로 누가 얼마나 유리할까?</h2>
+<p class="section-summary"><strong>BCAI는 ‘지금 카운트가 타자와 투수 중 누구에게 얼마나 유리한가’를 보여주는 점수다.</strong> 그 카운트를 한 번이라도 거친 타석을 모아, 앞에서 설명한 최종 공격가치의 평균을 구한다.</p>
+<p>계산은 <strong>‘해당 카운트를 거친 타석의 평균 ÷ 그해 타석 시작 평균 × 100’</strong>이다. 예를 들어 어떤 카운트의 평균 공격가치가 시작 평균의 80%라면 BCAI는 80이 된다. 실제 표에서는 이렇게 구한 열한 시즌의 점수를 평균 내어 정수로 표시했다.</p>
+<h3 id="section-3-sub-1">카운트별 점수는 어떻게 읽을까?</h3>
+<p class="section-summary"><strong>각 시즌의 타석 시작 평균을 100으로 놓는다.</strong> 100보다 높으면 시작할 때보다 타자에게, 낮으면 투수에게 유리한 결과가 나왔다는 뜻이다. 아래 표는 행이 볼 수, 열이 스트라이크 수다. 같은 행에서 오른쪽으로 가면 스트라이크가, 같은 열에서 아래로 가면 볼이 하나씩 늘어난다.</p>
+<div class="count-board bcai-board"><div class="board-title">카운트별 BCAI · 타석 시작 평균 = 100</div><p class="board-subtitle">MLB 2015–2025 · 11개 시즌 점수의 평균 · 정수로 반올림</p>
+<table class="count-matrix"><thead><tr><th scope="col">볼</th><th scope="col">0스트라이크</th><th scope="col">1스트라이크</th><th scope="col">2스트라이크</th></tr></thead><tbody>
+<tr><th scope="row">0볼</th>
+<td class="neutral" data-count="0-0"><span class="cell-count">0-0</span><strong class="cell-value">100</strong><small>1,896,892타석</small></td>
+<td class="pitcher" data-count="0-1"><span class="cell-count">0-1</span><strong class="cell-value">85</strong><small>952,314타석</small></td>
+<td class="pitcher strong-cell" data-count="0-2"><span class="cell-count">0-2</span><strong class="cell-value">63</strong><small>398,928타석</small></td>
+</tr>
+<tr><th scope="row">1볼</th>
+<td class="batter" data-count="1-0"><span class="cell-count">1-0</span><strong class="cell-value">113</strong><small>732,356타석</small></td>
+<td class="pitcher" data-count="1-1"><span class="cell-count">1-1</span><strong class="cell-value">95</strong><small>751,486타석</small></td>
+<td class="pitcher" data-count="1-2"><span class="cell-count">1-2</span><strong class="cell-value">71</strong><small>559,579타석</small></td>
+</tr>
+<tr><th scope="row">2볼</th>
+<td class="batter" data-count="2-0"><span class="cell-count">2-0</span><strong class="cell-value">136</strong><small>248,670타석</small></td>
+<td class="batter" data-count="2-1"><span class="cell-count">2-1</span><strong class="cell-value">113</strong><small>388,929타석</small></td>
+<td class="pitcher" data-count="2-2"><span class="cell-count">2-2</span><strong class="cell-value">85</strong><small>457,382타석</small></td>
+</tr>
+<tr><th scope="row">3볼</th>
+<td class="batter strong-cell" data-count="3-0"><span class="cell-count">3-0</span><strong class="cell-value">174</strong><small>76,643타석</small></td>
+<td class="batter" data-count="3-1"><span class="cell-count">3-1</span><strong class="cell-value">151</strong><small>161,435타석</small></td>
+<td class="batter" data-count="3-2"><span class="cell-count">3-2</span><strong class="cell-value">119</strong><small>262,990타석</small></td>
+</tr>
+</tbody></table>
+<div class="board-legend"><span class="pitcher-key">100 미만 · 시작보다 투수 유리</span><span class="batter-key">100 초과 · 시작보다 타자 유리</span></div>
+</div>
+
+<p><em>표 1. MLB 2015–2025, 1,896,892타석·25,193경기. 큰 숫자는 11개 연도별 BCAI의 단순평균을 정수로 반올림한 값, 작은 숫자는 그 카운트를 거친 11시즌 타석 수다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcai_all_132.csv">연도별 점수·타석 수</a> · <a href="main_v10/bcai_means.csv">평균 계산표</a>.</em></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 평균 점수의 기준</strong></p>
+<p>시즌마다 같은 비중으로 평균을 냈다. 경기 수가 적었던 2020년도 한 시즌으로 센다. 모든 타석을 한꺼번에 합쳐 다시 계산한 통합 지수와는 다르다. 같은 타석이 여러 카운트를 거칠 수 있으므로 칸별 타석 수를 모두 합하면 안 된다. BCAI 120은 그해 시작 평균보다 가중 공격가치가 20% 높았다는 뜻이며, 승률이나 실제 득점이 20% 높다는 뜻은 아니다.</p>
+</aside>
+<h3 id="section-3-sub-2">열한 시즌 내내 이어진 흐름은 무엇일까?</h3>
+<p class="section-summary"><strong>같은 볼 수에서는 스트라이크가 늘수록, 같은 스트라이크 수에서는 볼이 줄수록 투수에게 유리했다.</strong> 표를 오른쪽으로 읽으면 점수가 내려가고, 아래로 읽으면 올라간다. 이 흐름은 열한 시즌 모두 같았다.</p>
+<p>0-2의 평균 점수는 <strong>63</strong>이다. 시작 평균 100보다 약 37% 낮은 공격가치이며, 열한 시즌 각각에서도 가장 낮았다. 삼진이 가까워진 타자의 불리함이 실제 최종 결과에도 나타난 것이다. 반대로 3-0은 평균 <strong>174</strong>로, 시작 평균보다 약 74% 높았다. 각 시즌에서도 가장 높은 카운트였다. 이 점수에는 안타와 장타뿐 아니라 이후 얻은 볼넷도 포함된다.</p>
+<h3 id="section-3-sub-3">볼이나 스트라이크 하나 차이로 점수가 가장 크게 달라지는 곳은?</h3>
+<p class="section-summary"><strong>볼이 하나 늘어나는 비교에서는 2볼과 3볼 사이, 스트라이크가 하나 늘어나는 비교에서는 3-1과 3-2 사이가 가장 컸다.</strong> 위 표에서 바로 이웃한 카운트들의 평균 점수를 비교한 결과다.</p>
+<div class="table-wrap"><table class="comparison-table">
+<thead>
+<tr>
+<th>비교할 카운트</th>
+<th>BCAI 평균 점수</th>
+<th>표에 나타난 차이</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+비교할 카운트">2-0 → 3-0</td>
+<td data-label="BCAI 평균 점수">136 → 174</td>
+<td data-label="표에 나타난 차이"><strong>+38</strong></td>
+</tr>
+<tr>
+<td data-label="
+
+비교할 카운트">2-1 → 3-1</td>
+<td data-label="BCAI 평균 점수">113 → 151</td>
+<td data-label="표에 나타난 차이"><strong>+38</strong></td>
+</tr>
+<tr>
+<td data-label="
+
+비교할 카운트">2-2 → 3-2</td>
+<td data-label="BCAI 평균 점수">85 → 119</td>
+<td data-label="표에 나타난 차이"><strong>+34</strong></td>
+</tr>
+<tr>
+<td data-label="
+
+비교할 카운트">3-1 → 3-2</td>
+<td data-label="BCAI 평균 점수">151 → 119</td>
+<td data-label="표에 나타난 차이"><strong>−32</strong></td>
+</tr>
+</tbody></table></div>
+<p><em>변화 비교표. 11시즌 평균 점수를 정수로 반올림한 표의 차이다. 반올림 전에는 2-0과 3-0의 차이가 2-1과 3-1의 차이보다 조금 크다. <a href="main_v12/adjacent_count_differences.csv">인접 카운트 비교값</a>.</em></p>
+<p>세 번째 볼이 들어오면 타자는 볼넷까지 한 공만 남겨 둔다. 이 문턱에 가까워지는 구간에서 평균 공격가치의 차이도 크게 나타났다. 특히 2-2의 85와 3-2의 119는 시작 평균 100의 양쪽에 있다. 같은 두 스트라이크라도 풀카운트를 단순히 삼진 직전이라고만 보면 놓치는 차이다.</p>
+<p>반대로 3-1에서 스트라이크가 하나 더 쌓인 3-2는 평균 점수가 32 낮다. 볼넷까지 한 공이라는 조건은 같지만 이제 삼진도 한 공 앞으로 다가온다. <strong>볼과 스트라이크는 하나마다 같은 무게가 아니다. 볼넷이나 삼진이 얼마나 가까워졌는지를 함께 봐야 한다.</strong></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 한 공의 효과를 직접 계산한 것은 아니다</strong></p>
+<p>이 비교는 각 카운트를 거친 타석 집단의 평균 차이다. 같은 타석에서 볼 하나를 얻으면 공격가치가 반드시 38점 오른다는 뜻은 아니다. 볼넷·삼진으로 끝나는 경우는 열두 카운트 표의 다음 칸이 아니므로, 위 순위는 타석이 이어지는 인접 카운트끼리의 비교에 한정한다.</p>
+</aside>
+<p>한 가지는 더 구별해야 한다. <strong>유리한 카운트에 있다는 것과, 다음 공을 어떻게 상대해야 하는지는 다른 질문이다.</strong> 3-0의 높은 점수가 곧 스윙하라는 뜻은 아니며, 0-2의 낮은 점수가 투수에게 어느 공을 던져도 괜찮다는 뜻도 아니다. 다음 공의 위치와 타자의 반응을 같은 카운트 안에서 비교해야 하는 이유다.</p>
+<p><a id="chapter-bcap"></a>
+<a id="chapter-swing"></a></p>
+</section><section class="content-section " aria-labelledby="section-4"><h2 id="section-4">2. BCAP — 같은 카운트에서 어떤 행동의 결과가 좋았을까?</h2>
+<p class="section-summary"><strong>BCAP는 ‘같은 카운트에서 어떤 공과 행동이 더 좋은 결과로 이어졌는가’를 비교하는 분석이다.</strong> 카운트 자체를 점수로 나타낸 BCAI에서 한 걸음 더 들어가, 존 안과 밖, 스윙과 기다리기, 서로 다른 구종을 나누어 본다.</p>
+<p>예를 들어 0-2에서 스윙을 비교한다면, <strong>같은 위치 구역의 공에 휘두른 경우와 지켜본 경우를 나누고, 이후 타석이 끝났을 때의 점수 평균을 비교한다.</strong> 뛰어난 타자가 한쪽에 더 많이 들어간 차이 등이 섞이지 않도록, 기록된 선수·경기 상황을 고려해 평균을 보정했다.<a href="#term-02">용어 2</a></p>
+<p>그 평균이 높은 행동은 타자에게 좋은 쪽이다. 투수의 위치나 구종을 볼 때는 반대로 타자의 점수를 낮게 허용한 쪽이 좋다. <strong>‘스윙 쪽의 결과가 좋았다’는 말은 안타를 친 스윙만 골랐다는 뜻이 아니라, 헛스윙과 이후 삼진까지 포함한 타석 결과를 비교했다는 뜻이다.</strong></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | BCAI와 BCAP의 차이</strong></p>
+<p>BCAI는 카운트별 평균을 100 기준으로 보여주고, BCAP는 같은 카운트 안에서 두 집단의 보정된 평균 차이를 본다. BCAP에는 BCAI처럼 공통 기준점 100이 없다. 보정으로 모든 차이를 없앤 것은 아니므로, 관측된 우열을 곧바로 특정 행동의 인과효과로 읽지는 않는다. <a href="03_bcap.html#main-numeric-examples">평균과 차이의 상세 예시</a></p>
+</aside>
+<p><a id="chapter-location"></a></p>
+<h3 id="section-4-sub-1">2-1. 투수는 존 안과 밖 중 어디에서 더 좋은 결과를 얻었을까?</h3>
+<p class="section-summary"><strong>0-2와 1-2에서는 열한 시즌 모두 존 밖 공의 결과가 투수에게 더 좋은 쪽으로 추정됐다.</strong> 아래 표는 같은 카운트 안에서 타자의 공격가치를 더 낮게 허용한 위치를 보여준다.</p>
+<div class="count-board location-board"><div class="board-title">투수의 위치별 결과 · 허용 공격가치가 낮은 쪽</div>
+<table class="count-matrix"><thead><tr><th scope="col">볼</th><th scope="col">0스트라이크</th><th scope="col">1스트라이크</th><th scope="col">2스트라이크</th></tr></thead><tbody>
+<tr><th scope="row">0볼</th>
+<td class="inside" data-count="0-0"><span class="cell-count">0-0</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+<td class="neutral" data-count="0-1"><span class="cell-count">0-1</span><strong class="cell-value">불명확</strong><small>11시즌 모두</small></td>
+<td class="outside" data-count="0-2"><span class="cell-count">0-2</span><strong class="cell-value">존 밖</strong><small>11시즌 추정 방향</small></td>
+</tr>
+<tr><th scope="row">1볼</th>
+<td class="inside" data-count="1-0"><span class="cell-count">1-0</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+<td class="inside" data-count="1-1"><span class="cell-count">1-1</span><strong class="cell-value">존 안</strong><small>일부 해 불명확</small></td>
+<td class="outside" data-count="1-2"><span class="cell-count">1-2</span><strong class="cell-value">존 밖</strong><small>11시즌 추정 방향</small></td>
+</tr>
+<tr><th scope="row">2볼</th>
+<td class="inside" data-count="2-0"><span class="cell-count">2-0</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+<td class="inside" data-count="2-1"><span class="cell-count">2-1</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+<td class="neutral" data-count="2-2"><span class="cell-count">2-2</span><strong class="cell-value">불명확</strong><small>11시즌 모두</small></td>
+</tr>
+<tr><th scope="row">3볼</th>
+<td class="inside" data-count="3-0"><span class="cell-count">3-0</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+<td class="inside" data-count="3-1"><span class="cell-count">3-1</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+<td class="inside" data-count="3-2"><span class="cell-count">3-2</span><strong class="cell-value">존 안</strong><small>11시즌 모두</small></td>
+</tr>
+</tbody></table>
+</div>
+
+<p><em>표 2. MLB 2015–2025, 열두 카운트의 연도별 위치 비교. ‘존 밖’은 11시즌 추정값의 방향이며 매년 차이가 확실했다는 뜻은 아니다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv">BCAP 연도별 결과</a>.</em></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 반복된 방향과 차이의 확실성</strong></p>
+<p>0-2·1-2의 ‘매년’은 대표 추정값의 방향을 가리킨다. 불확실성 구간까지 존 밖 방향이었던 것은 각각 10시즌과 8시즌이다. 1-1은 9시즌, 나머지 일곱 존 안 카운트는 각각 11시즌에서 구간까지 같은 방향이었다. 0-1·2-2는 매년 구간이 0을 포함했다. 계산과 비교 가능 기준은 <a href="03_bcap.html">BCAP 해설</a>에 있다.</p>
+</aside>
+<p class="question-group">위치 결과 읽기 · 실제 위치와 투구 의도 구별하기</p>
+
+<h4>존 밖 공이라는 건 심판이 볼이라고 했다는 뜻일까?</h4>
+<p><strong>아니다. 이 글에서는 공의 중심이 실제로 지나간 위치로 존 안과 밖을 나눴다.</strong> 존 밖 공에 헛스윙해도 존 밖 공이고, 존 안 공이 홈런이 돼도 존 안 공이다.</p>
+<p>투수가 겨냥한 곳과도 다르다. 바깥을 노린 공이 가운데로 몰릴 수도 있다. 여기서 비교한 것은 투구 지시나 의도가 아니라 실제로 기록된 위치다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 위치별 결과가 투구 지시의 효과는 아니다</strong></p>
+<p>BCAP는 관측 기록의 차이를 줄여 비교하는 분석이다. 기록되지 않은 의도·컨디션 등의 차이까지 없애지는 못한다. 실제 존 밖 공의 결과를 근거로, 같은 투수에게 존 밖을 지시하면 반드시 더 좋아진다고 단정하지 않는다.</p>
+</aside>
+<p>위치 비교에서 얻은 단서를 구종에도 그대로 적용할 수 있을까. 존 밖 공의 결과가 좋았다는 것과 특정 구종을 던지면 좋다는 것은 다른 질문이다. <strong>어디로 들어갔는지에 이어, 어떤 공을 던졌는지도 구별해 보자.</strong></p>
+<p><a id="chapter-pitch"></a></p>
+<h3 id="section-4-sub-2">2-2. 카운트만으로 유리한 구종을 정할 수 있을까?</h3>
+<p class="section-summary"><strong>카운트만 보고 모든 투수에게 적용할 정답 구종을 정할 수는 없었다.</strong> 일부 카운트에서 구종 묶음별 결과 차이는 반복됐지만, 그것이 각 투수의 구종 능력을 대신하는 선택 기준은 아니다. 먼저 무엇과 무엇을 비교했는지 보자.</p>
+<p>패스트볼은 빠른 공 계열을 가리키며, 이 비교에서는 포심·싱커·커터를 묶었다. 포심만 따로 비교할 때는 싱커와 커터가 반대편인 비포심에 들어간다. 두 비교를 구별해 읽어야 하는 이유다.</p>
+<div class="table-wrap"><table class="comparison-table">
+<thead>
+<tr>
+<th>카운트와 구종 분류</th>
+<th>허용 공격가치가 낮은 쪽</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="
+
+카운트와 구종 분류">3-0 · 패스트볼 계열 대 나머지</td>
+<td data-label="허용 공격가치가 낮은 쪽"><strong>나머지 구종</strong> · 비교 가능한 10시즌 모두</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트와 구종 분류">3-2 · 포심 대 비포심</td>
+<td data-label="허용 공격가치가 낮은 쪽"><strong>비포심</strong> · 11시즌 추정 방향</td>
+</tr>
+<tr>
+<td data-label="
+
+카운트와 구종 분류">3-0 · 포심 대 비포심</td>
+<td data-label="허용 공격가치가 낮은 쪽"><strong>불명확</strong> · 11시즌 모두</td>
+</tr>
+</tbody></table></div>
+<p><em>표 3. MLB 2015–2025, 분석에 허용된 구종 내 비교. ‘나머지’와 ‘비포심’은 서로 다른 묶음이다. 출처: <a href="../../analysis/history_comparison_20260928_r01/tables/bcap_all_2552_screened.csv">BCAP 연도별 결과</a>.</em></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 구종 비교의 범위</strong></p>
+<p>3-0 패스트볼 계열 비교는 10시즌 모두 불확실성 구간까지 같은 방향이었고, 2020년은 비교 기준을 통과하지 못했다. 3-2 포심 비교는 5시즌에서 구간까지 비포심 방향이었으며 6시즌은 불명확했다. 3-0 포심 비교는 추정값 방향도 해마다 달랐고 11시즌 모두 구간이 0을 포함했다.</p>
+</aside>
+<p class="question-group">구종 결과 읽기 · 어떤 공끼리 비교했는가</p>
+
+<h4>왜 두 비교를 모두 ‘직구 대 변화구’라고 부르면 안 될까?</h4>
+<p><strong>싱커와 커터가 어느 쪽에 들어가는지가 달라지기 때문이다.</strong> 패스트볼 계열 전체를 비교한 결과와 포심만 비교한 결과는 같은 질문의 답이 아니다.</p>
+<p>실제로 3-0에서 패스트볼 계열을 묶으면 반복된 차이가 있었지만, 포심만 떼면 어느 쪽이 더 낮은지 분명히 가리지 못했다. 따라서 ‘3-0에서는 직구가 나쁘다’로 줄이면 비교한 대상부터 흐려진다.</p>
+<h4>그렇다면 3-0에서는 패스트볼 계열을 줄이면 될까?</h4>
+<p><strong>관측된 차이만으로 그런 지시를 내릴 수는 없다.</strong> 그 카운트에서 다른 구종을 던진 투수와 상황에는 기록으로 모두 설명하지 못한 차이가 남을 수 있다.</p>
+<p>또 ‘나머지 구종’은 하나의 공이 아니다. 이 결과만으로 특정 투수의 슬라이더와 체인지업 중 무엇을 던질지 정할 수 없다. 여기서 얻은 답은 일부 카운트에서 구종 묶음별 결과 차이가 반복됐다는 것이며, 투수별 구종 선택은 더 구체적인 질문으로 남는다.</p>
+<p>카운트별 유불리와 그 안의 행동별 결과는 여기까지다. 이제 결과표를 보며 생길 법한 질문을 나눠 살펴보자. <strong>카운트 점수를 읽는 질문, 두 스트라이크에서 승부하는 질문, 타자의 선택을 평가하는 질문</strong>이다.</p>
+<p><a id="chapter-questions"></a></p>
+</section><section class="content-section " aria-labelledby="section-5"><h2 id="section-5">3. 결과에서 이어지는 질문 — 왜 이런 차이가 생길까?</h2>
+<h3 id="section-5-sub-1">3-1. 카운트 점수 해석 — 1-1·풀카운트·볼넷</h3>
+<p>앞의 표에서 1-1은 95, 3-2는 119였다. 숫자를 확인했으니, 볼과 스트라이크를 세는 직관과 왜 달라지는지 짚어 보자.</p>
+<h4>1-1은 볼과 스트라이크를 하나씩 주고받았으니 다시 원점일까?</h4>
+<p><strong>아니다. 1-1의 평균 점수는 95로, 시작 평균보다 약 5% 낮았다.</strong> 열한 시즌 각각에서도 100 아래였다. 볼 하나가 스트라이크 하나의 불리함을 그대로 상쇄하지는 않았다.</p>
+<p>볼과 스트라이크는 서로 같은 것을 더하고 빼는 숫자가 아니다. 볼은 네 개가 되어야 볼넷이고, 스트라이크는 세 개면 삼진이다. 다음 공이 볼일 때와 스트라이크일 때 이어지는 상황도 다르다. 따라서 ‘하나씩’이라는 개수보다 그 카운트를 거친 타석이 실제로 어떤 결과를 남겼는지를 보는 편이 낫다.</p>
+<h4>삼진이 한 구 남은 풀카운트는 왜 100보다 높을까?</h4>
+<p><strong>풀카운트의 평균 점수는 119였다. 삼진 위험과 볼넷·타구 결과를 모두 합치고도 시작 평균보다 약 19% 높았다.</strong> 열한 시즌 각각에서도 100을 넘었다.</p>
+<p>삼진과 볼넷이 모두 한 구 앞으로 다가왔다고 두 결과가 같은 확률로 일어나는 것은 아니다. 타구가 나올 수도 있고, 파울로 승부가 이어질 수도 있다. BCAI는 이 과정을 거쳐 나온 최종 결과를 모두 센다. 삼진 직전이라는 인상만으로 풀카운트를 타자에게 나쁜 상황이라고 읽을 수 없는 이유다.</p>
+<h4>3-0의 높은 점수에는 볼넷도 들어 있을까?</h4>
+<p><strong>들어 있다. 3-0의 평균 174는 이후 볼넷을 얻은 타석까지 포함한 결과다.</strong> 볼넷·사구·안타·장타에 각각 가중치를 붙여 타석이 남긴 공격가치를 계산한다.</p>
+<p>예를 들어 0-2에서 바로 삼진을 당한 타석과, 0-2 이후 공을 골라 볼넷을 얻은 타석은 모두 0-2의 결과에 포함된다. 3-0도 마찬가지다. 그 카운트에서 바로 친 타구만 보는 것이 아니라 이후 볼넷을 얻거나 다른 카운트에서 끝난 타석까지 함께 본다. 그래서 3-0의 높은 점수를 ‘3-0에서 휘두르면 잘 친다’로 바꿔 읽어서는 안 된다.</p>
+<p class="question-group">비슷한 점수와 다른 통계 · 비교할 때 구별할 것</p>
+
+<h4>열두 카운트의 순위도 매년 똑같았을까?</h4>
+<p><strong>큰 흐름은 같았지만, 평균을 정수로 쓰면 둘 다 85인 0-1·2-2와 둘 다 113인 1-0·2-1은 해마다 순서가 바뀌었다.</strong> 0-2가 가장 낮고 3-0이 가장 높은 모습은 계속됐지만, 0-1과 2-2, 1-0과 2-1 중 어느 쪽이 조금 높은지는 해마다 달랐다.</p>
+<p>점수가 비슷하더라도 다음 공의 의미까지 같지는 않다. 0-1에서 스트라이크를 하나 더 잡으면 0-2가 된다. 2-2에서는 헛스윙 하나로 타석이 끝난다. BCAI는 카운트별 평균 결과를 알려줄 뿐, 비슷한 점수의 카운트에서 똑같이 승부하라는 뜻은 아니다.</p>
+<h4>그냥 카운트별 타율을 보면 안 될까?</h4>
+<p><strong>타율을 볼 수는 있지만, ‘그 카운트에서 끝난 타석’과 ‘그 카운트를 거친 타석’을 구별해야 한다.</strong> 두 기록은 서로 다른 질문에 답한다.</p>
+<p>초구에 파울을 치고 나중에 삼진을 당한 타석을 생각해 보자. 타자는 초구부터 휘둘렀지만 이 실패는 ‘초구에 끝난 타수의 타율’에 들어가지 않는다. 반면 0-0을 거친 타석의 최종 결과에는 삼진으로 포함된다.</p>
+<p>Stotz·Bickel은 1998–2001년 Stanford 대학야구 기록을 카운트와 구종별로 나누어, 두 스트라이크에서 타율이 낮아지는 이유를 살폈다. 타율 전체와 실제로 공을 쳤을 때의 성적을 구별한 것이 핵심이다.</p>
+<p><u class="source-claim">두 스트라이크 종료 타율에는 삼진이 포함되지만, 그보다 앞서 끝난 타율에는 일반적인 삼진이 없다. 이 연구는 그 차이를 떼어 보지 않으면 타격 능력의 차이와 타석이 끝나는 방식의 차이를 혼동한다고 지적한다.</u> 따라서 초구 종료 타율이 더 높다는 사실만으로 일찍 휘두르는 편이 낫다고 결론 내릴 수는 없다.</p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 1 · Stotz·Bickel | 카운트별 타율과 삼진 포함 여부</strong></p>
+<p>Stanford 대학야구 자료. <a href="https://sabr.org/journal/article/batting-average-by-count-and-pitch-type/">원문</a> · <a href="04_references_ko.html#ref-01">한국어 해설</a></p>
+</aside>
+<h3 id="section-5-sub-2">3-2. 두 스트라이크 승부 — 볼 하나의 손해와 헛스윙의 이득</h3>
+<p>카운트의 점수에서 다음 공으로 시선을 옮겨 보자. 0-2에서 존 밖 방향이 반복된 이유를 이해하려면, 그 공 뒤에 볼과 헛스윙이 각각 무엇을 남기는지 나누어 봐야 한다.</p>
+<h4>0-2에서 볼 하나를 던질 여유는 어디서 생길까?</h4>
+<p><strong>타자가 공을 골라도 1-2로 승부가 이어지지만, 헛스윙하면 삼진으로 끝나기 때문이다.</strong> 투수는 두 스트라이크를 잡아 둔 상태에서 타자가 따라 나올 만한 공을 시도할 여지가 있다.</p>
+<p>Dan Ciardiello는 FanGraphs의 「투수는 0-2를 어떻게 상대해야 할까?」에서 MLB 2019–2020년 Baseball Savant 자료를 살폈다. 0-2 투구를 존 안·밖으로 나누고, 각각 볼·헛스윙·파울·타구로 얼마나 이어졌는지를 비교한 분석이다.</p>
+<p><u class="source-claim">존 밖 공은 56.8%가 볼이 됐지만, 헛스윙 비중은 12.7%로 존 안의 9.5%보다 높았다. 타구로 이어진 비중은 존 밖 7.7%, 존 안 27.1%였다.</u> 모든 비율은 해당 위치의 0-2 투구 전체를 분모로 한다. 휘두른 공 중 헛스윙 비율은 아니다.</p>
+<p>즉 존 밖 공은 볼을 내줄 가능성이 큰 대신, 타자가 쳐서 승부를 끝내는 경우가 적고 헛스윙으로 삼진을 잡는 경우는 많았다. ‘볼 하나를 줬다’는 손해만 볼 것이 아니라, 그 공으로 얻을 수 있었던 결과도 함께 봐야 한다. 다만 이 비율만으로 이번 BCAP 차이의 원인을 모두 설명한 것은 아니다.</p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 4 · Ciardiello | 0-2 투구 이후의 결과</strong></p>
+<p>MLB 2019–2020. <a href="https://blogs.fangraphs.com/how-should-pitchers-approach-0-2-counts/">원문</a> · <a href="04_references_ko.html#ref-04">한국어 해설</a></p>
+<p>각 경로가 이번 11시즌 BCAP 차이에 얼마나 기여했는지는 별도로 계산하지 않았다.</p>
+</aside>
+<h4>그렇다면 0-2에서는 아예 멀리 빼면 될까?</h4>
+<p><strong>이번 결과로는 그렇게 말할 수 없다. 존 밖 공에는 경계를 살짝 벗어난 공과 한눈에 볼로 보이는 공이 함께 들어 있다.</strong> 타자가 따라 나올 가능성은 두 공에서 다를 수 있다.</p>
+<p>Dan Turkenkopf의 「한 구를 버리는 것은 낭비일까?」 1편은 ‘어떤 공을 버린 공이라고 부를 것인가’에서 출발한다. 안타를 맞았는지로 분류하지 않고, 스트라이크존보다 넓힌 구역에서도 벗어난 공을 따로 골랐다. 타자가 좀처럼 건드리기 어려운 공을 위치로 구분하려는 방법이다.</p>
+<p><u class="source-claim">이 기준에 해당한 공은 2008년 0-2 투구 38,606개 중 4,297개, 약 11%였다.</u> 존 밖 공 전체를 버리는 공으로 부른 수치가 아니다. 이 1편의 목적도 주로 언제 그런 공을 던졌는지 살피는 것이었다.</p>
+<p>따라서 존의 경계를 조금 벗어난 공이 좋은 결과를 냈다는 설명을, 이처럼 멀리 빠진 공까지 넓혀 적용할 수는 없다. 이번 BCAP의 존 밖 평균만으로 가장 좋은 이탈 거리나 완전히 버리는 공의 효과를 정하지 못하는 이유다.</p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 5 · Turkenkopf | 멀리 벗어난 공의 구분</strong></p>
+<p>존 밖 전체보다 좁은 대상의 분석. <a href="https://tht.fangraphs.com/a-pitch-is-a-terrible-thing-to-waste-or-is-it-part-1/">원문</a> · <a href="04_references_ko.html#ref-05">한국어 해설</a></p>
+</aside>
+<h4>0-2와 3-2는 둘 다 두 스트라이크인데 같은 방식으로 대응할까?</h4>
+<p><strong>두 스트라이크라는 공통점만으로 같은 선택을 기대할 수는 없다.</strong> 0-2에서 볼 하나를 고르면 1-2가 되지만, 3-2에서는 볼넷으로 출루한다. 지켜봤을 때 얻을 수 있는 결과부터 다르다.</p>
+<p>James Gentile은 「두 스트라이크에서 경계 공을 지켜보기」에서 MLB 2010–2013년 투구 추적 자료 중 스트라이크존 경계 부근의 공만 골랐다. 타자가 애매한 공을 얼마나 자주 지켜보는지, 그리고 지켜본 공이 얼마나 스트라이크로 판정됐는지를 카운트별로 비교했다.</p>
+<p><u class="source-claim">이 경계 공의 스윙 비율은 0-2에서 74.5%, 1-2에서 78.6%, 2-2에서 81.6%, 3-2에서 84.8%였다.</u> 같은 두 스트라이크라도 실제 대응은 같지 않았다. 볼넷이 가까워진다고 무조건 더 기다린 것도 아니었다.</p>
+<p>다만 이는 각 카운트에서 실제로 온 경계 공을 상대한 기록이다. 공의 세부 위치·구종까지 같게 만든 실험이 아니므로 3-2에서 더 많이 휘두르는 것이 옳다는 결론으로 바로 이어지지는 않는다.</p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 8 · Gentile | 두 스트라이크의 경계 공 대응</strong></p>
+<p>MLB 2010–2013. 실제 행동의 차이이며 권장 스윙 비율은 아니다. <a href="https://tht.fangraphs.com/Taking-the-close-pitch-with-two-strikes/">원문</a> · <a href="04_references_ko.html#ref-08">한국어 해설</a></p>
+</aside>
+<p><a id="chapter-three"></a></p>
+<h3 id="section-5-sub-3">3-3. 유리한 카운트라면 더 자주 휘둘러야 할까?</h3>
+<p class="section-summary"><strong>그렇지는 않다. 높은 BCAI에는 기다려서 얻은 볼넷도 포함돼 있다.</strong> 실제로 얼마나 휘두르는지와, 그 카운트를 거친 타석의 결과가 얼마나 좋은지는 나누어 봐야 한다.</p>
+<p>Neil Weinberg의 「스트라이크 하나가 이렇게 큰 차이를 만들어야 할까?」는 3-0과 3-1에서 타자의 행동이 크게 달라지는 이유를 묻는다. MLB 2007–2014년 자료에서 공이 존 중심에서 얼마나 떨어졌는지, 패스트볼 비중과 스윙 비율이 어떻게 다른지 함께 살폈다.</p>
+<p><u class="source-claim">스윙 비율은 3-0에서 7.6%, 3-1에서 55.2%였다. 패스트볼 비중은 각각 81.7%, 70.8%로 오히려 3-0이 더 높았다.</u> 빠른 공이 더 자주 온다고 스윙도 더 많아지는 것은 아니었다. 카운트에 따라 타자가 공을 고르는 기준이 크게 달라졌다는 결과다.</p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 7 · Weinberg의 실제 스윙 비율</strong></p>
+<p>MLB 2007–2014의 별도 연구다. 본문의 11시즌 자체 분석 수치는 아니다. <a href="https://tht.fangraphs.com/should-one-strike-make-this-much-difference/">원문</a> · <a href="04_references_ko.html#ref-07">한국어 해설</a></p>
+</aside>
+<p class="question-group">스윙 비율과 스윙의 질 · 더 많이 치면 더 좋아질까</p>
+
+<h4>3-0에서 드물게 휘두른 공의 성적이 좋다면 더 많이 쳐도 될까?</h4>
+<p><strong>그 성적을 지켜본 공까지 그대로 확대할 수는 없다.</strong> 타자가 휘두르기로 고른 공과 그냥 보낸 공은 처음부터 다를 수 있기 때문이다.</p>
+<p>가령 타자가 자신 있는 공만 골라 휘둘렀다고 해 보자. 그때의 타격 성적이 좋더라도, 더 어려운 공까지 스윙 범위를 넓히면 같은 성적을 유지한다는 보장은 없다. <u class="source-claim">Weinberg 역시 스윙한 공이 선택된 표본이라는 점 때문에, 그 성적을 지켜본 공에 그대로 적용하기 어렵다고 짚었다.</u></p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 7 · Weinberg | 스윙한 공과 지켜본 공의 차이</strong></p>
+<p><a href="https://tht.fangraphs.com/should-one-strike-make-this-much-difference/">원문</a> · <a href="04_references_ko.html#ref-07">한국어 해설</a></p>
+</aside>
+<h4>그렇다면 3-0에서 얼마나 자주 휘두르는 게 좋을까?</h4>
+<p><strong>이번 분석으로 적정 비율을 정할 수는 없다.</strong> 카운트별 평균 결과와 관측된 선택의 비교만으로 스윙 빈도를 바꿨을 때의 결과까지 알 수는 없기 때문이다.</p>
+<p>타자가 어떤 공을 잘 치는지, 어떤 공을 보내고 있는지가 함께 필요하다. 3-0의 높은 점수에서 바로 ‘적극적으로 쳐라’나 ‘무조건 기다려라’로 넘어가지 않고, 실제로 어떤 공을 골랐는지를 물어야 한다.</p>
+<p class="question-group">한 번의 결과를 넘어 · 선택 자체를 평가하기</p>
+
+<h4>안타가 됐다면 좋은 스윙이고, 아웃이면 나쁜 스윙일까?</h4>
+<p><strong>한 번의 결과만으로 선택의 좋고 나쁨을 판단하기는 어렵다.</strong> 좋은 공을 제대로 쳐도 잡힐 수 있고, 어려운 공에 손을 댔다가 안타를 만들 수도 있다.</p>
+<p>Ryan Yee·Sameer Deshpande의 연구는 투구별로 공을 지켜봤을 때 스트라이크 판정을 받을 확률, 휘둘렀을 때 맞힐 확률, 각 결과 이후의 기대 득점을 추정한다. 이를 합쳐 같은 공에 스윙하는 편과 기다리는 편 중 어느 쪽의 기대 가치가 큰지 비교한다.</p>
+<p>연구는 2019년 Kevan Smith가 0-2의 존 밖 공을 홈런으로 만든 실제 장면을 예로 든다. <u class="source-claim">홈런이라는 좋은 결과가 나왔지만, 모형이 추정한 스윙의 기대 득점 이득은 평균 약 0.01점이었고 90% 구간은 −0.04–+0.08점이었다.</u> 결과는 크게 성공했어도 선택 자체의 이점까지 크고 확실했다고 말할 수는 없었다.</p>
+<p>타자의 판단을 볼 때도 같은 구분이 필요하다. 존 밖 공을 친 안타 하나가 모든 존 밖 스윙을 정당화하지 않고, 잘 고른 스윙의 아웃 하나가 그 선택을 틀리게 만들지도 않는다.</p>
+<aside class="reference-note" aria-label="참고문헌">
+<p><strong>참고문헌 | 문헌 6 · Yee·Deshpande | 스윙·지켜보기의 기대 가치</strong></p>
+<p>해당 연구의 기대 득점 모형은 BCAP와 계산법·단위가 다르다. <a href="https://arxiv.org/html/2305.05752v2">원문</a> · <a href="04_references_ko.html#ref-06">한국어 해설</a></p>
+</aside>
+<p><a id="chapter-game"></a></p>
+</section><section class="content-section " aria-labelledby="section-6"><h2 id="section-6">4. 다시 0-2로 — 경기에서 무엇을 볼까?</h2>
+<p class="section-summary"><strong>0-2에서는 존 밖으로 승부할 근거가 있었다. 다만 ‘볼 하나를 버려도 된다’보다 ‘카운트의 여유로 타자의 선택을 어렵게 할 수 있다’에 가까운 결론이다.</strong> BCAI와 BCAP를 함께 놓으면 그 차이가 보인다.</p>
+<h3 id="section-6-sub-1">투수에게 0-2는 무엇을 할 수 있는 상황일까?</h3>
+<p class="section-summary"><strong>타자의 평균 공격가치가 시작점 100에서 63으로 낮아진 상황이다.</strong> 존 밖 공을 골라 1-2가 되어도 평균 점수는 71로 여전히 100 아래다. 두 카운트 모두 위치 비교에서 열한 시즌 내내 존 밖 방향이 반복됐다. 스트라이크존을 벗어난 공 하나를 곧바로 실패라고만 보기 어려운 근거다.</p>
+<p>그렇다고 볼을 계속 줘도 된다는 뜻은 아니다. 타자가 골라내며 2-2까지 가면 카운트 점수는 85, 풀카운트에서는 119가 된다. 특히 3-2의 다음 볼은 볼넷이다. 위치 비교에서도 2-2는 어느 쪽이 좋은지 불명확했고, 3-2는 존 안의 허용 공격가치가 낮았다. <strong>두 스트라이크를 잡았다는 사실은 같아도, 볼이 쌓이면 같은 승부를 계속할 이유는 달라진다.</strong></p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 카운트가 바뀌는 장면과 평균 점수</strong></p>
+<p>63→71→85→119는 각 카운트를 거친 서로 다른 타석 집단의 평균 지수다. 한 타석에서 볼 하나를 던질 때마다 이만큼 손해를 본다는 인과효과나 경로별 계산은 아니다. 카운트가 달라졌을 때 비교할 기준이 어떻게 바뀌는지 보여주는 예시다.</p>
+</aside>
+<h3 id="section-6-sub-2">타자에게 중요한 것은 카운트별 스윙 규칙일까, 공을 고르는 능력일까?</h3>
+<p class="section-summary"><strong>타자의 승부를 읽을 때는 ‘이 카운트니까 휘둘러야 한다’는 규칙보다, 자신이 칠 수 있는 공을 구별하는 선구안을 중심에 두자.</strong> 3-0이라는 유리한 카운트도 어떤 공을 골라 치는지에 따라 의미가 달라진다. 유리하다는 이유로 스윙을 늘리거나, 두 스트라이크라는 이유로 무조건 방망이를 내는 것까지 카운트 점수가 정해 주지는 않는다.</p>
+<p>타자는 공의 위치와 움직임을 판단해야 하고, 투수는 자신이 잘 던질 수 있는 구종을 원하는 곳에 보내야 한다. <strong>카운트는 이 능력들을 사용하는 상황을 알려준다. 선수의 능력 자체를 대신하지는 않는다.</strong> 따라서 카운트별 평균을 개별 선수의 정답표로 쓰기보다, 그 선수가 어떤 공을 고르고 얼마나 잘 실행했는지 함께 보는 편이 맞다.</p>
+<h3 id="section-6-sub-3">다음 0-2에서는 어떤 장면을 살펴볼까?</h3>
+<p class="section-summary"><strong>존을 벗어났는지만 보지 말고, 타자가 왜 반응했거나 참았는지를 함께 보자.</strong> 경계를 조금 벗어난 공에 방망이가 따라 나왔다면 두 스트라이크의 압박과 공의 움직임을 함께 떠올릴 수 있다. 멀리 빠진 공을 쉽게 골랐다면 그것까지 같은 ‘유인구 성공’으로 부를 이유는 없다. 이 구별은 장면을 읽기 위한 질문이며, 이번 분석이 투수의 의도나 최적 위치를 밝혔다는 뜻은 아니다.</p>
+<p>타자가 참아 1-2가 됐다면 투수에게 여유가 남아 있다. 그러나 다시 볼이 쌓일 때는 ‘아직 두 스트라이크니까 괜찮다’에서 멈추지 않고 달라진 카운트를 봐야 한다. 같은 슬라이더를 던졌더라도, 타자가 지켜봤을 때 잃거나 얻는 것이 달라졌기 때문이다. 구종 결과 역시 모든 0-2에서 특정 공을 던지라는 답이 아니라, 카운트와 함께 비교해야 할 또 하나의 조건이었다.</p>
+<h3 id="section-6-sub-4">최종 결론 — 카운트로 유불리를 읽고, 선수의 능력과 투구 위치를 함께 보자</h3>
+<p class="section-summary"><strong>BCAI에서는 카운트에 따라 타자와 투수의 유불리를 나눌 수 있었다.</strong> 0-2의 평균 63과 3-0의 174는 그 차이를 보여준다. 열한 시즌 내내 큰 흐름이 이어졌고, 특히 2볼에서 3볼로 넘어가는 구간과 3-1에서 3-2로 넘어가는 구간에서 평균 점수가 크게 달랐다.</p>
+<p><strong>BCAP에서는 특정 카운트라는 이유만으로 스윙이나 특정 구종을 모든 선수에게 권할 근거를 얻지는 못했다.</strong> 일부 집단의 평균 차이는 있었지만, 그것을 ‘이 카운트에서는 이 행동이 정답’으로 바꿀 수는 없다. 타자의 선구안과 타격 능력, 투수가 가진 구종의 질과 제구를 중심에 놓고 읽어야 한다.</p>
+<p><strong>다만 투구 위치에서는 카운트별 승부를 생각해 볼 만한 단서가 나왔다.</strong> 0-2와 1-2에서 실제 존 밖 공이 존 안 공보다 낮은 공격가치를 허용하는 방향이 열한 시즌 내내 반복됐다. ‘두 스트라이크를 잡은 뒤에도 존 안에 넣는 것이 언제나 최선인가’라는 질문에 살펴볼 근거가 생긴 것이다. 여기서 S·B는 심판이 선언한 스트라이크와 볼이 아니라 실제 존 안·밖 위치를 가리킨다.</p>
+<p>그래서 처음의 ‘0-2에서는 하나 빼라?’에는 이렇게 답할 수 있다. <strong>존 밖으로 승부할 이유는 있었다. 그러나 무조건 한 구를 버리라는 뜻은 아니다.</strong> 카운트의 여유를 얼마나 활용할지는 투수가 어떤 공을 어디에 던질 수 있는지, 타자가 그 공을 얼마나 잘 구별하는지와 함께 봐야 한다. 카운트는 승부의 조건을 설명하고, 실제 승부를 수행하는 것은 선수다.</p>
+<aside class="interpretation-note" aria-label="해석 메모">
+<p><strong>해석 메모 | 확인한 결과와 해석의 경계</strong></p>
+<p>선수의 능력이 카운트보다 ‘얼마나 더 중요하다’는 비중은 이번 분석에서 직접 비교하지 않았다. 능력을 중심에 놓자는 것은 카운트별 평균을 개별 선수에게 적용할 때의 해석 원칙이다. 또한 BCAP는 관측 자료의 보정 비교이므로 위치별 차이도 특정 투구 지시의 인과효과나 최적 작전을 확정하지 않는다. 이번 MLB 결과를 KBO에서 검증한 단계는 아니다.</p>
+</aside>
+</section><section class="content-section " aria-labelledby="section-7"><h2 id="section-7">잠깐 찾아보는 용어</h2>
+<p><a id="term-01"></a></p>
+<p><strong>용어 1 · 인플레이:</strong> 공을 쳐서 야수의 수비 대상이 된 경우. 문헌마다 홈런 등 세부 포함 범위가 다를 수 있다.</p>
+<p><a id="term-02"></a></p>
+<p><strong>용어 2 · 보정:</strong> 비교하는 선수나 상황의 차이가 결과에 섞이는 문제를 줄이려는 계산. 모든 차이를 없앴다는 뜻은 아니다.</p>
+<p><a id="term-03"></a></p>
+<p><strong>용어 3 · 추정값과 불확실성 구간:</strong> 추정값은 자료에서 계산한 대표 값이고, 구간은 그 값의 불확실성을 표현한 범위다. 차이의 구간에 0이 들어가면 어느 쪽이 더 높은지 분명히 구별하지 못했다는 뜻이다. <a href="05_data_validation.html#uncertainty">계산 방법</a></p>
+</section><section class="content-section " aria-labelledby="section-8"><h2 id="section-8">계산과 근거를 더 확인하려면</h2>
+<ul>
+<li><a href="02_bcai.html">BCAI 해설</a>: 카운트별 점수, 최종 타석 결과와 100 기준의 계산.</li>
+<li><a href="03_bcap.html">BCAP 해설</a>: 위치·스윙·구종 비교와 자료 부족의 기준.</li>
+<li><a href="04_references_ko.html">문헌 한국어 해설</a>: 각 연구의 자료와 방법, 사용 범위.</li>
+<li><a href="05_data_validation.html">데이터 검증 글</a>: 표본, 불확실성, 모형의 한계.</li>
+<li><a href="../../analysis/history_comparison_20260928_r01/report.html">11시즌 분석 보고서</a>: 연도별 결과와 원천 자료 연결.</li>
+</ul>
+</section></article><div class="endnav"><a href="index.html">연재와 문헌 읽기 안내</a><a href="02_bcai.html">BCAI 설명 글</a><a href="03_bcap.html">BCAP 설명 글</a><a href="04_references_ko.html">참고문헌 한국어 해설</a><a href="05_data_validation.html">데이터·검증·개발 과정</a></div></main></body></html>

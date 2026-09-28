@@ -1,0 +1,13 @@
+{
+  "model": "swing",
+  "years": [
+    2023
+  ],
+  "input_rds": "columns/001-ball-count/data/processed/r_bcap_history_20260928/2023/r02/prepared.rds",
+  "output_dir": "columns/001-ball-count/analysis/runs/bcap_swing_r_history__mlb_2023__20260928__r01",
+  "seed": 20262951,
+  "comparison_family": 255,
+  "role": "Exploratory within-year refit; not untouched external validation",
+  "comparison_scope": "Predeclared conservative family upper bound 255 for 232 reported groups across four modules within this year; not across years",
+  "source_bcai_run": "bcai_history__mlb_2023__20260928__r02"
+}

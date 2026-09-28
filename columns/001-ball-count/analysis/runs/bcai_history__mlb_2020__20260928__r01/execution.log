@@ -1,0 +1,4 @@
+Reading R inputs
+Error in FUN(X[[i]], ...) : Schedule mismatch 2020 missing 2 extra 0
+Calls: tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+Execution halted

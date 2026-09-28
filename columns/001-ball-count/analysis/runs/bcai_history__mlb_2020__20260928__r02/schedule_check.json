@@ -1,0 +1,465 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-28T12:37:01+0900",
+  "predicate": "Regular + abstract Final + coded F + detailed Final or Completed Early; distinct gamePk",
+  "synthetic_cases": {
+    "final": {
+      "expected": true,
+      "observed": true
+    },
+    "completed_early": {
+      "expected": true,
+      "observed": true
+    },
+    "postponed_despite_abstract_final": {
+      "expected": false,
+      "observed": false
+    },
+    "cancelled_despite_abstract_final": {
+      "expected": false,
+      "observed": false
+    },
+    "suspended": {
+      "expected": false,
+      "observed": false
+    },
+    "mismatched_final_detail": {
+      "expected": false,
+      "observed": false
+    },
+    "future_status": {
+      "expected": false,
+      "observed": false
+    },
+    "missing_status": {
+      "expected": false,
+      "observed": false
+    },
+    "postseason": {
+      "expected": false,
+      "observed": false
+    }
+  },
+  "schedule_counts": [
+    {
+      "year": 2020,
+      "old_unique_games": 900,
+      "completed_unique_games": 898,
+      "removed_ids": [
+        631472,
+        631471
+      ]
+    },
+    {
+      "year": 2021,
+      "old_unique_games": 2429,
+      "completed_unique_games": 2429,
+      "removed_ids": []
+    },
+    {
+      "year": 2022,
+      "old_unique_games": 2430,
+      "completed_unique_games": 2430,
+      "removed_ids": []
+    },
+    {
+      "year": 2023,
+      "old_unique_games": 2430,
+      "completed_unique_games": 2430,
+      "removed_ids": []
+    },
+    {
+      "year": 2024,
+      "old_unique_games": 2429,
+      "completed_unique_games": 2429,
+      "removed_ids": []
+    },
+    {
+      "year": 2025,
+      "old_unique_games": 2430,
+      "completed_unique_games": 2430,
+      "removed_ids": []
+    }
+  ],
+  "status_combinations": [
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FR",
+      "detailed": "Completed Early",
+      "N": 1
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "F",
+      "detailed": "Final",
+      "N": 898
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "D9",
+      "detailed": "Postponed",
+      "N": 42
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DI",
+      "detailed": "Postponed",
+      "N": 3
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DR",
+      "detailed": "Postponed",
+      "N": 9
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DO",
+      "detailed": "Postponed",
+      "N": 15
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FO",
+      "detailed": "Completed Early",
+      "N": 1
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "C",
+      "status_code": "C9",
+      "detailed": "Cancelled",
+      "N": 2
+    },
+    {
+      "year": 2020,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DD",
+      "detailed": "Postponed",
+      "N": 2
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "F",
+      "detailed": "Final",
+      "N": 2430
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DR",
+      "detailed": "Postponed",
+      "N": 41
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "D9",
+      "detailed": "Postponed",
+      "N": 9
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DO",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DI",
+      "detailed": "Postponed",
+      "N": 22
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DS",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FR",
+      "detailed": "Completed Early",
+      "N": 7
+    },
+    {
+      "year": 2021,
+      "abstract": "Final",
+      "coded": "C",
+      "status_code": "CI",
+      "detailed": "Cancelled",
+      "N": 1
+    },
+    {
+      "year": 2022,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "F",
+      "detailed": "Final",
+      "N": 2422
+    },
+    {
+      "year": 2022,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DI",
+      "detailed": "Postponed",
+      "N": 12
+    },
+    {
+      "year": 2022,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DR",
+      "detailed": "Postponed",
+      "N": 35
+    },
+    {
+      "year": 2022,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FR",
+      "detailed": "Completed Early",
+      "N": 9
+    },
+    {
+      "year": 2022,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "D9",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "F",
+      "detailed": "Final",
+      "N": 2433
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DR",
+      "detailed": "Postponed",
+      "N": 21
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DI",
+      "detailed": "Postponed",
+      "N": 10
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DC",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DB",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FR",
+      "detailed": "Completed Early",
+      "N": 4
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DD",
+      "detailed": "Postponed",
+      "N": 3
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DG",
+      "detailed": "Postponed",
+      "N": 2
+    },
+    {
+      "year": 2023,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DO",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2024,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "F",
+      "detailed": "Final",
+      "N": 2428
+    },
+    {
+      "year": 2024,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DR",
+      "detailed": "Postponed",
+      "N": 26
+    },
+    {
+      "year": 2024,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FR",
+      "detailed": "Completed Early",
+      "N": 3
+    },
+    {
+      "year": 2024,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DI",
+      "detailed": "Postponed",
+      "N": 10
+    },
+    {
+      "year": 2024,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FG",
+      "detailed": "Completed Early",
+      "N": 1
+    },
+    {
+      "year": 2024,
+      "abstract": "Final",
+      "coded": "C",
+      "status_code": "CR",
+      "detailed": "Cancelled",
+      "N": 1
+    },
+    {
+      "year": 2025,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "F",
+      "detailed": "Final",
+      "N": 2429
+    },
+    {
+      "year": 2025,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DR",
+      "detailed": "Postponed",
+      "N": 23
+    },
+    {
+      "year": 2025,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FR",
+      "detailed": "Completed Early",
+      "N": 4
+    },
+    {
+      "year": 2025,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DS",
+      "detailed": "Postponed",
+      "N": 1
+    },
+    {
+      "year": 2025,
+      "abstract": "Final",
+      "coded": "D",
+      "status_code": "DI",
+      "detailed": "Postponed",
+      "N": 6
+    },
+    {
+      "year": 2025,
+      "abstract": "Final",
+      "coded": "F",
+      "status_code": "FO",
+      "detailed": "Completed Early",
+      "N": 1
+    }
+  ],
+  "actual_2020_game_ids_match": true,
+  "inputs": [
+    {
+      "path": "models/bcai/observed/v1.0.0/r/run.R",
+      "sha256": "f37d6e1162d07697341f09583bb64d06e254735691dae47769bbc96fea3de27f"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2020/snapshot_20260928_r_history/schedule_2020.json",
+      "sha256": "f16bed1f2c142b2a5b975be5fc5491d82a93e6b4ff761a8d511c77fcb8f0a093"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2021/snapshot_20260928_r_history/schedule_2021.json",
+      "sha256": "30f58024eda83d94d03ee3d097bd5bf28760d7931eb28edb5770272d0fb44059"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2022/snapshot_20260928_r_history/schedule_2022.json",
+      "sha256": "11eeea60d8fa2616e66a191d9e0d3b0c30185c6e5fc3d5786884a0c4b1e1ba86"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2023/snapshot_20260908_ridge_v02/schedule_2023.json",
+      "sha256": "eb8b18a8a25c1bf017f6512b7770f0ecfcc0f69c04dac38707e874046788ef68"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2024/schedule_2024.json",
+      "sha256": "9733d248b6a6d1635eb91802f504d70ebedc49b5aa87e7ae962cafb40b18879b"
+    },
+    {
+      "path": "columns/001-ball-count/data/raw/mlb/2025/schedule_2025.json",
+      "sha256": "a8e90faf13a67f04762e019c465e38c66def1d7c4fbc8621c47cb0785fac2948"
+    },
+    {
+      "path": "columns/001-ball-count/data/processed/r_history_20260928/2020/pitches.csv",
+      "sha256": "d81c679a343eaead0a529b6a5c31775be4b17d068ebe4654f07f4ef8b3321f6d"
+    }
+  ]
+}
